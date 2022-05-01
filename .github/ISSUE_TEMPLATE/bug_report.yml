@@ -33,8 +33,8 @@ body:
   - type: dropdown
     id: modversion
     attributes:
-      label: Minecraft Version
-      description: On which version of Minecraft is the mod installed?
+      label: Mod Version
+      description: Which version of the mod are you using?
       options:
         - 2.0.3 (Default)
         - 2.0.4.6
