@@ -50,6 +50,8 @@ import power.keepeersofthestones.item.SunExplodeItem;
 import power.keepeersofthestones.item.SunBatteryItem;
 import power.keepeersofthestones.item.SunAxeItem;
 import power.keepeersofthestones.item.StormItem;
+import power.keepeersofthestones.item.SplitStoneItem;
+import power.keepeersofthestones.item.SplitFeatherItem;
 import power.keepeersofthestones.item.SpiritStoneItem;
 import power.keepeersofthestones.item.SpikeItem;
 import power.keepeersofthestones.item.SpeedStoneItem;
@@ -549,6 +551,8 @@ public class PowerModItems {
 			() -> new ForgeSpawnEggItem(PowerModEntities.TYRANNOSAURUS_REX, -6750208, -65536,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 	public static final RegistryObject<Item> SPACE_ATLAS = REGISTRY.register("space_atlas", () -> new SpaceAtlasItem());
+	public static final RegistryObject<Item> SPLIT_STONE = REGISTRY.register("split_stone", () -> new SplitStoneItem());
+	public static final RegistryObject<Item> SPLIT_FEATHER = REGISTRY.register("split_feather", () -> new SplitFeatherItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

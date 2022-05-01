@@ -14,6 +14,7 @@ import power.keepeersofthestones.entity.TornadoCreateEntity;
 import power.keepeersofthestones.entity.TimeDilationEntity;
 import power.keepeersofthestones.entity.TigerClawEntity;
 import power.keepeersofthestones.entity.SunExplodeEntity;
+import power.keepeersofthestones.entity.SplitFeatherEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
@@ -173,6 +174,9 @@ public class PowerModEntities {
 					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(TyrannosaurusRexEntity::new)
 
 					.sized(1.1f, 2.5f));
+	public static final RegistryObject<EntityType<SplitFeatherEntity>> SPLIT_FEATHER = register("projectile_split_feather",
+			EntityType.Builder.<SplitFeatherEntity>of(SplitFeatherEntity::new, MobCategory.MISC).setCustomClientFactory(SplitFeatherEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

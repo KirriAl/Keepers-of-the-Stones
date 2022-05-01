@@ -12116,6 +12116,62 @@
       "locked_code": false,
       "registry_name": "cretaceous_pine_forest",
       "path": "~/Time"
+    },
+    {
+      "name": "CreatingSplit",
+      "type": "procedure",
+      "sortid": 809,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creating_split",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Split"
+    },
+    {
+      "name": "SplitStone",
+      "type": "item",
+      "sortid": 809,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "split_stone",
+      "path": "~/Split"
+    },
+    {
+      "name": "SplitFeather",
+      "type": "rangeditem",
+      "sortid": 810,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "split_feather",
+      "path": "~/Split"
+    },
+    {
+      "name": "Split",
+      "type": "procedure",
+      "sortid": 811,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "split",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Split"
     }
   ],
   "variable_elements": [
@@ -12710,9 +12766,9 @@
       "item.power.lightning_battery": "Батарея",
       "effect.power.recharge_rain_stone": "Перезарядка",
       "effect.recharge_tornado_stone": "Перезарядка",
-      "block.power.detonator_tnt": "Детонатор",
-      "item.power.cutter_sword": "Куттер-Меч",
       "biome.power.triassic_plains": "Triassic Plains",
+      "item.power.cutter_sword": "Куттер-Меч",
+      "block.power.detonator_tnt": "Детонатор",
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.earth_battery": "Батарея",
       "advancements.absolute_power.descr": "Скопируйте силу любого элемента",
@@ -12722,8 +12778,8 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
       "key.power.skills_key": "Клавиша скиллов",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
@@ -12736,8 +12792,8 @@
       "item.power.amber_leggings": "Amber Leggings",
       "item.power.tamer": "Приручатель",
       "effect.power.recharge_earth_stone": "Перезарядка",
-      "effect.power.ice_master": "Мастер Льда",
       "item.power.time_reversed": "Обращение Времени",
+      "effect.power.ice_master": "Мастер Льда",
       "effect.power.recharge_amber_stone": "Перезарядка",
       "item.power.piece_of_earth": "Кусок Земли",
       "block.power.moon_stones_block": "Блок Разрастающихся Лунных Камней",
@@ -12747,14 +12803,14 @@
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
       "advancements.welcome_to_the_void.title": "Добро пожаловать в Пустоту!",
-      "item.power.energy_chestplate": "Энергетическая Кираса",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.space_leggings": "Космические штаны",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.energy_chestplate": "Энергетическая Кираса",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
       "item.power.shadow_invisible": "Теневая Невидимость",
-      "item.power.light_helmet": "Шлем солнца",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Шлем солнца",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "effect.power.recharge_animals_stone": "Перезарядка",
@@ -12791,8 +12847,8 @@
       "item.power.fire_stone": "Камень Огня",
       "item.power.blood_stone": "Камень Крови",
       "item.power.rain_boots": "Дождевые Сапоги",
-      "item.power.ice_spear": "Ледяное Копьё",
       "item.power.portal_blast": "Портальная Пушка",
+      "item.power.ice_spear": "Ледяное Копьё",
       "effect.power.recharge_teleportation_stone": "Перезарядка",
       "subtitles.stone_activation": "Камень был активирован",
       "effect.power.fog": "Fog",
@@ -12960,6 +13016,7 @@
       "item.power.moon_wither": "Лунное Иссушение",
       "item.power.sound_boots": "Звуковые Ботинки",
       "item.power.animals_chestplate": "Животный нагрудник",
+      "item.power.split_stone": "Камень Раскола",
       "item.power.magma_shield": "Магматический Щит",
       "item.power.spirit_stone": "Камень Духа",
       "item.power.moon_axe": "Лунная Секира",
@@ -13008,6 +13065,7 @@
       "item.power.energy_boots": "Энергетические Ботинки",
       "item.power.burn": "Поджёг",
       "item.power.amber_boots": "Amber Boots",
+      "item.power.split_feather": "Перо Раскола",
       "effect.power.recharge_destruction_stone": "Перезарядка",
       "item.power.vampirism": "Вампиризм",
       "effect.power.recharge_time_stone": "Перезарядка",
@@ -13345,7 +13403,7 @@
       "item.power.shadow_chestplate": "Shadow Chestplate",
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Technologies \u0026 Artifacts",
-      "item.power.dinoera": "Past Portal Igniter",
+      "item.power.dinoera": "Charged Feather (Time)",
       "block.power.quicksilver": "Quicksilver",
       "block.power.energy_block": "Energy Block",
       "item.power.creation_chestplate": "Creation Chestplate",
@@ -13427,6 +13485,7 @@
       "item.power.moon_wither": "Moon Wither",
       "item.power.sound_boots": "Sound Boots",
       "item.power.animals_chestplate": "Animals Chestplate",
+      "item.power.split_stone": "Split Stone",
       "item.power.magma_shield": "Magma Shield",
       "item.power.spirit_stone": "Spirit Stone",
       "item.power.moon_axe": "Moon Axe",
@@ -13475,6 +13534,7 @@
       "item.power.energy_boots": "Energy Boots",
       "item.power.burn": "Burn",
       "item.power.amber_boots": "Amber Boots",
+      "item.power.split_feather": "Split Feather",
       "effect.power.recharge_destruction_stone": "Recharge",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
@@ -13856,13 +13916,17 @@
       {
         "name": "Structures",
         "children": []
+      },
+      {
+        "name": "Split",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.0.4.5",
+    "version": "2.0.4.6",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "ModdingCommonwealth",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

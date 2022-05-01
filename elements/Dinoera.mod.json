@@ -41,21 +41,21 @@
     "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
     "portalFrame": {
-      "value": ""
+      "value": "Blocks.BONE_BLOCK"
     },
     "portalParticles": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "WHITE_ASH"
     },
-    "portalLuminance": 0,
+    "portalLuminance": 5,
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "igniterName": "Past Portal Igniter",
+    "igniterName": "Charged Feather (Time)",
     "igniterTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:TechnologiesAndArtifacts"
     },
-    "texture": "",
-    "portalTexture": "",
+    "texture": "charged_feather",
+    "portalTexture": "dinoera_portal",
     "enablePortal": false
   }
 }
