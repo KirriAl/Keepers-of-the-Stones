@@ -19,7 +19,7 @@ body:
       ...
    validations:
      required: true
-  - type: dropdown
+ - type: dropdown
     attributes:
       label: Minecraft Version
       description: On which version of Minecraft is the mod installed?
@@ -29,7 +29,7 @@ body:
         - 1.16.5
     validations:
       required: true
-  - type: dropdown
+ - type: dropdown
     attributes:
       label: Mod Version
       description: Which version of the mod are you using?
