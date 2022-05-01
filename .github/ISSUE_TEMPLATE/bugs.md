@@ -1,4 +1,4 @@
-name: Bug report
+name: Bugs
 description: Create a report to help us improve (search for duplicates first)
 labels: bug
 body:
