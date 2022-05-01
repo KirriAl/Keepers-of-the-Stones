@@ -34,10 +34,10 @@ body:
      label: Mod Version
      description: Which version of the mod are you using?
      options:
-       - 2.0.3 (Default)
-       - 2.0.4.6 (Edge)
-       - 1.4.5
-       - 2.0.2.1
+       - 2.0.3 (Release)
+       - 2.0.4.6 (Beta)
+       - 1.4.5 (LTSR)
+       - 2.0.2.1 (LTSB)
    validations:
      required: true
  - type: textarea
