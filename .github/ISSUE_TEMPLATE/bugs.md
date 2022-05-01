@@ -1,14 +1,28 @@
 ---
 name: Bugs
 about: Describe the problem found in mod.
-title: "[BUG] "
+title: ''
 labels: bug
 assignees: ''
 
 ---
 
-**Description**
-Describe the bug in detail.
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-**Mod version**: 1.x.x
-**MС version**: 1.18.2
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Desktop (please complete the following information):**
+ - Minecraft Version [e.g. 1.16.5]
+ - Mod Version [e.g. 2.0.0]
