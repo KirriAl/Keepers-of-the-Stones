@@ -17,7 +17,7 @@ body:
       - 1.18.2 (Default)
       - 1.17.1
       - 1.16.5 (Edge)
-  validations:
+   validations:
     required: true
  - type: dropdown
    attributes:
@@ -28,7 +28,7 @@ body:
       - 2.0.4.6 (Edge)
       - 1.4.5
       - 2.0.2.1
-  validations:
+    validations:
     required: true
  - type: textarea
    attributes:
