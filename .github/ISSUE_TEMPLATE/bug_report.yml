@@ -1,4 +1,4 @@
-name: Bugs
+name: Bug report
 description: Create a report to help us improve (search for duplicates first)
 labels: bug
 body:
@@ -51,3 +51,23 @@ body:
     placeholder: Insert here
    validations:
     required: false
+ - type: textarea
+   attributes:
+    label: Logs
+    description: |
+      If applicable, include game or build logs (full logs, do not crop them, in text format, screenshots of logs are not acceptable) from the Console tab or terminal and steps to reproduce the bug in your workspace.
+      
+      Longer logs should be posted on [GitHub Gists](https://gist.github.com/) (or other paste service) and linked here.
+    placeholder: https://gist.github.com/...
+   validations:
+    required: false
+ - type: checkboxes
+   attributes:
+    label: Issue tracker rule checks (please read carefully)
+    options:
+     - label: "I have checked that my problem <a href='https://github.com/MCreator/MCreator/issues?q=is%3Aissue' target='_blank'>is not already reported</a>"
+       required: true
+     - label: "I have checked that my problem is not covered on <a href='https://mcreator.net/support/knowledgebase' target='_blank'>Knowledge Base</a> or on <a href='https://mcreator.net/wiki' target='_blank'>MCreator's Wiki</a>"
+       required: true
+     - label: "I have checked that my written content does not violate the <a href='https://mcreator.net/wiki/general-publishing-guidelines' target='_blank'>publishing guidelines</a>"
+       required: true
