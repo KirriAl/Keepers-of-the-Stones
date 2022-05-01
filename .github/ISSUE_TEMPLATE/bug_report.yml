@@ -21,13 +21,12 @@ body:
      required: true
  - type: dropdown
    attributes:
-     label: Operating system
-     description: Which operating system do you use with MCreator?
+     label: Minecraft Version
+     description: On which version of Minecraft is the mod installed?
      options:
-       - Windows
-       - macOS
-       - Linux
-       - Other (Tell us at the Specifications part)
+       - 1.18.2 (Default)
+       - 1.17.1
+       - 1.16.5 (Edge)
    validations:
      required: true
  - type: textarea
