@@ -19,6 +19,17 @@ body:
       ...
    validations:
      required: true
+ - type: dropdown
+   attributes:
+     label: Operating system
+     description: Which operating system do you use with MCreator?
+     options:
+       - Windows
+       - macOS
+       - Linux
+       - Other (Tell us at the Specifications part)
+   validations:
+     required: true
  - type: textarea
    attributes:
     label: Logs
@@ -35,24 +46,3 @@ body:
     options:
      - label: "I have checked that my problem <a href='https://github.com/MagicalAlexey/Keepers-of-the-Stones/issues' target='_blank'>is not already reported</a>"
        required: true
- - type: dropdown
-     attributes:
-     label: Minecraft Version
-     description: On which version of Minecraft is the mod installed?
-     options:
-       - 1.18.2 (Default)
-       - 1.17.1
-       - 1.16.5 (Edge)
-   validations:
-     required: true
- - type: dropdown
-   attributes:
-     label: Mod Version
-     description: Which version of the mod are you using?
-     options:
-       - 2.0.3 (Default)
-       - 2.0.4.6 (Edge)
-       - 1.4.5
-       - 2.0.2.1
-     validations:
-      required: true
