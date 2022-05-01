@@ -19,15 +19,29 @@ body:
       ...
    validations:
      required: true
- - type: textarea
-   attributes:
-    label: Details
-    description: To understand the issue, we need some details of your setup & system
-    placeholder: |
-      Mod version: [1.9.4/ 2.0.3 / branch:master / ...]
-      Minecraft version: [forge-1.16.5 / forge-1.18.2 / ...]
-   validations:
-     required: true
+  - type: dropdown
+    id: minecraftversion
+    attributes:
+      label: Minecraft Version
+      description: On which version of Minecraft is the mod installed?
+      options:
+        - 1.18.2 (Default)
+        - 1.17.1
+        - 1.16.5 (LTS)
+    validations:
+      required: true
+  - type: dropdown
+    id: modversion
+    attributes:
+      label: Minecraft Version
+      description: On which version of Minecraft is the mod installed?
+      options:
+        - 2.0.3 (Default)
+        - 2.0.4.6 (Beta)
+        - 1.4.5 (LTS)
+        - 2.0.2.1 (LTS-Beta)
+    validations:
+      required: true
  - type: textarea
    attributes:
     label: Logs
