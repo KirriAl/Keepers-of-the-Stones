@@ -19,24 +19,13 @@ body:
       ...
    validations:
      required: true
- - type: dropdown
-   attributes:
-    label: Operating system
-    description: Which operating system do you use with MCreator?
-    options:
-     - Windows
-     - macOS
-     - Linux
-     - Other (Tell us at the Specifications part)
-   validations:
-     required: true
  - type: textarea
    attributes:
     label: Details
     description: To understand the issue, we need some details of your setup & system
     placeholder: |
-      MCreator version: [2021.1 / branch:master / ...]
-      Generator type: [forge-1.15.2 / forge-1.16.5 / ...]
+      Mod version: [1.9.4/ 2.0.3 / branch:master / ...]
+      Minecraft version: [forge-1.16.5 / forge-1.18.2 / ...]
    validations:
      required: true
  - type: textarea
@@ -65,9 +54,5 @@ body:
    attributes:
     label: Issue tracker rule checks (please read carefully)
     options:
-     - label: "I have checked that my problem <a href='https://github.com/MCreator/MCreator/issues?q=is%3Aissue' target='_blank'>is not already reported</a>"
-       required: true
-     - label: "I have checked that my problem is not covered on <a href='https://mcreator.net/support/knowledgebase' target='_blank'>Knowledge Base</a> or on <a href='https://mcreator.net/wiki' target='_blank'>MCreator's Wiki</a>"
-       required: true
-     - label: "I have checked that my written content does not violate the <a href='https://mcreator.net/wiki/general-publishing-guidelines' target='_blank'>publishing guidelines</a>"
+     - label: "I have checked that my problem <a href='https://github.com/MagicalAlexey/Keepers-of-the-Stones/issues' target='_blank'>is not already reported</a>"
        required: true
