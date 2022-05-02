@@ -50,12 +50,12 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "igniterName": "Charged Feather (Time)",
+    "igniterName": "Time Feather",
     "igniterTab": {
       "value": "CUSTOM:TechnologiesAndArtifacts"
     },
-    "texture": "charged_feather",
+    "texture": "time_feather",
     "portalTexture": "dinoera_portal",
-    "enablePortal": false
+    "enablePortal": true
   }
 }
