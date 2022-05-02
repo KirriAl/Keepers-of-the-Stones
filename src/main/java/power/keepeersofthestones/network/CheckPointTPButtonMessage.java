@@ -1,8 +1,9 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.PointGUIMenu;
-import power.keepeersofthestones.procedures.PointTPProcedure;
+import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
+import power.keepeersofthestones.procedures.TimeCheckpointProcedure;
+import power.keepeersofthestones.procedures.ReturnCheckpointProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -19,31 +20,31 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class PointGUIButtonMessage {
+public class CheckPointTPButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public PointGUIButtonMessage(FriendlyByteBuf buffer) {
+	public CheckPointTPButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public PointGUIButtonMessage(int buttonID, int x, int y, int z) {
+	public CheckPointTPButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(PointGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(CheckPointTPButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(PointGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(CheckPointTPButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -58,19 +59,23 @@ public class PointGUIButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = PointGUIMenu.guistate;
+		HashMap guistate = CheckPointTPMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			PointTPProcedure.execute(world, entity, guistate);
+			ReturnCheckpointProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			TimeCheckpointProcedure.execute(x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(PointGUIButtonMessage.class, PointGUIButtonMessage::buffer, PointGUIButtonMessage::new,
-				PointGUIButtonMessage::handler);
+		PowerMod.addNetworkMessage(CheckPointTPButtonMessage.class, CheckPointTPButtonMessage::buffer, CheckPointTPButtonMessage::new,
+				CheckPointTPButtonMessage::handler);
 	}
 }

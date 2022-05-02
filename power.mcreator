@@ -11142,6 +11142,10 @@
           {
             "name": "guistate",
             "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -12268,6 +12272,15 @@
       "locked_code": false,
       "registry_name": "amber_block",
       "path": "~/Amber"
+    },
+    {
+      "name": "CheckPointTP",
+      "type": "gui",
+      "sortid": 816,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_point_tp",
+      "path": "~/Teleportation"
     }
   ],
   "variable_elements": [

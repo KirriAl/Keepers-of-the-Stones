@@ -44,6 +44,7 @@ import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
 import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
+import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
 
@@ -121,6 +122,8 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new ChoiseMagicStonesPage3Menu(id, inv, extraData));
 	public static final MenuType<SpaceAtlasGUIMenu> SPACE_ATLAS_GUI = register("space_atlas_gui",
 			(id, inv, extraData) -> new SpaceAtlasGUIMenu(id, inv, extraData));
+	public static final MenuType<CheckPointTPMenu> CHECK_POINT_TP = register("check_point_tp",
+			(id, inv, extraData) -> new CheckPointTPMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
