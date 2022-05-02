@@ -172,6 +172,7 @@ import power.keepeersofthestones.item.EclipseItem;
 import power.keepeersofthestones.item.EarthStoneItem;
 import power.keepeersofthestones.item.EarthItem;
 import power.keepeersofthestones.item.EarthBatteryItem;
+import power.keepeersofthestones.item.DinoeraItem;
 import power.keepeersofthestones.item.DestructionStoneItem;
 import power.keepeersofthestones.item.DestructionSphereItem;
 import power.keepeersofthestones.item.DestructionPowerItem;
@@ -551,6 +552,7 @@ public class PowerModItems {
 			() -> new ForgeSpawnEggItem(PowerModEntities.TYRANNOSAURUS_REX, -6750208, -65536,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 	public static final RegistryObject<Item> SPACE_ATLAS = REGISTRY.register("space_atlas", () -> new SpaceAtlasItem());
+	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
 	public static final RegistryObject<Item> SPLIT_STONE = REGISTRY.register("split_stone", () -> new SplitStoneItem());
 	public static final RegistryObject<Item> SPLIT_FEATHER = REGISTRY.register("split_feather", () -> new SplitFeatherItem());
 
