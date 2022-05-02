@@ -206,6 +206,7 @@ import power.keepeersofthestones.item.AnimalsStoneItem;
 import power.keepeersofthestones.item.AnimalsItem;
 import power.keepeersofthestones.item.AnimalsBatteryItem;
 import power.keepeersofthestones.item.AmberStoneItem;
+import power.keepeersofthestones.item.AmberShieldItem;
 import power.keepeersofthestones.item.AmberItem;
 import power.keepeersofthestones.item.AirStoneItem;
 import power.keepeersofthestones.item.AirFlowItem;
@@ -555,6 +556,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
 	public static final RegistryObject<Item> SPLIT_STONE = REGISTRY.register("split_stone", () -> new SplitStoneItem());
 	public static final RegistryObject<Item> SPLIT_FEATHER = REGISTRY.register("split_feather", () -> new SplitFeatherItem());
+	public static final RegistryObject<Item> AMBER_SHIELD = REGISTRY.register("amber_shield", () -> new AmberShieldItem());
+	public static final RegistryObject<Item> AMBER_BLOCK = block(PowerModBlocks.AMBER_BLOCK, null);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

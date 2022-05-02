@@ -12181,6 +12181,61 @@
       "locked_code": false,
       "registry_name": "time_feather_craft",
       "path": "~/Time"
+    },
+    {
+      "name": "AmberShield",
+      "type": "item",
+      "sortid": 813,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_shield",
+      "path": "~/Amber"
+    },
+    {
+      "name": "AmberShieldUse",
+      "type": "procedure",
+      "sortid": 814,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_shield_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Amber"
+    },
+    {
+      "name": "AmberBlock",
+      "type": "block",
+      "sortid": 815,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_block",
+      "path": "~/Amber"
     }
   ],
   "variable_elements": [
@@ -13005,6 +13060,7 @@
       "item.power.technology_boots": "Технологичные штаны",
       "item.power.rain_leggings": "Дождевые Штаны",
       "item.power.shadow_ball": "Теневой Шар",
+      "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Мастер Огня",
       "item.power.ocean_leggings": "Штаны Океана",
       "block.power.wood_magic_box": "Деревянная Волшебная Шкатулка",
@@ -13287,6 +13343,7 @@
       "gamerule.canRechoiseStone": "Может быть, можно заново выбрать камень?",
       "effect.fire_flying": "Fire Flying",
       "advancements.wither_and_decay.title": "Всё Накроет Тьма",
+      "item.power.amber_shield": "Amber Shield",
       "item.power.vacuum_spiral": "Вакуумная Спираль",
       "item.power.magnet_chestplate": "Magnet Chestplate",
       "effect.power.time_master_effect": "Мастер Времени",
@@ -13540,6 +13597,7 @@
       "item.power.technology_boots": "Technology Boots",
       "item.power.rain_leggings": "Rain Leggings",
       "item.power.shadow_ball": "Shadow Ball",
+      "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Master of Fire",
       "item.power.ocean_leggings": "Ocean Leggings",
       "block.power.wood_magic_box": "Wood Magic Box",
@@ -13823,6 +13881,7 @@
       "gamerule.canRechoiseStone": "Maybe it is possible to re-select the stone?",
       "effect.fire_flying": "Fire Flying",
       "advancements.wither_and_decay.title": "Wither And Decay",
+      "item.power.amber_shield": "Amber Shield",
       "item.power.vacuum_spiral": "Vacuum Spiral",
       "item.power.magnet_chestplate": "Magnet Chestplate",
       "effect.power.time_master_effect": "Master of Time",

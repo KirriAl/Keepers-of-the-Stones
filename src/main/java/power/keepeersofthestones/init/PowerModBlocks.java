@@ -23,6 +23,7 @@ import power.keepeersofthestones.block.ClusterBlockBlock;
 import power.keepeersofthestones.block.BluePortalBlock;
 import power.keepeersofthestones.block.BlackHoleBlockBlock;
 import power.keepeersofthestones.block.BatteryChargerBlock;
+import power.keepeersofthestones.block.AmberBlockBlock;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -57,6 +58,7 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> IRON_MAGIC_BOX = REGISTRY.register("iron_magic_box", () -> new IronMagicBoxBlock());
 	public static final RegistryObject<Block> GOLD_MAGIC_BOX = REGISTRY.register("gold_magic_box", () -> new GoldMagicBoxBlock());
 	public static final RegistryObject<Block> DINOERA_PORTAL = REGISTRY.register("dinoera_portal", () -> new DinoeraPortalBlock());
+	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -73,6 +75,7 @@ public class PowerModBlocks {
 			StoneMagicBoxBlock.registerRenderLayer();
 			IronMagicBoxBlock.registerRenderLayer();
 			GoldMagicBoxBlock.registerRenderLayer();
+			AmberBlockBlock.registerRenderLayer();
 		}
 	}
 }
