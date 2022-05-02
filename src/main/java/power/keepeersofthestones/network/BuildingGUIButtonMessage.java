@@ -67,19 +67,19 @@ public class BuildingGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			LibraryBuildProcedure.execute(world, entity, guistate);
+			LibraryBuildProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			BlacksmithBuildProcedure.execute(world, entity, guistate);
+			BlacksmithBuildProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			ButcherShopBuildProcedure.execute(world, entity, guistate);
+			ButcherShopBuildProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			StreetlightBuildProcedure.execute(world, entity, guistate);
+			StreetlightBuildProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
