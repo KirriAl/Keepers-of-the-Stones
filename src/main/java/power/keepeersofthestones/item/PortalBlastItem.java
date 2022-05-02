@@ -44,7 +44,7 @@ public class PortalBlastItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				PortalBlastEntity entityarrow = PortalBlastEntity.shoot(world, entity, world.getRandom(), 1f, 12, 0);
+				PortalBlastEntity entityarrow = PortalBlastEntity.shoot(world, entity, world.getRandom(), 1f, 12, 5);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 
