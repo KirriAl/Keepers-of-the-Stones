@@ -12281,6 +12281,39 @@
       "locked_code": false,
       "registry_name": "check_point_tp",
       "path": "~/Teleportation"
+    },
+    {
+      "name": "OpenPointGUI2",
+      "type": "procedure",
+      "sortid": 817,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_point_gui_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Teleportation"
     }
   ],
   "variable_elements": [
