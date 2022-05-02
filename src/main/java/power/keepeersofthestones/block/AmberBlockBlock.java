@@ -51,7 +51,7 @@ public class AmberBlockBlock extends Block {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.AMBER_BLOCK.get(), renderType -> renderType == RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.AMBER_BLOCK.get(), renderType -> renderType == RenderType.cutout());
 	}
 
 }

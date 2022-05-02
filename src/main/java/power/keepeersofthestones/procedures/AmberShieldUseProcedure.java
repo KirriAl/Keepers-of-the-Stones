@@ -86,7 +86,7 @@ public class AmberShieldUseProcedure {
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 100);
+			}.start(world, 400);
 		}
 	}
 }
