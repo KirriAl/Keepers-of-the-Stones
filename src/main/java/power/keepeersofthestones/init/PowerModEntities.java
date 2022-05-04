@@ -39,6 +39,7 @@ import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 import power.keepeersofthestones.entity.BlackHeartEntity;
+import power.keepeersofthestones.entity.AmberStreaksEntity;
 import power.keepeersofthestones.entity.AirFlowEntity;
 import power.keepeersofthestones.entity.AcusticalExplodeEntity;
 import power.keepeersofthestones.PowerMod;
@@ -176,6 +177,9 @@ public class PowerModEntities {
 					.sized(1.1f, 2.5f));
 	public static final RegistryObject<EntityType<SplitFeatherEntity>> SPLIT_FEATHER = register("projectile_split_feather",
 			EntityType.Builder.<SplitFeatherEntity>of(SplitFeatherEntity::new, MobCategory.MISC).setCustomClientFactory(SplitFeatherEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AmberStreaksEntity>> AMBER_STREAKS = register("projectile_amber_streaks",
+			EntityType.Builder.<AmberStreaksEntity>of(AmberStreaksEntity::new, MobCategory.MISC).setCustomClientFactory(AmberStreaksEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
