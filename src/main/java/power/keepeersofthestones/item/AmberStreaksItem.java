@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.AmberStreaksEntity;
 
 import net.minecraft.world.level.Level;
@@ -46,6 +47,8 @@ public class AmberStreaksItem extends Item {
 				AmberStreaksEntity entityarrow = AmberStreaksEntity.shoot(world, entity, world.getRandom(), 1f, 12, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
+				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}
 	}
