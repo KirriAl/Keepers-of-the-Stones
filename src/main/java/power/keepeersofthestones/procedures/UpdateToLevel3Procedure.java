@@ -24,7 +24,7 @@ public class UpdateToLevel3Procedure {
 				}
 				return 0;
 			}
-		}.getAmount(0) == 16) {
+		}.getAmount(2) == 16) {
 			{
 				double _setval = 3;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
