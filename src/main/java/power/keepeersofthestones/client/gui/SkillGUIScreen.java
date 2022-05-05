@@ -5,6 +5,8 @@ import power.keepeersofthestones.world.inventory.SkillGUIMenu;
 import power.keepeersofthestones.procedures.ReturnLevel3Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel2Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel1Procedure;
+import power.keepeersofthestones.network.SkillGUIButtonMessage;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -102,6 +104,10 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 70, 61, 20, new TextComponent("Upgrade"), e -> {
+			if (ReturnLevel1Procedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new SkillGUIButtonMessage(0, x, y, z));
+				SkillGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
@@ -110,6 +116,10 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 			}
 		});
 		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 70, 61, 20, new TextComponent("Upgrade"), e -> {
+			if (ReturnLevel2Procedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new SkillGUIButtonMessage(1, x, y, z));
+				SkillGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {

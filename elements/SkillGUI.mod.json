@@ -58,6 +58,9 @@
         "type": "button",
         "data": {
           "text": "Upgrade",
+          "onClick": {
+            "name": "UpdateToLevel2"
+          },
           "displayCondition": {
             "name": "ReturnLevel1"
           },
@@ -142,6 +145,9 @@
         "type": "button",
         "data": {
           "text": "Upgrade",
+          "onClick": {
+            "name": "UpdateToLevel3"
+          },
           "displayCondition": {
             "name": "ReturnLevel2"
           },
