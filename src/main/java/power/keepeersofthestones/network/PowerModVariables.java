@@ -455,7 +455,7 @@ public class PowerModVariables {
 		public boolean fog = false;
 		public boolean magnet = false;
 		public boolean mist = false;
-		public double power_level = 0.0;
+		public double power_level = 1.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)

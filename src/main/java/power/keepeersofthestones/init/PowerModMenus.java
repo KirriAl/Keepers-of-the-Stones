@@ -7,6 +7,7 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
 import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
+import power.keepeersofthestones.world.inventory.SkillGUIMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
 import power.keepeersofthestones.world.inventory.EBWaterMenu;
@@ -124,6 +125,7 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new SpaceAtlasGUIMenu(id, inv, extraData));
 	public static final MenuType<CheckPointTPMenu> CHECK_POINT_TP = register("check_point_tp",
 			(id, inv, extraData) -> new CheckPointTPMenu(id, inv, extraData));
+	public static final MenuType<SkillGUIMenu> SKILL_GUI = register("skill_gui", (id, inv, extraData) -> new SkillGUIMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

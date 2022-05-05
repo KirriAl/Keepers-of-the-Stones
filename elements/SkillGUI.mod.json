@@ -1,0 +1,177 @@
+{
+  "_fv": 29,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 315,
+    "height": 221,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Level 1",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Level 1",
+          "x": 87,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Skills",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Skills",
+          "x": 195,
+          "y": 17
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:ElementalCoin"
+          },
+          "color": {
+            "value": -13261,
+            "falpha": 0.0
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 186,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Upgrade",
+          "displayCondition": {
+            "name": "ReturnLevel1"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Upgrade",
+          "x": 168,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel1"
+          },
+          "name": "level_checked.png",
+          "x": 96,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level 2",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Level 2",
+          "x": 177,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel2"
+          },
+          "name": "level_checked.png",
+          "x": 186,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level 3",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Level 3",
+          "x": 267,
+          "y": 35
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:ElementalCoin"
+          },
+          "color": {
+            "value": -13261,
+            "falpha": 0.0
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 276,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Upgrade",
+          "displayCondition": {
+            "name": "ReturnLevel2"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Upgrade",
+          "x": 258,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel3"
+          },
+          "name": "level_checked.png",
+          "x": 276,
+          "y": 80
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

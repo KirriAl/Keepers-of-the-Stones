@@ -11887,6 +11887,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -12284,6 +12300,103 @@
         ]
       },
       "path": "~/Amber"
+    },
+    {
+      "name": "ReturnLevel1",
+      "type": "procedure",
+      "sortid": 820,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_level_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "ReturnLevel2",
+      "type": "procedure",
+      "sortid": 821,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_level_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "ReturnLevel3",
+      "type": "procedure",
+      "sortid": 822,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_level_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "UpdateToLevel2",
+      "type": "procedure",
+      "sortid": 820,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_to_level_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "UpdateToLevel3",
+      "type": "procedure",
+      "sortid": 823,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_to_level_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "SkillGUI",
+      "type": "gui",
+      "sortid": 820,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_gui",
+      "path": "~/SystemPowerLevel"
     }
   ],
   "variable_elements": [
@@ -12795,7 +12908,7 @@
       "name": "power_level",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0.0"
+      "value": "1.0"
     }
   ],
   "sound_elements": [
@@ -14161,10 +14274,6 @@
       },
       {
         "name": "Structures",
-        "children": []
-      },
-      {
-        "name": "Split",
         "children": []
       }
     ]
