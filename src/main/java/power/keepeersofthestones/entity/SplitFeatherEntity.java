@@ -67,7 +67,9 @@ public class SplitFeatherEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		SplitProcedure.execute(entityHitResult.getEntity());
+		SplitProcedure.execute(
+
+		);
 	}
 
 	@Override
