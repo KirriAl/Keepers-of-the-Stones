@@ -34,7 +34,7 @@ public class UpdateToLevel3Procedure {
 			}
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
-				((Slot) _slots.get(16)).remove(1);
+				((Slot) _slots.get(1)).remove(16);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
