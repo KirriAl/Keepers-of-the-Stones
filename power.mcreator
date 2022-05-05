@@ -12390,12 +12390,87 @@
       "path": "~/SystemPowerLevel"
     },
     {
-      "name": "SkillGUI",
+      "name": "LevelsAndSkillsGUI",
       "type": "gui",
-      "sortid": 820,
+      "sortid": 824,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "skill_gui",
+      "registry_name": "levels_and_skills_gui",
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "CostsLevels",
+      "type": "gui",
+      "sortid": 825,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "costs_levels",
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "BackToLevelsAndSkills",
+      "type": "procedure",
+      "sortid": 826,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "back_to_levels_and_skills",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "OpenCostLevels",
+      "type": "procedure",
+      "sortid": 827,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_cost_levels",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
       "path": "~/SystemPowerLevel"
     }
   ],

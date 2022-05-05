@@ -25,7 +25,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class SkillGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class LevelsAndSkillsGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -34,11 +34,11 @@ public class SkillGUIMenu extends AbstractContainerMenu implements Supplier<Map<
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public SkillGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.SKILL_GUI, id);
+	public LevelsAndSkillsGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(PowerModMenus.LEVELS_AND_SKILLS_GUI, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
-		this.internal = new ItemStackHandler(3);
+		this.internal = new ItemStackHandler(2);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -76,13 +76,7 @@ public class SkillGUIMenu extends AbstractContainerMenu implements Supplier<Map<
 				}
 			}
 		}
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 131, 44) {
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return (PowerModItems.ELEMENTAL_COIN.get() == stack.getItem());
-			}
-		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 221, 44) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 140, 86) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (PowerModItems.ELEMENTAL_COIN.get() == stack.getItem());
@@ -90,9 +84,9 @@ public class SkillGUIMenu extends AbstractContainerMenu implements Supplier<Map<
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 69 + 8 + sj * 18, 27 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 69 + 8 + sj * 18, 33 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 69 + 8 + si * 18, 27 + 142));
+			this.addSlot(new Slot(inv, si, 69 + 8 + si * 18, 33 + 142));
 	}
 
 	@Override
@@ -107,18 +101,18 @@ public class SkillGUIMenu extends AbstractContainerMenu implements Supplier<Map<
 		if (slot != null && slot.hasItem()) {
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
-			if (index < 2) {
-				if (!this.moveItemStackTo(itemstack1, 2, this.slots.size(), true)) {
+			if (index < 1) {
+				if (!this.moveItemStackTo(itemstack1, 1, this.slots.size(), true)) {
 					return ItemStack.EMPTY;
 				}
 				slot.onQuickCraft(itemstack1, itemstack);
-			} else if (!this.moveItemStackTo(itemstack1, 0, 2, false)) {
-				if (index < 2 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 2 + 27, this.slots.size(), true)) {
+			} else if (!this.moveItemStackTo(itemstack1, 0, 1, false)) {
+				if (index < 1 + 27) {
+					if (!this.moveItemStackTo(itemstack1, 1 + 27, this.slots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 2, 2 + 27, false)) {
+					if (!this.moveItemStackTo(itemstack1, 1, 1 + 27, false)) {
 						return ItemStack.EMPTY;
 					}
 				}

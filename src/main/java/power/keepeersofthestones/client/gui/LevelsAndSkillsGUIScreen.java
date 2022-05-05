@@ -1,11 +1,11 @@
 
 package power.keepeersofthestones.client.gui;
 
-import power.keepeersofthestones.world.inventory.SkillGUIMenu;
+import power.keepeersofthestones.world.inventory.LevelsAndSkillsGUIMenu;
 import power.keepeersofthestones.procedures.ReturnLevel3Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel2Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel1Procedure;
-import power.keepeersofthestones.network.SkillGUIButtonMessage;
+import power.keepeersofthestones.network.LevelsAndSkillsGUIButtonMessage;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.Level;
@@ -23,13 +23,13 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
-	private final static HashMap<String, Object> guistate = SkillGUIMenu.guistate;
+public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndSkillsGUIMenu> {
+	private final static HashMap<String, Object> guistate = LevelsAndSkillsGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 
-	public SkillGUIScreen(SkillGUIMenu container, Inventory inventory, Component text) {
+	public LevelsAndSkillsGUIScreen(LevelsAndSkillsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -37,10 +37,10 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 		this.z = container.z;
 		this.entity = container.entity;
 		this.imageWidth = 315;
-		this.imageHeight = 221;
+		this.imageHeight = 233;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/skill_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/levels_and_skills_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -58,16 +58,20 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (ReturnLevel1Procedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + 40, this.topPos + 70, 0, 0, 19, 18, 19, 18);
+			this.blit(ms, this.leftPos + 40, this.topPos + 49, 0, 0, 19, 18, 19, 18);
 		}
 		if (ReturnLevel2Procedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + 130, this.topPos + 70, 0, 0, 19, 18, 19, 18);
+			this.blit(ms, this.leftPos + 130, this.topPos + 49, 0, 0, 19, 18, 19, 18);
 		}
 		if (ReturnLevel3Procedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + 220, this.topPos + 70, 0, 0, 19, 18, 19, 18);
+			this.blit(ms, this.leftPos + 220, this.topPos + 49, 0, 0, 19, 18, 19, 18);
 		}
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
+		this.blit(ms, this.leftPos + 121, this.topPos + 85, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -87,10 +91,10 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Level 1", 31, 25, -12829636);
-		this.font.draw(poseStack, "Skills", 139, 7, -12829636);
-		this.font.draw(poseStack, "Level 2", 121, 25, -12829636);
-		this.font.draw(poseStack, "Level 3", 211, 25, -12829636);
+		this.font.draw(poseStack, "Level 1", 31, 31, -12829636);
+		this.font.draw(poseStack, "Levels & Skills", 112, 4, -12829636);
+		this.font.draw(poseStack, "Level 2", 121, 31, -12829636);
+		this.font.draw(poseStack, "Level 3", 211, 31, -12829636);
 	}
 
 	@Override
@@ -103,10 +107,10 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 70, 61, 20, new TextComponent("Upgrade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
 			if (ReturnLevel1Procedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SkillGUIButtonMessage(0, x, y, z));
-				SkillGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(0, x, y, z));
+				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
@@ -115,10 +119,10 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 70, 61, 20, new TextComponent("Upgrade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
 			if (ReturnLevel2Procedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SkillGUIButtonMessage(1, x, y, z));
-				SkillGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(1, x, y, z));
+				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
@@ -127,5 +131,13 @@ public class SkillGUIScreen extends AbstractContainerScreen<SkillGUIMenu> {
 					super.render(ms, gx, gy, ticks);
 			}
 		});
+		this.addRenderableWidget(new Button(this.leftPos + 274, this.topPos + 4, 30, 20, new TextComponent("?"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(2, x, y, z));
+				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 211, this.topPos + 4, 56, 20, new TextComponent("Skills"), e -> {
+		}));
 	}
 }

@@ -1,6 +1,6 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.world.inventory.LevelsAndSkillsGUIMenu;
+import power.keepeersofthestones.world.inventory.CostsLevelsMenu;
 
 import net.minecraftforge.network.NetworkHooks;
 
@@ -18,7 +18,7 @@ import net.minecraft.core.BlockPos;
 
 import io.netty.buffer.Unpooled;
 
-public class OpenSkillsGUIProcedure {
+public class OpenCostLevelsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -28,12 +28,12 @@ public class OpenSkillsGUIProcedure {
 				NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return new TextComponent("LevelsAndSkillsGUI");
+						return new TextComponent("CostsLevels");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new LevelsAndSkillsGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new CostsLevelsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

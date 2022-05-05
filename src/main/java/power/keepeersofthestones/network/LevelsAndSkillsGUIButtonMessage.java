@@ -1,9 +1,10 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.SkillGUIMenu;
+import power.keepeersofthestones.world.inventory.LevelsAndSkillsGUIMenu;
 import power.keepeersofthestones.procedures.UpdateToLevel3Procedure;
 import power.keepeersofthestones.procedures.UpdateToLevel2Procedure;
+import power.keepeersofthestones.procedures.OpenCostLevelsProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -20,31 +21,31 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SkillGUIButtonMessage {
+public class LevelsAndSkillsGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public SkillGUIButtonMessage(FriendlyByteBuf buffer) {
+	public LevelsAndSkillsGUIButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public SkillGUIButtonMessage(int buttonID, int x, int y, int z) {
+	public LevelsAndSkillsGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(SkillGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(LevelsAndSkillsGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(SkillGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(LevelsAndSkillsGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -59,7 +60,7 @@ public class SkillGUIButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = SkillGUIMenu.guistate;
+		HashMap guistate = LevelsAndSkillsGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
@@ -71,11 +72,15 @@ public class SkillGUIButtonMessage {
 
 			UpdateToLevel3Procedure.execute(entity);
 		}
+		if (buttonID == 2) {
+
+			OpenCostLevelsProcedure.execute(world, x, y, z, entity);
+		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SkillGUIButtonMessage.class, SkillGUIButtonMessage::buffer, SkillGUIButtonMessage::new,
-				SkillGUIButtonMessage::handler);
+		PowerMod.addNetworkMessage(LevelsAndSkillsGUIButtonMessage.class, LevelsAndSkillsGUIButtonMessage::buffer,
+				LevelsAndSkillsGUIButtonMessage::new, LevelsAndSkillsGUIButtonMessage::handler);
 	}
 }

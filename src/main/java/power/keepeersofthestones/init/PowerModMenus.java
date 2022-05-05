@@ -7,9 +7,9 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
 import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
-import power.keepeersofthestones.world.inventory.SkillGUIMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
+import power.keepeersofthestones.world.inventory.LevelsAndSkillsGUIMenu;
 import power.keepeersofthestones.world.inventory.EBWaterMenu;
 import power.keepeersofthestones.world.inventory.EBVacuumMenu;
 import power.keepeersofthestones.world.inventory.EBTornadoMenu;
@@ -41,6 +41,7 @@ import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
 import power.keepeersofthestones.world.inventory.EBAmberMenu;
 import power.keepeersofthestones.world.inventory.EBAirMenu;
 import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
+import power.keepeersofthestones.world.inventory.CostsLevelsMenu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
@@ -125,7 +126,10 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new SpaceAtlasGUIMenu(id, inv, extraData));
 	public static final MenuType<CheckPointTPMenu> CHECK_POINT_TP = register("check_point_tp",
 			(id, inv, extraData) -> new CheckPointTPMenu(id, inv, extraData));
-	public static final MenuType<SkillGUIMenu> SKILL_GUI = register("skill_gui", (id, inv, extraData) -> new SkillGUIMenu(id, inv, extraData));
+	public static final MenuType<LevelsAndSkillsGUIMenu> LEVELS_AND_SKILLS_GUI = register("levels_and_skills_gui",
+			(id, inv, extraData) -> new LevelsAndSkillsGUIMenu(id, inv, extraData));
+	public static final MenuType<CostsLevelsMenu> COSTS_LEVELS = register("costs_levels",
+			(id, inv, extraData) -> new CostsLevelsMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
