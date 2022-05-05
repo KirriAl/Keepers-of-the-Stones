@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.0.4",
-    "1.18.2-recommended": "2.0.4"
+    "1.18.2-latest": "2.0.5",
+    "1.18.2-recommended": "2.0.5"
   },
   "1.16.5": {
     "B2": "
@@ -420,6 +420,11 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed icons for time control effects
 - [Bugfix] Fixed generation of biomes in dimensions
 - [Bugfix] Fixed a bug with copying a stone after 2 deaths with a used battery
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.0.5": "
+- Improved Tyrannosaurus behavior
+- The split feather functionality is temporarily disabled
+- [Bugfix] Fixed Tyrannosaurus hitbox
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
