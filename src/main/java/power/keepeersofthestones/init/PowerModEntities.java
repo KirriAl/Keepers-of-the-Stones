@@ -14,7 +14,6 @@ import power.keepeersofthestones.entity.TornadoCreateEntity;
 import power.keepeersofthestones.entity.TimeDilationEntity;
 import power.keepeersofthestones.entity.TigerClawEntity;
 import power.keepeersofthestones.entity.SunExplodeEntity;
-import power.keepeersofthestones.entity.SplitFeatherEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
@@ -175,9 +174,6 @@ public class PowerModEntities {
 					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(TyrannosaurusRexEntity::new)
 
 					.sized(0.5f, 1f));
-	public static final RegistryObject<EntityType<SplitFeatherEntity>> SPLIT_FEATHER = register("projectile_split_feather",
-			EntityType.Builder.<SplitFeatherEntity>of(SplitFeatherEntity::new, MobCategory.MISC).setCustomClientFactory(SplitFeatherEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AmberStreaksEntity>> AMBER_STREAKS = register("projectile_amber_streaks",
 			EntityType.Builder.<AmberStreaksEntity>of(AmberStreaksEntity::new, MobCategory.MISC).setCustomClientFactory(AmberStreaksEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));

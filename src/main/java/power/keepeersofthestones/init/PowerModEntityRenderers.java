@@ -59,7 +59,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.GOLDEN_CROSSBOW.get(), GoldenCrossbowRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_SPHERE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TYRANNOSAURUS_REX.get(), TyrannosaurusRexRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.SPLIT_FEATHER.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AMBER_STREAKS.get(), ThrownItemRenderer::new);
 	}
 }

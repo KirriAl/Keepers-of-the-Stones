@@ -50,8 +50,6 @@ import power.keepeersofthestones.item.SunExplodeItem;
 import power.keepeersofthestones.item.SunBatteryItem;
 import power.keepeersofthestones.item.SunAxeItem;
 import power.keepeersofthestones.item.StormItem;
-import power.keepeersofthestones.item.SplitStoneItem;
-import power.keepeersofthestones.item.SplitFeatherItem;
 import power.keepeersofthestones.item.SpiritStoneItem;
 import power.keepeersofthestones.item.SpikeItem;
 import power.keepeersofthestones.item.SpeedStoneItem;
@@ -555,8 +553,6 @@ public class PowerModItems {
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 	public static final RegistryObject<Item> SPACE_ATLAS = REGISTRY.register("space_atlas", () -> new SpaceAtlasItem());
 	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
-	public static final RegistryObject<Item> SPLIT_STONE = REGISTRY.register("split_stone", () -> new SplitStoneItem());
-	public static final RegistryObject<Item> SPLIT_FEATHER = REGISTRY.register("split_feather", () -> new SplitFeatherItem());
 	public static final RegistryObject<Item> AMBER_SHIELD = REGISTRY.register("amber_shield", () -> new AmberShieldItem());
 	public static final RegistryObject<Item> AMBER_BLOCK = block(PowerModBlocks.AMBER_BLOCK, null);
 	public static final RegistryObject<Item> AMBER_STREAKS = REGISTRY.register("amber_streaks", () -> new AmberStreaksItem());

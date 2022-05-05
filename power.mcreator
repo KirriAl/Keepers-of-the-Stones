@@ -12154,57 +12154,6 @@
       "path": "~/Time"
     },
     {
-      "name": "CreatingSplit",
-      "type": "procedure",
-      "sortid": 809,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "creating_split",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Split"
-    },
-    {
-      "name": "SplitStone",
-      "type": "item",
-      "sortid": 809,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "split_stone",
-      "path": "~/Split"
-    },
-    {
-      "name": "SplitFeather",
-      "type": "rangeditem",
-      "sortid": 810,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "split_feather",
-      "path": "~/Split"
-    },
-    {
-      "name": "Split",
-      "type": "procedure",
-      "sortid": 811,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "split",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/Split"
-    },
-    {
       "name": "TimeFeatherCraft",
       "type": "recipe",
       "sortid": 812,
@@ -13219,7 +13168,6 @@
       "item.power.moon_wither": "Лунное Иссушение",
       "item.power.sound_boots": "Звуковые Ботинки",
       "item.power.animals_chestplate": "Животный нагрудник",
-      "item.power.split_stone": "Камень Раскола",
       "item.power.magma_shield": "Магматический Щит",
       "item.power.spirit_stone": "Камень Духа",
       "item.power.moon_axe": "Лунная Секира",
@@ -13272,7 +13220,6 @@
       "item.power.energy_boots": "Энергетические Ботинки",
       "item.power.burn": "Поджёг",
       "item.power.amber_boots": "Amber Boots",
-      "item.power.split_feather": "Перо Раскола",
       "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Перезарядка",
       "item.power.vampirism": "Вампиризм",
@@ -13757,7 +13704,6 @@
       "item.power.moon_wither": "Moon Wither",
       "item.power.sound_boots": "Sound Boots",
       "item.power.animals_chestplate": "Animals Chestplate",
-      "item.power.split_stone": "Split Stone",
       "item.power.magma_shield": "Magma Shield",
       "item.power.spirit_stone": "Spirit Stone",
       "item.power.moon_axe": "Moon Axe",
@@ -13810,7 +13756,6 @@
       "item.power.energy_boots": "Energy Boots",
       "item.power.burn": "Burn",
       "item.power.amber_boots": "Amber Boots",
-      "item.power.split_feather": "Split Feather",
       "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Recharge",
       "item.power.vampirism": "Vampirism",
@@ -14227,7 +14172,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.0.5",
+    "version": "2.1.0.1",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "MagicalAlexey",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
