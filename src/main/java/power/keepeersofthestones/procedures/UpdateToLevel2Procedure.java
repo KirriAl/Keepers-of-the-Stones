@@ -24,7 +24,7 @@ public class UpdateToLevel2Procedure {
 				}
 				return 0;
 			}
-		}.getAmount(1) == 4) {
+		}.getAmount(1) >= 4) {
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
 				((Slot) _slots.get(1)).remove(4);

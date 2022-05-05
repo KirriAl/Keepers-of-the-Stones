@@ -177,6 +177,9 @@
         "type": "button",
         "data": {
           "text": "Skills",
+          "displayCondition": {
+            "name": "ReturnLevel3"
+          },
           "width": 56,
           "height": 20,
           "name": "Skills",

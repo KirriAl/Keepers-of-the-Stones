@@ -9,6 +9,6 @@ public class ReturnLevel1Procedure {
 		if (entity == null)
 			return false;
 		return (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new PowerModVariables.PlayerVariables())).power_level == 1;
+				.orElse(new PowerModVariables.PlayerVariables())).power_level <= 1;
 	}
 }

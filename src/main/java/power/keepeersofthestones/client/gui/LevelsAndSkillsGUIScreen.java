@@ -138,6 +138,12 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 211, this.topPos + 4, 56, 20, new TextComponent("Skills"), e -> {
-		}));
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (ReturnLevel3Procedure.execute(entity))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
 	}
 }
