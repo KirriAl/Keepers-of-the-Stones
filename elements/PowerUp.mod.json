@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Power UP!",
-    "achievementDescription": "Create the first Elemental Coin",
+    "achievementDescription": "Unlock the second level",
     "achievementIcon": {
       "value": "CUSTOM:ElementalCoin"
     },
@@ -12,7 +12,9 @@
     "showPopup": true,
     "announceToChat": true,
     "hideIfNotCompleted": true,
-    "rewardLoot": [],
+    "rewardLoot": [
+      "RewardCoins"
+    ],
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 1000,
@@ -20,6 +22,6 @@
     "parent": {
       "value": "No parent: root"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"52\" y=\"29\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:ElementalCoin</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"32\" y=\"55\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

@@ -13,7 +13,8 @@
     "announceToChat": true,
     "hideIfNotCompleted": true,
     "rewardLoot": [
-      "ElementalBookGive"
+      "ElementalBookGive",
+      "RewardCoins"
     ],
     "rewardRecipes": [
       "CraftBatteryCharger",

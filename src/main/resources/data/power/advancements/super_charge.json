@@ -32,5 +32,11 @@
       }
     }
   },
+  "rewards": {
+    "experience": 0,
+    "loot": [
+      "power:entities/reward_coins"
+    ]
+  },
   "parent": "power:put_it_on_charge_overnight"
 }
