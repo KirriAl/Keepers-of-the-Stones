@@ -12418,6 +12418,15 @@
       "locked_code": false,
       "registry_name": "power_up",
       "path": "~/Achievements"
+    },
+    {
+      "name": "Battery",
+      "type": "tag",
+      "sortid": 830,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battery",
+      "path": "~/ElementalBattery"
     }
   ],
   "variable_elements": [

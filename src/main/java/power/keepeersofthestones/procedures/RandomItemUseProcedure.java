@@ -2,12 +2,22 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.items.ItemHandlerHelper;
+
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.Mth;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.Minecraft;
+
+import java.util.Random;
 
 public class RandomItemUseProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -18,61 +28,156 @@ public class RandomItemUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			if (Math.random() <= 0.1) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s bread");
+			if (Mth.nextInt(new Random(), 1, 25) == 1) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.BREAD);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (Math.random() <= 0.2) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s cooked_beef");
+			} else if (Mth.nextInt(new Random(), 1, 25) == 2) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.COOKED_BEEF);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (Math.random() <= 0.3) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s iron_sword");
+			} else if (Mth.nextInt(new Random(), 1, 25) == 3) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.CAKE);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (Math.random() <= 0.3) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s iron_pickaxe");
+			} else if (Mth.nextInt(new Random(), 1, 25) == 4) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.STICK);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (Math.random() <= 0.3) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s iron_axe");
+			} else if (Mth.nextInt(new Random(), 1, 25) == 5) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.IRON_INGOT);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (Math.random() <= 0.4) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s iron_block");
+			} else if (Mth.nextInt(new Random(), 1, 25) == 6) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.GOLD_INGOT);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (Math.random() <= 0.5) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s ender_pearl");
+			} else if (Mth.nextInt(new Random(), 1, 25) == 7) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.IRON_HOE);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (Math.random() >= 0.5) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"give @s diamond");
+			} else if (Mth.nextInt(new Random(), 1, 25) == 8) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.IRON_SHOVEL);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 9) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.IRON_AXE);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 10) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.IRON_SWORD);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 11) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.IRON_PICKAXE);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 12) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.DIAMOND);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 13) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.ENDER_PEARL);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 14) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.OBSIDIAN);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 15) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.BONE_BLOCK);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 16) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.IRON_BLOCK);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 17) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.GOLD_BLOCK);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 18) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.NETHERITE_INGOT);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 19) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 20) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.SADDLE);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 21) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.DIAMOND_HORSE_ARMOR);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 22) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.TNT);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 23) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.TOTEM_OF_UNDYING);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 24) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.DIAMOND_BLOCK);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else if (Mth.nextInt(new Random(), 1, 25) == 25) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("power:battery")))
+							.getRandomElement(new Random()).orElseGet(() -> Items.AIR)));
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}
 		}
