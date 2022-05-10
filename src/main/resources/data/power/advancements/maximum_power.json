@@ -19,5 +19,8 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "power:mighty_master"
+  "rewards": {
+    "experience": 25000
+  },
+  "parent": "power:power_up"
 }

@@ -1,28 +1,28 @@
 {
   "display": {
-    "background": "power:textures/screens/battery_adv_theme.png",
+    "background": "power:textures/screens/power_level_theme.png",
     "icon": {
-      "item": "power:battery_charger"
+      "item": "power:elemental_coin"
     },
     "title": {
-      "translate": "advancements.put_it_on_charge_overnight.title"
+      "translate": "advancements.power_up.title"
     },
     "description": {
-      "translate": "advancements.put_it_on_charge_overnight.descr"
+      "translate": "advancements.power_up.descr"
     },
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
   "criteria": {
-    "put_it_on_charge_overnight": {
+    "power_up": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "power:battery_charger"
+              "power:elemental_coin"
             ],
             "count": {
               "min": 1,
@@ -34,6 +34,6 @@
     }
   },
   "rewards": {
-    "experience": 50
+    "experience": 1000
   }
 }

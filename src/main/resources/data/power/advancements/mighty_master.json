@@ -27,7 +27,8 @@
     ],
     "recipes": [
       "power:craft_battery_charger",
-      "power:battery_craft"
+      "power:battery_craft",
+      "power:elemental_coin_craft"
     ]
   }
 }
