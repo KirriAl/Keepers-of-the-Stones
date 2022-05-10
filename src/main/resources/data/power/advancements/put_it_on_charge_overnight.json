@@ -34,9 +34,6 @@
     }
   },
   "rewards": {
-    "experience": 50,
-    "loot": [
-      "power:entities/reward_coins"
-    ]
+    "experience": 50
   }
 }

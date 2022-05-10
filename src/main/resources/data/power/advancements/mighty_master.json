@@ -23,13 +23,12 @@
   "rewards": {
     "experience": 0,
     "loot": [
-      "power:entities/elemental_book_give",
-      "power:entities/reward_coins"
+      "power:entities/elemental_book_give"
     ],
     "recipes": [
       "power:craft_battery_charger",
       "power:battery_craft",
-      "power:elemental_coin_craft"
+      "power:deleted_mod_element"
     ]
   }
 }
