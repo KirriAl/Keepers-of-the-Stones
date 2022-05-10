@@ -12307,6 +12307,15 @@
       "locked_code": false,
       "registry_name": "reward_coins",
       "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "ElementalCoinBuy",
+      "type": "villagertrade",
+      "sortid": 833,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_coin_buy",
+      "path": "~/SystemPowerLevel"
     }
   ],
   "variable_elements": [
