@@ -102,6 +102,7 @@ import power.keepeersofthestones.item.MoonStoneItem;
 import power.keepeersofthestones.item.MoonBatteryItem;
 import power.keepeersofthestones.item.MoonAxeItem;
 import power.keepeersofthestones.item.MistStoneItem;
+import power.keepeersofthestones.item.MistItem;
 import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
@@ -556,6 +557,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> AMBER_SHIELD = REGISTRY.register("amber_shield", () -> new AmberShieldItem());
 	public static final RegistryObject<Item> AMBER_BLOCK = block(PowerModBlocks.AMBER_BLOCK, null);
 	public static final RegistryObject<Item> AMBER_STREAKS = REGISTRY.register("amber_streaks", () -> new AmberStreaksItem());
+	public static final RegistryObject<Item> MIST_HELMET = REGISTRY.register("mist_helmet", () -> new MistItem.Helmet());
+	public static final RegistryObject<Item> MIST_CHESTPLATE = REGISTRY.register("mist_chestplate", () -> new MistItem.Chestplate());
+	public static final RegistryObject<Item> MIST_LEGGINGS = REGISTRY.register("mist_leggings", () -> new MistItem.Leggings());
+	public static final RegistryObject<Item> MIST_BOOTS = REGISTRY.register("mist_boots", () -> new MistItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
