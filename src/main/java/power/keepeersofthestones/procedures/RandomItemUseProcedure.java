@@ -2,7 +2,6 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
 
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.block.Blocks;
@@ -13,8 +12,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.Minecraft;
 
 import java.util.Random;
@@ -173,12 +170,7 @@ public class RandomItemUseProcedure {
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			} else if (Mth.nextInt(new Random(), 1, 25) == 25) {
-				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("power:battery")))
-							.getRandomElement(new Random()).orElseGet(() -> Items.AIR)));
-					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-				}
+				RandomBatteryGiveProcedure.execute(entity);
 			}
 		}
 	}

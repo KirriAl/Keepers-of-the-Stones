@@ -12427,6 +12427,23 @@
       "locked_code": false,
       "registry_name": "battery",
       "path": "~/ElementalBattery"
+    },
+    {
+      "name": "RandomBatteryGive",
+      "type": "procedure",
+      "sortid": 831,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_battery_give",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Creation"
     }
   ],
   "variable_elements": [
