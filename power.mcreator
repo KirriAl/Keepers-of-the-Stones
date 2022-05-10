@@ -12472,6 +12472,15 @@
         ]
       },
       "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "ElementalCoinCraft",
+      "type": "recipe",
+      "sortid": 828,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_coin_craft",
+      "path": "~/SystemPowerLevel"
     }
   ],
   "variable_elements": [

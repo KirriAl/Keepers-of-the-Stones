@@ -33,8 +33,8 @@ public class CostsLevelsScreen extends AbstractContainerScreen<CostsLevelsMenu> 
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 315;
-		this.imageHeight = 233;
+		this.imageWidth = 300;
+		this.imageHeight = 150;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/costs_levels.png");
@@ -55,13 +55,13 @@ public class CostsLevelsScreen extends AbstractContainerScreen<CostsLevelsMenu> 
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-		this.blit(ms, this.leftPos + 31, this.topPos + 49, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 23, this.topPos + 44, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-		this.blit(ms, this.leftPos + 130, this.topPos + 49, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 104, this.topPos + 44, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-		this.blit(ms, this.leftPos + 220, this.topPos + 49, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 185, this.topPos + 44, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -82,13 +82,13 @@ public class CostsLevelsScreen extends AbstractContainerScreen<CostsLevelsMenu> 
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Level 1", 25, 31, -12829636);
-		this.font.draw(poseStack, "Cost levels", 130, 5, -12829636);
-		this.font.draw(poseStack, "Level 2", 121, 31, -12829636);
-		this.font.draw(poseStack, "Level 3", 220, 31, -12829636);
-		this.font.draw(poseStack, "0", 49, 52, -12829636);
-		this.font.draw(poseStack, "4", 148, 52, -12829636);
-		this.font.draw(poseStack, "16", 237, 52, -12829636);
+		this.font.draw(poseStack, "Level 1", 32, 26, -12829636);
+		this.font.draw(poseStack, "Price of Levels", 113, 8, -12829636);
+		this.font.draw(poseStack, "Level 2", 113, 26, -12829636);
+		this.font.draw(poseStack, "Level 3", 194, 26, -12829636);
+		this.font.draw(poseStack, "0", 41, 47, -12829636);
+		this.font.draw(poseStack, "4", 122, 47, -12829636);
+		this.font.draw(poseStack, "16", 203, 47, -12829636);
 	}
 
 	@Override
@@ -101,7 +101,7 @@ public class CostsLevelsScreen extends AbstractContainerScreen<CostsLevelsMenu> 
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 101, this.topPos + 76, 103, 20, new TextComponent("Back to Upgrade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 88, this.topPos + 84, 103, 20, new TextComponent("Back to Upgrade"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CostsLevelsButtonMessage(0, x, y, z));
 				CostsLevelsButtonMessage.handleButtonAction(entity, 0, x, y, z);

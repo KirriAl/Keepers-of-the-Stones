@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 315,
-    "height": 233,
+    "width": 300,
+    "height": 150,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -19,21 +19,21 @@
             "falpha": 0.0
           },
           "name": "Level 1",
-          "x": 81,
-          "y": 35
+          "x": 96,
+          "y": 71
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "Cost levels",
+          "text": "Price of Levels",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Cost levels",
-          "x": 186,
-          "y": 9
+          "name": "Price of Levels",
+          "x": 177,
+          "y": 53
         }
       },
       {
@@ -46,7 +46,7 @@
           },
           "name": "Level 2",
           "x": 177,
-          "y": 35
+          "y": 71
         }
       },
       {
@@ -58,8 +58,8 @@
             "falpha": 0.0
           },
           "name": "Level 3",
-          "x": 276,
-          "y": 35
+          "x": 258,
+          "y": 71
         }
       },
       {
@@ -69,7 +69,7 @@
           "use1Xscale": false,
           "name": "elemental_coin.png",
           "x": 87,
-          "y": 53
+          "y": 89
         }
       },
       {
@@ -82,7 +82,7 @@
           },
           "name": "0",
           "x": 105,
-          "y": 56
+          "y": 92
         }
       },
       {
@@ -91,8 +91,8 @@
           "image": "elemental_coin.png",
           "use1Xscale": false,
           "name": "elemental_coin.png",
-          "x": 186,
-          "y": 53
+          "x": 168,
+          "y": 89
         }
       },
       {
@@ -104,8 +104,8 @@
             "falpha": 0.0
           },
           "name": "4",
-          "x": 204,
-          "y": 56
+          "x": 186,
+          "y": 92
         }
       },
       {
@@ -114,8 +114,8 @@
           "image": "elemental_coin.png",
           "use1Xscale": false,
           "name": "elemental_coin.png",
-          "x": 276,
-          "y": 53
+          "x": 249,
+          "y": 89
         }
       },
       {
@@ -127,8 +127,8 @@
             "falpha": 0.0
           },
           "name": "16",
-          "x": 293,
-          "y": 56
+          "x": 267,
+          "y": 92
         }
       },
       {
@@ -141,8 +141,8 @@
           "width": 103,
           "height": 20,
           "name": "Back to Upgrade",
-          "x": 157,
-          "y": 80
+          "x": 152,
+          "y": 129
         }
       }
     ],
@@ -151,7 +151,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }
