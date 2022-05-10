@@ -17,8 +17,7 @@
     ],
     "rewardRecipes": [
       "CraftBatteryCharger",
-      "BatteryCraft",
-      "ElementalCoinCraft"
+      "BatteryCraft"
     ],
     "rewardFunction": "No function",
     "rewardXP": 0,

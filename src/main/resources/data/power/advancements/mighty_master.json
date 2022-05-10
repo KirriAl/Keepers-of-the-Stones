@@ -27,8 +27,7 @@
     ],
     "recipes": [
       "power:craft_battery_charger",
-      "power:battery_craft",
-      "power:deleted_mod_element"
+      "power:battery_craft"
     ]
   }
 }
