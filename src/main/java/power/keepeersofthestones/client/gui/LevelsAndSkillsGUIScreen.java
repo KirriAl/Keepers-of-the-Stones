@@ -107,7 +107,7 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 49, 61, 20, new TextComponent("4 coins"), e -> {
 			if (ReturnLevel1Procedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(0, x, y, z));
 				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -119,7 +119,7 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 49, 61, 20, new TextComponent("16 coins"), e -> {
 			if (ReturnLevel2Procedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(1, x, y, z));
 				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -131,13 +131,7 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 274, this.topPos + 4, 30, 20, new TextComponent("?"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(2, x, y, z));
-				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 211, this.topPos + 4, 56, 20, new TextComponent("Skills"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 247, this.topPos + 4, 56, 20, new TextComponent("Skills"), e -> {
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {

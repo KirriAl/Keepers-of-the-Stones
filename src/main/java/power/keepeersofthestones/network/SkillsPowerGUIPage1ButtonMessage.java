@@ -3,7 +3,6 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.SkillsPowerGUIPage1Menu;
 import power.keepeersofthestones.procedures.UpdateToWaterPowerProcedure;
-import power.keepeersofthestones.procedures.OpenCostLevelsProcedure;
 import power.keepeersofthestones.procedures.BackToLevelsAndSkillsProcedure;
 import power.keepeersofthestones.PowerMod;
 
@@ -66,13 +65,9 @@ public class SkillsPowerGUIPage1ButtonMessage {
 			return;
 		if (buttonID == 2) {
 
-			OpenCostLevelsProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
 			BackToLevelsAndSkillsProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 4) {
+		if (buttonID == 3) {
 
 			UpdateToWaterPowerProcedure.execute(entity);
 		}

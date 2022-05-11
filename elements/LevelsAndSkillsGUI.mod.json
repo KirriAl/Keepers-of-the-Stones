@@ -39,7 +39,7 @@
       {
         "type": "button",
         "data": {
-          "text": "Upgrade",
+          "text": "4 coins",
           "onClick": {
             "name": "UpdateToLevel2"
           },
@@ -48,7 +48,7 @@
           },
           "width": 61,
           "height": 20,
-          "name": "Upgrade",
+          "name": "4 coins",
           "x": 168,
           "y": 53
         }
@@ -108,7 +108,7 @@
       {
         "type": "button",
         "data": {
-          "text": "Upgrade",
+          "text": "16 coins",
           "onClick": {
             "name": "UpdateToLevel3"
           },
@@ -117,7 +117,7 @@
           },
           "width": 61,
           "height": 20,
-          "name": "Upgrade",
+          "name": "16 coins",
           "x": 258,
           "y": 53
         }
@@ -162,20 +162,6 @@
       {
         "type": "button",
         "data": {
-          "text": "?",
-          "onClick": {
-            "name": "OpenCostLevels"
-          },
-          "width": 30,
-          "height": 20,
-          "name": "?",
-          "x": 330,
-          "y": 8
-        }
-      },
-      {
-        "type": "button",
-        "data": {
           "text": "Skills",
           "displayCondition": {
             "name": "ReturnLevel3"
@@ -183,7 +169,7 @@
           "width": 56,
           "height": 20,
           "name": "Skills",
-          "x": 267,
+          "x": 303,
           "y": 8
         }
       }

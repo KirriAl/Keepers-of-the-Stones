@@ -111,26 +111,20 @@ public class SkillsPowerGUIPage1Screen extends AbstractContainerScreen<SkillsPow
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 49, 61, 20, new TextComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 49, 61, 20, new TextComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 274, this.topPos + 4, 30, 20, new TextComponent("?"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 247, this.topPos + 4, 56, 20, new TextComponent("Levels"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SkillsPowerGUIPage1ButtonMessage(2, x, y, z));
 				SkillsPowerGUIPage1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 211, this.topPos + 4, 56, 20, new TextComponent("Levels"), e -> {
-			if (true) {
+		this.addRenderableWidget(new Button(this.leftPos + 22, this.topPos + 49, 61, 20, new TextComponent("2 coins"), e -> {
+			if (NonWaterPowerProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SkillsPowerGUIPage1ButtonMessage(3, x, y, z));
 				SkillsPowerGUIPage1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 22, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
-			if (NonWaterPowerProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SkillsPowerGUIPage1ButtonMessage(4, x, y, z));
-				SkillsPowerGUIPage1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}) {
 			@Override
@@ -139,7 +133,5 @@ public class SkillsPowerGUIPage1Screen extends AbstractContainerScreen<SkillsPow
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 256, this.topPos + 202, 46, 20, new TextComponent("NEXT"), e -> {
-		}));
 	}
 }

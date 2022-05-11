@@ -26,10 +26,10 @@
       {
         "type": "button",
         "data": {
-          "text": "Upgrade",
+          "text": " ",
           "width": 61,
           "height": 20,
-          "name": "Upgrade",
+          "name": " ",
           "x": 168,
           "y": 53
         }
@@ -63,10 +63,10 @@
       {
         "type": "button",
         "data": {
-          "text": "Upgrade",
+          "text": " ",
           "width": 61,
           "height": 20,
-          "name": "Upgrade",
+          "name": " ",
           "x": 258,
           "y": 53
         }
@@ -111,20 +111,6 @@
       {
         "type": "button",
         "data": {
-          "text": "?",
-          "onClick": {
-            "name": "OpenCostLevels"
-          },
-          "width": 30,
-          "height": 20,
-          "name": "?",
-          "x": 330,
-          "y": 8
-        }
-      },
-      {
-        "type": "button",
-        "data": {
           "text": "Levels",
           "onClick": {
             "name": "BackToLevelsAndSkills"
@@ -132,14 +118,14 @@
           "width": 56,
           "height": 20,
           "name": "Levels",
-          "x": 267,
+          "x": 303,
           "y": 8
         }
       },
       {
         "type": "button",
         "data": {
-          "text": "Upgrade",
+          "text": "2 coins",
           "onClick": {
             "name": "UpdateToWaterPower"
           },
@@ -148,20 +134,9 @@
           },
           "width": 61,
           "height": 20,
-          "name": "Upgrade",
+          "name": "2 coins",
           "x": 78,
           "y": 53
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "NEXT",
-          "width": 46,
-          "height": 20,
-          "name": "NEXT",
-          "x": 312,
-          "y": 206
         }
       },
       {
