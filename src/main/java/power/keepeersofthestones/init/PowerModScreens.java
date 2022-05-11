@@ -42,7 +42,6 @@ import power.keepeersofthestones.client.gui.EBAnimalsScreen;
 import power.keepeersofthestones.client.gui.EBAmberScreen;
 import power.keepeersofthestones.client.gui.EBAirScreen;
 import power.keepeersofthestones.client.gui.CultivationGUIScreen;
-import power.keepeersofthestones.client.gui.CostsLevelsScreen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage3Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage2Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStoneGUIScreen;
@@ -107,7 +106,6 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.SPACE_ATLAS_GUI, SpaceAtlasGUIScreen::new);
 			MenuScreens.register(PowerModMenus.CHECK_POINT_TP, CheckPointTPScreen::new);
 			MenuScreens.register(PowerModMenus.LEVELS_AND_SKILLS_GUI, LevelsAndSkillsGUIScreen::new);
-			MenuScreens.register(PowerModMenus.COSTS_LEVELS, CostsLevelsScreen::new);
 			MenuScreens.register(PowerModMenus.SKILLS_POWER_GUI_PAGE_1, SkillsPowerGUIPage1Screen::new);
 		});
 	}

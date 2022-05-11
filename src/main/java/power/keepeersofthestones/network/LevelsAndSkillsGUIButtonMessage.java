@@ -4,6 +4,7 @@ package power.keepeersofthestones.network;
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsGUIMenu;
 import power.keepeersofthestones.procedures.UpdateToLevel3Procedure;
 import power.keepeersofthestones.procedures.UpdateToLevel2Procedure;
+import power.keepeersofthestones.procedures.OpenSkillsProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -70,6 +71,10 @@ public class LevelsAndSkillsGUIButtonMessage {
 		if (buttonID == 1) {
 
 			UpdateToLevel3Procedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			OpenSkillsProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

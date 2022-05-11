@@ -163,6 +163,9 @@
         "type": "button",
         "data": {
           "text": "Skills",
+          "onClick": {
+            "name": "OpenSkills"
+          },
           "displayCondition": {
             "name": "ReturnLevel3"
           },

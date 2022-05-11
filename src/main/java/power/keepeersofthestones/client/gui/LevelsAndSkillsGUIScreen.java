@@ -132,6 +132,10 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 			}
 		});
 		this.addRenderableWidget(new Button(this.leftPos + 247, this.topPos + 4, 56, 20, new TextComponent("Skills"), e -> {
+			if (ReturnLevel3Procedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(2, x, y, z));
+				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {

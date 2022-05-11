@@ -42,7 +42,6 @@ import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
 import power.keepeersofthestones.world.inventory.EBAmberMenu;
 import power.keepeersofthestones.world.inventory.EBAirMenu;
 import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
-import power.keepeersofthestones.world.inventory.CostsLevelsMenu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
@@ -129,8 +128,6 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new CheckPointTPMenu(id, inv, extraData));
 	public static final MenuType<LevelsAndSkillsGUIMenu> LEVELS_AND_SKILLS_GUI = register("levels_and_skills_gui",
 			(id, inv, extraData) -> new LevelsAndSkillsGUIMenu(id, inv, extraData));
-	public static final MenuType<CostsLevelsMenu> COSTS_LEVELS = register("costs_levels",
-			(id, inv, extraData) -> new CostsLevelsMenu(id, inv, extraData));
 	public static final MenuType<SkillsPowerGUIPage1Menu> SKILLS_POWER_GUI_PAGE_1 = register("skills_power_gui_page_1",
 			(id, inv, extraData) -> new SkillsPowerGUIPage1Menu(id, inv, extraData));
 
