@@ -13,25 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Level 1",
+          "text": "Skills",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Level 1",
-          "x": 87,
-          "y": 35
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Levels",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "Levels",
+          "name": "Skills",
           "x": 168,
           "y": 8
         }
@@ -40,12 +27,6 @@
         "type": "button",
         "data": {
           "text": "Upgrade",
-          "onClick": {
-            "name": "UpdateToLevel2"
-          },
-          "displayCondition": {
-            "name": "ReturnLevel1"
-          },
           "width": 61,
           "height": 20,
           "name": "Upgrade",
@@ -67,19 +48,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "text": "Level 2",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "Level 2",
-          "x": 177,
-          "y": 35
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "level_checked.png",
@@ -93,28 +61,9 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "text": "Level 3",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "Level 3",
-          "x": 267,
-          "y": 35
-        }
-      },
-      {
         "type": "button",
         "data": {
           "text": "Upgrade",
-          "onClick": {
-            "name": "UpdateToLevel3"
-          },
-          "displayCondition": {
-            "name": "ReturnLevel2"
-          },
           "width": 61,
           "height": 20,
           "name": "Upgrade",
@@ -176,15 +125,92 @@
       {
         "type": "button",
         "data": {
-          "text": "Skills",
-          "displayCondition": {
-            "name": "ReturnLevel3"
+          "text": "Levels",
+          "onClick": {
+            "name": "BackToLevelsAndSkills"
           },
           "width": 56,
           "height": 20,
-          "name": "Skills",
+          "name": "Levels",
           "x": 267,
           "y": 8
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Upgrade",
+          "onClick": {
+            "name": "UpdateToWaterPower"
+          },
+          "displayCondition": {
+            "name": "NonWaterPower"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Upgrade",
+          "x": 78,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "NEXT",
+          "width": 46,
+          "height": 20,
+          "name": "NEXT",
+          "x": 312,
+          "y": 206
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "1/1",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "1/1",
+          "x": 69,
+          "y": 8
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_power_skill.png",
+          "use1Xscale": false,
+          "name": "water_power_skill.png",
+          "x": 96,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Soon",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Soon",
+          "x": 186,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Soon",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Soon",
+          "x": 276,
+          "y": 35
         }
       }
     ],

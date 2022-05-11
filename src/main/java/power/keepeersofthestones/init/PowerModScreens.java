@@ -7,6 +7,7 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.client.gui.SpawnAnimalsGUIScreen;
 import power.keepeersofthestones.client.gui.SpaceAtlasGUIScreen;
 import power.keepeersofthestones.client.gui.SoundEmitateChoiceScreen;
+import power.keepeersofthestones.client.gui.SkillsPowerGUIPage1Screen;
 import power.keepeersofthestones.client.gui.RedstoneBundleGUIScreen;
 import power.keepeersofthestones.client.gui.PointGUIScreen;
 import power.keepeersofthestones.client.gui.LevelsAndSkillsGUIScreen;
@@ -107,6 +108,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.CHECK_POINT_TP, CheckPointTPScreen::new);
 			MenuScreens.register(PowerModMenus.LEVELS_AND_SKILLS_GUI, LevelsAndSkillsGUIScreen::new);
 			MenuScreens.register(PowerModMenus.COSTS_LEVELS, CostsLevelsScreen::new);
+			MenuScreens.register(PowerModMenus.SKILLS_POWER_GUI_PAGE_1, SkillsPowerGUIPage1Screen::new);
 		});
 	}
 }

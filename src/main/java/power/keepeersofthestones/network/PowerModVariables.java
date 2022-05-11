@@ -117,6 +117,7 @@ public class PowerModVariables {
 			clone.magnet = original.magnet;
 			clone.mist = original.mist;
 			clone.power_level = original.power_level;
+			clone.water_power = original.water_power;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -456,6 +457,7 @@ public class PowerModVariables {
 		public boolean magnet = false;
 		public boolean mist = false;
 		public double power_level = 1.0;
+		public boolean water_power = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -508,6 +510,7 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet", magnet);
 			nbt.putBoolean("mist", mist);
 			nbt.putDouble("power_level", power_level);
+			nbt.putBoolean("water_power", water_power);
 			return nbt;
 		}
 
@@ -557,6 +560,7 @@ public class PowerModVariables {
 			magnet = nbt.getBoolean("magnet");
 			mist = nbt.getBoolean("mist");
 			power_level = nbt.getDouble("power_level");
+			water_power = nbt.getBoolean("water_power");
 		}
 	}
 
@@ -626,6 +630,7 @@ public class PowerModVariables {
 					variables.magnet = message.data.magnet;
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
+					variables.water_power = message.data.water_power;
 				}
 			});
 			context.setPacketHandled(true);

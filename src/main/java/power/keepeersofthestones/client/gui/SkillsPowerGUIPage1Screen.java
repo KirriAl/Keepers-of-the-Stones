@@ -1,11 +1,12 @@
 
 package power.keepeersofthestones.client.gui;
 
-import power.keepeersofthestones.world.inventory.LevelsAndSkillsGUIMenu;
+import power.keepeersofthestones.world.inventory.SkillsPowerGUIPage1Menu;
 import power.keepeersofthestones.procedures.ReturnLevel3Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel2Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel1Procedure;
-import power.keepeersofthestones.network.LevelsAndSkillsGUIButtonMessage;
+import power.keepeersofthestones.procedures.NonWaterPowerProcedure;
+import power.keepeersofthestones.network.SkillsPowerGUIPage1ButtonMessage;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.Level;
@@ -23,13 +24,13 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndSkillsGUIMenu> {
-	private final static HashMap<String, Object> guistate = LevelsAndSkillsGUIMenu.guistate;
+public class SkillsPowerGUIPage1Screen extends AbstractContainerScreen<SkillsPowerGUIPage1Menu> {
+	private final static HashMap<String, Object> guistate = SkillsPowerGUIPage1Menu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 
-	public LevelsAndSkillsGUIScreen(LevelsAndSkillsGUIMenu container, Inventory inventory, Component text) {
+	public SkillsPowerGUIPage1Screen(SkillsPowerGUIPage1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -40,7 +41,7 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 		this.imageHeight = 233;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/levels_and_skills_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/skills_power_gui_page_1.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -72,6 +73,9 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
 		this.blit(ms, this.leftPos + 121, this.topPos + 85, 0, 0, 16, 16, 16, 16);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/water_power_skill.png"));
+		this.blit(ms, this.leftPos + 40, this.topPos + 31, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -91,10 +95,10 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Level 1", 31, 31, -12829636);
-		this.font.draw(poseStack, "Levels", 112, 4, -12829636);
-		this.font.draw(poseStack, "Level 2", 121, 31, -12829636);
-		this.font.draw(poseStack, "Level 3", 211, 31, -12829636);
+		this.font.draw(poseStack, "Skills", 112, 4, -12829636);
+		this.font.draw(poseStack, "1/1", 13, 4, -12829636);
+		this.font.draw(poseStack, "Soon", 130, 31, -12829636);
+		this.font.draw(poseStack, "Soon", 220, 31, -12829636);
 	}
 
 	@Override
@@ -108,42 +112,34 @@ public class LevelsAndSkillsGUIScreen extends AbstractContainerScreen<LevelsAndS
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
-			if (ReturnLevel1Procedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(0, x, y, z));
-				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}) {
-			@Override
-			public void render(PoseStack ms, int gx, int gy, float ticks) {
-				if (ReturnLevel1Procedure.execute(entity))
-					super.render(ms, gx, gy, ticks);
-			}
-		});
+		}));
 		this.addRenderableWidget(new Button(this.leftPos + 202, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
-			if (ReturnLevel2Procedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(1, x, y, z));
-				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}) {
-			@Override
-			public void render(PoseStack ms, int gx, int gy, float ticks) {
-				if (ReturnLevel2Procedure.execute(entity))
-					super.render(ms, gx, gy, ticks);
-			}
-		});
+		}));
 		this.addRenderableWidget(new Button(this.leftPos + 274, this.topPos + 4, 30, 20, new TextComponent("?"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsGUIButtonMessage(2, x, y, z));
-				LevelsAndSkillsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new SkillsPowerGUIPage1ButtonMessage(2, x, y, z));
+				SkillsPowerGUIPage1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 211, this.topPos + 4, 56, 20, new TextComponent("Skills"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 211, this.topPos + 4, 56, 20, new TextComponent("Levels"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new SkillsPowerGUIPage1ButtonMessage(3, x, y, z));
+				SkillsPowerGUIPage1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 22, this.topPos + 49, 61, 20, new TextComponent("Upgrade"), e -> {
+			if (NonWaterPowerProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new SkillsPowerGUIPage1ButtonMessage(4, x, y, z));
+				SkillsPowerGUIPage1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
-				if (ReturnLevel3Procedure.execute(entity))
+				if (NonWaterPowerProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
+		this.addRenderableWidget(new Button(this.leftPos + 256, this.topPos + 202, 46, 20, new TextComponent("NEXT"), e -> {
+		}));
 	}
 }
