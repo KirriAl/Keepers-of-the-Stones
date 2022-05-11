@@ -2,9 +2,6 @@
 package power.keepeersofthestones.client.gui;
 
 import power.keepeersofthestones.world.inventory.SkillsPowerGUIPage1Menu;
-import power.keepeersofthestones.procedures.ReturnLevel3Procedure;
-import power.keepeersofthestones.procedures.ReturnLevel2Procedure;
-import power.keepeersofthestones.procedures.ReturnLevel1Procedure;
 import power.keepeersofthestones.procedures.NonWaterPowerProcedure;
 import power.keepeersofthestones.network.SkillsPowerGUIPage1ButtonMessage;
 import power.keepeersofthestones.PowerMod;
@@ -57,18 +54,15 @@ public class SkillsPowerGUIPage1Screen extends AbstractContainerScreen<SkillsPow
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		if (ReturnLevel1Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + 40, this.topPos + 49, 0, 0, 19, 18, 19, 18);
-		}
-		if (ReturnLevel2Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + 130, this.topPos + 49, 0, 0, 19, 18, 19, 18);
-		}
-		if (ReturnLevel3Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + 220, this.topPos + 49, 0, 0, 19, 18, 19, 18);
-		}
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
+		this.blit(ms, this.leftPos + 40, this.topPos + 49, 0, 0, 19, 18, 19, 18);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
+		this.blit(ms, this.leftPos + 130, this.topPos + 49, 0, 0, 19, 18, 19, 18);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
+		this.blit(ms, this.leftPos + 220, this.topPos + 49, 0, 0, 19, 18, 19, 18);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
 		this.blit(ms, this.leftPos + 121, this.topPos + 85, 0, 0, 16, 16, 16, 16);
@@ -99,6 +93,7 @@ public class SkillsPowerGUIPage1Screen extends AbstractContainerScreen<SkillsPow
 		this.font.draw(poseStack, "1/1", 13, 4, -12829636);
 		this.font.draw(poseStack, "Soon", 130, 31, -12829636);
 		this.font.draw(poseStack, "Soon", 220, 31, -12829636);
+		this.font.draw(poseStack, "Water Power", 22, 22, -12829636);
 	}
 
 	@Override

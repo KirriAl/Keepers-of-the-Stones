@@ -39,9 +39,6 @@
         "data": {
           "image": "level_checked.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "ReturnLevel1"
-          },
           "name": "level_checked.png",
           "x": 96,
           "y": 53
@@ -52,9 +49,6 @@
         "data": {
           "image": "level_checked.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "ReturnLevel2"
-          },
           "name": "level_checked.png",
           "x": 186,
           "y": 53
@@ -76,9 +70,6 @@
         "data": {
           "image": "level_checked.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "ReturnLevel3"
-          },
           "name": "level_checked.png",
           "x": 276,
           "y": 53
@@ -186,6 +177,19 @@
           "name": "Soon",
           "x": 276,
           "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Water Power",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Water Power",
+          "x": 78,
+          "y": 26
         }
       }
     ],
