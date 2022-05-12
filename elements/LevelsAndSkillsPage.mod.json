@@ -37,6 +37,9 @@
         "type": "button",
         "data": {
           "text": "4",
+          "onClick": {
+            "name": "UpdateToLevel2"
+          },
           "displayCondition": {
             "name": "ReturnLevel1"
           },
@@ -103,6 +106,9 @@
         "type": "button",
         "data": {
           "text": "16",
+          "onClick": {
+            "name": "UpdateToLevel3"
+          },
           "displayCondition": {
             "name": "ReturnLevel2"
           },
@@ -156,6 +162,9 @@
         "type": "button",
         "data": {
           "text": "12",
+          "onClick": {
+            "name": "UpdateToWaterPower"
+          },
           "displayCondition": {
             "name": "NonWaterPower"
           },
@@ -171,6 +180,9 @@
         "data": {
           "image": "level_checked.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel2"
+          },
           "name": "level_checked.png",
           "x": 141,
           "y": 32
@@ -181,6 +193,9 @@
         "data": {
           "image": "level_checked.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel3"
+          },
           "name": "level_checked.png",
           "x": 141,
           "y": 61

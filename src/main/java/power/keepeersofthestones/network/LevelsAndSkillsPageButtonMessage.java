@@ -2,6 +2,9 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
+import power.keepeersofthestones.procedures.UpdateToWaterPowerProcedure;
+import power.keepeersofthestones.procedures.UpdateToLevel3Procedure;
+import power.keepeersofthestones.procedures.UpdateToLevel2Procedure;
 import power.keepeersofthestones.procedures.OpenBookProcedure;
 import power.keepeersofthestones.PowerMod;
 
@@ -62,6 +65,18 @@ public class LevelsAndSkillsPageButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			UpdateToLevel2Procedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			UpdateToLevel3Procedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			UpdateToWaterPowerProcedure.execute(entity);
+		}
 		if (buttonID == 3) {
 
 			OpenBookProcedure.execute(world, x, y, z, entity);

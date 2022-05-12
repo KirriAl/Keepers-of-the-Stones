@@ -2,6 +2,7 @@
 package power.keepeersofthestones.client.gui;
 
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
+import power.keepeersofthestones.procedures.ReturnLevel3Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel2Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel1Procedure;
 import power.keepeersofthestones.procedures.NonWaterPowerProcedure;
@@ -68,12 +69,14 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
 			this.blit(ms, this.leftPos + 97, this.topPos + -86, 0, 0, 16, 16, 16, 16);
 		}
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-		this.blit(ms, this.leftPos + -72, this.topPos + -88, 0, 0, 19, 18, 19, 18);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-		this.blit(ms, this.leftPos + -72, this.topPos + -59, 0, 0, 19, 18, 19, 18);
+		if (ReturnLevel2Procedure.execute(entity)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
+			this.blit(ms, this.leftPos + -72, this.topPos + -88, 0, 0, 19, 18, 19, 18);
+		}
+		if (ReturnLevel3Procedure.execute(entity)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
+			this.blit(ms, this.leftPos + -72, this.topPos + -59, 0, 0, 19, 18, 19, 18);
+		}
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
 		this.blit(ms, this.leftPos + 137, this.topPos + -88, 0, 0, 19, 18, 19, 18);
@@ -115,6 +118,10 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + -93, this.topPos + -88, 61, 20, new TextComponent("4"), e -> {
+			if (ReturnLevel1Procedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(0, x, y, z));
+				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
@@ -123,6 +130,10 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 			}
 		});
 		this.addRenderableWidget(new Button(this.leftPos + -93, this.topPos + -60, 61, 20, new TextComponent("16"), e -> {
+			if (ReturnLevel2Procedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(1, x, y, z));
+				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
@@ -131,6 +142,10 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 			}
 		});
 		this.addRenderableWidget(new Button(this.leftPos + 115, this.topPos + -88, 61, 20, new TextComponent("12"), e -> {
+			if (NonWaterPowerProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(2, x, y, z));
+				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
