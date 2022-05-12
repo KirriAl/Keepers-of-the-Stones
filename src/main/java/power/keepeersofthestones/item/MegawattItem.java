@@ -133,7 +133,7 @@ public class MegawattItem extends PowerModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return null;
+			return ItemStack.EMPTY;
 		}
 
 		@Override
@@ -147,7 +147,7 @@ public class MegawattItem extends PowerModElements.ModElement {
 			super.onEntityHit(entityRayTraceResult);
 			Entity entity = entityRayTraceResult.getEntity();
 			Entity sourceentity = this.func_234616_v_();
-			Entity imediatesourceentity = this;
+			Entity immediatesourceentity = this;
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
@@ -167,7 +167,7 @@ public class MegawattItem extends PowerModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity imediatesourceentity = this;
+			Entity immediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}

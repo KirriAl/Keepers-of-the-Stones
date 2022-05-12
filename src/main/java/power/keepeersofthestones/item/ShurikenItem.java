@@ -131,7 +131,7 @@ public class ShurikenItem extends PowerModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return null;
+			return ItemStack.EMPTY;
 		}
 
 		@Override
@@ -148,7 +148,7 @@ public class ShurikenItem extends PowerModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity imediatesourceentity = this;
+			Entity immediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}
