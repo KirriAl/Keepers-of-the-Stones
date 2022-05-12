@@ -46,6 +46,9 @@ import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
 import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
 import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
+import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
+import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
+import power.keepeersofthestones.world.inventory.BuyAquaPowerMenu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
 
@@ -127,6 +130,10 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new CheckPointTPMenu(id, inv, extraData));
 	public static final MenuType<LevelsAndSkillsPageMenu> LEVELS_AND_SKILLS_PAGE = register("levels_and_skills_page",
 			(id, inv, extraData) -> new LevelsAndSkillsPageMenu(id, inv, extraData));
+	public static final MenuType<BuyLevel2Menu> BUY_LEVEL_2 = register("buy_level_2", (id, inv, extraData) -> new BuyLevel2Menu(id, inv, extraData));
+	public static final MenuType<BuyLevel3Menu> BUY_LEVEL_3 = register("buy_level_3", (id, inv, extraData) -> new BuyLevel3Menu(id, inv, extraData));
+	public static final MenuType<BuyAquaPowerMenu> BUY_AQUA_POWER = register("buy_aqua_power",
+			(id, inv, extraData) -> new BuyAquaPowerMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

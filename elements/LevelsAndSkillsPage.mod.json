@@ -2,10 +2,10 @@
   "_fv": 29,
   "_type": "gui",
   "definition": {
-    "type": 0,
-    "width": 0,
-    "height": 0,
-    "inventoryOffsetX": 0,
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 256,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
     "doesPauseGame": false,
@@ -38,7 +38,7 @@
         "data": {
           "text": "4",
           "onClick": {
-            "name": "UpdateToLevel2"
+            "name": "OpenBuyLevel2"
           },
           "displayCondition": {
             "name": "ReturnLevel1"
@@ -107,7 +107,7 @@
         "data": {
           "text": "16",
           "onClick": {
-            "name": "UpdateToLevel3"
+            "name": "OpenBuyLevel3"
           },
           "displayCondition": {
             "name": "ReturnLevel2"
@@ -163,7 +163,7 @@
         "data": {
           "text": "12",
           "onClick": {
-            "name": "UpdateToWaterPower"
+            "name": "OpenBuyAquaPower"
           },
           "displayCondition": {
             "name": "NonWaterPower"

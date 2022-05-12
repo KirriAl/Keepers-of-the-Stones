@@ -1,11 +1,10 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.network.PowerModVariables;
-import power.keepeersofthestones.init.PowerModItems;
 
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +12,8 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import java.util.function.Supplier;
+import java.util.Map;
 import java.util.Iterator;
 
 public class UpdateToWaterPowerProcedure {
@@ -21,41 +22,41 @@ public class UpdateToWaterPowerProcedure {
 			return;
 		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
-			if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ELEMENTAL_COIN
-					.get())) {
-				if ((new ItemStack(PowerModItems.ELEMENTAL_COIN.get())).getCount() >= 12) {
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.ELEMENTAL_COIN.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 12,
-								_player.inventoryMenu.getCraftSlots());
+			if (new Object() {
+				public int getAmount(int sltid) {
+					if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
+							&& _current.get() instanceof Map _slots) {
+						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+						if (stack != null)
+							return stack.getCount();
 					}
-					{
-						boolean _setval = true;
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.water_power = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+					return 0;
+				}
+			}.getAmount(1) >= 12) {
+				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
+						&& _current.get() instanceof Map _slots) {
+					((Slot) _slots.get(1)).remove(12);
+					_player.containerMenu.broadcastChanges();
+				}
+				{
+					boolean _setval = true;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.water_power = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof ServerPlayer _player) {
+					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("power:just_add_water"));
+					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemainingCriteria().iterator();
+						while (_iterator.hasNext())
+							_player.getAdvancements().award(_adv, (String) _iterator.next());
 					}
-					if (entity instanceof ServerPlayer _player) {
-						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("power:just_add_water"));
-						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-						if (!_ap.isDone()) {
-							Iterator _iterator = _ap.getRemainingCriteria().iterator();
-							while (_iterator.hasNext())
-								_player.getAdvancements().award(_adv, (String) _iterator.next());
-						}
-					}
-				} else {
-					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(
-								new TextComponent("\u00A74Make sure that you have coins in your inventory and/or they are not in the lead hand"),
-								(false));
 				}
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(
-							new TextComponent("\u00A74Make sure that you have coins in your inventory and/or they are not in the lead hand"),
-							(false));
+					_player.displayClientMessage(new TextComponent("\u00A74Not enough coins to buy"), (false));
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level.isClientSide())

@@ -46,6 +46,9 @@ import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage2Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStoneGUIScreen;
 import power.keepeersofthestones.client.gui.CheckpointGUIScreen;
 import power.keepeersofthestones.client.gui.CheckPointTPScreen;
+import power.keepeersofthestones.client.gui.BuyLevel3Screen;
+import power.keepeersofthestones.client.gui.BuyLevel2Screen;
+import power.keepeersofthestones.client.gui.BuyAquaPowerScreen;
 import power.keepeersofthestones.client.gui.BuildingGUIScreen;
 import power.keepeersofthestones.client.gui.BatteryCreateGUIScreen;
 
@@ -105,6 +108,9 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.SPACE_ATLAS_GUI, SpaceAtlasGUIScreen::new);
 			MenuScreens.register(PowerModMenus.CHECK_POINT_TP, CheckPointTPScreen::new);
 			MenuScreens.register(PowerModMenus.LEVELS_AND_SKILLS_PAGE, LevelsAndSkillsPageScreen::new);
+			MenuScreens.register(PowerModMenus.BUY_LEVEL_2, BuyLevel2Screen::new);
+			MenuScreens.register(PowerModMenus.BUY_LEVEL_3, BuyLevel3Screen::new);
+			MenuScreens.register(PowerModMenus.BUY_AQUA_POWER, BuyAquaPowerScreen::new);
 		});
 	}
 }

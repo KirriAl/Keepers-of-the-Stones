@@ -12291,6 +12291,132 @@
         ]
       },
       "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "BuyLevel2",
+      "type": "gui",
+      "sortid": 845,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_level_2",
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "BuyLevel3",
+      "type": "gui",
+      "sortid": 846,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_level_3",
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "BuyAquaPower",
+      "type": "gui",
+      "sortid": 847,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_aqua_power",
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "OpenBuyLevel2",
+      "type": "procedure",
+      "sortid": 848,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_buy_level_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "OpenBuyLevel3",
+      "type": "procedure",
+      "sortid": 849,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_buy_level_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "OpenBuyAquaPower",
+      "type": "procedure",
+      "sortid": 850,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_buy_aqua_power",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
     }
   ],
   "variable_elements": [
@@ -14021,7 +14147,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "MagicalAlexey",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
