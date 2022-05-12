@@ -64,7 +64,7 @@ public class BuyAquaPowerButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			UpdateToWaterPowerProcedure.execute(entity);
+			UpdateToWaterPowerProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

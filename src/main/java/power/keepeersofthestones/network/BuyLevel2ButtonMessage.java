@@ -64,7 +64,7 @@ public class BuyLevel2ButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			UpdateToLevel2Procedure.execute(entity);
+			UpdateToLevel2Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

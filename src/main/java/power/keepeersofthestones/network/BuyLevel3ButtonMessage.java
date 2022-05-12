@@ -64,7 +64,7 @@ public class BuyLevel3ButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			UpdateToLevel3Procedure.execute(entity);
+			UpdateToLevel3Procedure.execute(world, x, y, z, entity);
 		}
 	}
 
