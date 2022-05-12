@@ -153,7 +153,7 @@ public class AirFlowItem extends PowerModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return ItemStack.EMPTY;
+			return null;
 		}
 
 		@Override
@@ -170,7 +170,7 @@ public class AirFlowItem extends PowerModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity immediatesourceentity = this;
+			Entity imediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}

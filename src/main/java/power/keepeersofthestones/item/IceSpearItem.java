@@ -157,7 +157,7 @@ public class IceSpearItem extends PowerModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return ItemStack.EMPTY;
+			return null;
 		}
 
 		@Override
@@ -171,7 +171,7 @@ public class IceSpearItem extends PowerModElements.ModElement {
 			super.onEntityHit(entityRayTraceResult);
 			Entity entity = entityRayTraceResult.getEntity();
 			Entity sourceentity = this.func_234616_v_();
-			Entity immediatesourceentity = this;
+			Entity imediatesourceentity = this;
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
@@ -191,7 +191,7 @@ public class IceSpearItem extends PowerModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity immediatesourceentity = this;
+			Entity imediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}

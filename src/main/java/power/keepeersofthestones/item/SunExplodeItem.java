@@ -133,7 +133,7 @@ public class SunExplodeItem extends PowerModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return ItemStack.EMPTY;
+			return null;
 		}
 
 		@Override
@@ -150,7 +150,7 @@ public class SunExplodeItem extends PowerModElements.ModElement {
 			double z = blockRayTraceResult.getPos().getZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity immediatesourceentity = this;
+			Entity imediatesourceentity = this;
 
 			SunExplodeUseProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
@@ -166,7 +166,7 @@ public class SunExplodeItem extends PowerModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity immediatesourceentity = this;
+			Entity imediatesourceentity = this;
 			if (this.inGround) {
 
 				SunExplodeUseProcedure.executeProcedure(Stream

@@ -2,10 +2,10 @@
   "type": "power:moon",
   "generator": {
     "type": "minecraft:noise",
-    "seed": 3764109680914248997,
+    "seed": 0,
     "biome_source": {
       "type": "minecraft:multi_noise",
-      "seed": 3764109680914248997,
+      "seed": 0,
       "temperature_noise": {
         "firstOctave": -5.11,
         "amplitudes": [

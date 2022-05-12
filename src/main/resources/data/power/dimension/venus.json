@@ -2,10 +2,10 @@
   "type": "power:venus",
   "generator": {
     "type": "minecraft:noise",
-    "seed": 1290242725820016369,
+    "seed": 0,
     "biome_source": {
       "type": "minecraft:multi_noise",
-      "seed": 1290242725820016369,
+      "seed": 0,
       "temperature_noise": {
         "firstOctave": -5.32,
         "amplitudes": [
@@ -36,7 +36,7 @@
       },
       "biomes": [
         {
-          "biome": "power:venus_desert",
+          "biome": "power:venus_land",
           "parameters": {
             "temperature": 1,
             "humidity": -1,
@@ -46,7 +46,7 @@
           }
         },
         {
-          "biome": "power:venus_land",
+          "biome": "power:venus_desert",
           "parameters": {
             "temperature": -1,
             "humidity": 1,
