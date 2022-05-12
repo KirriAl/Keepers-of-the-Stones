@@ -11749,65 +11749,6 @@
       "path": "~/Creation/Structures"
     },
     {
-      "name": "ResetLevel",
-      "type": "procedure",
-      "sortid": 778,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reset_level",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/SystemPowerLevel"
-    },
-    {
-      "name": "SkillsKey",
-      "type": "keybind",
-      "sortid": 779,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skills_key",
-      "path": "~/Keys"
-    },
-    {
-      "name": "OpenSkillsGUI",
-      "type": "procedure",
-      "sortid": 780,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_skills_gui",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Keys"
-    },
-    {
       "name": "MaximumPower",
       "type": "achievement",
       "sortid": 781,
@@ -12181,48 +12122,6 @@
       "path": "~/SystemPowerLevel"
     },
     {
-      "name": "LevelsAndSkillsGUI",
-      "type": "gui",
-      "sortid": 824,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "levels_and_skills_gui",
-      "path": "~/SystemPowerLevel"
-    },
-    {
-      "name": "BackToLevelsAndSkills",
-      "type": "procedure",
-      "sortid": 826,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "back_to_levels_and_skills",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/SystemPowerLevel"
-    },
-    {
       "name": "PowerUp",
       "type": "achievement",
       "sortid": 829,
@@ -12291,48 +12190,6 @@
       "path": "~/Mist"
     },
     {
-      "name": "SkillsPowerGUIPage1",
-      "type": "gui",
-      "sortid": 835,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skills_power_gui_page_1",
-      "path": "~/SystemPowerLevel"
-    },
-    {
-      "name": "OpenSkills",
-      "type": "procedure",
-      "sortid": 836,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_skills",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/SystemPowerLevel"
-    },
-    {
       "name": "UpdateToWaterPower",
       "type": "procedure",
       "sortid": 837,
@@ -12392,6 +12249,48 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "LevelsAndSkillsPage",
+      "type": "gui",
+      "sortid": 843,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levels_and_skills_page",
+      "path": "~/SystemPowerLevel"
+    },
+    {
+      "name": "OpenLevelsAndSkillsPage",
+      "type": "procedure",
+      "sortid": 844,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_levels_and_skills_page",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SystemPowerLevel"
     }
   ],
   "variable_elements": [
@@ -13002,7 +12901,6 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "key.power.skills_key": "Клавиша скиллов",
       "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
@@ -13461,7 +13359,6 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "key.power.skills_key": "Skills Key",
       "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
       "item.power.snow_golem_creator": "Snow Golem Creator",
@@ -14142,5 +14039,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200122214
+  "mcreatorVersion": 202200122312
 }

@@ -1,9 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.SkillsPowerGUIPage1Menu;
-import power.keepeersofthestones.procedures.UpdateToWaterPowerProcedure;
-import power.keepeersofthestones.procedures.BackToLevelsAndSkillsProcedure;
+import power.keepeersofthestones.world.inventory.EBMoonMenu;
+import power.keepeersofthestones.procedures.OpenLevelsAndSkillsPageProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -20,31 +19,31 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SkillsPowerGUIPage1ButtonMessage {
+public class EBMoonButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public SkillsPowerGUIPage1ButtonMessage(FriendlyByteBuf buffer) {
+	public EBMoonButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public SkillsPowerGUIPage1ButtonMessage(int buttonID, int x, int y, int z) {
+	public EBMoonButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(SkillsPowerGUIPage1ButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(EBMoonButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(SkillsPowerGUIPage1ButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(EBMoonButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -59,23 +58,18 @@ public class SkillsPowerGUIPage1ButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = SkillsPowerGUIPage1Menu.guistate;
+		HashMap guistate = EBMoonMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 2) {
+		if (buttonID == 0) {
 
-			BackToLevelsAndSkillsProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
-			UpdateToWaterPowerProcedure.execute(entity);
+			OpenLevelsAndSkillsPageProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SkillsPowerGUIPage1ButtonMessage.class, SkillsPowerGUIPage1ButtonMessage::buffer,
-				SkillsPowerGUIPage1ButtonMessage::new, SkillsPowerGUIPage1ButtonMessage::handler);
+		PowerMod.addNetworkMessage(EBMoonButtonMessage.class, EBMoonButtonMessage::buffer, EBMoonButtonMessage::new, EBMoonButtonMessage::handler);
 	}
 }

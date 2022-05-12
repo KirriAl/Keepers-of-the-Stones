@@ -2,13 +2,17 @@
 package power.keepeersofthestones.client.gui;
 
 import power.keepeersofthestones.world.inventory.EBEnergyMenu;
+import power.keepeersofthestones.network.EBEnergyButtonMessage;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
@@ -92,5 +96,11 @@ public class EBEnergyScreen extends AbstractContainerScreen<EBEnergyMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TextComponent(">"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new EBEnergyButtonMessage(0, x, y, z));
+				EBEnergyButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}));
 	}
 }

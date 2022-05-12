@@ -2,9 +2,7 @@
 package power.keepeersofthestones.world.inventory;
 
 import power.keepeersofthestones.init.PowerModMenus;
-import power.keepeersofthestones.init.PowerModItems;
 
-import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -25,7 +23,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class LevelsAndSkillsGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class LevelsAndSkillsPageMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -34,11 +32,11 @@ public class LevelsAndSkillsGUIMenu extends AbstractContainerMenu implements Sup
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public LevelsAndSkillsGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.LEVELS_AND_SKILLS_GUI, id);
+	public LevelsAndSkillsPageMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(PowerModMenus.LEVELS_AND_SKILLS_PAGE, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
-		this.internal = new ItemStackHandler(2);
+		this.internal = new ItemStackHandler(0);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -76,17 +74,11 @@ public class LevelsAndSkillsGUIMenu extends AbstractContainerMenu implements Sup
 				}
 			}
 		}
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 140, 86) {
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return (PowerModItems.ELEMENTAL_COIN.get() == stack.getItem());
-			}
-		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 69 + 8 + sj * 18, 33 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 168 + 8 + sj * 18, 173 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 69 + 8 + si * 18, 33 + 142));
+			this.addSlot(new Slot(inv, si, 168 + 8 + si * 18, 173 + 142));
 	}
 
 	@Override
@@ -101,18 +93,18 @@ public class LevelsAndSkillsGUIMenu extends AbstractContainerMenu implements Sup
 		if (slot != null && slot.hasItem()) {
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
-			if (index < 1) {
-				if (!this.moveItemStackTo(itemstack1, 1, this.slots.size(), true)) {
+			if (index < 0) {
+				if (!this.moveItemStackTo(itemstack1, 0, this.slots.size(), true)) {
 					return ItemStack.EMPTY;
 				}
 				slot.onQuickCraft(itemstack1, itemstack);
-			} else if (!this.moveItemStackTo(itemstack1, 0, 1, false)) {
-				if (index < 1 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 1 + 27, this.slots.size(), true)) {
+			} else if (!this.moveItemStackTo(itemstack1, 0, 0, false)) {
+				if (index < 0 + 27) {
+					if (!this.moveItemStackTo(itemstack1, 0 + 27, this.slots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 1, 1 + 27, false)) {
+					if (!this.moveItemStackTo(itemstack1, 0, 0 + 27, false)) {
 						return ItemStack.EMPTY;
 					}
 				}

@@ -7,10 +7,9 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.client.gui.SpawnAnimalsGUIScreen;
 import power.keepeersofthestones.client.gui.SpaceAtlasGUIScreen;
 import power.keepeersofthestones.client.gui.SoundEmitateChoiceScreen;
-import power.keepeersofthestones.client.gui.SkillsPowerGUIPage1Screen;
 import power.keepeersofthestones.client.gui.RedstoneBundleGUIScreen;
 import power.keepeersofthestones.client.gui.PointGUIScreen;
-import power.keepeersofthestones.client.gui.LevelsAndSkillsGUIScreen;
+import power.keepeersofthestones.client.gui.LevelsAndSkillsPageScreen;
 import power.keepeersofthestones.client.gui.EBWaterScreen;
 import power.keepeersofthestones.client.gui.EBVacuumScreen;
 import power.keepeersofthestones.client.gui.EBTornadoScreen;
@@ -105,8 +104,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_STONES_PAGE_3, ChoiseMagicStonesPage3Screen::new);
 			MenuScreens.register(PowerModMenus.SPACE_ATLAS_GUI, SpaceAtlasGUIScreen::new);
 			MenuScreens.register(PowerModMenus.CHECK_POINT_TP, CheckPointTPScreen::new);
-			MenuScreens.register(PowerModMenus.LEVELS_AND_SKILLS_GUI, LevelsAndSkillsGUIScreen::new);
-			MenuScreens.register(PowerModMenus.SKILLS_POWER_GUI_PAGE_1, SkillsPowerGUIPage1Screen::new);
+			MenuScreens.register(PowerModMenus.LEVELS_AND_SKILLS_PAGE, LevelsAndSkillsPageScreen::new);
 		});
 	}
 }

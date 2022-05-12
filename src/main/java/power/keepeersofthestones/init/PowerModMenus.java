@@ -7,10 +7,9 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
 import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
-import power.keepeersofthestones.world.inventory.SkillsPowerGUIPage1Menu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
-import power.keepeersofthestones.world.inventory.LevelsAndSkillsGUIMenu;
+import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
 import power.keepeersofthestones.world.inventory.EBWaterMenu;
 import power.keepeersofthestones.world.inventory.EBVacuumMenu;
 import power.keepeersofthestones.world.inventory.EBTornadoMenu;
@@ -126,10 +125,8 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new SpaceAtlasGUIMenu(id, inv, extraData));
 	public static final MenuType<CheckPointTPMenu> CHECK_POINT_TP = register("check_point_tp",
 			(id, inv, extraData) -> new CheckPointTPMenu(id, inv, extraData));
-	public static final MenuType<LevelsAndSkillsGUIMenu> LEVELS_AND_SKILLS_GUI = register("levels_and_skills_gui",
-			(id, inv, extraData) -> new LevelsAndSkillsGUIMenu(id, inv, extraData));
-	public static final MenuType<SkillsPowerGUIPage1Menu> SKILLS_POWER_GUI_PAGE_1 = register("skills_power_gui_page_1",
-			(id, inv, extraData) -> new SkillsPowerGUIPage1Menu(id, inv, extraData));
+	public static final MenuType<LevelsAndSkillsPageMenu> LEVELS_AND_SKILLS_PAGE = register("levels_and_skills_page",
+			(id, inv, extraData) -> new LevelsAndSkillsPageMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

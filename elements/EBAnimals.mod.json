@@ -88,6 +88,20 @@
           "x": 285,
           "y": 35
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "OpenLevelsAndSkillsPage"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 366,
+          "y": 206
+        }
       }
     ],
     "gridSettings": {
@@ -95,7 +109,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }
