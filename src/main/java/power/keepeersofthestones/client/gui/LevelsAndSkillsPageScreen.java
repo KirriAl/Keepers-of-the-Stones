@@ -36,8 +36,8 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 512;
-		this.imageHeight = 512;
+		this.imageWidth = 0;
+		this.imageHeight = 0;
 	}
 
 	@Override
@@ -54,29 +54,29 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 		RenderSystem.defaultBlendFunc();
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/book_of_elements_book.png"));
-		this.blit(ms, this.leftPos + 11, this.topPos + 129, 0, 0, 512, 256, 512, 256);
+		this.blit(ms, this.leftPos + -244, this.topPos + -127, 0, 0, 512, 256, 512, 256);
 
 		if (ReturnLevel1Procedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-			this.blit(ms, this.leftPos + 144, this.topPos + 170, 0, 0, 16, 16, 16, 16);
+			this.blit(ms, this.leftPos + -111, this.topPos + -86, 0, 0, 16, 16, 16, 16);
 		}
 		if (ReturnLevel2Procedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-			this.blit(ms, this.leftPos + 144, this.topPos + 201, 0, 0, 16, 16, 16, 16);
+			this.blit(ms, this.leftPos + -111, this.topPos + -55, 0, 0, 16, 16, 16, 16);
 		}
 		if (NonWaterPowerProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-			this.blit(ms, this.leftPos + 353, this.topPos + 170, 0, 0, 16, 16, 16, 16);
+			this.blit(ms, this.leftPos + 97, this.topPos + -86, 0, 0, 16, 16, 16, 16);
 		}
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-		this.blit(ms, this.leftPos + 183, this.topPos + 168, 0, 0, 19, 18, 19, 18);
+		this.blit(ms, this.leftPos + -72, this.topPos + -88, 0, 0, 19, 18, 19, 18);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-		this.blit(ms, this.leftPos + 183, this.topPos + 197, 0, 0, 19, 18, 19, 18);
+		this.blit(ms, this.leftPos + -72, this.topPos + -59, 0, 0, 19, 18, 19, 18);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-		this.blit(ms, this.leftPos + 393, this.topPos + 168, 0, 0, 19, 18, 19, 18);
+		this.blit(ms, this.leftPos + 137, this.topPos + -88, 0, 0, 19, 18, 19, 18);
 
 		RenderSystem.disableBlend();
 	}
@@ -97,11 +97,11 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Levels", 140, 148, -13421773);
-		this.font.draw(poseStack, "Level 2", 94, 174, -13421773);
-		this.font.draw(poseStack, "Level 3", 94, 201, -13421773);
-		this.font.draw(poseStack, "Skills", 333, 150, -13421773);
-		this.font.draw(poseStack, "Aqua Power", 290, 173, -13421773);
+		this.font.draw(poseStack, "Levels", -115, -108, -13421773);
+		this.font.draw(poseStack, "Level 2", -161, -82, -13421773);
+		this.font.draw(poseStack, "Level 3", -161, -55, -13421773);
+		this.font.draw(poseStack, "Skills", 77, -106, -13421773);
+		this.font.draw(poseStack, "Aqua Power", 34, -83, -13421773);
 	}
 
 	@Override
@@ -114,7 +114,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 162, this.topPos + 168, 61, 20, new TextComponent("4"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -93, this.topPos + -88, 61, 20, new TextComponent("4"), e -> {
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
@@ -122,7 +122,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 162, this.topPos + 196, 61, 20, new TextComponent("16"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -93, this.topPos + -60, 61, 20, new TextComponent("16"), e -> {
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
@@ -130,7 +130,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 371, this.topPos + 168, 61, 20, new TextComponent("12"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 115, this.topPos + -88, 61, 20, new TextComponent("12"), e -> {
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
@@ -138,7 +138,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 84, this.topPos + 342, 30, 20, new TextComponent("<"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -171, this.topPos + 86, 30, 20, new TextComponent("<"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(3, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 3, x, y, z);
