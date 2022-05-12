@@ -2,9 +2,9 @@
   "_fv": 29,
   "_type": "gui",
   "definition": {
-    "type": 1,
-    "width": 176,
-    "height": 166,
+    "type": 0,
+    "width": 0,
+    "height": 0,
     "inventoryOffsetX": 256,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
