@@ -29,8 +29,8 @@
             "falpha": 0.0
           },
           "name": "Levels",
-          "x": 98,
-          "y": 12
+          "x": 100,
+          "y": 10
         }
       },
       {
@@ -46,8 +46,8 @@
           "width": 61,
           "height": 20,
           "name": "4",
-          "x": 120,
-          "y": 32
+          "x": 125,
+          "y": 50
         }
       },
       {
@@ -59,8 +59,8 @@
             "falpha": 0.0
           },
           "name": "Level 2",
-          "x": 52,
-          "y": 38
+          "x": 50,
+          "y": 55
         }
       },
       {
@@ -72,8 +72,8 @@
             "name": "ReturnLevel1"
           },
           "name": "elemental_coin.png",
-          "x": 102,
-          "y": 34
+          "x": 100,
+          "y": 50
         }
       },
       {
@@ -85,8 +85,8 @@
             "falpha": 0.0
           },
           "name": "Level 3",
-          "x": 52,
-          "y": 65
+          "x": 50,
+          "y": 80
         }
       },
       {
@@ -98,8 +98,8 @@
             "name": "ReturnLevel2"
           },
           "name": "elemental_coin.png",
-          "x": 102,
-          "y": 65
+          "x": 100,
+          "y": 80
         }
       },
       {
@@ -115,8 +115,8 @@
           "width": 61,
           "height": 20,
           "name": "16",
-          "x": 120,
-          "y": 60
+          "x": 125,
+          "y": 75
         }
       },
       {
@@ -141,8 +141,8 @@
             "falpha": 0.0
           },
           "name": "Aqua Power",
-          "x": 248,
-          "y": 37
+          "x": 240,
+          "y": 30
         }
       },
       {
@@ -154,8 +154,8 @@
             "name": "NonWaterPower"
           },
           "name": "elemental_coin.png",
-          "x": 311,
-          "y": 34
+          "x": 300,
+          "y": 25
         }
       },
       {
@@ -171,8 +171,8 @@
           "width": 61,
           "height": 20,
           "name": "12",
-          "x": 329,
-          "y": 32
+          "x": 325,
+          "y": 25
         }
       },
       {
@@ -184,8 +184,8 @@
             "name": "ReturnLevel2"
           },
           "name": "level_checked.png",
-          "x": 141,
-          "y": 32
+          "x": 150,
+          "y": 50
         }
       },
       {
@@ -197,8 +197,8 @@
             "name": "ReturnLevel3"
           },
           "name": "level_checked.png",
-          "x": 141,
-          "y": 61
+          "x": 150,
+          "y": 75
         }
       },
       {
@@ -207,8 +207,8 @@
           "image": "level_checked.png",
           "use1Xscale": false,
           "name": "level_checked.png",
-          "x": 351,
-          "y": 32
+          "x": 350,
+          "y": 25
         }
       },
       {
@@ -223,6 +223,32 @@
           "name": "<",
           "x": 42,
           "y": 206
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level 1",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Level 1",
+          "x": 50,
+          "y": 30
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel1"
+          },
+          "name": "level_checked.png",
+          "x": 150,
+          "y": 25
         }
       }
     ],
