@@ -90,10 +90,10 @@ public class SkillsPowerGUIPage1Screen extends AbstractContainerScreen<SkillsPow
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, "Skills", 112, 4, -12829636);
-		this.font.draw(poseStack, "1/1", 13, 4, -12829636);
+		this.font.draw(poseStack, "1/1", 148, 193, -12829636);
 		this.font.draw(poseStack, "Soon", 130, 31, -12829636);
 		this.font.draw(poseStack, "Soon", 220, 31, -12829636);
-		this.font.draw(poseStack, "Water Power", 22, 22, -12829636);
+		this.font.draw(poseStack, "Aquatic Power", 22, 22, -12829636);
 	}
 
 	@Override

@@ -2,7 +2,7 @@
 package power.keepeersofthestones.command;
 
 import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
-import power.keepeersofthestones.procedures.ResetLevelProcedure;
+import power.keepeersofthestones.procedures.ResetSkillsAndLevelsProcedure;
 import power.keepeersofthestones.procedures.DetransformKeyPriNazhatiiKlavishiProcedure;
 
 import org.checkerframework.checker.units.qual.s;
@@ -48,7 +48,7 @@ public class ConfstoneCommand {
 
 					DetransformKeyPriNazhatiiKlavishiProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("level").then(Commands.literal("reset").executes(cmdargs -> {
+				})).then(Commands.literal("reset_abilty").executes(cmdargs -> {
 					ServerLevel world = cmdargs.getSource().getLevel();
 					double x = cmdargs.getSource().getPosition().x();
 					double y = cmdargs.getSource().getPosition().y();
@@ -58,8 +58,8 @@ public class ConfstoneCommand {
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
 
-					ResetLevelProcedure.execute(entity);
+					ResetSkillsAndLevelsProcedure.execute(entity);
 					return 0;
-				}))));
+				})));
 	}
 }

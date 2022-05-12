@@ -2,7 +2,7 @@
   "_fv": 29,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Water Element",
+    "achievementName": "Just Add Water!",
     "achievementDescription": "Learn the water ability",
     "achievementIcon": {
       "value": "CUSTOM:WaterDrop"

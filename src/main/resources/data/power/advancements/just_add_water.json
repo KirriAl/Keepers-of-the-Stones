@@ -4,10 +4,10 @@
       "item": "power:water_drop"
     },
     "title": {
-      "translate": "advancements.water_element.title"
+      "translate": "advancements.just_add_water.title"
     },
     "description": {
-      "translate": "advancements.water_element.descr"
+      "translate": "advancements.just_add_water.descr"
     },
     "frame": "task",
     "show_toast": true,
@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "water_element": {
+    "just_add_water": {
       "trigger": "minecraft:impossible"
     }
   },
