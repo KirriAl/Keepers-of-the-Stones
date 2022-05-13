@@ -285,8 +285,15 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed translation of the cosmos stone for accuracy
 - [Bugfix] Fixed a bug where a stone appeared after the death of a player with an activated battery
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
- "1.7.0": "
-- There will be no more mod updates for this version of Minecraft! Please update it!"
+"1.7.0": "
+- Transfer of the mod to version 1.18.2
+- Added new elements - teleportation
+- The class of the time element has been upgraded to Great and Unique
+- Added the ability for the time wizard to return to the past
+- Added dinoera
+- Mod texture files now have the correct names
+- [Bugfix] Localization bugs fixed
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
  },
   "1.18.2": {
 "1.7.0": "
