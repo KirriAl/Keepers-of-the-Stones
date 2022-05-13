@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.0.5",
-    "1.18.2-recommended": "2.0.5"
+    "1.18.2-latest": "2.1.0",
+    "1.18.2-recommended": "2.1.0"
   },
   "1.16.5": {
     "B2": "
@@ -425,6 +425,18 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Improved Tyrannosaurus behavior
 - The split feather functionality is temporarily disabled
 - [Bugfix] Fixed Tyrannosaurus hitbox
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.1.0": "
+- Added the levels and skills section in the elements book
+- Added new skills - water power
+- Added an elemental coin
+- The elemental coin can be obtained by completing some achievements or buying from villagers
+- Improved the spell of a random item, now one of 25 rare items can fall out
+- Now empty batteries contain a stack of 16
+- Increased saturation of the amber shield texture
+- Improved the texture of the amber staff
+- The binding to the Y key has been removed
+- The split stone has been removed
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }

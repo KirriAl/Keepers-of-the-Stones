@@ -34,8 +34,8 @@ body:
      label: Mod Version
      description: Which version of the mod are you using?
      options:
-       - 2.0.5 (Release)
-       - 2.1.0.x (Beta)
+       - 2.1.0 (Release)
+       - 2.2.0.x (Beta)
        - 1.4.5 (LTSR)
        - 2.0.2.1 (LTSB)
    validations:

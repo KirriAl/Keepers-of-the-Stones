@@ -170,7 +170,11 @@ public class RandomItemUseProcedure {
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			} else if (Mth.nextInt(new Random(), 1, 25) == 25) {
-				RandomBatteryGiveProcedure.execute(entity);
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Blocks.ENDER_CHEST);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
 			}
 		}
 	}
