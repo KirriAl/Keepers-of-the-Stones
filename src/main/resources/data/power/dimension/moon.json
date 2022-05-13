@@ -2982,14 +2982,14 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:diorite"
+                              "Name": "minecraft:calcite"
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:stone"
+                            "Name": "minecraft:calcite"
                           }
                         }
                       ]
@@ -3007,7 +3007,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:stone"
+                        "Name": "minecraft:andesite"
                       }
                     }
                   }

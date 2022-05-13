@@ -28,8 +28,8 @@ public class MoonDimension {
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
 			replaceableBlocks.add(Blocks.STONE);
-			replaceableBlocks.add(Blocks.DIORITE);
-			replaceableBlocks.add(Blocks.STONE);
+			replaceableBlocks.add(Blocks.CALCITE);
+			replaceableBlocks.add(Blocks.ANDESITE);
 			event.enqueueWork(() -> {
 				WorldCarver.CAVE.replaceableBlocks = new ImmutableSet.Builder<Block>().addAll(WorldCarver.CAVE.replaceableBlocks)
 						.addAll(replaceableBlocks).build();
