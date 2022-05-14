@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.1.0",
-    "1.18.2-recommended": "2.1.0"
+    "1.18.2-latest": "2.1.1",
+    "1.18.2-recommended": "2.1.1"
   },
   "1.16.5": {
    "1.1.18": "
@@ -439,6 +439,10 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Improved the texture of the amber staff
 - The binding to the Y key has been removed
 - The split stone has been removed
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.1.1": "
+- Changed the layers of the lunar surface
+- [Bugfix] Fixed the position of the labels on the level and skill pages
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
