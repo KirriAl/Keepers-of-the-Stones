@@ -214,6 +214,7 @@ import power.keepeersofthestones.item.AirStoneItem;
 import power.keepeersofthestones.item.AirFlowItem;
 import power.keepeersofthestones.item.AirBladeItem;
 import power.keepeersofthestones.item.AirBatteryItem;
+import power.keepeersofthestones.item.AetherStoneItem;
 import power.keepeersofthestones.item.AcusticalExplodeItem;
 import power.keepeersofthestones.item.AccelerationTimeItem;
 import power.keepeersofthestones.PowerMod;
@@ -565,6 +566,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIST_BOOTS = REGISTRY.register("mist_boots", () -> new MistItem.Boots());
 	public static final RegistryObject<Item> MERCURY_STONE = REGISTRY.register("mercury_stone", () -> new MercuryStoneItem());
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
+	public static final RegistryObject<Item> AETHER_STONE = REGISTRY.register("aether_stone", () -> new AetherStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
