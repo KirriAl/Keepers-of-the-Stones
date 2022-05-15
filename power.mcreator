@@ -12487,6 +12487,33 @@
       "locked_code": false,
       "registry_name": "battery",
       "path": "~/Tags"
+    },
+    {
+      "name": "MercuryStone",
+      "type": "item",
+      "sortid": 856,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_stone",
+      "path": "~/Mercury"
+    },
+    {
+      "name": "GoldenDustStone",
+      "type": "item",
+      "sortid": 857,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_stone",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "AetherStone",
+      "type": "item",
+      "sortid": 858,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_stone",
+      "path": "~/Aether"
     }
   ],
   "variable_elements": [
@@ -13130,10 +13157,12 @@
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
       "item.power.shadow_invisible": "Теневая Невидимость",
+      "item.power.aether_stone": "Камень Эфира",
       "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Шлем солнца",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
+      "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
       "item.power.force_replication": "Репликация Силы",
@@ -13143,6 +13172,7 @@
       "item.power.animals_stone": "Камень Животных",
       "advancements.put_it_on_charge_overnight.descr": "Создайте зарядник для батарей",
       "item.power.redstone_bundle": "Мешок С Редстоуном",
+      "item.power.mercury_stone": "Камень Ртути",
       "item.power.iron_shield": "Железный Щит",
       "item.power.light_battery": "Батарея",
       "effect.power.tornado_master": "Мастер Торнадо",
@@ -13588,10 +13618,12 @@
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
+      "item.power.aether_stone": "Aether Stone",
       "item.power.light_helmet": "Light Helmet",
       "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
+      "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
       "item.power.force_replication": "Force Replication",
@@ -13601,6 +13633,7 @@
       "item.power.animals_stone": "Animals Stone",
       "advancements.put_it_on_charge_overnight.descr": "Create a charger for batteries",
       "item.power.redstone_bundle": "Redstone Bundle",
+      "item.power.mercury_stone": "Mercury Stone",
       "item.power.iron_shield": "Iron Shield",
       "item.power.light_battery": "Battery",
       "effect.power.tornado_master": "Master of Tornado",
@@ -14047,10 +14080,12 @@
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
+      "item.power.aether_stone": "Aether Stone",
       "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Maître De La Verdure",
+      "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Gardiens des Pierres",
       "item.power.force_replication": "Force Replication",
@@ -14060,6 +14095,7 @@
       "item.power.animals_stone": "Animals Stone",
       "advancements.put_it_on_charge_overnight.descr": "Créer un chargeur pour batteries",
       "item.power.redstone_bundle": "Redstone Bundle",
+      "item.power.mercury_stone": "Mercury Stone",
       "item.power.iron_shield": "Iron Shield",
       "item.power.light_battery": "Batterie",
       "effect.power.tornado_master": "Maître Tornado",
@@ -14669,6 +14705,14 @@
       },
       {
         "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "GoldenDust",
+        "children": []
+      },
+      {
+        "name": "Aether",
         "children": []
       }
     ]
