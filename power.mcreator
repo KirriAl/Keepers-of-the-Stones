@@ -12486,6 +12486,35 @@
         ]
       },
       "path": "~/Space"
+    },
+    {
+      "name": "Gloria",
+      "type": "dimension",
+      "sortid": 854,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gloria",
+      "metadata": {
+        "ep": false
+      },
+      "path": "~/Space"
+    },
+    {
+      "name": "GloriaOnMe",
+      "type": "procedure",
+      "sortid": 855,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gloria_on_me",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Space"
     }
   ],
   "variable_elements": [
@@ -13210,6 +13239,7 @@
       "effect.power.creation_master": "Мастер Созидания",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
       "item.power.ice_shield": "Ледяной щит",
+      "item.power.gloria": "Gloria Portal Igniter",
       "item.power.sound_leggings": "Звуковые Брюки",
       "item.power.light_leggings": "Штаны света",
       "item.power.empty_battery": "Батарея",
@@ -13670,6 +13700,7 @@
       "effect.power.creation_master": "Master of Creation",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
       "item.power.ice_shield": "Ice Shield",
+      "item.power.gloria": "Gloria Portal Igniter",
       "item.power.sound_leggings": "Sound Leggings",
       "item.power.light_leggings": "Light Leggings",
       "item.power.empty_battery": "Battery",
