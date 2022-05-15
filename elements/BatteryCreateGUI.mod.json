@@ -41,7 +41,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:EmptyBattery"
           },
           "id": 1,
           "disableStackInteraction": false,
