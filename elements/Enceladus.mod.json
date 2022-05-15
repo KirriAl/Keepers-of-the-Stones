@@ -24,7 +24,7 @@
     "doesWaterVaporize": true,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,
-    "imitateOverworldBehaviour": true,
+    "imitateOverworldBehaviour": false,
     "portalFrame": {
       "value": ""
     },
