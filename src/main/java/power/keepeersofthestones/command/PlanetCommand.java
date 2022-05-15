@@ -4,6 +4,7 @@ package power.keepeersofthestones.command;
 import power.keepeersofthestones.procedures.VenusOnMeProcedure;
 import power.keepeersofthestones.procedures.MoonOnMeProcedure;
 import power.keepeersofthestones.procedures.MarsOnMeProcedure;
+import power.keepeersofthestones.procedures.EnceladusOnMeProcedure;
 import power.keepeersofthestones.procedures.EarthOnMeProcedure;
 
 import org.checkerframework.checker.units.qual.s;
@@ -72,6 +73,18 @@ public class PlanetCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 
 					MarsOnMeProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("enceladus").executes(cmdargs -> {
+					ServerLevel world = cmdargs.getSource().getLevel();
+					double x = cmdargs.getSource().getPosition().x();
+					double y = cmdargs.getSource().getPosition().y();
+					double z = cmdargs.getSource().getPosition().z();
+					Entity entity = cmdargs.getSource().getEntity();
+					Direction direction = Objects.requireNonNull(entity).getDirection();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+
+					EnceladusOnMeProcedure.execute(entity);
 					return 0;
 				})));
 	}

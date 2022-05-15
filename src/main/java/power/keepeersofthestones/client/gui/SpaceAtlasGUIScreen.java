@@ -109,5 +109,11 @@ public class SpaceAtlasGUIScreen extends AbstractContainerScreen<SpaceAtlasGUIMe
 				SpaceAtlasGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
+		this.addRenderableWidget(new Button(this.leftPos + 84, this.topPos + 276, 72, 20, new TextComponent("Enceladus"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new SpaceAtlasGUIButtonMessage(4, x, y, z));
+				SpaceAtlasGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}));
 	}
 }

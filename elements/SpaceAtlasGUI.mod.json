@@ -88,6 +88,20 @@
           "x": 42,
           "y": 116
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Enceladus",
+          "onClick": {
+            "name": "EnceladusOnMe"
+          },
+          "width": 72,
+          "height": 20,
+          "name": "Enceladus",
+          "x": 42,
+          "y": 140
+        }
       }
     ],
     "gridSettings": {

@@ -12,6 +12,7 @@ import power.keepeersofthestones.world.biome.MoonLandBiome;
 import power.keepeersofthestones.world.biome.MarsLandBiome;
 import power.keepeersofthestones.world.biome.JurassicSwampBiome;
 import power.keepeersofthestones.world.biome.JurassicJungleBiome;
+import power.keepeersofthestones.world.biome.EnceladusIceDesertBiome;
 import power.keepeersofthestones.world.biome.CretaceousTaigaBiome;
 import power.keepeersofthestones.world.biome.CretaceousPineForestBiome;
 import power.keepeersofthestones.PowerMod;
@@ -39,6 +40,8 @@ public class PowerModBiomes {
 	public static final RegistryObject<Biome> CRETACEOUS_TAIGA = REGISTRY.register("cretaceous_taiga", () -> CretaceousTaigaBiome.createBiome());
 	public static final RegistryObject<Biome> CRETACEOUS_PINE_FOREST = REGISTRY.register("cretaceous_pine_forest",
 			() -> CretaceousPineForestBiome.createBiome());
+	public static final RegistryObject<Biome> ENCELADUS_ICE_DESERT = REGISTRY.register("enceladus_ice_desert",
+			() -> EnceladusIceDesertBiome.createBiome());
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -53,6 +56,7 @@ public class PowerModBiomes {
 			JurassicSwampBiome.init();
 			CretaceousTaigaBiome.init();
 			CretaceousPineForestBiome.init();
+			EnceladusIceDesertBiome.init();
 		});
 	}
 }
