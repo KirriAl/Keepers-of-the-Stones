@@ -74,6 +74,9 @@
         "value": "CUSTOM:DestructionStone"
       },
       {
+        "value": "CUSTOM:SpaceStone"
+      },
+      {
         "value": "CUSTOM:BloodStone"
       },
       {
@@ -119,16 +122,13 @@
         "value": "CUSTOM:MushroomsStone"
       },
       {
-        "value": "CUSTOM:SpaceStone"
-      },
-      {
         "value": "CUSTOM:MagnetStone"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
-    "name": "power_stones",
-    "namespace": "forge"
+    "name": "elements",
+    "namespace": "mod"
   }
 }
