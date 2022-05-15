@@ -18,7 +18,7 @@ public class Modelmagic_arrow<T extends Entity> extends EntityModel<T> {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
 		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(),
-				PartPose.offset(0.0F, 23.0F, 0.0F));
+				PartPose.offsetAndRotation(0.0F, 23.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
 
 		PartDefinition body_r1 = body.addOrReplaceChild("body_r1",
 				CubeListBuilder.create().texOffs(0, 5)

@@ -31,7 +31,8 @@ public class Modelmagic_arrow<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.0F, 23.0F, 0.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(),
+				PartPose.offsetAndRotation(0.0F, 23.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
 		PartDefinition body_r1 = body.addOrReplaceChild("body_r1",
 				CubeListBuilder.create().texOffs(0, 5).addBox(-2.5F, -2.5F, 12.0F, 5.0F, 5.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(0, -16)
 						.addBox(0.0F, -2.5F, -3.0F, 0.0F, 5.0F, 16.0F, new CubeDeformation(0.0F)),
