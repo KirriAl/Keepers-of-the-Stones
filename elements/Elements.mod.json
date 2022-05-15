@@ -123,6 +123,12 @@
       },
       {
         "value": "CUSTOM:MagnetStone"
+      },
+      {
+        "value": "CUSTOM:MercuryStone"
+      },
+      {
+        "value": "CUSTOM:GoldenDustStone"
       }
     ],
     "blocks": [],

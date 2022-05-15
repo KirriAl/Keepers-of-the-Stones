@@ -107,6 +107,7 @@ import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
 import power.keepeersofthestones.item.MetalBatteryItem;
+import power.keepeersofthestones.item.MercuryStoneItem;
 import power.keepeersofthestones.item.MegawattItem;
 import power.keepeersofthestones.item.MagnetStoneItem;
 import power.keepeersofthestones.item.MagnetItem;
@@ -142,6 +143,7 @@ import power.keepeersofthestones.item.GreeneryStoneItem;
 import power.keepeersofthestones.item.GreeneryItem;
 import power.keepeersofthestones.item.GreeneryBatteryItem;
 import power.keepeersofthestones.item.GravityStoneItem;
+import power.keepeersofthestones.item.GoldenDustStoneItem;
 import power.keepeersofthestones.item.GoldenCrossbowItem;
 import power.keepeersofthestones.item.GlowCreateItem;
 import power.keepeersofthestones.item.GalacticSwordItem;
@@ -561,6 +563,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIST_CHESTPLATE = REGISTRY.register("mist_chestplate", () -> new MistItem.Chestplate());
 	public static final RegistryObject<Item> MIST_LEGGINGS = REGISTRY.register("mist_leggings", () -> new MistItem.Leggings());
 	public static final RegistryObject<Item> MIST_BOOTS = REGISTRY.register("mist_boots", () -> new MistItem.Boots());
+	public static final RegistryObject<Item> MERCURY_STONE = REGISTRY.register("mercury_stone", () -> new MercuryStoneItem());
+	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
