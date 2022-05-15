@@ -32,9 +32,9 @@
     "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "Items.ARROW"
+      "value": ""
     },
     "bulletModel": "Modelmagic_arrow",
-    "customBulletModelTexture": "arrows.png"
+    "customBulletModelTexture": "magic_arrow.png"
   }
 }
