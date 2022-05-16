@@ -18,6 +18,7 @@ import power.keepeersofthestones.block.GoldMagicBoxBlock;
 import power.keepeersofthestones.block.EnergyBlockBlock;
 import power.keepeersofthestones.block.DinoeraPortalBlock;
 import power.keepeersofthestones.block.DetonatorTNTBlock;
+import power.keepeersofthestones.block.CrystallizedPortalBlock;
 import power.keepeersofthestones.block.CrystalShieldBlockBlock;
 import power.keepeersofthestones.block.ClusterBlockBlock;
 import power.keepeersofthestones.block.BluePortalBlock;
@@ -59,6 +60,7 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> GOLD_MAGIC_BOX = REGISTRY.register("gold_magic_box", () -> new GoldMagicBoxBlock());
 	public static final RegistryObject<Block> DINOERA_PORTAL = REGISTRY.register("dinoera_portal", () -> new DinoeraPortalBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
+	public static final RegistryObject<Block> CRYSTALLIZED_PORTAL = REGISTRY.register("crystallized_portal", () -> new CrystallizedPortalBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

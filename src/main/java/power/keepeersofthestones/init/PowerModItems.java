@@ -180,6 +180,7 @@ import power.keepeersofthestones.item.DestructionPowerItem;
 import power.keepeersofthestones.item.DestructionItem;
 import power.keepeersofthestones.item.CutterSwordItem;
 import power.keepeersofthestones.item.CultivationItem;
+import power.keepeersofthestones.item.CrystallizedItem;
 import power.keepeersofthestones.item.CrystalStoneItem;
 import power.keepeersofthestones.item.CrystalShieldItem;
 import power.keepeersofthestones.item.CrystalItem;
@@ -567,6 +568,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MERCURY_STONE = REGISTRY.register("mercury_stone", () -> new MercuryStoneItem());
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
 	public static final RegistryObject<Item> AETHER_STONE = REGISTRY.register("aether_stone", () -> new AetherStoneItem());
+	public static final RegistryObject<Item> CRYSTALLIZED = REGISTRY.register("crystallized", () -> new CrystallizedItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
