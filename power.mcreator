@@ -11894,15 +11894,6 @@
       "path": "~/Time"
     },
     {
-      "name": "TimeFeatherCraft",
-      "type": "recipe",
-      "sortid": 812,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "time_feather_craft",
-      "path": "~/Time"
-    },
-    {
       "name": "AmberShield",
       "type": "item",
       "sortid": 813,
@@ -12514,6 +12505,45 @@
       "locked_code": false,
       "registry_name": "aether_stone",
       "path": "~/Aether"
+    },
+    {
+      "name": "CrystallizedLands",
+      "type": "biome",
+      "sortid": 859,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_lands",
+      "path": "~/SecretDimensions"
+    },
+    {
+      "name": "Crystallized",
+      "type": "dimension",
+      "sortid": 860,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized",
+      "metadata": {
+        "ep": true
+      },
+      "path": "~/SecretDimensions"
+    },
+    {
+      "name": "CrystallizedCraft",
+      "type": "recipe",
+      "sortid": 861,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_craft",
+      "path": "~/SecretDimensions"
+    },
+    {
+      "name": "DinoeraCraft",
+      "type": "recipe",
+      "sortid": 862,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dinoera_craft",
+      "path": "~/Time"
     }
   ],
   "variable_elements": [
@@ -13281,7 +13311,7 @@
       "item.power.shadow_chestplate": "Нагрудник тьмы",
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Технологии \u0026 Артефакты",
-      "item.power.dinoera": "Перо Времени",
+      "item.power.dinoera": "Огниво Портала (Диноэра)",
       "block.power.quicksilver": "Quicksilver",
       "item.power.mist_leggings": "Mist Leggings",
       "block.power.energy_block": "Энергетический блок",
@@ -13415,6 +13445,7 @@
       "item.power.burn": "Поджёг",
       "item.power.amber_boots": "Amber Boots",
       "effect.power.recharge_destruction_stone": "Перезарядка",
+      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Вампиризм",
       "effect.power.recharge_time_stone": "Перезарядка",
       "item.power.shield_of_earth": "Щит Земли",
@@ -13477,6 +13508,7 @@
       "item.power.mushrooms_stone": "Камень Грибов",
       "item.power.ocean_boots": "Ботинки Океана",
       "effect.power.moon_master": "Мастер Луны",
+      "item.power.crystallized": "Огниво Портала (Кристаллизованный Мир)",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
       "item.power.energy_stone": "Камень Энергии",
       "item.power.energy_absorption": "Поглощение Энергии",
@@ -13742,7 +13774,7 @@
       "item.power.shadow_chestplate": "Shadow Chestplate",
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Technologies \u0026 Artifacts",
-      "item.power.dinoera": "Time Feather",
+      "item.power.dinoera": "Dinoera Portal Igniter",
       "block.power.quicksilver": "Quicksilver",
       "item.power.mist_leggings": "Mist Leggings",
       "block.power.energy_block": "Energy Block",
@@ -13876,6 +13908,7 @@
       "item.power.burn": "Burn",
       "item.power.amber_boots": "Amber Boots",
       "effect.power.recharge_destruction_stone": "Recharge",
+      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
       "item.power.shield_of_earth": "Shield of the Earth",
@@ -13939,6 +13972,7 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
       "effect.power.moon_master": "Master of the Moon",
+      "item.power.crystallized": "Crystallized Portal Igniter",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
       "item.power.energy_absorption": "Energy Absorption",
@@ -14204,7 +14238,7 @@
       "item.power.shadow_chestplate": "Shadow Chestplate",
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Technologies et Artefacts",
-      "item.power.dinoera": "Time Feather",
+      "item.power.dinoera": "Dinoera Portal Igniter",
       "block.power.quicksilver": "Quicksilver",
       "item.power.mist_leggings": "Mist Leggings",
       "block.power.energy_block": "Bloc D\u0027Énergie",
@@ -14338,6 +14372,7 @@
       "item.power.burn": "Burn",
       "item.power.amber_boots": "Amber Boots",
       "effect.power.recharge_destruction_stone": "Recharge",
+      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
       "item.power.shield_of_earth": "Shield of the Earth",
@@ -14401,6 +14436,7 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
       "effect.power.moon_master": "Maître De La Lune",
+      "item.power.crystallized": "Crystallized Portal Igniter",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
       "item.power.energy_absorption": "Energy Absorption",
@@ -14713,6 +14749,10 @@
       },
       {
         "name": "Aether",
+        "children": []
+      },
+      {
+        "name": "SecretDimensions",
         "children": []
       }
     ]

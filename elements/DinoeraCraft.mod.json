@@ -13,7 +13,7 @@
         "value": ""
       },
       {
-        "value": "Items.FEATHER"
+        "value": "Items.FLINT_AND_STEEL"
       },
       {
         "value": ""
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:Dinoera"
     },
-    "name": "time_feather_craft",
+    "name": "dinoera_craft",
     "namespace": "mod"
   }
 }
