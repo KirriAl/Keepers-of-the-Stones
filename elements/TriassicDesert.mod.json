@@ -56,7 +56,7 @@
     "sandPatchesPerChunk": 0,
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,
-    "cactiPerChunk": 4,
+    "cactiPerChunk": 7,
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",
     "treeType": 0,
@@ -95,7 +95,8 @@
     "spawnRuinedPortal": "NONE",
     "defaultFeatures": [
       "Caves",
-      "Ores"
+      "Ores",
+      "DeadBushes"
     ],
     "spawnEntries": []
   }

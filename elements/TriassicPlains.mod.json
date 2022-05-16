@@ -98,6 +98,16 @@
       "Ores",
       "Fossils"
     ],
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityHoglin"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 20,
+        "spawnType": "creature"
+      }
+    ]
   }
 }

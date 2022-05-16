@@ -108,6 +108,16 @@
       "DeadBushes",
       "ExtraEmeraldOre"
     ],
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityCaveSpider"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 20,
+        "spawnType": "monster"
+      }
+    ]
   }
 }
