@@ -109,6 +109,16 @@
       "Fossils",
       "MeadowVegetation"
     ],
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityRabbit"
+        },
+        "minGroup": 2,
+        "maxGroup": 3,
+        "weight": 20,
+        "spawnType": "creature"
+      }
+    ]
   }
 }
