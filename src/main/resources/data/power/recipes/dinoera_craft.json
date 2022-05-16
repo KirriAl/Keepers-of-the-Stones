@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:feather"
+      "item": "minecraft:flint_and_steel"
     },
     {
       "item": "power:time_battery"

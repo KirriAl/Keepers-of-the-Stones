@@ -50,11 +50,11 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "igniterName": "Time Feather",
+    "igniterName": "Dinoera Portal Igniter",
     "igniterTab": {
       "value": "CUSTOM:TechnologiesAndArtifacts"
     },
-    "texture": "time_feather",
+    "texture": "dinoera_flint_and_steel",
     "portalTexture": "dinoera_portal",
     "enablePortal": true
   }

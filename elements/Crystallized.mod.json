@@ -31,7 +31,7 @@
     "portalParticles": {
       "value": "GLOW"
     },
-    "portalLuminance": 15,
+    "portalLuminance": 5,
     "portalSound": {
       "value": "block.portal.ambient"
     },
