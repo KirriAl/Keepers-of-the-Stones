@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.1.2",
-    "1.18.2-recommended": "2.1.2"
+    "1.18.2-latest": "2.1.10",
+    "1.18.2-recommended": "2.1.10"
   },
   "1.16.5": {
    "1.1.18": "
@@ -449,6 +449,12 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Added French (translation is not yet complete!)
 - Added spawn of some animals in dinoera
 - [Bugfix] Fixed arrows for rain bow and golden crossbow (#30)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.1.10": "
+- Added dimension - Crystallized world
+- Added a dark dimension - Oblivion
+- The feather of time has been replaced with the flint of the portal to dinoera 
+- Now a flint and an element battery are required to craft flint portal
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
