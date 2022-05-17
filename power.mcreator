@@ -11796,7 +11796,7 @@
       "type": "command",
       "sortid": 723,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "confstone",
       "path": "~/Commands"
     },
@@ -11817,7 +11817,7 @@
       "type": "command",
       "sortid": 725,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "planet",
       "path": "~/Commands"
     },
