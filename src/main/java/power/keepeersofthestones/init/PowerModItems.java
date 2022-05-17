@@ -95,6 +95,7 @@ import power.keepeersofthestones.item.OceanSwordItem;
 import power.keepeersofthestones.item.OceanStoneItem;
 import power.keepeersofthestones.item.OceanItem;
 import power.keepeersofthestones.item.OceanBatteryItem;
+import power.keepeersofthestones.item.OblivionItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MoonWitherItem;
 import power.keepeersofthestones.item.MoonStonesItem;
@@ -569,6 +570,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
 	public static final RegistryObject<Item> AETHER_STONE = REGISTRY.register("aether_stone", () -> new AetherStoneItem());
 	public static final RegistryObject<Item> CRYSTALLIZED = REGISTRY.register("crystallized", () -> new CrystallizedItem());
+	public static final RegistryObject<Item> OBLIVION = REGISTRY.register("oblivion", () -> new OblivionItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

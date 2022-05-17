@@ -21,15 +21,19 @@ import java.util.HashSet;
 import com.google.common.collect.ImmutableSet;
 
 @Mod.EventBusSubscriber
-public class CrystallizedDimension {
+public class OblivionDimension {
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	public static class Fixers {
 		@SubscribeEvent
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
-			replaceableBlocks.add(Blocks.SANDSTONE);
-			replaceableBlocks.add(Blocks.BUDDING_AMETHYST);
-			replaceableBlocks.add(Blocks.AMETHYST_BLOCK);
+			replaceableBlocks.add(Blocks.STONE);
+			replaceableBlocks.add(Blocks.SOUL_SOIL);
+			replaceableBlocks.add(Blocks.DIRT);
+			replaceableBlocks.add(Blocks.GRASS_BLOCK);
+			replaceableBlocks.add(Blocks.DIRT);
+			replaceableBlocks.add(Blocks.GRASS_BLOCK);
+			replaceableBlocks.add(Blocks.DIRT);
 			event.enqueueWork(() -> {
 				WorldCarver.CAVE.replaceableBlocks = new ImmutableSet.Builder<Block>().addAll(WorldCarver.CAVE.replaceableBlocks)
 						.addAll(replaceableBlocks).build();
@@ -41,10 +45,10 @@ public class CrystallizedDimension {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public static void registerDimensionSpecialEffects(FMLClientSetupEvent event) {
-			DimensionSpecialEffects customEffect = new DimensionSpecialEffects(Float.NaN, true, DimensionSpecialEffects.SkyType.NONE, false, false) {
+			DimensionSpecialEffects customEffect = new DimensionSpecialEffects(128, true, DimensionSpecialEffects.SkyType.NORMAL, false, false) {
 				@Override
 				public Vec3 getBrightnessDependentFogColor(Vec3 color, float sunHeight) {
-					return new Vec3(0.6, 0, 0.6);
+					return new Vec3(0, 0.2, 0.2);
 				}
 
 				@Override
@@ -52,7 +56,7 @@ public class CrystallizedDimension {
 					return true;
 				}
 			};
-			event.enqueueWork(() -> DimensionSpecialEffects.EFFECTS.put(new ResourceLocation("power:crystallized"), customEffect));
+			event.enqueueWork(() -> DimensionSpecialEffects.EFFECTS.put(new ResourceLocation("power:oblivion"), customEffect));
 		}
 	}
 }

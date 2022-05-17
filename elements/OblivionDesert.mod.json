@@ -2,34 +2,34 @@
   "_fv": 29,
   "_type": "biome",
   "definition": {
-    "name": "Crystallized Lands",
+    "name": "Oblivion Desert",
     "groundBlock": {
-      "value": "Blocks.BUDDING_AMETHYST"
+      "value": "Blocks.SOUL_SOIL"
     },
     "undergroundBlock": {
-      "value": "Blocks.AMETHYST_BLOCK"
+      "value": "Blocks.DIRT#0"
     },
     "underwaterBlock": {
-      "value": ""
+      "value": "Blocks.SAND#0"
     },
     "airColor": {
-      "value": -6750055,
+      "value": -16764109,
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -6750055,
+      "value": -16777216,
       "falpha": 0.0
     },
     "foliageColor": {
-      "value": -6750055,
+      "value": -16777216,
       "falpha": 0.0
     },
     "waterColor": {
-      "value": -6750055,
+      "value": -16764109,
       "falpha": 0.0
     },
     "waterFogColor": {
-      "value": -6750055,
+      "value": -16764109,
       "falpha": 0.0
     },
     "ambientSound": {
@@ -51,16 +51,16 @@
     },
     "particlesProbability": 0.5,
     "biomeCategory": "NONE",
-    "rainingPossibility": 0.0,
-    "temperature": 1.5,
-    "baseHeight": 0.0,
-    "heightVariation": 0.0,
+    "rainingPossibility": 0.5,
+    "temperature": 1.2,
+    "baseHeight": 0.1,
+    "heightVariation": 0.1,
     "spawnBiome": false,
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 10,
     "biomeDictionaryTypes": [],
-    "grassPerChunk": 0,
+    "grassPerChunk": 4,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
     "mushroomsPerChunk": 0,
@@ -86,7 +86,7 @@
       "value": ""
     },
     "spawnStronghold": false,
-    "spawnMineshaft": true,
+    "spawnMineshaft": false,
     "spawnMineshaftMesa": false,
     "spawnPillagerOutpost": false,
     "villageType": "none",
@@ -107,8 +107,38 @@
     "spawnRuinedPortal": "NONE",
     "defaultFeatures": [
       "Caves",
-      "AmethystGeodes"
+      "Ores",
+      "ExtraEmeraldOre",
+      "ExtraGoldOre"
     ],
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityGhast"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 15,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityEndermite"
+        },
+        "minGroup": 2,
+        "maxGroup": 6,
+        "weight": 10,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityCreeper"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 15,
+        "spawnType": "monster"
+      }
+    ]
   }
 }

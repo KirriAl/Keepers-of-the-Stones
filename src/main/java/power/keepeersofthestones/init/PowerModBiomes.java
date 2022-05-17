@@ -8,6 +8,9 @@ import power.keepeersofthestones.world.biome.VenusLandBiome;
 import power.keepeersofthestones.world.biome.VenusDesertBiome;
 import power.keepeersofthestones.world.biome.TriassicPlainsBiome;
 import power.keepeersofthestones.world.biome.TriassicDesertBiome;
+import power.keepeersofthestones.world.biome.OblivionPlainsBiome;
+import power.keepeersofthestones.world.biome.OblivionForestBiome;
+import power.keepeersofthestones.world.biome.OblivionDesertBiome;
 import power.keepeersofthestones.world.biome.MoonLandBiome;
 import power.keepeersofthestones.world.biome.MarsLandBiome;
 import power.keepeersofthestones.world.biome.JurassicSwampBiome;
@@ -45,6 +48,9 @@ public class PowerModBiomes {
 			() -> EnceladusIceDesertBiome.createBiome());
 	public static final RegistryObject<Biome> CRYSTALLIZED_LANDS = REGISTRY.register("crystallized_lands",
 			() -> CrystallizedLandsBiome.createBiome());
+	public static final RegistryObject<Biome> OBLIVION_FOREST = REGISTRY.register("oblivion_forest", () -> OblivionForestBiome.createBiome());
+	public static final RegistryObject<Biome> OBLIVION_PLAINS = REGISTRY.register("oblivion_plains", () -> OblivionPlainsBiome.createBiome());
+	public static final RegistryObject<Biome> OBLIVION_DESERT = REGISTRY.register("oblivion_desert", () -> OblivionDesertBiome.createBiome());
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -61,6 +67,9 @@ public class PowerModBiomes {
 			CretaceousPineForestBiome.init();
 			EnceladusIceDesertBiome.init();
 			CrystallizedLandsBiome.init();
+			OblivionForestBiome.init();
+			OblivionPlainsBiome.init();
+			OblivionDesertBiome.init();
 		});
 	}
 }

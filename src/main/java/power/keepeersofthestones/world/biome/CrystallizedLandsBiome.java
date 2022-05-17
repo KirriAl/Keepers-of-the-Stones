@@ -14,7 +14,6 @@ public class CrystallizedLandsBiome {
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
 		BiomeDefaultFeatures.addDefaultCrystalFormations(biomeGenerationSettings);
 		BiomeDefaultFeatures.addDefaultCarversAndLakes(biomeGenerationSettings);
-		BiomeDefaultFeatures.addExtraEmeralds(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder();
 		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.NONE).biomeCategory(Biome.BiomeCategory.NONE).temperature(1.5f).downfall(0f)
 				.specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build()).build();

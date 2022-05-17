@@ -4,43 +4,49 @@
   "definition": {
     "biomesInDimension": [
       {
-        "value": "CUSTOM:CrystallizedLands"
+        "value": "CUSTOM:OblivionForest"
+      },
+      {
+        "value": "CUSTOM:OblivionDesert"
+      },
+      {
+        "value": "CUSTOM:OblivionPlains"
       }
     ],
-    "worldGenType": "Nether like gen",
+    "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.SANDSTONE#0"
+      "value": "Blocks.STONE#0"
     },
     "fluidBlock": {
       "value": "Blocks.FLOWING_WATER"
     },
     "airColor": {
-      "value": -6750055,
+      "value": -16764109,
       "falpha": 0.0
     },
     "canRespawnHere": true,
     "hasFog": true,
-    "isDark": false,
+    "isDark": true,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": false,
-    "imitateOverworldBehaviour": false,
+    "imitateOverworldBehaviour": true,
     "portalFrame": {
-      "value": "Blocks.AMETHYST_BLOCK"
+      "value": "Blocks.DEEPSLATE"
     },
     "portalParticles": {
-      "value": "GLOW"
+      "value": "SOUL"
     },
     "portalLuminance": 5,
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "igniterName": "Crystallized Portal Igniter",
+    "igniterName": "Oblivion Portal Igniter",
     "igniterTab": {
       "value": "CUSTOM:TechnologiesAndArtifacts"
     },
-    "texture": "crystal_flint_and_steel",
-    "portalTexture": "crystallized_portal",
+    "texture": "oblivion_flint_and_steel",
+    "portalTexture": "oblivion_portal",
     "enablePortal": true
   }
 }
