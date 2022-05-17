@@ -10,8 +10,8 @@
           "biome": "power:oblivion_desert",
           "parameters": {
             "temperature": [
-              0.323809523809,
-              0.609523809523
+              0.857142857143,
+              1.142857142857
             ],
             "humidity": [
               -0.142857142857,

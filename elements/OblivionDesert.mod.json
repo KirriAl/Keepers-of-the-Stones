@@ -50,9 +50,9 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "NONE",
+    "biomeCategory": "DESERT",
     "rainingPossibility": 0.5,
-    "temperature": 1.2,
+    "temperature": 2.0,
     "baseHeight": 0.1,
     "heightVariation": 0.1,
     "spawnBiome": false,

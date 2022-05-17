@@ -50,7 +50,7 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "NONE",
+    "biomeCategory": "PLAINS",
     "rainingPossibility": 0.5,
     "temperature": 1.2,
     "baseHeight": 0.1,
