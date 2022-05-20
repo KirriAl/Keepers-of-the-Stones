@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "blue_fire_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Blue Flame Stone",
     "rarity": "COMMON",
     "creativeTab": {

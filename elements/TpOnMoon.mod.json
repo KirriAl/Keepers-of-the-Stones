@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "tponmoon",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Tp On Moon",
     "rarity": "COMMON",
     "creativeTab": {
