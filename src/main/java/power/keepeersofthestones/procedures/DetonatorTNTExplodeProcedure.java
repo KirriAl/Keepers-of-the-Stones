@@ -63,8 +63,8 @@ public class DetonatorTNTExplodeProcedure {
 			}
 
 			private void run() {
-				if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == DetonatorTNTBlock.block) {
-					world.setBlockState(new BlockPos(x, y, z), Blocks.AIR.getDefaultState(), 3);
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == DetonatorTNTBlock.block) {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 					if (world instanceof World && !((World) world).isRemote) {
 						((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 3, Explosion.Mode.BREAK);
 					}

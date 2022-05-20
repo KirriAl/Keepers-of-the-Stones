@@ -57,7 +57,7 @@ public class OpenRedstoneBundleProcedure {
 		{
 			Entity _ent = entity;
 			if (_ent instanceof ServerPlayerEntity) {
-				BlockPos _bpos = new BlockPos(x, y, z);
+				BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 				NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {

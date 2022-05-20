@@ -52,7 +52,7 @@ public class IceBallInEntityProcedure {
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 300, (int) 1, (false), (false)));
 		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos(x, y, z),
+			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.NEUTRAL, (float) 1,
 					(float) 1);
 		} else {

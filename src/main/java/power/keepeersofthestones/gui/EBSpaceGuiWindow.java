@@ -48,17 +48,17 @@ public class EBSpaceGuiWindow extends ContainerScreen<EBSpaceGui.GuiContainerMod
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/book_of_elements_book.png"));
-		this.blit(ms, this.guiLeft + -244, this.guiTop + -127, 0, 0, 512, 256, 512, 256);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/book_of_elements_book.png"));
+		this.blit(ms, this.guiLeft + -244, this.guiTop + -127, 0, 0, 0, 0, 0, 0);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/space_stone.png"));
-		this.blit(ms, this.guiLeft + -104, this.guiTop + -109, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/space_stone.png"));
+		this.blit(ms, this.guiLeft + -104, this.guiTop + -109, 0, 0, -1, -1, -1, -1);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/space_master.png"));
-		this.blit(ms, this.guiLeft + 93, this.guiTop + -109, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/space_master.png"));
+		this.blit(ms, this.guiLeft + 93, this.guiTop + -109, 0, 0, -1, -1, -1, -1);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/space_element.png"));
-		this.blit(ms, this.guiLeft + 71, this.guiTop + -85, 0, 0, 53, 128, 53, 128);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/space_element.png"));
+		this.blit(ms, this.guiLeft + 71, this.guiTop + -85, 0, 0, 0, 0, 0, 0);
 
 		RenderSystem.disableBlend();
 	}

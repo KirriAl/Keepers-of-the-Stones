@@ -39,7 +39,7 @@ public class CheckpointGUIGuiWindow extends ContainerScreen<CheckpointGUIGui.Gui
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/checkpoint_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/checkpoint_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

@@ -10,7 +10,6 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
-import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
@@ -41,11 +40,6 @@ public class LavaHoleItem extends PowerModElements.ModElement {
 		public ItemCustom() {
 			super(new Item.Properties().group(null).maxStackSize(1).isImmuneToFire().rarity(Rarity.COMMON));
 			setRegistryName("lava_hole");
-		}
-
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
 		}
 
 		@Override

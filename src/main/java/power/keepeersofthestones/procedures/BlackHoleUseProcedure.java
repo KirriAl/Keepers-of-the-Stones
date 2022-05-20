@@ -60,7 +60,7 @@ public class BlackHoleUseProcedure {
 			}
 
 			private void run() {
-				world.setBlockState(new BlockPos(x, y + 1, z), BlackHoleBlockBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), BlackHoleBlockBlock.block.getDefaultState(), 3);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, (int) 3);

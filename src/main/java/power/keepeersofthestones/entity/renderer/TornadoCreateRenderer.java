@@ -35,7 +35,7 @@ public class TornadoCreateRenderer {
 
 	@OnlyIn(Dist.CLIENT)
 	public static class CustomRender extends EntityRenderer<TornadoCreateItem.ArrowCustomEntity> {
-		private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/tornado.png");
+		private static final ResourceLocation texture = new ResourceLocation("power:textures/tornado.png");
 
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);

@@ -37,7 +37,7 @@ public class BatteryCreateGUIGuiWindow extends ContainerScreen<BatteryCreateGUIG
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/battery_create_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/battery_create_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -56,8 +56,8 @@ public class BatteryCreateGUIGuiWindow extends ContainerScreen<BatteryCreateGUIG
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/acceleration_time.png"));
-		this.blit(ms, this.guiLeft + 78, this.guiTop + 34, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/acceleration_time.png"));
+		this.blit(ms, this.guiLeft + 78, this.guiTop + 34, 0, 0, -1, -1, -1, -1);
 
 		RenderSystem.disableBlend();
 	}

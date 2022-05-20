@@ -47,7 +47,7 @@ public class SunExplodeUseProcedure {
 		if (world instanceof World && !((World) world).isRemote) {
 			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 4, Explosion.Mode.NONE);
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == MoonStonesBlockBlock.block) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MoonStonesBlockBlock.block) {
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
@@ -60,7 +60,7 @@ public class SunExplodeUseProcedure {
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"fill ~-16 ~-16 ~-16 ~16 ~16 ~16 air replace power:unmultiplication_moon_stones_block");
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == UnmultiplicationMoonStonesBlock.block) {
+		} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == UnmultiplicationMoonStonesBlock.block) {
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",

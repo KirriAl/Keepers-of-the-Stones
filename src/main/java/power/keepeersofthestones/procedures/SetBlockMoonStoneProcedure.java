@@ -60,7 +60,7 @@ public class SetBlockMoonStoneProcedure {
 			}
 
 			private void run() {
-				world.setBlockState(new BlockPos(x, y, z), MoonStonesBlockBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), MoonStonesBlockBlock.block.getDefaultState(), 3);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, (int) 3);

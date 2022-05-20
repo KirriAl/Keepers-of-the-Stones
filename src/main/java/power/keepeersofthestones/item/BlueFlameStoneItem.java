@@ -9,7 +9,6 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraft.world.World;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
-import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -39,11 +38,6 @@ public class BlueFlameStoneItem extends PowerModElements.ModElement {
 		public ItemCustom() {
 			super(new Item.Properties().group(null).maxDamage(10).isImmuneToFire().rarity(Rarity.COMMON));
 			setRegistryName("blue_flame_stone");
-		}
-
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
 		}
 
 		@Override
