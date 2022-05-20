@@ -11801,7 +11801,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_coin",
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "TyrannosaurusRex",
@@ -12032,7 +12032,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "ReturnLevel2",
@@ -12050,7 +12050,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "ReturnLevel3",
@@ -12068,7 +12068,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "UpdateToLevel2",
@@ -12101,7 +12101,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "UpdateToLevel3",
@@ -12134,7 +12134,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "PowerUp",
@@ -12152,7 +12152,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "reward_coins",
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "ElementalCoinBuy",
@@ -12161,7 +12161,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_coin_buy",
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "Mist",
@@ -12209,7 +12209,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "NonWaterPower",
@@ -12227,7 +12227,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "JustAddWater",
@@ -12262,7 +12262,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levels_and_skills_page",
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "OpenLevelsAndSkillsPage",
@@ -12295,7 +12295,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "BuyLevel2",
@@ -12304,7 +12304,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "buy_level_2",
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "BuyLevel3",
@@ -12313,7 +12313,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "buy_level_3",
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "BuyAquaPower",
@@ -12322,7 +12322,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "buy_aqua_power",
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "OpenBuyLevel2",
@@ -12355,7 +12355,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "OpenBuyLevel3",
@@ -12388,7 +12388,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "OpenBuyAquaPower",
@@ -12421,7 +12421,7 @@
           }
         ]
       },
-      "path": "~/SystemPowerLevel"
+      "path": "~/LevelSystem"
     },
     {
       "name": "EnceladusIceDesert",
@@ -12513,7 +12513,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystallized_lands",
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     },
     {
       "name": "Crystallized",
@@ -12525,7 +12525,7 @@
       "metadata": {
         "ep": true
       },
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     },
     {
       "name": "CrystallizedCraft",
@@ -12534,7 +12534,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystallized_craft",
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     },
     {
       "name": "DinoeraCraft",
@@ -12552,7 +12552,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "oblivion_forest",
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     },
     {
       "name": "Oblivion",
@@ -12564,7 +12564,7 @@
       "metadata": {
         "ep": true
       },
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     },
     {
       "name": "OblivionCraft",
@@ -12573,7 +12573,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "oblivion_craft",
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     },
     {
       "name": "OblivionPlains",
@@ -12582,7 +12582,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "oblivion_plains",
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     },
     {
       "name": "OblivionDesert",
@@ -12591,7 +12591,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "oblivion_desert",
-      "path": "~/SecretDimensions"
+      "path": "~/Dimensions"
     }
   ],
   "variable_elements": [
@@ -13192,9 +13192,9 @@
       "item.power.lightning_battery": "Батарея",
       "effect.power.recharge_rain_stone": "Перезарядка",
       "effect.recharge_tornado_stone": "Перезарядка",
-      "biome.power.triassic_plains": "Триассовые Равнины",
-      "item.power.cutter_sword": "Куттер-Меч",
       "block.power.detonator_tnt": "Детонатор",
+      "item.power.cutter_sword": "Куттер-Меч",
+      "biome.power.triassic_plains": "Триассовые Равнины",
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
@@ -13202,8 +13202,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
@@ -13219,8 +13219,8 @@
       "item.power.tamer": "Приручатель",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Перезарядка",
-      "item.power.time_reversed": "Обращение Времени",
       "effect.power.ice_master": "Мастер Льда",
+      "item.power.time_reversed": "Обращение Времени",
       "effect.power.recharge_amber_stone": "Перезарядка",
       "item.power.piece_of_earth": "Кусок Земли",
       "block.power.moon_stones_block": "Блок Разрастающихся Лунных Камней",
@@ -13230,15 +13230,15 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.space_leggings": "Космические штаны",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.energy_chestplate": "Энергетическая Кираса",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.space_leggings": "Космические штаны",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
       "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Шлем солнца",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
@@ -13277,8 +13277,8 @@
       "item.power.fire_stone": "Камень Огня",
       "item.power.blood_stone": "Камень Крови",
       "item.power.rain_boots": "Дождевые Сапоги",
-      "item.power.portal_blast": "Портальная Пушка",
       "item.power.ice_spear": "Ледяное Копьё",
+      "item.power.portal_blast": "Портальная Пушка",
       "effect.power.recharge_teleportation_stone": "Перезарядка",
       "subtitles.stone_activation": "Камень был активирован",
       "effect.power.fog": "Brouillard",
@@ -13659,9 +13659,9 @@
       "item.power.lightning_battery": "Battery",
       "effect.power.recharge_rain_stone": "Recharge",
       "effect.recharge_tornado_stone": "Recharge",
-      "item.power.cutter_sword": "Cutter Sword",
-      "block.power.detonator_tnt": "Detonator TNT",
       "biome.power.triassic_plains": "Triassic Plains",
+      "block.power.detonator_tnt": "Detonator TNT",
+      "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
@@ -13669,8 +13669,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.lava_hammer": "Lava Hammer",
       "block.power.iron_magic_box": "Iron Magic Box",
@@ -13686,8 +13686,8 @@
       "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Recharge",
-      "effect.power.ice_master": "Master of Ice",
       "item.power.time_reversed": "Time Reversed",
+      "effect.power.ice_master": "Master of Ice",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
       "block.power.moon_stones_block": "Growing Moon Stones Block",
@@ -13697,15 +13697,15 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.space_leggings": "Space Leggings",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.energy_chestplate": "Energy Chestplate",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.space_leggings": "Space Leggings",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.light_helmet": "Light Helmet",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Light Helmet",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -13744,8 +13744,8 @@
       "item.power.fire_stone": "Fire stone",
       "item.power.blood_stone": "Blood Stone",
       "item.power.rain_boots": "Rain Boots",
-      "item.power.portal_blast": "Portal Blaster",
       "item.power.ice_spear": "Ice Spear",
+      "item.power.portal_blast": "Portal Blaster",
       "effect.power.recharge_teleportation_stone": "Recharge",
       "subtitles.stone_activation": "Stone been activation",
       "effect.power.fog": "Fog",
@@ -14127,9 +14127,9 @@
       "item.power.lightning_battery": "Batterie",
       "effect.power.recharge_rain_stone": "Recharge",
       "effect.recharge_tornado_stone": "Recharge",
-      "item.power.cutter_sword": "Cutter Sword",
-      "block.power.detonator_tnt": "Détonateur TNT",
       "biome.power.triassic_plains": "Plaines du Trias",
+      "block.power.detonator_tnt": "Détonateur TNT",
+      "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.earth_battery": "Batterie",
       "item.power.lightning_helmet": "Lightning Helmet",
@@ -14137,8 +14137,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.lava_hammer": "Lava Hammer",
       "block.power.iron_magic_box": "Boîte Magique en Fer",
@@ -14154,8 +14154,8 @@
       "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Recharge",
-      "effect.power.ice_master": "Maître De Glace",
       "item.power.time_reversed": "Time Reversed",
+      "effect.power.ice_master": "Maître De Glace",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
       "block.power.moon_stones_block": "Bloc de Pierres de Lune en Croissance",
@@ -14165,15 +14165,15 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.space_leggings": "Space Leggings",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.energy_chestplate": "Energy Chestplate",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.space_leggings": "Space Leggings",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.light_helmet": "Light Helmet",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Light Helmet",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Maître De La Verdure",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -14212,8 +14212,8 @@
       "item.power.fire_stone": "Fire stone",
       "item.power.blood_stone": "Blood Stone",
       "item.power.rain_boots": "Rain Boots",
-      "item.power.portal_blast": "Portal Blaster",
       "item.power.ice_spear": "Ice Spear",
+      "item.power.portal_blast": "Portal Blaster",
       "effect.power.recharge_teleportation_stone": "Recharge",
       "subtitles.stone_activation": "Stone been activation",
       "effect.power.fog": "Fog",
@@ -14792,7 +14792,7 @@
         "children": []
       },
       {
-        "name": "SystemPowerLevel",
+        "name": "LevelSystem",
         "children": []
       },
       {
@@ -14812,7 +14812,7 @@
         "children": []
       },
       {
-        "name": "SecretDimensions",
+        "name": "Dimensions",
         "children": []
       }
     ]
@@ -14820,7 +14820,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.1.11",
+    "version": "2.1.12",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
