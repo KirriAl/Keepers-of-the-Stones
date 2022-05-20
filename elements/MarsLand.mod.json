@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "biome",
   "definition": {
     "name": "Mars Land",
@@ -8,6 +8,9 @@
     },
     "undergroundBlock": {
       "value": "Blocks.DIRT#1"
+    },
+    "underwaterBlock": {
+      "value": ""
     },
     "airColor": {
       "value": -13210,
@@ -53,6 +56,8 @@
     "baseHeight": 0.2,
     "heightVariation": 0.7,
     "spawnBiome": false,
+    "spawnBiomeNether": false,
+    "spawnInCaves": false,
     "biomeWeight": 1,
     "biomeDictionaryTypes": [],
     "grassPerChunk": 0,

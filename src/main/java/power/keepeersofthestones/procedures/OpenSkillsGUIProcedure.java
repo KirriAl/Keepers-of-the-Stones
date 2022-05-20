@@ -19,7 +19,7 @@ public class OpenSkillsGUIProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 			((PlayerEntity) entity).sendStatusMessage(
-					new StringTextComponent("\u0412\u00A74The function is temporarily unavailable because it is under development"), (false));
+					new StringTextComponent("\u00A74The function is temporarily unavailable because it is under development"), (false));
 		}
 	}
 }

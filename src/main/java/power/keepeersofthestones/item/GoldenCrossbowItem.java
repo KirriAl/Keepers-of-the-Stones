@@ -46,7 +46,7 @@ public class GoldenCrossbowItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletgolden_crossbow").setRegistryName("entitybulletgolden_crossbow");
+			.size(0.5f, 0.5f)).build("projectile_golden_crossbow").setRegistryName("projectile_golden_crossbow");
 
 	public GoldenCrossbowItem(PowerModElements instance) {
 		super(instance, 644);
@@ -132,7 +132,7 @@ public class GoldenCrossbowItem extends PowerModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return null;
+			return ItemStack.EMPTY;
 		}
 
 		@Override
@@ -149,7 +149,7 @@ public class GoldenCrossbowItem extends PowerModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity imediatesourceentity = this;
+			Entity immediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}
@@ -158,7 +158,7 @@ public class GoldenCrossbowItem extends PowerModElements.ModElement {
 
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
-		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
+		entityarrow.shoot(entity.getLook(1).x, entity.getLook(1).y, entity.getLook(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setIsCritical(false);
 		entityarrow.setDamage(damage);

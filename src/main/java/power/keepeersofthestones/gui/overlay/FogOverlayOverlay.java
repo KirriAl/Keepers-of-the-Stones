@@ -56,7 +56,7 @@ public class FogOverlayOverlay {
 			RenderSystem.disableAlphaTest();
 			if (FogOverlayOtobrazhatOvierlieiVIghrieProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
-				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/fog_ovelay.png"));
+				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/fog_ovelay.png"));
 				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), 0, 0, 0, 0, w, h, w, h);
 			}
 			RenderSystem.depthMask(true);

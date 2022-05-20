@@ -39,7 +39,7 @@ public class RedstoneBundleGUIGuiWindow extends ContainerScreen<RedstoneBundleGU
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/redstone_bundle_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/redstone_bundle_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

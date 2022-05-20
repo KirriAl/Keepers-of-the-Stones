@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "biome",
   "definition": {
     "name": "Venus Desert",
@@ -8,6 +8,9 @@
     },
     "undergroundBlock": {
       "value": "Blocks.DRIPSTONE_BLOCK"
+    },
+    "underwaterBlock": {
+      "value": ""
     },
     "airColor": {
       "value": -26368,
@@ -53,6 +56,8 @@
     "baseHeight": 1.1,
     "heightVariation": 1.2000000000000002,
     "spawnBiome": false,
+    "spawnBiomeNether": false,
+    "spawnInCaves": false,
     "biomeWeight": 10,
     "biomeDictionaryTypes": [],
     "grassPerChunk": 0,

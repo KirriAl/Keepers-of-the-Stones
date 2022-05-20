@@ -39,7 +39,7 @@ public class SoundEmitateChoiceGuiWindow extends ContainerScreen<SoundEmitateCho
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/sound_emitate_choice.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/sound_emitate_choice.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

@@ -1,3 +1,4 @@
+
 package power.keepeersofthestones.entity.renderer;
 
 import power.keepeersofthestones.entity.ShadowEntity;
@@ -29,7 +30,7 @@ public class ShadowRenderer {
 
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("power:textures/shadow.png");
+						return new ResourceLocation("power:textures/entities/shadow.png");
 					}
 				};
 			});

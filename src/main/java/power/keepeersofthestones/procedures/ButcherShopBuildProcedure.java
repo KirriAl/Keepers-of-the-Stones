@@ -44,7 +44,7 @@ public class ButcherShopBuildProcedure {
 			Template template = ((ServerWorld) world).getStructureTemplateManager()
 					.getTemplateDefaulted(new ResourceLocation("power", "butcher_shop"));
 			if (template != null) {
-				template.func_237144_a_((ServerWorld) world, new BlockPos((int) new Object() {
+				template.func_237144_a_((ServerWorld) world, new BlockPos(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -60,7 +60,7 @@ public class ButcherShopBuildProcedure {
 						}
 						return "";
 					}
-				}.getText()), (int) new Object() {
+				}.getText()), new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -76,7 +76,7 @@ public class ButcherShopBuildProcedure {
 						}
 						return "";
 					}
-				}.getText()), (int) new Object() {
+				}.getText()), new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());

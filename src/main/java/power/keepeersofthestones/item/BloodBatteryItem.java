@@ -12,6 +12,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
+import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -46,6 +47,11 @@ public class BloodBatteryItem extends PowerModElements.ModElement {
 		}
 
 		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
+		}
+
+		@Override
 		public int getItemEnchantability() {
 			return 0;
 		}
@@ -63,7 +69,7 @@ public class BloodBatteryItem extends PowerModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u0412\u00A74Blood"));
+			list.add(new StringTextComponent("\u00A74Blood"));
 		}
 
 		@Override

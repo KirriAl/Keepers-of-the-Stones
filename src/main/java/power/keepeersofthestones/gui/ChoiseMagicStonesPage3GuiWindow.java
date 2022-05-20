@@ -39,7 +39,7 @@ public class ChoiseMagicStonesPage3GuiWindow extends ContainerScreen<ChoiseMagic
 		this.ySize = 200;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/choise_magic_stones_page_3.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/choise_magic_stones_page_3.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

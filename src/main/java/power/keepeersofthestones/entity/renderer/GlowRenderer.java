@@ -1,3 +1,4 @@
+
 package power.keepeersofthestones.entity.renderer;
 
 import power.keepeersofthestones.entity.GlowEntity;
@@ -37,7 +38,7 @@ public class GlowRenderer {
 
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("power:textures/glow.png");
+						return new ResourceLocation("power:textures/entities/glow.png");
 					}
 				};
 			});
@@ -52,7 +53,7 @@ public class GlowRenderer {
 
 		public void render(MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int packedLightIn, T entitylivingbaseIn, float limbSwing,
 				float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-			IVertexBuilder ivertexbuilder = bufferIn.getBuffer(RenderType.getEyes(new ResourceLocation("power:textures/glow.png")));
+			IVertexBuilder ivertexbuilder = bufferIn.getBuffer(RenderType.getEyes(new ResourceLocation("power:textures/entities/glow.png")));
 			this.getEntityModel().render(matrixStackIn, ivertexbuilder, 15728640, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 		}
 	}

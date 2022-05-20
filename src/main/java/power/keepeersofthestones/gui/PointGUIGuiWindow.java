@@ -43,7 +43,7 @@ public class PointGUIGuiWindow extends ContainerScreen<PointGUIGui.GuiContainerM
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/point_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/point_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

@@ -39,7 +39,7 @@ public class ChoiseMagicStoneGUIGuiWindow extends ContainerScreen<ChoiseMagicSto
 		this.ySize = 200;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/choise_magic_stone_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/choise_magic_stone_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -58,65 +58,65 @@ public class ChoiseMagicStoneGUIGuiWindow extends ContainerScreen<ChoiseMagicSto
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/fire_master.png"));
-		this.blit(ms, this.guiLeft + 19, this.guiTop + 33, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/fire_master.png"));
+		this.blit(ms, this.guiLeft + 19, this.guiTop + 33, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/air_master.png"));
-		this.blit(ms, this.guiLeft + 19, this.guiTop + 60, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/air_master.png"));
+		this.blit(ms, this.guiLeft + 19, this.guiTop + 60, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/water_master.png"));
-		this.blit(ms, this.guiLeft + 19, this.guiTop + 87, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/water_master.png"));
+		this.blit(ms, this.guiLeft + 19, this.guiTop + 87, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/earth_master.png"));
-		this.blit(ms, this.guiLeft + 19, this.guiTop + 114, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/earth_master.png"));
+		this.blit(ms, this.guiLeft + 19, this.guiTop + 114, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/energy_master.png"));
-		this.blit(ms, this.guiLeft + 19, this.guiTop + 141, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/energy_master.png"));
+		this.blit(ms, this.guiLeft + 19, this.guiTop + 141, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/ice_master.png"));
-		this.blit(ms, this.guiLeft + 118, this.guiTop + 33, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/ice_master.png"));
+		this.blit(ms, this.guiLeft + 118, this.guiTop + 33, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/lightning_master.png"));
-		this.blit(ms, this.guiLeft + 118, this.guiTop + 60, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/lightning_master.png"));
+		this.blit(ms, this.guiLeft + 118, this.guiTop + 60, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/sound_master.png"));
-		this.blit(ms, this.guiLeft + 118, this.guiTop + 87, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/sound_master.png"));
+		this.blit(ms, this.guiLeft + 118, this.guiTop + 87, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/crystal_master.png"));
-		this.blit(ms, this.guiLeft + 118, this.guiTop + 114, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/crystal_master.png"));
+		this.blit(ms, this.guiLeft + 118, this.guiTop + 114, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/lava_master.png"));
-		this.blit(ms, this.guiLeft + 118, this.guiTop + 141, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/lava_master.png"));
+		this.blit(ms, this.guiLeft + 118, this.guiTop + 141, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/rain_master.png"));
-		this.blit(ms, this.guiLeft + 217, this.guiTop + 33, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/rain_master.png"));
+		this.blit(ms, this.guiLeft + 217, this.guiTop + 33, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/ocean_master.png"));
-		this.blit(ms, this.guiLeft + 217, this.guiTop + 87, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/ocean_master.png"));
+		this.blit(ms, this.guiLeft + 217, this.guiTop + 87, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/greenery_master.png"));
-		this.blit(ms, this.guiLeft + 217, this.guiTop + 114, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/greenery_master.png"));
+		this.blit(ms, this.guiLeft + 217, this.guiTop + 114, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/tornado_master.png"));
-		this.blit(ms, this.guiLeft + 217, this.guiTop + 60, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/tornado_master.png"));
+		this.blit(ms, this.guiLeft + 217, this.guiTop + 60, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/animals_master.png"));
-		this.blit(ms, this.guiLeft + 217, this.guiTop + 141, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/animals_master.png"));
+		this.blit(ms, this.guiLeft + 217, this.guiTop + 141, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/metal_master.png"));
-		this.blit(ms, this.guiLeft + 307, this.guiTop + 33, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/metal_master.png"));
+		this.blit(ms, this.guiLeft + 307, this.guiTop + 33, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/light_master.png"));
-		this.blit(ms, this.guiLeft + 307, this.guiTop + 60, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/light_master.png"));
+		this.blit(ms, this.guiLeft + 307, this.guiTop + 60, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/shadow_master.png"));
-		this.blit(ms, this.guiLeft + 307, this.guiTop + 87, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/shadow_master.png"));
+		this.blit(ms, this.guiLeft + 307, this.guiTop + 87, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/vacuum_master.png"));
-		this.blit(ms, this.guiLeft + 307, this.guiTop + 114, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/vacuum_master.png"));
+		this.blit(ms, this.guiLeft + 307, this.guiTop + 114, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/sun_master.png"));
-		this.blit(ms, this.guiLeft + 307, this.guiTop + 141, 0, 0, -1, -1, -1, -1);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/sun_master.png"));
+		this.blit(ms, this.guiLeft + 307, this.guiTop + 141, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

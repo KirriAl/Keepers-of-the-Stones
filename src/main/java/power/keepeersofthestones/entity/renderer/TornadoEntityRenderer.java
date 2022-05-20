@@ -1,3 +1,4 @@
+
 package power.keepeersofthestones.entity.renderer;
 
 import power.keepeersofthestones.entity.TornadoEntityEntity;
@@ -28,7 +29,7 @@ public class TornadoEntityRenderer {
 
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("power:textures/tornado.png");
+						return new ResourceLocation("power:textures/entities/tornado.png");
 					}
 				};
 			});

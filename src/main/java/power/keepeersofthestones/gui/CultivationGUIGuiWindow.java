@@ -39,7 +39,7 @@ public class CultivationGUIGuiWindow extends ContainerScreen<CultivationGUIGui.G
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/cultivation_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/cultivation_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

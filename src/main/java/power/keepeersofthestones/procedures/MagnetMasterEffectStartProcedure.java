@@ -65,7 +65,7 @@ public class MagnetMasterEffectStartProcedure {
 			});
 		}
 		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+			((World) world).playSound(null, new BlockPos(x, y, z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_activation")),
 					SoundCategory.PLAYERS, (float) 1, (float) 1);
 		} else {
@@ -116,7 +116,7 @@ public class MagnetMasterEffectStartProcedure {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"give @s power:magnetic_\u0421\u0403laws{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+						"give @s power:magnetic_\u0441laws{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 			}
 		}
 		{

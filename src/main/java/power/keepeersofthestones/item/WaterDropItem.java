@@ -7,6 +7,7 @@ import power.keepeersofthestones.PowerModElements;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
+import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -43,6 +44,11 @@ public class WaterDropItem extends PowerModElements.ModElement {
 		public ItemCustom() {
 			super(new Item.Properties().group(null).maxStackSize(1).isImmuneToFire().rarity(Rarity.COMMON));
 			setRegistryName("water_drop");
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
 		}
 
 		@Override

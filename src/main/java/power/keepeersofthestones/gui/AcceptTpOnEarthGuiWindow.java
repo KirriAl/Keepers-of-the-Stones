@@ -39,7 +39,7 @@ public class AcceptTpOnEarthGuiWindow extends ContainerScreen<AcceptTpOnEarthGui
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/accept_tp_on_earth.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/accept_tp_on_earth.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

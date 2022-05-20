@@ -43,7 +43,7 @@ public class BuildingGUIGuiWindow extends ContainerScreen<BuildingGUIGui.GuiCont
 		this.ySize = 211;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/building_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/building_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

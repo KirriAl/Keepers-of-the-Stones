@@ -80,7 +80,7 @@ public class IceSharpFreezingProcedure {
 			((ServerWorld) world).spawnParticle(ParticleTypes.CRIT, x, y, z, (int) 25, 2, 2, 2, 1);
 		}
 		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+			((World) world).playSound(null, new BlockPos(x, y, z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.NEUTRAL, (float) 1,
 					(float) 1);
 		} else {

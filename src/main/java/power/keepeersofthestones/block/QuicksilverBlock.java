@@ -69,11 +69,12 @@ public class QuicksilverBlock extends PowerModElements.ModElement {
 						.builder(new ResourceLocation("power:blocks/quick_silver_flow"), new ResourceLocation("power:blocks/quick_silver_flow"))
 						.luminosity(0).density(100000).viscosity(100000).temperature(100)
 
-						.rarity(Rarity.COMMON)).explosionResistance(5000f)
+						.rarity(Rarity.COMMON))
+				.explosionResistance(5000f)
 
-								.tickRate(150).levelDecreasePerBlock(8).slopeFindDistance(16)
+				.tickRate(150).levelDecreasePerBlock(8).slopeFindDistance(16)
 
-								.block(() -> block);
+				.block(() -> block);
 		still = (FlowingFluid) new CustomFlowingFluid.Source(fluidproperties).setRegistryName("quicksilver");
 		flowing = (FlowingFluid) new CustomFlowingFluid.Flowing(fluidproperties).setRegistryName("quicksilver_flowing");
 		elements.blocks.add(() -> new FlowingFluidBlock(still,

@@ -39,7 +39,7 @@ public class PortalSetProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		if (PowerModVariables.MapVariables.get(world).orange_portal) {
 			if (!PowerModVariables.MapVariables.get(world).blue_portal) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), BluePortalBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), BluePortalBlock.block.getDefaultState(), 3);
 				PowerModVariables.MapVariables.get(world).blue_portal = (true);
 				PowerModVariables.MapVariables.get(world).syncData(world);
 				PowerModVariables.MapVariables.get(world).bposy = (y + 1);
@@ -51,7 +51,7 @@ public class PortalSetProcedure {
 			}
 		} else if (PowerModVariables.MapVariables.get(world).blue_portal) {
 			if (!PowerModVariables.MapVariables.get(world).orange_portal) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), OrangePortalBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), OrangePortalBlock.block.getDefaultState(), 3);
 				PowerModVariables.MapVariables.get(world).orange_portal = (true);
 				PowerModVariables.MapVariables.get(world).syncData(world);
 				PowerModVariables.MapVariables.get(world).oposy = (y + 1);
@@ -62,7 +62,7 @@ public class PortalSetProcedure {
 				PowerModVariables.MapVariables.get(world).syncData(world);
 			}
 		} else if (!PowerModVariables.MapVariables.get(world).blue_portal) {
-			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), BluePortalBlock.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x, y + 1, z), BluePortalBlock.block.getDefaultState(), 3);
 			PowerModVariables.MapVariables.get(world).blue_portal = (true);
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			PowerModVariables.MapVariables.get(world).bposy = (y + 1);
