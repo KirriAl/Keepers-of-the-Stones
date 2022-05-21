@@ -1,7 +1,7 @@
 ---
 name: New element
 about: Describe the new element
-title: 'Adding an element - '
+title: ''
 labels: new feature
 assignees: ''
 

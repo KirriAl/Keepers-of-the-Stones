@@ -11,7 +11,6 @@ import power.keepeersofthestones.procedures.MoonGetProcedure;
 import power.keepeersofthestones.procedures.ExplosionGetProcedure;
 import power.keepeersofthestones.procedures.DestructionGetProcedure;
 import power.keepeersofthestones.procedures.CreationGetProcedure;
-import power.keepeersofthestones.procedures.BlueFlameGetProcedure;
 import power.keepeersofthestones.procedures.BloodGetProcedure;
 import power.keepeersofthestones.procedures.AmberGetProcedure;
 import power.keepeersofthestones.PowerModElements;
@@ -254,12 +253,6 @@ public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
 		if (buttonID == 9) {
 
 			CreationGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 10) {
-
-			BlueFlameGetProcedure
 					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}

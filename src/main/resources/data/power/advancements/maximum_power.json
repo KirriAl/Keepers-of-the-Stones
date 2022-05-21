@@ -19,5 +19,11 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "power:mighty_master"
+  "rewards": {
+    "experience": 25000,
+    "loot": [
+      "power:entities/reward_coins"
+    ]
+  },
+  "parent": "power:power_up"
 }

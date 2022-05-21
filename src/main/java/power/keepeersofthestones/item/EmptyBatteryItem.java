@@ -34,7 +34,7 @@ public class EmptyBatteryItem extends PowerModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(BatteriesItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(BatteriesItemGroup.tab).maxStackSize(16).rarity(Rarity.COMMON));
 			setRegistryName("empty_battery");
 		}
 

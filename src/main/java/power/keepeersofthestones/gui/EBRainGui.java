@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.gui;
 
+import power.keepeersofthestones.procedures.OpenLevelsAndSkillsPageProcedure;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.items.ItemStackHandler;
@@ -24,9 +25,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
+import java.util.stream.Stream;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @PowerModElements.ModElement.Tag
 public class EBRainGui extends PowerModElements.ModElement {
@@ -182,6 +185,13 @@ public class EBRainGui extends PowerModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			OpenLevelsAndSkillsPageProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {

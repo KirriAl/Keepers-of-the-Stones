@@ -2,7 +2,9 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.potion.RechargeAmberStonePotionEffect;
 import power.keepeersofthestones.item.ForcereplicationItem;
+import power.keepeersofthestones.item.AmberStreaksItem;
 import power.keepeersofthestones.item.AmberStoneItem;
+import power.keepeersofthestones.item.AmberShieldItem;
 import power.keepeersofthestones.item.AmberItem;
 import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
@@ -75,6 +77,16 @@ public class AmberMasterEffectEndProcedure {
 		}
 		if (entity instanceof PlayerEntity) {
 			ItemStack _stktoremove = new ItemStack(ForcereplicationItem.block);
+			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+					((PlayerEntity) entity).container.func_234641_j_());
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _stktoremove = new ItemStack(AmberShieldItem.block);
+			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+					((PlayerEntity) entity).container.func_234641_j_());
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _stktoremove = new ItemStack(AmberStreaksItem.block);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}

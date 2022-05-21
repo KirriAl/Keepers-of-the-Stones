@@ -10,18 +10,13 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.particles.ParticleTypes;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
 
 import java.util.Map;
-import java.util.Iterator;
 
 public class IceSharpFreezingProcedure {
 
@@ -51,29 +46,11 @@ public class IceSharpFreezingProcedure {
 				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure IceSharpFreezing!");
 			return;
 		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				PowerMod.LOGGER.warn("Failed to load dependency sourceentity for procedure IceSharpFreezing!");
-			return;
-		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (sourceentity instanceof ServerPlayerEntity) {
-			Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) sourceentity).server).getAdvancementManager()
-					.getAdvancement(new ResourceLocation("power:refreezing"));
-			AdvancementProgress _ap = ((ServerPlayerEntity) sourceentity).getAdvancements().getProgress(_adv);
-			if (!_ap.isDone()) {
-				Iterator _iterator = _ap.getRemaningCriteria().iterator();
-				while (_iterator.hasNext()) {
-					String _criterion = (String) _iterator.next();
-					((ServerPlayerEntity) sourceentity).getAdvancements().grantCriterion(_adv, _criterion);
-				}
-			}
-		}
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 200, (int) 255, (false), (false)));
 		if (world instanceof ServerWorld) {

@@ -48,10 +48,10 @@ public class ReturnToPresentProcedure {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"tp ~ ~10 ~");
+						"tp ~ 256 ~");
 			}
 		}
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 100, (int) 0, (false), (false)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 600, (int) 0, (false), (false)));
 	}
 }

@@ -1,5 +1,6 @@
 package power.keepeersofthestones.procedures;
 
+import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.potion.Effects;
@@ -28,5 +29,9 @@ public class SpaceMasterEffectsProcedure {
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, (int) 20, (int) 0, (false), (false)));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 20, (int) 0, (false), (false)));
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).water_power) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, (int) 20, (int) 0, (false), (false)));
+		}
 	}
 }

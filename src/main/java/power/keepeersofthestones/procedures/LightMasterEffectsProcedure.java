@@ -1,5 +1,6 @@
 package power.keepeersofthestones.procedures;
 
+import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.World;
@@ -37,6 +38,10 @@ public class LightMasterEffectsProcedure {
 		if ((world instanceof World) ? ((World) world).isDaytime() : false) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 20, (int) 0, (false), (false)));
+		}
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).water_power) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, (int) 20, (int) 0, (false), (false)));
 		}
 	}
 }

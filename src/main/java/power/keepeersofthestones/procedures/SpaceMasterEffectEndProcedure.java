@@ -1,12 +1,9 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.potion.RechargeSpaceStonePotionEffect;
-import power.keepeersofthestones.item.TpOnVenusItem;
-import power.keepeersofthestones.item.TpOnMoonItem;
-import power.keepeersofthestones.item.TpOnMarsItem;
-import power.keepeersofthestones.item.TpOnEarthItem;
 import power.keepeersofthestones.item.SpaceStoneItem;
 import power.keepeersofthestones.item.SpaceItem;
+import power.keepeersofthestones.item.SpaceAtlasItem;
 import power.keepeersofthestones.item.GalacticSwordItem;
 import power.keepeersofthestones.item.BlackHoleItem;
 import power.keepeersofthestones.PowerModVariables;
@@ -91,22 +88,7 @@ public class SpaceMasterEffectEndProcedure {
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(TpOnMarsItem.block);
-			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-					((PlayerEntity) entity).container.func_234641_j_());
-		}
-		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(TpOnVenusItem.block);
-			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-					((PlayerEntity) entity).container.func_234641_j_());
-		}
-		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(TpOnMoonItem.block);
-			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-					((PlayerEntity) entity).container.func_234641_j_());
-		}
-		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(TpOnEarthItem.block);
+			ItemStack _stktoremove = new ItemStack(SpaceAtlasItem.block);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}

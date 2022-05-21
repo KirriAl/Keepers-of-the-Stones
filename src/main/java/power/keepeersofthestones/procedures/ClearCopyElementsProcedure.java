@@ -26,7 +26,6 @@ import power.keepeersofthestones.potion.EarthMasterPotionEffect;
 import power.keepeersofthestones.potion.DestructionMasterPotionEffect;
 import power.keepeersofthestones.potion.CrystalMasterPotionEffect;
 import power.keepeersofthestones.potion.CreationMasterPotionEffect;
-import power.keepeersofthestones.potion.BlueFlameMasterPotionEffect;
 import power.keepeersofthestones.potion.BloodMasterPotionEffect;
 import power.keepeersofthestones.potion.AnimalsMasterPotionEffect;
 import power.keepeersofthestones.potion.AirMasterPotionEffect;
@@ -132,9 +131,6 @@ public class ClearCopyElementsProcedure {
 		}
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).removePotionEffect(ExplosionMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(BlueFlameMasterPotionEffect.potion);
 		}
 	}
 }

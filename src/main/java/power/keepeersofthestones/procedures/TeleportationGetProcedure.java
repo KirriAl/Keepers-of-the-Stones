@@ -7,6 +7,7 @@ import power.keepeersofthestones.PowerMod;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.ItemStack;
@@ -63,6 +64,11 @@ public class TeleportationGetProcedure {
 							((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
 						}
 					}
+				}
+			} else {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+					((PlayerEntity) entity).sendStatusMessage(
+							new StringTextComponent("\u00A74This stone is occupied by another player, but you can choose another one."), (false));
 				}
 			}
 		}

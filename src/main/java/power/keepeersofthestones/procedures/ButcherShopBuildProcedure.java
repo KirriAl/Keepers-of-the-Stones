@@ -14,10 +14,8 @@ import net.minecraft.util.Mirror;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.gui.widget.TextFieldWidget;
 
 import java.util.Map;
-import java.util.HashMap;
 
 public class ButcherShopBuildProcedure {
 
@@ -27,125 +25,42 @@ public class ButcherShopBuildProcedure {
 				PowerMod.LOGGER.warn("Failed to load dependency world for procedure ButcherShopBuild!");
 			return;
 		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure ButcherShopBuild!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure ButcherShopBuild!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure ButcherShopBuild!");
+			return;
+		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
 				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure ButcherShopBuild!");
 			return;
 		}
-		if (dependencies.get("guistate") == null) {
-			if (!dependencies.containsKey("guistate"))
-				PowerMod.LOGGER.warn("Failed to load dependency guistate for procedure ButcherShopBuild!");
-			return;
-		}
 		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		HashMap guistate = (HashMap) dependencies.get("guistate");
 		if (world instanceof ServerWorld) {
 			Template template = ((ServerWorld) world).getStructureTemplateManager()
 					.getTemplateDefaulted(new ResourceLocation("power", "butcher_shop"));
 			if (template != null) {
-				template.func_237144_a_((ServerWorld) world, new BlockPos(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
-						}
-						return 0;
-					}
-				}.convert(new Object() {
-					public String getText() {
-						TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:sX");
-						if (_tf != null) {
-							return _tf.getText();
-						}
-						return "";
-					}
-				}.getText()), new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
-						}
-						return 0;
-					}
-				}.convert(new Object() {
-					public String getText() {
-						TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:sY");
-						if (_tf != null) {
-							return _tf.getText();
-						}
-						return "";
-					}
-				}.getText()), new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
-						}
-						return 0;
-					}
-				}.convert(new Object() {
-					public String getText() {
-						TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:sZ");
-						if (_tf != null) {
-							return _tf.getText();
-						}
-						return "";
-					}
-				}.getText())), new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
+				template.func_237144_a_((ServerWorld) world, new BlockPos(x, y, z),
+						new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
 						((World) world).rand);
 			}
 		}
 		if (world instanceof ServerWorld) {
-			((ServerWorld) world).spawnParticle(ParticleTypes.CRIT, new Object() {
-				double convert(String s) {
-					try {
-						return Double.parseDouble(s.trim());
-					} catch (Exception e) {
-					}
-					return 0;
-				}
-			}.convert(new Object() {
-				public String getText() {
-					TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:sX");
-					if (_tf != null) {
-						return _tf.getText();
-					}
-					return "";
-				}
-			}.getText()), new Object() {
-				double convert(String s) {
-					try {
-						return Double.parseDouble(s.trim());
-					} catch (Exception e) {
-					}
-					return 0;
-				}
-			}.convert(new Object() {
-				public String getText() {
-					TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:sY");
-					if (_tf != null) {
-						return _tf.getText();
-					}
-					return "";
-				}
-			}.getText()), new Object() {
-				double convert(String s) {
-					try {
-						return Double.parseDouble(s.trim());
-					} catch (Exception e) {
-					}
-					return 0;
-				}
-			}.convert(new Object() {
-				public String getText() {
-					TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:sZ");
-					if (_tf != null) {
-						return _tf.getText();
-					}
-					return "";
-				}
-			}.getText()), (int) 100, 10, 10, 10, 1);
+			((ServerWorld) world).spawnParticle(ParticleTypes.CRIT, x, y, z, (int) 100, 10, 10, 10, 1);
 		}
 		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).closeScreen();

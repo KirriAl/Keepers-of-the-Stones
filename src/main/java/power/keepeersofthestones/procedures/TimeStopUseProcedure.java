@@ -84,7 +84,7 @@ public class TimeStopUseProcedure {
 					Entity _ent = entity;
 					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "effect give @e minecraft:slowness 60 255");
+								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "effect give @e minecraft:slowness 20 255");
 					}
 				}
 				if (entity instanceof LivingEntity)

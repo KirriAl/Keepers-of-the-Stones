@@ -37,19 +37,13 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
 
 import java.util.Map;
-import java.util.Iterator;
 
 public class EnergyStaffUseProcedure {
 
@@ -173,18 +167,6 @@ public class EnergyStaffUseProcedure {
 						ItemStack _stktoremove = new ItemStack(EnergyStoneItem.block);
 						((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) sourceentity).container.func_234641_j_());
-					}
-					if (sourceentity instanceof ServerPlayerEntity) {
-						Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) sourceentity).server).getAdvancementManager()
-								.getAdvancement(new ResourceLocation("power:powerless"));
-						AdvancementProgress _ap = ((ServerPlayerEntity) sourceentity).getAdvancements().getProgress(_adv);
-						if (!_ap.isDone()) {
-							Iterator _iterator = _ap.getRemaningCriteria().iterator();
-							while (_iterator.hasNext()) {
-								String _criterion = (String) _iterator.next();
-								((ServerPlayerEntity) sourceentity).getAdvancements().grantCriterion(_adv, _criterion);
-							}
-						}
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(EnergyAbsorptionItem.block);

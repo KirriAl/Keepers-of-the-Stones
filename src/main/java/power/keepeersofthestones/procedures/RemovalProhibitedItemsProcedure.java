@@ -12,10 +12,6 @@ import power.keepeersofthestones.item.VacuumWebItem;
 import power.keepeersofthestones.item.VacuumSwordItem;
 import power.keepeersofthestones.item.VacuumSpiralItem;
 import power.keepeersofthestones.item.VacuumItem;
-import power.keepeersofthestones.item.TpOnVenusItem;
-import power.keepeersofthestones.item.TpOnMoonItem;
-import power.keepeersofthestones.item.TpOnMarsItem;
-import power.keepeersofthestones.item.TpOnEarthItem;
 import power.keepeersofthestones.item.TornadoItem;
 import power.keepeersofthestones.item.TornadoCreateItem;
 import power.keepeersofthestones.item.TornadoBattleAxeItem;
@@ -38,6 +34,7 @@ import power.keepeersofthestones.item.StormItem;
 import power.keepeersofthestones.item.SpikeItem;
 import power.keepeersofthestones.item.SpawnItem;
 import power.keepeersofthestones.item.SpaceItem;
+import power.keepeersofthestones.item.SpaceAtlasItem;
 import power.keepeersofthestones.item.SoundSwordItem;
 import power.keepeersofthestones.item.SoundItem;
 import power.keepeersofthestones.item.SoundEmitateItem;
@@ -66,6 +63,7 @@ import power.keepeersofthestones.item.OceanItem;
 import power.keepeersofthestones.item.MoonWitherItem;
 import power.keepeersofthestones.item.MoonStonesItem;
 import power.keepeersofthestones.item.MoonAxeItem;
+import power.keepeersofthestones.item.MistItem;
 import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
 import power.keepeersofthestones.item.MegawattItem;
@@ -124,14 +122,14 @@ import power.keepeersofthestones.item.ClusterSharpItem;
 import power.keepeersofthestones.item.BurnItem;
 import power.keepeersofthestones.item.BoStaffItem;
 import power.keepeersofthestones.item.BlueKnifeItem;
-import power.keepeersofthestones.item.BlueFlameItem;
-import power.keepeersofthestones.item.BlueFireballItem;
 import power.keepeersofthestones.item.BloodReaperItem;
 import power.keepeersofthestones.item.BloodItem;
 import power.keepeersofthestones.item.BlackHoleItem;
 import power.keepeersofthestones.item.BlackHeartItem;
 import power.keepeersofthestones.item.BeeStingItem;
 import power.keepeersofthestones.item.AnimalsItem;
+import power.keepeersofthestones.item.AmberStreaksItem;
+import power.keepeersofthestones.item.AmberShieldItem;
 import power.keepeersofthestones.item.AmberItem;
 import power.keepeersofthestones.item.AirFlowItem;
 import power.keepeersofthestones.item.AirBladeItem;
@@ -613,22 +611,7 @@ public class RemovalProhibitedItemsProcedure {
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
 					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(TpOnMoonItem.block);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(TpOnMarsItem.block);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(TpOnVenusItem.block);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(TpOnEarthItem.block);
+						ItemStack _stktoremove = new ItemStack(SpaceAtlasItem.block);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
@@ -1348,31 +1331,6 @@ public class RemovalProhibitedItemsProcedure {
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
 					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(BlueFlameItem.helmet);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(BlueFlameItem.body);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(BlueFlameItem.legs);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(BlueFlameItem.boots);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(BlueFireballItem.block);
-						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) entity).container.func_234641_j_());
-					}
-					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(MagnetItem.helmet);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
@@ -1389,6 +1347,36 @@ public class RemovalProhibitedItemsProcedure {
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(MagnetItem.boots);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(AmberShieldItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(AmberStreaksItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MistItem.helmet);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MistItem.body);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MistItem.legs);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MistItem.boots);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}

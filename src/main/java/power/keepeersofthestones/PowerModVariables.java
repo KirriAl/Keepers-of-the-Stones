@@ -198,7 +198,6 @@ public class PowerModVariables {
 		public double oposz = 0;
 		public boolean explosion_stone = false;
 		public boolean amber_stone = false;
-		public boolean blue_flame_stone = false;
 		public boolean cosmos_stone = false;
 		public boolean magnet_stone = false;
 		public boolean mist_stone = false;
@@ -225,7 +224,6 @@ public class PowerModVariables {
 			oposz = nbt.getDouble("oposz");
 			explosion_stone = nbt.getBoolean("explosion_stone");
 			amber_stone = nbt.getBoolean("amber_stone");
-			blue_flame_stone = nbt.getBoolean("blue_flame_stone");
 			cosmos_stone = nbt.getBoolean("cosmos_stone");
 			magnet_stone = nbt.getBoolean("magnet_stone");
 			mist_stone = nbt.getBoolean("mist_stone");
@@ -245,7 +243,6 @@ public class PowerModVariables {
 			nbt.putDouble("oposz", oposz);
 			nbt.putBoolean("explosion_stone", explosion_stone);
 			nbt.putBoolean("amber_stone", amber_stone);
-			nbt.putBoolean("blue_flame_stone", blue_flame_stone);
 			nbt.putBoolean("cosmos_stone", cosmos_stone);
 			nbt.putBoolean("magnet_stone", magnet_stone);
 			nbt.putBoolean("mist_stone", mist_stone);
@@ -378,11 +375,11 @@ public class PowerModVariables {
 			nbt.putBoolean("teleportation", instance.teleportation);
 			nbt.putBoolean("explosion", instance.explosion);
 			nbt.putBoolean("amber", instance.amber);
-			nbt.putBoolean("blue_flame", instance.blue_flame);
 			nbt.putBoolean("fog", instance.fog);
 			nbt.putBoolean("magnet", instance.magnet);
 			nbt.putBoolean("mist", instance.mist);
 			nbt.putDouble("power_level", instance.power_level);
+			nbt.putBoolean("water_power", instance.water_power);
 			return nbt;
 		}
 
@@ -429,11 +426,11 @@ public class PowerModVariables {
 			instance.teleportation = nbt.getBoolean("teleportation");
 			instance.explosion = nbt.getBoolean("explosion");
 			instance.amber = nbt.getBoolean("amber");
-			instance.blue_flame = nbt.getBoolean("blue_flame");
 			instance.fog = nbt.getBoolean("fog");
 			instance.magnet = nbt.getBoolean("magnet");
 			instance.mist = nbt.getBoolean("mist");
 			instance.power_level = nbt.getDouble("power_level");
+			instance.water_power = nbt.getBoolean("water_power");
 		}
 	}
 
@@ -478,11 +475,11 @@ public class PowerModVariables {
 		public boolean teleportation = false;
 		public boolean explosion = false;
 		public boolean amber = false;
-		public boolean blue_flame = false;
 		public boolean fog = false;
 		public boolean magnet = false;
 		public boolean mist = false;
-		public double power_level = 0.0;
+		public double power_level = 1.0;
+		public boolean water_power = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -551,10 +548,10 @@ public class PowerModVariables {
 		clone.teleportation = original.teleportation;
 		clone.explosion = original.explosion;
 		clone.amber = original.amber;
-		clone.blue_flame = original.blue_flame;
 		clone.magnet = original.magnet;
 		clone.mist = original.mist;
 		clone.power_level = original.power_level;
+		clone.water_power = original.water_power;
 		if (!event.isWasDeath()) {
 			clone.active = original.active;
 			clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -627,11 +624,11 @@ public class PowerModVariables {
 					variables.teleportation = message.data.teleportation;
 					variables.explosion = message.data.explosion;
 					variables.amber = message.data.amber;
-					variables.blue_flame = message.data.blue_flame;
 					variables.fog = message.data.fog;
 					variables.magnet = message.data.magnet;
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
+					variables.water_power = message.data.water_power;
 				}
 			});
 			context.setPacketHandled(true);

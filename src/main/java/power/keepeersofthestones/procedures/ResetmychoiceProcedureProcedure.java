@@ -27,7 +27,6 @@ import power.keepeersofthestones.item.EarthStoneItem;
 import power.keepeersofthestones.item.DestructionStoneItem;
 import power.keepeersofthestones.item.CrystalStoneItem;
 import power.keepeersofthestones.item.CreationStoneItem;
-import power.keepeersofthestones.item.BlueFlameStoneItem;
 import power.keepeersofthestones.item.BloodStoneItem;
 import power.keepeersofthestones.item.AnimalsStoneItem;
 import power.keepeersofthestones.item.AmberStoneItem;
@@ -1194,43 +1193,6 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 				PowerModVariables.MapVariables.get(world).amber_stone = (false);
-				PowerModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
-				}
-			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == BlueFlameStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.MapVariables.get(world).blue_flame_stone = (false);
 				PowerModVariables.MapVariables.get(world).syncData(world);
 				{
 					boolean _setval = (false);

@@ -8,7 +8,6 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.network.play.server.SPlayerAbilitiesPacket;
@@ -18,11 +17,8 @@ import net.minecraft.network.play.server.SChangeGameStatePacket;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
 
 import java.util.Map;
-import java.util.Iterator;
 
 public class ReturnToPastProcedure {
 
@@ -54,22 +50,10 @@ public class ReturnToPastProcedure {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"tp ~ ~10 ~");
+						"tp ~ 256 ~");
 			}
 		}
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 100, (int) 0, (false), (false)));
-		if (entity instanceof ServerPlayerEntity) {
-			Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-					.getAdvancement(new ResourceLocation("power:time_force"));
-			AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
-			if (!_ap.isDone()) {
-				Iterator _iterator = _ap.getRemaningCriteria().iterator();
-				while (_iterator.hasNext()) {
-					String _criterion = (String) _iterator.next();
-					((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
-				}
-			}
-		}
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 600, (int) 0, (false), (false)));
 	}
 }

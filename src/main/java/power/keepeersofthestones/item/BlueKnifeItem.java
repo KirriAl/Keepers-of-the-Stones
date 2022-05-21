@@ -73,9 +73,9 @@ public class BlueKnifeItem extends PowerModElements.ModElement {
 				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 				builder.putAll(super.getAttributeModifiers(equipmentSlot));
 				builder.put(Attributes.ATTACK_DAMAGE,
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 10f, AttributeModifier.Operation.ADDITION));
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 12f, AttributeModifier.Operation.ADDITION));
 				builder.put(Attributes.ATTACK_SPEED,
-						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -2.7, AttributeModifier.Operation.ADDITION));
+						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -2.2999999999999998, AttributeModifier.Operation.ADDITION));
 				return builder.build();
 			}
 			return super.getAttributeModifiers(equipmentSlot);
