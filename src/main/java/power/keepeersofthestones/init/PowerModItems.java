@@ -95,6 +95,7 @@ import power.keepeersofthestones.item.OceanSwordItem;
 import power.keepeersofthestones.item.OceanStoneItem;
 import power.keepeersofthestones.item.OceanItem;
 import power.keepeersofthestones.item.OceanBatteryItem;
+import power.keepeersofthestones.item.ObscurityItem;
 import power.keepeersofthestones.item.OblivionItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MoonWitherItem;
@@ -102,6 +103,7 @@ import power.keepeersofthestones.item.MoonStonesItem;
 import power.keepeersofthestones.item.MoonStoneItem;
 import power.keepeersofthestones.item.MoonBatteryItem;
 import power.keepeersofthestones.item.MoonAxeItem;
+import power.keepeersofthestones.item.MistyFanItem;
 import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MistItem;
 import power.keepeersofthestones.item.MetalStoneItem;
@@ -130,6 +132,7 @@ import power.keepeersofthestones.item.LavaHoleItem;
 import power.keepeersofthestones.item.LavaHammerItem;
 import power.keepeersofthestones.item.LavaBatteryItem;
 import power.keepeersofthestones.item.LavaBallItem;
+import power.keepeersofthestones.item.KunaiItem;
 import power.keepeersofthestones.item.IronShieldItem;
 import power.keepeersofthestones.item.IronGolemCreateItem;
 import power.keepeersofthestones.item.IncreasePowerItem;
@@ -636,6 +639,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DAMAGED_EXPLOSION_STONE = REGISTRY.register("damaged_explosion_stone",
 			() -> new DamagedExplosionStoneItem());
 	public static final RegistryObject<Item> DAMAGED_AMBER_STONE = REGISTRY.register("damaged_amber_stone", () -> new DamagedAmberStoneItem());
+	public static final RegistryObject<Item> OBSCURITY = REGISTRY.register("obscurity", () -> new ObscurityItem());
+	public static final RegistryObject<Item> KUNAI = REGISTRY.register("kunai", () -> new KunaiItem());
+	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -2,22 +2,16 @@
   "_fv": 29,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Fog",
-    "icon": "fog_effect.png",
+    "effectName": "Recharge",
+    "icon": "mist_stone.png",
     "color": {
-      "value": -3355393,
+      "value": -13434778,
       "falpha": 0.0
     },
     "isInstant": false,
     "isBad": false,
     "isBenefitical": false,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true,
-    "onStarted": {
-      "name": "FogStart"
-    },
-    "onExpired": {
-      "name": "FogEnd"
-    }
+    "renderStatusInHUD": true
   }
 }

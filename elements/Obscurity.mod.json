@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "mist_stone",
+    "texture": "obscurity",
     "customModelName": "Normal",
     "customProperties": {},
     "modelsMap": {},
-    "name": "Mist Stone",
+    "name": "Obscurity",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "No creative tab entry"
@@ -16,7 +16,7 @@
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 0.0,
-    "damageCount": 10,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
@@ -31,13 +31,13 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "MistStoneUse"
+    "onEntityHitWith": {
+      "name": "ObscurityUse"
     },
     "hasDispenseBehavior": false,
     "isFood": false,
-    "nutritionalValue": 0,
-    "saturation": 0.30000001192092896,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
     "eatResultItem": {
       "value": ""
     },

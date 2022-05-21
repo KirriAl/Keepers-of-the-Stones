@@ -12862,6 +12862,180 @@
       "locked_code": false,
       "registry_name": "damaged_amber_stone",
       "path": "~/DamagedStones"
+    },
+    {
+      "name": "Obscurity",
+      "type": "item",
+      "sortid": 898,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obscurity",
+      "path": "~/Mist"
+    },
+    {
+      "name": "MistMasterEffectStart",
+      "type": "procedure",
+      "sortid": 899,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mist"
+    },
+    {
+      "name": "RechargeMistStone",
+      "type": "potioneffect",
+      "sortid": 900,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_mist_stone",
+      "path": "~/Mist"
+    },
+    {
+      "name": "MistMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 901,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mist"
+    },
+    {
+      "name": "MistMasterEffects",
+      "type": "procedure",
+      "sortid": 902,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mist"
+    },
+    {
+      "name": "Kunai",
+      "type": "rangeditem",
+      "sortid": 903,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kunai",
+      "path": "~/Mist"
+    },
+    {
+      "name": "MistyFan",
+      "type": "tool",
+      "sortid": 904,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "misty_fan",
+      "path": "~/Mist"
+    },
+    {
+      "name": "ObscurityUse",
+      "type": "procedure",
+      "sortid": 905,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obscurity_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mist"
+    },
+    {
+      "name": "MistMaster",
+      "type": "potioneffect",
+      "sortid": 906,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_master",
+      "path": "~/Mist"
+    },
+    {
+      "name": "MistStoneUse",
+      "type": "procedure",
+      "sortid": 907,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mist"
     }
   ],
   "variable_elements": [
@@ -13380,6 +13554,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "recharge_spell_mist",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -13467,15 +13647,15 @@
       "item.power.cutter_sword": "Куттер-Меч",
       "block.power.detonator_tnt": "Детонатор",
       "effect.power.recharge_moon_stone": "Перезарядка",
-      "item.power.damaged_fire_stone": "Поврежденный Камень Огня",
       "item.power.earth_battery": "Батарея",
+      "item.power.damaged_fire_stone": "Поврежденный Камень Огня",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.damaged_vacuum_stone": "Поврежденный Камень Пустоты",
       "item.power.lava_hammer": "Лавовый Молот",
@@ -13505,32 +13685,32 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.space_leggings": "Космические штаны",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.energy_chestplate": "Энергетическая Кираса",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.space_leggings": "Космические штаны",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
       "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.damaged_space_stone": "Поврежденный Камень Космоса",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Шлем солнца",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
       "item.power.force_replication": "Репликация Силы",
-      "item.power.explosion_stone": "Камень Взрыва",
       "item.power.damaged_greenery_stone": "Поврежденный Камень Зелени",
+      "item.power.explosion_stone": "Камень Взрыва",
       "item.power.earth_helmet": "Земляной Монокль",
       "item.power.water_flow": "Струя Воды",
       "item.power.animals_stone": "Камень Животных",
       "advancements.put_it_on_charge_overnight.descr": "Создайте зарядник для батарей",
       "item.power.redstone_bundle": "Мешок С Редстоуном",
       "item.power.mercury_stone": "Камень Ртути",
-      "item.power.light_battery": "Батарея",
       "item.power.iron_shield": "Железный Щит",
+      "item.power.light_battery": "Батарея",
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
@@ -13539,8 +13719,8 @@
       "item.power.sun_ray": "Луч Солнца",
       "item.power.destruction_leggings": "Поножи разрушения",
       "item.power.energy_staff": "Посох Энергии",
-      "item.power.shadow_helmet": "Шлем тьмы",
       "effect.power.recharge_fire_stone": "Перезарядка",
+      "item.power.shadow_helmet": "Шлем тьмы",
       "item.power.crystal_leggings": "Кристаллические Штаны",
       "item.power.crystal_dagger": "Кристаллический Кинжал",
       "item.power.damaged_rain_stone": "Поврежденный Камень Дождя",
@@ -13556,8 +13736,8 @@
       "item.power.fire_stone": "Камень Огня",
       "item.power.blood_stone": "Камень Крови",
       "item.power.rain_boots": "Дождевые Сапоги",
-      "item.power.portal_blast": "Портальная Пушка",
       "item.power.ice_spear": "Ледяное Копьё",
+      "item.power.portal_blast": "Портальная Пушка",
       "effect.power.recharge_teleportation_stone": "Перезарядка",
       "subtitles.stone_activation": "Камень был активирован",
       "effect.power.fog": "Brouillard",
@@ -13671,10 +13851,12 @@
       "item.power.air_battery": "Батарея",
       "item.power.rain_knife": "Дождевой Нож",
       "item.power.damaged_light_stone": "Поврежденный Камень Света",
+      "effect.power.mist_master": "Master of Mist",
       "item.power.iron_golem_create": "Создание Железного Голема",
       "item.power.lightning_boots": "Ботинки Молнии",
       "item.power.vacuum_helmet": "Ваакумный шлем",
       "effect.power.recharge_light_stone": "Перезарядка",
+      "item.power.kunai": "Kunai",
       "subtitles.stone_deactivation": "Камень был деактивирован",
       "item.power.whirlpool": "Водоворот",
       "entity.power.glow": "Светляк",
@@ -13728,6 +13910,7 @@
       "item.power.earth_leggings": "Земляные Штаны",
       "block.power.sound_barrier_block": "Блок Звукового барьера",
       "item.power.fire_helmet": "Огненная корона",
+      "effect.power.recharge_mist_stone": "Recharge",
       "item.power.galactic_sword": "Галактический меч",
       "entity.power.tyrannosaurus_rex": "Tyrannosaurus Rex",
       "effect.power.crystal_master": "Мастер Кристалла",
@@ -13883,6 +14066,7 @@
       "effect.power.recharge_lava_stone": "Перезарядка",
       "subtitles.tyrannosaurus_rex.ambient": "",
       "item.power.ice_helmet": "Ледяной Шарф",
+      "item.power.obscurity": "Obscurity",
       "item.power.increase_power": "Увеличение Силы",
       "item.power.destruction_stone": "Камень Разрушения",
       "item.power.ice_ball": "Ледяной шар",
@@ -13896,6 +14080,7 @@
       "block.power.technobarrier_block": "Блок Технобарьера",
       "item.power.tiger_claw": "Тигриный Коготь",
       "item.power.tyrannosaurus_rex_spawn_egg": "Яйцо призыва тираннозавра",
+      "item.power.misty_fan": "Misty Fan",
       "advancements.power_up.descr": "Разблокируйте второй уровень",
       "item.power.speed_stone": "Камень Скорости",
       "item.power.rain_stone": "Камень Дождя",
@@ -13964,15 +14149,15 @@
       "block.power.detonator_tnt": "Detonator TNT",
       "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
-      "item.power.earth_battery": "Battery",
       "item.power.damaged_fire_stone": "Damaged Fire Stone",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.damaged_vacuum_stone": "Damaged Vacuum Stone",
       "item.power.lava_hammer": "Lava Hammer",
@@ -14002,32 +14187,32 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.energy_chestplate": "Energy Chestplate",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.space_leggings": "Space Leggings",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.energy_chestplate": "Energy Chestplate",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.damaged_space_stone": "Damaged Space Stone",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
       "item.power.force_replication": "Force Replication",
-      "item.power.explosion_stone": "Explosion Stone",
       "item.power.damaged_greenery_stone": "Damaged Greenery Stone",
+      "item.power.explosion_stone": "Explosion Stone",
       "item.power.earth_helmet": "Earth Helmet",
       "item.power.water_flow": "Water Flow",
       "item.power.animals_stone": "Animals Stone",
       "advancements.put_it_on_charge_overnight.descr": "Create a charger for batteries",
       "item.power.redstone_bundle": "Redstone Bundle",
       "item.power.mercury_stone": "Mercury Stone",
-      "item.power.iron_shield": "Iron Shield",
       "item.power.light_battery": "Battery",
+      "item.power.iron_shield": "Iron Shield",
       "effect.power.tornado_master": "Master of Tornado",
       "biome.power.enceladus_ice_desert": "Enceladus Ice Desert",
       "itemGroup.tabadditional_group": "Additional Group",
@@ -14036,8 +14221,8 @@
       "item.power.sun_ray": "Sun Ray",
       "item.power.destruction_leggings": "Destruction Leggings",
       "item.power.energy_staff": "Energy Staff",
-      "item.power.shadow_helmet": "Shadow Helmet",
       "effect.power.recharge_fire_stone": "Recharge",
+      "item.power.shadow_helmet": "Shadow Helmet",
       "item.power.crystal_leggings": "Crystal Leggings",
       "item.power.crystal_dagger": "Crystal Dagger",
       "item.power.damaged_rain_stone": "Damaged Rain Stone",
@@ -14053,8 +14238,8 @@
       "item.power.fire_stone": "Fire stone",
       "item.power.blood_stone": "Blood Stone",
       "item.power.rain_boots": "Rain Boots",
-      "item.power.ice_spear": "Ice Spear",
       "item.power.portal_blast": "Portal Blaster",
+      "item.power.ice_spear": "Ice Spear",
       "effect.power.recharge_teleportation_stone": "Recharge",
       "subtitles.stone_activation": "Stone been activation",
       "effect.power.fog": "Fog",
@@ -14168,10 +14353,12 @@
       "item.power.air_battery": "Battery",
       "item.power.rain_knife": "Rain Knife",
       "item.power.damaged_light_stone": "Damaged Light Stone",
+      "effect.power.mist_master": "Master of Mist",
       "item.power.iron_golem_create": "Iron Golem Create",
       "item.power.lightning_boots": "Lightning Boots",
       "item.power.vacuum_helmet": "Vacuum Helmet",
       "effect.power.recharge_light_stone": "Recharge",
+      "item.power.kunai": "Kunai",
       "subtitles.stone_deactivation": "Stone been deactivation",
       "item.power.whirlpool": "Whirlpool",
       "entity.power.glow": "Glow",
@@ -14225,6 +14412,7 @@
       "item.power.earth_leggings": "Earth Leggings",
       "block.power.sound_barrier_block": "Sound Barrier Block",
       "item.power.fire_helmet": "Fire Helmet",
+      "effect.power.recharge_mist_stone": "Recharge",
       "item.power.galactic_sword": "Galactic Sword",
       "entity.power.tyrannosaurus_rex": "Tyrannosaurus Rex",
       "effect.power.crystal_master": "Master of the Crystal",
@@ -14381,6 +14569,7 @@
       "effect.power.recharge_lava_stone": "Recharge",
       "subtitles.tyrannosaurus_rex.ambient": "",
       "item.power.ice_helmet": "Ice Helmet",
+      "item.power.obscurity": "Obscurity",
       "item.power.increase_power": "Increase Power",
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.ice_ball": "Ice Ball",
@@ -14394,6 +14583,7 @@
       "block.power.technobarrier_block": "Technobarrier Block",
       "item.power.tiger_claw": "Tiger Claw",
       "item.power.tyrannosaurus_rex_spawn_egg": "Tyrannosaurus Rex Spawn Egg",
+      "item.power.misty_fan": "Misty Fan",
       "advancements.power_up.descr": "Unlock the second level",
       "item.power.speed_stone": "Speed Stone",
       "item.power.rain_stone": "Rain Stone",
@@ -14462,15 +14652,15 @@
       "block.power.detonator_tnt": "Détonateur TNT",
       "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
-      "item.power.earth_battery": "Batterie",
       "item.power.damaged_fire_stone": "Damaged Fire Stone",
+      "item.power.earth_battery": "Batterie",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.damaged_vacuum_stone": "Damaged Vacuum Stone",
       "item.power.lava_hammer": "Lava Hammer",
@@ -14500,32 +14690,32 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.energy_chestplate": "Energy Chestplate",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.space_leggings": "Space Leggings",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.energy_chestplate": "Energy Chestplate",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.damaged_space_stone": "Damaged Space Stone",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Maître De La Verdure",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Gardiens des Pierres",
       "item.power.force_replication": "Force Replication",
-      "item.power.explosion_stone": "Explosion Stone",
       "item.power.damaged_greenery_stone": "Damaged Greenery Stone",
+      "item.power.explosion_stone": "Explosion Stone",
       "item.power.earth_helmet": "Earth Helmet",
       "item.power.water_flow": "Water Flow",
       "item.power.animals_stone": "Animals Stone",
       "advancements.put_it_on_charge_overnight.descr": "Créer un chargeur pour batteries",
       "item.power.redstone_bundle": "Redstone Bundle",
       "item.power.mercury_stone": "Mercury Stone",
-      "item.power.iron_shield": "Iron Shield",
       "item.power.light_battery": "Batterie",
+      "item.power.iron_shield": "Iron Shield",
       "effect.power.tornado_master": "Maître Tornado",
       "biome.power.enceladus_ice_desert": "Désert de Glace d\u0027Encelade",
       "itemGroup.tabadditional_group": "Groupe Supplémentaire",
@@ -14534,8 +14724,8 @@
       "item.power.sun_ray": "Sun Ray",
       "item.power.destruction_leggings": "Destruction Leggings",
       "item.power.energy_staff": "Energy Staff",
-      "item.power.shadow_helmet": "Shadow Helmet",
       "effect.power.recharge_fire_stone": "Recharge",
+      "item.power.shadow_helmet": "Shadow Helmet",
       "item.power.crystal_leggings": "Crystal Leggings",
       "item.power.crystal_dagger": "Crystal Dagger",
       "item.power.damaged_rain_stone": "Damaged Rain Stone",
@@ -14551,8 +14741,8 @@
       "item.power.fire_stone": "Fire stone",
       "item.power.blood_stone": "Blood Stone",
       "item.power.rain_boots": "Rain Boots",
-      "item.power.ice_spear": "Ice Spear",
       "item.power.portal_blast": "Portal Blaster",
+      "item.power.ice_spear": "Ice Spear",
       "effect.power.recharge_teleportation_stone": "Recharge",
       "subtitles.stone_activation": "Stone been activation",
       "effect.power.fog": "Fog",
@@ -14666,10 +14856,12 @@
       "item.power.air_battery": "Batterie",
       "item.power.rain_knife": "Rain Knife",
       "item.power.damaged_light_stone": "Damaged Light Stone",
+      "effect.power.mist_master": "Master of Mist",
       "item.power.iron_golem_create": "Iron Golem Create",
       "item.power.lightning_boots": "Lightning Boots",
       "item.power.vacuum_helmet": "Vacuum Helmet",
       "effect.power.recharge_light_stone": "Recharge",
+      "item.power.kunai": "Kunai",
       "subtitles.stone_deactivation": "Stone been deactivation",
       "item.power.whirlpool": "Whirlpool",
       "entity.power.glow": "Lueur",
@@ -14723,6 +14915,7 @@
       "item.power.earth_leggings": "Earth Leggings",
       "block.power.sound_barrier_block": "Bloc de Barrière Acoustique",
       "item.power.fire_helmet": "Fire Helmet",
+      "effect.power.recharge_mist_stone": "Recharge",
       "item.power.galactic_sword": "Galactic Sword",
       "entity.power.tyrannosaurus_rex": "Tyrannosaure Rex",
       "effect.power.crystal_master": "Maître Du Cristal",
@@ -14879,6 +15072,7 @@
       "effect.power.recharge_lava_stone": "Recharge",
       "subtitles.tyrannosaurus_rex.ambient": "",
       "item.power.ice_helmet": "Ice Helmet",
+      "item.power.obscurity": "Obscurity",
       "item.power.increase_power": "Increase Power",
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.ice_ball": "Ice Ball",
@@ -14892,6 +15086,7 @@
       "block.power.technobarrier_block": "Bloc Tecnhobarrière",
       "item.power.tiger_claw": "Tiger Claw",
       "item.power.tyrannosaurus_rex_spawn_egg": "Tyrannosaurus Rex Spawn Egg",
+      "item.power.misty_fan": "Misty Fan",
       "advancements.power_up.descr": "Débloquez le deuxième niveau",
       "item.power.speed_stone": "Speed Stone",
       "item.power.rain_stone": "Rain Stone",
@@ -15177,6 +15372,10 @@
       },
       {
         "name": "DamagedStones",
+        "children": []
+      },
+      {
+        "name": "StonesRepair",
         "children": []
       }
     ]

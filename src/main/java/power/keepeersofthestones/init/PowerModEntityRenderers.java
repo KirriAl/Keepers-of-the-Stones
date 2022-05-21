@@ -60,5 +60,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_SPHERE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TYRANNOSAURUS_REX.get(), TyrannosaurusRexRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AMBER_STREAKS.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.KUNAI.get(), ThrownItemRenderer::new);
 	}
 }
