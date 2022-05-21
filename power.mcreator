@@ -12489,36 +12489,6 @@
       "path": "~/Aether"
     },
     {
-      "name": "CrystallizedLands",
-      "type": "biome",
-      "sortid": 859,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystallized_lands",
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "Crystallized",
-      "type": "dimension",
-      "sortid": 860,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystallized",
-      "metadata": {
-        "ep": true
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "CrystallizedCraft",
-      "type": "recipe",
-      "sortid": 861,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystallized_craft",
-      "path": "~/Dimensions"
-    },
-    {
       "name": "DinoeraCraft",
       "type": "recipe",
       "sortid": 862,
@@ -13511,7 +13481,6 @@
       "item.power.amber_boots": "Amber Boots",
       "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Перезарядка",
-      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Вампиризм",
       "effect.power.recharge_time_stone": "Перезарядка",
       "item.power.crestcent_boots": "Crestcent Boots",
@@ -13576,7 +13545,6 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ботинки Океана",
       "effect.power.moon_master": "Мастер Луны",
-      "item.power.crystallized": "Crystallized Portal Igniter",
       "item.power.energy_stone": "Камень Энергии",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
       "item.power.energy_absorption": "Energy Absorption",
@@ -14035,7 +14003,6 @@
       "item.power.amber_boots": "Amber Boots",
       "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Recharge",
-      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
       "item.power.shield_of_earth": "Shield of the Earth",
@@ -14105,7 +14072,6 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
       "effect.power.moon_master": "Master of the Moon",
-      "item.power.crystallized": "Crystallized Portal Igniter",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
       "item.power.energy_absorption": "Energy Absorption",
@@ -14568,7 +14534,6 @@
       "item.power.amber_boots": "Amber Boots",
       "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Recharge",
-      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
       "item.power.shield_of_earth": "Shield of the Earth",
@@ -14638,7 +14603,6 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
       "effect.power.moon_master": "Maître De La Lune",
-      "item.power.crystallized": "Crystallized Portal Igniter",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
       "item.power.energy_absorption": "Energy Absorption",

@@ -89,6 +89,10 @@ public class DinoeraDimension extends PowerModElements.ModElement {
 				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:triassic_plains")).getGenerationSettings()
 				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:jurassic_swamp")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:jurassic_swamp")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:jurassic_jungle")).getGenerationSettings()
 				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:jurassic_jungle")).getGenerationSettings()
