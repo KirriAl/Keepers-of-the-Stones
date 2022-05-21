@@ -13,6 +13,7 @@ import power.keepeersofthestones.world.inventory.EBShadowMenu;
 import power.keepeersofthestones.world.inventory.EBRainMenu;
 import power.keepeersofthestones.world.inventory.EBOceanMenu;
 import power.keepeersofthestones.world.inventory.EBMoonMenu;
+import power.keepeersofthestones.world.inventory.EBMistMenu;
 import power.keepeersofthestones.world.inventory.EBMetalMenu;
 import power.keepeersofthestones.world.inventory.EBLightningMenu;
 import power.keepeersofthestones.world.inventory.EBLightMenu;
@@ -632,6 +633,24 @@ public class OpenBookProcedure {
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new EBAmberMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MIST_STONE.get())) : false) {
+			{
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return new TextComponent("EBMist");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new EBMistMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
