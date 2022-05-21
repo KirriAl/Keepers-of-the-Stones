@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "misty_fan",
     "customModelName": "Normal",
     "name": "Misty Fan",
     "specialInfo": [],
