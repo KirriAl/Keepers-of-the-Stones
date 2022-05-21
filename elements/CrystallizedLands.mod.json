@@ -4,10 +4,10 @@
   "definition": {
     "name": "Crystallized Lands",
     "groundBlock": {
-      "value": "Blocks.BUDDING_AMETHYST"
+      "value": "Blocks.PURPLE_GLAZED_TERRACOTTA"
     },
     "undergroundBlock": {
-      "value": "Blocks.AMETHYST_BLOCK"
+      "value": "Blocks.PURPUR_BLOCK"
     },
     "underwaterBlock": {
       "value": ""
@@ -106,8 +106,7 @@
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
     "defaultFeatures": [
-      "Caves",
-      "AmethystGeodes"
+      "Caves"
     ],
     "spawnEntries": []
   }

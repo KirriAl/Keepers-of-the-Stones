@@ -239,7 +239,7 @@ public class OblivionDimension extends PowerModElements.ModElement {
 
 	public static class CustomPortalSize {
 		private static final AbstractBlock.IPositionPredicate POSITION_PREDICATE = (state, blockReader, pos) -> {
-			return state.getBlock() == Blocks.AIR;
+			return state.getBlock() == Blocks.BASALT;
 		};
 		private final IWorld world;
 		private final Direction.Axis axis;
@@ -511,7 +511,7 @@ public class OblivionDimension extends PowerModElements.ModElement {
 				for (int l1 = -1; l1 < 2; ++l1) {
 					for (int k2 = 0; k2 < 2; ++k2) {
 						for (int i3 = -1; i3 < 3; ++i3) {
-							BlockState blockstate1 = i3 < 0 ? Blocks.AIR.getDefaultState() : Blocks.AIR.getDefaultState();
+							BlockState blockstate1 = i3 < 0 ? Blocks.BASALT.getDefaultState() : Blocks.AIR.getDefaultState();
 							blockpos$mutable.setAndOffset(blockpos, k2 * direction.getXOffset() + l1 * direction1.getXOffset(), i3,
 									k2 * direction.getZOffset() + l1 * direction1.getZOffset());
 							this.world.setBlockState(blockpos$mutable, blockstate1);
@@ -523,7 +523,7 @@ public class OblivionDimension extends PowerModElements.ModElement {
 				for (int i2 = -1; i2 < 4; ++i2) {
 					if (k1 == -1 || k1 == 2 || i2 == -1 || i2 == 3) {
 						blockpos$mutable.setAndOffset(blockpos, k1 * direction.getXOffset(), i2, k1 * direction.getZOffset());
-						this.world.setBlockState(blockpos$mutable, Blocks.AIR.getDefaultState(), 3);
+						this.world.setBlockState(blockpos$mutable, Blocks.BASALT.getDefaultState(), 3);
 					}
 				}
 			}

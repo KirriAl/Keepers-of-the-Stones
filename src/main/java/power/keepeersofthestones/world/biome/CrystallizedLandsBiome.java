@@ -33,9 +33,9 @@ public class CrystallizedLandsBiome extends PowerModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-6750055).setWaterColor(-6750055).setWaterFogColor(-6750055)
 						.withSkyColor(-6750055).withFoliageColor(-6750055).withGrassColor(-6750055).build();
-				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
-						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(
-								new SurfaceBuilderConfig(Blocks.AIR.getDefaultState(), Blocks.AIR.getDefaultState(), Blocks.AIR.getDefaultState())));
+				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder().withSurfaceBuilder(
+						SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.PURPLE_GLAZED_TERRACOTTA.getDefaultState(),
+								Blocks.PURPUR_BLOCK.getDefaultState(), Blocks.PURPUR_BLOCK.getDefaultState())));
 				biomeGenerationSettings.withStructure(StructureFeatures.MINESHAFT);
 				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();

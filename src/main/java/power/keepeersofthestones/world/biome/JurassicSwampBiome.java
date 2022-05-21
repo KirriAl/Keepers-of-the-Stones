@@ -55,7 +55,7 @@ public class JurassicSwampBiome extends PowerModElements.ModElement {
 						.withSkyColor(7972607).withFoliageColor(-13408768).withGrassColor(-13408768).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(),
-								Blocks.AIR.getDefaultState(), Blocks.DIRT.getDefaultState())));
+								Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState())));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.TREE
 								.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
@@ -91,7 +91,7 @@ public class JurassicSwampBiome extends PowerModElements.ModElement {
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.DISK
 								.withConfiguration(new SphereReplaceConfig(Blocks.GRAVEL.getDefaultState(), FeatureSpread.func_242253_a(2, 3), 2,
-										ImmutableList.of(Blocks.GRASS_BLOCK.getDefaultState(), Blocks.AIR.getDefaultState())))
+										ImmutableList.of(Blocks.GRASS_BLOCK.getDefaultState(), Blocks.DIRT.getDefaultState())))
 								.withPlacement(Features.Placements.SEAGRASS_DISK_PLACEMENT).func_242731_b(2));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.SUGAR_CANE_PATCH_CONFIG)

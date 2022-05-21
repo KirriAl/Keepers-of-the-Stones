@@ -56,7 +56,7 @@ public class JurassicJungleBiome extends PowerModElements.ModElement {
 						.withSkyColor(7972607).withFoliageColor(-13395712).withGrassColor(-13395712).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(),
-								Blocks.AIR.getDefaultState(), Blocks.DIRT.getDefaultState())));
+								Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState())));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.TREE
 						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.JUNGLE_LOG.getDefaultState()),
 								new SimpleBlockStateProvider(Blocks.JUNGLE_LEAVES.getDefaultState()),

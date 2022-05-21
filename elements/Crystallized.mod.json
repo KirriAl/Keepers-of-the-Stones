@@ -26,7 +26,7 @@
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
     "portalFrame": {
-      "value": "Blocks.AMETHYST_BLOCK"
+      "value": "Blocks.PURPUR_BLOCK"
     },
     "portalParticles": {
       "value": "GLOW"
