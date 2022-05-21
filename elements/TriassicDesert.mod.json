@@ -95,8 +95,7 @@
     "spawnRuinedPortal": "NONE",
     "defaultFeatures": [
       "Caves",
-      "Ores",
-      "DeadBushes"
+      "Ores"
     ],
     "spawnEntries": []
   }
