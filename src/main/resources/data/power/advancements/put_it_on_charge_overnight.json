@@ -1,5 +1,6 @@
 {
   "display": {
+    "background": "power:textures/screens/battery_adv_theme.png",
     "icon": {
       "item": "power:battery_charger"
     },
@@ -32,6 +33,5 @@
   },
   "rewards": {
     "experience": 50
-  },
-  "parent": "power:mighty_master"
+  }
 }
