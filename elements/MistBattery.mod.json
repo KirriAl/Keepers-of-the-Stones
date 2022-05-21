@@ -34,7 +34,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "MistStoneUse"
+      "name": "MistBatteryUse"
     },
     "hasDispenseBehavior": false,
     "isFood": false,

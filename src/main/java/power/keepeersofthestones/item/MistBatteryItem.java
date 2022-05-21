@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.MistStoneUseProcedure;
+import power.keepeersofthestones.procedures.MistBatteryUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -53,7 +53,7 @@ public class MistBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MistStoneUseProcedure.execute(entity);
+		MistBatteryUseProcedure.execute(entity);
 		return ar;
 	}
 }
