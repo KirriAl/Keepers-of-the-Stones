@@ -195,6 +195,7 @@ import power.keepeersofthestones.item.DamagedSoundStoneItem;
 import power.keepeersofthestones.item.DamagedShadowStoneItem;
 import power.keepeersofthestones.item.DamagedRainStoneItem;
 import power.keepeersofthestones.item.DamagedMoonStoneItem;
+import power.keepeersofthestones.item.DamagedMistStoneItem;
 import power.keepeersofthestones.item.DamagedMetalStoneItem;
 import power.keepeersofthestones.item.DamagedLightningStoneItem;
 import power.keepeersofthestones.item.DamagedLightStoneItem;
@@ -644,6 +645,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> KUNAI = REGISTRY.register("kunai", () -> new KunaiItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
 	public static final RegistryObject<Item> MIST_BATTERY = REGISTRY.register("mist_battery", () -> new MistBatteryItem());
+	public static final RegistryObject<Item> DAMAGED_MIST_STONE = REGISTRY.register("damaged_mist_stone", () -> new DamagedMistStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

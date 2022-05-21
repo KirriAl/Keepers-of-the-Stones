@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Mist",
-    "icon": "unelemental_master.png",
+    "icon": "mist_master.png",
     "color": {
       "value": -13434778,
       "falpha": 0.0
