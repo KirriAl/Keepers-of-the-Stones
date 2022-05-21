@@ -37,7 +37,6 @@ body:
        - 2.1.11 (Release)
        - 2.2.0.x (Beta)
        - 2.1.11 (LTSR)
-       - 2.0.2.x (LTSB)
    validations:
      required: true
  - type: textarea
