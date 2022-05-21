@@ -13036,6 +13036,32 @@
         ]
       },
       "path": "~/Mist"
+    },
+    {
+      "name": "MistBattery",
+      "type": "item",
+      "sortid": 908,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "MistBatteryUse",
+      "type": "procedure",
+      "sortid": 909,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
     }
   ],
   "variable_elements": [
@@ -13749,6 +13775,7 @@
       "advancements.just_add_water.title": "Просто Добавь Воды!",
       "item.power.cultivation": "Выращивание",
       "item.power.ocean_battery": "Батарея",
+      "item.power.mist_battery": "Battery",
       "item.power.space_atlas": "Космический Атлас",
       "item.power.animals_boots": "Животные ботинки",
       "item.power.wind_chestplate": "Воздушный Жилет",
@@ -14251,6 +14278,7 @@
       "advancements.just_add_water.title": "Just Add Water!",
       "item.power.cultivation": "Cultivation",
       "item.power.ocean_battery": "Battery",
+      "item.power.mist_battery": "Battery",
       "item.power.space_atlas": "Space Atlas",
       "item.power.animals_boots": "Animals Boots",
       "item.power.wind_chestplate": "Air Chestplate",
@@ -14754,6 +14782,7 @@
       "advancements.just_add_water.title": "Il Suffit D\u0027Ajouter De L\u0027Eau!",
       "item.power.cultivation": "Cultivation",
       "item.power.ocean_battery": "Batterie",
+      "item.power.mist_battery": "Battery",
       "item.power.space_atlas": "Space Atlas",
       "item.power.animals_boots": "Animals Boots",
       "item.power.wind_chestplate": "Air Chestplate",

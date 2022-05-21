@@ -106,6 +106,7 @@ import power.keepeersofthestones.item.MoonAxeItem;
 import power.keepeersofthestones.item.MistyFanItem;
 import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MistItem;
+import power.keepeersofthestones.item.MistBatteryItem;
 import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
@@ -642,6 +643,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> OBSCURITY = REGISTRY.register("obscurity", () -> new ObscurityItem());
 	public static final RegistryObject<Item> KUNAI = REGISTRY.register("kunai", () -> new KunaiItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
+	public static final RegistryObject<Item> MIST_BATTERY = REGISTRY.register("mist_battery", () -> new MistBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
