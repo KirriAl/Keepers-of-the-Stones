@@ -70,8 +70,6 @@ public class DetransformKeyPriNazhatiiKlavishiProcedure {
 		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(PowerModMobEffects.AMBER_MASTER.get());
 		if (entity instanceof LivingEntity _entity)
-			_entity.removeEffect(PowerModMobEffects.MAGNET_MASTER.get());
-		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(PowerModMobEffects.MIST_MASTER.get());
 	}
 }
