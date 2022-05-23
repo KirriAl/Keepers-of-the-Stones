@@ -28,7 +28,7 @@ public class LightStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LightStoneItem(PowerModElements instance) {
-		super(instance, 10);
+		super(instance, 9);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class LavaStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LavaStoneItem(PowerModElements instance) {
-		super(instance, 19);
+		super(instance, 17);
 	}
 
 	@Override

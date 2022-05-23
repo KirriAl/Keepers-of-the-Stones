@@ -32,7 +32,7 @@ public class AnimalsBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AnimalsBatteryItem(PowerModElements instance) {
-		super(instance, 65);
+		super(instance, 61);
 	}
 
 	@Override

@@ -49,7 +49,7 @@ public class MoonStonesItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletmoon_stones").setRegistryName("entitybulletmoon_stones");
 
 	public MoonStonesItem(PowerModElements instance) {
-		super(instance, 366);
+		super(instance, 397);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new MoonStonesRenderer.ModelRegisterHandler());
 	}
 

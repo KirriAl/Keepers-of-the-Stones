@@ -27,7 +27,7 @@ public class SpawnItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SpawnItem(PowerModElements instance) {
-		super(instance, 278);
+		super(instance, 309);
 	}
 
 	@Override

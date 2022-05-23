@@ -34,7 +34,7 @@ public class SpecialAbilityKeyKeyBinding extends PowerModElements.ModElement {
 	private KeyBinding keys;
 
 	public SpecialAbilityKeyKeyBinding(PowerModElements instance) {
-		super(instance, 537);
+		super(instance, 549);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

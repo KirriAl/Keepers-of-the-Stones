@@ -27,7 +27,7 @@ public class ConstructionsItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ConstructionsItem(PowerModElements instance) {
-		super(instance, 655);
+		super(instance, 657);
 	}
 
 	@Override

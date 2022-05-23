@@ -25,7 +25,7 @@ public class TornadoBattleAxeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TornadoBattleAxeItem(PowerModElements instance) {
-		super(instance, 247);
+		super(instance, 278);
 	}
 
 	@Override

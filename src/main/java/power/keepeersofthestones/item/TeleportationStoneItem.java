@@ -28,7 +28,7 @@ public class TeleportationStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TeleportationStoneItem(PowerModElements instance) {
-		super(instance, 24);
+		super(instance, 22);
 	}
 
 	@Override

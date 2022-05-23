@@ -28,7 +28,7 @@ public class CreationStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public CreationStoneItem(PowerModElements instance) {
-		super(instance, 39);
+		super(instance, 30);
 	}
 
 	@Override

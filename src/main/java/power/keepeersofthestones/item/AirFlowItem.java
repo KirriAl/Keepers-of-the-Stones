@@ -56,7 +56,7 @@ public class AirFlowItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletair_flow").setRegistryName("entitybulletair_flow");
 
 	public AirFlowItem(PowerModElements instance) {
-		super(instance, 94);
+		super(instance, 125);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AirFlowRenderer.ModelRegisterHandler());
 	}
 

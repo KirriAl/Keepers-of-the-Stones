@@ -27,7 +27,7 @@ public class MoonAxeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MoonAxeItem(PowerModElements instance) {
-		super(instance, 364);
+		super(instance, 395);
 	}
 
 	@Override

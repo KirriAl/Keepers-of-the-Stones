@@ -16,7 +16,7 @@ public class RoseSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public RoseSwordItem(PowerModElements instance) {
-		super(instance, 256);
+		super(instance, 287);
 	}
 
 	@Override

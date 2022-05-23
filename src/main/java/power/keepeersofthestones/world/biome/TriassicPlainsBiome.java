@@ -33,7 +33,7 @@ public class TriassicPlainsBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public TriassicPlainsBiome(PowerModElements instance) {
-		super(instance, 796);
+		super(instance, 745);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

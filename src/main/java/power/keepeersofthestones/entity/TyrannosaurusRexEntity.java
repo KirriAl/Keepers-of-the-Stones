@@ -54,7 +54,7 @@ public class TyrannosaurusRexEntity extends PowerModElements.ModElement {
 			.size(0.5f, 1f)).build("tyrannosaurus_rex").setRegistryName("tyrannosaurus_rex");
 
 	public TyrannosaurusRexEntity(PowerModElements instance) {
-		super(instance, 802);
+		super(instance, 42);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TyrannosaurusRexRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

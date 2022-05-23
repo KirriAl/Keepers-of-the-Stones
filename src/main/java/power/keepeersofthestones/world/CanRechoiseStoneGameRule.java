@@ -14,7 +14,7 @@ public class CanRechoiseStoneGameRule extends PowerModElements.ModElement {
 			create(true));
 
 	public CanRechoiseStoneGameRule(PowerModElements instance) {
-		super(instance, 492);
+		super(instance, 508);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

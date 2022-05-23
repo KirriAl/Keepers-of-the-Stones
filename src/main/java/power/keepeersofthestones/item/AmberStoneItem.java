@@ -28,7 +28,7 @@ public class AmberStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AmberStoneItem(PowerModElements instance) {
-		super(instance, 26);
+		super(instance, 24);
 	}
 
 	@Override

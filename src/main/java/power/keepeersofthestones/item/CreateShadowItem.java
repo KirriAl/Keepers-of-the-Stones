@@ -29,7 +29,7 @@ public class CreateShadowItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public CreateShadowItem(PowerModElements instance) {
-		super(instance, 329);
+		super(instance, 360);
 	}
 
 	@Override

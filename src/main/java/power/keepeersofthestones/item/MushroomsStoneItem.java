@@ -17,7 +17,7 @@ public class MushroomsStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MushroomsStoneItem(PowerModElements instance) {
-		super(instance, 699);
+		super(instance, 705);
 	}
 
 	@Override

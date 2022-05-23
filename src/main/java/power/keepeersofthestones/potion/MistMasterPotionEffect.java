@@ -1,9 +1,9 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.MagnetMasterEffectsProcedure;
-import power.keepeersofthestones.procedures.MagnetMasterEffectStartProcedure;
-import power.keepeersofthestones.procedures.MagnetMasterEffectEndProcedure;
+import power.keepeersofthestones.procedures.MistMasterEffectsProcedure;
+import power.keepeersofthestones.procedures.MistMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.MistMasterEffectEndProcedure;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.common.Mod;
@@ -23,8 +23,8 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class MagnetMasterPotionEffect {
-	@ObjectHolder("power:magnet_master")
+public class MistMasterPotionEffect {
+	@ObjectHolder("power:mist_master")
 	public static final Effect potion = null;
 
 	@SubscribeEvent
@@ -34,13 +34,13 @@ public class MagnetMasterPotionEffect {
 
 	public static class EffectCustom extends Effect {
 		public EffectCustom() {
-			super(EffectType.BENEFICIAL, -52378);
-			setRegistryName("magnet_master");
+			super(EffectType.BENEFICIAL, -13434778);
+			setRegistryName("mist_master");
 		}
 
 		@Override
 		public String getName() {
-			return "effect.magnet_master";
+			return "effect.mist_master";
 		}
 
 		@Override
@@ -75,7 +75,7 @@ public class MagnetMasterPotionEffect {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			MagnetMasterEffectStartProcedure.executeProcedure(Stream
+			MistMasterEffectStartProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
@@ -88,7 +88,7 @@ public class MagnetMasterPotionEffect {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			MagnetMasterEffectsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+			MistMasterEffectsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
@@ -100,7 +100,7 @@ public class MagnetMasterPotionEffect {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			MagnetMasterEffectEndProcedure.executeProcedure(Stream
+			MistMasterEffectEndProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));

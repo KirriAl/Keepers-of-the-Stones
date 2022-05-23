@@ -32,7 +32,7 @@ public class BloodBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BloodBatteryItem(PowerModElements instance) {
-		super(instance, 73);
+		super(instance, 69);
 	}
 
 	@Override

@@ -37,7 +37,7 @@ public class CretaceousPineForestBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public CretaceousPineForestBiome(PowerModElements instance) {
-		super(instance, 808);
+		super(instance, 753);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

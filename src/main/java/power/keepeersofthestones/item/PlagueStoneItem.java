@@ -17,7 +17,7 @@ public class PlagueStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public PlagueStoneItem(PowerModElements instance) {
-		super(instance, 31);
+		super(instance, 669);
 	}
 
 	@Override

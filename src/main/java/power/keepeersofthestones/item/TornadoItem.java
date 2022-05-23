@@ -29,7 +29,7 @@ public class TornadoItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public TornadoItem(PowerModElements instance) {
-		super(instance, 237);
+		super(instance, 268);
 	}
 
 	@Override

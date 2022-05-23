@@ -82,7 +82,7 @@ public class BatteryChargerBlock extends PowerModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public BatteryChargerBlock(PowerModElements instance) {
-		super(instance, 78);
+		super(instance, 39);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

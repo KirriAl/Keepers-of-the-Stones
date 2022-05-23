@@ -44,7 +44,7 @@ public class IronMagicBoxBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public IronMagicBoxBlock(PowerModElements instance) {
-		super(instance, 751);
+		super(instance, 77);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class LightSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LightSwordItem(PowerModElements instance) {
-		super(instance, 310);
+		super(instance, 341);
 	}
 
 	@Override

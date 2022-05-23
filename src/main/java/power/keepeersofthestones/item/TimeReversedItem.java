@@ -27,7 +27,7 @@ public class TimeReversedItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TimeReversedItem(PowerModElements instance) {
-		super(instance, 515);
+		super(instance, 531);
 	}
 
 	@Override

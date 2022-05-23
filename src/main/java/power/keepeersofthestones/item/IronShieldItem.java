@@ -27,7 +27,7 @@ public class IronShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public IronShieldItem(PowerModElements instance) {
-		super(instance, 299);
+		super(instance, 330);
 	}
 
 	@Override

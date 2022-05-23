@@ -26,7 +26,7 @@ public class SoundBarrierBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public SoundBarrierBlockBlock(PowerModElements instance) {
-		super(instance, 168);
+		super(instance, 199);
 	}
 
 	@Override

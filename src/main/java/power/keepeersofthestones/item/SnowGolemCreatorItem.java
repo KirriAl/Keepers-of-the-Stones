@@ -29,7 +29,7 @@ public class SnowGolemCreatorItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SnowGolemCreatorItem(PowerModElements instance) {
-		super(instance, 145);
+		super(instance, 176);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class CrystalStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public CrystalStoneItem(PowerModElements instance) {
-		super(instance, 18);
+		super(instance, 16);
 	}
 
 	@Override

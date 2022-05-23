@@ -29,7 +29,7 @@ public class OceanItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public OceanItem(PowerModElements instance) {
-		super(instance, 238);
+		super(instance, 269);
 	}
 
 	@Override

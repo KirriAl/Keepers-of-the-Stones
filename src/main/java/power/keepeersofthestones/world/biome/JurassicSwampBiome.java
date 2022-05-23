@@ -43,7 +43,7 @@ public class JurassicSwampBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public JurassicSwampBiome(PowerModElements instance) {
-		super(instance, 798);
+		super(instance, 747);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

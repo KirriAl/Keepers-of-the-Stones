@@ -49,7 +49,7 @@ public class TimeDilationItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybullettime_dilation").setRegistryName("entitybullettime_dilation");
 
 	public TimeDilationItem(PowerModElements instance) {
-		super(instance, 557);
+		super(instance, 560);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TimeDilationRenderer.ModelRegisterHandler());
 	}
 

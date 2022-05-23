@@ -28,7 +28,7 @@ public class MetalStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MetalStoneItem(PowerModElements instance) {
-		super(instance, 9);
+		super(instance, 8);
 	}
 
 	@Override

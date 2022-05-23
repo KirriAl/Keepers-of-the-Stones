@@ -50,7 +50,7 @@ public class LavaBallItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletlava_ball").setRegistryName("entitybulletlava_ball");
 
 	public LavaBallItem(PowerModElements instance) {
-		super(instance, 198);
+		super(instance, 229);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new LavaBallRenderer.ModelRegisterHandler());
 	}
 

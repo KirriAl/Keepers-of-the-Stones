@@ -27,7 +27,7 @@ public class RedstoneBundleItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public RedstoneBundleItem(PowerModElements instance) {
-		super(instance, 603);
+		super(instance, 605);
 	}
 
 	@Override

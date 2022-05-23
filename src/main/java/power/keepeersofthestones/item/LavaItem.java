@@ -29,7 +29,7 @@ public class LavaItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public LavaItem(PowerModElements instance) {
-		super(instance, 235);
+		super(instance, 266);
 	}
 
 	@Override

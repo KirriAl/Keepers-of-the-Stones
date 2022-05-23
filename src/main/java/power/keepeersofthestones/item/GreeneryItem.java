@@ -29,7 +29,7 @@ public class GreeneryItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public GreeneryItem(PowerModElements instance) {
-		super(instance, 422);
+		super(instance, 439);
 	}
 
 	@Override

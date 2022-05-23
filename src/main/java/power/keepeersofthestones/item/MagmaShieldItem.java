@@ -27,7 +27,7 @@ public class MagmaShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MagmaShieldItem(PowerModElements instance) {
-		super(instance, 248);
+		super(instance, 279);
 	}
 
 	@Override

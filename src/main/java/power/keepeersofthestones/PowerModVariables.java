@@ -380,6 +380,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mist", instance.mist);
 			nbt.putDouble("power_level", instance.power_level);
 			nbt.putBoolean("water_power", instance.water_power);
+			nbt.putBoolean("recharge_spell_mist", instance.recharge_spell_mist);
 			return nbt;
 		}
 
@@ -431,6 +432,7 @@ public class PowerModVariables {
 			instance.mist = nbt.getBoolean("mist");
 			instance.power_level = nbt.getDouble("power_level");
 			instance.water_power = nbt.getBoolean("water_power");
+			instance.recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
 		}
 	}
 
@@ -480,6 +482,7 @@ public class PowerModVariables {
 		public boolean mist = false;
 		public double power_level = 1.0;
 		public boolean water_power = false;
+		public boolean recharge_spell_mist = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -559,6 +562,7 @@ public class PowerModVariables {
 			clone.recharge_spell_blood = original.recharge_spell_blood;
 			clone.recharge_spell_energy = original.recharge_spell_energy;
 			clone.fog = original.fog;
+			clone.recharge_spell_mist = original.recharge_spell_mist;
 		}
 	}
 
@@ -629,6 +633,7 @@ public class PowerModVariables {
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
 					variables.water_power = message.data.water_power;
+					variables.recharge_spell_mist = message.data.recharge_spell_mist;
 				}
 			});
 			context.setPacketHandled(true);

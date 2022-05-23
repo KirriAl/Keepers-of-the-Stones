@@ -48,7 +48,7 @@ public class ClusterBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public ClusterBlockBlock(PowerModElements instance) {
-		super(instance, 185);
+		super(instance, 216);
 	}
 
 	@Override

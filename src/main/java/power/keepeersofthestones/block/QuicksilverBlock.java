@@ -43,7 +43,7 @@ public class QuicksilverBlock extends PowerModElements.ModElement {
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 
 	public QuicksilverBlock(PowerModElements instance) {
-		super(instance, 724);
+		super(instance, 37);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 	}
 
