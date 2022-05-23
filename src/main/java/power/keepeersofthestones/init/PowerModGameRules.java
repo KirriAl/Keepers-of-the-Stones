@@ -14,4 +14,6 @@ public class PowerModGameRules {
 			.register("gettingStonesWhenEnteringTheGame", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 	public static final GameRules.Key<GameRules.BooleanValue> CANRECHOISESTONE = GameRules.register("canRechoiseStone", GameRules.Category.PLAYER,
 			GameRules.BooleanValue.create(true));
+	public static final GameRules.Key<GameRules.BooleanValue> STONEBREAKSDURINGREBIRTH = GameRules.register("stoneBreaksDuringRebirth",
+			GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 }
