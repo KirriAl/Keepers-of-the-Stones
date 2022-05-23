@@ -66,7 +66,7 @@ public class PowerModEntities {
 			EntityType.Builder.<TyrannosaurusRexEntity>of(TyrannosaurusRexEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(TyrannosaurusRexEntity::new)
 
-					.sized(0.5f, 1f));
+					.sized(1.5f, 2.5f));
 	public static final RegistryObject<EntityType<MagicFireballEntity>> MAGIC_FIREBALL = register("projectile_magic_fireball",
 			EntityType.Builder.<MagicFireballEntity>of(MagicFireballEntity::new, MobCategory.MISC).setCustomClientFactory(MagicFireballEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
