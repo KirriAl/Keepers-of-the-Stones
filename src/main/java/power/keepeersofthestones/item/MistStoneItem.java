@@ -1,54 +1,48 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.PowerModElements;
+import power.keepeersofthestones.procedures.MistStoneUseProcedure;
+import power.keepeersofthestones.init.PowerModTabs;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
 
-import net.minecraft.item.UseAction;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.block.BlockState;
-
-@PowerModElements.ModElement.Tag
-public class MistStoneItem extends PowerModElements.ModElement {
-	@ObjectHolder("power:mist_stone")
-	public static final Item block = null;
-
-	public MistStoneItem(PowerModElements instance) {
-		super(instance, 28);
+public class MistStoneItem extends Item {
+	public MistStoneItem() {
+		super(new Item.Properties().tab(PowerModTabs.TAB_ADDITIONAL_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new ItemCustom());
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
 	}
 
-	public static class ItemCustom extends Item {
-		public ItemCustom() {
-			super(new Item.Properties().group(null).maxDamage(10).isImmuneToFire().rarity(Rarity.COMMON));
-			setRegistryName("mist_stone");
-		}
+	@Override
+	public int getUseDuration(ItemStack itemstack) {
+		return 0;
+	}
 
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
-		}
+	@Override
+	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+		return 0F;
+	}
 
-		@Override
-		public int getItemEnchantability() {
-			return 0;
-		}
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
+		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
+		ItemStack itemstack = ar.getObject();
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
 
-		@Override
-		public int getUseDuration(ItemStack itemstack) {
-			return 0;
-		}
-
-		@Override
-		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 0F;
-		}
+		MistStoneUseProcedure.execute(entity);
+		return ar;
 	}
 }
