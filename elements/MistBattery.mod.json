@@ -27,7 +27,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§5Mist"
+      "item.battery.mist"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

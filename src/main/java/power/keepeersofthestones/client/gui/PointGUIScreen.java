@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -88,10 +89,10 @@ public class PointGUIScreen extends AbstractContainerScreen<PointGUIMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "X", 24, 34, -12829636);
-		this.font.draw(poseStack, "Enter the desired coordinates", 15, 7, -12829636);
-		this.font.draw(poseStack, "Y", 24, 70, -12829636);
-		this.font.draw(poseStack, "Z", 24, 106, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("X"), 24, 34, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Enter the desired coordinates"), 15, 7, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Y"), 24, 70, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Z"), 24, 106, -12829636);
 	}
 
 	@Override
@@ -182,7 +183,7 @@ public class PointGUIScreen extends AbstractContainerScreen<PointGUIMenu> {
 		guistate.put("text:tpZ", tpZ);
 		tpZ.setMaxLength(32767);
 		this.addWidget(this.tpZ);
-		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 133, 67, 20, new TextComponent("Teleport"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 133, 67, 20, new TranslatableComponent("Teleport"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new PointGUIButtonMessage(0, x, y, z));
 				PointGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
