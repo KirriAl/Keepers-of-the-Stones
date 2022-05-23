@@ -306,7 +306,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BOOK_OF_ELEMENTS = REGISTRY.register("book_of_elements", () -> new BookOfElementsItem());
 	public static final RegistryObject<Item> ELEMENTAL_COIN = REGISTRY.register("elemental_coin", () -> new ElementalCoinItem());
 	public static final RegistryObject<Item> TYRANNOSAURUS_REX = REGISTRY.register("tyrannosaurus_rex_spawn_egg",
-			() -> new ForgeSpawnEggItem(PowerModEntities.TYRANNOSAURUS_REX, -6750208, -65536,
+			() -> new ForgeSpawnEggItem(PowerModEntities.TYRANNOSAURUS_REX, -52480, -39322,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
 	public static final RegistryObject<Item> CRYSTALLIZED = REGISTRY.register("crystallized", () -> new CrystallizedItem());
