@@ -6,7 +6,7 @@
     "displayName": "Does the stone break during rebirth?",
     "description": "Can a stone break at death if it has been activated?",
     "category": "PLAYER",
-    "defaultValueLogic": true,
+    "defaultValueLogic": false,
     "defaultValueNumber": 0
   }
 }
