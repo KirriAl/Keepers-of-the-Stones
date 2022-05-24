@@ -27,6 +27,7 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -52,7 +53,7 @@ public class RaptorEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(PowerModEntities.RAPTOR.get(), 50, 1, 2));
+			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(PowerModEntities.RAPTOR.get(), 50, 2, 4));
 	}
 
 	public RaptorEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -84,10 +85,11 @@ public class RaptorEntity extends Monster {
 		});
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
-		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, (float) 16));
-		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 0.5));
-		this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 0.8));
-		this.goalSelector.addGoal(9, new BreakDoorGoal(this, e -> true));
+		this.goalSelector.addGoal(6, new AvoidEntityGoal<>(this, TyrannosaurusRexEntity.class, (float) 24, 1, 1.2));
+		this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, (float) 16));
+		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.5));
+		this.goalSelector.addGoal(9, new WaterAvoidingRandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(10, new BreakDoorGoal(this, e -> true));
 	}
 
 	@Override
