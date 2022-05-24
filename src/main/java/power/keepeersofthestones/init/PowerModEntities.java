@@ -18,6 +18,7 @@ import power.keepeersofthestones.entity.SpikeEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
+import power.keepeersofthestones.entity.RaptorEntity;
 import power.keepeersofthestones.entity.RainBowEntity;
 import power.keepeersofthestones.entity.PortalBlastEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
@@ -181,6 +182,11 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<KunaiEntity>> KUNAI = register("projectile_kunai",
 			EntityType.Builder.<KunaiEntity>of(KunaiEntity::new, MobCategory.MISC).setCustomClientFactory(KunaiEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RaptorEntity>> RAPTOR = register("raptor",
+			EntityType.Builder.<RaptorEntity>of(RaptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(RaptorEntity::new)
+
+					.sized(1.2f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -193,6 +199,7 @@ public class PowerModEntities {
 			TyrannosaurusRexEntity.init();
 			GlowEntity.init();
 			ShadowEntity.init();
+			RaptorEntity.init();
 		});
 	}
 
@@ -202,5 +209,6 @@ public class PowerModEntities {
 		event.put(TYRANNOSAURUS_REX.get(), TyrannosaurusRexEntity.createAttributes().build());
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
+		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
 	}
 }
