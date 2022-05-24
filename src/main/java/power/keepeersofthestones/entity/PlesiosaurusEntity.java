@@ -21,14 +21,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -51,8 +51,7 @@ import java.util.Set;
 @Mod.EventBusSubscriber
 public class PlesiosaurusEntity extends Monster {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("power:cretaceous_taiga"),
-			new ResourceLocation("power:jurassic_swamp"), new ResourceLocation("power:cretaceous_pine_forest"),
-			new ResourceLocation("power:jurassic_jungle"));
+			new ResourceLocation("power:cretaceous_pine_forest"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -69,7 +68,6 @@ public class PlesiosaurusEntity extends Monster {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		setPersistenceRequired();
 		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
@@ -118,27 +116,22 @@ public class PlesiosaurusEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1, true) {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, WaterAnimal.class, false, true));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, false, true));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1, 40));
-		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, (float) 16));
-		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(5, new RandomSwimmingGoal(this, 1, 40));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.WATER;
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override

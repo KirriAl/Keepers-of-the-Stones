@@ -11174,18 +11174,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "Quicksilver",
-      "type": "fluid",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "quicksilver",
-      "metadata": {
-        "gb": false
-      },
-      "path": "~/Mercury"
-    },
-    {
       "name": "Planet",
       "type": "command",
       "sortid": 715,
@@ -14179,7 +14167,6 @@
       "item.power.lava_chestplate": "Лавовый Пояс",
       "item.power.elemental_music_disc": "Пластинка",
       "item.power.damaged_lava_stone": "Поврежденный Камень Лавы",
-      "item.power.quicksilver_bucket": "Quicksilver Bucket",
       "item.power.time_chestplate": "Нагрудник времени",
       "item.power.mace": "Булава",
       "item.power.lightning_chestplate": "Мантия Молнии",
@@ -14191,7 +14178,6 @@
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Технологии \u0026 Артефакты",
       "item.power.dinoera": "Огниво Портала (Диноэра)",
-      "block.power.quicksilver": "Quicksilver",
       "item.power.mist_leggings": "Mist Leggings",
       "block.power.energy_block": "Энергетический блок",
       "item.power.creation_chestplate": "Creation Chestplate",
@@ -14402,7 +14388,6 @@
       "block.power.battery_charger": "Зарядник для батарей",
       "effect.power.rain_fly": "Дождевой Полёт",
       "item.power.sound_sword": "Звуковой кинжал",
-      "fluid.power.quicksilver": "Quicksilver",
       "item.power.ice_boots": "Ледяные Сапоги",
       "item.battery.rain": "§3Дождь",
       "item.power.damaged_crystal_stone": "Поврежденный Камень Кристалла",
@@ -14720,7 +14705,6 @@
       "item.power.lava_chestplate": "Lava Chestplate",
       "item.power.elemental_music_disc": "Music Disc",
       "item.power.damaged_lava_stone": "Damaged Lava Stone",
-      "item.power.quicksilver_bucket": "Quicksilver Bucket",
       "item.power.time_chestplate": "Time Chestplate",
       "item.power.mace": "Mace",
       "item.power.lightning_chestplate": "Lightning Chestplate",
@@ -14733,7 +14717,6 @@
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Technologies \u0026 Artifacts",
       "item.power.dinoera": "Dinoera Portal Igniter",
-      "block.power.quicksilver": "Quicksilver",
       "item.power.mist_leggings": "Mist Leggings",
       "block.power.energy_block": "Energy Block",
       "item.power.creation_chestplate": "Creation Chestplate",
@@ -14944,7 +14927,6 @@
       "block.power.battery_charger": "Battery Charger",
       "effect.power.rain_fly": "RainFly",
       "item.power.sound_sword": "Sound Sword",
-      "fluid.power.quicksilver": "Quicksilver",
       "item.power.ice_boots": "Ice Boots",
       "item.battery.rain": "§3Rain",
       "item.power.damaged_crystal_stone": "Damaged Crystal Stone",

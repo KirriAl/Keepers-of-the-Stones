@@ -192,7 +192,7 @@ public class PowerModEntities {
 			EntityType.Builder.<PlesiosaurusEntity>of(PlesiosaurusEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PlesiosaurusEntity::new)
 
-					.sized(1.2f, 2f));
+					.sized(1.5f, 2.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

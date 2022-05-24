@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PlesiosaurusRenderer extends MobRenderer<PlesiosaurusEntity, ModelPlesiosaurus<PlesiosaurusEntity>> {
 	public PlesiosaurusRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelPlesiosaurus(context.bakeLayer(ModelPlesiosaurus.LAYER_LOCATION)), 1.2f);
+		super(context, new ModelPlesiosaurus(context.bakeLayer(ModelPlesiosaurus.LAYER_LOCATION)), 1.5f);
 	}
 
 	@Override
