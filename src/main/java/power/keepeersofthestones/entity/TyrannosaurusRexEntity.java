@@ -77,18 +77,19 @@ public class TyrannosaurusRexEntity extends Monster {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 0.7, true) {
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, RaptorEntity.class, true, true));
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 0.7, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
-		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, (float) 32));
-		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 0.3));
-		this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 0.8));
-		this.goalSelector.addGoal(9, new BreakDoorGoal(this, e -> true));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, (float) 32));
+		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.3));
+		this.goalSelector.addGoal(9, new WaterAvoidingRandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(10, new BreakDoorGoal(this, e -> true));
 	}
 
 	@Override
