@@ -2,22 +2,22 @@
   "_fv": 29,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Tyrannosaurus Rex",
+    "mobName": "Raptor",
     "mobLabel": "",
-    "mobModelName": "Modeltyrannosaurus_rex",
-    "mobModelTexture": "tyrannosaurus_rex.png",
+    "mobModelName": "ModelRaptor",
+    "mobModelTexture": "raptor.png",
     "mobModelGlowTexture": "",
-    "modelWidth": 1.5,
-    "modelHeight": 2.5,
-    "modelShadowSize": 1.5,
+    "modelWidth": 1.2,
+    "modelHeight": 2.0,
+    "modelShadowSize": 1.2,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -52480,
+      "value": -16738048,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -39322,
+      "value": -6684775,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -46,13 +46,13 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 21,
+    "attackStrength": 8,
     "attackKnockback": 1.5,
     "knockbackResistance": 1.0,
-    "movementSpeed": 0.30000000000000004,
+    "movementSpeed": 0.5,
     "armorBaseValue": 0.0,
-    "trackingRange": 256,
-    "health": 150,
+    "trackingRange": 64,
+    "health": 70,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -83,10 +83,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "CUSTOM:tyrannosaurus_rex.hurt"
+      "value": "CUSTOM:raptor.hurt"
     },
     "deathSound": {
-      "value": "CUSTOM:tyrannosaurus_rex.dead"
+      "value": "CUSTOM:raptor.dead"
     },
     "stepSound": {
       "value": "entity.cow.step"
@@ -100,7 +100,7 @@
     "particleAmount": 4,
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">0.7</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"radius\">32</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.3</field><field name=\"condition\">null,null</field><next><block type=\"wander_avoid_water\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"doors_break\"><field name=\"condition\">null,null</field><next><block type=\"follow_parent\"><field name=\"speed\">0.4</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"radius\">16</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"wander_avoid_water\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"doors_break\"><field name=\"condition\">null,null</field><next><block type=\"follow_parent\"><field name=\"speed\">0.6</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -117,10 +117,10 @@
     "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:JurassicJungle"
+        "value": "CUSTOM:TriassicDesert"
       },
       {
-        "value": "CUSTOM:JurassicSwamp"
+        "value": "CUSTOM:TriassicPlains"
       }
     ],
     "spawnInDungeons": false

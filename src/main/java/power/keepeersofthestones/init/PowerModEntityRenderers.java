@@ -8,6 +8,7 @@ import power.keepeersofthestones.client.renderer.TyrannosaurusRexRenderer;
 import power.keepeersofthestones.client.renderer.TornadoEntityRenderer;
 import power.keepeersofthestones.client.renderer.TornadoCreateRenderer;
 import power.keepeersofthestones.client.renderer.ShadowRenderer;
+import power.keepeersofthestones.client.renderer.RaptorRenderer;
 import power.keepeersofthestones.client.renderer.RainBowRenderer;
 import power.keepeersofthestones.client.renderer.GoldenCrossbowRenderer;
 import power.keepeersofthestones.client.renderer.GlowRenderer;
@@ -61,5 +62,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_SPHERE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AMBER_STREAKS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.KUNAI.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.RAPTOR.get(), RaptorRenderer::new);
 	}
 }

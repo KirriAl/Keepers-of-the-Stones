@@ -648,6 +648,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> OBSCURITY = REGISTRY.register("obscurity", () -> new ObscurityItem());
 	public static final RegistryObject<Item> KUNAI = REGISTRY.register("kunai", () -> new KunaiItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
+	public static final RegistryObject<Item> RAPTOR = REGISTRY.register("raptor_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.RAPTOR,
+			-16738048, -6684775, new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
