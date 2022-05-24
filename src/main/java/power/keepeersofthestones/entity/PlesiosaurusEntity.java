@@ -28,7 +28,6 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -57,7 +56,7 @@ public class PlesiosaurusEntity extends Monster {
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(PowerModEntities.PLESIOSAURUS.get(), 20, 1, 1));
+					.add(new MobSpawnSettings.SpawnerData(PowerModEntities.PLESIOSAURUS.get(), 10, 1, 1));
 	}
 
 	public PlesiosaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -126,7 +125,6 @@ public class PlesiosaurusEntity extends Monster {
 		});
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomSwimmingGoal(this, 1, 40));
-		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override
