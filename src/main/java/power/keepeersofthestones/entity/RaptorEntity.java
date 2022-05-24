@@ -53,7 +53,7 @@ public class RaptorEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(PowerModEntities.RAPTOR.get(), 50, 2, 4));
+			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(PowerModEntities.RAPTOR.get(), 40, 2, 4));
 	}
 
 	public RaptorEntity(PlayMessages.SpawnEntity packet, Level world) {

@@ -13375,6 +13375,15 @@
       "locked_code": false,
       "registry_name": "raptor",
       "path": "~/Time"
+    },
+    {
+      "name": "Plesiosaurus",
+      "type": "livingentity",
+      "sortid": 843,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plesiosaurus",
+      "path": "~/Time"
     }
   ],
   "variable_elements": [
@@ -14276,6 +14285,7 @@
       "item.power.galactic_sword": "Галактический меч",
       "entity.power.tyrannosaurus_rex": "Тираннозавр Рекс",
       "effect.power.crystal_master": "Мастер Кристалла",
+      "entity.power.plesiosaurus": "Плезиозавр",
       "item.power.blue_knife": "Голубой Нож",
       "item.power.crestcent_helmet": "Crestcent Helmet",
       "item.power.rain_chestplate": "Дождевая Накидка",
@@ -14454,6 +14464,7 @@
       "item.power.misty_fan": "Туманный Веер",
       "item.battery.metal": "§7Металл",
       "advancements.power_up.descr": "Разблокируйте второй уровень",
+      "item.power.plesiosaurus_spawn_egg": "Яйцо призыва плезиозавра",
       "item.power.speed_stone": "Камень Скорости",
       "item.power.rain_stone": "Камень Дождя",
       "item.power.lightning_strike": "Удар Молнии",
@@ -14815,6 +14826,7 @@
       "item.power.galactic_sword": "Galactic Sword",
       "entity.power.tyrannosaurus_rex": "Tyrannosaurus Rex",
       "effect.power.crystal_master": "Master of the Crystal",
+      "entity.power.plesiosaurus": "Plesiosaurus",
       "item.power.blue_knife": "Blue Knife",
       "item.power.crestcent_helmet": "Crestcent Helmet",
       "item.power.rain_chestplate": "Rain Chestplate",
@@ -14994,6 +15006,7 @@
       "item.power.misty_fan": "Misty Fan",
       "item.battery.metal": "§7Metal",
       "advancements.power_up.descr": "Unlock the second level",
+      "item.power.plesiosaurus_spawn_egg": "Plesiosaurus Spawn Egg",
       "item.power.speed_stone": "Speed Stone",
       "item.power.rain_stone": "Rain Stone",
       "item.power.lightning_strike": "Lightning Strike",
@@ -15293,7 +15306,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.2.0.8",
+    "version": "2.2.0.9",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki",

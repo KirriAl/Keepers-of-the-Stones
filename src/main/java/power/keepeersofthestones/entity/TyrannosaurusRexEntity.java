@@ -53,7 +53,7 @@ public class TyrannosaurusRexEntity extends Monster {
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(PowerModEntities.TYRANNOSAURUS_REX.get(), 50, 1, 2));
+					.add(new MobSpawnSettings.SpawnerData(PowerModEntities.TYRANNOSAURUS_REX.get(), 10, 1, 2));
 	}
 
 	public TyrannosaurusRexEntity(PlayMessages.SpawnEntity packet, Level world) {

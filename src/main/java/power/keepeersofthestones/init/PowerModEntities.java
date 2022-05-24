@@ -21,6 +21,7 @@ import power.keepeersofthestones.entity.ShadowBallEntity;
 import power.keepeersofthestones.entity.RaptorEntity;
 import power.keepeersofthestones.entity.RainBowEntity;
 import power.keepeersofthestones.entity.PortalBlastEntity;
+import power.keepeersofthestones.entity.PlesiosaurusEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
 import power.keepeersofthestones.entity.PieceOfEarthEntity;
 import power.keepeersofthestones.entity.MoonStonesEntity;
@@ -187,6 +188,11 @@ public class PowerModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(RaptorEntity::new)
 
 					.sized(1.2f, 2f));
+	public static final RegistryObject<EntityType<PlesiosaurusEntity>> PLESIOSAURUS = register("plesiosaurus",
+			EntityType.Builder.<PlesiosaurusEntity>of(PlesiosaurusEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PlesiosaurusEntity::new)
+
+					.sized(1.2f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -200,6 +206,7 @@ public class PowerModEntities {
 			GlowEntity.init();
 			ShadowEntity.init();
 			RaptorEntity.init();
+			PlesiosaurusEntity.init();
 		});
 	}
 
@@ -210,5 +217,6 @@ public class PowerModEntities {
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
+		event.put(PLESIOSAURUS.get(), PlesiosaurusEntity.createAttributes().build());
 	}
 }
