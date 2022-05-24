@@ -7,7 +7,7 @@ import power.keepeersofthestones.PowerModElements;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
@@ -61,7 +61,7 @@ public class EmptyBatteryItem extends PowerModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Empty"));
+			list.add(new TranslationTextComponent("Empty"));
 		}
 	}
 }

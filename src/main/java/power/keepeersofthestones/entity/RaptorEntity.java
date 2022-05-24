@@ -1,149 +1,180 @@
 
 package power.keepeersofthestones.entity;
 
-import power.keepeersofthestones.init.PowerModEntities;
+import power.keepeersofthestones.itemgroup.TechnologiesAndArtifactsItemGroup;
+import power.keepeersofthestones.entity.renderer.RaptorRenderer;
+import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.fml.network.FMLPlayMessages;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
-import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
-import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.AreaEffectCloud;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.DamageSource;
+import net.minecraft.network.IPacket;
+import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.Item;
+import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
+import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.LookAtGoal;
+import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.BreakDoorGoal;
+import net.minecraft.entity.ai.goal.AvoidEntityGoal;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.entity.AreaEffectCloudEntity;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockState;
 
-import java.util.Set;
+@PowerModElements.ModElement.Tag
+public class RaptorEntity extends PowerModElements.ModElement {
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1.2f, 2f))
+			.build("raptor").setRegistryName("raptor");
 
-@Mod.EventBusSubscriber
-public class RaptorEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("power:triassic_plains"),
-			new ResourceLocation("power:triassic_desert"));
+	public RaptorEntity(PowerModElements instance) {
+		super(instance, 842);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new RaptorRenderer.ModelRegisterHandler());
+		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+
+	@Override
+	public void initElements() {
+		elements.entities.add(() -> entity);
+		elements.items.add(() -> new SpawnEggItem(entity, -16738048, -6684775, new Item.Properties().group(TechnologiesAndArtifactsItemGroup.tab))
+				.setRegistryName("raptor_spawn_egg"));
+	}
 
 	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(PowerModEntities.RAPTOR.get(), 50, 2, 4));
-	}
-
-	public RaptorEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.RAPTOR.get(), world);
-	}
-
-	public RaptorEntity(EntityType<RaptorEntity> type, Level world) {
-		super(type, world);
-		xpReward = 0;
-		setNoAi(false);
-		setPersistenceRequired();
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("power:triassic_desert").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("power:triassic_plains").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(entity, 50, 2, 4));
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
-	protected void registerGoals() {
-		super.registerGoals();
-		this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers());
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1, true) {
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
-			}
-		});
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
-		this.goalSelector.addGoal(6, new AvoidEntityGoal<>(this, TyrannosaurusRexEntity.class, (float) 24, 1, 1.2));
-		this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, (float) 16));
-		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.5));
-		this.goalSelector.addGoal(9, new WaterAvoidingRandomStrollGoal(this, 0.8));
-		this.goalSelector.addGoal(10, new BreakDoorGoal(this, e -> true));
-	}
-
-	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
-	}
-
-	@Override
-	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), 0.15f, 1);
-	}
-
-	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:raptor.hurt"));
-	}
-
-	@Override
-	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:raptor.dead"));
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
-			return false;
-		if (source == DamageSource.FALL)
-			return false;
-		if (source == DamageSource.CACTUS)
-			return false;
-		if (source == DamageSource.ANVIL)
-			return false;
-		return super.hurt(source, amount);
-	}
-
-	public static void init() {
-		SpawnPlacements.register(PowerModEntities.RAPTOR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+	public void init(FMLCommonSetupEvent event) {
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos,
-						random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
+						random) -> (world.getBlockState(pos.down()).getMaterial() == Material.ORGANIC && world.getLightSubtracted(pos, 0) > 8));
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
-		builder = builder.add(Attributes.MAX_HEALTH, 70);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
-		return builder;
+	private static class EntityAttributesRegisterHandler {
+		@SubscribeEvent
+		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 70);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 8);
+			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
+			event.put(entity, ammma.create());
+		}
+	}
+
+	public static class CustomEntity extends MonsterEntity {
+		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
+			this(entity, world);
+		}
+
+		public CustomEntity(EntityType<CustomEntity> type, World world) {
+			super(type, world);
+			experienceValue = 0;
+			setNoAI(false);
+			enablePersistence();
+		}
+
+		@Override
+		public IPacket<?> createSpawnPacket() {
+			return NetworkHooks.getEntitySpawningPacket(this);
+		}
+
+		@Override
+		protected void registerGoals() {
+			super.registerGoals();
+			this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setCallsForHelp());
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
+			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1, true) {
+				@Override
+				protected double getAttackReachSqr(LivingEntity entity) {
+					return (double) (4.0 + entity.getWidth() * entity.getWidth());
+				}
+			});
+			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
+			this.goalSelector.addGoal(6, new AvoidEntityGoal(this, TyrannosaurusRexEntity.CustomEntity.class, (float) 24, 1, 1.2));
+			this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, (float) 16));
+			this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 0.5));
+			this.goalSelector.addGoal(9, new WaterAvoidingRandomWalkingGoal(this, 0.8));
+			this.goalSelector.addGoal(10, new BreakDoorGoal(this, e -> true));
+		}
+
+		@Override
+		public CreatureAttribute getCreatureAttribute() {
+			return CreatureAttribute.UNDEFINED;
+		}
+
+		@Override
+		public boolean canDespawn(double distanceToClosestPlayer) {
+			return false;
+		}
+
+		@Override
+		public void playStepSound(BlockPos pos, BlockState blockIn) {
+			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), 0.15f, 1);
+		}
+
+		@Override
+		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:raptor.hurt"));
+		}
+
+		@Override
+		public net.minecraft.util.SoundEvent getDeathSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:raptor.dead"));
+		}
+
+		@Override
+		public boolean attackEntityFrom(DamageSource source, float amount) {
+			if (source.getImmediateSource() instanceof PotionEntity || source.getImmediateSource() instanceof AreaEffectCloudEntity)
+				return false;
+			if (source == DamageSource.FALL)
+				return false;
+			if (source == DamageSource.CACTUS)
+				return false;
+			if (source == DamageSource.ANVIL)
+				return false;
+			return super.attackEntityFrom(source, amount);
+		}
 	}
 }

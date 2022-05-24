@@ -26,7 +26,7 @@ public class TyrannosaurusRexRenderer {
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(TyrannosaurusRexEntity.entity, renderManager -> {
-				return new MobRenderer(renderManager, new Modeltyrannosaurus_rex(), 0.5f) {
+				return new MobRenderer(renderManager, new Modeltyrannosaurus_rex(), 1.5f) {
 
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {

@@ -1,79 +1,114 @@
 
 package power.keepeersofthestones.world.biome;
 
-import net.minecraft.world.level.levelgen.placement.SurfaceWaterDepthFilter;
-import net.minecraft.world.level.levelgen.placement.RarityFilter;
-import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.CountPlacement;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.MegaJungleTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
-import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator;
-import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.biome.BiomeSpecialEffects;
-import net.minecraft.world.level.biome.BiomeGenerationSettings;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.data.worldgen.features.VegetationFeatures;
-import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.data.worldgen.BiomeDefaultFeatures;
+import power.keepeersofthestones.PowerModElements;
 
-import java.util.List;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+
+import net.minecraft.world.gen.trunkplacer.MegaJungleTrunkPlacer;
+import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
+import net.minecraft.world.gen.treedecorator.LeaveVineTreeDecorator;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.NoiseDependant;
+import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.foliageplacer.JungleFoliagePlacer;
+import net.minecraft.world.gen.feature.TwoLayerFeature;
+import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
+import net.minecraft.world.gen.feature.BigMushroomFeatureConfig;
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
+import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.biome.BiomeGenerationSettings;
+import net.minecraft.world.biome.BiomeAmbience;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.block.HugeMushroomBlock;
+import net.minecraft.block.Blocks;
 
 import com.google.common.collect.ImmutableList;
 
-public class JurassicJungleBiome {
-	public static Biome createBiome() {
-		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(-16737895).waterFogColor(-16737895)
-				.skyColor(7972607).foliageColorOverride(-13395712).grassColorOverride(-13395712).build();
-		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacementUtils.register("power:tree_jurassic_jungle",
-				FeatureUtils.register("power:tree_jurassic_jungle", Feature.TREE,
-						new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(Blocks.JUNGLE_LOG.defaultBlockState()),
-								new MegaJungleTrunkPlacer(10, 2, 19), BlockStateProvider.simple(Blocks.JUNGLE_LEAVES.defaultBlockState()),
-								new MegaJungleFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2), new TwoLayersFeatureSize(1, 1, 2))
-								.decorators(ImmutableList.of(TrunkVineDecorator.INSTANCE, LeaveVineDecorator.INSTANCE)).build()),
-				List.of(CountPlacement.of(5), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(0),
-						PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING), BiomeFilter.biome())));
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-				PlacementUtils.register("power:grass_jurassic_jungle", VegetationFeatures.PATCH_GRASS,
-						List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 6), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
-								BiomeFilter.biome())));
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-				PlacementUtils.register("power:flower_jurassic_jungle", VegetationFeatures.FLOWER_DEFAULT, List.of(CountPlacement.of(2),
-						RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-				PlacementUtils.register("power:brown_mushroom_jurassic_jungle", VegetationFeatures.PATCH_BROWN_MUSHROOM, List.of(CountPlacement.of(4),
-						RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-				PlacementUtils.register("power:red_mushroom_jurassic_jungle", VegetationFeatures.PATCH_RED_MUSHROOM, List.of(CountPlacement.of(4),
-						RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-				PlacementUtils.register("power:mushrooms_huge_jurassic_jungle", VegetationFeatures.MUSHROOM_ISLAND_VEGETATION,
-						List.of(CountPlacement.of(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-		BiomeDefaultFeatures.addDefaultCrystalFormations(biomeGenerationSettings);
-		BiomeDefaultFeatures.addDefaultCarversAndLakes(biomeGenerationSettings);
-		BiomeDefaultFeatures.addDesertVegetation(biomeGenerationSettings);
-		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
-		BiomeDefaultFeatures.addExtraEmeralds(biomeGenerationSettings);
-		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder();
-		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.CAVE_SPIDER, 20, 1, 1));
-		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.JUNGLE).temperature(1.3f)
-				.downfall(0.9f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
-				.build();
+@PowerModElements.ModElement.Tag
+public class JurassicJungleBiome extends PowerModElements.ModElement {
+	public static Biome biome;
+
+	public JurassicJungleBiome(PowerModElements instance) {
+		super(instance, 746);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
-	public static void init() {
+	private static class BiomeRegisterHandler {
+		@SubscribeEvent
+		public void registerBiomes(RegistryEvent.Register<Biome> event) {
+			if (biome == null) {
+				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(12638463).setWaterColor(-16737895).setWaterFogColor(-16737895)
+						.withSkyColor(7972607).withFoliageColor(-13395712).withGrassColor(-13395712).build();
+				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
+						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(),
+								Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState())));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.TREE
+						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.JUNGLE_LOG.getDefaultState()),
+								new SimpleBlockStateProvider(Blocks.JUNGLE_LEAVES.getDefaultState()),
+								new JungleFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 2),
+								new MegaJungleTrunkPlacer(10, 2, 19), new TwoLayerFeature(1, 1, 2)))
+								.setDecorators(ImmutableList.of(TrunkVineTreeDecorator.field_236879_b_, LeaveVineTreeDecorator.field_236871_b_))
+								.build())
+						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.GRASS_PATCH_CONFIG).withPlacement(Features.Placements.PATCH_PLACEMENT)
+								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 6))));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.FLOWER.withConfiguration(Features.Configs.NORMAL_FLOWER_CONFIG)
+								.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+								.func_242731_b(2));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(
+								(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.BROWN_MUSHROOM.getDefaultState()),
+										SimpleBlockPlacer.PLACER)).tries(4).func_227317_b_().build()));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(
+								(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.RED_MUSHROOM.getDefaultState()),
+										SimpleBlockPlacer.PLACER)).tries(4).func_227317_b_().build()));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.HUGE_BROWN_MUSHROOM.withConfiguration(new BigMushroomFeatureConfig(
+								new SimpleBlockStateProvider(Blocks.BROWN_MUSHROOM_BLOCK.getDefaultState().with(HugeMushroomBlock.UP, Boolean.TRUE)
+										.with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								new SimpleBlockStateProvider(Blocks.MUSHROOM_STEM.getDefaultState().with(HugeMushroomBlock.UP, Boolean.FALSE)
+										.with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								1)));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.HUGE_RED_MUSHROOM.withConfiguration(new BigMushroomFeatureConfig(
+								new SimpleBlockStateProvider(Blocks.RED_MUSHROOM_BLOCK.getDefaultState().with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								new SimpleBlockStateProvider(Blocks.MUSHROOM_STEM.getDefaultState().with(HugeMushroomBlock.UP, Boolean.FALSE)
+										.with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								1)));
+				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
+				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
+				DefaultBiomeFeatures.withDesertDeadBushes(biomeGenerationSettings);
+				DefaultBiomeFeatures.withEmeraldOre(biomeGenerationSettings);
+				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.CAVE_SPIDER, 20, 1, 1));
+				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(0.3f).scale(0.4f)
+						.temperature(1.3f).downfall(0.9f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
+						.withGenerationSettings(biomeGenerationSettings.build()).build();
+				event.getRegistry().register(biome.setRegistryName("power:jurassic_jungle"));
+			}
+		}
+	}
+
+	@Override
+	public void init(FMLCommonSetupEvent event) {
 	}
 }

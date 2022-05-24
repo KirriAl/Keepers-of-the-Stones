@@ -9,12 +9,12 @@ import net.minecraft.world.GameRules;
 import java.lang.reflect.Method;
 
 @PowerModElements.ModElement.Tag
-public class CanRechoiseStoneGameRule extends PowerModElements.ModElement {
-	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("canRechoiseStone", GameRules.Category.PLAYER,
-			create(true));
+public class StoneBreaksDuringRebirthGameRule extends PowerModElements.ModElement {
+	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("stoneBreaksDuringRebirth", GameRules.Category.PLAYER,
+			create(false));
 
-	public CanRechoiseStoneGameRule(PowerModElements instance) {
-		super(instance, 508);
+	public StoneBreaksDuringRebirthGameRule(PowerModElements instance) {
+		super(instance, 841);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

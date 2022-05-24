@@ -8,7 +8,7 @@ import power.keepeersofthestones.PowerModElements;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
@@ -69,7 +69,7 @@ public class TeleportationBatteryItem extends PowerModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A7bTeleportation"));
+			list.add(new TranslationTextComponent("\u00A7bTeleportation"));
 		}
 
 		@Override

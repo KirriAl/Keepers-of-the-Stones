@@ -1,53 +1,73 @@
 
 package power.keepeersofthestones.world.biome;
 
-import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.CountPlacement;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.biome.BiomeSpecialEffects;
-import net.minecraft.world.level.biome.BiomeGenerationSettings;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.data.worldgen.features.VegetationFeatures;
-import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.data.worldgen.BiomeDefaultFeatures;
+import power.keepeersofthestones.PowerModElements;
 
-import java.util.List;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
 
-public class TriassicPlainsBiome {
-	public static Biome createBiome() {
-		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(4159204).waterFogColor(329011).skyColor(7972607)
-				.foliageColorOverride(-6724096).grassColorOverride(-6724096).build();
-		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-				PlacementUtils.register("power:grass_triassic_plains", VegetationFeatures.PATCH_GRASS,
-						List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 8), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
-								BiomeFilter.biome())));
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-				PlacementUtils.register("power:disk_sand_triassic_plains",
-						FeatureUtils.register("power:disk_sand_triassic_plains", Feature.DISK,
-								new DiskConfiguration(Blocks.SAND.defaultBlockState(), UniformInt.of(2, 6), 2,
-										List.of(Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState()))),
-						List.of(CountPlacement.of(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome())));
-		BiomeDefaultFeatures.addDefaultCarversAndLakes(biomeGenerationSettings);
-		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
-		BiomeDefaultFeatures.addFossilDecoration(biomeGenerationSettings);
-		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder();
-		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PIG, 20, 1, 1));
-		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.NONE).biomeCategory(Biome.BiomeCategory.PLAINS).temperature(1.5f)
-				.downfall(0f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
-				.build();
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.NoiseDependant;
+import net.minecraft.world.gen.feature.SphereReplaceConfig;
+import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.biome.BiomeGenerationSettings;
+import net.minecraft.world.biome.BiomeAmbience;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.block.Blocks;
+
+import com.google.common.collect.ImmutableList;
+
+@PowerModElements.ModElement.Tag
+public class TriassicPlainsBiome extends PowerModElements.ModElement {
+	public static Biome biome;
+
+	public TriassicPlainsBiome(PowerModElements instance) {
+		super(instance, 745);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
-	public static void init() {
+	private static class BiomeRegisterHandler {
+		@SubscribeEvent
+		public void registerBiomes(RegistryEvent.Register<Biome> event) {
+			if (biome == null) {
+				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(12638463).setWaterColor(4159204).setWaterFogColor(329011)
+						.withSkyColor(7972607).withFoliageColor(-6724096).withGrassColor(-6724096).build();
+				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
+						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(),
+								Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState())));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.GRASS_PATCH_CONFIG).withPlacement(Features.Placements.PATCH_PLACEMENT)
+								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 8))));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.DISK
+								.withConfiguration(new SphereReplaceConfig(Blocks.SAND.getDefaultState(), FeatureSpread.func_242253_a(2, 4), 2,
+										ImmutableList.of(Blocks.GRASS_BLOCK.getDefaultState(), Blocks.DIRT.getDefaultState())))
+								.withPlacement(Features.Placements.SEAGRASS_DISK_PLACEMENT).func_242731_b(5));
+				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
+				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
+				DefaultBiomeFeatures.withFossils(biomeGenerationSettings);
+				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PIG, 20, 1, 1));
+				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(0.1f).scale(0.1f)
+						.temperature(1.5f).downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
+						.withGenerationSettings(biomeGenerationSettings.build()).build();
+				event.getRegistry().register(biome.setRegistryName("power:triassic_plains"));
+			}
+		}
+	}
+
+	@Override
+	public void init(FMLCommonSetupEvent event) {
 	}
 }

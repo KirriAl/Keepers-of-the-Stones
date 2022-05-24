@@ -100,27 +100,19 @@ public class OrangePortalBlock extends PowerModElements.ModElement {
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(16, 0, 9, 0, 32, 8)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(16, 0, 9, 0, 32, 8))
 
 					;
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(0, 0, 7, 16, 32, 8)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(0, 0, 7, 16, 32, 8))
 
 					;
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(9, 0, 0, 8, 32, 16)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(9, 0, 0, 8, 32, 16))
 
 					;
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(7, 0, 16, 8, 32, 0)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(7, 0, 16, 8, 32, 0))
 
 					;
 			}
@@ -131,18 +123,18 @@ public class OrangePortalBlock extends PowerModElements.ModElement {
 			builder.add(FACING, WATERLOGGED);
 		}
 
+		@Override
+		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;
+			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, flag);
+		}
+
 		public BlockState rotate(BlockState state, Rotation rot) {
 			return state.with(FACING, rot.rotate(state.get(FACING)));
 		}
 
 		public BlockState mirror(BlockState state, Mirror mirrorIn) {
 			return state.rotate(mirrorIn.toRotation(state.get(FACING)));
-		}
-
-		@Override
-		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;;
-			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, flag);
 		}
 
 		@Override

@@ -84,14 +84,14 @@ public class ClusterBlockBlock extends PowerModElements.ModElement {
 		}
 
 		@Override
-		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;
-			return this.getDefaultState().with(WATERLOGGED, flag);
+		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+			builder.add(WATERLOGGED);
 		}
 
 		@Override
-		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-			builder.add(WATERLOGGED);
+		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;
+			return this.getDefaultState().with(WATERLOGGED, flag);
 		}
 
 		@Override

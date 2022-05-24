@@ -7,6 +7,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.ResourceLocation;
@@ -108,7 +109,7 @@ public class PointGUIGuiWindow extends ContainerScreen<PointGUIGui.GuiContainerM
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		tpX = new TextFieldWidget(this.font, this.guiLeft + 33, this.guiTop + 25, 120, 20, new StringTextComponent("0")) {
+		tpX = new TextFieldWidget(this.font, this.guiLeft + 33, this.guiTop + 25, 120, 20, new TranslationTextComponent("0")) {
 			{
 				setSuggestion("0");
 			}
@@ -134,7 +135,7 @@ public class PointGUIGuiWindow extends ContainerScreen<PointGUIGui.GuiContainerM
 		guistate.put("text:tpX", tpX);
 		tpX.setMaxStringLength(32767);
 		this.children.add(this.tpX);
-		tpY = new TextFieldWidget(this.font, this.guiLeft + 33, this.guiTop + 61, 120, 20, new StringTextComponent("0")) {
+		tpY = new TextFieldWidget(this.font, this.guiLeft + 33, this.guiTop + 61, 120, 20, new TranslationTextComponent("0")) {
 			{
 				setSuggestion("0");
 			}
@@ -160,7 +161,7 @@ public class PointGUIGuiWindow extends ContainerScreen<PointGUIGui.GuiContainerM
 		guistate.put("text:tpY", tpY);
 		tpY.setMaxStringLength(32767);
 		this.children.add(this.tpY);
-		tpZ = new TextFieldWidget(this.font, this.guiLeft + 33, this.guiTop + 97, 120, 20, new StringTextComponent("0")) {
+		tpZ = new TextFieldWidget(this.font, this.guiLeft + 33, this.guiTop + 97, 120, 20, new TranslationTextComponent("0")) {
 			{
 				setSuggestion("0");
 			}
