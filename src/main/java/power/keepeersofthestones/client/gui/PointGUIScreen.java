@@ -10,7 +10,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.EditBox;
@@ -105,7 +104,7 @@ public class PointGUIScreen extends AbstractContainerScreen<PointGUIMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		tpX = new EditBox(this.font, this.leftPos + 33, this.topPos + 25, 120, 20, new TextComponent("0")) {
+		tpX = new EditBox(this.font, this.leftPos + 33, this.topPos + 25, 120, 20, new TranslatableComponent("0")) {
 			{
 				setSuggestion("0");
 			}
@@ -131,7 +130,7 @@ public class PointGUIScreen extends AbstractContainerScreen<PointGUIMenu> {
 		guistate.put("text:tpX", tpX);
 		tpX.setMaxLength(32767);
 		this.addWidget(this.tpX);
-		tpY = new EditBox(this.font, this.leftPos + 33, this.topPos + 61, 120, 20, new TextComponent("0")) {
+		tpY = new EditBox(this.font, this.leftPos + 33, this.topPos + 61, 120, 20, new TranslatableComponent("0")) {
 			{
 				setSuggestion("0");
 			}
@@ -157,7 +156,7 @@ public class PointGUIScreen extends AbstractContainerScreen<PointGUIMenu> {
 		guistate.put("text:tpY", tpY);
 		tpY.setMaxLength(32767);
 		this.addWidget(this.tpY);
-		tpZ = new EditBox(this.font, this.leftPos + 33, this.topPos + 97, 120, 20, new TextComponent("0")) {
+		tpZ = new EditBox(this.font, this.leftPos + 33, this.topPos + 97, 120, 20, new TranslatableComponent("0")) {
 			{
 				setSuggestion("0");
 			}
