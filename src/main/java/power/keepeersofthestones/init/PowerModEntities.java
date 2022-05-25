@@ -20,6 +20,7 @@ import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
 import power.keepeersofthestones.entity.RaptorEntity;
 import power.keepeersofthestones.entity.RainBowEntity;
+import power.keepeersofthestones.entity.PterodactylEntity;
 import power.keepeersofthestones.entity.PortalBlastEntity;
 import power.keepeersofthestones.entity.PlesiosaurusEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
@@ -193,6 +194,11 @@ public class PowerModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PlesiosaurusEntity::new)
 
 					.sized(1.5f, 2.5f));
+	public static final RegistryObject<EntityType<PterodactylEntity>> PTERODACTYL = register("pterodactyl",
+			EntityType.Builder.<PterodactylEntity>of(PterodactylEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PterodactylEntity::new)
+
+					.sized(1.2f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -207,6 +213,7 @@ public class PowerModEntities {
 			ShadowEntity.init();
 			RaptorEntity.init();
 			PlesiosaurusEntity.init();
+			PterodactylEntity.init();
 		});
 	}
 
@@ -218,5 +225,6 @@ public class PowerModEntities {
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
 		event.put(PLESIOSAURUS.get(), PlesiosaurusEntity.createAttributes().build());
+		event.put(PTERODACTYL.get(), PterodactylEntity.createAttributes().build());
 	}
 }

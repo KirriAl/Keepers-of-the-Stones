@@ -653,6 +653,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> PLESIOSAURUS = REGISTRY.register("plesiosaurus_spawn_egg",
 			() -> new ForgeSpawnEggItem(PowerModEntities.PLESIOSAURUS, -10092442, -3407668,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
+	public static final RegistryObject<Item> PTERODACTYL = REGISTRY.register("pterodactyl_spawn_egg",
+			() -> new ForgeSpawnEggItem(PowerModEntities.PTERODACTYL, -3355648, -103,
+					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
