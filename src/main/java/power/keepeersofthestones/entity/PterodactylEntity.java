@@ -18,7 +18,6 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
@@ -90,7 +89,7 @@ public class PterodactylEntity extends Monster {
 			public void start() {
 				LivingEntity livingentity = PterodactylEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				PterodactylEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				PterodactylEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.5);
 			}
 
 			@Override
@@ -102,7 +101,7 @@ public class PterodactylEntity extends Monster {
 					double d0 = PterodactylEntity.this.distanceToSqr(livingentity);
 					if (d0 < 24) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						PterodactylEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						PterodactylEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.5);
 					}
 				}
 			}
@@ -111,7 +110,6 @@ public class PterodactylEntity extends Monster {
 		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
 		this.goalSelector.addGoal(6, new AvoidEntityGoal<>(this, PlesiosaurusEntity.class, (float) 24, 1, 1.2));
 		this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, (float) 16));
-		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.5));
 	}
 
 	@Override
