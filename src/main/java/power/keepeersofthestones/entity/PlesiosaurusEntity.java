@@ -1,197 +1,222 @@
 
 package power.keepeersofthestones.entity;
 
-import power.keepeersofthestones.init.PowerModEntities;
+import power.keepeersofthestones.itemgroup.TechnologiesAndArtifactsItemGroup;
+import power.keepeersofthestones.entity.renderer.PlesiosaurusRenderer;
+import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.fml.network.FMLPlayMessages;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ForgeMod;
 
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.animal.WaterAnimal;
-import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.control.MoveControl;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.AreaEffectCloud;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.Mth;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.DamageSource;
+import net.minecraft.pathfinding.SwimmerPathNavigator;
+import net.minecraft.pathfinding.PathNodeType;
+import net.minecraft.network.IPacket;
+import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.Item;
+import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.passive.WaterMobEntity;
+import net.minecraft.entity.passive.SquidEntity;
+import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.ai.goal.RandomSwimmingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.controller.MovementController;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.entity.AreaEffectCloudEntity;
+import net.minecraft.block.BlockState;
 
-import java.util.Set;
+@PowerModElements.ModElement.Tag
+public class PlesiosaurusEntity extends PowerModElements.ModElement {
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.WATER_CREATURE)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(1.5f, 2.5f)).build("plesiosaurus").setRegistryName("plesiosaurus");
 
-@Mod.EventBusSubscriber
-public class PlesiosaurusEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("power:cretaceous_taiga"),
-			new ResourceLocation("power:cretaceous_pine_forest"));
+	public PlesiosaurusEntity(PowerModElements instance) {
+		super(instance, 843);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new PlesiosaurusRenderer.ModelRegisterHandler());
+		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+
+	@Override
+	public void initElements() {
+		elements.entities.add(() -> entity);
+		elements.items.add(() -> new SpawnEggItem(entity, -10092442, -3407668, new Item.Properties().group(TechnologiesAndArtifactsItemGroup.tab))
+				.setRegistryName("plesiosaurus_spawn_egg"));
+	}
 
 	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(PowerModEntities.PLESIOSAURUS.get(), 10, 1, 1));
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("power:cretaceous_pine_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("power:cretaceous_taiga").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.WATER_CREATURE).add(new MobSpawnInfo.Spawners(entity, 10, 1, 1));
 	}
 
-	public PlesiosaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.PLESIOSAURUS.get(), world);
+	@Override
+	public void init(FMLCommonSetupEvent event) {
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+				SquidEntity::func_223365_b);
 	}
 
-	public PlesiosaurusEntity(EntityType<PlesiosaurusEntity> type, Level world) {
-		super(type, world);
-		xpReward = 0;
-		setNoAi(false);
-		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
-		this.moveControl = new MoveControl(this) {
-			@Override
-			public void tick() {
-				if (PlesiosaurusEntity.this.isInWater())
-					PlesiosaurusEntity.this.setDeltaMovement(PlesiosaurusEntity.this.getDeltaMovement().add(0, 0.005, 0));
-				if (this.operation == MoveControl.Operation.MOVE_TO && !PlesiosaurusEntity.this.getNavigation().isDone()) {
-					double dx = this.wantedX - PlesiosaurusEntity.this.getX();
-					double dy = this.wantedY - PlesiosaurusEntity.this.getY();
-					double dz = this.wantedZ - PlesiosaurusEntity.this.getZ();
-					float f = (float) (Mth.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
-					float f1 = (float) (this.speedModifier * PlesiosaurusEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
-					PlesiosaurusEntity.this.setYRot(this.rotlerp(PlesiosaurusEntity.this.getYRot(), f, 10));
-					PlesiosaurusEntity.this.yBodyRot = PlesiosaurusEntity.this.getYRot();
-					PlesiosaurusEntity.this.yHeadRot = PlesiosaurusEntity.this.getYRot();
-					if (PlesiosaurusEntity.this.isInWater()) {
-						PlesiosaurusEntity.this.setSpeed((float) PlesiosaurusEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
-						float f2 = -(float) (Mth.atan2(dy, (float) Math.sqrt(dx * dx + dz * dz)) * (180 / Math.PI));
-						f2 = Mth.clamp(Mth.wrapDegrees(f2), -85, 85);
-						PlesiosaurusEntity.this.setXRot(this.rotlerp(PlesiosaurusEntity.this.getXRot(), f2, 5));
-						float f3 = Mth.cos(PlesiosaurusEntity.this.getXRot() * (float) (Math.PI / 180.0));
-						PlesiosaurusEntity.this.setZza(f3 * f1);
-						PlesiosaurusEntity.this.setYya((float) (f1 * dy));
+	private static class EntityAttributesRegisterHandler {
+		@SubscribeEvent
+		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 120);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 12);
+			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
+			ammma = ammma.createMutableAttribute(ForgeMod.SWIM_SPEED.get(), 0.3);
+			event.put(entity, ammma.create());
+		}
+	}
+
+	public static class CustomEntity extends MonsterEntity {
+		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
+			this(entity, world);
+		}
+
+		public CustomEntity(EntityType<CustomEntity> type, World world) {
+			super(type, world);
+			experienceValue = 0;
+			setNoAI(false);
+			this.setPathPriority(PathNodeType.WATER, 0);
+			this.moveController = new MovementController(this) {
+				@Override
+				public void tick() {
+					if (CustomEntity.this.isInWater())
+						CustomEntity.this.setMotion(CustomEntity.this.getMotion().add(0, 0.005, 0));
+					if (this.action == MovementController.Action.MOVE_TO && !CustomEntity.this.getNavigator().noPath()) {
+						double dx = this.posX - CustomEntity.this.getPosX();
+						double dy = this.posY - CustomEntity.this.getPosY();
+						double dz = this.posZ - CustomEntity.this.getPosZ();
+						float f = (float) (MathHelper.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
+						float f1 = (float) (this.speed * CustomEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+						CustomEntity.this.rotationYaw = this.limitAngle(CustomEntity.this.rotationYaw, f, 10);
+						CustomEntity.this.renderYawOffset = CustomEntity.this.rotationYaw;
+						CustomEntity.this.rotationYawHead = CustomEntity.this.rotationYaw;
+						if (CustomEntity.this.isInWater()) {
+							CustomEntity.this.setAIMoveSpeed((float) CustomEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+							float f2 = -(float) (MathHelper.atan2(dy, MathHelper.sqrt(dx * dx + dz * dz)) * (180F / Math.PI));
+							f2 = MathHelper.clamp(MathHelper.wrapDegrees(f2), -85, 85);
+							CustomEntity.this.rotationPitch = this.limitAngle(CustomEntity.this.rotationPitch, f2, 5);
+							float f3 = MathHelper.cos(CustomEntity.this.rotationPitch * (float) (Math.PI / 180.0));
+							CustomEntity.this.setMoveForward(f3 * f1);
+							CustomEntity.this.setMoveVertical((float) (f1 * dy));
+						} else {
+							CustomEntity.this.setAIMoveSpeed(f1 * 0.05F);
+						}
 					} else {
-						PlesiosaurusEntity.this.setSpeed(f1 * 0.05F);
+						CustomEntity.this.setAIMoveSpeed(0);
+						CustomEntity.this.setMoveVertical(0);
+						CustomEntity.this.setMoveForward(0);
 					}
-				} else {
-					PlesiosaurusEntity.this.setSpeed(0);
-					PlesiosaurusEntity.this.setYya(0);
-					PlesiosaurusEntity.this.setZza(0);
 				}
-			}
-		};
-	}
+			};
+			this.navigator = new SwimmerPathNavigator(this, this.world);
+		}
 
-	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
+		@Override
+		public IPacket<?> createSpawnPacket() {
+			return NetworkHooks.getEntitySpawningPacket(this);
+		}
 
-	@Override
-	protected PathNavigation createNavigation(Level world) {
-		return new WaterBoundPathNavigation(this, world);
-	}
+		@Override
+		protected void registerGoals() {
+			super.registerGoals();
+			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, WaterMobEntity.class, false, true));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, true));
+			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+				@Override
+				protected double getAttackReachSqr(LivingEntity entity) {
+					return (double) (4.0 + entity.getWidth() * entity.getWidth());
+				}
+			});
+			this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(5, new RandomSwimmingGoal(this, 1, 40));
+		}
 
-	@Override
-	protected void registerGoals() {
-		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, WaterAnimal.class, false, true));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, false, true));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
-			}
-		});
-		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(5, new RandomSwimmingGoal(this, 1, 40));
-	}
+		@Override
+		public CreatureAttribute getCreatureAttribute() {
+			return CreatureAttribute.WATER;
+		}
 
-	@Override
-	public MobType getMobType() {
-		return MobType.WATER;
-	}
+		@Override
+		public void playStepSound(BlockPos pos, BlockState blockIn) {
+			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), 0.15f,
+					1);
+		}
 
-	@Override
-	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), 0.15f, 1);
-	}
+		@Override
+		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:tyrannosaurus_rex.hurt"));
+		}
 
-	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:tyrannosaurus_rex.hurt"));
-	}
+		@Override
+		public net.minecraft.util.SoundEvent getDeathSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:tyrannosaurus_rex.dead"));
+		}
 
-	@Override
-	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:tyrannosaurus_rex.dead"));
-	}
+		@Override
+		public boolean attackEntityFrom(DamageSource source, float amount) {
+			if (source.getImmediateSource() instanceof PotionEntity || source.getImmediateSource() instanceof AreaEffectCloudEntity)
+				return false;
+			if (source == DamageSource.FALL)
+				return false;
+			if (source == DamageSource.CACTUS)
+				return false;
+			if (source == DamageSource.DROWN)
+				return false;
+			if (source == DamageSource.ANVIL)
+				return false;
+			return super.attackEntityFrom(source, amount);
+		}
 
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+		@Override
+		public boolean canBreatheUnderwater() {
+			return true;
+		}
+
+		@Override
+		public boolean isNotColliding(IWorldReader world) {
+			return world.checkNoEntityCollision(this);
+		}
+
+		@Override
+		public boolean isPushedByWater() {
 			return false;
-		if (source == DamageSource.FALL)
-			return false;
-		if (source == DamageSource.CACTUS)
-			return false;
-		if (source == DamageSource.DROWN)
-			return false;
-		if (source == DamageSource.ANVIL)
-			return false;
-		return super.hurt(source, amount);
-	}
-
-	@Override
-	public boolean canBreatheUnderwater() {
-		return true;
-	}
-
-	@Override
-	public boolean checkSpawnObstruction(LevelReader world) {
-		return world.isUnobstructed(this);
-	}
-
-	@Override
-	public boolean isPushedByFluid() {
-		return false;
-	}
-
-	public static void init() {
-		SpawnPlacements.register(PowerModEntities.PLESIOSAURUS.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos,
-						random) -> (world.getBlockState(pos).is(Blocks.WATER) && world.getBlockState(pos.above()).is(Blocks.WATER)));
-	}
-
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 120);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
-		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);
-		return builder;
+		}
 	}
 }

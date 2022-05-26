@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.world.biome;
 
+import power.keepeersofthestones.entity.PterodactylEntity;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -81,6 +82,7 @@ public class CretaceousTaigaBiome extends PowerModElements.ModElement {
 				DefaultBiomeFeatures.withForestRocks(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
 				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.RABBIT, 20, 2, 3));
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(PterodactylEntity.entity, 20, 1, 1));
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.TAIGA).depth(0.1f).scale(0.3f)
 						.temperature(0.3f).downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
