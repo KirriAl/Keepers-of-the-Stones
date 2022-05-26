@@ -1,4 +1,5 @@
 # Keepers-of-the-Stones
-<br/>Minecraft Support: 1.16.5
-<br/>Mod Version: 2.2.0 Beta
-<br/>Support type: Long-term support
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](https://github.com/MagicalAlexey/Keepers-of-the-Stones/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/Hexagon-Studio/Keepers-of-the-Stones?label=version)](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones/files)
+![Release](https://img.shields.io/github/release-date/Hexagon-Studio/Keepers-of-the-Stones)
+<br /> Keepers of the Stones is a magic mod that will add magic stones to the game with which you can become a master of one of the elements.
