@@ -1,4 +1,3 @@
 # Keepers-of-the-Stones
-<br>Minecraft Support: 1.18.2
-<br>Mod Version: 2.2.0 Beta
-<br>Support type: Main
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](https://github.com/MagicalAlexey/Keepers-of-the-Stones/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/Hexagon-Studio/Keepers-of-the-Stones?label=version)(https://img.shields.io/github/release-date/Hexagon-Studio/Keepers-of-the-Stones)(https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones/files)]
