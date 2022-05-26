@@ -27,7 +27,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "item.battery.empty"
+      "Empty"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
