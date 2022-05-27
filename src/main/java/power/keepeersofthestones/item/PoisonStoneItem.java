@@ -17,7 +17,7 @@ public class PoisonStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public PoisonStoneItem(PowerModElements instance) {
-		super(instance, 30);
+		super(instance, 668);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @PowerModElements.ModElement.Tag
 public class TechnologiesAndArtifactsItemGroup extends PowerModElements.ModElement {
 	public TechnologiesAndArtifactsItemGroup(PowerModElements instance) {
-		super(instance, 703);
+		super(instance, 709);
 	}
 
 	@Override

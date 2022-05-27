@@ -5,12 +5,10 @@
     "renderType": 0,
     "texture": "mist_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Mist Stone",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:AdditionalGroup"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -31,6 +29,9 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "MistStoneUse"
+    },
     "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 0,

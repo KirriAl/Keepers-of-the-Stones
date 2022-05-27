@@ -29,7 +29,7 @@ public class AnimalsItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public AnimalsItem(PowerModElements instance) {
-		super(instance, 446);
+		super(instance, 462);
 	}
 
 	@Override

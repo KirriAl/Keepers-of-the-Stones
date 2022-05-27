@@ -29,7 +29,7 @@ public class SunRegenerationItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SunRegenerationItem(PowerModElements instance) {
-		super(instance, 355);
+		super(instance, 386);
 	}
 
 	@Override

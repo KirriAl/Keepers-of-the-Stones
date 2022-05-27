@@ -1,6 +1,5 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.world.CanRechoiseStoneGameRule;
 import power.keepeersofthestones.item.WaterStoneItem;
 import power.keepeersofthestones.item.VacuumStoneItem;
 import power.keepeersofthestones.item.TornadoStoneItem;
@@ -14,6 +13,7 @@ import power.keepeersofthestones.item.ShadowStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
+import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.LightningStoneItem;
 import power.keepeersofthestones.item.LightStoneItem;
@@ -88,1136 +88,1149 @@ public class ResetmychoiceProcedureProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if (world.getWorldInfo().getGameRulesInstance().getBoolean(CanRechoiseStoneGameRule.gamerule) == true) {
-			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PowerModVariables.PlayerVariables())).selected) {
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == FireStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).fire_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == FireStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == AirStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).air_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).fire_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == WaterStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).water_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == AirStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == EarthStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).earth_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).air_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == EnergyStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).energy_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == WaterStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == IceStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).ice_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).water_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == LightningStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).lightning_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == EarthStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == SoundStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).sound_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).earth_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == CrystalStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).crystal_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == EnergyStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == LavaStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).lava_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).energy_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == RainStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).rain_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == IceStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == TornadoStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).tornado_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).ice_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == OceanStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).ocean_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == LightningStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == GreeneryStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).greenery_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).lightning_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == AnimalsStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).animals_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SoundStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == MetalStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).metal_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).sound_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == LightStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).light_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == CrystalStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == ShadowStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).shadow_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).crystal_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == VacuumStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).vacuum_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == LavaStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == SunStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).sun_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).lava_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == MoonStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).moon_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == RainStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == CreationStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).creation_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).rain_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == DestructionStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).destruction_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == TornadoStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == SpaceStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).space_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).tornado_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == BloodStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).blood_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == OceanStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == TechnologyStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.MapVariables.get(world).technology_stone = (false);
-				PowerModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).ocean_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == TimeStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.WorldVariables.get(world).time_stone = (false);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == GreeneryStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == TeleportationStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.MapVariables.get(world).teleportation_stone = (false);
-				PowerModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).greenery_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == ExplosionStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.MapVariables.get(world).explosion_stone = (false);
-				PowerModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == AnimalsStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == AmberStoneItem.block) {
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "replaceitem entity @s weapon.mainhand air");
-					}
-				}
-				PowerModVariables.MapVariables.get(world).amber_stone = (false);
-				PowerModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = (false);
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("ChoiseMagicStoneGUI");
-							}
+			PowerModVariables.WorldVariables.get(world).animals_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == MetalStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).metal_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == LightStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).light_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == ShadowStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).shadow_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == VacuumStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).vacuum_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SunStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).sun_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == MoonStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).moon_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == CreationStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).creation_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == DestructionStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).destruction_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SpaceStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).space_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == BloodStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).blood_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == TechnologyStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).technology_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == TimeStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.WorldVariables.get(world).time_stone = (false);
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == TeleportationStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).teleportation_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == ExplosionStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).explosion_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == AmberStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).amber_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == MistStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).mist_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
 		}

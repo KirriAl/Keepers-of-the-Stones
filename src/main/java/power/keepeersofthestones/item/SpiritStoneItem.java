@@ -17,7 +17,7 @@ public class SpiritStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SpiritStoneItem(PowerModElements instance) {
-		super(instance, 13);
+		super(instance, 673);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class GravityStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public GravityStoneItem(PowerModElements instance) {
-		super(instance, 32);
+		super(instance, 670);
 	}
 
 	@Override

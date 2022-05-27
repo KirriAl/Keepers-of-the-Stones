@@ -27,7 +27,7 @@ public class TriassicDesertBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public TriassicDesertBiome(PowerModElements instance) {
-		super(instance, 795);
+		super(instance, 744);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

@@ -13,6 +13,7 @@ import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
 import power.keepeersofthestones.potion.RainMasterPotionEffect;
 import power.keepeersofthestones.potion.OceanMasterPotionEffect;
 import power.keepeersofthestones.potion.MoonMasterPotionEffect;
+import power.keepeersofthestones.potion.MistMasterPotionEffect;
 import power.keepeersofthestones.potion.MetalMasterPotionEffect;
 import power.keepeersofthestones.potion.LightningMasterPotionEffect;
 import power.keepeersofthestones.potion.LightMasterPotionEffect;
@@ -835,6 +836,35 @@ public class ForceReplicationUseProcedure {
 				if (sourceentity instanceof LivingEntity)
 					((LivingEntity) sourceentity)
 							.addPotionEffect(new EffectInstance(ExplosionMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+			}
+		}
+		if (new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == MistMasterPotionEffect.potion)
+							return true;
+					}
+				}
+				return false;
+			}
+		}.check(entity)) {
+			if (!(new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == MistMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(sourceentity))) {
+				if (sourceentity instanceof LivingEntity)
+					((LivingEntity) sourceentity)
+							.addPotionEffect(new EffectInstance(MistMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 			}
 		}
 		if (!((sourceentity instanceof PlayerEntity)

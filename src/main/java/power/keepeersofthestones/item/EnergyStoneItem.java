@@ -28,7 +28,7 @@ public class EnergyStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public EnergyStoneItem(PowerModElements instance) {
-		super(instance, 12);
+		super(instance, 11);
 	}
 
 	@Override

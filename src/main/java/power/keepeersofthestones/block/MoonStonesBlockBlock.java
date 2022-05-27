@@ -38,7 +38,7 @@ public class MoonStonesBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public MoonStonesBlockBlock(PowerModElements instance) {
-		super(instance, 367);
+		super(instance, 398);
 	}
 
 	@Override

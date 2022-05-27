@@ -26,7 +26,7 @@ public class CrystalShieldBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public CrystalShieldBlockBlock(PowerModElements instance) {
-		super(instance, 186);
+		super(instance, 217);
 	}
 
 	@Override

@@ -44,7 +44,7 @@ public class IronMagicBoxBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public IronMagicBoxBlock(PowerModElements instance) {
-		super(instance, 751);
+		super(instance, 77);
 	}
 
 	@Override
@@ -82,22 +82,20 @@ public class IronMagicBoxBlock extends PowerModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(3, 0, 4, 13, 6, 12)
-
-			)
+			return VoxelShapes.or(makeCuboidShape(3, 0, 4, 13, 6, 12))
 
 					.withOffset(offset.x, offset.y, offset.z);
+		}
+
+		@Override
+		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+			builder.add(WATERLOGGED);
 		}
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
 			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;
 			return this.getDefaultState().with(WATERLOGGED, flag);
-		}
-
-		@Override
-		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-			builder.add(WATERLOGGED);
 		}
 
 		@Override

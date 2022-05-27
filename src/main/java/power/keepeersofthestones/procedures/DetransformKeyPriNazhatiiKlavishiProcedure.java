@@ -13,8 +13,8 @@ import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
 import power.keepeersofthestones.potion.RainMasterPotionEffect;
 import power.keepeersofthestones.potion.OceanMasterPotionEffect;
 import power.keepeersofthestones.potion.MoonMasterPotionEffect;
+import power.keepeersofthestones.potion.MistMasterPotionEffect;
 import power.keepeersofthestones.potion.MetalMasterPotionEffect;
-import power.keepeersofthestones.potion.MagnetMasterPotionEffect;
 import power.keepeersofthestones.potion.LightningMasterPotionEffect;
 import power.keepeersofthestones.potion.LightMasterPotionEffect;
 import power.keepeersofthestones.potion.LavaMasterPotionEffect;
@@ -138,7 +138,7 @@ public class DetransformKeyPriNazhatiiKlavishiProcedure {
 			((LivingEntity) entity).removePotionEffect(AmberMasterPotionEffect.potion);
 		}
 		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MagnetMasterPotionEffect.potion);
+			((LivingEntity) entity).removePotionEffect(MistMasterPotionEffect.potion);
 		}
 	}
 }

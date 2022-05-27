@@ -29,7 +29,7 @@ public class MetalItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public MetalItem(PowerModElements instance) {
-		super(instance, 448);
+		super(instance, 464);
 	}
 
 	@Override

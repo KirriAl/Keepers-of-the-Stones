@@ -32,7 +32,7 @@ public class AirBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AirBatteryItem(PowerModElements instance) {
-		super(instance, 52);
+		super(instance, 48);
 	}
 
 	@Override

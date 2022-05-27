@@ -13,6 +13,7 @@ import power.keepeersofthestones.potion.RechargeShadowStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeRainStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeOceanStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMoonStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeMistStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMetalStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMagnetStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeLightningStonePotionEffect;
@@ -164,6 +165,9 @@ public class WhenPlayerWakeUpProcedure {
 		}
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).removePotionEffect(RechargeMagnetStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargeMistStonePotionEffect.potion);
 		}
 	}
 }

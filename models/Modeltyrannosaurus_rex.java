@@ -6,7 +6,6 @@ public static class Modeltyrannosaurus_rex extends EntityModel<Entity> {
 	private final ModelRenderer body;
 	private final ModelRenderer shoulder;
 	private final ModelRenderer neck1;
-	private final ModelRenderer neck0;
 	private final ModelRenderer neck2;
 	private final ModelRenderer arm0;
 	private final ModelRenderer forearm0;
@@ -52,17 +51,12 @@ public static class Modeltyrannosaurus_rex extends EntityModel<Entity> {
 		neck1.setRotationPoint(0.0F, -2.3836F, -25.0237F);
 		shoulder.addChild(neck1);
 		setRotationAngle(neck1, -0.2182F, 0.0F, 0.0F);
-		neck1.setTextureOffset(0, 51).addBox(-3.5F, -5.0F, -5.0F, 7.0F, 8.0F, 10.0F, 0.0F, false);
-
-		neck0 = new ModelRenderer(this);
-		neck0.setRotationPoint(0.0F, 0.0F, -8.0F);
-		neck1.addChild(neck0);
-		neck0.setTextureOffset(24, 51).addBox(-3.5F, -4.0F, 3.0F, 7.0F, 8.0F, 0.0F, 0.01F, false);
+		neck1.setTextureOffset(3, 26).addBox(-3.5F, -5.0F, -5.0F, 7.0F, 8.0F, 10.0F, 0.0F, false);
 
 		neck2 = new ModelRenderer(this);
 		neck2.setRotationPoint(0.0F, 3.5F, -2.0F);
 		neck1.addChild(neck2);
-		neck2.setTextureOffset(51, 76).addBox(-2.5F, -0.8F, -3.0F, 5.0F, 3.0F, 11.0F, 0.0F, false);
+		neck2.setTextureOffset(55, 68).addBox(-2.5F, -0.8F, -2.75F, 5.0F, 3.0F, 11.0F, 0.0F, false);
 
 		arm0 = new ModelRenderer(this);
 		arm0.setRotationPoint(-3.5F, 6.4F, -20.0F);
@@ -72,12 +66,12 @@ public static class Modeltyrannosaurus_rex extends EntityModel<Entity> {
 		forearm0.setRotationPoint(1.0F, 1.0F, 0.0F);
 		arm0.addChild(forearm0);
 		setRotationAngle(forearm0, -0.4363F, 0.0F, 0.0F);
-		forearm0.setTextureOffset(0, 51).addBox(-0.9F, -2.0F, 0.0F, 2.0F, 6.0F, 2.0F, 0.0F, false);
+		forearm0.setTextureOffset(0, 26).addBox(-0.9F, -2.0F, 0.0F, 2.0F, 6.0F, 2.0F, 0.0F, false);
 
 		paw0 = new ModelRenderer(this);
 		paw0.setRotationPoint(0.0F, 4.5F, 2.0F);
 		forearm0.addChild(paw0);
-		paw0.setTextureOffset(30, 33).addBox(-0.9F, -1.5F, 0.0F, 2.0F, 1.0F, 2.0F, 0.0F, false);
+		paw0.setTextureOffset(0, 27).addBox(-0.9F, -1.5F, 0.0F, 2.0F, 1.0F, 2.0F, 0.0F, false);
 
 		arm1 = new ModelRenderer(this);
 		arm1.setRotationPoint(3.5F, 6.4F, -20.0F);
@@ -92,12 +86,12 @@ public static class Modeltyrannosaurus_rex extends EntityModel<Entity> {
 		paw1 = new ModelRenderer(this);
 		paw1.setRotationPoint(0.0F, 4.5F, 2.0F);
 		forearm1.addChild(paw1);
-		paw1.setTextureOffset(31, 9).addBox(-1.1F, -0.5F, 0.0F, 2.0F, 1.0F, 2.0F, 0.0F, false);
+		paw1.setTextureOffset(0, 27).addBox(-1.1F, -0.5F, 0.0F, 2.0F, 1.0F, 2.0F, 0.0F, false);
 
 		tail0 = new ModelRenderer(this);
 		tail0.setRotationPoint(0.0F, -2.0F, -1.0F);
 		body.addChild(tail0);
-		tail0.setTextureOffset(40, 33).addBox(-4.5F, -8.3F, -2.0F, 9.0F, 14.0F, 7.0F, 0.0F, false);
+		tail0.setTextureOffset(4, 29).addBox(-4.5F, -8.3F, -2.0F, 9.0F, 14.0F, 7.0F, 0.0F, false);
 
 		tail1 = new ModelRenderer(this);
 		tail1.setRotationPoint(0.0F, -1.0F, 14.0F);
@@ -106,39 +100,39 @@ public static class Modeltyrannosaurus_rex extends EntityModel<Entity> {
 		tail2 = new ModelRenderer(this);
 		tail2.setRotationPoint(0.0F, -3.4F, -2.5F);
 		tail1.addChild(tail2);
-		tail2.setTextureOffset(31, 13).addBox(-2.5F, -3.5F, -6.5F, 5.0F, 7.0F, 13.0F, 0.0F, false);
+		tail2.setTextureOffset(27, 38).addBox(-2.5F, -3.5F, -6.5F, 5.0F, 7.0F, 13.0F, 0.0F, false);
 
 		tail3 = new ModelRenderer(this);
 		tail3.setRotationPoint(0.0F, 0.4F, 6.5F);
 		tail2.addChild(tail3);
-		tail3.setTextureOffset(60, 42).addBox(-1.5F, -2.7F, 0.0F, 3.0F, 5.0F, 12.0F, 0.0F, false);
+		tail3.setTextureOffset(34, 14).addBox(-1.5F, -2.7F, 0.0F, 3.0F, 5.0F, 12.0F, 0.0F, false);
 
 		thigh1 = new ModelRenderer(this);
 		thigh1.setRotationPoint(4.0F, 3.0F, -4.0F);
-		thigh1.setTextureOffset(34, 54).addBox(0.0F, -5.0F, -4.0F, 5.0F, 14.0F, 9.0F, 0.0F, false);
+		thigh1.setTextureOffset(6, 27).addBox(0.0F, -5.0F, -4.0F, 5.0F, 14.0F, 9.0F, 0.0F, false);
 
 		knee1 = new ModelRenderer(this);
 		knee1.setRotationPoint(2.5F, 8.0F, 0.0F);
 		thigh1.addChild(knee1);
-		knee1.setTextureOffset(73, 80).addBox(-2.0F, -2.0F, -3.0F, 4.0F, 5.0F, 10.0F, 0.0F, false);
+		knee1.setTextureOffset(58, 67).addBox(-2.0F, -2.0F, -3.0F, 4.0F, 5.0F, 10.0F, 0.0F, false);
 
 		shin1 = new ModelRenderer(this);
 		shin1.setRotationPoint(0.0F, 3.0F, 5.5F);
 		knee1.addChild(shin1);
-		shin1.setTextureOffset(0, 81).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 9.0F, 3.0F, 0.0F, false);
+		shin1.setTextureOffset(67, 70).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 9.0F, 3.0F, 0.0F, false);
 
 		feet1 = new ModelRenderer(this);
 		feet1.setRotationPoint(0.0F, 8.0F, -0.5F);
 		shin1.addChild(feet1);
-		feet1.setTextureOffset(0, 69).addBox(-3.5F, 0.0F, -7.0F, 7.0F, 2.0F, 10.0F, 0.0F, false);
-		feet1.setTextureOffset(55, 6).addBox(2.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
-		feet1.setTextureOffset(53, 54).addBox(-3.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
-		feet1.setTextureOffset(54, 23).addBox(-0.5F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+		feet1.setTextureOffset(52, 70).addBox(-3.5F, 0.0F, -7.0F, 7.0F, 2.0F, 10.0F, 0.0F, false);
+		feet1.setTextureOffset(0, 125).addBox(2.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+		feet1.setTextureOffset(0, 125).addBox(-3.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+		feet1.setTextureOffset(0, 125).addBox(-0.5F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
 
 		head = new ModelRenderer(this);
 		head.setRotationPoint(0.0F, -10.35F, -25.6F);
 		setRotationAngle(head, 0.0873F, 0.0F, 0.0F);
-		head.setTextureOffset(62, 59).addBox(-4.0F, -5.0F, -3.5F, 8.0F, 10.0F, 7.0F, 0.02F, false);
+		head.setTextureOffset(56, 51).addBox(-4.0F, -5.0F, -3.5F, 8.0F, 10.0F, 7.0F, 0.02F, false);
 
 		upper_jaw0 = new ModelRenderer(this);
 		upper_jaw0.setRotationPoint(0.0F, 1.95F, -3.4F);
@@ -148,66 +142,66 @@ public static class Modeltyrannosaurus_rex extends EntityModel<Entity> {
 		upper_jaw1 = new ModelRenderer(this);
 		upper_jaw1.setRotationPoint(0.0F, -3.45F, -3.0F);
 		upper_jaw0.addChild(upper_jaw1);
-		upper_jaw1.setTextureOffset(82, 0).addBox(-3.5F, -1.5F, -6.1F, 7.0F, 5.0F, 6.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(6, 51).addBox(-3.4F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(4, 34).addBox(-3.4F, 3.35F, -4.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(9, 0).addBox(-3.4F, 3.35F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(0, 34).addBox(2.4F, 3.35F, -4.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(6, 26).addBox(2.4F, 3.35F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(50, 11).addBox(2.4F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(49, 9).addBox(0.5F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		upper_jaw1.setTextureOffset(36, 33).addBox(-1.5F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(75, 28).addBox(-3.5F, -1.5F, -6.1F, 7.0F, 5.0F, 6.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(-3.4F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(-3.4F, 3.35F, -4.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(-3.4F, 3.35F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(2.4F, 3.35F, -4.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(2.4F, 3.35F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(2.4F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(0.5F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		upper_jaw1.setTextureOffset(124, 0).addBox(-1.5F, 3.35F, -6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
 		lower_jaw = new ModelRenderer(this);
 		lower_jaw.setRotationPoint(0.0F, 1.95F, -3.4F);
 		head.addChild(lower_jaw);
 		setRotationAngle(lower_jaw, 0.3491F, 0.0F, 0.0F);
-		lower_jaw.setTextureOffset(78, 35).addBox(-3.5F, 0.05F, -8.6F, 7.0F, 3.0F, 9.0F, 0.0F, false);
-		lower_jaw.setTextureOffset(37, 58).addBox(-3.4F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		lower_jaw.setTextureOffset(58, 23).addBox(-1.5F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		lower_jaw.setTextureOffset(58, 4).addBox(0.5F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		lower_jaw.setTextureOffset(53, 57).addBox(2.4F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		lower_jaw.setTextureOffset(38, 56).addBox(2.4F, -0.9F, -6.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		lower_jaw.setTextureOffset(38, 54).addBox(-3.4F, -0.9F, -6.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		lower_jaw.setTextureOffset(23, 70).addBox(-3.5F, 0.05F, -8.6F, 7.0F, 3.0F, 9.0F, 0.0F, false);
+		lower_jaw.setTextureOffset(124, 0).addBox(-3.4F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		lower_jaw.setTextureOffset(124, 0).addBox(-1.5F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		lower_jaw.setTextureOffset(124, 0).addBox(0.5F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		lower_jaw.setTextureOffset(124, 0).addBox(2.4F, -0.9F, -8.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		lower_jaw.setTextureOffset(124, 0).addBox(2.4F, -0.9F, -6.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		lower_jaw.setTextureOffset(124, 0).addBox(-3.4F, -0.9F, -6.4F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
 		thigh2 = new ModelRenderer(this);
 		thigh2.setRotationPoint(-9.0F, 3.0F, -4.0F);
-		thigh2.setTextureOffset(54, 0).addBox(0.0F, -5.0F, -4.0F, 5.0F, 14.0F, 9.0F, 0.0F, false);
+		thigh2.setTextureOffset(6, 27).addBox(0.0F, -5.0F, -4.0F, 5.0F, 14.0F, 9.0F, 0.0F, false);
 
 		knee2 = new ModelRenderer(this);
 		knee2.setRotationPoint(2.5F, 8.0F, 0.0F);
 		thigh2.addChild(knee2);
-		knee2.setTextureOffset(24, 80).addBox(-2.0F, -2.0F, -3.0F, 4.0F, 5.0F, 10.0F, 0.0F, false);
+		knee2.setTextureOffset(58, 67).addBox(-2.0F, -2.0F, -3.0F, 4.0F, 5.0F, 10.0F, 0.0F, false);
 
 		shin2 = new ModelRenderer(this);
 		shin2.setRotationPoint(0.0F, 3.0F, 5.5F);
 		knee2.addChild(shin2);
-		shin2.setTextureOffset(0, 0).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 9.0F, 3.0F, 0.0F, false);
+		shin2.setTextureOffset(67, 70).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 9.0F, 3.0F, 0.0F, false);
 
 		feet2 = new ModelRenderer(this);
 		feet2.setRotationPoint(0.0F, 8.0F, -0.5F);
 		shin2.addChild(feet2);
-		feet2.setTextureOffset(65, 23).addBox(-3.5F, 0.0F, -7.0F, 7.0F, 2.0F, 10.0F, 0.0F, false);
-		feet2.setTextureOffset(51, 5).addBox(2.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
-		feet2.setTextureOffset(45, 9).addBox(-3.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
-		feet2.setTextureOffset(40, 37).addBox(-0.5F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+		feet2.setTextureOffset(51, 70).addBox(-3.5F, 0.0F, -7.0F, 7.0F, 2.0F, 10.0F, 0.0F, false);
+		feet2.setTextureOffset(0, 125).addBox(2.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+		feet2.setTextureOffset(0, 125).addBox(-3.0F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+		feet2.setTextureOffset(0, 125).addBox(-0.5F, 1.0F, -9.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
 
 		scallop = new ModelRenderer(this);
 		scallop.setRotationPoint(-0.5F, -16.5F, -29.5F);
 		setRotationAngle(scallop, -0.5236F, 0.0F, 0.0F);
-		scallop.setTextureOffset(51, 0).addBox(-1.0F, -0.5F, -0.5F, 3.0F, 4.0F, 1.0F, 0.0F, false);
+		scallop.setTextureOffset(120, 123).addBox(-1.0F, -0.5F, -0.5F, 3.0F, 4.0F, 1.0F, 0.0F, false);
 
 		scallop1 = new ModelRenderer(this);
 		scallop1.setRotationPoint(2.5F, 0.0F, 2.0F);
 		scallop.addChild(scallop1);
 		setRotationAngle(scallop1, -0.3491F, 0.0F, 0.0F);
-		scallop1.setTextureOffset(40, 33).addBox(-0.5F, -1.5F, -0.5F, 2.0F, 3.0F, 1.0F, 0.0F, false);
+		scallop1.setTextureOffset(122, 124).addBox(-0.5F, -1.5F, -0.5F, 2.0F, 3.0F, 1.0F, 0.0F, false);
 
 		scallop2 = new ModelRenderer(this);
 		scallop2.setRotationPoint(-2.5F, 0.0F, 2.0F);
 		scallop.addChild(scallop2);
 		setRotationAngle(scallop2, -0.3491F, 0.0F, 0.0F);
-		scallop2.setTextureOffset(39, 9).addBox(-0.5F, -1.5F, -0.5F, 2.0F, 3.0F, 1.0F, 0.0F, false);
+		scallop2.setTextureOffset(122, 124).addBox(-0.5F, -1.5F, -0.5F, 2.0F, 3.0F, 1.0F, 0.0F, false);
 	}
 
 	@Override

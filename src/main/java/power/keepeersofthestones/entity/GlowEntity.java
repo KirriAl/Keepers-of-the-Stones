@@ -62,7 +62,7 @@ public class GlowEntity extends PowerModElements.ModElement {
 			.build("glow").setRegistryName("glow");
 
 	public GlowEntity(PowerModElements instance) {
-		super(instance, 303);
+		super(instance, 334);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new GlowRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

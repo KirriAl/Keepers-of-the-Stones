@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.world.biome;
 
+import power.keepeersofthestones.entity.PterodactylEntity;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -37,7 +38,7 @@ public class CretaceousPineForestBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public CretaceousPineForestBiome(PowerModElements instance) {
-		super(instance, 808);
+		super(instance, 753);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
@@ -73,6 +74,7 @@ public class CretaceousPineForestBiome extends PowerModElements.ModElement {
 				DefaultBiomeFeatures.withFossils(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
 				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.RABBIT, 20, 2, 3));
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(PterodactylEntity.entity, 20, 1, 1));
 				biome = new Biome.Builder().precipitation(Biome.RainType.SNOW).category(Biome.Category.ICY).depth(0.3f).scale(0.5f).temperature(-0.5f)
 						.downfall(0.4f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();

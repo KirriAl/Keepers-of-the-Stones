@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "magnet_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Magnet Stone",
     "rarity": "COMMON",
     "creativeTab": {
@@ -31,9 +29,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "MagnetStoneUse"
-    },
     "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 4,

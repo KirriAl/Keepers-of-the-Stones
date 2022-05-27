@@ -32,7 +32,7 @@ public class TeleportationBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TeleportationBatteryItem(PowerModElements instance) {
-		super(instance, 76);
+		super(instance, 72);
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class EarthItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public EarthItem(PowerModElements instance) {
-		super(instance, 121);
+		super(instance, 152);
 	}
 
 	@Override

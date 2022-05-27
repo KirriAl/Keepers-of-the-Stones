@@ -17,7 +17,7 @@ public class MercuryStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MercuryStoneItem(PowerModElements instance) {
-		super(instance, 856);
+		super(instance, 786);
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class LightningItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public LightningItem(PowerModElements instance) {
-		super(instance, 232);
+		super(instance, 263);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class RainStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public RainStoneItem(PowerModElements instance) {
-		super(instance, 20);
+		super(instance, 18);
 	}
 
 	@Override

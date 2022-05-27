@@ -13,6 +13,7 @@ import power.keepeersofthestones.item.ShadowStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
+import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.LightningStoneItem;
 import power.keepeersofthestones.item.LightStoneItem;
@@ -30,12 +31,12 @@ import power.keepeersofthestones.item.BloodStoneItem;
 import power.keepeersofthestones.item.AnimalsStoneItem;
 import power.keepeersofthestones.item.AmberStoneItem;
 import power.keepeersofthestones.item.AirStoneItem;
-import power.keepeersofthestones.gui.SoundEmitateChoiceGui;
 import power.keepeersofthestones.gui.EBWaterGui;
 import power.keepeersofthestones.gui.EBVacuumGui;
 import power.keepeersofthestones.gui.EBTornadoGui;
 import power.keepeersofthestones.gui.EBTimeGui;
 import power.keepeersofthestones.gui.EBTeleportationGui;
+import power.keepeersofthestones.gui.EBTechnologyGui;
 import power.keepeersofthestones.gui.EBSunGui;
 import power.keepeersofthestones.gui.EBSpaceGui;
 import power.keepeersofthestones.gui.EBSoundGui;
@@ -43,6 +44,7 @@ import power.keepeersofthestones.gui.EBShadowGui;
 import power.keepeersofthestones.gui.EBRainGui;
 import power.keepeersofthestones.gui.EBOceanGui;
 import power.keepeersofthestones.gui.EBMoonGui;
+import power.keepeersofthestones.gui.EBMistGui;
 import power.keepeersofthestones.gui.EBMetalGui;
 import power.keepeersofthestones.gui.EBLightningGui;
 import power.keepeersofthestones.gui.EBLightGui;
@@ -616,12 +618,12 @@ public class OpenBookProcedure {
 					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
 						public ITextComponent getDisplayName() {
-							return new StringTextComponent("SoundEmitateChoice");
+							return new StringTextComponent("EBTechnology");
 						}
 
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-							return new SoundEmitateChoiceGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new EBTechnologyGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
@@ -679,6 +681,25 @@ public class OpenBookProcedure {
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
 							return new EBAmberGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MistStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMist");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMistGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

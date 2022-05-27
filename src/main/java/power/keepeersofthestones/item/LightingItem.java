@@ -27,7 +27,7 @@ public class LightingItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LightingItem(PowerModElements instance) {
-		super(instance, 316);
+		super(instance, 347);
 	}
 
 	@Override

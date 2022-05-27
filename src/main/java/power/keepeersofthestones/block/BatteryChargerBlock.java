@@ -82,7 +82,7 @@ public class BatteryChargerBlock extends PowerModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public BatteryChargerBlock(PowerModElements instance) {
-		super(instance, 78);
+		super(instance, 39);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -126,9 +126,7 @@ public class BatteryChargerBlock extends PowerModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 6, 16)
-
-			)
+			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 6, 16))
 
 					.withOffset(offset.x, offset.y, offset.z);
 		}

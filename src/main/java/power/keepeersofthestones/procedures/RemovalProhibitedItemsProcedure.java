@@ -60,9 +60,11 @@ import power.keepeersofthestones.item.PlasmaBallItem;
 import power.keepeersofthestones.item.PieceOfEarthItem;
 import power.keepeersofthestones.item.OceanSwordItem;
 import power.keepeersofthestones.item.OceanItem;
+import power.keepeersofthestones.item.ObscurityItem;
 import power.keepeersofthestones.item.MoonWitherItem;
 import power.keepeersofthestones.item.MoonStonesItem;
 import power.keepeersofthestones.item.MoonAxeItem;
+import power.keepeersofthestones.item.MistyFanItem;
 import power.keepeersofthestones.item.MistItem;
 import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
@@ -80,6 +82,7 @@ import power.keepeersofthestones.item.LavaItem;
 import power.keepeersofthestones.item.LavaHoleItem;
 import power.keepeersofthestones.item.LavaHammerItem;
 import power.keepeersofthestones.item.LavaBallItem;
+import power.keepeersofthestones.item.KunaiItem;
 import power.keepeersofthestones.item.IronShieldItem;
 import power.keepeersofthestones.item.IronGolemCreateItem;
 import power.keepeersofthestones.item.IceSpearItem;
@@ -1377,6 +1380,21 @@ public class RemovalProhibitedItemsProcedure {
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(MistItem.boots);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(ObscurityItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MistyFanItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(KunaiItem.block);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}

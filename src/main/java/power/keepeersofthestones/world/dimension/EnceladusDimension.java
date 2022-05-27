@@ -28,7 +28,7 @@ import com.google.common.collect.ImmutableSet;
 @PowerModElements.ModElement.Tag
 public class EnceladusDimension extends PowerModElements.ModElement {
 	public EnceladusDimension(PowerModElements instance) {
-		super(instance, 852);
+		super(instance, 35);
 	}
 
 	@Override

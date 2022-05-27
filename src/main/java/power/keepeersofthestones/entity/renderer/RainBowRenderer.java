@@ -35,7 +35,7 @@ public class RainBowRenderer {
 
 	@OnlyIn(Dist.CLIENT)
 	public static class CustomRender extends EntityRenderer<RainBowItem.ArrowCustomEntity> {
-		private static final ResourceLocation texture = new ResourceLocation("power:textures/magic_arrow.png");
+		private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/magic_arrow.png");
 
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);

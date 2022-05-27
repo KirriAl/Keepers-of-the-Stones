@@ -28,7 +28,7 @@ public class ExplosionStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ExplosionStoneItem(PowerModElements instance) {
-		super(instance, 25);
+		super(instance, 23);
 	}
 
 	@Override

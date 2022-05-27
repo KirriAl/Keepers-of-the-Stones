@@ -16,7 +16,7 @@ public class CrystalDaggerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public CrystalDaggerItem(PowerModElements instance) {
-		super(instance, 244);
+		super(instance, 275);
 	}
 
 	@Override

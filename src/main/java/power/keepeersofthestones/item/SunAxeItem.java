@@ -16,7 +16,7 @@ public class SunAxeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SunAxeItem(PowerModElements instance) {
-		super(instance, 351);
+		super(instance, 382);
 	}
 
 	@Override
