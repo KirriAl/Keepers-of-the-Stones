@@ -1,8 +1,8 @@
 
 package power.keepeersofthestones.client.gui;
 
-import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
-import power.keepeersofthestones.network.SoundEmitateChoiceButtonMessage;
+import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
+import power.keepeersofthestones.network.SoundImitateChoiceButtonMessage;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.Level;
@@ -20,13 +20,13 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class SoundEmitateChoiceScreen extends AbstractContainerScreen<SoundEmitateChoiceMenu> {
-	private final static HashMap<String, Object> guistate = SoundEmitateChoiceMenu.guistate;
+public class SoundImitateChoiceScreen extends AbstractContainerScreen<SoundImitateChoiceMenu> {
+	private final static HashMap<String, Object> guistate = SoundImitateChoiceMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 
-	public SoundEmitateChoiceScreen(SoundEmitateChoiceMenu container, Inventory inventory, Component text) {
+	public SoundImitateChoiceScreen(SoundImitateChoiceMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -37,7 +37,7 @@ public class SoundEmitateChoiceScreen extends AbstractContainerScreen<SoundEmita
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/sound_emitate_choice.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/sound_imitate_choice.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -88,22 +88,22 @@ public class SoundEmitateChoiceScreen extends AbstractContainerScreen<SoundEmita
 		this.addRenderableWidget(
 				new Button(this.leftPos + 73, this.topPos + 25, 60, 20, new TranslatableComponent("power.sound_emitate.creeper.text"), e -> {
 					if (true) {
-						PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceButtonMessage(0, x, y, z));
-						SoundEmitateChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
+						PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(0, x, y, z));
+						SoundImitateChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
 				new Button(this.leftPos + 73, this.topPos + 79, 55, 20, new TranslatableComponent("power.sound_emitate.zombie.text"), e -> {
 					if (true) {
-						PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceButtonMessage(1, x, y, z));
-						SoundEmitateChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(1, x, y, z));
+						SoundImitateChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
 				new Button(this.leftPos + 73, this.topPos + 52, 65, 20, new TranslatableComponent("power.sound_emitate.skeleton.text"), e -> {
 					if (true) {
-						PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceButtonMessage(2, x, y, z));
-						SoundEmitateChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(2, x, y, z));
+						SoundImitateChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
 	}

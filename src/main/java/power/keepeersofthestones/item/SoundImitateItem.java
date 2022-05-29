@@ -13,8 +13,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-public class SoundEmitateItem extends Item {
-	public SoundEmitateItem() {
+public class SoundImitateItem extends Item {
+	public SoundImitateItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 

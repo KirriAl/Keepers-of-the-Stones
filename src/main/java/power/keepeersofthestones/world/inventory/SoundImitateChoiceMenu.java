@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class SoundEmitateChoiceMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class SoundImitateChoiceMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -27,8 +27,8 @@ public class SoundEmitateChoiceMenu extends AbstractContainerMenu implements Sup
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public SoundEmitateChoiceMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.SOUND_EMITATE_CHOICE, id);
+	public SoundImitateChoiceMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(PowerModMenus.SOUND_IMITATE_CHOICE, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

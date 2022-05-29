@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
+import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
 import power.keepeersofthestones.procedures.EmitateZombieProcedure;
 import power.keepeersofthestones.procedures.EmitateSkeletonProcedure;
 import power.keepeersofthestones.procedures.EmitateCreeperProcedure;
@@ -21,31 +21,31 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SoundEmitateChoiceButtonMessage {
+public class SoundImitateChoiceButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public SoundEmitateChoiceButtonMessage(FriendlyByteBuf buffer) {
+	public SoundImitateChoiceButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public SoundEmitateChoiceButtonMessage(int buttonID, int x, int y, int z) {
+	public SoundImitateChoiceButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(SoundEmitateChoiceButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(SoundImitateChoiceButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(SoundEmitateChoiceButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(SoundImitateChoiceButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -60,7 +60,7 @@ public class SoundEmitateChoiceButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = SoundEmitateChoiceMenu.guistate;
+		HashMap guistate = SoundImitateChoiceMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
@@ -80,7 +80,7 @@ public class SoundEmitateChoiceButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SoundEmitateChoiceButtonMessage.class, SoundEmitateChoiceButtonMessage::buffer,
-				SoundEmitateChoiceButtonMessage::new, SoundEmitateChoiceButtonMessage::handler);
+		PowerMod.addNetworkMessage(SoundImitateChoiceButtonMessage.class, SoundImitateChoiceButtonMessage::buffer,
+				SoundImitateChoiceButtonMessage::new, SoundImitateChoiceButtonMessage::handler);
 	}
 }

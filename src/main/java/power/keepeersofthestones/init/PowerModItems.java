@@ -61,7 +61,7 @@ import power.keepeersofthestones.item.SpaceAtlasItem;
 import power.keepeersofthestones.item.SoundSwordItem;
 import power.keepeersofthestones.item.SoundStoneItem;
 import power.keepeersofthestones.item.SoundItem;
-import power.keepeersofthestones.item.SoundEmitateItem;
+import power.keepeersofthestones.item.SoundImitateItem;
 import power.keepeersofthestones.item.SoundBatteryItem;
 import power.keepeersofthestones.item.SoundBarrierItem;
 import power.keepeersofthestones.item.SnowGolemCreatorItem;
@@ -431,7 +431,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ACUSTICAL_EXPLODE = REGISTRY.register("acustical_explode", () -> new AcusticalExplodeItem());
 	public static final RegistryObject<Item> SOUND_BARRIER_BLOCK = block(PowerModBlocks.SOUND_BARRIER_BLOCK, null);
 	public static final RegistryObject<Item> SOUND_BARRIER = REGISTRY.register("sound_barrier", () -> new SoundBarrierItem());
-	public static final RegistryObject<Item> SOUND_EMITATE = REGISTRY.register("sound_emitate", () -> new SoundEmitateItem());
 	public static final RegistryObject<Item> CLUSTER_SHARP = REGISTRY.register("cluster_sharp", () -> new ClusterSharpItem());
 	public static final RegistryObject<Item> CLUSTER_BLOCK = block(PowerModBlocks.CLUSTER_BLOCK, null);
 	public static final RegistryObject<Item> CRYSTAL_SHIELD_BLOCK = block(PowerModBlocks.CRYSTAL_SHIELD_BLOCK, null);
@@ -656,6 +655,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> OBSCURITY = REGISTRY.register("obscurity", () -> new ObscurityItem());
 	public static final RegistryObject<Item> KUNAI = REGISTRY.register("kunai", () -> new KunaiItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
+	public static final RegistryObject<Item> SOUND_IMITATE = REGISTRY.register("sound_imitate", () -> new SoundImitateItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
