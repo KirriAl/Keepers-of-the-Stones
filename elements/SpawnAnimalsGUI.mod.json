@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 176,
+    "width": 220,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Choose an animal to summon",
+          "text": "<t:power.spawn_animals.label.text>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Choose an animal to summon",
+          "name": "<t:power.spawn_animals.label.text>",
           "x": 141,
           "y": 44
         }
@@ -26,13 +26,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Wolf",
+          "text": "<t:power.spawn_animals.wolf.text>",
           "onClick": {
             "name": "SummonWolf"
           },
           "width": 46,
           "height": 20,
-          "name": "Wolf",
+          "name": "<t:power.spawn_animals.wolf.text>",
           "x": 141,
           "y": 62
         }
@@ -40,13 +40,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Chicken",
+          "text": "<t:power.spawn_animals.chicken.text>",
           "onClick": {
             "name": "SummonChicken"
           },
           "width": 61,
           "height": 20,
-          "name": "Chicken",
+          "name": "<t:power.spawn_animals.chicken.text>",
           "x": 204,
           "y": 62
         }
@@ -54,27 +54,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Cow",
-          "onClick": {
-            "name": "SummonCow"
-          },
-          "width": 40,
-          "height": 20,
-          "name": "Cow",
-          "x": 141,
-          "y": 89
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "Cat",
+          "text": "<t:power.spawn_animals.cat.text>",
           "onClick": {
             "name": "SummonCat"
           },
           "width": 40,
           "height": 20,
-          "name": "Cat",
+          "name": "<t:power.spawn_animals.cat.text>",
           "x": 204,
           "y": 89
         }
@@ -82,13 +68,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Horse",
+          "text": "<t:power.spawn_animals.horse.text>",
           "onClick": {
             "name": "SummonHorse"
           },
           "width": 51,
           "height": 20,
-          "name": "Horse",
+          "name": "<t:power.spawn_animals.horse.text>",
           "x": 141,
           "y": 116
         }
@@ -96,15 +82,29 @@
       {
         "type": "button",
         "data": {
-          "text": "Sheep",
+          "text": "<t:power.spawn_animals.sheep.text>",
           "onClick": {
             "name": "SummonSheep"
           },
           "width": 51,
           "height": 20,
-          "name": "Sheep",
+          "name": "<t:power.spawn_animals.sheep.text>",
           "x": 204,
           "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<t:power.spawn_animals.cow.text>",
+          "onClick": {
+            "name": "SummonCow"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "<t:power.spawn_animals.cow.text>",
+          "x": 141,
+          "y": 89
         }
       }
     ],

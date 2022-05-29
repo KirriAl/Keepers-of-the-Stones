@@ -77,19 +77,19 @@ public class SpawnAnimalsGUIButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			SummonCowProcedure.execute(world, x, y, z, entity);
+			SummonCatProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			SummonCatProcedure.execute(world, x, y, z, entity);
+			SummonHorseProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			SummonHorseProcedure.execute(world, x, y, z, entity);
+			SummonSheepProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 5) {
 
-			SummonSheepProcedure.execute(world, x, y, z, entity);
+			SummonCowProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

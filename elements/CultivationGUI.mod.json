@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Select a plant to get",
+          "text": "<t:power.cultivation.label.text>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Select a plant to get",
+          "name": "<t:power.cultivation.label.text>",
           "x": 150,
           "y": 43
         }
@@ -26,13 +26,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Water lily",
+          "text": "<t:power.cultivation.water_lily.text>",
           "onClick": {
             "name": "GetWaterLily"
           },
           "width": 77,
           "height": 20,
-          "name": "Water lily",
+          "name": "<t:power.cultivation.water_lily.text>",
           "x": 276,
           "y": 89
         }
@@ -40,13 +40,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Oak Sapling",
+          "text": "<t:power.cultivation.oak.text>",
           "onClick": {
             "name": "GetOakSapling"
           },
           "width": 77,
           "height": 20,
-          "name": "Oak Sapling",
+          "name": "<t:power.cultivation.oak.text>",
           "x": 33,
           "y": 62
         }
@@ -54,13 +54,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Vine",
+          "text": "<t:power.cultivation.vine.text>",
           "onClick": {
             "name": "GetVine"
           },
           "width": 77,
           "height": 20,
-          "name": "Vine",
+          "name": "<t:power.cultivation.vine.text>",
           "x": 195,
           "y": 89
         }
@@ -68,13 +68,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Birch Sapling",
+          "text": "<t:power.cultivation.birch.text>",
           "onClick": {
             "name": "GetBirchSapling"
           },
           "width": 77,
           "height": 20,
-          "name": "Birch Sapling",
+          "name": "<t:power.cultivation.birch.text>",
           "x": 114,
           "y": 62
         }
@@ -82,13 +82,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Spruce Sapling",
+          "text": "<t:power.cultivation.spruce.text>",
           "onClick": {
             "name": "GetSpruceSapling"
           },
           "width": 77,
           "height": 20,
-          "name": "Spruce Sapling",
+          "name": "<t:power.cultivation.spruce.text>",
           "x": 276,
           "y": 62
         }
@@ -96,13 +96,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Acacia Sapling",
+          "text": "<t:power.cultivation.acacia.text>",
           "onClick": {
             "name": "GetAcaciaSapling"
           },
           "width": 77,
           "height": 20,
-          "name": "Acacia Sapling",
+          "name": "<t:power.cultivation.acacia.text>",
           "x": 195,
           "y": 62
         }
@@ -110,13 +110,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Dark sapling",
+          "text": "<t:power.cultivation.dark_oak.text>",
           "onClick": {
             "name": "GetDarkSapling"
           },
           "width": 77,
           "height": 20,
-          "name": "Dark sapling",
+          "name": "<t:power.cultivation.dark_oak.text>",
           "x": 33,
           "y": 89
         }
@@ -124,13 +124,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Jungle sapling",
+          "text": "<t:power.cultivation.jungle_tree.text>",
           "onClick": {
             "name": "GetJungleSapling"
           },
           "width": 77,
           "height": 20,
-          "name": "Jungle sapling",
+          "name": "<t:power.cultivation.jungle_tree.text>",
           "x": 114,
           "y": 89
         }
@@ -138,13 +138,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Wheat",
+          "text": "<t:power.cultivation.wheat.text>",
           "onClick": {
             "name": "GetWheat"
           },
           "width": 77,
           "height": 20,
-          "name": "Wheat",
+          "name": "<t:power.cultivation.wheat.text>",
           "x": 33,
           "y": 116
         }
@@ -152,13 +152,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Potato",
+          "text": "<t:power.cultivation.potato.text>",
           "onClick": {
             "name": "GetPotato"
           },
           "width": 77,
           "height": 20,
-          "name": "Potato",
+          "name": "<t:power.cultivation.potato.text>",
           "x": 114,
           "y": 116
         }
@@ -166,13 +166,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Carrot",
+          "text": "<t:power.cultivation.carrot.text>",
           "onClick": {
             "name": "GetCarrot"
           },
           "width": 77,
           "height": 20,
-          "name": "Carrot",
+          "name": "<t:power.cultivation.carrot.text>",
           "x": 195,
           "y": 116
         }
@@ -180,13 +180,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Beetroot",
+          "text": "<t:power.cultivation.beetroot.text>",
           "onClick": {
             "name": "GetBeetroot"
           },
           "width": 77,
           "height": 20,
-          "name": "Beetroot",
+          "name": "<t:power.cultivation.beetroot.text>",
           "x": 276,
           "y": 116
         }
@@ -194,13 +194,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Melon",
+          "text": "<t:power.cultivation.melon.text>",
           "onClick": {
             "name": "GetMelon"
           },
           "width": 77,
           "height": 20,
-          "name": "Melon",
+          "name": "<t:power.cultivation.melon.text>",
           "x": 33,
           "y": 143
         }
@@ -208,13 +208,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Pumpkin",
+          "text": "<t:power.cultivation.pumpkin.text>",
           "onClick": {
             "name": "GetPumpkin"
           },
           "width": 77,
           "height": 20,
-          "name": "Pumpkin",
+          "name": "<t:power.cultivation.pumpkin.text>",
           "x": 114,
           "y": 143
         }
@@ -222,13 +222,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Sugar Cane",
+          "text": "<t:power.cultivation.sugar_cane.text>",
           "onClick": {
             "name": "GetSugarCane"
           },
           "width": 77,
           "height": 20,
-          "name": "Sugar Cane",
+          "name": "<t:power.cultivation.sugar_cane.text>",
           "x": 195,
           "y": 143
         }
@@ -236,13 +236,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Bamboo",
+          "text": "<t:power.cultivation.bamboo.text>",
           "onClick": {
             "name": "GetBamboo"
           },
           "width": 77,
           "height": 20,
-          "name": "Bamboo",
+          "name": "<t:power.cultivation.bamboo.text>",
           "x": 276,
           "y": 143
         }

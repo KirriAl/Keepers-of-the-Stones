@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -33,7 +33,7 @@ public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsG
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
+		this.imageWidth = 220;
 		this.imageHeight = 166;
 	}
 
@@ -72,7 +72,7 @@ public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsG
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose an animal to summon", 15, 7, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("power.spawn_animals.label.text"), 37, 7, -12829636);
 	}
 
 	@Override
@@ -85,41 +85,47 @@ public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsG
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 15, this.topPos + 25, 46, 20, new TextComponent("Wolf"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(0, x, y, z));
-				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 78, this.topPos + 25, 61, 20, new TextComponent("Chicken"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(1, x, y, z));
-				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 15, this.topPos + 52, 40, 20, new TextComponent("Cow"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(2, x, y, z));
-				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 78, this.topPos + 52, 40, 20, new TextComponent("Cat"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(3, x, y, z));
-				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 15, this.topPos + 79, 51, 20, new TextComponent("Horse"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(4, x, y, z));
-				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 78, this.topPos + 79, 51, 20, new TextComponent("Sheep"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(5, x, y, z));
-				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 37, this.topPos + 25, 46, 20, new TranslatableComponent("power.spawn_animals.wolf.text"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(0, x, y, z));
+						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 100, this.topPos + 25, 61, 20, new TranslatableComponent("power.spawn_animals.chicken.text"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(1, x, y, z));
+						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 100, this.topPos + 52, 40, 20, new TranslatableComponent("power.spawn_animals.cat.text"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(2, x, y, z));
+						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 37, this.topPos + 79, 51, 20, new TranslatableComponent("power.spawn_animals.horse.text"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(3, x, y, z));
+						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 100, this.topPos + 79, 51, 20, new TranslatableComponent("power.spawn_animals.sheep.text"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(4, x, y, z));
+						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 37, this.topPos + 52, 56, 20, new TranslatableComponent("power.spawn_animals.cow.text"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(5, x, y, z));
+						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}));
 	}
 }
