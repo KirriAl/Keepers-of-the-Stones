@@ -8,7 +8,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -75,7 +74,7 @@ public class BatteryCreateGUIScreen extends AbstractContainerScreen<BatteryCreat
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("power.battery_charger.label.text"), 42, 7, -12829636);
+		this.font.draw(poseStack, "Charging the battery", 42, 7, -12829636);
 		this.font.draw(poseStack, "" + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				BlockEntity BlockEntity = world.getBlockEntity(pos);

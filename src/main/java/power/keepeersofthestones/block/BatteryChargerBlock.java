@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
@@ -67,8 +68,8 @@ public class BatteryChargerBlock extends Block
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-
-		return box(0, 0, 0, 16, 6, 16);
+		Vec3 offset = state.getOffset(world, pos);
+		return box(0, 0, 0, 16, 6, 16).move(offset.x, offset.y, offset.z);
 	}
 
 	@Override

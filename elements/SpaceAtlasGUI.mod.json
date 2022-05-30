@@ -23,12 +23,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:power.space_atlas.label.text>",
+          "text": "Atlas of Space Travel",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "<t:power.space_atlas.label.text>",
+          "name": "Atlas of Space Travel",
           "x": 57,
           "y": 17
         }
@@ -36,13 +36,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.space_atlas.moon.text>",
+          "text": "Moon",
           "onClick": {
             "name": "MoonOnMe"
           },
           "width": 46,
           "height": 20,
-          "name": "<t:power.space_atlas.moon.text>",
+          "name": "Moon",
           "x": 42,
           "y": 62
         }
@@ -50,13 +50,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.space_atlas.earth.text>",
+          "text": "Earth",
           "onClick": {
             "name": "EarthOnMe"
           },
           "width": 51,
           "height": 20,
-          "name": "<t:power.space_atlas.earth.text>",
+          "name": "Earth",
           "x": 42,
           "y": 35
         }
@@ -64,13 +64,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.space_atlas.mars.text>",
+          "text": "Mars",
           "onClick": {
             "name": "MarsOnMe"
           },
           "width": 46,
           "height": 20,
-          "name": "<t:power.space_atlas.mars.text>",
+          "name": "Mars",
           "x": 42,
           "y": 89
         }
@@ -78,13 +78,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.space_atlas.venus.text>",
+          "text": "Venus",
           "onClick": {
             "name": "VenusOnMe"
           },
           "width": 51,
           "height": 20,
-          "name": "<t:power.space_atlas.venus.text>",
+          "name": "Venus",
           "x": 42,
           "y": 116
         }
@@ -92,13 +92,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.space_atlas.enceladus.text>",
+          "text": "Enceladus",
           "onClick": {
             "name": "EnceladusOnMe"
           },
           "width": 72,
           "height": 20,
-          "name": "<t:power.space_atlas.enceladus.text>",
+          "name": "Enceladus",
           "x": 42,
           "y": 140
         }

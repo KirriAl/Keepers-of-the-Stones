@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.Fluids;
@@ -55,8 +56,8 @@ public class StoneMagicBoxBlock extends Block implements SimpleWaterloggedBlock
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-
-		return box(3, 0, 4, 13, 6, 12);
+		Vec3 offset = state.getOffset(world, pos);
+		return box(3, 0, 4, 13, 6, 12).move(offset.x, offset.y, offset.z);
 	}
 
 	@Override

@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 300,
+    "width": 255,
     "height": 211,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:power.building.label.text>",
+          "text": "Select the structure you want to place",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:power.building.label.text>",
+          "name": "Select the structure you want to place",
           "x": 114,
           "y": 26
         }
@@ -26,13 +26,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.building.library.text>",
+          "text": "Library",
           "onClick": {
             "name": "LibraryBuild"
           },
           "width": 61,
           "height": 20,
-          "name": "<t:power.building.library.text>",
+          "name": "Library",
           "x": 105,
           "y": 71
         }
@@ -40,13 +40,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.building.blacksmith.text>",
+          "text": "Blacksmith",
           "onClick": {
             "name": "BlacksmithBuild"
           },
           "width": 77,
           "height": 20,
-          "name": "<t:power.building.blacksmith.text>",
+          "name": "Blacksmith",
           "x": 204,
           "y": 44
         }
@@ -54,13 +54,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.building.butcher_shop.text>",
+          "text": "Butcher Shop",
           "onClick": {
             "name": "ButcherShopBuild"
           },
           "width": 87,
           "height": 20,
-          "name": "<t:power.building.butcher_shop.text>",
+          "name": "Butcher Shop",
           "x": 105,
           "y": 44
         }
@@ -68,13 +68,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.building.streetlight.text>",
+          "text": "Streetlight",
           "onClick": {
             "name": "StreetlightBuild"
           },
           "width": 82,
           "height": 20,
-          "name": "<t:power.building.streetlight.text>",
+          "name": "Streetlight",
           "x": 177,
           "y": 71
         }

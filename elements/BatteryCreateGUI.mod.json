@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:power.battery_charger.label.text>",
+          "text": "Charging the battery",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:power.battery_charger.label.text>",
+          "name": "Charging the battery",
           "x": 168,
           "y": 44
         }
