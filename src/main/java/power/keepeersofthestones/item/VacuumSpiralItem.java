@@ -50,7 +50,7 @@ public class VacuumSpiralItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_vacuum_spiral").setRegistryName("projectile_vacuum_spiral");
 
 	public VacuumSpiralItem(PowerModElements instance) {
-		super(instance, 371);
+		super(instance, 373);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new VacuumSpiralRenderer.ModelRegisterHandler());
 	}
 

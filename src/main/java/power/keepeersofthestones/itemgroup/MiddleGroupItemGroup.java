@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @PowerModElements.ModElement.Tag
 public class MiddleGroupItemGroup extends PowerModElements.ModElement {
 	public MiddleGroupItemGroup(PowerModElements instance) {
-		super(instance, 536);
+		super(instance, 537);
 	}
 
 	@Override

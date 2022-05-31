@@ -18,7 +18,7 @@ public class DamagedLavaStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public DamagedLavaStoneItem(PowerModElements instance) {
-		super(instance, 88);
+		super(instance, 90);
 	}
 
 	@Override

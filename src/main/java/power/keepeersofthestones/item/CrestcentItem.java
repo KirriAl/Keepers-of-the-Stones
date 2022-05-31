@@ -29,7 +29,7 @@ public class CrestcentItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public CrestcentItem(PowerModElements instance) {
-		super(instance, 468);
+		super(instance, 470);
 	}
 
 	@Override

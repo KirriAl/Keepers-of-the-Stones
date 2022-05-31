@@ -25,7 +25,7 @@ public class VacuumSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public VacuumSwordItem(PowerModElements instance) {
-		super(instance, 370);
+		super(instance, 372);
 	}
 
 	@Override

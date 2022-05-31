@@ -58,7 +58,7 @@ public class BluePortalBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public BluePortalBlock(PowerModElements instance) {
-		super(instance, 623);
+		super(instance, 624);
 	}
 
 	@Override

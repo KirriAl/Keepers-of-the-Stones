@@ -50,7 +50,7 @@ public class VacuumWebItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_vacuum_web").setRegistryName("projectile_vacuum_web");
 
 	public VacuumWebItem(PowerModElements instance) {
-		super(instance, 374);
+		super(instance, 376);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new VacuumWebRenderer.ModelRegisterHandler());
 	}
 

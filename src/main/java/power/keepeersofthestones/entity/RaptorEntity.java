@@ -50,7 +50,7 @@ public class RaptorEntity extends PowerModElements.ModElement {
 			.build("raptor").setRegistryName("raptor");
 
 	public RaptorEntity(PowerModElements instance) {
-		super(instance, 842);
+		super(instance, 42);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RaptorRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

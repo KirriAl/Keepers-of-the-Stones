@@ -50,7 +50,7 @@ public class PlasmaBallItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_plasma_ball").setRegistryName("projectile_plasma_ball");
 
 	public PlasmaBallItem(PowerModElements instance) {
-		super(instance, 187);
+		super(instance, 189);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PlasmaBallRenderer.ModelRegisterHandler());
 	}
 

@@ -50,7 +50,7 @@ public class IceSharpItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_ice_sharp").setRegistryName("projectile_ice_sharp");
 
 	public IceSharpItem(PowerModElements instance) {
-		super(instance, 178);
+		super(instance, 180);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new IceSharpRenderer.ModelRegisterHandler());
 	}
 

@@ -29,7 +29,7 @@ public class WaterItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public WaterItem(PowerModElements instance) {
-		super(instance, 144);
+		super(instance, 146);
 	}
 
 	@Override

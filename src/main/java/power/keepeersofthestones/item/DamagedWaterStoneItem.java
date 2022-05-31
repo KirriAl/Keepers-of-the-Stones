@@ -18,7 +18,7 @@ public class DamagedWaterStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public DamagedWaterStoneItem(PowerModElements instance) {
-		super(instance, 81);
+		super(instance, 83);
 	}
 
 	@Override

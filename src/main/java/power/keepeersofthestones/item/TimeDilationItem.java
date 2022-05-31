@@ -50,7 +50,7 @@ public class TimeDilationItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_time_dilation").setRegistryName("projectile_time_dilation");
 
 	public TimeDilationItem(PowerModElements instance) {
-		super(instance, 560);
+		super(instance, 561);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TimeDilationRenderer.ModelRegisterHandler());
 	}
 

@@ -57,7 +57,7 @@ public class PlesiosaurusEntity extends PowerModElements.ModElement {
 			.size(1.5f, 2.5f)).build("plesiosaurus").setRegistryName("plesiosaurus");
 
 	public PlesiosaurusEntity(PowerModElements instance) {
-		super(instance, 843);
+		super(instance, 43);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PlesiosaurusRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

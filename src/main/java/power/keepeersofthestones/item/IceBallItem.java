@@ -52,7 +52,7 @@ public class IceBallItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_ice_ball").setRegistryName("projectile_ice_ball");
 
 	public IceBallItem(PowerModElements instance) {
-		super(instance, 171);
+		super(instance, 173);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new IceBallRenderer.ModelRegisterHandler());
 	}
 

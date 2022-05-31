@@ -58,7 +58,7 @@ public class IceSpearItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_ice_spear").setRegistryName("projectile_ice_spear");
 
 	public IceSpearItem(PowerModElements instance) {
-		super(instance, 644);
+		super(instance, 645);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new IceSpearRenderer.ModelRegisterHandler());
 	}
 

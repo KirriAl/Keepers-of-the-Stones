@@ -77,7 +77,7 @@ public class DinoeraDimension extends PowerModElements.ModElement {
 	public static final CustomPortalBlock portal = null;
 
 	public DinoeraDimension(PowerModElements instance) {
-		super(instance, 43);
+		super(instance, 45);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

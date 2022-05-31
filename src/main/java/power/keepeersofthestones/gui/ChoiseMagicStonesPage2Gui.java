@@ -49,7 +49,7 @@ public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public ChoiseMagicStonesPage2Gui(PowerModElements instance) {
-		super(instance, 450);
+		super(instance, 452);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

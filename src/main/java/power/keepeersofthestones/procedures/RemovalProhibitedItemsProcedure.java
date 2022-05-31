@@ -85,6 +85,7 @@ import power.keepeersofthestones.item.LavaBallItem;
 import power.keepeersofthestones.item.KunaiItem;
 import power.keepeersofthestones.item.IronShieldItem;
 import power.keepeersofthestones.item.IronGolemCreateItem;
+import power.keepeersofthestones.item.IncreasePowerItem;
 import power.keepeersofthestones.item.IceSpearItem;
 import power.keepeersofthestones.item.IceShieldItem;
 import power.keepeersofthestones.item.IceSharpItem;
@@ -112,6 +113,7 @@ import power.keepeersofthestones.item.EarthItem;
 import power.keepeersofthestones.item.DestructionSphereItem;
 import power.keepeersofthestones.item.DestructionPowerItem;
 import power.keepeersofthestones.item.DestructionItem;
+import power.keepeersofthestones.item.CutterSwordItem;
 import power.keepeersofthestones.item.CultivationItem;
 import power.keepeersofthestones.item.CrystalShieldItem;
 import power.keepeersofthestones.item.CrystalItem;
@@ -1395,6 +1397,16 @@ public class RemovalProhibitedItemsProcedure {
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(KunaiItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(IncreasePowerItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(CutterSwordItem.block);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}

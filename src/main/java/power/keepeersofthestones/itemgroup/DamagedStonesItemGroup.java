@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @PowerModElements.ModElement.Tag
 public class DamagedStonesItemGroup extends PowerModElements.ModElement {
 	public DamagedStonesItemGroup(PowerModElements instance) {
-		super(instance, 796);
+		super(instance, 795);
 	}
 
 	@Override

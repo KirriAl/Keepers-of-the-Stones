@@ -50,7 +50,7 @@ public class WaterFlowItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_water_flow").setRegistryName("projectile_water_flow");
 
 	public WaterFlowItem(PowerModElements instance) {
-		super(instance, 133);
+		super(instance, 135);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new WaterFlowRenderer.ModelRegisterHandler());
 	}
 

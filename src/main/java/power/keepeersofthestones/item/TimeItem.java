@@ -29,7 +29,7 @@ public class TimeItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public TimeItem(PowerModElements instance) {
-		super(instance, 514);
+		super(instance, 515);
 	}
 
 	@Override

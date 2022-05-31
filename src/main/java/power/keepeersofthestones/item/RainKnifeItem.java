@@ -25,7 +25,7 @@ public class RainKnifeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public RainKnifeItem(PowerModElements instance) {
-		super(instance, 240);
+		super(instance, 242);
 	}
 
 	@Override

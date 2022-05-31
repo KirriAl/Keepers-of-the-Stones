@@ -25,7 +25,7 @@ public class ObscurityItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ObscurityItem(PowerModElements instance) {
-		super(instance, 797);
+		super(instance, 796);
 	}
 
 	@Override

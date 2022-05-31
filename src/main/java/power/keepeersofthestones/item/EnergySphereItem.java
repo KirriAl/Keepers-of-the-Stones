@@ -48,7 +48,7 @@ public class EnergySphereItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_energy_sphere").setRegistryName("projectile_energy_sphere");
 
 	public EnergySphereItem(PowerModElements instance) {
-		super(instance, 161);
+		super(instance, 163);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EnergySphereRenderer.ModelRegisterHandler());
 	}
 

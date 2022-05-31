@@ -77,7 +77,7 @@ public class OblivionDimension extends PowerModElements.ModElement {
 	public static final CustomPortalBlock portal = null;
 
 	public OblivionDimension(PowerModElements instance) {
-		super(instance, 45);
+		super(instance, 47);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

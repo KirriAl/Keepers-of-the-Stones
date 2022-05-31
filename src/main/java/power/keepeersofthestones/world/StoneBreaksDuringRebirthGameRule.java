@@ -14,7 +14,7 @@ public class StoneBreaksDuringRebirthGameRule extends PowerModElements.ModElemen
 			create(false));
 
 	public StoneBreaksDuringRebirthGameRule(PowerModElements instance) {
-		super(instance, 841);
+		super(instance, 840);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

@@ -48,7 +48,7 @@ public class RainBowItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_rain_bow").setRegistryName("projectile_rain_bow");
 
 	public RainBowItem(PowerModElements instance) {
-		super(instance, 277);
+		super(instance, 279);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RainBowRenderer.ModelRegisterHandler());
 	}
 

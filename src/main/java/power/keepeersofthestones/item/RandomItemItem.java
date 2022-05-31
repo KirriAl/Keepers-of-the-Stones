@@ -27,7 +27,7 @@ public class RandomItemItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public RandomItemItem(PowerModElements instance) {
-		super(instance, 413);
+		super(instance, 415);
 	}
 
 	@Override

@@ -50,7 +50,7 @@ public class DestructionSphereItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_destruction_sphere").setRegistryName("projectile_destruction_sphere");
 
 	public DestructionSphereItem(PowerModElements instance) {
-		super(instance, 646);
+		super(instance, 647);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new DestructionSphereRenderer.ModelRegisterHandler());
 	}
 

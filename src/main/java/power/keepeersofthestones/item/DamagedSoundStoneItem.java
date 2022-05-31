@@ -18,7 +18,7 @@ public class DamagedSoundStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public DamagedSoundStoneItem(PowerModElements instance) {
-		super(instance, 86);
+		super(instance, 88);
 	}
 
 	@Override

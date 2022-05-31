@@ -29,7 +29,7 @@ public class ShadowarmorItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public ShadowarmorItem(PowerModElements instance) {
-		super(instance, 467);
+		super(instance, 469);
 	}
 
 	@Override

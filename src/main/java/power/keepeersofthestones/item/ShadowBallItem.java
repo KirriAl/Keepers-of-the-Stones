@@ -50,7 +50,7 @@ public class ShadowBallItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_shadow_ball").setRegistryName("projectile_shadow_ball");
 
 	public ShadowBallItem(PowerModElements instance) {
-		super(instance, 357);
+		super(instance, 359);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadowBallRenderer.ModelRegisterHandler());
 	}
 

@@ -50,7 +50,7 @@ public class AmberStreaksItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_amber_streaks").setRegistryName("projectile_amber_streaks");
 
 	public AmberStreaksItem(PowerModElements instance) {
-		super(instance, 759);
+		super(instance, 758);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AmberStreaksRenderer.ModelRegisterHandler());
 	}
 

@@ -29,7 +29,7 @@ public class FireItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public FireItem(PowerModElements instance) {
-		super(instance, 139);
+		super(instance, 141);
 	}
 
 	@Override

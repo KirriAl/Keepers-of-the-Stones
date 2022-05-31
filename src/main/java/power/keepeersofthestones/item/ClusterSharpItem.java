@@ -50,7 +50,7 @@ public class ClusterSharpItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_cluster_sharp").setRegistryName("projectile_cluster_sharp");
 
 	public ClusterSharpItem(PowerModElements instance) {
-		super(instance, 213);
+		super(instance, 215);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ClusterSharpRenderer.ModelRegisterHandler());
 	}
 

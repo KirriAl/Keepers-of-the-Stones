@@ -50,7 +50,7 @@ public class TornadoCreateItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_tornado_create").setRegistryName("projectile_tornado_create");
 
 	public TornadoCreateItem(PowerModElements instance) {
-		super(instance, 248);
+		super(instance, 250);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TornadoCreateRenderer.ModelRegisterHandler());
 	}
 

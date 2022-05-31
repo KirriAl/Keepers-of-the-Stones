@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @PowerModElements.ModElement.Tag
 public class MagicBoxesItemGroup extends PowerModElements.ModElement {
 	public MagicBoxesItemGroup(PowerModElements instance) {
-		super(instance, 727);
+		super(instance, 728);
 	}
 
 	@Override

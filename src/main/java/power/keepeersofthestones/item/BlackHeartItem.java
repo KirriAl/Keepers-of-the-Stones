@@ -50,7 +50,7 @@ public class BlackHeartItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_black_heart").setRegistryName("projectile_black_heart");
 
 	public BlackHeartItem(PowerModElements instance) {
-		super(instance, 504);
+		super(instance, 506);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlackHeartRenderer.ModelRegisterHandler());
 	}
 

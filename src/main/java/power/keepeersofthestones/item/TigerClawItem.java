@@ -48,7 +48,7 @@ public class TigerClawItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_tiger_claw").setRegistryName("projectile_tiger_claw");
 
 	public TigerClawItem(PowerModElements instance) {
-		super(instance, 306);
+		super(instance, 308);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TigerClawRenderer.ModelRegisterHandler());
 	}
 

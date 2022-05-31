@@ -27,7 +27,7 @@ public class SoundEmitateItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SoundEmitateItem(PowerModElements instance) {
-		super(instance, 202);
+		super(instance, 204);
 	}
 
 	@Override

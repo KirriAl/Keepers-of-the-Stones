@@ -48,7 +48,7 @@ public class ShurikenItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_shuriken").setRegistryName("projectile_shuriken");
 
 	public ShurikenItem(PowerModElements instance) {
-		super(instance, 324);
+		super(instance, 326);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ShurikenRenderer.ModelRegisterHandler());
 	}
 

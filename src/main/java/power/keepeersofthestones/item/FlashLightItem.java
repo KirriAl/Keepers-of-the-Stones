@@ -50,7 +50,7 @@ public class FlashLightItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_flash_light").setRegistryName("projectile_flash_light");
 
 	public FlashLightItem(PowerModElements instance) {
-		super(instance, 342);
+		super(instance, 344);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FlashLightRenderer.ModelRegisterHandler());
 	}
 

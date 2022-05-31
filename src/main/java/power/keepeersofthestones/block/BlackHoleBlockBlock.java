@@ -38,7 +38,7 @@ public class BlackHoleBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public BlackHoleBlockBlock(PowerModElements instance) {
-		super(instance, 436);
+		super(instance, 438);
 	}
 
 	@Override

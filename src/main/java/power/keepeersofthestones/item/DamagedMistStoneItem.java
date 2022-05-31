@@ -18,7 +18,7 @@ public class DamagedMistStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public DamagedMistStoneItem(PowerModElements instance) {
-		super(instance, 109);
+		super(instance, 111);
 	}
 
 	@Override

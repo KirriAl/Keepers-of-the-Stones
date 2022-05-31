@@ -29,7 +29,7 @@ public class SpaceItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public SpaceItem(PowerModElements instance) {
-		super(instance, 481);
+		super(instance, 483);
 	}
 
 	@Override

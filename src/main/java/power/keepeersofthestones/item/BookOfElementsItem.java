@@ -28,7 +28,7 @@ public class BookOfElementsItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BookOfElementsItem(PowerModElements instance) {
-		super(instance, 40);
+		super(instance, 39);
 	}
 
 	@Override

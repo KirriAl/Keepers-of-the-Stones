@@ -18,7 +18,7 @@ public class DamagedDestructionStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public DamagedDestructionStoneItem(PowerModElements instance) {
-		super(instance, 103);
+		super(instance, 105);
 	}
 
 	@Override
