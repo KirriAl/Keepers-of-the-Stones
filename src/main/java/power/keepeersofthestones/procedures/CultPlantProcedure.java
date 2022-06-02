@@ -21,32 +21,32 @@ import java.util.Map;
 
 import io.netty.buffer.Unpooled;
 
-public class SultGUIProcedure {
+public class CultPlantProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				PowerMod.LOGGER.warn("Failed to load dependency world for procedure SultGUI!");
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure CultPlant!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				PowerMod.LOGGER.warn("Failed to load dependency x for procedure SultGUI!");
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure CultPlant!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				PowerMod.LOGGER.warn("Failed to load dependency y for procedure SultGUI!");
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure CultPlant!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				PowerMod.LOGGER.warn("Failed to load dependency z for procedure SultGUI!");
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure CultPlant!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure SultGUI!");
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure CultPlant!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

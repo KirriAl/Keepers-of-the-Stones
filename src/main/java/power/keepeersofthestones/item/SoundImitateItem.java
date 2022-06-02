@@ -22,12 +22,12 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @PowerModElements.ModElement.Tag
-public class SoundEmitateItem extends PowerModElements.ModElement {
-	@ObjectHolder("power:sound_emitate")
+public class SoundImitateItem extends PowerModElements.ModElement {
+	@ObjectHolder("power:sound_imitate")
 	public static final Item block = null;
 
-	public SoundEmitateItem(PowerModElements instance) {
-		super(instance, 204);
+	public SoundImitateItem(PowerModElements instance) {
+		super(instance, 842);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class SoundEmitateItem extends PowerModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(null).maxStackSize(1).isImmuneToFire().rarity(Rarity.COMMON));
-			setRegistryName("sound_emitate");
+			setRegistryName("sound_imitate");
 		}
 
 		@Override

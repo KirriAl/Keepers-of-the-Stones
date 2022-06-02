@@ -1,6 +1,6 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.gui.SoundEmitateChoiceGui;
+import power.keepeersofthestones.gui.SoundImitateChoiceGui;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.fml.network.NetworkHooks;
@@ -61,12 +61,12 @@ public class SoundGUIProcedure {
 				NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("SoundEmitateChoice");
+						return new StringTextComponent("SoundImitateChoice");
 					}
 
 					@Override
 					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new SoundEmitateChoiceGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new SoundImitateChoiceGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

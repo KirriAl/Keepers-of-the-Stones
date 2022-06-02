@@ -34,12 +34,12 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @PowerModElements.ModElement.Tag
-public class SoundEmitateChoiceGui extends PowerModElements.ModElement {
+public class SoundImitateChoiceGui extends PowerModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 
-	public SoundEmitateChoiceGui(PowerModElements instance) {
-		super(instance, 206);
+	public SoundImitateChoiceGui(PowerModElements instance) {
+		super(instance, 841);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -51,13 +51,13 @@ public class SoundEmitateChoiceGui extends PowerModElements.ModElement {
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("sound_emitate_choice"));
+			event.getRegistry().register(containerType.setRegistryName("sound_imitate_choice"));
 		}
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, SoundEmitateChoiceGuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, SoundImitateChoiceGuiWindow::new));
 	}
 
 	public static class GuiContainerModFactory implements IContainerFactory {

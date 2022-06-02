@@ -22,13 +22,13 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @OnlyIn(Dist.CLIENT)
-public class SoundEmitateChoiceGuiWindow extends ContainerScreen<SoundEmitateChoiceGui.GuiContainerMod> {
+public class SoundImitateChoiceGuiWindow extends ContainerScreen<SoundImitateChoiceGui.GuiContainerMod> {
 	private World world;
 	private int x, y, z;
 	private PlayerEntity entity;
-	private final static HashMap guistate = SoundEmitateChoiceGui.guistate;
+	private final static HashMap guistate = SoundImitateChoiceGui.guistate;
 
-	public SoundEmitateChoiceGuiWindow(SoundEmitateChoiceGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
+	public SoundImitateChoiceGuiWindow(SoundImitateChoiceGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -39,7 +39,7 @@ public class SoundEmitateChoiceGuiWindow extends ContainerScreen<SoundEmitateCho
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/sound_emitate_choice.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/sound_imitate_choice.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -91,20 +91,20 @@ public class SoundEmitateChoiceGuiWindow extends ContainerScreen<SoundEmitateCho
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 51, this.guiTop + 25, 60, 20, new StringTextComponent("Creeper"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceGui.ButtonPressedMessage(0, x, y, z));
-				SoundEmitateChoiceGui.handleButtonAction(entity, 0, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceGui.ButtonPressedMessage(0, x, y, z));
+				SoundImitateChoiceGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
 		this.addButton(new Button(this.guiLeft + 51, this.guiTop + 79, 55, 20, new StringTextComponent("Zombie"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceGui.ButtonPressedMessage(1, x, y, z));
-				SoundEmitateChoiceGui.handleButtonAction(entity, 1, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceGui.ButtonPressedMessage(1, x, y, z));
+				SoundImitateChoiceGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
 		this.addButton(new Button(this.guiLeft + 51, this.guiTop + 52, 65, 20, new StringTextComponent("Skeleton"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceGui.ButtonPressedMessage(2, x, y, z));
-				SoundEmitateChoiceGui.handleButtonAction(entity, 2, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceGui.ButtonPressedMessage(2, x, y, z));
+				SoundImitateChoiceGui.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
 	}
