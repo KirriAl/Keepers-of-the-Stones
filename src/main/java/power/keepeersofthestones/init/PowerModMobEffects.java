@@ -15,6 +15,7 @@ import power.keepeersofthestones.potion.SunMasterMobEffect;
 import power.keepeersofthestones.potion.SpaceMasterMobEffect;
 import power.keepeersofthestones.potion.SoundMasterMobEffect;
 import power.keepeersofthestones.potion.ShadowMasterMobEffect;
+import power.keepeersofthestones.potion.SandMasterMobEffect;
 import power.keepeersofthestones.potion.RechargeWaterStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeVacuumStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTornadoStoneMobEffect;
@@ -25,6 +26,7 @@ import power.keepeersofthestones.potion.RechargeSunStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSoundStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeShadowStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSandStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeRainStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeOceanStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMoonStoneMobEffect;
@@ -184,4 +186,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_MIST_STONE = REGISTRY.register("recharge_mist_stone",
 			() -> new RechargeMistStoneMobEffect());
 	public static final RegistryObject<MobEffect> MIST_MASTER = REGISTRY.register("mist_master", () -> new MistMasterMobEffect());
+	public static final RegistryObject<MobEffect> SAND_MASTER = REGISTRY.register("sand_master", () -> new SandMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SAND_STONE = REGISTRY.register("recharge_sand_stone",
+			() -> new RechargeSandStoneMobEffect());
 }

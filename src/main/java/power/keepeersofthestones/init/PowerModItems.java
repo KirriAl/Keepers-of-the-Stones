@@ -183,37 +183,6 @@ import power.keepeersofthestones.item.DestructionStoneItem;
 import power.keepeersofthestones.item.DestructionSphereItem;
 import power.keepeersofthestones.item.DestructionPowerItem;
 import power.keepeersofthestones.item.DestructionItem;
-import power.keepeersofthestones.item.DamagedWaterStoneItem;
-import power.keepeersofthestones.item.DamagedVacuumStoneItem;
-import power.keepeersofthestones.item.DamagedTornadoStoneItem;
-import power.keepeersofthestones.item.DamagedTimeStoneItem;
-import power.keepeersofthestones.item.DamagedTeleportationStoneItem;
-import power.keepeersofthestones.item.DamagedTechnologyStoneItem;
-import power.keepeersofthestones.item.DamagedSunStoneItem;
-import power.keepeersofthestones.item.DamagedSpaceStoneItem;
-import power.keepeersofthestones.item.DamagedSoundStoneItem;
-import power.keepeersofthestones.item.DamagedShadowStoneItem;
-import power.keepeersofthestones.item.DamagedRainStoneItem;
-import power.keepeersofthestones.item.DamagedOceanStoneItem;
-import power.keepeersofthestones.item.DamagedMoonStoneItem;
-import power.keepeersofthestones.item.DamagedMistStoneItem;
-import power.keepeersofthestones.item.DamagedMetalStoneItem;
-import power.keepeersofthestones.item.DamagedLightningStoneItem;
-import power.keepeersofthestones.item.DamagedLightStoneItem;
-import power.keepeersofthestones.item.DamagedLavaStoneItem;
-import power.keepeersofthestones.item.DamagedIceStoneItem;
-import power.keepeersofthestones.item.DamagedGreeneryStoneItem;
-import power.keepeersofthestones.item.DamagedFireStoneItem;
-import power.keepeersofthestones.item.DamagedExplosionStoneItem;
-import power.keepeersofthestones.item.DamagedEnergyStoneItem;
-import power.keepeersofthestones.item.DamagedEarthStoneItem;
-import power.keepeersofthestones.item.DamagedDestructionStoneItem;
-import power.keepeersofthestones.item.DamagedCrystalStoneItem;
-import power.keepeersofthestones.item.DamagedCreationStoneItem;
-import power.keepeersofthestones.item.DamagedBloodStoneItem;
-import power.keepeersofthestones.item.DamagedAnimalsStoneItem;
-import power.keepeersofthestones.item.DamagedAmberStoneItem;
-import power.keepeersofthestones.item.DamagedAirStoneItem;
 import power.keepeersofthestones.item.CutterSwordItem;
 import power.keepeersofthestones.item.CultivationItem;
 import power.keepeersofthestones.item.CrystallizedItem;
@@ -352,44 +321,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> STONE_MAGIC_BOX = block(PowerModBlocks.STONE_MAGIC_BOX, PowerModTabs.TAB_MAGIC_BOXES);
 	public static final RegistryObject<Item> IRON_MAGIC_BOX = block(PowerModBlocks.IRON_MAGIC_BOX, PowerModTabs.TAB_MAGIC_BOXES);
 	public static final RegistryObject<Item> GOLD_MAGIC_BOX = block(PowerModBlocks.GOLD_MAGIC_BOX, PowerModTabs.TAB_MAGIC_BOXES);
-	public static final RegistryObject<Item> DAMAGED_FIRE_STONE = REGISTRY.register("damaged_fire_stone", () -> new DamagedFireStoneItem());
-	public static final RegistryObject<Item> DAMAGED_AIR_STONE = REGISTRY.register("damaged_air_stone", () -> new DamagedAirStoneItem());
-	public static final RegistryObject<Item> DAMAGED_WATER_STONE = REGISTRY.register("damaged_water_stone", () -> new DamagedWaterStoneItem());
-	public static final RegistryObject<Item> DAMAGED_EARTH_STONE = REGISTRY.register("damaged_earth_stone", () -> new DamagedEarthStoneItem());
-	public static final RegistryObject<Item> DAMAGED_ENERGY_STONE = REGISTRY.register("damaged_energy_stone", () -> new DamagedEnergyStoneItem());
-	public static final RegistryObject<Item> DAMAGED_ICE_STONE = REGISTRY.register("damaged_ice_stone", () -> new DamagedIceStoneItem());
-	public static final RegistryObject<Item> DAMAGED_LIGHTNING_STONE = REGISTRY.register("damaged_lightning_stone",
-			() -> new DamagedLightningStoneItem());
-	public static final RegistryObject<Item> DAMAGED_SOUND_STONE = REGISTRY.register("damaged_sound_stone", () -> new DamagedSoundStoneItem());
-	public static final RegistryObject<Item> DAMAGED_CRYSTAL_STONE = REGISTRY.register("damaged_crystal_stone", () -> new DamagedCrystalStoneItem());
-	public static final RegistryObject<Item> DAMAGED_LAVA_STONE = REGISTRY.register("damaged_lava_stone", () -> new DamagedLavaStoneItem());
-	public static final RegistryObject<Item> DAMAGED_RAIN_STONE = REGISTRY.register("damaged_rain_stone", () -> new DamagedRainStoneItem());
-	public static final RegistryObject<Item> DAMAGED_TORNADO_STONE = REGISTRY.register("damaged_tornado_stone", () -> new DamagedTornadoStoneItem());
-	public static final RegistryObject<Item> DAMAGED_OCEAN_STONE = REGISTRY.register("damaged_ocean_stone", () -> new DamagedOceanStoneItem());
-	public static final RegistryObject<Item> DAMAGED_GREENERY_STONE = REGISTRY.register("damaged_greenery_stone",
-			() -> new DamagedGreeneryStoneItem());
-	public static final RegistryObject<Item> DAMAGED_ANIMALS_STONE = REGISTRY.register("damaged_animals_stone", () -> new DamagedAnimalsStoneItem());
-	public static final RegistryObject<Item> DAMAGED_METAL_STONE = REGISTRY.register("damaged_metal_stone", () -> new DamagedMetalStoneItem());
-	public static final RegistryObject<Item> DAMAGED_LIGHT_STONE = REGISTRY.register("damaged_light_stone", () -> new DamagedLightStoneItem());
-	public static final RegistryObject<Item> DAMAGED_SHADOW_STONE = REGISTRY.register("damaged_shadow_stone", () -> new DamagedShadowStoneItem());
-	public static final RegistryObject<Item> DAMAGED_VACUUM_STONE = REGISTRY.register("damaged_vacuum_stone", () -> new DamagedVacuumStoneItem());
-	public static final RegistryObject<Item> DAMAGED_SUN_STONE = REGISTRY.register("damaged_sun_stone", () -> new DamagedSunStoneItem());
-	public static final RegistryObject<Item> DAMAGED_MOON_STONE = REGISTRY.register("damaged_moon_stone", () -> new DamagedMoonStoneItem());
-	public static final RegistryObject<Item> DAMAGED_SPACE_STONE = REGISTRY.register("damaged_space_stone", () -> new DamagedSpaceStoneItem());
-	public static final RegistryObject<Item> DAMAGED_TIME_STONE = REGISTRY.register("damaged_time_stone", () -> new DamagedTimeStoneItem());
-	public static final RegistryObject<Item> DAMAGED_CREATION_STONE = REGISTRY.register("damaged_creation_stone",
-			() -> new DamagedCreationStoneItem());
-	public static final RegistryObject<Item> DAMAGED_DESTRUCTION_STONE = REGISTRY.register("damaged_destruction_stone",
-			() -> new DamagedDestructionStoneItem());
-	public static final RegistryObject<Item> DAMAGED_BLOOD_STONE = REGISTRY.register("damaged_blood_stone", () -> new DamagedBloodStoneItem());
-	public static final RegistryObject<Item> DAMAGED_TECHNOLOGY_STONE = REGISTRY.register("damaged_technology_stone",
-			() -> new DamagedTechnologyStoneItem());
-	public static final RegistryObject<Item> DAMAGED_TELEPORTATION_STONE = REGISTRY.register("damaged_teleportation_stone",
-			() -> new DamagedTeleportationStoneItem());
-	public static final RegistryObject<Item> DAMAGED_EXPLOSION_STONE = REGISTRY.register("damaged_explosion_stone",
-			() -> new DamagedExplosionStoneItem());
-	public static final RegistryObject<Item> DAMAGED_AMBER_STONE = REGISTRY.register("damaged_amber_stone", () -> new DamagedAmberStoneItem());
-	public static final RegistryObject<Item> DAMAGED_MIST_STONE = REGISTRY.register("damaged_mist_stone", () -> new DamagedMistStoneItem());
 	public static final RegistryObject<Item> BURN = REGISTRY.register("burn", () -> new BurnItem());
 	public static final RegistryObject<Item> MAGIC_FIREBALL = REGISTRY.register("magic_fireball", () -> new MagicFireballItem());
 	public static final RegistryObject<Item> AIR_FLOW = REGISTRY.register("air_flow", () -> new AirFlowItem());
