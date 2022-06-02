@@ -13040,6 +13040,27 @@
       "locked_code": false,
       "registry_name": "recharge_sand_stone",
       "path": "~/Sand"
+    },
+    {
+      "name": "SandGet",
+      "type": "procedure",
+      "sortid": 847,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
     }
   ],
   "variable_elements": [
@@ -13563,6 +13584,18 @@
       "name": "recharge_spell_mist",
       "type": "logic",
       "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "sand_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "sand",
+      "type": "logic",
+      "scope": "player_persistent",
       "value": "false"
     }
   ],

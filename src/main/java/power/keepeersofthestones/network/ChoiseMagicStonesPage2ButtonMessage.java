@@ -6,6 +6,7 @@ import power.keepeersofthestones.procedures.TimeGetProcedure;
 import power.keepeersofthestones.procedures.TeleportationGetProcedure;
 import power.keepeersofthestones.procedures.TechnologyGetProcedure;
 import power.keepeersofthestones.procedures.SpaceGetProcedure;
+import power.keepeersofthestones.procedures.SandGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPageGUIChoiceStonesProcedure;
 import power.keepeersofthestones.procedures.NextToPage3Procedure;
 import power.keepeersofthestones.procedures.MoonGetProcedure;
@@ -117,6 +118,10 @@ public class ChoiseMagicStonesPage2ButtonMessage {
 		if (buttonID == 10) {
 
 			MistGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			SandGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 13) {
 
