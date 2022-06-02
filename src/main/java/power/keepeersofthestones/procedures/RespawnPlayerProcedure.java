@@ -733,6 +733,13 @@ public class RespawnPlayerProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.sand = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PowerModVariables.PlayerVariables())).amber) {
