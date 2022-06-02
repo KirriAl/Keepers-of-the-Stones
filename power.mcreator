@@ -13061,6 +13061,21 @@
         ]
       },
       "path": "~/ReceivingStones"
+    },
+    {
+      "name": "Sand",
+      "type": "armor",
+      "sortid": 848,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Sand"
     }
   ],
   "variable_elements": [
@@ -13755,8 +13770,10 @@
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
+      "item.power.sand_helmet": "Sand Helmet",
       "item.power.bo_staff": "Посох Бо",
       "item.power.destruction_helmet": "Шлем разрушения",
+      "item.power.sand_leggings": "Sand Leggings",
       "item.power.pterodactyl_spawn_egg": "Яйцо призыва птеродактиля",
       "item.power.sun_ray": "Луч Солнца",
       "item.power.destruction_leggings": "Поножи разрушения",
@@ -13877,6 +13894,7 @@
       "power.cultivation.bamboo.text": "Бамбук",
       "block.power.energy_block": "Энергетический блок",
       "item.power.creation_chestplate": "Creation Chestplate",
+      "item.power.sand_chestplate": "Sand Chestplate",
       "item.power.light_sword": "Световой Меч",
       "item.power.technobarrier": "Технобарьер",
       "entity.power.tornado_entity": "Торнадо",
@@ -13992,6 +14010,7 @@
       "item.power.plasma_ball": "Плазменный шар",
       "item.power.technology_battery": "Батарея",
       "effect.power.explosion_master": "Мастер Взрыва",
+      "item.power.sand_boots": "Sand Boots",
       "effect.power.recharge_shadow_stone": "Перезарядка",
       "advancements.maximum_power.title": "Максимум Силы!",
       "item.power.greenery_helmet": "Травяной шлем",
@@ -14273,8 +14292,10 @@
       "effect.power.tornado_master": "Master of Tornado",
       "biome.power.enceladus_ice_desert": "Enceladus Ice Desert",
       "itemGroup.tabadditional_group": "Additional Group",
+      "item.power.sand_helmet": "Sand Helmet",
       "item.power.bo_staff": "Bo Staff",
       "item.power.destruction_helmet": "Destruction Helmet",
+      "item.power.sand_leggings": "Sand Leggings",
       "item.power.pterodactyl_spawn_egg": "Pterodactyl Spawn Egg",
       "item.power.sun_ray": "Sun Ray",
       "item.power.destruction_leggings": "Destruction Leggings",
@@ -14396,6 +14417,7 @@
       "power.cultivation.bamboo.text": "Bamboo",
       "block.power.energy_block": "Energy Block",
       "item.power.creation_chestplate": "Creation Chestplate",
+      "item.power.sand_chestplate": "Sand Chestplate",
       "item.power.light_sword": "Light Sword",
       "item.power.technobarrier": "Technobarrier",
       "entity.power.tornado_entity": "Tornado",
@@ -14511,6 +14533,7 @@
       "item.power.plasma_ball": "Plasma Ball",
       "item.power.technology_battery": "Battery",
       "effect.power.explosion_master": "Master of Explosion",
+      "item.power.sand_boots": "Sand Boots",
       "effect.power.recharge_shadow_stone": "Recharge",
       "advancements.maximum_power.title": "Maximum Power!",
       "item.power.greenery_helmet": "Greenery Helmet",

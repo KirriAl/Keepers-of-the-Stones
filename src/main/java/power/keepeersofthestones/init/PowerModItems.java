@@ -75,6 +75,7 @@ import power.keepeersofthestones.item.ShadowInvisibleItem;
 import power.keepeersofthestones.item.ShadowBatteryItem;
 import power.keepeersofthestones.item.ShadowBallItem;
 import power.keepeersofthestones.item.SandStoneItem;
+import power.keepeersofthestones.item.SandItem;
 import power.keepeersofthestones.item.SaiItem;
 import power.keepeersofthestones.item.RoseSwordItem;
 import power.keepeersofthestones.item.RedstoneBundleItem;
@@ -587,6 +588,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> KUNAI = REGISTRY.register("kunai", () -> new KunaiItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
 	public static final RegistryObject<Item> SOUND_IMITATE = REGISTRY.register("sound_imitate", () -> new SoundImitateItem());
+	public static final RegistryObject<Item> SAND_HELMET = REGISTRY.register("sand_helmet", () -> new SandItem.Helmet());
+	public static final RegistryObject<Item> SAND_CHESTPLATE = REGISTRY.register("sand_chestplate", () -> new SandItem.Chestplate());
+	public static final RegistryObject<Item> SAND_LEGGINGS = REGISTRY.register("sand_leggings", () -> new SandItem.Leggings());
+	public static final RegistryObject<Item> SAND_BOOTS = REGISTRY.register("sand_boots", () -> new SandItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
