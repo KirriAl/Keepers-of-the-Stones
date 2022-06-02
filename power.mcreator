@@ -1799,15 +1799,6 @@
       "path": "~/Sound"
     },
     {
-      "name": "SoundEmitate",
-      "type": "item",
-      "sortid": 204,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sound_emitate",
-      "path": "~/Sound"
-    },
-    {
       "name": "EmitateCreeper",
       "type": "procedure",
       "sortid": 205,
@@ -1838,15 +1829,6 @@
           }
         ]
       },
-      "path": "~/Sound"
-    },
-    {
-      "name": "SoundEmitateChoice",
-      "type": "gui",
-      "sortid": 206,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sound_emitate_choice",
       "path": "~/Sound"
     },
     {
@@ -3506,23 +3488,6 @@
       "path": "~/Greenery"
     },
     {
-      "name": "GetVine",
-      "type": "procedure",
-      "sortid": 298,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_vine",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Greenery"
-    },
-    {
       "name": "GetOakSapling",
       "type": "procedure",
       "sortid": 299,
@@ -3534,6 +3499,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3551,6 +3532,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7300,6 +7297,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7317,6 +7330,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7334,6 +7363,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7351,6 +7396,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7368,6 +7429,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7385,6 +7462,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7402,6 +7495,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7419,6 +7528,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7436,6 +7561,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7453,6 +7594,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7470,6 +7627,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -8329,39 +8502,6 @@
       "path": "~/Animals"
     },
     {
-      "name": "SultGUI",
-      "type": "procedure",
-      "sortid": 553,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sult_gui",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Greenery"
-    },
-    {
       "name": "SoundGUI",
       "type": "procedure",
       "sortid": 554,
@@ -8469,6 +8609,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -8486,6 +8642,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -11165,6 +11337,24 @@
       "path": "~/Teleportation"
     },
     {
+      "name": "Confstone",
+      "type": "command",
+      "sortid": 715,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "confstone",
+      "path": "~/Commands"
+    },
+    {
+      "name": "Planet",
+      "type": "command",
+      "sortid": 716,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "planet",
+      "path": "~/Commands"
+    },
+    {
       "name": "PutItOnChargeOvernight",
       "type": "achievement",
       "sortid": 717,
@@ -12443,6 +12633,36 @@
       "path": "~/Aether"
     },
     {
+      "name": "CrystallizedLands",
+      "type": "biome",
+      "sortid": 788,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_lands",
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "Crystallized",
+      "type": "dimension",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized",
+      "metadata": {
+        "ep": true
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "CrystallizedCraft",
+      "type": "recipe",
+      "sortid": 789,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_craft",
+      "path": "~/Dimensions"
+    },
+    {
       "name": "DinoeraCraft",
       "type": "recipe",
       "sortid": 790,
@@ -13333,6 +13553,57 @@
       "locked_code": false,
       "registry_name": "pterodactyl",
       "path": "~/Time"
+    },
+    {
+      "name": "SoundImitateChoice",
+      "type": "gui",
+      "sortid": 841,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_imitate_choice",
+      "path": "~/Sound"
+    },
+    {
+      "name": "SoundImitate",
+      "type": "item",
+      "sortid": 842,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_imitate",
+      "path": "~/Sound"
+    },
+    {
+      "name": "CultPlant",
+      "type": "procedure",
+      "sortid": 844,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cult_plant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Greenery"
     }
   ],
   "variable_elements": [
@@ -13927,10 +14198,10 @@
   ],
   "language_map": {
     "ru_ru": {
-      "item.power.moon_battery": "Батарея",
       "item.power.energy_leggings": "Энергетические Поножи",
-      "item.power.sun_battery": "Батарея",
+      "item.power.moon_battery": "Батарея",
       "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.spike": "Шип",
@@ -13946,14 +14217,11 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.earth_battery": "Батарея",
       "item.power.damaged_fire_stone": "Поврежденный Камень Огня",
-      "effect.recharge_magnet_stone": "Recharge",
-      "effect.fire_master": "Master of Fire",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.recharge_blood_stone": "Recharge",
       "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
@@ -13964,7 +14232,11 @@
       "item.power.black_hole": "Черная Дыра",
       "item.power.air_blade": "Воздушная Рапира",
       "item.power.lighting": "Освещение",
+      "power.spawn_animals.cat.text": "Кот",
       "item.power.magnet_leggings": "Magnet Leggings",
+      "power.space_atlas.enceladus.text": "Энцелад",
+      "power.cultivation.potato.text": "Картофель",
+      "power.cultivation.pumpkin.text": "Тыква",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -13972,12 +14244,11 @@
       "item.power.damaged_amber_stone": "Поврежденный Камень Янтаря",
       "item.power.damaged_ocean_stone": "Поврежденный Камень Океана",
       "item.power.tamer": "Приручатель",
-      "effect.recharge_greenery_stone": "Recharge",
       "item.power.mist_chestplate": "Mist Chestplate",
       "item.power.damaged_moon_stone": "Поврежденный Камень Луны",
       "effect.power.recharge_earth_stone": "Перезарядка",
-      "item.power.time_reversed": "Обращение Времени",
       "effect.power.ice_master": "Мастер Льда",
+      "item.power.time_reversed": "Обращение Времени",
       "effect.power.recharge_amber_stone": "Перезарядка",
       "item.power.piece_of_earth": "Кусок Земли",
       "block.power.moon_stones_block": "Блок Разрастающихся Лунных Камней",
@@ -13990,59 +14261,59 @@
       "item.power.energy_chestplate": "Энергетическая Кираса",
       "item.power.ocean_sword": "Меч Океана",
       "item.power.space_leggings": "Космические штаны",
+      "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
       "item.power.shadow_invisible": "Теневая Невидимость",
-      "effect.recharge_shadow_stone": "Recharge",
       "item.power.damaged_space_stone": "Поврежденный Камень Космоса",
       "item.power.aether_stone": "Камень Эфира",
       "item.power.light_helmet": "Шлем солнца",
       "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
+      "power.cultivation.spruce.text": "Ель",
+      "power.cultivation.wheat.text": "Пшеница",
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
-      "effect.space_master": "Master of Space",
       "item.power.force_replication": "Репликация Силы",
+      "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
       "item.power.damaged_greenery_stone": "Поврежденный Камень Зелени",
       "item.power.explosion_stone": "Камень Взрыва",
-      "effect.sound_master": "Master of Sound",
+      "item.power.sound_imitate": "Звуковой Подражатель",
+      "power.space_atlas.label.text": "Космический Атлас",
+      "power.cultivation.beetroot.text": "Свекла",
       "item.power.earth_helmet": "Земляной Монокль",
       "item.power.water_flow": "Струя Воды",
       "item.power.animals_stone": "Камень Животных",
       "advancements.put_it_on_charge_overnight.descr": "Создайте зарядник для батарей",
       "item.power.redstone_bundle": "Мешок С Редстоуном",
       "item.power.mercury_stone": "Камень Ртути",
-      "item.power.light_battery": "Батарея",
       "item.power.iron_shield": "Железный Щит",
+      "item.power.light_battery": "Батарея",
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
       "item.power.bo_staff": "Посох Бо",
       "item.power.destruction_helmet": "Шлем разрушения",
-      "item.power.pterodactyl_spawn_egg": "Яйцо призыва птеродактиля",
       "item.power.sun_ray": "Луч Солнца",
+      "item.power.pterodactyl_spawn_egg": "Яйцо призыва птеродактиля",
       "item.power.destruction_leggings": "Поножи разрушения",
-      "effect.recharge_air_stone": "Recharge",
       "item.power.energy_staff": "Посох Энергии",
-      "item.power.shadow_helmet": "Шлем тьмы",
       "effect.power.recharge_fire_stone": "Перезарядка",
+      "item.power.shadow_helmet": "Шлем тьмы",
       "item.power.crystal_leggings": "Кристаллические Штаны",
       "item.power.crystal_dagger": "Кристаллический Кинжал",
       "item.power.damaged_rain_stone": "Поврежденный Камень Дождя",
       "item.power.lava_leggings": "Лавовые Брюки",
       "item.power.ice_sharp": "Ледяной Осколок",
-      "effect.destruction_master": "Master of Destruction",
       "biome.power.oblivion_desert": "Пустыня Обливиона",
       "item.power.sun_regeneration": "Солнечное Исцеление",
       "effect.power.recharge_lightning_stone": "Перезарядка",
       "item.power.fertilizer": "Удобрение",
-      "effect.recharge_crystal_stone": "Recharge",
+      "power.cultivation.water_lily.text": "Кувшинка",
       "block.power.gold_magic_box": "Золотая Волшебная Шкатулка",
       "item.power.damaged_energy_stone": "Поврежденный Камень Энергии",
-      "effect.fog": "Fog",
-      "effect.tornado_master": "Master of Tornado",
       "biome.power.cretaceous_taiga": "Меловая Тайга",
       "item.power.fire_stone": "Камень Огня",
       "item.power.blood_stone": "Камень Крови",
@@ -14053,67 +14324,60 @@
       "subtitles.stone_activation": "Камень был активирован",
       "effect.power.fog": "Неясность",
       "biome.power.triassic_desert": "Триассовая Пустыня",
-      "effect.rain_master": "Master of Rain",
       "block.power.vacuum_web_block": "Блок Вакуумной Сети",
       "biome.power.oblivion_forest": "Лес Обливиона",
       "item.power.earth_boots": "Земляные Ботинки",
-      "effect.blood_master": "Master of Blood",
       "item.power.water_helmet": "Водная Маска",
       "advancements.just_add_water.title": "Просто Добавь Воды!",
       "item.power.cultivation": "Выращивание",
-      "effect.amber_master": "Master of Amber",
+      "power.cultivation.sugar_cane.text": "Тростник",
       "item.power.ocean_battery": "Батарея",
       "item.power.mist_battery": "Батарея",
       "item.power.space_atlas": "Космический Атлас",
       "item.power.animals_boots": "Животные ботинки",
       "item.power.wind_chestplate": "Воздушный Жилет",
+      "power.space_atlas.mars.text": "Марс",
       "item.power.bee_sting": "Пчелиное Жало",
-      "effect.recharge_moon_stone": "Recharge",
-      "effect.recharge_space_stone": "Recharge",
       "item.power.tornado_battery": "Батарея",
-      "effect.air_master": "Master of the Air",
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
       "itemGroup.tabmagic_boxes": "Волшебные Шкатулки",
       "block.power.stone_magic_box": "Волшебная Каменная Шкатулка",
       "item.power.vacuum_leggings": "Ваакумные штаны",
+      "power.spawn_animals.wolf.text": "Волк",
       "item.power.fire_battery": "Батарея",
       "item.power.blood_reaper": "Кровавый Жнец",
       "item.power.damaged_animals_stone": "Поврежденный Камень Животных",
       "item.power.space_stone": "Камень Космоса",
       "item.power.teleportation_stone": "Камень Телепортации",
-      "effect.moon_master": "Master of the Moon",
       "item.power.lava_boots": "Лавовые Ботинки",
       "gamerule.gettingStonesWhenEnteringTheGame": "Получение камней при входе в игру",
       "item.power.lava_hole": "Лавовая Яма",
       "item.power.metal_leggings": "Металлические Поножи",
-      "effect.energy_master": "Master of Energy",
       "item.power.destruction_boots": "Ботинки разрушения",
       "item.power.sound_helmet": "Звуковая Маска",
       "item.power.metal_stone": "Камень Металла",
       "item.power.greenery_boots": "Лиственные ботинки",
       "subtitles.raptor.hut": "",
-      "effect.recharge_earth_stone": "Recharge",
+      "power.cultivation.jungle_tree.text": "Тропич. Дер.",
       "key.power.detransform_key": "Клавиша детрансформации",
-      "effect.rain_fly": "RainFly",
+      "power.sound_emitate.skeleton.text": "Скелет",
       "biome.power.cretaceous_pine_forest": "Меловой Сосноый Лес",
+      "power.sound_emitate.creeper.text": "Крипер",
       "item.power.tornado_create": "Создание Торнадо",
       "item.power.sun_stone": "Камень Солнца",
-      "effect.recharge_explosion_stone": "Recharge",
       "gamerule.stoneBreaksDuringRebirth.description": "Может ли камень сломаться при смерти, если он был активирован?",
       "item.power.damaged_sun_stone": "Поврежденный Камень Солнца",
       "item.power.damaged_creation_stone": "Поврежденный Камень Творения",
-      "effect.recharge_ocean_stone": "Recharge",
-      "effect.lightning_master": "Master of Lightning",
       "item.power.crystal_chestplate": "Кристаллическая Куртка",
       "effect.power.creation_master": "Мастер Творения",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
       "item.power.ice_shield": "Ледяной щит",
       "item.power.sound_leggings": "Звуковые Брюки",
       "item.power.damaged_lightning_stone": "Поврежденный Камень Молнии",
+      "power.spawn_animals.chicken.text": "Курица",
       "item.power.light_leggings": "Штаны света",
       "item.power.empty_battery": "Батарея",
-      "effect.earth_master": "Master of the Earth",
       "item.power.elemental_coin": "Элементальная Монета",
       "item.power.magnet_stone": "Камень Магнита",
       "item.power.space_helmet": "Космический шлем",
@@ -14122,12 +14386,10 @@
       "item.power.glow_spawn_egg": "Яйцо призыва Светляка",
       "item.power.oblivion": "Огниво Портала (Обливион)",
       "item.power.sound_barrier": "Звуковой барьер",
-      "effect.recharge_ice_stone": "Recharge",
       "item.power.blood_leggings": "Ботинки крови",
       "item.power.damaged_tornado_stone": "Поврежденный Камень Торнадо",
       "item.power.fire_leggings": "Огненные Штаны",
       "item.power.black_heart": "Черное Сердце",
-      "effect.recharge_metal_stone": "Recharge",
       "block.power.black_hole_block": "Блок Черной Дыры",
       "item.power.spawn": "Порождение",
       "effect.power.water_master": "Мастер Воды",
@@ -14140,8 +14402,8 @@
       "item.power.damaged_air_stone": "Поврежденный Камень Воздуха",
       "effect.power.air_master": "Мастер Воздуха",
       "item.power.fire_boots": "Огненные Ботинки",
+      "power.cultivation.carrot.text": "Морковь",
       "item.power.crystal_battery": "Батарея",
-      "effect.recharge_rain_stone": "Recharge",
       "subtitles.tyrannosaurus_rex.hurt": "",
       "item.power.shadow_leggings": "Поножи тьмы",
       "item.power.tornado_entity_spawn_egg": "Tornado Spawn Egg",
@@ -14162,6 +14424,7 @@
       "itemGroup.tabtechnologies_and_artifacts": "Технологии \u0026 Артефакты",
       "item.power.dinoera": "Огниво Портала (Диноэра)",
       "item.power.mist_leggings": "Mist Leggings",
+      "power.cultivation.bamboo.text": "Бамбук",
       "block.power.energy_block": "Энергетический блок",
       "item.power.creation_chestplate": "Creation Chestplate",
       "item.power.damaged_ice_stone": "Поврежденный Камень Льда",
@@ -14175,15 +14438,14 @@
       "item.power.ice_stone": "Камень Льда",
       "effect.time_stop_effect": "Time Stop",
       "item.power.shadow_sword": "Теневой Мач",
+      "power.sound_emitate.label.text": "Выберите моба для имитации звука",
       "item.power.wind_boots": "Воздушные Сапоги",
       "item.power.rain_helmet": "Дождевая Шапка",
-      "effect.teleportation_master": "Master of Teleportation",
-      "effect.recharge_sound_stone": "Recharge",
       "item.power.animals_leggings": "Штаны животных",
       "advancements.maximum_power.descr": "Получите максимальный уровень мощности",
       "item.power.air_battery": "Батарея",
       "item.power.rain_knife": "Дождевой Нож",
-      "effect.recharge_destruction_stone": "Recharge",
+      "power.spawn_animals.horse.text": "Лошадь",
       "item.power.damaged_light_stone": "Поврежденный Камень Света",
       "effect.power.mist_master": "Мастер Тумана",
       "item.power.iron_golem_create": "Создание Железного Голема",
@@ -14194,8 +14456,7 @@
       "subtitles.stone_deactivation": "Камень был деактивирован",
       "item.power.whirlpool": "Водоворот",
       "entity.power.glow": "Светляк",
-      "effect.recharge_lava_stone": "Recharge",
-      "effect.recharge_energy_stone": "Recharge",
+      "power.battery_charger.label.text": "Зарядка батареи",
       "item.power.damaged_explosion_stone": "Поврежденный Камень Взрыва",
       "item.power.technology_boots": "Технологичные штаны",
       "item.power.enceladus": "Enceladus Portal Igniter",
@@ -14205,16 +14466,14 @@
       "effect.power.fire_master": "Мастер Огня",
       "item.power.ocean_leggings": "Штаны Океана",
       "block.power.wood_magic_box": "Деревянная Волшебная Шкатулка",
-      "effect.recharge_mist_stone": "Recharge",
+      "power.cultivation.oak.text": "Дуб",
       "item.power.ocean_stone": "Камень Океана",
       "effect.power.animals_master": "Мастер Животных",
       "block.power.blue_portal": "Голубой Портал",
-      "effect.recharge_sun_stone": "Recharge",
       "item.power.rose_sword": "Розовая Шпага",
       "entity.power.raptor": "Раптор",
       "item.power.air_stone": "Камень Воздуха",
       "item.power.amber_helmet": "Amber Helmet",
-      "effect.water_master": "Master of Water",
       "item.power.sound_stone": "Камень Звука",
       "itemGroup.tabgreat_group": "Великие",
       "item.power.metal_invulnerability": "Неуязвимость Металла",
@@ -14237,7 +14496,6 @@
       "effect.power.ocean_master": "Мастер Океана",
       "effect.power.recharge_creation_stone": "Перезарядка",
       "item.power.teleportation_helmet": "Шлем перемищения",
-      "item.power.sound_emitate": "Издать Звук",
       "advancements.just_add_water.descr": "Изучите способность воды",
       "effect.acceleration_time_effect": "Acceleration Time",
       "effect.power.vacuum_master": "Мастер Пустоты",
@@ -14250,15 +14508,16 @@
       "item.power.wooden_shield": "Древесный Щит",
       "item.power.earth_leggings": "Земляные Штаны",
       "block.power.sound_barrier_block": "Блок Звукового барьера",
-      "effect.animals_master": "Master of Animals",
       "item.power.fire_helmet": "Огненная корона",
       "effect.power.recharge_mist_stone": "Перезарядка",
+      "power.building.butcher_shop.text": "Мясная Лавка",
       "item.power.galactic_sword": "Галактический меч",
       "entity.power.tyrannosaurus_rex": "Тираннозавр Рекс",
       "effect.power.crystal_master": "Мастер Кристалла",
       "entity.power.plesiosaurus": "Плезиозавр",
       "item.power.blue_knife": "Голубой Нож",
       "item.power.crestcent_helmet": "Crestcent Helmet",
+      "power.building.blacksmith.text": "Кузница",
       "item.power.rain_chestplate": "Дождевая Накидка",
       "item.power.venus": "Venus Portal Igniter",
       "item.power.technology_leggings": "Технологичные штаны",
@@ -14269,7 +14528,9 @@
       "item.power.spirit_stone": "Камень Духа",
       "item.power.raptor_spawn_egg": "Яйцо призыва раптора",
       "item.power.moon_axe": "Лунная Секира",
+      "power.sound_emitate.zombie.text": "Зомби",
       "item.power.techno_pickaxe": "Техно-Кирка",
+      "power.building.streetlight.text": "Уличный Фонарь",
       "effect.power.lava_master": "Мастер Лавы",
       "effect.power.blood_master": "Мастер Крови",
       "item.power.mist_boots": "Mist Boots",
@@ -14279,13 +14540,13 @@
       "item.power.tornado_stone": "Камень Торнадо",
       "item.power.point": "Точка",
       "itemGroup.tabbatteries": "Батареи",
+      "power.cultivation.dark_oak.text": "Темный Дуб",
       "item.power.vacuum_boots": "Ваакумные ботинки",
       "item.power.water_battery": "Батерея",
       "item.power.time_boots": "Ботинки времени",
       "item.power.plasma_ball": "Плазменный шар",
       "item.power.technology_battery": "Батарея",
       "effect.power.explosion_master": "Мастер Взрыва",
-      "effect.recharge_vacuum_stone": "Recharge",
       "effect.power.recharge_shadow_stone": "Перезарядка",
       "advancements.maximum_power.title": "Максимум Силы!",
       "item.power.greenery_helmet": "Травяной шлем",
@@ -14296,11 +14557,10 @@
       "item.power.energy_battery": "Батарея",
       "item.power.vacuum_battery": "Батарея",
       "item.power.creation_boots": "Creation Boots",
-      "effect.recharge_fire_stone": "Recharge",
-      "effect.recharge_water_stone": "Recharge",
       "item.power.space_chestplate": "Космический нагрудник",
       "item.power.shadow_spawn_egg": "Яйцо призыва Тени",
       "itemGroup.tabdamaged_stones": "Поврежденные Камни",
+      "power.spawn_animals.cow.text": "Корова",
       "item.power.crystal_helmet": "Кристаллическая Каска",
       "item.power.wind_helmet": "Воздушная Шапка",
       "effect.power.recharge_greenery_stone": "Перезарядка",
@@ -14310,7 +14570,6 @@
       "item.power.metal_boots": "Металлические ботинки",
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень Пустоты",
-      "effect.recharge_lightning_stone": "Recharge",
       "effect.power.destruction_master": "Мастер Разрушения",
       "item.power.poison_stone": "Камень Яда",
       "biome.power.jurassic_swamp": "Юрское Болото",
@@ -14320,8 +14579,8 @@
       "item.power.damaged_destruction_stone": "Поврежденный Камень Разрушения",
       "item.power.burn": "Поджёг",
       "item.power.amber_boots": "Amber Boots",
-      "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Перезарядка",
+      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Вампиризм",
       "effect.power.recharge_time_stone": "Перезарядка",
       "item.power.shield_of_earth": "Щит Земли",
@@ -14343,8 +14602,6 @@
       "item.power.time_battery": "Батарея",
       "item.power.animals_helmet": "Животный шлем",
       "item.power.teleportation_battery": "Батарея",
-      "effect.technology_master": "Master of Technology",
-      "effect.recharge_amber_stone": "Recharge",
       "item.power.water_drop": "Капли Воды",
       "item.power.tornado_leggings": "Штаны Торнадо",
       "item.power.creation_stone": "Камень Творения",
@@ -14352,13 +14609,11 @@
       "effect.power.earth_master": "Мастер Земли",
       "effect.power.invincibility": "Непобедимость",
       "item.power.blood_battery": "Батарея",
-      "effect.recharge_time_stone": "Recharge",
       "item.power.water_chestplate": "Водный Костюм",
       "item.power.time_stone": "Камень Времени",
-      "effect.recharge_animals_stone": "Recharge",
       "effect.power.sun_master": "Мастер Солнца",
-      "effect.vacuum_master": "Master of Vacuum",
       "item.power.time_helmet": "Шлем времени",
+      "power.cultivation.acacia.text": "Акация",
       "item.power.random_item": "Случайный Предмет",
       "effect.power.space_master": "Мастер Космоса",
       "biome.power.venus_desert": "Венерианская Пустыня",
@@ -14369,7 +14624,6 @@
       "effect.power.lightning_master": "Мастер Молнии",
       "item.power.cluster_sharp": "Осколок Кластера",
       "effect.power.recharge_air_stone": "Перезарядка",
-      "effect.crystal_master": "Master of the Crystal",
       "item.power.tornado_boots": "Ботинки Торнадо",
       "item.power.water_stone": "Камень Воды",
       "effect.power.energy_master": "Мастер Энергии",
@@ -14391,6 +14645,7 @@
       "item.power.mushrooms_stone": "Камень Грибов",
       "item.power.ocean_boots": "Ботинки Океана",
       "effect.power.moon_master": "Мастер Луны",
+      "item.power.crystallized": "Огниво Портала (Кристаллизованный Мир)",
       "item.power.damaged_sound_stone": "Поврежденный Камень Звука",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
       "item.power.energy_stone": "Камень Энергии",
@@ -14398,15 +14653,16 @@
       "advancements.put_it_on_charge_overnight.title": "Поставить на ночь на зарядку",
       "item.power.damaged_teleportation_stone": "Поврежденный Камень Телепортации",
       "item.power.ice_chestplate": "Ледяная Куртка",
+      "power.building.library.text": "Библиотека",
       "item.power.moon_stones": "Лунные Камни",
+      "power.space_atlas.earth.text": "Земля",
       "item.power.sound_battery": "Батарея",
-      "effect.recharge_creation_stone": "Recharge",
       "effect.power.teleportation_master": "Мастер Телепортации",
       "item.power.lava_stone": "Камень Лавы",
       "block.power.orange_portal": "Оранжевый Портал",
       "item.power.damaged_shadow_stone": "Поврежденный Камень Тени",
       "item.power.space_battery": "Батарея",
-      "effect.mist_master": "Master of Mist",
+      "power.spawn_animals.label.text": "Выберите животное для вызова",
       "item.power.sun_explode": "Солнечный Взрыв",
       "item.power.vacuum_sword": "Пустотный Меч",
       "item.power.fire_sword": "Меч Огня",
@@ -14417,19 +14673,17 @@
       "item.power.sun_helmet": "Шлем солнца",
       "itemGroup.tabmiddle_group": "Средние",
       "item.power.book_of_elements": "Книга Элементов",
+      "power.space_atlas.moon.text": "Луна",
       "effect.power.recharge_lava_stone": "Перезарядка",
       "subtitles.tyrannosaurus_rex.ambient": "",
-      "effect.metal_master": "Master of Metal",
       "item.power.ice_helmet": "Ледяной Шарф",
       "item.power.obscurity": "Неясность",
       "item.power.increase_power": "Увеличение Силы",
       "item.power.destruction_stone": "Камень Разрушения",
       "item.power.ice_ball": "Ледяной шар",
-      "effect.sun_master": "Master of Sun",
       "item.power.tornado_helmet": "Шлем Торнадо",
       "item.power.magic_fireball": "Волшебный Огненный Шар",
       "item.power.crystal_stone": "Камень Кристалла",
-      "effect.recharge_light_stone": "Recharge",
       "item.power.metal_chestplate": "Метталический нагрудник",
       "item.power.technology_stone": "Камень Технологий",
       "item.power.megawatt": "Мегаватт",
@@ -14438,34 +14692,28 @@
       "item.power.tiger_claw": "Тигриный Коготь",
       "item.power.tyrannosaurus_rex_spawn_egg": "Яйцо призыва тираннозавра рекса",
       "item.power.misty_fan": "Туманный Веер",
-      "effect.light_master": "Master of Light",
-      "effect.shadow_master": "Master of Shadow",
       "advancements.power_up.descr": "Разблокируйте второй уровень",
       "item.power.plesiosaurus_spawn_egg": "Яйцо призыва плезиозавра",
       "item.power.speed_stone": "Камень Скорости",
-      "effect.recharge_technology_stone": "Recharge",
       "item.power.rain_stone": "Камень Дождя",
       "item.power.lightning_strike": "Удар Молнии",
-      "effect.greenery_master": "Master of Greenery",
+      "power.spawn_animals.sheep.text": "Овца",
       "block.power.cluster_block": "Блок Кластера",
       "item.power.fistof_earth": "Земляной Кулак",
       "item.power.blood_chestplate": "Нагрудник крови",
       "item.power.sun_axe": "Солнечная Секира",
-      "effect.ocean_master": "Master of the Ocean",
       "item.power.damaged_metal_stone": "Поврежденный Камень Металла",
-      "effect.time_master_effect": "Master of Time",
       "item.power.sun_boots": "Шлем солнца",
-      "effect.recharge_teleportation_stone": "Recharge",
-      "effect.explosion_master": "Master of Explosion",
       "item.power.moon_stone": "Камень Луны",
       "item.power.mars": "Mars Portal Igniter",
+      "power.cultivation.melon.text": "Арбуз",
       "item.power.magnet_boots": "Magnet Boots",
+      "power.cultivation.vine.text": "Лоза",
       "item.power.destruction_power": "Анигиляция",
       "item.power.greenery_stone": "Камень Зелени",
       "effect.power.recharge_ocean_stone": "Перезарядка",
       "item.power.tornado_battle_axe": "Боевой Топор Торнадо",
       "biome.power.venus_land": "Венерианская Земля",
-      "effect.ice_master": "Master of Ice",
       "item.power.damaged_earth_stone": "Поврежденный Камень Земли",
       "item.power.sun_leggings": "Штаны солнца",
       "item.power.rain_bow": "Дождевой Лук",
@@ -14479,16 +14727,15 @@
       "item.power.sand_stone": "Камень Песка",
       "item.power.constructions": "Материализация Конструкций",
       "subtitles.time_power": "Time Travel",
+      "power.space_atlas.venus.text": "Венера",
       "effect.power.technology_master": "Мастер Технологий",
+      "power.cultivation.label.text": "Выберите растение, чтобы получить",
       "item.power.eclipse": "Затмение",
       "biome.power.mars_land": "Марсианская Земля",
-      "effect.lava_master": "Master of Lava",
       "effect.power.light_master": "Мастер Света",
       "item.power.air_flow": "Поток Воздуха",
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
-      "effect.invincibility": "Invincibility",
-      "effect.fire_flying": "Fire Flying",
       "item.power.amber_shield": "Янтарный Щит",
       "item.power.vacuum_spiral": "Вакуумная Спираль",
       "item.power.magnet_chestplate": "Magnet Chestplate",
@@ -14503,8 +14750,8 @@
     "en_us": {
       "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
-      "item.power.explode_leggings": "Explode Leggings",
       "item.power.sun_battery": "Battery",
+      "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.spike": "Spike",
@@ -14518,18 +14765,15 @@
       "block.power.detonator_tnt": "Detonator TNT",
       "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
-      "item.power.damaged_fire_stone": "Damaged Fire Stone",
       "item.power.earth_battery": "Battery",
-      "effect.recharge_magnet_stone": "Recharge",
-      "effect.fire_master": "Master of Fire",
+      "item.power.damaged_fire_stone": "Damaged Fire Stone",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "effect.recharge_blood_stone": "Recharge",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.damaged_vacuum_stone": "Damaged Vacuum Stone",
       "item.power.lava_hammer": "Lava Hammer",
@@ -14538,20 +14782,23 @@
       "item.power.black_hole": "Black Hole",
       "item.power.air_blade": "Air Rapier",
       "item.power.lighting": "Lighting",
+      "power.spawn_animals.cat.text": "Cat",
       "item.power.magnet_leggings": "Magnet Leggings",
+      "power.space_atlas.enceladus.text": "Enceladus",
+      "power.cultivation.potato.text": "Potato",
+      "power.cultivation.pumpkin.text": "Pumpkin",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
       "item.power.amber_leggings": "Amber Leggings",
       "item.power.damaged_amber_stone": "Damaged Amber Stone",
-      "item.power.tamer": "Tamer",
       "item.power.damaged_ocean_stone": "Damaged Ocean Stone",
-      "effect.recharge_greenery_stone": "Recharge",
+      "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
       "item.power.damaged_moon_stone": "Damaged Moon Stone",
       "effect.power.recharge_earth_stone": "Recharge",
-      "effect.power.ice_master": "Master of Ice",
       "item.power.time_reversed": "Time Reversed",
+      "effect.power.ice_master": "Master of Ice",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
       "block.power.moon_stones_block": "Growing Moon Stones Block",
@@ -14561,27 +14808,31 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.space_leggings": "Space Leggings",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.energy_chestplate": "Energy Chestplate",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.space_leggings": "Space Leggings",
+      "power.cultivation.birch.text": "Birch",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
-      "effect.recharge_shadow_stone": "Recharge",
       "item.power.damaged_space_stone": "Damaged Space Stone",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
+      "power.cultivation.spruce.text": "Spruce",
+      "power.cultivation.wheat.text": "Wheat",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
-      "effect.space_master": "Master of Space",
       "item.power.force_replication": "Force Replication",
-      "item.power.damaged_greenery_stone": "Damaged Greenery Stone",
+      "power.building.label.text": "Select the structure you want to place",
+      "item.power.sound_imitate": "Sound Emitate",
       "item.power.explosion_stone": "Explosion Stone",
-      "effect.sound_master": "Master of Sound",
+      "item.power.damaged_greenery_stone": "Damaged Greenery Stone",
+      "power.space_atlas.label.text": "Atlas of Space Travel",
+      "power.cultivation.beetroot.text": "Beetroot",
       "item.power.earth_helmet": "Earth Helmet",
       "item.power.water_flow": "Water Flow",
       "item.power.animals_stone": "Animals Stone",
@@ -14598,7 +14849,6 @@
       "item.power.sun_ray": "Sun Ray",
       "item.power.pterodactyl_spawn_egg": "Pterodactyl Spawn Egg",
       "item.power.destruction_leggings": "Destruction Leggings",
-      "effect.recharge_air_stone": "Recharge",
       "item.power.energy_staff": "Energy Staff",
       "item.power.shadow_helmet": "Shadow Helmet",
       "effect.power.recharge_fire_stone": "Recharge",
@@ -14607,16 +14857,13 @@
       "item.power.damaged_rain_stone": "Damaged Rain Stone",
       "item.power.lava_leggings": "Lava Leggings",
       "item.power.ice_sharp": "Ice Sharp",
-      "effect.destruction_master": "Master of Destruction",
       "biome.power.oblivion_desert": "Oblivion Desert",
       "item.power.sun_regeneration": "Sun Regeneration",
       "effect.power.recharge_lightning_stone": "Recharge",
       "item.power.fertilizer": "Fertilizer",
-      "effect.recharge_crystal_stone": "Recharge",
+      "power.cultivation.water_lily.text": "Water Lily",
       "block.power.gold_magic_box": "Gold Magic Box",
       "item.power.damaged_energy_stone": "Damaged Energy Stone",
-      "effect.fog": "Fog",
-      "effect.tornado_master": "Master of Tornado",
       "biome.power.cretaceous_taiga": "Cretaceous Taiga",
       "item.power.fire_stone": "Fire stone",
       "item.power.blood_stone": "Blood Stone",
@@ -14627,67 +14874,60 @@
       "subtitles.stone_activation": "Stone been activation",
       "effect.power.fog": "Fog",
       "biome.power.triassic_desert": "Triassic Desert",
-      "effect.rain_master": "Master of Rain",
       "block.power.vacuum_web_block": "Vacuum Web Block",
       "biome.power.oblivion_forest": "Oblivion Forest",
       "item.power.earth_boots": "Earth Boots",
-      "effect.blood_master": "Master of Blood",
       "item.power.water_helmet": "Water Helmet",
       "advancements.just_add_water.title": "Just Add Water!",
       "item.power.cultivation": "Cultivation",
-      "effect.amber_master": "Master of Amber",
+      "power.cultivation.sugar_cane.text": "Sugar Cane",
       "item.power.ocean_battery": "Battery",
       "item.power.mist_battery": "Battery",
       "item.power.space_atlas": "Space Atlas",
       "item.power.animals_boots": "Animals Boots",
       "item.power.wind_chestplate": "Air Chestplate",
+      "power.space_atlas.mars.text": "Mars",
       "item.power.bee_sting": "Bee Sting",
-      "effect.recharge_moon_stone": "Recharge",
-      "effect.recharge_space_stone": "Recharge",
       "item.power.tornado_battery": "Battery",
-      "effect.air_master": "Master of the Air",
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
       "itemGroup.tabmagic_boxes": "Magic Boxes",
       "block.power.stone_magic_box": "Stone Magic Box",
       "item.power.vacuum_leggings": "Vacuum Leggings",
+      "power.spawn_animals.wolf.text": "Wolf",
       "item.power.fire_battery": "Battery",
       "item.power.blood_reaper": "Blood Reaper",
       "item.power.damaged_animals_stone": "Damaged Animals Stone",
       "item.power.space_stone": "Space Stone",
       "item.power.teleportation_stone": "Teleportation Stone",
-      "effect.moon_master": "Master of the Moon",
       "item.power.lava_boots": "Lava Boots",
       "gamerule.gettingStonesWhenEnteringTheGame": "Getting stones when entering the game",
       "item.power.lava_hole": "Lava Hole",
       "item.power.metal_leggings": "Metal Leggings",
-      "effect.energy_master": "Master of Energy",
       "item.power.destruction_boots": "Destruction Boots",
       "item.power.sound_helmet": "Sound Helmet",
       "item.power.metal_stone": "Metal Stone",
       "item.power.greenery_boots": "Greenery Boots",
       "subtitles.raptor.hut": "",
-      "effect.recharge_earth_stone": "Recharge",
+      "power.cultivation.jungle_tree.text": "Jungle Tree",
       "key.power.detransform_key": "Detransform key",
-      "effect.rain_fly": "RainFly",
+      "power.sound_emitate.skeleton.text": "Skeleton",
       "biome.power.cretaceous_pine_forest": "Cretaceous Pine Forest",
+      "power.sound_emitate.creeper.text": "Creeper",
       "item.power.tornado_create": "Tornado Create",
       "item.power.sun_stone": "Sun Stone",
-      "effect.recharge_explosion_stone": "Recharge",
       "gamerule.stoneBreaksDuringRebirth.description": "Can a stone break at death if it has been activated?",
       "item.power.damaged_sun_stone": "Damaged Sun Stone",
       "item.power.damaged_creation_stone": "Damaged Creation Stone",
-      "effect.recharge_ocean_stone": "Recharge",
-      "effect.lightning_master": "Master of Lightning",
       "item.power.crystal_chestplate": "Crystal Chestplate",
       "effect.power.creation_master": "Master of Creation",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
       "item.power.ice_shield": "Ice Shield",
       "item.power.sound_leggings": "Sound Leggings",
       "item.power.damaged_lightning_stone": "Damaged Lightning Stone",
+      "power.spawn_animals.chicken.text": "Chicken",
       "item.power.light_leggings": "Light Leggings",
       "item.power.empty_battery": "Battery",
-      "effect.earth_master": "Master of the Earth",
       "item.power.elemental_coin": "Elemental Coin",
       "item.power.magnet_stone": "Magnet Stone",
       "item.power.space_helmet": "Space Helmet",
@@ -14696,12 +14936,10 @@
       "item.power.glow_spawn_egg": "Glow Spawn Egg",
       "item.power.oblivion": "Oblivion Portal Igniter",
       "item.power.sound_barrier": "Sound Barrier",
-      "effect.recharge_ice_stone": "Recharge",
       "item.power.blood_leggings": "Blood Leggings",
       "item.power.damaged_tornado_stone": "Damaged Tornado Stone",
       "item.power.black_heart": "Black Heart",
       "item.power.fire_leggings": "Fire Leggings",
-      "effect.recharge_metal_stone": "Recharge",
       "block.power.black_hole_block": "Black Hole Block",
       "item.power.spawn": "Spawn",
       "effect.power.water_master": "Master of Water",
@@ -14714,8 +14952,8 @@
       "item.power.damaged_air_stone": "Damaged Air Stone",
       "effect.power.air_master": "Master of the Air",
       "item.power.fire_boots": "Fire Boots",
+      "power.cultivation.carrot.text": "Carrot",
       "item.power.crystal_battery": "Battery",
-      "effect.recharge_rain_stone": "Recharge",
       "subtitles.tyrannosaurus_rex.hurt": "",
       "item.power.shadow_leggings": "Shadow Leggings",
       "item.power.tornado_entity_spawn_egg": "Tornado Spawn Egg",
@@ -14737,6 +14975,7 @@
       "itemGroup.tabtechnologies_and_artifacts": "Technologies \u0026 Artifacts",
       "item.power.dinoera": "Dinoera Portal Igniter",
       "item.power.mist_leggings": "Mist Leggings",
+      "power.cultivation.bamboo.text": "Bamboo",
       "block.power.energy_block": "Energy Block",
       "item.power.creation_chestplate": "Creation Chestplate",
       "item.power.damaged_ice_stone": "Damaged Ice Stone",
@@ -14750,15 +14989,14 @@
       "item.power.ice_stone": "Ice Stone",
       "effect.time_stop_effect": "Time Stop",
       "item.power.shadow_sword": "Shadow Sword",
+      "power.sound_emitate.label.text": "Select the mob for emitate sound",
       "item.power.wind_boots": "Air Boots",
       "item.power.rain_helmet": "Rain Helmet",
-      "effect.teleportation_master": "Master of Teleportation",
-      "effect.recharge_sound_stone": "Recharge",
       "item.power.animals_leggings": "Animals Leggings",
       "advancements.maximum_power.descr": "Get the maximum power level",
       "item.power.air_battery": "Battery",
       "item.power.rain_knife": "Rain Knife",
-      "effect.recharge_destruction_stone": "Recharge",
+      "power.spawn_animals.horse.text": "Horse",
       "item.power.damaged_light_stone": "Damaged Light Stone",
       "effect.power.mist_master": "Master of Mist",
       "item.power.iron_golem_create": "Iron Golem Create",
@@ -14769,8 +15007,7 @@
       "subtitles.stone_deactivation": "Stone been deactivation",
       "item.power.whirlpool": "Whirlpool",
       "entity.power.glow": "Glow",
-      "effect.recharge_lava_stone": "Recharge",
-      "effect.recharge_energy_stone": "Recharge",
+      "power.battery_charger.label.text": "Charging the battery",
       "item.power.damaged_explosion_stone": "Damaged Explosion Stone",
       "item.power.technology_boots": "Technology Boots",
       "item.power.enceladus": "Enceladus Portal Igniter",
@@ -14780,16 +15017,14 @@
       "effect.power.fire_master": "Master of Fire",
       "item.power.ocean_leggings": "Ocean Leggings",
       "block.power.wood_magic_box": "Wood Magic Box",
-      "effect.recharge_mist_stone": "Recharge",
+      "power.cultivation.oak.text": "Oak",
       "item.power.ocean_stone": "Ocean Stone",
       "effect.power.animals_master": "Master of Animals",
       "block.power.blue_portal": "Blue Portal",
-      "effect.recharge_sun_stone": "Recharge",
       "item.power.rose_sword": "Rose Sword",
       "entity.power.raptor": "Raptor",
       "item.power.air_stone": "Air Stone",
       "item.power.amber_helmet": "Amber Helmet",
-      "effect.water_master": "Master of Water",
       "item.power.sound_stone": "Sound Stone",
       "itemGroup.tabgreat_group": "Great Group",
       "item.power.metal_invulnerability": "Invulnerability of Metal",
@@ -14812,7 +15047,6 @@
       "effect.power.ocean_master": "Master of the Ocean",
       "effect.power.recharge_creation_stone": "Recharge",
       "item.power.teleportation_helmet": "Teleportation Helmet",
-      "item.power.sound_emitate": "Sound Emitate",
       "advancements.just_add_water.descr": "Learn the water ability",
       "effect.acceleration_time_effect": "Acceleration Time",
       "effect.power.vacuum_master": "Master of Vacuum",
@@ -14825,15 +15059,16 @@
       "item.power.wooden_shield": "Wooden Shield",
       "item.power.earth_leggings": "Earth Leggings",
       "block.power.sound_barrier_block": "Sound Barrier Block",
-      "effect.animals_master": "Master of Animals",
       "item.power.fire_helmet": "Fire Helmet",
       "effect.power.recharge_mist_stone": "Recharge",
+      "power.building.butcher_shop.text": "Butcher Shop",
       "item.power.galactic_sword": "Galactic Sword",
       "entity.power.tyrannosaurus_rex": "Tyrannosaurus Rex",
       "effect.power.crystal_master": "Master of the Crystal",
       "entity.power.plesiosaurus": "Plesiosaurus",
       "item.power.blue_knife": "Blue Knife",
       "item.power.crestcent_helmet": "Crestcent Helmet",
+      "power.building.blacksmith.text": "Blacksmith",
       "item.power.rain_chestplate": "Rain Chestplate",
       "item.power.venus": "Venus Portal Igniter",
       "item.power.technology_leggings": "Technology Leggings",
@@ -14844,7 +15079,9 @@
       "item.power.spirit_stone": "Spirit Stone",
       "item.power.raptor_spawn_egg": "Raptor Spawn Egg",
       "item.power.moon_axe": "Moon Axe",
+      "power.sound_emitate.zombie.text": "Zombie",
       "item.power.techno_pickaxe": "Techno Pickaxe",
+      "power.building.streetlight.text": "Streetlight",
       "effect.power.lava_master": "Master of Lava",
       "effect.power.blood_master": "Master of Blood",
       "item.power.mist_boots": "Mist Boots",
@@ -14854,13 +15091,13 @@
       "item.power.tornado_stone": "Tornado Stone",
       "item.power.point": "Point",
       "itemGroup.tabbatteries": "Batteries",
+      "power.cultivation.dark_oak.text": "Dark Oak",
       "item.power.vacuum_boots": "Vacuum Boots",
       "item.power.water_battery": "Battery",
       "item.power.time_boots": "Time Boots",
       "item.power.plasma_ball": "Plasma Ball",
       "item.power.technology_battery": "Battery",
       "effect.power.explosion_master": "Master of Explosion",
-      "effect.recharge_vacuum_stone": "Recharge",
       "effect.power.recharge_shadow_stone": "Recharge",
       "advancements.maximum_power.title": "Maximum Power!",
       "item.power.greenery_helmet": "Greenery Helmet",
@@ -14871,11 +15108,10 @@
       "item.power.energy_battery": "Battery",
       "item.power.vacuum_battery": "Battery",
       "item.power.creation_boots": "Creation Boots",
-      "effect.recharge_fire_stone": "Recharge",
-      "effect.recharge_water_stone": "Recharge",
       "item.power.space_chestplate": "Space Chestplate",
       "item.power.shadow_spawn_egg": "Shadow Spawn Egg",
       "itemGroup.tabdamaged_stones": "Damaged Stones",
+      "power.spawn_animals.cow.text": "Cow",
       "item.power.crystal_helmet": "Crystal Helmet",
       "item.power.wind_helmet": "Air Helmet",
       "item.power.crystal_shield": "Crystal Shield",
@@ -14885,7 +15121,6 @@
       "item.power.metal_boots": "Metal Boots",
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
-      "effect.recharge_lightning_stone": "Recharge",
       "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_stone": "Poison Stone",
       "biome.power.jurassic_swamp": "Jurassic Swamp",
@@ -14895,8 +15130,8 @@
       "item.power.damaged_destruction_stone": "Damaged Destruction Stone",
       "item.power.burn": "Burn",
       "item.power.amber_boots": "Amber Boots",
-      "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Recharge",
+      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
       "item.power.shield_of_earth": "Shield of the Earth",
@@ -14918,8 +15153,6 @@
       "item.power.time_battery": "Battery",
       "item.power.animals_helmet": "Animals Helmet",
       "item.power.teleportation_battery": "Battery",
-      "effect.technology_master": "Master of Technology",
-      "effect.recharge_amber_stone": "Recharge",
       "item.power.water_drop": "Water Drops",
       "item.power.tornado_leggings": "Tornado Leggings",
       "item.power.creation_stone": "Creation Stone",
@@ -14927,13 +15160,11 @@
       "effect.power.earth_master": "Master of the Earth",
       "effect.power.invincibility": "Invincibility",
       "item.power.blood_battery": "Battery",
-      "effect.recharge_time_stone": "Recharge",
       "item.power.water_chestplate": "Water Chestplate",
       "item.power.time_stone": "Time Stone",
-      "effect.recharge_animals_stone": "Recharge",
       "effect.power.sun_master": "Master of Sun",
-      "effect.vacuum_master": "Master of Vacuum",
       "item.power.time_helmet": "Time Helmet",
+      "power.cultivation.acacia.text": "Acacia",
       "item.power.random_item": "Random Item",
       "effect.power.space_master": "Master of Space",
       "biome.power.venus_desert": "Venus Desert",
@@ -14944,7 +15175,6 @@
       "item.power.cluster_sharp": "Cluster Sharp",
       "effect.power.lightning_master": "Master of Lightning",
       "effect.power.recharge_air_stone": "Recharge",
-      "effect.crystal_master": "Master of the Crystal",
       "item.power.tornado_boots": "Tornado Boots",
       "subtitles.powerful_stone": "",
       "item.power.water_stone": "Water Stone",
@@ -14967,6 +15197,7 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
       "effect.power.moon_master": "Master of the Moon",
+      "item.power.crystallized": "Crystallized Portal Igniter",
       "item.power.damaged_sound_stone": "Damaged Sound Stone",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
@@ -14974,15 +15205,16 @@
       "advancements.put_it_on_charge_overnight.title": "Put it on charge overnight",
       "item.power.damaged_teleportation_stone": "Damaged Teleportation Stone",
       "item.power.ice_chestplate": "Ice Chestplate",
+      "power.building.library.text": "Library",
       "item.power.moon_stones": "Moon Stones",
+      "power.space_atlas.earth.text": "Earth",
       "item.power.sound_battery": "Battery",
-      "effect.recharge_creation_stone": "Recharge",
       "effect.power.teleportation_master": "Master of Teleportation",
       "item.power.lava_stone": "Lava Stone",
       "block.power.orange_portal": "Orange Portal",
       "item.power.damaged_shadow_stone": "Damaged Shadow Stone",
       "item.power.space_battery": "Battery",
-      "effect.mist_master": "Master of Mist",
+      "power.spawn_animals.label.text": "Choose an animal to summon ",
       "item.power.sun_explode": "Sun Explode",
       "item.power.vacuum_sword": "Vacuum Sword",
       "item.power.fire_sword": "Fire Sword",
@@ -14993,19 +15225,17 @@
       "item.power.sun_helmet": "Sun Helmet",
       "itemGroup.tabmiddle_group": "Middle Group",
       "item.power.book_of_elements": "Book Of Elements",
+      "power.space_atlas.moon.text": "Moon",
       "effect.power.recharge_lava_stone": "Recharge",
       "subtitles.tyrannosaurus_rex.ambient": "",
-      "effect.metal_master": "Master of Metal",
       "item.power.ice_helmet": "Ice Helmet",
       "item.power.obscurity": "Obscurity",
       "item.power.increase_power": "Increase Power",
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.ice_ball": "Ice Ball",
-      "effect.sun_master": "Master of Sun",
       "item.power.tornado_helmet": "Tornado Helmet",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.crystal_stone": "Crystal Stone",
-      "effect.recharge_light_stone": "Recharge",
       "item.power.metal_chestplate": "Metal Chestplate",
       "item.power.technology_stone": "Technology Stone",
       "item.power.megawatt": "Megawatt",
@@ -15014,34 +15244,28 @@
       "item.power.tiger_claw": "Tiger Claw",
       "item.power.tyrannosaurus_rex_spawn_egg": "Tyrannosaurus Rex Spawn Egg",
       "item.power.misty_fan": "Misty Fan",
-      "effect.light_master": "Master of Light",
-      "effect.shadow_master": "Master of Shadow",
       "advancements.power_up.descr": "Unlock the second level",
       "item.power.plesiosaurus_spawn_egg": "Plesiosaurus Spawn Egg",
       "item.power.speed_stone": "Speed Stone",
-      "effect.recharge_technology_stone": "Recharge",
       "item.power.rain_stone": "Rain Stone",
       "item.power.lightning_strike": "Lightning Strike",
-      "effect.greenery_master": "Master of Greenery",
+      "power.spawn_animals.sheep.text": "Sheep",
       "block.power.cluster_block": "Cluster Block",
       "item.power.fistof_earth": "Fist of Earth",
       "item.power.blood_chestplate": "Blood Chestplate",
       "item.power.sun_axe": "Sun Axe",
-      "effect.ocean_master": "Master of the Ocean",
       "item.power.damaged_metal_stone": "Damaged Metal Stone",
-      "effect.time_master_effect": "Master of Time",
       "item.power.sun_boots": "Sun Boots",
-      "effect.recharge_teleportation_stone": "Recharge",
-      "effect.explosion_master": "Master of Explosion",
       "item.power.moon_stone": "Moon Stone",
       "item.power.mars": "Mars Portal Igniter",
+      "power.cultivation.melon.text": "Melon",
       "item.power.magnet_boots": "Magnet Boots",
+      "power.cultivation.vine.text": "Vine",
       "item.power.destruction_power": "Destruction Power",
       "item.power.greenery_stone": "Greenery Stone",
       "effect.power.recharge_ocean_stone": "Recharge",
       "item.power.tornado_battle_axe": "Tornado Battle Axe",
       "biome.power.venus_land": "Venus Land",
-      "effect.ice_master": "Master of Ice",
       "item.power.damaged_earth_stone": "Damaged Earth Stone",
       "item.power.sun_leggings": "Sun Leggings",
       "item.power.rain_bow": "Rain Bow",
@@ -15055,16 +15279,15 @@
       "item.power.sand_stone": "Sand Stone",
       "item.power.constructions": "Materialization of Constructions",
       "subtitles.time_power": "Time Power",
+      "power.space_atlas.venus.text": "Venus",
       "effect.power.technology_master": "Master of Technology",
+      "power.cultivation.label.text": "Select a plant to get",
       "item.power.eclipse": "Eclipse",
       "biome.power.mars_land": "Mars Land",
-      "effect.lava_master": "Master of Lava",
       "effect.power.light_master": "Master of Light",
       "item.power.air_flow": "Air Flow",
       "effect.power.metal_master": "Master of Metal",
       "effect.power.recharge_metal_stone": "Recharge",
-      "effect.invincibility": "Invincibility",
-      "effect.fire_flying": "Fire Flying",
       "item.power.amber_shield": "Amber Shield",
       "item.power.vacuum_spiral": "Vacuum Spiral",
       "item.power.magnet_chestplate": "Magnet Chestplate",
@@ -15322,7 +15545,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.2.1",
+    "version": "2.3.0.2",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki",
@@ -15335,7 +15558,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.16.5",
+    "currentGenerator": "forge-1.18.2",
     "credits": "Created by MagicalAlexey, with the support of Chiffon Medal, FixEnd, 7ZLBeka, Superlexaan as well as many other contributors.",
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
