@@ -12,6 +12,15 @@
     "isBad": false,
     "isBenefitical": true,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "SandMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "SandMasterEffects"
+    },
+    "onExpired": {
+      "name": "SandMasterEffectEnd"
+    }
   }
 }
