@@ -75,7 +75,10 @@ import power.keepeersofthestones.item.ShadowInvisibleItem;
 import power.keepeersofthestones.item.ShadowBatteryItem;
 import power.keepeersofthestones.item.ShadowBallItem;
 import power.keepeersofthestones.item.SandStoneItem;
+import power.keepeersofthestones.item.SandShieldItem;
 import power.keepeersofthestones.item.SandItem;
+import power.keepeersofthestones.item.SandFlurryItem;
+import power.keepeersofthestones.item.SandDaggerItem;
 import power.keepeersofthestones.item.SandBatteryItem;
 import power.keepeersofthestones.item.SaiItem;
 import power.keepeersofthestones.item.RoseSwordItem;
@@ -87,6 +90,7 @@ import power.keepeersofthestones.item.RainKnifeItem;
 import power.keepeersofthestones.item.RainItem;
 import power.keepeersofthestones.item.RainBowItem;
 import power.keepeersofthestones.item.RainBatteryItem;
+import power.keepeersofthestones.item.QuicksandItem;
 import power.keepeersofthestones.item.PortalBlastItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
 import power.keepeersofthestones.item.PointItem;
@@ -594,6 +598,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SAND_LEGGINGS = REGISTRY.register("sand_leggings", () -> new SandItem.Leggings());
 	public static final RegistryObject<Item> SAND_BOOTS = REGISTRY.register("sand_boots", () -> new SandItem.Boots());
 	public static final RegistryObject<Item> SAND_BATTERY = REGISTRY.register("sand_battery", () -> new SandBatteryItem());
+	public static final RegistryObject<Item> SAND_DAGGER = REGISTRY.register("sand_dagger", () -> new SandDaggerItem());
+	public static final RegistryObject<Item> SAND_FLURRY = REGISTRY.register("sand_flurry", () -> new SandFlurryItem());
+	public static final RegistryObject<Item> SAND_SHIELD = REGISTRY.register("sand_shield", () -> new SandShieldItem());
+	public static final RegistryObject<Item> QUICKSAND = REGISTRY.register("quicksand", () -> new QuicksandItem());
+	public static final RegistryObject<Item> FAKE_SAND = block(PowerModBlocks.FAKE_SAND, PowerModTabs.TAB_BASIC_GROUP);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

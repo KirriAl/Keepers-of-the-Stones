@@ -1,8 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.SandStoneUseProcedure;
-import power.keepeersofthestones.init.PowerModTabs;
+import power.keepeersofthestones.procedures.SandShieldUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -14,9 +13,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-public class SandStoneItem extends Item {
-	public SandStoneItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ADDITIONAL_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
+public class SandShieldItem extends Item {
+	public SandShieldItem() {
+		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -42,7 +41,7 @@ public class SandStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SandStoneUseProcedure.execute(entity);
+		SandShieldUseProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
 	}
 }

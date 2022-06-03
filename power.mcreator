@@ -13202,6 +13202,125 @@
         ]
       },
       "path": "~/Sand"
+    },
+    {
+      "name": "SandDagger",
+      "type": "tool",
+      "sortid": 855,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_dagger",
+      "path": "~/Sand"
+    },
+    {
+      "name": "SandFlurry",
+      "type": "rangeditem",
+      "sortid": 856,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_flurry",
+      "path": "~/Sand"
+    },
+    {
+      "name": "SandShield",
+      "type": "item",
+      "sortid": 857,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_shield",
+      "path": "~/Sand"
+    },
+    {
+      "name": "SandShieldUse",
+      "type": "procedure",
+      "sortid": 858,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_shield_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Sand"
+    },
+    {
+      "name": "Quicksand",
+      "type": "item",
+      "sortid": 859,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quicksand",
+      "path": "~/Sand"
+    },
+    {
+      "name": "FakeSand",
+      "type": "block",
+      "sortid": 860,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fake_sand",
+      "path": "~/Sand"
+    },
+    {
+      "name": "QuicksandUse",
+      "type": "procedure",
+      "sortid": 861,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quicksand_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Sand"
     }
   ],
   "variable_elements": [
@@ -13808,10 +13927,10 @@
   ],
   "language_map": {
     "ru_ru": {
-      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.sun_battery": "Батарея",
+      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.spike": "Шип",
@@ -13820,9 +13939,9 @@
       "item.power.lightning_battery": "Батарея",
       "effect.power.recharge_rain_stone": "Перезарядка",
       "effect.recharge_tornado_stone": "Перезарядка",
-      "block.power.detonator_tnt": "Детонатор",
-      "item.power.cutter_sword": "Куттер-Меч",
       "biome.power.triassic_plains": "Триассовые Равнины",
+      "item.power.cutter_sword": "Куттер-Меч",
+      "block.power.detonator_tnt": "Детонатор",
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
@@ -13830,8 +13949,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
@@ -13842,8 +13961,8 @@
       "power.spawn_animals.cat.text": "Кот",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.potato.text": "Картофель",
       "power.cultivation.pumpkin.text": "Тыква",
+      "power.cultivation.potato.text": "Картофель",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -13862,16 +13981,16 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.energy_chestplate": "Энергетическая Кираса",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.space_leggings": "Космические штаны",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.energy_chestplate": "Энергетическая Кираса",
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
       "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.light_helmet": "Шлем солнца",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Шлем солнца",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "power.cultivation.spruce.text": "Ель",
@@ -13879,10 +13998,10 @@
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
-      "item.power.force_replication": "Репликация Силы",
       "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
-      "item.power.explosion_stone": "Камень Взрыва",
+      "item.power.force_replication": "Репликация Силы",
       "item.power.sound_imitate": "Звуковой Подражатель",
+      "item.power.explosion_stone": "Камень Взрыва",
       "power.space_atlas.label.text": "Космический Атлас",
       "power.cultivation.beetroot.text": "Свекла",
       "item.power.earth_helmet": "Земляной Монокль",
@@ -13890,9 +14009,10 @@
       "item.power.animals_stone": "Камень Животных",
       "advancements.put_it_on_charge_overnight.descr": "Создайте зарядник для батарей",
       "item.power.redstone_bundle": "Мешок С Редстоуном",
+      "item.power.sand_shield": "Песчаный Щит",
       "item.power.mercury_stone": "Камень Ртути",
-      "item.power.iron_shield": "Железный Щит",
       "item.power.light_battery": "Батарея",
+      "item.power.iron_shield": "Железный Щит",
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
@@ -13900,8 +14020,8 @@
       "item.power.bo_staff": "Посох Бо",
       "item.power.destruction_helmet": "Шлем разрушения",
       "item.power.sand_leggings": "Sand Leggings",
-      "item.power.sun_ray": "Луч Солнца",
       "item.power.pterodactyl_spawn_egg": "Яйцо призыва птеродактиля",
+      "item.power.sun_ray": "Луч Солнца",
       "item.power.destruction_leggings": "Поножи разрушения",
       "item.power.energy_staff": "Посох Энергии",
       "effect.power.recharge_fire_stone": "Перезарядка",
@@ -13941,6 +14061,7 @@
       "item.power.wind_chestplate": "Воздушный Жилет",
       "power.space_atlas.mars.text": "Марс",
       "item.power.bee_sting": "Пчелиное Жало",
+      "block.power.fake_sand": "Фейковый Песок",
       "item.power.tornado_battery": "Батарея",
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
@@ -13948,6 +14069,7 @@
       "block.power.stone_magic_box": "Волшебная Каменная Шкатулка",
       "item.power.vacuum_leggings": "Ваакумные штаны",
       "power.spawn_animals.wolf.text": "Волк",
+      "item.power.quicksand": "Зыбучий Песок",
       "item.power.fire_battery": "Батарея",
       "item.power.blood_reaper": "Кровавый Жнец",
       "item.power.space_stone": "Камень Космоса",
@@ -14096,7 +14218,7 @@
       "effect.power.rain_master": "Мастер Дождя",
       "item.power.wooden_shield": "Древесный Щит",
       "item.power.earth_leggings": "Земляные Штаны",
-      "effect.power.recharge_sand_stone": "Recharge",
+      "effect.power.recharge_sand_stone": "Перезарядка",
       "block.power.sound_barrier_block": "Блок Звукового барьера",
       "item.power.fire_helmet": "Огненная корона",
       "effect.power.recharge_mist_stone": "Перезарядка",
@@ -14144,6 +14266,7 @@
       "item.power.greenery_battery": "Батарея",
       "item.power.elemental_music_disc.desc": "Элементы",
       "effect.power.amber_master": "Мастер Янтаря",
+      "item.power.sand_dagger": "Песчаный Кинжал ",
       "effect.power.shadow_master": "Мастер Тени",
       "item.power.energy_battery": "Батарея",
       "item.power.vacuum_battery": "Батарея",
@@ -14168,6 +14291,7 @@
       "item.power.energy_boots": "Энергетические Ботинки",
       "item.power.burn": "Поджёг",
       "item.power.amber_boots": "Amber Boots",
+      "item.power.sand_flurry": "Песчаный Шквал",
       "effect.power.recharge_destruction_stone": "Перезарядка",
       "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Вампиризм",
@@ -14413,6 +14537,7 @@
       "item.power.animals_stone": "Animals Stone",
       "advancements.put_it_on_charge_overnight.descr": "Create a charger for batteries",
       "item.power.redstone_bundle": "Redstone Bundle",
+      "item.power.sand_shield": "Sand Shield",
       "item.power.mercury_stone": "Mercury Stone",
       "item.power.light_battery": "Battery",
       "item.power.iron_shield": "Iron Shield",
@@ -14464,6 +14589,7 @@
       "item.power.wind_chestplate": "Air Chestplate",
       "power.space_atlas.mars.text": "Mars",
       "item.power.bee_sting": "Bee Sting",
+      "block.power.fake_sand": "Fake Sand",
       "item.power.tornado_battery": "Battery",
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
@@ -14471,6 +14597,7 @@
       "block.power.stone_magic_box": "Stone Magic Box",
       "item.power.vacuum_leggings": "Vacuum Leggings",
       "power.spawn_animals.wolf.text": "Wolf",
+      "item.power.quicksand": "Quicksand",
       "item.power.fire_battery": "Battery",
       "item.power.blood_reaper": "Blood Reaper",
       "item.power.space_stone": "Space Stone",
@@ -14668,6 +14795,7 @@
       "item.power.greenery_battery": "Battery",
       "item.power.elemental_music_disc.desc": "Elements",
       "effect.power.amber_master": "Master of Amber",
+      "item.power.sand_dagger": "Sand Dagger",
       "effect.power.shadow_master": "Master of Shadow",
       "item.power.energy_battery": "Battery",
       "item.power.vacuum_battery": "Battery",
@@ -14692,6 +14820,7 @@
       "item.power.energy_boots": "Energy Boots",
       "item.power.burn": "Burn",
       "item.power.amber_boots": "Amber Boots",
+      "item.power.sand_flurry": "Sand Flurry",
       "effect.power.recharge_destruction_stone": "Recharge",
       "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.vampirism": "Vampirism",

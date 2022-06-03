@@ -1,22 +1,24 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.SandStoneUseProcedure;
-import power.keepeersofthestones.init.PowerModTabs;
+import power.keepeersofthestones.procedures.QuicksandUseProcedure;
+import power.keepeersofthestones.procedures.OpenBuyAquaPowerProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 
-public class SandStoneItem extends Item {
-	public SandStoneItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ADDITIONAL_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
+public class QuicksandItem extends Item {
+	public QuicksandItem() {
+		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -42,7 +44,15 @@ public class SandStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SandStoneUseProcedure.execute(entity);
+		QuicksandUseProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
+	}
+
+	@Override
+	public InteractionResult useOn(UseOnContext context) {
+		InteractionResult retval = super.useOn(context);
+		OpenBuyAquaPowerProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
+				context.getClickedPos().getZ(), context.getPlayer());
+		return retval;
 	}
 }
