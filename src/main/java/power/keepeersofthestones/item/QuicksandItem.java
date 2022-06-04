@@ -3,56 +3,103 @@ package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.QuicksandUseProcedure;
 import power.keepeersofthestones.procedures.OpenBuyAquaPowerProcedure;
+import power.keepeersofthestones.PowerModElements;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
+import net.minecraftforge.registries.ObjectHolder;
 
-public class QuicksandItem extends Item {
-	public QuicksandItem() {
-		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Direction;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.ActionResult;
+import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.block.BlockState;
+
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
+
+@PowerModElements.ModElement.Tag
+public class QuicksandItem extends PowerModElements.ModElement {
+	@ObjectHolder("power:quicksand")
+	public static final Item block = null;
+
+	public QuicksandItem(PowerModElements instance) {
+		super(instance, 859);
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
+	public void initElements() {
+		elements.items.add(() -> new ItemCustom());
 	}
 
-	@Override
-	public int getUseDuration(ItemStack itemstack) {
-		return 0;
-	}
+	public static class ItemCustom extends Item {
+		public ItemCustom() {
+			super(new Item.Properties().group(null).maxStackSize(1).isImmuneToFire().rarity(Rarity.COMMON));
+			setRegistryName("quicksand");
+		}
 
-	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-		return 0F;
-	}
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
+		}
 
-	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		ItemStack itemstack = ar.getObject();
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
+		@Override
+		public int getItemEnchantability() {
+			return 0;
+		}
 
-		QuicksandUseProcedure.execute(world, x, y, z, entity, itemstack);
-		return ar;
-	}
+		@Override
+		public int getUseDuration(ItemStack itemstack) {
+			return 0;
+		}
 
-	@Override
-	public InteractionResult useOn(UseOnContext context) {
-		InteractionResult retval = super.useOn(context);
-		OpenBuyAquaPowerProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
-				context.getClickedPos().getZ(), context.getPlayer());
-		return retval;
+		@Override
+		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+			return 0F;
+		}
+
+		@Override
+		public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
+			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
+			ItemStack itemstack = ar.getResult();
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+
+			QuicksandUseProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
+							new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			return ar;
+		}
+
+		@Override
+		public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
+			ActionResultType retval = super.onItemUseFirst(stack, context);
+			World world = context.getWorld();
+			BlockPos pos = context.getPos();
+			PlayerEntity entity = context.getPlayer();
+			Direction direction = context.getFace();
+			BlockState blockstate = world.getBlockState(pos);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			ItemStack itemstack = context.getItem();
+
+			OpenBuyAquaPowerProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			return retval;
+		}
 	}
 }
