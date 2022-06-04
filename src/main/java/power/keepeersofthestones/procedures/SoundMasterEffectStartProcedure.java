@@ -137,7 +137,7 @@ public class SoundMasterEffectStartProcedure {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"give @s power:sound_emitate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+						"give @s power:sound_imitate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 			}
 		}
 	}

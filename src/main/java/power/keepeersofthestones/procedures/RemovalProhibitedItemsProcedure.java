@@ -37,7 +37,7 @@ import power.keepeersofthestones.item.SpaceItem;
 import power.keepeersofthestones.item.SpaceAtlasItem;
 import power.keepeersofthestones.item.SoundSwordItem;
 import power.keepeersofthestones.item.SoundItem;
-import power.keepeersofthestones.item.SoundEmitateItem;
+import power.keepeersofthestones.item.SoundImitateItem;
 import power.keepeersofthestones.item.SoundBarrierItem;
 import power.keepeersofthestones.item.SnowGolemCreatorItem;
 import power.keepeersofthestones.item.ShurikenItem;
@@ -326,7 +326,7 @@ public class RemovalProhibitedItemsProcedure {
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
 					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(SoundEmitateItem.block);
+						ItemStack _stktoremove = new ItemStack(SoundImitateItem.block);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}

@@ -115,10 +115,8 @@ public class LevelsAndSkillsPageGuiWindow extends ContainerScreen<LevelsAndSkill
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Levels", -108, -112, -13421773);
 		this.font.drawString(ms, "Level 2", -163, -65, -13421773);
 		this.font.drawString(ms, "Level 3", -163, -40, -13421773);
-		this.font.drawString(ms, "Skills", 89, -112, -13421773);
 		this.font.drawString(ms, "Aqua Power", 26, -90, -13421773);
 		this.font.drawString(ms, "Level 1", -163, -90, -13421773);
 	}

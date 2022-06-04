@@ -201,6 +201,7 @@ public class PowerModVariables {
 		public boolean cosmos_stone = false;
 		public boolean magnet_stone = false;
 		public boolean mist_stone = false;
+		public boolean sand_stone = false;
 
 		public MapVariables() {
 			super(DATA_NAME);
@@ -227,6 +228,7 @@ public class PowerModVariables {
 			cosmos_stone = nbt.getBoolean("cosmos_stone");
 			magnet_stone = nbt.getBoolean("magnet_stone");
 			mist_stone = nbt.getBoolean("mist_stone");
+			sand_stone = nbt.getBoolean("sand_stone");
 		}
 
 		@Override
@@ -246,6 +248,7 @@ public class PowerModVariables {
 			nbt.putBoolean("cosmos_stone", cosmos_stone);
 			nbt.putBoolean("magnet_stone", magnet_stone);
 			nbt.putBoolean("mist_stone", mist_stone);
+			nbt.putBoolean("sand_stone", sand_stone);
 			return nbt;
 		}
 
@@ -381,6 +384,7 @@ public class PowerModVariables {
 			nbt.putDouble("power_level", instance.power_level);
 			nbt.putBoolean("water_power", instance.water_power);
 			nbt.putBoolean("recharge_spell_mist", instance.recharge_spell_mist);
+			nbt.putBoolean("sand", instance.sand);
 			return nbt;
 		}
 
@@ -433,6 +437,7 @@ public class PowerModVariables {
 			instance.power_level = nbt.getDouble("power_level");
 			instance.water_power = nbt.getBoolean("water_power");
 			instance.recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
+			instance.sand = nbt.getBoolean("sand");
 		}
 	}
 
@@ -483,6 +488,7 @@ public class PowerModVariables {
 		public double power_level = 1.0;
 		public boolean water_power = false;
 		public boolean recharge_spell_mist = false;
+		public boolean sand = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -555,6 +561,7 @@ public class PowerModVariables {
 		clone.mist = original.mist;
 		clone.power_level = original.power_level;
 		clone.water_power = original.water_power;
+		clone.sand = original.sand;
 		if (!event.isWasDeath()) {
 			clone.active = original.active;
 			clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -634,6 +641,7 @@ public class PowerModVariables {
 					variables.power_level = message.data.power_level;
 					variables.water_power = message.data.water_power;
 					variables.recharge_spell_mist = message.data.recharge_spell_mist;
+					variables.sand = message.data.sand;
 				}
 			});
 			context.setPacketHandled(true);

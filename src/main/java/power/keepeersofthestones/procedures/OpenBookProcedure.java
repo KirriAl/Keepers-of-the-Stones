@@ -10,6 +10,7 @@ import power.keepeersofthestones.item.SunStoneItem;
 import power.keepeersofthestones.item.SpaceStoneItem;
 import power.keepeersofthestones.item.SoundStoneItem;
 import power.keepeersofthestones.item.ShadowStoneItem;
+import power.keepeersofthestones.item.SandStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
@@ -41,6 +42,7 @@ import power.keepeersofthestones.gui.EBSunGui;
 import power.keepeersofthestones.gui.EBSpaceGui;
 import power.keepeersofthestones.gui.EBSoundGui;
 import power.keepeersofthestones.gui.EBShadowGui;
+import power.keepeersofthestones.gui.EBSandGui;
 import power.keepeersofthestones.gui.EBRainGui;
 import power.keepeersofthestones.gui.EBOceanGui;
 import power.keepeersofthestones.gui.EBMoonGui;
@@ -700,6 +702,25 @@ public class OpenBookProcedure {
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
 							return new EBMistGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SandStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSand");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSandGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

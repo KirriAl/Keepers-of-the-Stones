@@ -17,6 +17,9 @@
       },
       {
         "value": "CUSTOM:JurassicSwamp"
+      },
+      {
+        "value": "CUSTOM:CretaceousTaiga"
       }
     ],
     "worldGenType": "Normal world gen",

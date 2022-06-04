@@ -10,6 +10,7 @@ import power.keepeersofthestones.potion.SunMasterPotionEffect;
 import power.keepeersofthestones.potion.SpaceMasterPotionEffect;
 import power.keepeersofthestones.potion.SoundMasterPotionEffect;
 import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
+import power.keepeersofthestones.potion.SandMasterPotionEffect;
 import power.keepeersofthestones.potion.RainMasterPotionEffect;
 import power.keepeersofthestones.potion.OceanMasterPotionEffect;
 import power.keepeersofthestones.potion.MoonMasterPotionEffect;
@@ -135,6 +136,9 @@ public class ClearCopyElementsProcedure {
 		}
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).removePotionEffect(MistMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(SandMasterPotionEffect.potion);
 		}
 	}
 }
