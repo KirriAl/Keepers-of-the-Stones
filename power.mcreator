@@ -13282,6 +13282,15 @@
       "locked_code": false,
       "registry_name": "eb_sand",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "Confstone",
+      "type": "command",
+      "sortid": 863,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "confstone",
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
