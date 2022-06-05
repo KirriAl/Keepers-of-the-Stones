@@ -1,14 +1,14 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
   "promos": {
-    "1.16.5-latest": "2.3.0",
-    "1.16.5-recommended": "2.3.0",
+    "1.16.5-latest": "2.3.1",
+    "1.16.5-recommended": "2.3.1",
     "1.17.1-latest": "1.4.1",
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.3.0",
-    "1.18.2-recommended": "2.3.0"
+    "1.18.2-latest": "2.3.1",
+    "1.18.2-recommended": "2.3.1"
   },
   "1.16.5": {
    "1.1.18": "
@@ -115,6 +115,10 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - The stone damage function has been completely removed
 - [Bugfix] Fixed the id of the sound imitator.
 - [Bugfix] Fixed a bug where some Destruction master spells could remain in the inventory. 
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.1": "
+- [Bugfix] Fixed a bug where the purchase interface opened when using quicksand (#58)
+- [Bugfix] Fixed a bug where it was possible to endlessly summon entities using some spells (for 1.16.5)
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   },
   "1.17.1": {
@@ -525,6 +529,10 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - The stone damage function has been completely removed
 - [Bugfix] Fixed the id of the sound imitator.
 - [Bugfix] Fixed a bug where some Destruction master spells could remain in the inventory. 
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.1": "
+- [Bugfix] Fixed a bug where the purchase interface opened when using quicksand (#58)
+- [Bugfix] Fixed a bug where it was possible to endlessly summon entities using some spells (for 1.16.5)
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
