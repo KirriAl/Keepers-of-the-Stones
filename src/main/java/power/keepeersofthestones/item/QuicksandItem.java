@@ -2,20 +2,15 @@
 package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.QuicksandUseProcedure;
-import power.keepeersofthestones.procedures.OpenBuyAquaPowerProcedure;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ActionResult;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
@@ -80,26 +75,6 @@ public class QuicksandItem extends PowerModElements.ModElement {
 							new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return ar;
-		}
-
-		@Override
-		public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
-			ActionResultType retval = super.onItemUseFirst(stack, context);
-			World world = context.getWorld();
-			BlockPos pos = context.getPos();
-			PlayerEntity entity = context.getPlayer();
-			Direction direction = context.getFace();
-			BlockState blockstate = world.getBlockState(pos);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			ItemStack itemstack = context.getItem();
-
-			OpenBuyAquaPowerProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			return retval;
 		}
 	}
 }
