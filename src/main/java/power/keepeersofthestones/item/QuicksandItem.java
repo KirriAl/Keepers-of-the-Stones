@@ -2,18 +2,15 @@
 package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.QuicksandUseProcedure;
-import power.keepeersofthestones.procedures.OpenBuyAquaPowerProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 
 public class QuicksandItem extends Item {
@@ -46,13 +43,5 @@ public class QuicksandItem extends Item {
 
 		QuicksandUseProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
-	}
-
-	@Override
-	public InteractionResult useOn(UseOnContext context) {
-		InteractionResult retval = super.useOn(context);
-		OpenBuyAquaPowerProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
-				context.getClickedPos().getZ(), context.getPlayer());
-		return retval;
 	}
 }

@@ -32,9 +32,6 @@
     "onRightClickedInAir": {
       "name": "QuicksandUse"
     },
-    "onRightClickedOnBlock": {
-      "name": "OpenBuyAquaPower"
-    },
     "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 4,
