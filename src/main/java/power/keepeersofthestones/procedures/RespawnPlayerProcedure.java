@@ -28,6 +28,7 @@ import power.keepeersofthestones.potion.RechargeDestructionStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeCrystalStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeCreationStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeBloodStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeAnimalsStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAmberStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAirStonePotionEffect;
 import power.keepeersofthestones.potion.FireMasterPotionEffect;
@@ -362,7 +363,7 @@ public class RespawnPlayerProcedure {
 					}
 					if (entity instanceof LivingEntity)
 						((LivingEntity) entity)
-								.addPotionEffect(new EffectInstance(FireMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+								.addPotionEffect(new EffectInstance(RechargeAnimalsStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).metal) {
 					{
