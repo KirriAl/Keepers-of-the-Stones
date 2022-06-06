@@ -25,6 +25,7 @@ import power.keepeersofthestones.item.TeleportationItem;
 import power.keepeersofthestones.item.TechnologyItem;
 import power.keepeersofthestones.item.TechnobarrierItem;
 import power.keepeersofthestones.item.TechnoPickaxeItem;
+import power.keepeersofthestones.item.TamerItem;
 import power.keepeersofthestones.item.SunRegenerationItem;
 import power.keepeersofthestones.item.SunRayItem;
 import power.keepeersofthestones.item.SunItem;
@@ -46,6 +47,10 @@ import power.keepeersofthestones.item.ShadowarmorItem;
 import power.keepeersofthestones.item.ShadowSwordItem;
 import power.keepeersofthestones.item.ShadowInvisibleItem;
 import power.keepeersofthestones.item.ShadowBallItem;
+import power.keepeersofthestones.item.SandShieldItem;
+import power.keepeersofthestones.item.SandItem;
+import power.keepeersofthestones.item.SandFlurryItem;
+import power.keepeersofthestones.item.SandDaggerItem;
 import power.keepeersofthestones.item.SaiItem;
 import power.keepeersofthestones.item.RoseSwordItem;
 import power.keepeersofthestones.item.RedstoneBundleItem;
@@ -54,6 +59,7 @@ import power.keepeersofthestones.item.RainfallItem;
 import power.keepeersofthestones.item.RainKnifeItem;
 import power.keepeersofthestones.item.RainItem;
 import power.keepeersofthestones.item.RainBowItem;
+import power.keepeersofthestones.item.QuicksandItem;
 import power.keepeersofthestones.item.PortalBlastItem;
 import power.keepeersofthestones.item.PointItem;
 import power.keepeersofthestones.item.PlasmaBallItem;
@@ -472,6 +478,11 @@ public class RemovalProhibitedItemsProcedure {
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(SpawnItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(TamerItem.block);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
@@ -1407,6 +1418,46 @@ public class RemovalProhibitedItemsProcedure {
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(CutterSwordItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SandItem.helmet);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SandItem.body);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SandItem.legs);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SandItem.boots);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SandDaggerItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SandFlurryItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SandShieldItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(QuicksandItem.block);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
