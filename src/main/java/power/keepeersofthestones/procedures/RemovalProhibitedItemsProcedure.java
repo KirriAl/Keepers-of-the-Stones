@@ -314,6 +314,11 @@ public class RemovalProhibitedItemsProcedure {
 								_player.inventoryMenu.getCraftSlots());
 					}
 					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PowerModItems.TAMER.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+								_player.inventoryMenu.getCraftSlots());
+					}
+					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = new ItemStack(PowerModItems.SHURIKEN.get());
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
