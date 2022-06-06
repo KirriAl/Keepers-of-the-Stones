@@ -13330,6 +13330,195 @@
       "locked_code": false,
       "registry_name": "eb_sand",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "RechargeSpeedStone",
+      "type": "potioneffect",
+      "sortid": 863,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_speed_stone",
+      "path": "~/Speed"
+    },
+    {
+      "name": "SpeedMaster",
+      "type": "potioneffect",
+      "sortid": 864,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_master",
+      "path": "~/Speed"
+    },
+    {
+      "name": "SpeedBattery",
+      "type": "item",
+      "sortid": 865,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "SpeedBatteryUse",
+      "type": "procedure",
+      "sortid": 866,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "SpeedStoneUse",
+      "type": "procedure",
+      "sortid": 867,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Speed"
+    },
+    {
+      "name": "SpeedMasterEffectStart",
+      "type": "procedure",
+      "sortid": 868,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Speed"
+    },
+    {
+      "name": "SpeedMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 869,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Speed"
+    },
+    {
+      "name": "SpeedMasterEffects",
+      "type": "procedure",
+      "sortid": 870,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Speed"
+    },
+    {
+      "name": "Speed",
+      "type": "armor",
+      "sortid": 871,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Speed"
+    },
+    {
+      "name": "SupersonicDagger",
+      "type": "tool",
+      "sortid": 872,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "supersonic_dagger",
+      "path": "~/Speed"
+    },
+    {
+      "name": "SpeedGet",
+      "type": "procedure",
+      "sortid": 873,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
     }
   ],
   "variable_elements": [
@@ -13866,6 +14055,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "speed_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "speed",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -13997,6 +14198,7 @@
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
       "item.power.shadow_invisible": "Теневая Невидимость",
+      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Камень Эфира",
       "item.power.light_helmet": "Шлем солнца",
       "item.power.moon": "Moon Portal Igniter",
@@ -14025,6 +14227,7 @@
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
+      "item.power.supersonic_dagger": "Supersonic Dagger",
       "item.power.sand_helmet": "Sand Helmet",
       "item.power.bo_staff": "Посох Бо",
       "item.power.destruction_helmet": "Шлем разрушения",
@@ -14069,8 +14272,10 @@
       "item.power.animals_boots": "Животные ботинки",
       "item.power.wind_chestplate": "Воздушный Жилет",
       "power.space_atlas.mars.text": "Марс",
+      "item.power.speed_helmet": "Speed Helmet",
       "item.power.bee_sting": "Пчелиное Жало",
       "block.power.fake_sand": "Фейковый Песок",
+      "effect.power.recharge_speed_stone": "Recharge",
       "item.power.tornado_battery": "Батарея",
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
@@ -14107,6 +14312,7 @@
       "power.spawn_animals.chicken.text": "Курица",
       "item.power.light_leggings": "Штаны света",
       "item.power.empty_battery": "Батарея",
+      "item.power.speed_leggings": "Speed Leggings",
       "item.power.elemental_coin": "Элементальная Монета",
       "item.power.magnet_stone": "Камень Магнита",
       "item.power.space_helmet": "Космический шлем",
@@ -14179,6 +14385,7 @@
       "item.power.whirlpool": "Водоворот",
       "entity.power.glow": "Светляк",
       "power.battery_charger.label.text": "Зарядка батареи",
+      "item.power.speed_battery": "Battery",
       "item.power.technology_boots": "Технологичные штаны",
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Дождевые Штаны",
@@ -14215,6 +14422,7 @@
       "item.power.metal_helmet": "Металлический шлем",
       "effect.power.ocean_master": "Мастер Океана",
       "effect.power.recharge_creation_stone": "Перезарядка",
+      "effect.power.speed_master": "Master of Speed",
       "item.power.teleportation_helmet": "Шлем перемищения",
       "advancements.just_add_water.descr": "Изучите способность воды",
       "effect.acceleration_time_effect": "Acceleration Time",
@@ -14223,6 +14431,7 @@
       "item.power.lightning_leggings": "Штаны Молнии",
       "item.power.water_katana": "Водяная Катана",
       "item.power.greenery_leggings": "Greenery Leggings",
+      "item.power.speed_boots": "Speed Boots",
       "item.power.coral_shield": "Коралловый щит",
       "effect.power.rain_master": "Мастер Дождя",
       "item.power.wooden_shield": "Древесный Щит",
@@ -14525,6 +14734,7 @@
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
       "item.power.shadow_invisible": "Shadow Invisible",
+      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Aether Stone",
       "item.power.light_helmet": "Light Helmet",
       "item.power.moon": "Moon Portal Igniter",
@@ -14553,6 +14763,7 @@
       "effect.power.tornado_master": "Master of Tornado",
       "biome.power.enceladus_ice_desert": "Enceladus Ice Desert",
       "itemGroup.tabadditional_group": "Additional Group",
+      "item.power.supersonic_dagger": "Supersonic Dagger",
       "item.power.sand_helmet": "Sand Helmet",
       "item.power.bo_staff": "Bo Staff",
       "item.power.destruction_helmet": "Destruction Helmet",
@@ -14597,8 +14808,10 @@
       "item.power.animals_boots": "Animals Boots",
       "item.power.wind_chestplate": "Air Chestplate",
       "power.space_atlas.mars.text": "Mars",
+      "item.power.speed_helmet": "Speed Helmet",
       "item.power.bee_sting": "Bee Sting",
       "block.power.fake_sand": "Fake Sand",
+      "effect.power.recharge_speed_stone": "Recharge",
       "item.power.tornado_battery": "Battery",
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
@@ -14635,6 +14848,7 @@
       "power.spawn_animals.chicken.text": "Chicken",
       "item.power.light_leggings": "Light Leggings",
       "item.power.empty_battery": "Battery",
+      "item.power.speed_leggings": "Speed Leggings",
       "item.power.elemental_coin": "Elemental Coin",
       "item.power.magnet_stone": "Magnet Stone",
       "item.power.space_helmet": "Space Helmet",
@@ -14708,6 +14922,7 @@
       "item.power.whirlpool": "Whirlpool",
       "entity.power.glow": "Glow",
       "power.battery_charger.label.text": "Charging the battery",
+      "item.power.speed_battery": "Battery",
       "item.power.technology_boots": "Technology Boots",
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Rain Leggings",
@@ -14744,6 +14959,7 @@
       "item.power.metal_helmet": "Metal Helmet",
       "effect.power.ocean_master": "Master of the Ocean",
       "effect.power.recharge_creation_stone": "Recharge",
+      "effect.power.speed_master": "Master of Speed",
       "item.power.teleportation_helmet": "Teleportation Helmet",
       "advancements.just_add_water.descr": "Learn the water ability",
       "effect.acceleration_time_effect": "Acceleration Time",
@@ -14752,6 +14968,7 @@
       "item.power.lightning_leggings": "Lightning Leggings",
       "item.power.water_katana": "Water Katana",
       "item.power.greenery_leggings": "Greenery Leggings",
+      "item.power.speed_boots": "Speed Boots",
       "effect.power.rain_master": "Master of Rain",
       "item.power.coral_shield": "Coral Shield",
       "item.power.wooden_shield": "Wooden Shield",
@@ -15231,7 +15448,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.3.2",
+    "version": "2.3.10",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki",

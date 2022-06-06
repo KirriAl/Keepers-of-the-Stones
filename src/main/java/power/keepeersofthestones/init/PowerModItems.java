@@ -42,6 +42,7 @@ import power.keepeersofthestones.item.TechnologyBatteryItem;
 import power.keepeersofthestones.item.TechnobarrierItem;
 import power.keepeersofthestones.item.TechnoPickaxeItem;
 import power.keepeersofthestones.item.TamerItem;
+import power.keepeersofthestones.item.SupersonicDaggerItem;
 import power.keepeersofthestones.item.SunStoneItem;
 import power.keepeersofthestones.item.SunRegenerationItem;
 import power.keepeersofthestones.item.SunRayItem;
@@ -53,6 +54,8 @@ import power.keepeersofthestones.item.StormItem;
 import power.keepeersofthestones.item.SpiritStoneItem;
 import power.keepeersofthestones.item.SpikeItem;
 import power.keepeersofthestones.item.SpeedStoneItem;
+import power.keepeersofthestones.item.SpeedItem;
+import power.keepeersofthestones.item.SpeedBatteryItem;
 import power.keepeersofthestones.item.SpawnItem;
 import power.keepeersofthestones.item.SpaceStoneItem;
 import power.keepeersofthestones.item.SpaceItem;
@@ -602,7 +605,13 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SAND_FLURRY = REGISTRY.register("sand_flurry", () -> new SandFlurryItem());
 	public static final RegistryObject<Item> SAND_SHIELD = REGISTRY.register("sand_shield", () -> new SandShieldItem());
 	public static final RegistryObject<Item> QUICKSAND = REGISTRY.register("quicksand", () -> new QuicksandItem());
-	public static final RegistryObject<Item> FAKE_SAND = block(PowerModBlocks.FAKE_SAND, PowerModTabs.TAB_BASIC_GROUP);
+	public static final RegistryObject<Item> FAKE_SAND = block(PowerModBlocks.FAKE_SAND, null);
+	public static final RegistryObject<Item> SPEED_BATTERY = REGISTRY.register("speed_battery", () -> new SpeedBatteryItem());
+	public static final RegistryObject<Item> SPEED_HELMET = REGISTRY.register("speed_helmet", () -> new SpeedItem.Helmet());
+	public static final RegistryObject<Item> SPEED_CHESTPLATE = REGISTRY.register("speed_chestplate", () -> new SpeedItem.Chestplate());
+	public static final RegistryObject<Item> SPEED_LEGGINGS = REGISTRY.register("speed_leggings", () -> new SpeedItem.Leggings());
+	public static final RegistryObject<Item> SPEED_BOOTS = REGISTRY.register("speed_boots", () -> new SpeedItem.Boots());
+	public static final RegistryObject<Item> SUPERSONIC_DAGGER = REGISTRY.register("supersonic_dagger", () -> new SupersonicDaggerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

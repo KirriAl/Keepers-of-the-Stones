@@ -119,6 +119,7 @@ public class PowerModVariables {
 			clone.power_level = original.power_level;
 			clone.water_power = original.water_power;
 			clone.sand = original.sand;
+			clone.speed = original.speed;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -285,6 +286,7 @@ public class PowerModVariables {
 		public boolean magnet_stone = false;
 		public boolean mist_stone = false;
 		public boolean sand_stone = false;
+		public boolean speed_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -309,6 +311,7 @@ public class PowerModVariables {
 			magnet_stone = nbt.getBoolean("magnet_stone");
 			mist_stone = nbt.getBoolean("mist_stone");
 			sand_stone = nbt.getBoolean("sand_stone");
+			speed_stone = nbt.getBoolean("speed_stone");
 		}
 
 		@Override
@@ -329,6 +332,7 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet_stone", magnet_stone);
 			nbt.putBoolean("mist_stone", mist_stone);
 			nbt.putBoolean("sand_stone", sand_stone);
+			nbt.putBoolean("speed_stone", speed_stone);
 			return nbt;
 		}
 
@@ -465,6 +469,7 @@ public class PowerModVariables {
 		public boolean water_power = false;
 		public boolean recharge_spell_mist = false;
 		public boolean sand = false;
+		public boolean speed = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -520,6 +525,7 @@ public class PowerModVariables {
 			nbt.putBoolean("water_power", water_power);
 			nbt.putBoolean("recharge_spell_mist", recharge_spell_mist);
 			nbt.putBoolean("sand", sand);
+			nbt.putBoolean("speed", speed);
 			return nbt;
 		}
 
@@ -572,6 +578,7 @@ public class PowerModVariables {
 			water_power = nbt.getBoolean("water_power");
 			recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
 			sand = nbt.getBoolean("sand");
+			speed = nbt.getBoolean("speed");
 		}
 	}
 
@@ -644,6 +651,7 @@ public class PowerModVariables {
 					variables.water_power = message.data.water_power;
 					variables.recharge_spell_mist = message.data.recharge_spell_mist;
 					variables.sand = message.data.sand;
+					variables.speed = message.data.speed;
 				}
 			});
 			context.setPacketHandled(true);

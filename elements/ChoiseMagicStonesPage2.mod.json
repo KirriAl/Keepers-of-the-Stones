@@ -194,10 +194,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Speed",
+          "onClick": {
+            "name": "SpeedGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Speed",
           "x": 240,
           "y": 107
         }
@@ -448,6 +451,16 @@
           "name": "sand_master.png",
           "x": 222,
           "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "speed_master.png",
+          "use1Xscale": false,
+          "name": "speed_master.png",
+          "x": 222,
+          "y": 107
         }
       }
     ],
