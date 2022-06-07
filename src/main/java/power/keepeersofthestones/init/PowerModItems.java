@@ -208,6 +208,7 @@ import power.keepeersofthestones.item.CoralShieldItem;
 import power.keepeersofthestones.item.ConstructionsItem;
 import power.keepeersofthestones.item.ClusterSharpItem;
 import power.keepeersofthestones.item.BurnItem;
+import power.keepeersofthestones.item.BoomerangItem;
 import power.keepeersofthestones.item.BookOfElementsItem;
 import power.keepeersofthestones.item.BoStaffItem;
 import power.keepeersofthestones.item.BlueKnifeItem;
@@ -612,6 +613,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPEED_LEGGINGS = REGISTRY.register("speed_leggings", () -> new SpeedItem.Leggings());
 	public static final RegistryObject<Item> SPEED_BOOTS = REGISTRY.register("speed_boots", () -> new SpeedItem.Boots());
 	public static final RegistryObject<Item> SUPERSONIC_DAGGER = REGISTRY.register("supersonic_dagger", () -> new SupersonicDaggerItem());
+	public static final RegistryObject<Item> BOOMERANG = REGISTRY.register("boomerang", () -> new BoomerangItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
