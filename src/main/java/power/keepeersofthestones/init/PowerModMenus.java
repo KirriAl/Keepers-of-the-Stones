@@ -17,6 +17,7 @@ import power.keepeersofthestones.world.inventory.EBTimeMenu;
 import power.keepeersofthestones.world.inventory.EBTeleportationMenu;
 import power.keepeersofthestones.world.inventory.EBTechnologyMenu;
 import power.keepeersofthestones.world.inventory.EBSunMenu;
+import power.keepeersofthestones.world.inventory.EBSpeedMenu;
 import power.keepeersofthestones.world.inventory.EBSpaceMenu;
 import power.keepeersofthestones.world.inventory.EBSoundMenu;
 import power.keepeersofthestones.world.inventory.EBShadowMenu;
@@ -138,6 +139,7 @@ public class PowerModMenus {
 	public static final MenuType<SoundImitateChoiceMenu> SOUND_IMITATE_CHOICE = register("sound_imitate_choice",
 			(id, inv, extraData) -> new SoundImitateChoiceMenu(id, inv, extraData));
 	public static final MenuType<EBSandMenu> EB_SAND = register("eb_sand", (id, inv, extraData) -> new EBSandMenu(id, inv, extraData));
+	public static final MenuType<EBSpeedMenu> EB_SPEED = register("eb_speed", (id, inv, extraData) -> new EBSpeedMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
