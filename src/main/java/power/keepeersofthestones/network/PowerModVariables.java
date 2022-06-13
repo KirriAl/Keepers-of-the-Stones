@@ -128,6 +128,7 @@ public class PowerModVariables {
 				clone.recharge_spell_energy = original.recharge_spell_energy;
 				clone.fog = original.fog;
 				clone.recharge_spell_mist = original.recharge_spell_mist;
+				clone.turbospeed = original.turbospeed;
 			}
 		}
 
@@ -470,6 +471,7 @@ public class PowerModVariables {
 		public boolean recharge_spell_mist = false;
 		public boolean sand = false;
 		public boolean speed = false;
+		public boolean turbospeed = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -526,6 +528,7 @@ public class PowerModVariables {
 			nbt.putBoolean("recharge_spell_mist", recharge_spell_mist);
 			nbt.putBoolean("sand", sand);
 			nbt.putBoolean("speed", speed);
+			nbt.putBoolean("turbospeed", turbospeed);
 			return nbt;
 		}
 
@@ -579,6 +582,7 @@ public class PowerModVariables {
 			recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
 			sand = nbt.getBoolean("sand");
 			speed = nbt.getBoolean("speed");
+			turbospeed = nbt.getBoolean("turbospeed");
 		}
 	}
 
@@ -652,6 +656,7 @@ public class PowerModVariables {
 					variables.recharge_spell_mist = message.data.recharge_spell_mist;
 					variables.sand = message.data.sand;
 					variables.speed = message.data.speed;
+					variables.turbospeed = message.data.turbospeed;
 				}
 			});
 			context.setPacketHandled(true);

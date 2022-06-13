@@ -20,6 +20,7 @@ import power.keepeersofthestones.item.VacuumStoneItem;
 import power.keepeersofthestones.item.VacuumSpiralItem;
 import power.keepeersofthestones.item.VacuumItem;
 import power.keepeersofthestones.item.VacuumBatteryItem;
+import power.keepeersofthestones.item.TurboSpeedItem;
 import power.keepeersofthestones.item.TornadoStoneItem;
 import power.keepeersofthestones.item.TornadoItem;
 import power.keepeersofthestones.item.TornadoCreateItem;
@@ -614,6 +615,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPEED_BOOTS = REGISTRY.register("speed_boots", () -> new SpeedItem.Boots());
 	public static final RegistryObject<Item> SUPERSONIC_DAGGER = REGISTRY.register("supersonic_dagger", () -> new SupersonicDaggerItem());
 	public static final RegistryObject<Item> BOOMERANG = REGISTRY.register("boomerang", () -> new BoomerangItem());
+	public static final RegistryObject<Item> TURBO_SPEED = REGISTRY.register("turbo_speed", () -> new TurboSpeedItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
