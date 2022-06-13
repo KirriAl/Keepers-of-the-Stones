@@ -13277,15 +13277,6 @@
       "path": "~/Sand"
     },
     {
-      "name": "FakeSand",
-      "type": "block",
-      "sortid": 860,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fake_sand",
-      "path": "~/Sand"
-    },
-    {
       "name": "QuicksandUse",
       "type": "procedure",
       "sortid": 861,
@@ -13562,6 +13553,35 @@
         ]
       },
       "path": "~/Speed"
+    },
+    {
+      "name": "DamagedQuicksand",
+      "type": "procedure",
+      "sortid": 876,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damaged_quicksand",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Sand"
+    },
+    {
+      "name": "QuicksandBlock",
+      "type": "fluid",
+      "sortid": 876,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quicksand_block",
+      "metadata": {
+        "gb": false
+      },
+      "path": "~/Sand"
     }
   ],
   "variable_elements": [
@@ -14312,6 +14332,7 @@
       "block.power.vacuum_web_block": "Блок Вакуумной Сети",
       "biome.power.oblivion_forest": "Лес Обливиона",
       "item.power.earth_boots": "Земляные Ботинки",
+      "fluid.power.quicksand_block": "Quicksand Block",
       "item.power.water_helmet": "Водная Маска",
       "advancements.just_add_water.title": "Просто Добавь Воды!",
       "item.power.cultivation": "Выращивание",
@@ -14324,7 +14345,6 @@
       "power.space_atlas.mars.text": "Марс",
       "item.power.speed_helmet": "Speed Helmet",
       "item.power.bee_sting": "Пчелиное Жало",
-      "block.power.fake_sand": "Фейковый Песок",
       "effect.power.recharge_speed_stone": "Перезарядка",
       "item.power.tornado_battery": "Батарея",
       "item.power.crystal_boots": "Кристаллические Сапоги",
@@ -14420,6 +14440,7 @@
       "power.sound_emitate.label.text": "Выберите моба для имитации звука",
       "item.power.wind_boots": "Воздушные Сапоги",
       "item.power.rain_helmet": "Дождевая Шапка",
+      "item.power.quicksand_block_bucket": "Quicksand Block Bucket",
       "item.power.animals_leggings": "Штаны животных",
       "advancements.maximum_power.descr": "Получите максимальный уровень мощности",
       "item.power.air_battery": "Батарея",
@@ -14531,6 +14552,7 @@
       "item.power.sand_boots": "Sand Boots",
       "effect.power.recharge_shadow_stone": "Перезарядка",
       "advancements.maximum_power.title": "Максимум Силы!",
+      "block.power.quicksand_block": "Quicksand Block",
       "item.power.greenery_helmet": "Травяной шлем",
       "item.power.greenery_battery": "Батарея",
       "item.power.elemental_music_disc.desc": "Элементы",
@@ -14850,6 +14872,7 @@
       "block.power.vacuum_web_block": "Vacuum Web Block",
       "biome.power.oblivion_forest": "Oblivion Forest",
       "item.power.earth_boots": "Earth Boots",
+      "fluid.power.quicksand_block": "Quicksand Block",
       "item.power.water_helmet": "Water Helmet",
       "advancements.just_add_water.title": "Just Add Water!",
       "item.power.cultivation": "Cultivation",
@@ -14862,7 +14885,6 @@
       "power.space_atlas.mars.text": "Mars",
       "item.power.speed_helmet": "Speed Helmet",
       "item.power.bee_sting": "Bee Sting",
-      "block.power.fake_sand": "Fake Sand",
       "effect.power.recharge_speed_stone": "Recharge",
       "item.power.tornado_battery": "Battery",
       "item.power.crystal_boots": "Crystal Boots",
@@ -14959,6 +14981,7 @@
       "power.sound_emitate.label.text": "Select the mob for emitate sound",
       "item.power.wind_boots": "Air Boots",
       "item.power.rain_helmet": "Rain Helmet",
+      "item.power.quicksand_block_bucket": "Quicksand Block Bucket",
       "item.power.animals_leggings": "Animals Leggings",
       "advancements.maximum_power.descr": "Get the maximum power level",
       "item.power.air_battery": "Battery",
@@ -15070,6 +15093,7 @@
       "item.power.sand_boots": "Sand Boots",
       "effect.power.recharge_shadow_stone": "Recharge",
       "advancements.maximum_power.title": "Maximum Power!",
+      "block.power.quicksand_block": "Quicksand Block",
       "item.power.greenery_helmet": "Greenery Helmet",
       "item.power.greenery_battery": "Battery",
       "item.power.elemental_music_disc.desc": "Elements",

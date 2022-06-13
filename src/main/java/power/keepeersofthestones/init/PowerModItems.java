@@ -607,7 +607,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SAND_FLURRY = REGISTRY.register("sand_flurry", () -> new SandFlurryItem());
 	public static final RegistryObject<Item> SAND_SHIELD = REGISTRY.register("sand_shield", () -> new SandShieldItem());
 	public static final RegistryObject<Item> QUICKSAND = REGISTRY.register("quicksand", () -> new QuicksandItem());
-	public static final RegistryObject<Item> FAKE_SAND = block(PowerModBlocks.FAKE_SAND, null);
 	public static final RegistryObject<Item> SPEED_BATTERY = REGISTRY.register("speed_battery", () -> new SpeedBatteryItem());
 	public static final RegistryObject<Item> SPEED_HELMET = REGISTRY.register("speed_helmet", () -> new SpeedItem.Helmet());
 	public static final RegistryObject<Item> SPEED_CHESTPLATE = REGISTRY.register("speed_chestplate", () -> new SpeedItem.Chestplate());
