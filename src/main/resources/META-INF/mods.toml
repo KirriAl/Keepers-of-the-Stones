@@ -23,5 +23,11 @@ This mod will add new sources of energy to the world with which you can transfor
     side="BOTH"
 
 
+[[dependencies.power]]
+    modId="vanillaml"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
