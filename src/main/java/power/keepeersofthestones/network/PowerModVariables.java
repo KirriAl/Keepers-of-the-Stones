@@ -120,6 +120,15 @@ public class PowerModVariables {
 			clone.water_power = original.water_power;
 			clone.sand = original.sand;
 			clone.speed = original.speed;
+			clone.c1x = original.c1x;
+			clone.c1y = original.c1y;
+			clone.c1z = original.c1z;
+			clone.c2x = original.c2x;
+			clone.c2y = original.c2y;
+			clone.c2z = original.c2z;
+			clone.c3x = original.c3x;
+			clone.c3y = original.c3y;
+			clone.c3z = original.c3z;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -472,6 +481,15 @@ public class PowerModVariables {
 		public boolean sand = false;
 		public boolean speed = false;
 		public boolean turbospeed = false;
+		public double c1x = 0;
+		public double c1y = 0;
+		public double c1z = 0;
+		public double c2x = 0;
+		public double c2y = 0;
+		public double c2z = 0;
+		public double c3x = 0;
+		public double c3y = 0;
+		public double c3z = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -529,6 +547,15 @@ public class PowerModVariables {
 			nbt.putBoolean("sand", sand);
 			nbt.putBoolean("speed", speed);
 			nbt.putBoolean("turbospeed", turbospeed);
+			nbt.putDouble("c1x", c1x);
+			nbt.putDouble("c1y", c1y);
+			nbt.putDouble("c1z", c1z);
+			nbt.putDouble("c2x", c2x);
+			nbt.putDouble("c2y", c2y);
+			nbt.putDouble("c2z", c2z);
+			nbt.putDouble("c3x", c3x);
+			nbt.putDouble("c3y", c3y);
+			nbt.putDouble("c3z", c3z);
 			return nbt;
 		}
 
@@ -583,6 +610,15 @@ public class PowerModVariables {
 			sand = nbt.getBoolean("sand");
 			speed = nbt.getBoolean("speed");
 			turbospeed = nbt.getBoolean("turbospeed");
+			c1x = nbt.getDouble("c1x");
+			c1y = nbt.getDouble("c1y");
+			c1z = nbt.getDouble("c1z");
+			c2x = nbt.getDouble("c2x");
+			c2y = nbt.getDouble("c2y");
+			c2z = nbt.getDouble("c2z");
+			c3x = nbt.getDouble("c3x");
+			c3y = nbt.getDouble("c3y");
+			c3z = nbt.getDouble("c3z");
 		}
 	}
 
@@ -657,6 +693,15 @@ public class PowerModVariables {
 					variables.sand = message.data.sand;
 					variables.speed = message.data.speed;
 					variables.turbospeed = message.data.turbospeed;
+					variables.c1x = message.data.c1x;
+					variables.c1y = message.data.c1y;
+					variables.c1z = message.data.c1z;
+					variables.c2x = message.data.c2x;
+					variables.c2y = message.data.c2y;
+					variables.c2z = message.data.c2z;
+					variables.c3x = message.data.c3x;
+					variables.c3y = message.data.c3y;
+					variables.c3z = message.data.c3z;
 				}
 			});
 			context.setPacketHandled(true);
