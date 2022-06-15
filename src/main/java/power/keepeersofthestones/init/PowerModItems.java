@@ -107,6 +107,7 @@ import power.keepeersofthestones.item.OceanItem;
 import power.keepeersofthestones.item.OceanBatteryItem;
 import power.keepeersofthestones.item.ObscurityItem;
 import power.keepeersofthestones.item.OblivionItem;
+import power.keepeersofthestones.item.MusicStoneItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MoonWitherItem;
 import power.keepeersofthestones.item.MoonStonesItem;
@@ -615,6 +616,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SUPERSONIC_DAGGER = REGISTRY.register("supersonic_dagger", () -> new SupersonicDaggerItem());
 	public static final RegistryObject<Item> BOOMERANG = REGISTRY.register("boomerang", () -> new BoomerangItem());
 	public static final RegistryObject<Item> TURBO_SPEED = REGISTRY.register("turbo_speed", () -> new TurboSpeedItem());
+	public static final RegistryObject<Item> MUSIC_STONE = REGISTRY.register("music_stone", () -> new MusicStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

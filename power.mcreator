@@ -13762,6 +13762,15 @@
         ]
       },
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "MusicStone",
+      "type": "item",
+      "sortid": 886,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_stone",
+      "path": "~/Music"
     }
   ],
   "variable_elements": [
@@ -14654,6 +14663,7 @@
       "item.power.sound_chestplate": "Звуковой Нагрудник",
       "item.power.flash_light": "Вспышка Света",
       "item.power.shadow_chestplate": "Нагрудник тьмы",
+      "item.power.music_stone": "Music Stone",
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Технологии \u0026 Артефакты",
       "item.power.dinoera": "Огниво Портала (Диноэра)",
@@ -15194,6 +15204,7 @@
       "item.power.flash_light": "Flash Light",
       "item.power.shadow_chestplate": "Shadow Chestplate",
       "battery.empty": "",
+      "item.power.music_stone": "Music Stone",
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Technologies \u0026 Artifacts",
       "item.power.dinoera": "Dinoera Portal Igniter",
@@ -15755,6 +15766,10 @@
       },
       {
         "name": "Dimensions",
+        "children": []
+      },
+      {
+        "name": "Music",
         "children": []
       }
     ]
