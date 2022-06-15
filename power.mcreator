@@ -13925,6 +13925,32 @@
         "ec": true
       },
       "path": "~/Poison"
+    },
+    {
+      "name": "PoisonBattery",
+      "type": "item",
+      "sortid": 895,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "PoisonBatteryUse",
+      "type": "procedure",
+      "sortid": 896,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
     }
   ],
   "variable_elements": [
@@ -14639,6 +14665,7 @@
       "item.power.glow_create": "Создать Светляка",
       "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Лавовый Молот",
@@ -15185,6 +15212,7 @@
       "item.power.glow_create": "Glow Create",
       "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",

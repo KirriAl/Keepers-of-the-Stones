@@ -98,6 +98,7 @@ import power.keepeersofthestones.item.QuicksandItem;
 import power.keepeersofthestones.item.PortalBlastItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
 import power.keepeersofthestones.item.PoisonItem;
+import power.keepeersofthestones.item.PoisonBatteryItem;
 import power.keepeersofthestones.item.PointItem;
 import power.keepeersofthestones.item.PlasmaBallItem;
 import power.keepeersofthestones.item.PlagueStoneItem;
@@ -622,6 +623,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_CHESTPLATE = REGISTRY.register("poison_chestplate", () -> new PoisonItem.Chestplate());
 	public static final RegistryObject<Item> POISON_LEGGINGS = REGISTRY.register("poison_leggings", () -> new PoisonItem.Leggings());
 	public static final RegistryObject<Item> POISON_BOOTS = REGISTRY.register("poison_boots", () -> new PoisonItem.Boots());
+	public static final RegistryObject<Item> POISON_BATTERY = REGISTRY.register("poison_battery", () -> new PoisonBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
