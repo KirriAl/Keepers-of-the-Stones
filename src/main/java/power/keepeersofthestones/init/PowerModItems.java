@@ -97,6 +97,7 @@ import power.keepeersofthestones.item.RainBatteryItem;
 import power.keepeersofthestones.item.QuicksandItem;
 import power.keepeersofthestones.item.PortalBlastItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
+import power.keepeersofthestones.item.PoisonItem;
 import power.keepeersofthestones.item.PointItem;
 import power.keepeersofthestones.item.PlasmaBallItem;
 import power.keepeersofthestones.item.PlagueStoneItem;
@@ -617,6 +618,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BOOMERANG = REGISTRY.register("boomerang", () -> new BoomerangItem());
 	public static final RegistryObject<Item> TURBO_SPEED = REGISTRY.register("turbo_speed", () -> new TurboSpeedItem());
 	public static final RegistryObject<Item> MUSIC_STONE = REGISTRY.register("music_stone", () -> new MusicStoneItem());
+	public static final RegistryObject<Item> POISON_HELMET = REGISTRY.register("poison_helmet", () -> new PoisonItem.Helmet());
+	public static final RegistryObject<Item> POISON_CHESTPLATE = REGISTRY.register("poison_chestplate", () -> new PoisonItem.Chestplate());
+	public static final RegistryObject<Item> POISON_LEGGINGS = REGISTRY.register("poison_leggings", () -> new PoisonItem.Leggings());
+	public static final RegistryObject<Item> POISON_BOOTS = REGISTRY.register("poison_boots", () -> new PoisonItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

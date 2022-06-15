@@ -129,6 +129,7 @@ public class PowerModVariables {
 			clone.c3x = original.c3x;
 			clone.c3y = original.c3y;
 			clone.c3z = original.c3z;
+			clone.poison = original.poison;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -297,6 +298,7 @@ public class PowerModVariables {
 		public boolean mist_stone = false;
 		public boolean sand_stone = false;
 		public boolean speed_stone = false;
+		public boolean poison_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -322,6 +324,7 @@ public class PowerModVariables {
 			mist_stone = nbt.getBoolean("mist_stone");
 			sand_stone = nbt.getBoolean("sand_stone");
 			speed_stone = nbt.getBoolean("speed_stone");
+			poison_stone = nbt.getBoolean("poison_stone");
 		}
 
 		@Override
@@ -343,6 +346,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mist_stone", mist_stone);
 			nbt.putBoolean("sand_stone", sand_stone);
 			nbt.putBoolean("speed_stone", speed_stone);
+			nbt.putBoolean("poison_stone", poison_stone);
 			return nbt;
 		}
 
@@ -490,6 +494,7 @@ public class PowerModVariables {
 		public double c3x = 0;
 		public double c3y = 0;
 		public double c3z = 0;
+		public boolean poison = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -556,6 +561,7 @@ public class PowerModVariables {
 			nbt.putDouble("c3x", c3x);
 			nbt.putDouble("c3y", c3y);
 			nbt.putDouble("c3z", c3z);
+			nbt.putBoolean("poison", poison);
 			return nbt;
 		}
 
@@ -619,6 +625,7 @@ public class PowerModVariables {
 			c3x = nbt.getDouble("c3x");
 			c3y = nbt.getDouble("c3y");
 			c3z = nbt.getDouble("c3z");
+			poison = nbt.getBoolean("poison");
 		}
 	}
 
@@ -702,6 +709,7 @@ public class PowerModVariables {
 					variables.c3x = message.data.c3x;
 					variables.c3y = message.data.c3y;
 					variables.c3z = message.data.c3z;
+					variables.poison = message.data.poison;
 				}
 			});
 			context.setPacketHandled(true);

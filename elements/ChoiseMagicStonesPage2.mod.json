@@ -292,10 +292,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Poison",
+          "onClick": {
+            "name": "PoisonGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Poison",
           "x": 240,
           "y": 134
         }
@@ -461,6 +464,16 @@
           "name": "speed_master.png",
           "x": 222,
           "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "poison_master.png",
+          "use1Xscale": false,
+          "name": "poison_master.png",
+          "x": 222,
+          "y": 134
         }
       }
     ],

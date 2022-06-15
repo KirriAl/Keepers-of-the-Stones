@@ -13789,6 +13789,142 @@
       "locked_code": false,
       "registry_name": "poison_master",
       "path": "~/Poison"
+    },
+    {
+      "name": "PoisonGet",
+      "type": "procedure",
+      "sortid": 889,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "PoisonStoneUse",
+      "type": "procedure",
+      "sortid": 890,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Poison"
+    },
+    {
+      "name": "PoisonMasterEffectStart",
+      "type": "procedure",
+      "sortid": 891,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Poison"
+    },
+    {
+      "name": "PoisonMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 892,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Poison"
+    },
+    {
+      "name": "PoisonMasterEffects",
+      "type": "procedure",
+      "sortid": 893,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Poison"
+    },
+    {
+      "name": "Poison",
+      "type": "armor",
+      "sortid": 894,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Poison"
     }
   ],
   "variable_elements": [
@@ -14397,6 +14533,18 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "poison",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "poison_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -14572,7 +14720,7 @@
       "item.power.crystal_leggings": "Кристаллические Штаны",
       "item.power.crystal_dagger": "Кристаллический Кинжал",
       "item.power.lava_leggings": "Лавовые Брюки",
-      "effect.power.poison_master": "Master of Poison",
+      "effect.power.poison_master": "Мастер Яда",
       "item.power.ice_sharp": "Ледяной Осколок",
       "biome.power.oblivion_desert": "Пустыня Обливиона",
       "item.power.sun_regeneration": "Солнечное Исцеление",
@@ -14603,6 +14751,7 @@
       "item.power.mist_battery": "Батарея",
       "item.power.space_atlas": "Космический Атлас",
       "item.power.animals_boots": "Животные ботинки",
+      "item.power.poison_leggings": "Poison Leggings",
       "item.power.wind_chestplate": "Воздушный Жилет",
       "power.space_atlas.mars.text": "Марс",
       "item.power.speed_helmet": "Speed Helmet",
@@ -14743,6 +14892,7 @@
       "block.power.unmultiplication_moon_stones_block": "Блок Лунных Камней",
       "item.power.energy_sphere": "Энергетический Шар",
       "item.power.vacuum_web": "Вакуумная Сеть",
+      "item.power.poison_chestplate": "Poison Chestplate",
       "item.power.energy_helmet": "Энергетический Шлем",
       "item.power.energy_shield": "Энергощит",
       "subtitles.raptor.hurt": "",
@@ -14766,6 +14916,7 @@
       "item.power.water_katana": "Водяная Катана",
       "item.power.greenery_leggings": "Greenery Leggings",
       "item.power.speed_boots": "Speed Boots",
+      "item.power.poison_boots": "Poison Boots",
       "item.power.coral_shield": "Коралловый щит",
       "effect.power.rain_master": "Мастер Дождя",
       "item.power.wooden_shield": "Древесный Щит",
@@ -14918,6 +15069,7 @@
       "power.building.library.text": "Библиотека",
       "item.power.moon_stones": "Лунные Камни",
       "power.space_atlas.earth.text": "Земля",
+      "item.power.poison_helmet": "Poison Helmet",
       "item.power.sound_battery": "Батарея",
       "effect.power.teleportation_master": "Мастер Телепортации",
       "item.power.lava_stone": "Камень Лавы",
@@ -14982,7 +15134,7 @@
       "effect.power.recharge_space_stone": "Перезарядка",
       "item.power.blood_helmet": "Шлем крови",
       "item.power.light_chestplate": "Нагрудник света",
-      "effect.power.recharge_poison_stone": "Recharge",
+      "effect.power.recharge_poison_stone": "Перезарядка",
       "item.power.light_stone": "Камень Света",
       "item.power.ice_battery": "Батарея",
       "item.power.sand_stone": "Камень Песка",
@@ -15145,6 +15297,7 @@
       "item.power.mist_battery": "Battery",
       "item.power.space_atlas": "Space Atlas",
       "item.power.animals_boots": "Animals Boots",
+      "item.power.poison_leggings": "Poison Leggings",
       "item.power.wind_chestplate": "Air Chestplate",
       "power.space_atlas.mars.text": "Mars",
       "item.power.speed_helmet": "Speed Helmet",
@@ -15286,6 +15439,7 @@
       "block.power.unmultiplication_moon_stones_block": "Moon Stones Block",
       "item.power.vacuum_web": "Vacuum Web",
       "item.power.energy_sphere": "Energy Sphere",
+      "item.power.poison_chestplate": "Poison Chestplate",
       "item.power.energy_helmet": "Energy Helmet",
       "item.power.energy_shield": "Energy Shield",
       "subtitles.raptor.hurt": "",
@@ -15309,6 +15463,7 @@
       "item.power.water_katana": "Water Katana",
       "item.power.greenery_leggings": "Greenery Leggings",
       "item.power.speed_boots": "Speed Boots",
+      "item.power.poison_boots": "Poison Boots",
       "effect.power.rain_master": "Master of Rain",
       "item.power.coral_shield": "Coral Shield",
       "item.power.wooden_shield": "Wooden Shield",
@@ -15462,6 +15617,7 @@
       "power.building.library.text": "Library",
       "item.power.moon_stones": "Moon Stones",
       "power.space_atlas.earth.text": "Earth",
+      "item.power.poison_helmet": "Poison Helmet",
       "item.power.sound_battery": "Battery",
       "effect.power.teleportation_master": "Master of Teleportation",
       "item.power.lava_stone": "Lava Stone",

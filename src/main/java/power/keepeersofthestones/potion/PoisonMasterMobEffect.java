@@ -1,6 +1,12 @@
 
 package power.keepeersofthestones.potion;
 
+import power.keepeersofthestones.procedures.PoisonMasterEffectsProcedure;
+import power.keepeersofthestones.procedures.PoisonMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.PoisonMasterEffectEndProcedure;
+
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
@@ -12,6 +18,22 @@ public class PoisonMasterMobEffect extends MobEffect {
 	@Override
 	public String getDescriptionId() {
 		return "effect.power.poison_master";
+	}
+
+	@Override
+	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		PoisonMasterEffectStartProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		PoisonMasterEffectsProcedure.execute(entity);
+	}
+
+	@Override
+	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.removeAttributeModifiers(entity, attributeMap, amplifier);
+		PoisonMasterEffectEndProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
