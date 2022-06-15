@@ -11552,15 +11552,6 @@
       "path": "~/MagicBox"
     },
     {
-      "name": "MagicBoxes",
-      "type": "tab",
-      "sortid": 728,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magic_boxes",
-      "path": "~/MagicBox"
-    },
-    {
       "name": "StoneMagicBox",
       "type": "block",
       "sortid": 78,
@@ -14592,7 +14583,6 @@
       "item.power.tornado_battery": "Батарея",
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
-      "itemGroup.tabmagic_boxes": "Волшебные Шкатулки",
       "block.power.stone_magic_box": "Волшебная Каменная Шкатулка",
       "item.power.vacuum_leggings": "Ваакумные штаны",
       "power.spawn_animals.wolf.text": "Волк",
@@ -15132,7 +15122,6 @@
       "item.power.tornado_battery": "Battery",
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
-      "itemGroup.tabmagic_boxes": "Magic Boxes",
       "block.power.stone_magic_box": "Stone Magic Box",
       "item.power.vacuum_leggings": "Vacuum Leggings",
       "power.spawn_animals.wolf.text": "Wolf",

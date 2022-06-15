@@ -328,10 +328,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_BATTERY = REGISTRY.register("teleportation_battery", () -> new TeleportationBatteryItem());
 	public static final RegistryObject<Item> EXPLOSION_BATTERY = REGISTRY.register("explosion_battery", () -> new ExplosionBatteryItem());
 	public static final RegistryObject<Item> MIST_BATTERY = REGISTRY.register("mist_battery", () -> new MistBatteryItem());
-	public static final RegistryObject<Item> WOOD_MAGIC_BOX = block(PowerModBlocks.WOOD_MAGIC_BOX, PowerModTabs.TAB_MAGIC_BOXES);
-	public static final RegistryObject<Item> STONE_MAGIC_BOX = block(PowerModBlocks.STONE_MAGIC_BOX, PowerModTabs.TAB_MAGIC_BOXES);
-	public static final RegistryObject<Item> IRON_MAGIC_BOX = block(PowerModBlocks.IRON_MAGIC_BOX, PowerModTabs.TAB_MAGIC_BOXES);
-	public static final RegistryObject<Item> GOLD_MAGIC_BOX = block(PowerModBlocks.GOLD_MAGIC_BOX, PowerModTabs.TAB_MAGIC_BOXES);
+	public static final RegistryObject<Item> WOOD_MAGIC_BOX = block(PowerModBlocks.WOOD_MAGIC_BOX, null);
+	public static final RegistryObject<Item> STONE_MAGIC_BOX = block(PowerModBlocks.STONE_MAGIC_BOX, null);
+	public static final RegistryObject<Item> IRON_MAGIC_BOX = block(PowerModBlocks.IRON_MAGIC_BOX, null);
+	public static final RegistryObject<Item> GOLD_MAGIC_BOX = block(PowerModBlocks.GOLD_MAGIC_BOX, null);
 	public static final RegistryObject<Item> BURN = REGISTRY.register("burn", () -> new BurnItem());
 	public static final RegistryObject<Item> MAGIC_FIREBALL = REGISTRY.register("magic_fireball", () -> new MagicFireballItem());
 	public static final RegistryObject<Item> AIR_FLOW = REGISTRY.register("air_flow", () -> new AirFlowItem());
