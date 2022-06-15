@@ -12,6 +12,7 @@
     "power:lightning_battery",
     "power:animals_battery",
     "power:light_battery",
+    "power:poison_battery",
     "power:air_battery",
     "power:water_battery",
     "power:teleportation_battery",

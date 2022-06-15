@@ -90,6 +90,9 @@
       },
       {
         "value": "CUSTOM:SpeedBattery"
+      },
+      {
+        "value": "CUSTOM:PoisonBattery"
       }
     ],
     "blocks": [],
