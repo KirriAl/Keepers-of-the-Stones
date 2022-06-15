@@ -23,20 +23,6 @@
       {
         "type": "button",
         "data": {
-          "text": ">",
-          "onClick": {
-            "name": "OpenLevelsAndSkillsPage"
-          },
-          "width": 30,
-          "height": 20,
-          "name": ">",
-          "x": 366,
-          "y": 206
-        }
-      },
-      {
-        "type": "button",
-        "data": {
           "text": "<",
           "onClick": {
             "name": "OpenLevelsAndSkillsPage"

@@ -66,10 +66,6 @@ public class PageElementalDimensionsButtonMessage {
 
 			OpenLevelsAndSkillsPageProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 1) {
-
-			OpenLevelsAndSkillsPageProcedure.execute(world, x, y, z, entity);
-		}
 	}
 
 	@SubscribeEvent

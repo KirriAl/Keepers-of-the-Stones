@@ -96,16 +96,10 @@ public class PageElementalDimensionsScreen extends AbstractContainerScreen<PageE
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TextComponent(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -180, this.topPos + 86, 30, 20, new TextComponent("<"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new PageElementalDimensionsButtonMessage(0, x, y, z));
 				PageElementalDimensionsButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + -180, this.topPos + 86, 30, 20, new TextComponent("<"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new PageElementalDimensionsButtonMessage(1, x, y, z));
-				PageElementalDimensionsButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
 	}
