@@ -195,7 +195,7 @@
           "width": 30,
           "height": 20,
           "name": "<",
-          "x": 42,
+          "x": 33,
           "y": 206
         }
       },
@@ -223,6 +223,20 @@
           "name": "level_checked.png",
           "x": 150,
           "y": 25
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "OpenDimensionsPortalsPage"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 366,
+          "y": 206
         }
       }
     ],

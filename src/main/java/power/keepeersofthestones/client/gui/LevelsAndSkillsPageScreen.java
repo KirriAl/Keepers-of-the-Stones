@@ -156,10 +156,16 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + -171, this.topPos + 86, 30, 20, new TextComponent("<"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -180, this.topPos + 86, 30, 20, new TextComponent("<"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(3, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TextComponent(">"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(4, x, y, z));
+				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
 	}

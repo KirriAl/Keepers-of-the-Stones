@@ -9,6 +9,7 @@ import power.keepeersofthestones.client.gui.SpaceAtlasGUIScreen;
 import power.keepeersofthestones.client.gui.SoundImitateChoiceScreen;
 import power.keepeersofthestones.client.gui.RedstoneBundleGUIScreen;
 import power.keepeersofthestones.client.gui.PointGUIScreen;
+import power.keepeersofthestones.client.gui.PageElementalDimensionsScreen;
 import power.keepeersofthestones.client.gui.LevelsAndSkillsPageScreen;
 import power.keepeersofthestones.client.gui.EBWaterScreen;
 import power.keepeersofthestones.client.gui.EBVacuumScreen;
@@ -117,6 +118,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.SOUND_IMITATE_CHOICE, SoundImitateChoiceScreen::new);
 			MenuScreens.register(PowerModMenus.EB_SAND, EBSandScreen::new);
 			MenuScreens.register(PowerModMenus.EB_SPEED, EBSpeedScreen::new);
+			MenuScreens.register(PowerModMenus.PAGE_ELEMENTAL_DIMENSIONS, PageElementalDimensionsScreen::new);
 		});
 	}
 }

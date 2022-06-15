@@ -13729,6 +13729,48 @@
         ]
       },
       "path": "~/Teleportation"
+    },
+    {
+      "name": "PageElementalDimensions",
+      "type": "gui",
+      "sortid": 884,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "page_elemental_dimensions",
+      "path": "~/ElementalBook"
+    },
+    {
+      "name": "OpenDimensionsPortalsPage",
+      "type": "procedure",
+      "sortid": 885,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_dimensions_portals_page",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ElementalBook"
     }
   ],
   "variable_elements": [
@@ -15731,7 +15773,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.4.0.2",
+    "version": "2.4.0.3",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

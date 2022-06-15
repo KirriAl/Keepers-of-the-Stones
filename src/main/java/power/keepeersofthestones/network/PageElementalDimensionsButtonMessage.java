@@ -1,12 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
-import power.keepeersofthestones.procedures.OpenDimensionsPortalsPageProcedure;
-import power.keepeersofthestones.procedures.OpenBuyLevel3Procedure;
-import power.keepeersofthestones.procedures.OpenBuyLevel2Procedure;
-import power.keepeersofthestones.procedures.OpenBuyAquaPowerProcedure;
-import power.keepeersofthestones.procedures.OpenBookProcedure;
+import power.keepeersofthestones.world.inventory.PageElementalDimensionsMenu;
+import power.keepeersofthestones.procedures.OpenLevelsAndSkillsPageProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -23,31 +19,31 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class LevelsAndSkillsPageButtonMessage {
+public class PageElementalDimensionsButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public LevelsAndSkillsPageButtonMessage(FriendlyByteBuf buffer) {
+	public PageElementalDimensionsButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public LevelsAndSkillsPageButtonMessage(int buttonID, int x, int y, int z) {
+	public PageElementalDimensionsButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(LevelsAndSkillsPageButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(PageElementalDimensionsButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(LevelsAndSkillsPageButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(PageElementalDimensionsButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -62,35 +58,23 @@ public class LevelsAndSkillsPageButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = LevelsAndSkillsPageMenu.guistate;
+		HashMap guistate = PageElementalDimensionsMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			OpenBuyLevel2Procedure.execute(world, x, y, z, entity);
+			OpenLevelsAndSkillsPageProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			OpenBuyLevel3Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
-
-			OpenBuyAquaPowerProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
-			OpenBookProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
-			OpenDimensionsPortalsPageProcedure.execute(world, x, y, z, entity);
+			OpenLevelsAndSkillsPageProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(LevelsAndSkillsPageButtonMessage.class, LevelsAndSkillsPageButtonMessage::buffer,
-				LevelsAndSkillsPageButtonMessage::new, LevelsAndSkillsPageButtonMessage::handler);
+		PowerMod.addNetworkMessage(PageElementalDimensionsButtonMessage.class, PageElementalDimensionsButtonMessage::buffer,
+				PageElementalDimensionsButtonMessage::new, PageElementalDimensionsButtonMessage::handler);
 	}
 }

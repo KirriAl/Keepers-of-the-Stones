@@ -9,6 +9,7 @@ import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
+import power.keepeersofthestones.world.inventory.PageElementalDimensionsMenu;
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
 import power.keepeersofthestones.world.inventory.EBWaterMenu;
 import power.keepeersofthestones.world.inventory.EBVacuumMenu;
@@ -140,6 +141,8 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new SoundImitateChoiceMenu(id, inv, extraData));
 	public static final MenuType<EBSandMenu> EB_SAND = register("eb_sand", (id, inv, extraData) -> new EBSandMenu(id, inv, extraData));
 	public static final MenuType<EBSpeedMenu> EB_SPEED = register("eb_speed", (id, inv, extraData) -> new EBSpeedMenu(id, inv, extraData));
+	public static final MenuType<PageElementalDimensionsMenu> PAGE_ELEMENTAL_DIMENSIONS = register("page_elemental_dimensions",
+			(id, inv, extraData) -> new PageElementalDimensionsMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
