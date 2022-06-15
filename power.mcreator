@@ -13960,6 +13960,23 @@
       "locked_code": false,
       "registry_name": "eb_poison",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "WithoutStoneVar",
+      "type": "procedure",
+      "sortid": 898,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "without_stone_var",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
     }
   ],
   "variable_elements": [

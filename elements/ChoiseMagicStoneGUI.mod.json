@@ -529,6 +529,20 @@
           "x": 24,
           "y": 26
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Without stone",
+          "onClick": {
+            "name": "WithoutStoneVar"
+          },
+          "width": 93,
+          "height": 20,
+          "name": "Without stone",
+          "x": 222,
+          "y": 188
+        }
       }
     ],
     "gridSettings": {
