@@ -24,6 +24,7 @@ import power.keepeersofthestones.world.inventory.EBSoundMenu;
 import power.keepeersofthestones.world.inventory.EBShadowMenu;
 import power.keepeersofthestones.world.inventory.EBSandMenu;
 import power.keepeersofthestones.world.inventory.EBRainMenu;
+import power.keepeersofthestones.world.inventory.EBPoisonMenu;
 import power.keepeersofthestones.world.inventory.EBOceanMenu;
 import power.keepeersofthestones.world.inventory.EBMoonMenu;
 import power.keepeersofthestones.world.inventory.EBMistMenu;
@@ -143,6 +144,7 @@ public class PowerModMenus {
 	public static final MenuType<EBSpeedMenu> EB_SPEED = register("eb_speed", (id, inv, extraData) -> new EBSpeedMenu(id, inv, extraData));
 	public static final MenuType<PageElementalDimensionsMenu> PAGE_ELEMENTAL_DIMENSIONS = register("page_elemental_dimensions",
 			(id, inv, extraData) -> new PageElementalDimensionsMenu(id, inv, extraData));
+	public static final MenuType<EBPoisonMenu> EB_POISON = register("eb_poison", (id, inv, extraData) -> new EBPoisonMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
