@@ -59,6 +59,7 @@ import power.keepeersofthestones.potion.OceanMasterMobEffect;
 import power.keepeersofthestones.potion.MoonMasterMobEffect;
 import power.keepeersofthestones.potion.MistMasterMobEffect;
 import power.keepeersofthestones.potion.MetalMasterMobEffect;
+import power.keepeersofthestones.potion.MagnetMasterMobEffect;
 import power.keepeersofthestones.potion.LightningMasterMobEffect;
 import power.keepeersofthestones.potion.LightMasterMobEffect;
 import power.keepeersofthestones.potion.LavaMasterMobEffect;
@@ -199,4 +200,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_POISON_STONE = REGISTRY.register("recharge_poison_stone",
 			() -> new RechargePoisonStoneMobEffect());
 	public static final RegistryObject<MobEffect> POISON_MASTER = REGISTRY.register("poison_master", () -> new PoisonMasterMobEffect());
+	public static final RegistryObject<MobEffect> MAGNET_MASTER = REGISTRY.register("magnet_master", () -> new MagnetMasterMobEffect());
 }
