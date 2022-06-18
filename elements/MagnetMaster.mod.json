@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Magnet",
-    "icon": "recharge_magnet_stone.png",
+    "icon": "magnet_master.png",
     "color": {
       "value": -65383,
       "falpha": 0.0
@@ -12,6 +12,15 @@
     "isBad": false,
     "isBenefitical": true,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "MagnetMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "MagnetMasterEffects"
+    },
+    "onExpired": {
+      "name": "MagnetMasterEffectEnd"
+    }
   }
 }

@@ -306,10 +306,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Magnet",
+          "onClick": {
+            "name": "MagnetGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Magnet",
           "x": 240,
           "y": 161
         }
@@ -474,6 +477,16 @@
           "name": "poison_master.png",
           "x": 222,
           "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "magnet_master.png",
+          "use1Xscale": false,
+          "name": "magnet_master.png",
+          "x": 222,
+          "y": 161
         }
       }
     ],

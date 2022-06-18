@@ -14003,6 +14003,27 @@
       "locked_code": false,
       "registry_name": "magnet_master",
       "path": "~/Magnet"
+    },
+    {
+      "name": "MagnetGet",
+      "type": "procedure",
+      "sortid": 901,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
     }
   ],
   "variable_elements": [
@@ -16037,7 +16058,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.4.0.3",
+    "version": "2.4.0.4",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
