@@ -14024,6 +14024,32 @@
         ]
       },
       "path": "~/ReceivingStones"
+    },
+    {
+      "name": "PoisonSwordAttack",
+      "type": "procedure",
+      "sortid": 902,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_sword_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Poison"
+    },
+    {
+      "name": "PoisonSword",
+      "type": "tool",
+      "sortid": 902,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_sword",
+      "path": "~/Poison"
     }
   ],
   "variable_elements": [
@@ -14836,6 +14862,7 @@
       "item.power.ice_spear": "Ледяное Копьё",
       "item.power.portal_blast": "Портальная Пушка",
       "effect.power.recharge_teleportation_stone": "Перезарядка",
+      "item.power.poison_sword": "Poison Sword",
       "subtitles.stone_activation": "Камень был активирован",
       "effect.power.fog": "Неясность",
       "biome.power.triassic_desert": "Триассовая Пустыня",
@@ -15384,6 +15411,7 @@
       "item.power.ice_spear": "Ice Spear",
       "item.power.portal_blast": "Portal Blaster",
       "effect.power.recharge_teleportation_stone": "Recharge",
+      "item.power.poison_sword": "Poison Sword",
       "subtitles.stone_activation": "Stone been activation",
       "effect.power.fog": "Fog",
       "biome.power.triassic_desert": "Triassic Desert",
