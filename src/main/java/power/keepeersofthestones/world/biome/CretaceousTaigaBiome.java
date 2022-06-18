@@ -56,7 +56,7 @@ public class CretaceousTaigaBiome extends PowerModElements.ModElement {
 						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.SPRUCE_LOG.getDefaultState()),
 								new SimpleBlockStateProvider(Blocks.SPRUCE_LEAVES.getDefaultState()),
 								new MegaPineFoliagePlacer(FeatureSpread.func_242252_a(0), FeatureSpread.func_242252_a(0),
-										FeatureSpread.func_242253_a(3, 4)),
+										FeatureSpread.func_242253_a(13, 4)),
 								new GiantTrunkPlacer(13, 2, 14), new TwoLayerFeature(1, 1, 2))).build())
 						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
 						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
