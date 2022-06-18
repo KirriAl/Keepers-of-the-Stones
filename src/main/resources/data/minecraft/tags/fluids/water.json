@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "power:quicksand_block",
+    "power:flowing_quicksand_block"
+  ]
+}

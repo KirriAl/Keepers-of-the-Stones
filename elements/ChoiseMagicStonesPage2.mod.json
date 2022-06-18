@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 30,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -194,10 +194,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Speed",
+          "onClick": {
+            "name": "SpeedGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Speed",
           "x": 240,
           "y": 107
         }
@@ -289,10 +292,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Poison",
+          "onClick": {
+            "name": "PoisonGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Poison",
           "x": 240,
           "y": 134
         }
@@ -300,10 +306,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Magnet",
+          "onClick": {
+            "name": "MagnetGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Magnet",
           "x": 240,
           "y": 161
         }
@@ -448,6 +457,36 @@
           "name": "sand_master.png",
           "x": 222,
           "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "speed_master.png",
+          "use1Xscale": false,
+          "name": "speed_master.png",
+          "x": 222,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "poison_master.png",
+          "use1Xscale": false,
+          "name": "poison_master.png",
+          "x": 222,
+          "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "magnet_master.png",
+          "use1Xscale": false,
+          "name": "magnet_master.png",
+          "x": 222,
+          "y": 161
         }
       }
     ],

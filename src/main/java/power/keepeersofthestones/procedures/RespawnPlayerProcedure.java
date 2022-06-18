@@ -640,6 +640,40 @@ public class RespawnPlayerProcedure {
 						((LivingEntity) entity).addPotionEffect(
 								new EffectInstance(RechargeTeleportationStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).speed) {
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.speed = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.SPEED_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_SPEED_STONE.get(), 6000, 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).poison) {
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.poison = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.POISON_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_POISON_STONE.get(), 6000, 0, (false), (false)));
+				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).battery) {
 				{
@@ -842,6 +876,27 @@ public class RespawnPlayerProcedure {
 					boolean _setval = (false);
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.sand = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.speed = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.poison = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.magnet = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
