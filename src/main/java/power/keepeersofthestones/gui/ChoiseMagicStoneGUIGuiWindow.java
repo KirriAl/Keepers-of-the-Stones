@@ -277,5 +277,11 @@ public class ChoiseMagicStoneGUIGuiWindow extends ContainerScreen<ChoiseMagicSto
 				ChoiseMagicStoneGUIGui.handleButtonAction(entity, 20, x, y, z);
 			}
 		}));
+		this.addButton(new Button(this.guiLeft + 208, this.guiTop + 168, 93, 20, new StringTextComponent("Without stone"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIGui.ButtonPressedMessage(21, x, y, z));
+				ChoiseMagicStoneGUIGui.handleButtonAction(entity, 21, x, y, z);
+			}
+		}));
 	}
 }

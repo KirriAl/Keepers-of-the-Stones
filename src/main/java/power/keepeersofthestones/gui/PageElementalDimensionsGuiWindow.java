@@ -1,16 +1,18 @@
 
 package power.keepeersofthestones.gui;
 
+import power.keepeersofthestones.PowerMod;
+
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
@@ -20,24 +22,22 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @OnlyIn(Dist.CLIENT)
-public class BatteryCreateGUIGuiWindow extends ContainerScreen<BatteryCreateGUIGui.GuiContainerMod> {
+public class PageElementalDimensionsGuiWindow extends ContainerScreen<PageElementalDimensionsGui.GuiContainerMod> {
 	private World world;
 	private int x, y, z;
 	private PlayerEntity entity;
-	private final static HashMap guistate = BatteryCreateGUIGui.guistate;
+	private final static HashMap guistate = PageElementalDimensionsGui.guistate;
 
-	public BatteryCreateGUIGuiWindow(BatteryCreateGUIGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
+	public PageElementalDimensionsGuiWindow(PageElementalDimensionsGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
-		this.ySize = 166;
+		this.xSize = 0;
+		this.ySize = 0;
 	}
-
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/battery_create_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -51,19 +51,18 @@ public class BatteryCreateGUIGuiWindow extends ContainerScreen<BatteryCreateGUIG
 		RenderSystem.color4f(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		Minecraft.getInstance().getTextureManager().bindTexture(texture);
-		int k = (this.width - this.xSize) / 2;
-		int l = (this.height - this.ySize) / 2;
-		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/acceleration_time.png"));
-		this.blit(ms, this.guiLeft + 78, this.guiTop + 34, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/book_of_elements_book.png"));
+		this.blit(ms, this.guiLeft + -244, this.guiTop + -127, 0, 0, 512, 256, 512, 256);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/slot_for_stone.png"));
-		this.blit(ms, this.guiLeft + 24, this.guiTop + 35, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/dinoera_portal_screen.png"));
+		this.blit(ms, this.guiLeft + -171, this.guiTop + -103, 0, 0, 116, 128, 116, 128);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/slot_for_battery.png"));
-		this.blit(ms, this.guiLeft + 52, this.guiTop + 35, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/oblivion_portal_screen.png"));
+		this.blit(ms, this.guiLeft + 26, this.guiTop + -103, 0, 0, 126, 128, 126, 128);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/crystal_portal_screen.png"));
+		this.blit(ms, this.guiLeft + -144, this.guiTop + -40, 0, 0, 122, 128, 122, 128);
 
 		RenderSystem.disableBlend();
 	}
@@ -84,15 +83,9 @@ public class BatteryCreateGUIGuiWindow extends ContainerScreen<BatteryCreateGUIG
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Charging the battery", 42, 7, -12829636);
-		this.font.drawString(ms, "" + ((int) new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return 0;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")) + "", 83, 51, -12829636);
+		this.font.drawString(ms, "Dinoera", -54, -76, -13421773);
+		this.font.drawString(ms, "Crystal", -54, 86, -13421773);
+		this.font.drawString(ms, "Oblivion", 62, 23, -13421773);
 	}
 
 	@Override
@@ -105,5 +98,11 @@ public class BatteryCreateGUIGuiWindow extends ContainerScreen<BatteryCreateGUIG
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
+		this.addButton(new Button(this.guiLeft + -180, this.guiTop + 86, 30, 20, new StringTextComponent("<"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new PageElementalDimensionsGui.ButtonPressedMessage(0, x, y, z));
+				PageElementalDimensionsGui.handleButtonAction(entity, 0, x, y, z);
+			}
+		}));
 	}
 }

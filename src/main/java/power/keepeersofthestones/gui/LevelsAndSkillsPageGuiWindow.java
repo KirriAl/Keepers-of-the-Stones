@@ -173,10 +173,16 @@ public class LevelsAndSkillsPageGuiWindow extends ContainerScreen<LevelsAndSkill
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + -171, this.guiTop + 86, 30, 20, new StringTextComponent("<"), e -> {
+		this.addButton(new Button(this.guiLeft + -180, this.guiTop + 86, 30, 20, new StringTextComponent("<"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageGui.ButtonPressedMessage(3, x, y, z));
 				LevelsAndSkillsPageGui.handleButtonAction(entity, 3, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 152, this.guiTop + 86, 30, 20, new StringTextComponent(">"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageGui.ButtonPressedMessage(4, x, y, z));
+				LevelsAndSkillsPageGui.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
 	}

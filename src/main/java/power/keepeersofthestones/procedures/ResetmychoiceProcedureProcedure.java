@@ -7,15 +7,18 @@ import power.keepeersofthestones.item.TimeStoneItem;
 import power.keepeersofthestones.item.TeleportationStoneItem;
 import power.keepeersofthestones.item.TechnologyStoneItem;
 import power.keepeersofthestones.item.SunStoneItem;
+import power.keepeersofthestones.item.SpeedStoneItem;
 import power.keepeersofthestones.item.SpaceStoneItem;
 import power.keepeersofthestones.item.SoundStoneItem;
 import power.keepeersofthestones.item.ShadowStoneItem;
 import power.keepeersofthestones.item.SandStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
+import power.keepeersofthestones.item.PoisonStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
 import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MetalStoneItem;
+import power.keepeersofthestones.item.MagnetStoneItem;
 import power.keepeersofthestones.item.LightningStoneItem;
 import power.keepeersofthestones.item.LightStoneItem;
 import power.keepeersofthestones.item.LavaStoneItem;
@@ -1271,100 +1274,109 @@ public class ResetmychoiceProcedureProcedure {
 				}
 			}
 		}
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SPEED_STONE.get()) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SpeedStoneItem.block) {
 			{
 				Entity _ent = entity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null)
-					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							"item replace entity @s weapon.mainhand with air");
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
 			}
-			PowerModVariables.MapVariables.get(world).speed_stone = false;
+			PowerModVariables.MapVariables.get(world).speed_stone = (false);
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
-				boolean _setval = false;
+				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.selected = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return new TextComponent("ChoiseMagicStoneGUI");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new ChoiseMagicStoneGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.POISON_STONE.get()) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == PoisonStoneItem.block) {
 			{
 				Entity _ent = entity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null)
-					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							"item replace entity @s weapon.mainhand with air");
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
 			}
-			PowerModVariables.MapVariables.get(world).poison_stone = false;
+			PowerModVariables.MapVariables.get(world).poison_stone = (false);
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
-				boolean _setval = false;
+				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.selected = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return new TextComponent("ChoiseMagicStoneGUI");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new ChoiseMagicStoneGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.MAGNET_STONE.get()) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == MagnetStoneItem.block) {
 			{
 				Entity _ent = entity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null)
-					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							"item replace entity @s weapon.mainhand with air");
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
 			}
-			PowerModVariables.MapVariables.get(world).magnet_stone = false;
+			PowerModVariables.MapVariables.get(world).mist_stone = (false);
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
-				boolean _setval = false;
+				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.selected = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return new TextComponent("ChoiseMagicStoneGUI");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new ChoiseMagicStoneGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

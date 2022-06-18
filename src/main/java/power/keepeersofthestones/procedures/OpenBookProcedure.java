@@ -7,6 +7,7 @@ import power.keepeersofthestones.item.TimeStoneItem;
 import power.keepeersofthestones.item.TeleportationStoneItem;
 import power.keepeersofthestones.item.TechnologyStoneItem;
 import power.keepeersofthestones.item.SunStoneItem;
+import power.keepeersofthestones.item.SpeedStoneItem;
 import power.keepeersofthestones.item.SpaceStoneItem;
 import power.keepeersofthestones.item.SoundStoneItem;
 import power.keepeersofthestones.item.ShadowStoneItem;
@@ -39,6 +40,7 @@ import power.keepeersofthestones.gui.EBTimeGui;
 import power.keepeersofthestones.gui.EBTeleportationGui;
 import power.keepeersofthestones.gui.EBTechnologyGui;
 import power.keepeersofthestones.gui.EBSunGui;
+import power.keepeersofthestones.gui.EBSpeedGui;
 import power.keepeersofthestones.gui.EBSpaceGui;
 import power.keepeersofthestones.gui.EBSoundGui;
 import power.keepeersofthestones.gui.EBShadowGui;
@@ -721,6 +723,25 @@ public class OpenBookProcedure {
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
 							return new EBSandGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SpeedStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSpeed");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSpeedGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

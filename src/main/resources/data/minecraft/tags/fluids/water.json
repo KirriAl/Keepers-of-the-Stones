@@ -2,6 +2,6 @@
   "replace": false,
   "values": [
     "power:quicksand_block",
-    "power:flowing_quicksand_block"
+    "power:quicksand_block_flowing"
   ]
 }

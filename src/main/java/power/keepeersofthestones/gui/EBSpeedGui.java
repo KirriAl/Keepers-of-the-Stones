@@ -1,23 +1,7 @@
 
 package power.keepeersofthestones.gui;
 
-import power.keepeersofthestones.procedures.TimeGetProcedure;
-import power.keepeersofthestones.procedures.TeleportationGetProcedure;
-import power.keepeersofthestones.procedures.TechnologyGetProcedure;
-import power.keepeersofthestones.procedures.SpeedGetProcedure;
-import power.keepeersofthestones.procedures.SpaceGetProcedure;
-import power.keepeersofthestones.procedures.SandGetProcedure;
-import power.keepeersofthestones.procedures.PreviousPageGUIChoiceStonesProcedure;
-import power.keepeersofthestones.procedures.PoisonGetProcedure;
-import power.keepeersofthestones.procedures.NextToPage3Procedure;
-import power.keepeersofthestones.procedures.MoonGetProcedure;
-import power.keepeersofthestones.procedures.MistGetProcedure;
-import power.keepeersofthestones.procedures.MagnetGetProcedure;
-import power.keepeersofthestones.procedures.ExplosionGetProcedure;
-import power.keepeersofthestones.procedures.DestructionGetProcedure;
-import power.keepeersofthestones.procedures.CreationGetProcedure;
-import power.keepeersofthestones.procedures.BloodGetProcedure;
-import power.keepeersofthestones.procedures.AmberGetProcedure;
+import power.keepeersofthestones.procedures.OpenLevelsAndSkillsPageProcedure;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.items.ItemStackHandler;
@@ -48,12 +32,12 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @PowerModElements.ModElement.Tag
-public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
+public class EBSpeedGui extends PowerModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 
-	public ChoiseMagicStonesPage2Gui(PowerModElements instance) {
-		super(instance, 452);
+	public EBSpeedGui(PowerModElements instance) {
+		super(instance, 877);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -65,13 +49,13 @@ public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("choise_magic_stones_page_2"));
+			event.getRegistry().register(containerType.setRegistryName("eb_speed"));
 		}
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, ChoiseMagicStonesPage2GuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, EBSpeedGuiWindow::new));
 	}
 
 	public static class GuiContainerModFactory implements IContainerFactory {
@@ -203,104 +187,7 @@ public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
 			return;
 		if (buttonID == 0) {
 
-			MoonGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 1) {
-
-			AmberGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 2) {
-
-			DestructionGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 3) {
-
-			SpaceGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 4) {
-
-			BloodGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 5) {
-
-			TimeGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 6) {
-
-			TechnologyGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 7) {
-
-			ExplosionGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 8) {
-
-			TeleportationGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 9) {
-
-			CreationGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 10) {
-
-			MistGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 11) {
-
-			SandGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 12) {
-
-			SpeedGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 13) {
-
-			PreviousPageGUIChoiceStonesProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 14) {
-
-			PoisonGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 15) {
-
-			MagnetGetProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 21) {
-
-			NextToPage3Procedure.executeProcedure(Stream
+			OpenLevelsAndSkillsPageProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));

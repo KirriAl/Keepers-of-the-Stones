@@ -7,11 +7,13 @@ import power.keepeersofthestones.potion.RechargeTimeStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTeleportationStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTechnologyStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSunStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeSpeedStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSoundStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeShadowStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSandStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeRainStonePotionEffect;
+import power.keepeersofthestones.potion.RechargePoisonStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeOceanStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMoonStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMistStonePotionEffect;
@@ -172,6 +174,12 @@ public class WhenPlayerWakeUpProcedure {
 		}
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).removePotionEffect(RechargeSandStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargeSpeedStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargePoisonStonePotionEffect.potion);
 		}
 	}
 }

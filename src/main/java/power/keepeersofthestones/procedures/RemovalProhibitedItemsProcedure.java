@@ -12,6 +12,7 @@ import power.keepeersofthestones.item.VacuumWebItem;
 import power.keepeersofthestones.item.VacuumSwordItem;
 import power.keepeersofthestones.item.VacuumSpiralItem;
 import power.keepeersofthestones.item.VacuumItem;
+import power.keepeersofthestones.item.TurboSpeedItem;
 import power.keepeersofthestones.item.TornadoItem;
 import power.keepeersofthestones.item.TornadoCreateItem;
 import power.keepeersofthestones.item.TornadoBattleAxeItem;
@@ -26,6 +27,7 @@ import power.keepeersofthestones.item.TechnologyItem;
 import power.keepeersofthestones.item.TechnobarrierItem;
 import power.keepeersofthestones.item.TechnoPickaxeItem;
 import power.keepeersofthestones.item.TamerItem;
+import power.keepeersofthestones.item.SupersonicDaggerItem;
 import power.keepeersofthestones.item.SunRegenerationItem;
 import power.keepeersofthestones.item.SunRayItem;
 import power.keepeersofthestones.item.SunItem;
@@ -33,6 +35,7 @@ import power.keepeersofthestones.item.SunExplodeItem;
 import power.keepeersofthestones.item.SunAxeItem;
 import power.keepeersofthestones.item.StormItem;
 import power.keepeersofthestones.item.SpikeItem;
+import power.keepeersofthestones.item.SpeedItem;
 import power.keepeersofthestones.item.SpawnItem;
 import power.keepeersofthestones.item.SpaceItem;
 import power.keepeersofthestones.item.SpaceAtlasItem;
@@ -131,6 +134,7 @@ import power.keepeersofthestones.item.CoralShieldItem;
 import power.keepeersofthestones.item.ConstructionsItem;
 import power.keepeersofthestones.item.ClusterSharpItem;
 import power.keepeersofthestones.item.BurnItem;
+import power.keepeersofthestones.item.BoomerangItem;
 import power.keepeersofthestones.item.BoStaffItem;
 import power.keepeersofthestones.item.BlueKnifeItem;
 import power.keepeersofthestones.item.BloodReaperItem;
@@ -1461,40 +1465,40 @@ public class RemovalProhibitedItemsProcedure {
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.SPEED_HELMET.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SpeedItem.helmet);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
 					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.SPEED_CHESTPLATE.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SpeedItem.body);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
 					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.SPEED_LEGGINGS.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SpeedItem.legs);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
 					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.SPEED_BOOTS.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SpeedItem.boots);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
 					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.SUPERSONIC_DAGGER.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SupersonicDaggerItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
 					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOOMERANG.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(BoomerangItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
 					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.TURBO_SPEED.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(TurboSpeedItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
 					}
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).active) {

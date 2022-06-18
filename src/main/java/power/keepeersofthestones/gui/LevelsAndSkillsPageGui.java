@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.gui;
 
+import power.keepeersofthestones.procedures.OpenDimensionsPortalsPageProcedure;
 import power.keepeersofthestones.procedures.OpenBuyLevel3Procedure;
 import power.keepeersofthestones.procedures.OpenBuyLevel2Procedure;
 import power.keepeersofthestones.procedures.OpenBuyAquaPowerProcedure;
@@ -212,6 +213,13 @@ public class LevelsAndSkillsPageGui extends PowerModElements.ModElement {
 		if (buttonID == 3) {
 
 			OpenBookProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 4) {
+
+			OpenDimensionsPortalsPageProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));

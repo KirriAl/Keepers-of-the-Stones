@@ -1,8 +1,12 @@
 
 package power.keepeersofthestones.gui;
 
-import power.keepeersofthestones.procedures.TimeCheckpointProcedure;
-import power.keepeersofthestones.procedures.ReturnCheckpointProcedure;
+import power.keepeersofthestones.procedures.ThirdPointTPProcedure;
+import power.keepeersofthestones.procedures.ThirdPointSetProcedure;
+import power.keepeersofthestones.procedures.SecondPointTPProcedure;
+import power.keepeersofthestones.procedures.SecondPointSetProcedure;
+import power.keepeersofthestones.procedures.FirstPointTPProcedure;
+import power.keepeersofthestones.procedures.FirstPointSetProcedure;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.items.ItemStackHandler;
@@ -188,12 +192,36 @@ public class CheckPointTPGui extends PowerModElements.ModElement {
 			return;
 		if (buttonID == 0) {
 
-			ReturnCheckpointProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+			FirstPointTPProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 		if (buttonID == 1) {
 
-			TimeCheckpointProcedure.executeProcedure(Stream
+			SecondPointTPProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 2) {
+
+			ThirdPointTPProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 3) {
+
+			FirstPointSetProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+							new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 4) {
+
+			SecondPointSetProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+							new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 5) {
+
+			ThirdPointSetProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
 							new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
