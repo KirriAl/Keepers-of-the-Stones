@@ -24,36 +24,36 @@ public class ConfstoneCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(Commands.literal("confstone").requires(s -> s.hasPermission(4)).then(Commands.literal("rechoice").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				.register(Commands.literal("confstone").requires(s -> s.hasPermission(4)).then(Commands.literal("rechoice").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
 
 					ResetmychoiceProcedureProcedure.execute(world, x, y, z, entity);
 					return 0;
-				})).then(Commands.literal("detransform").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				})).then(Commands.literal("detransform").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
 
 					DetransformKeyPriNazhatiiKlavishiProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("reset_abilty").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				})).then(Commands.literal("reset_abilty").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);

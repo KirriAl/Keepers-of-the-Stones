@@ -26,60 +26,60 @@ public class PlanetCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(Commands.literal("planet").requires(s -> s.hasPermission(4)).then(Commands.literal("earth").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				.register(Commands.literal("planet").requires(s -> s.hasPermission(4)).then(Commands.literal("earth").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
 
 					EarthOnMeProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("moon").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				})).then(Commands.literal("moon").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
 
 					MoonOnMeProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("venus").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				})).then(Commands.literal("venus").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
 
 					VenusOnMeProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("mars").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				})).then(Commands.literal("mars").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
 
 					MarsOnMeProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("enceladus").executes(cmdargs -> {
-					ServerLevel world = cmdargs.getSource().getLevel();
-					double x = cmdargs.getSource().getPosition().x();
-					double y = cmdargs.getSource().getPosition().y();
-					double z = cmdargs.getSource().getPosition().z();
-					Entity entity = cmdargs.getSource().getEntity();
+				})).then(Commands.literal("enceladus").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
 					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
