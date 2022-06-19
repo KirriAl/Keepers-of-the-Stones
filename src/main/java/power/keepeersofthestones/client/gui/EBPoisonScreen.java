@@ -59,7 +59,7 @@ public class EBPoisonScreen extends AbstractContainerScreen<EBPoisonMenu> {
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/poison_master.png"));
 		this.blit(ms, this.leftPos + 93, this.topPos + -109, 0, 0, 16, 16, 16, 16);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/speed_element.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/poison_element.png"));
 		this.blit(ms, this.leftPos + 71, this.topPos + -85, 0, 0, 53, 128, 53, 128);
 
 		RenderSystem.disableBlend();

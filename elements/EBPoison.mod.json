@@ -82,9 +82,9 @@
       {
         "type": "image",
         "data": {
-          "image": "speed_element.png",
+          "image": "poison_element.png",
           "use1Xscale": true,
-          "name": "speed_element.png",
+          "name": "poison_element.png",
           "x": 285,
           "y": 35
         }
