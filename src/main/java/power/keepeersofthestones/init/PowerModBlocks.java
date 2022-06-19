@@ -26,6 +26,7 @@ import power.keepeersofthestones.block.BluePortalBlock;
 import power.keepeersofthestones.block.BlackHoleBlockBlock;
 import power.keepeersofthestones.block.BatteryChargerBlock;
 import power.keepeersofthestones.block.AmberBlockBlock;
+import power.keepeersofthestones.block.AcidBlock;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -63,6 +64,7 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> DETONATOR_TNT = REGISTRY.register("detonator_tnt", () -> new DetonatorTNTBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	public static final RegistryObject<Block> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockBlock());
+	public static final RegistryObject<Block> ACID = REGISTRY.register("acid", () -> new AcidBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

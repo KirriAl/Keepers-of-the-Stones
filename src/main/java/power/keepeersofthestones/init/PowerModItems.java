@@ -238,6 +238,7 @@ import power.keepeersofthestones.item.AirBladeItem;
 import power.keepeersofthestones.item.AirBatteryItem;
 import power.keepeersofthestones.item.AetherStoneItem;
 import power.keepeersofthestones.item.AcusticalExplodeItem;
+import power.keepeersofthestones.item.AcidPitItem;
 import power.keepeersofthestones.item.AccelerationTimeItem;
 import power.keepeersofthestones.PowerMod;
 
@@ -628,6 +629,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_BATTERY = REGISTRY.register("poison_battery", () -> new PoisonBatteryItem());
 	public static final RegistryObject<Item> POISON_SWORD = REGISTRY.register("poison_sword", () -> new PoisonSwordItem());
 	public static final RegistryObject<Item> TOXIC_CLOUD = REGISTRY.register("toxic_cloud", () -> new ToxicCloudItem());
+	public static final RegistryObject<Item> ACID_PIT = REGISTRY.register("acid_pit", () -> new AcidPitItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

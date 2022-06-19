@@ -5,6 +5,7 @@
 package power.keepeersofthestones.init;
 
 import power.keepeersofthestones.world.features.lakes.QuicksandBlockFeature;
+import power.keepeersofthestones.world.features.lakes.AcidFeature;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -31,6 +32,8 @@ public class PowerModFeatures {
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
 	public static final RegistryObject<Feature<?>> QUICKSAND_BLOCK = register("quicksand_block", QuicksandBlockFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.LAKES, QuicksandBlockFeature.GENERATE_BIOMES, QuicksandBlockFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> ACID = register("acid", AcidFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.LAKES, AcidFeature.GENERATE_BIOMES, AcidFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

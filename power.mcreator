@@ -14076,6 +14076,81 @@
         ]
       },
       "path": "~/Poison"
+    },
+    {
+      "name": "AcidPit",
+      "type": "item",
+      "sortid": 905,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acid_pit",
+      "path": "~/Poison"
+    },
+    {
+      "name": "KillingInAcid",
+      "type": "procedure",
+      "sortid": 906,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_in_acid",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Poison"
+    },
+    {
+      "name": "Acid",
+      "type": "fluid",
+      "sortid": 906,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acid",
+      "metadata": {
+        "gb": false
+      },
+      "path": "~/Poison"
+    },
+    {
+      "name": "AcidPitUse",
+      "type": "procedure",
+      "sortid": 907,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acid_pit_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Poison"
     }
   ],
   "variable_elements": [
@@ -14766,10 +14841,10 @@
   ],
   "language_map": {
     "ru_ru": {
-      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.sun_battery": "Батарея",
+      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.spike": "Шип",
@@ -14788,8 +14863,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Boomerang",
@@ -14802,8 +14877,8 @@
       "power.spawn_animals.cat.text": "Кот",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.potato.text": "Картофель",
       "power.cultivation.pumpkin.text": "Тыква",
+      "power.cultivation.potato.text": "Картофель",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -14822,17 +14897,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.energy_chestplate": "Энергетическая Кираса",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.space_leggings": "Космические штаны",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.energy_chestplate": "Энергетическая Кираса",
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
-      "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.speed_chestplate": "Speed Chestplate",
+      "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.light_helmet": "Шлем солнца",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Шлем солнца",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "power.cultivation.spruce.text": "Ель",
@@ -14840,10 +14915,10 @@
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
-      "item.power.force_replication": "Репликация Силы",
       "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
-      "item.power.explosion_stone": "Камень Взрыва",
+      "item.power.force_replication": "Репликация Силы",
       "item.power.sound_imitate": "Звуковой Подражатель",
+      "item.power.explosion_stone": "Камень Взрыва",
       "power.space_atlas.label.text": "Космический Атлас",
       "power.cultivation.beetroot.text": "Свекла",
       "item.power.earth_helmet": "Земляной Монокль",
@@ -14853,8 +14928,8 @@
       "item.power.redstone_bundle": "Мешок С Редстоуном",
       "item.power.sand_shield": "Песчаный Щит",
       "item.power.mercury_stone": "Камень Ртути",
-      "item.power.iron_shield": "Железный Щит",
       "item.power.light_battery": "Батарея",
+      "item.power.iron_shield": "Железный Щит",
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
@@ -15063,6 +15138,7 @@
       "item.power.teleportation_helmet": "Шлем перемищения",
       "advancements.just_add_water.descr": "Изучите способность воды",
       "effect.acceleration_time_effect": "Acceleration Time",
+      "block.power.acid": "Acid",
       "effect.power.vacuum_master": "Мастер Пустоты",
       "item.power.golden_crossbow": "Золотой Арбалет",
       "item.power.lightning_leggings": "Штаны Молнии",
@@ -15115,6 +15191,7 @@
       "item.power.plasma_ball": "Плазменный шар",
       "item.power.technology_battery": "Батарея",
       "effect.power.explosion_master": "Мастер Взрыва",
+      "fluid.power.acid": "Acid",
       "item.power.sand_boots": "Sand Boots",
       "effect.power.recharge_shadow_stone": "Перезарядка",
       "advancements.maximum_power.title": "Максимум Силы!",
@@ -15243,12 +15320,13 @@
       "power.space_atlas.moon.text": "Луна",
       "effect.power.recharge_lava_stone": "Перезарядка",
       "subtitles.tyrannosaurus_rex.ambient": "",
+      "item.power.acid_bucket": "Acid Bucket",
       "item.power.ice_helmet": "Ледяной Шарф",
       "item.power.obscurity": "Неясность",
       "item.power.increase_power": "Увеличение Силы",
       "item.power.destruction_stone": "Камень Разрушения",
       "item.power.ice_ball": "Ледяной шар",
-      "item.power.toxic_cloud": "Toxic Cloud",
+      "item.power.toxic_cloud": "Токсичное Облако",
       "item.power.tornado_helmet": "Шлем Торнадо",
       "item.power.magic_fireball": "Волшебный Огненный Шар",
       "item.power.crystal_stone": "Камень Кристалла",
@@ -15259,6 +15337,7 @@
       "block.power.technobarrier_block": "Блок Технобарьера",
       "item.power.tiger_claw": "Тигриный Коготь",
       "item.power.tyrannosaurus_rex_spawn_egg": "Яйцо призыва тираннозавра рекса",
+      "item.power.acid_pit": "Кислотная Яма",
       "item.power.misty_fan": "Туманный Веер",
       "advancements.power_up.descr": "Разблокируйте второй уровень",
       "item.power.plesiosaurus_spawn_egg": "Яйцо призыва плезиозавра",
@@ -15316,10 +15395,10 @@
       "item.power.shuriken": "Сюрикен"
     },
     "en_us": {
-      "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
+      "item.power.energy_leggings": "Energy Leggings",
       "item.power.explode_leggings": "Explode Leggings",
+      "item.power.sun_battery": "Battery",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.spike": "Spike",
@@ -15338,8 +15417,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.boomerang": "Boomerang",
@@ -15352,8 +15431,8 @@
       "power.spawn_animals.cat.text": "Cat",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.potato.text": "Potato",
       "power.cultivation.pumpkin.text": "Pumpkin",
+      "power.cultivation.potato.text": "Potato",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -15372,17 +15451,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.energy_chestplate": "Energy Chestplate",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.space_leggings": "Space Leggings",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.energy_chestplate": "Energy Chestplate",
       "power.cultivation.birch.text": "Birch",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
-      "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.speed_chestplate": "Speed Chestplate",
+      "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.light_helmet": "Light Helmet",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Light Helmet",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "power.cultivation.spruce.text": "Spruce",
@@ -15390,10 +15469,10 @@
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
-      "item.power.force_replication": "Force Replication",
       "power.building.label.text": "Select the structure you want to place",
-      "item.power.sound_imitate": "Sound Emitate",
+      "item.power.force_replication": "Force Replication",
       "item.power.explosion_stone": "Explosion Stone",
+      "item.power.sound_imitate": "Sound Emitate",
       "power.space_atlas.label.text": "Atlas of Space Travel",
       "power.cultivation.beetroot.text": "Beetroot",
       "item.power.earth_helmet": "Earth Helmet",
@@ -15403,8 +15482,8 @@
       "item.power.redstone_bundle": "Redstone Bundle",
       "item.power.sand_shield": "Sand Shield",
       "item.power.mercury_stone": "Mercury Stone",
-      "item.power.iron_shield": "Iron Shield",
       "item.power.light_battery": "Battery",
+      "item.power.iron_shield": "Iron Shield",
       "effect.power.tornado_master": "Master of Tornado",
       "biome.power.enceladus_ice_desert": "Enceladus Ice Desert",
       "itemGroup.tabadditional_group": "Additional Group",
@@ -15614,6 +15693,7 @@
       "item.power.teleportation_helmet": "Teleportation Helmet",
       "advancements.just_add_water.descr": "Learn the water ability",
       "effect.acceleration_time_effect": "Acceleration Time",
+      "block.power.acid": "Acid",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.golden_crossbow": "Golden Crossbow",
       "item.power.lightning_leggings": "Lightning Leggings",
@@ -15666,6 +15746,7 @@
       "item.power.plasma_ball": "Plasma Ball",
       "item.power.technology_battery": "Battery",
       "effect.power.explosion_master": "Master of Explosion",
+      "fluid.power.acid": "Acid",
       "item.power.sand_boots": "Sand Boots",
       "effect.power.recharge_shadow_stone": "Recharge",
       "advancements.maximum_power.title": "Maximum Power!",
@@ -15795,6 +15876,7 @@
       "power.space_atlas.moon.text": "Moon",
       "effect.power.recharge_lava_stone": "Recharge",
       "subtitles.tyrannosaurus_rex.ambient": "",
+      "item.power.acid_bucket": "Acid Bucket",
       "item.power.ice_helmet": "Ice Helmet",
       "item.power.obscurity": "Obscurity",
       "item.power.increase_power": "Increase Power",
@@ -15811,6 +15893,7 @@
       "block.power.technobarrier_block": "Technobarrier Block",
       "item.power.tiger_claw": "Tiger Claw",
       "item.power.tyrannosaurus_rex_spawn_egg": "Tyrannosaurus Rex Spawn Egg",
+      "item.power.acid_pit": "Acid Pit",
       "item.power.misty_fan": "Misty Fan",
       "advancements.power_up.descr": "Unlock the second level",
       "item.power.plesiosaurus_spawn_egg": "Plesiosaurus Spawn Egg",

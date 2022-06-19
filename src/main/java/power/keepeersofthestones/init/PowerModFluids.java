@@ -5,6 +5,7 @@
 package power.keepeersofthestones.init;
 
 import power.keepeersofthestones.fluid.QuicksandBlockFluid;
+import power.keepeersofthestones.fluid.AcidFluid;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -24,6 +25,8 @@ public class PowerModFluids {
 	public static final RegistryObject<Fluid> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockFluid.Source());
 	public static final RegistryObject<Fluid> FLOWING_QUICKSAND_BLOCK = REGISTRY.register("flowing_quicksand_block",
 			() -> new QuicksandBlockFluid.Flowing());
+	public static final RegistryObject<Fluid> ACID = REGISTRY.register("acid", () -> new AcidFluid.Source());
+	public static final RegistryObject<Fluid> FLOWING_ACID = REGISTRY.register("flowing_acid", () -> new AcidFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -31,6 +34,8 @@ public class PowerModFluids {
 		public static void clientSetup(FMLClientSetupEvent event) {
 			ItemBlockRenderTypes.setRenderLayer(QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(ACID.get(), renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_ACID.get(), renderType -> renderType == RenderType.translucent());
 		}
 	}
 }
