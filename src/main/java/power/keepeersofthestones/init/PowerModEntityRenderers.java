@@ -69,5 +69,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.KUNAI.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SAND_FLURRY.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.BOOMERANG.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.TOXIC_CLOUD.get(), ThrownItemRenderer::new);
 	}
 }

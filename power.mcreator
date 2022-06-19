@@ -14050,6 +14050,32 @@
       "locked_code": false,
       "registry_name": "poison_sword",
       "path": "~/Poison"
+    },
+    {
+      "name": "ToxicCloud",
+      "type": "rangeditem",
+      "sortid": 903,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toxic_cloud",
+      "path": "~/Poison"
+    },
+    {
+      "name": "ToxicCloudUse",
+      "type": "procedure",
+      "sortid": 904,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toxic_cloud_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Poison"
     }
   ],
   "variable_elements": [
@@ -15222,6 +15248,7 @@
       "item.power.increase_power": "Увеличение Силы",
       "item.power.destruction_stone": "Камень Разрушения",
       "item.power.ice_ball": "Ледяной шар",
+      "item.power.toxic_cloud": "Toxic Cloud",
       "item.power.tornado_helmet": "Шлем Торнадо",
       "item.power.magic_fireball": "Волшебный Огненный Шар",
       "item.power.crystal_stone": "Камень Кристалла",
@@ -15773,6 +15800,7 @@
       "item.power.increase_power": "Increase Power",
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.ice_ball": "Ice Ball",
+      "item.power.toxic_cloud": "Toxic Cloud",
       "item.power.tornado_helmet": "Tornado Helmet",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.crystal_stone": "Crystal Stone",
@@ -16086,7 +16114,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.4.0.4",
+    "version": "2.4.0.5",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
