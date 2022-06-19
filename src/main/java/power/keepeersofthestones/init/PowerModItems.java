@@ -130,6 +130,7 @@ import power.keepeersofthestones.item.MercuryStoneItem;
 import power.keepeersofthestones.item.MegawattItem;
 import power.keepeersofthestones.item.MagnetStoneItem;
 import power.keepeersofthestones.item.MagnetItem;
+import power.keepeersofthestones.item.MagnetBatteryItem;
 import power.keepeersofthestones.item.MagmaShieldItem;
 import power.keepeersofthestones.item.MagicFireballItem;
 import power.keepeersofthestones.item.MaceItem;
@@ -630,6 +631,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_SWORD = REGISTRY.register("poison_sword", () -> new PoisonSwordItem());
 	public static final RegistryObject<Item> TOXIC_CLOUD = REGISTRY.register("toxic_cloud", () -> new ToxicCloudItem());
 	public static final RegistryObject<Item> ACID_PIT = REGISTRY.register("acid_pit", () -> new AcidPitItem());
+	public static final RegistryObject<Item> MAGNET_BATTERY = REGISTRY.register("magnet_battery", () -> new MagnetBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
