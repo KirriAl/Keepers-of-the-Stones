@@ -70,5 +70,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.SAND_FLURRY.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.BOOMERANG.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TOXIC_CLOUD.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ELECTROMAGNETIC_PULSE.get(), ThrownItemRenderer::new);
 	}
 }

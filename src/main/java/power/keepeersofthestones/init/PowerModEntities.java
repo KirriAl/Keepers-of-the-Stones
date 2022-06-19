@@ -40,6 +40,7 @@ import power.keepeersofthestones.entity.GlowEntity;
 import power.keepeersofthestones.entity.FlashLightEntity;
 import power.keepeersofthestones.entity.ExplosiveFlowEntity;
 import power.keepeersofthestones.entity.EnergySphereEntity;
+import power.keepeersofthestones.entity.ElectromagneticPulseEntity;
 import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
 import power.keepeersofthestones.entity.BoomerangEntity;
@@ -211,6 +212,10 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<ToxicCloudEntity>> TOXIC_CLOUD = register("projectile_toxic_cloud",
 			EntityType.Builder.<ToxicCloudEntity>of(ToxicCloudEntity::new, MobCategory.MISC).setCustomClientFactory(ToxicCloudEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ElectromagneticPulseEntity>> ELECTROMAGNETIC_PULSE = register("projectile_electromagnetic_pulse",
+			EntityType.Builder.<ElectromagneticPulseEntity>of(ElectromagneticPulseEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(ElectromagneticPulseEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

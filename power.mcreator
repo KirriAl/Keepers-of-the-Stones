@@ -14177,6 +14177,58 @@
         ]
       },
       "path": "~/ElementalBattery"
+    },
+    {
+      "name": "MagneticClaws",
+      "type": "tool",
+      "sortid": 910,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetic_claws",
+      "path": "~/Magnet"
+    },
+    {
+      "name": "MagneticFishingRod",
+      "type": "tool",
+      "sortid": 911,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetic_fishing_rod",
+      "path": "~/Magnet"
+    },
+    {
+      "name": "MagneticPowerUse",
+      "type": "procedure",
+      "sortid": 911,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetic_power_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magnet"
+    },
+    {
+      "name": "ElectromagneticPulse",
+      "type": "rangeditem",
+      "sortid": 912,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electromagnetic_pulse",
+      "path": "~/Magnet"
     }
   ],
   "variable_elements": [
@@ -14867,10 +14919,10 @@
   ],
   "language_map": {
     "ru_ru": {
-      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.sun_battery": "Батарея",
+      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.spike": "Шип",
@@ -14889,8 +14941,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Boomerang",
@@ -14904,8 +14956,8 @@
       "power.spawn_animals.cat.text": "Кот",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.potato.text": "Картофель",
       "power.cultivation.pumpkin.text": "Тыква",
+      "power.cultivation.potato.text": "Картофель",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -14924,17 +14976,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.energy_chestplate": "Энергетическая Кираса",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.space_leggings": "Космические штаны",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.energy_chestplate": "Энергетическая Кираса",
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
-      "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.speed_chestplate": "Speed Chestplate",
+      "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.light_helmet": "Шлем солнца",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Шлем солнца",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "power.cultivation.spruce.text": "Ель",
@@ -14942,10 +14994,10 @@
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
-      "item.power.force_replication": "Репликация Силы",
       "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
-      "item.power.explosion_stone": "Камень Взрыва",
+      "item.power.force_replication": "Репликация Силы",
       "item.power.sound_imitate": "Звуковой Подражатель",
+      "item.power.explosion_stone": "Камень Взрыва",
       "power.space_atlas.label.text": "Космический Атлас",
       "power.cultivation.beetroot.text": "Свекла",
       "item.power.earth_helmet": "Земляной Монокль",
@@ -14955,8 +15007,8 @@
       "item.power.redstone_bundle": "Мешок С Редстоуном",
       "item.power.sand_shield": "Песчаный Щит",
       "item.power.mercury_stone": "Камень Ртути",
-      "item.power.iron_shield": "Железный Щит",
       "item.power.light_battery": "Батарея",
+      "item.power.iron_shield": "Железный Щит",
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
@@ -15140,6 +15192,7 @@
       "item.power.air_stone": "Камень Воздуха",
       "item.power.amber_helmet": "Amber Helmet",
       "item.power.sound_stone": "Камень Звука",
+      "item.power.electromagnetic_pulse": "Electromagnetic Pulse",
       "itemGroup.tabgreat_group": "Великие",
       "item.power.metal_invulnerability": "Неуязвимость Металла",
       "effect.power.recharge_technology_stone": "Перезарядка",
@@ -15240,6 +15293,7 @@
       "effect.power.recharge_greenery_stone": "Перезарядка",
       "item.power.crystal_shield": "Кристаллический Щит",
       "item.power.creation_leggings": "Штаны созидания",
+      "item.power.magnetic_fishing_rod": "Магнитная Удочка",
       "item.power.shadow_battery": "Батарея",
       "item.power.metal_boots": "Металлические ботинки",
       "item.power.lava_battery": "Батарея",
@@ -15247,6 +15301,7 @@
       "effect.power.destruction_master": "Мастер Разрушения",
       "item.power.poison_stone": "Камень Яда",
       "biome.power.jurassic_swamp": "Юрское Болото",
+      "item.power.magnetic_claws": "Магнитные Когти",
       "subtitles.tyrannosaurus_rex.dead": "",
       "item.power.metal_battery": "Батарея",
       "item.power.energy_boots": "Энергетические Ботинки",
@@ -15696,6 +15751,7 @@
       "item.power.air_stone": "Air Stone",
       "item.power.amber_helmet": "Amber Helmet",
       "item.power.sound_stone": "Sound Stone",
+      "item.power.electromagnetic_pulse": "Electromagnetic Pulse",
       "itemGroup.tabgreat_group": "Great Group",
       "item.power.metal_invulnerability": "Invulnerability of Metal",
       "effect.power.recharge_technology_stone": "Recharge",
@@ -15796,6 +15852,7 @@
       "item.power.crystal_shield": "Crystal Shield",
       "effect.power.recharge_greenery_stone": "Recharge",
       "item.power.creation_leggings": "Creation Leggings",
+      "item.power.magnetic_fishing_rod": "Magnetic Fishing Rod",
       "item.power.shadow_battery": "Battery",
       "item.power.metal_boots": "Metal Boots",
       "item.power.lava_battery": "Battery",
@@ -15803,6 +15860,7 @@
       "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_stone": "Poison Stone",
       "biome.power.jurassic_swamp": "Jurassic Swamp",
+      "item.power.magnetic_claws": "Magnetic Claws",
       "subtitles.tyrannosaurus_rex.dead": "",
       "item.power.metal_battery": "Battery",
       "item.power.energy_boots": "Energy Boots",
