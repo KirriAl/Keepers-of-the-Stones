@@ -2,68 +2,60 @@
 package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.MagneticPowerUseProcedure;
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.PowerModElements;
 
-import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.FishingRodItem;
-import net.minecraft.world.entity.projectile.FishingHook;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.stats.Stats;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraftforge.registries.ObjectHolder;
 
-public class MagneticFishingRodItem extends FishingRodItem {
-	public MagneticFishingRodItem() {
-		super(new Item.Properties().tab(null).durability(5000).fireResistant());
+import net.minecraft.world.World;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ActionResult;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.FishingRodItem;
+import net.minecraft.entity.player.PlayerEntity;
+
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
+
+@PowerModElements.ModElement.Tag
+public class MagneticFishingRodItem extends PowerModElements.ModElement {
+	@ObjectHolder("power:magnetic_fishing_rod")
+	public static final Item block = null;
+
+	public MagneticFishingRodItem(PowerModElements instance) {
+		super(instance, 911);
 	}
 
 	@Override
-	public int getEnchantmentValue() {
-		return 2;
+	public void initElements() {
+		elements.items.add(() -> new ItemToolCustom() {
+			@Override
+			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
+				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);
+				ItemStack itemstack = retval.getResult();
+				double x = entity.getPosX();
+				double y = entity.getPosY();
+				double z = entity.getPosZ();
+
+				MagneticPowerUseProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
+								new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				return retval;
+			}
+		}.setRegistryName("magnetic_fishing_rod"));
 	}
 
-	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		ItemStack itemstack = entity.getItemInHand(hand);
-		if (entity.fishing != null) {
-			if (!world.isClientSide()) {
-				itemstack.hurtAndBreak(entity.fishing.retrieve(itemstack), entity, i -> i.broadcastBreakEvent(hand));
-			}
-			world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.NEUTRAL, 1,
-					0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
-			world.gameEvent(entity, GameEvent.FISHING_ROD_REEL_IN, entity);
-		} else {
-			world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.FISHING_BOBBER_THROW, SoundSource.NEUTRAL, 0.5f,
-					0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
-			if (!world.isClientSide()) {
-				int k = EnchantmentHelper.getFishingSpeedBonus(itemstack);
-				int j = EnchantmentHelper.getFishingLuckBonus(itemstack);
-				world.addFreshEntity(new FishingHook(entity, world, j, k) {
-					@Override
-					public boolean shouldStopFishing(Player player) {
-						if (!player.isRemoved() && player.isAlive()
-								&& (player.getMainHandItem().is(PowerModItems.MAGNETIC_FISHING_ROD.get())
-										|| player.getOffhandItem().is(PowerModItems.MAGNETIC_FISHING_ROD.get()))
-								&& !(this.distanceToSqr(player) > 1024)) {
-							return false;
-						} else {
-							this.discard();
-							return true;
-						}
-					}
-				});
-			}
-			entity.awardStat(Stats.ITEM_USED.get(this));
-			world.gameEvent(entity, GameEvent.FISHING_ROD_CAST, entity);
+	private static class ItemToolCustom extends FishingRodItem {
+		protected ItemToolCustom() {
+			super(new Item.Properties().group(null).maxDamage(5000).isImmuneToFire());
 		}
 
-		MagneticPowerUseProcedure.execute(world, entity, itemstack);
-		return InteractionResultHolder.sidedSuccess(itemstack, world.isClientSide());
+		@Override
+		public int getItemEnchantability() {
+			return 2;
+		}
 	}
 }

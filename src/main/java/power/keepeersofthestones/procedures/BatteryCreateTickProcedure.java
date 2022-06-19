@@ -36,6 +36,8 @@ import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MistBatteryItem;
 import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.MetalBatteryItem;
+import power.keepeersofthestones.item.MagnetStoneItem;
+import power.keepeersofthestones.item.MagnetBatteryItem;
 import power.keepeersofthestones.item.LightningStoneItem;
 import power.keepeersofthestones.item.LightningBatteryItem;
 import power.keepeersofthestones.item.LightStoneItem;
@@ -1109,32 +1111,36 @@ public class BatteryCreateTickProcedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		} else if ((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
-							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).copy());
+					});
+				}
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 0)).getItem() == PowerModItems.MAGNET_STONE.get() && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+		}.getItemStack(new BlockPos(x, y, z), (int) (0))).getItem() == MagnetStoneItem.block && new Object() {
+			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
-							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).getCount());
+					});
+				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos(x, y, z), 2) == 0) {
-			if (!world.isClientSide()) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("recipe", 31);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("recipe", 31);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		} else {
 			if (!world.isRemote()) {
@@ -2670,47 +2676,49 @@ public class BatteryCreateTickProcedure {
 						}
 					}
 				} else if (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
 				}.getValue(world, new BlockPos(x, y, z), "recipe") == 31) {
 					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 						if (_ent != null) {
-							final int _slotid = 3;
-							final ItemStack _setstack = new ItemStack(PowerModItems.MAGNET_STONE.get());
-							_setstack.setCount(1);
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable)
-									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-							});
-						}
-					}
-					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
-						if (_ent != null) {
-							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PowerModItems.MAGNET_BATTERY.get());
-							_setstack.setCount(1);
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable)
-									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-							});
-						}
-					}
-					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
-						if (_ent != null) {
-							final int _slotid = 0;
-							final int _amount = 1;
+							final int _sltid = (int) (3);
+							final ItemStack _setstack = new ItemStack(MagnetStoneItem.block);
+							_setstack.setCount((int) 1);
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
-									ItemStack _stk = capability.getStackInSlot(_slotid).copy();
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+								}
+							});
+						}
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
+						if (_ent != null) {
+							final int _sltid = (int) (2);
+							final ItemStack _setstack = new ItemStack(MagnetBatteryItem.block);
+							_setstack.setCount((int) 1);
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+								}
+							});
+						}
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
+						if (_ent != null) {
+							final int _sltid = (int) (0);
+							final int _amount = (int) 1;
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									ItemStack _stk = capability.getStackInSlot(_sltid).copy();
 									_stk.shrink(_amount);
-									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
 								}
 							});
 						}

@@ -61,7 +61,7 @@ public class EBPoisonGuiWindow extends ContainerScreen<EBPoisonGui.GuiContainerM
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/poison_master.png"));
 		this.blit(ms, this.guiLeft + 93, this.guiTop + -109, 0, 0, 16, 16, 16, 16);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/speed_element.png"));
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/poison_element.png"));
 		this.blit(ms, this.guiLeft + 71, this.guiTop + -85, 0, 0, 53, 128, 53, 128);
 
 		RenderSystem.disableBlend();
