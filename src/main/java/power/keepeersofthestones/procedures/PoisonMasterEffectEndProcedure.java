@@ -1,10 +1,10 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.potion.RechargePoisonStonePotionEffect;
+import power.keepeersofthestones.item.ToxicCloudItem;
 import power.keepeersofthestones.item.PoisonSwordItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
 import power.keepeersofthestones.item.PoisonItem;
-import power.keepeersofthestones.item.MagicFireballItem;
 import power.keepeersofthestones.item.FireSwordItem;
 import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
@@ -83,7 +83,7 @@ public class PoisonMasterEffectEndProcedure {
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(MagicFireballItem.block);
+			ItemStack _stktoremove = new ItemStack(ToxicCloudItem.block);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}

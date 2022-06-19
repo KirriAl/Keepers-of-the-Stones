@@ -1,5 +1,6 @@
 package power.keepeersofthestones.procedures;
 
+import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.util.DamageSource;
@@ -16,6 +17,8 @@ public class DamagedQuicksandProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.attackEntityFrom(DamageSource.FALLING_BLOCK, (float) 11);
+		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).sand) {
+			entity.attackEntityFrom(DamageSource.FALLING_BLOCK, (float) 11);
+		}
 	}
 }
