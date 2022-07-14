@@ -27,9 +27,9 @@ public class CrystallizedDimension {
 		@SubscribeEvent
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
-			replaceableBlocks.add(Blocks.SANDSTONE);
-			replaceableBlocks.add(Blocks.BUDDING_AMETHYST);
-			replaceableBlocks.add(Blocks.AMETHYST_BLOCK);
+			replaceableBlocks.add(Blocks.DEEPSLATE);
+			replaceableBlocks.add(Blocks.GRASS_BLOCK);
+			replaceableBlocks.add(Blocks.DIRT);
 			event.enqueueWork(() -> {
 				WorldCarver.CAVE.replaceableBlocks = new ImmutableSet.Builder<Block>().addAll(WorldCarver.CAVE.replaceableBlocks)
 						.addAll(replaceableBlocks).build();

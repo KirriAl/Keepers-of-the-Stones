@@ -9,7 +9,7 @@
     ],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.SANDSTONE#0"
+      "value": "Blocks.DEEPSLATE"
     },
     "fluidBlock": {
       "value": "Blocks.FLOWING_WATER"

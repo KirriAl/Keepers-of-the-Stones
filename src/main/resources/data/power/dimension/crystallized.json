@@ -31,7 +31,10 @@
       "deepslate_enabled": false,
       "ore_veins_enabled": false,
       "default_block": {
-        "Name": "minecraft:sandstone"
+        "Name": "minecraft:deepslate",
+        "Properties": {
+          "axis": "y"
+        }
       },
       "default_fluid": {
         "Name": "minecraft:water",
@@ -2985,14 +2988,17 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:budding_amethyst"
+                              "Name": "minecraft:grass_block",
+                              "Properties": {
+                                "snowy": "false"
+                              }
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:amethyst_block"
+                            "Name": "minecraft:dirt"
                           }
                         }
                       ]
@@ -3010,7 +3016,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:amethyst_block"
+                        "Name": "minecraft:dirt"
                       }
                     }
                   }
