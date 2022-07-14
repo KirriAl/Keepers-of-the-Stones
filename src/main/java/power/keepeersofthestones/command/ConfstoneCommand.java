@@ -17,8 +17,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
-import java.util.Objects;
-
 @Mod.EventBusSubscriber
 public class ConfstoneCommand {
 	@SubscribeEvent
@@ -30,9 +28,9 @@ public class ConfstoneCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					ResetmychoiceProcedureProcedure.execute(world, x, y, z, entity);
 					return 0;
@@ -42,9 +40,9 @@ public class ConfstoneCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					DetransformKeyPriNazhatiiKlavishiProcedure.execute(entity);
 					return 0;
@@ -54,9 +52,9 @@ public class ConfstoneCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					ResetSkillsAndLevelsProcedure.execute(entity);
 					return 0;

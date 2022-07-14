@@ -19,8 +19,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
-import java.util.Objects;
-
 @Mod.EventBusSubscriber
 public class PlanetCommand {
 	@SubscribeEvent
@@ -32,9 +30,9 @@ public class PlanetCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					EarthOnMeProcedure.execute(entity);
 					return 0;
@@ -44,9 +42,9 @@ public class PlanetCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					MoonOnMeProcedure.execute(entity);
 					return 0;
@@ -56,9 +54,9 @@ public class PlanetCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					VenusOnMeProcedure.execute(entity);
 					return 0;
@@ -68,9 +66,9 @@ public class PlanetCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					MarsOnMeProcedure.execute(entity);
 					return 0;
@@ -80,9 +78,9 @@ public class PlanetCommand {
 					double y = arguments.getSource().getPosition().y();
 					double z = arguments.getSource().getPosition().z();
 					Entity entity = arguments.getSource().getEntity();
-					Direction direction = Objects.requireNonNull(entity).getDirection();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
 					EnceladusOnMeProcedure.execute(entity);
 					return 0;
