@@ -22,20 +22,20 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 public class PowerModFluids {
 	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, PowerMod.MODID);
+	public static final RegistryObject<Fluid> ACID = REGISTRY.register("acid", () -> new AcidFluid.Source());
+	public static final RegistryObject<Fluid> FLOWING_ACID = REGISTRY.register("flowing_acid", () -> new AcidFluid.Flowing());
 	public static final RegistryObject<Fluid> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockFluid.Source());
 	public static final RegistryObject<Fluid> FLOWING_QUICKSAND_BLOCK = REGISTRY.register("flowing_quicksand_block",
 			() -> new QuicksandBlockFluid.Flowing());
-	public static final RegistryObject<Fluid> ACID = REGISTRY.register("acid", () -> new AcidFluid.Source());
-	public static final RegistryObject<Fluid> FLOWING_ACID = REGISTRY.register("flowing_acid", () -> new AcidFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
-			ItemBlockRenderTypes.setRenderLayer(QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
 			ItemBlockRenderTypes.setRenderLayer(ACID.get(), renderType -> renderType == RenderType.translucent());
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_ACID.get(), renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
 		}
 	}
 }
