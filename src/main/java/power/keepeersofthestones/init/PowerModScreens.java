@@ -9,7 +9,6 @@ import power.keepeersofthestones.client.gui.SpaceAtlasGUIScreen;
 import power.keepeersofthestones.client.gui.SoundImitateChoiceScreen;
 import power.keepeersofthestones.client.gui.RedstoneBundleGUIScreen;
 import power.keepeersofthestones.client.gui.PointGUIScreen;
-import power.keepeersofthestones.client.gui.PageElementalDimensionsScreen;
 import power.keepeersofthestones.client.gui.LevelsAndSkillsPageScreen;
 import power.keepeersofthestones.client.gui.EBWaterScreen;
 import power.keepeersofthestones.client.gui.EBVacuumScreen;
@@ -53,7 +52,6 @@ import power.keepeersofthestones.client.gui.CheckpointGUIScreen;
 import power.keepeersofthestones.client.gui.CheckPointTPScreen;
 import power.keepeersofthestones.client.gui.BuyLevel3Screen;
 import power.keepeersofthestones.client.gui.BuyLevel2Screen;
-import power.keepeersofthestones.client.gui.BuyAquaPowerScreen;
 import power.keepeersofthestones.client.gui.BuildingGUIScreen;
 import power.keepeersofthestones.client.gui.BatteryCreateGUIScreen;
 
@@ -114,12 +112,10 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.LEVELS_AND_SKILLS_PAGE, LevelsAndSkillsPageScreen::new);
 			MenuScreens.register(PowerModMenus.BUY_LEVEL_2, BuyLevel2Screen::new);
 			MenuScreens.register(PowerModMenus.BUY_LEVEL_3, BuyLevel3Screen::new);
-			MenuScreens.register(PowerModMenus.BUY_AQUA_POWER, BuyAquaPowerScreen::new);
 			MenuScreens.register(PowerModMenus.EB_MIST, EBMistScreen::new);
 			MenuScreens.register(PowerModMenus.SOUND_IMITATE_CHOICE, SoundImitateChoiceScreen::new);
 			MenuScreens.register(PowerModMenus.EB_SAND, EBSandScreen::new);
 			MenuScreens.register(PowerModMenus.EB_SPEED, EBSpeedScreen::new);
-			MenuScreens.register(PowerModMenus.PAGE_ELEMENTAL_DIMENSIONS, PageElementalDimensionsScreen::new);
 			MenuScreens.register(PowerModMenus.EB_POISON, EBPoisonScreen::new);
 		});
 	}

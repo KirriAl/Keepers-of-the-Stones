@@ -2,10 +2,8 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
-import power.keepeersofthestones.procedures.OpenDimensionsPortalsPageProcedure;
 import power.keepeersofthestones.procedures.OpenBuyLevel3Procedure;
 import power.keepeersofthestones.procedures.OpenBuyLevel2Procedure;
-import power.keepeersofthestones.procedures.OpenBuyAquaPowerProcedure;
 import power.keepeersofthestones.procedures.OpenBookProcedure;
 import power.keepeersofthestones.PowerMod;
 
@@ -76,15 +74,7 @@ public class LevelsAndSkillsPageButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			OpenBuyAquaPowerProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
 			OpenBookProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
-			OpenDimensionsPortalsPageProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

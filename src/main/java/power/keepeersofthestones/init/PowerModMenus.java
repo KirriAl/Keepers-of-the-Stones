@@ -9,7 +9,6 @@ import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
-import power.keepeersofthestones.world.inventory.PageElementalDimensionsMenu;
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
 import power.keepeersofthestones.world.inventory.EBWaterMenu;
 import power.keepeersofthestones.world.inventory.EBVacuumMenu;
@@ -53,7 +52,6 @@ import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
 import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
 import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
 import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
-import power.keepeersofthestones.world.inventory.BuyAquaPowerMenu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
 
@@ -135,15 +133,11 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new LevelsAndSkillsPageMenu(id, inv, extraData));
 	public static final MenuType<BuyLevel2Menu> BUY_LEVEL_2 = register("buy_level_2", (id, inv, extraData) -> new BuyLevel2Menu(id, inv, extraData));
 	public static final MenuType<BuyLevel3Menu> BUY_LEVEL_3 = register("buy_level_3", (id, inv, extraData) -> new BuyLevel3Menu(id, inv, extraData));
-	public static final MenuType<BuyAquaPowerMenu> BUY_AQUA_POWER = register("buy_aqua_power",
-			(id, inv, extraData) -> new BuyAquaPowerMenu(id, inv, extraData));
 	public static final MenuType<EBMistMenu> EB_MIST = register("eb_mist", (id, inv, extraData) -> new EBMistMenu(id, inv, extraData));
 	public static final MenuType<SoundImitateChoiceMenu> SOUND_IMITATE_CHOICE = register("sound_imitate_choice",
 			(id, inv, extraData) -> new SoundImitateChoiceMenu(id, inv, extraData));
 	public static final MenuType<EBSandMenu> EB_SAND = register("eb_sand", (id, inv, extraData) -> new EBSandMenu(id, inv, extraData));
 	public static final MenuType<EBSpeedMenu> EB_SPEED = register("eb_speed", (id, inv, extraData) -> new EBSpeedMenu(id, inv, extraData));
-	public static final MenuType<PageElementalDimensionsMenu> PAGE_ELEMENTAL_DIMENSIONS = register("page_elemental_dimensions",
-			(id, inv, extraData) -> new PageElementalDimensionsMenu(id, inv, extraData));
 	public static final MenuType<EBPoisonMenu> EB_POISON = register("eb_poison", (id, inv, extraData) -> new EBPoisonMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {

@@ -12429,15 +12429,6 @@
       "path": "~/LevelSystem"
     },
     {
-      "name": "BuyAquaPower",
-      "type": "gui",
-      "sortid": 777,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "buy_aqua_power",
-      "path": "~/LevelSystem"
-    },
-    {
       "name": "OpenBuyLevel2",
       "type": "procedure",
       "sortid": 778,
@@ -13720,48 +13711,6 @@
         ]
       },
       "path": "~/Teleportation"
-    },
-    {
-      "name": "PageElementalDimensions",
-      "type": "gui",
-      "sortid": 884,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "page_elemental_dimensions",
-      "path": "~/ElementalBook"
-    },
-    {
-      "name": "OpenDimensionsPortalsPage",
-      "type": "procedure",
-      "sortid": 885,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_dimensions_portals_page",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ElementalBook"
     },
     {
       "name": "MusicStone",
