@@ -32,7 +32,7 @@
     "hasSkyLight": false,
     "imitateOverworldBehaviour": true,
     "portalFrame": {
-      "value": "Blocks.DEEPSLATE"
+      "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
       "value": "SOUL"

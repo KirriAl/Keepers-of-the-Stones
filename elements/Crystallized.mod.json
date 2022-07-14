@@ -26,7 +26,7 @@
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
     "portalFrame": {
-      "value": "Blocks.AMETHYST_BLOCK"
+      "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
       "value": "GLOW"
