@@ -17,6 +17,7 @@ import power.keepeersofthestones.world.biome.JurassicSwampBiome;
 import power.keepeersofthestones.world.biome.JurassicJungleBiome;
 import power.keepeersofthestones.world.biome.EnceladusIceDesertBiome;
 import power.keepeersofthestones.world.biome.CrystallizedLandsBiome;
+import power.keepeersofthestones.world.biome.CrystallizedForestBiome;
 import power.keepeersofthestones.world.biome.CretaceousTaigaBiome;
 import power.keepeersofthestones.world.biome.CretaceousPineForestBiome;
 import power.keepeersofthestones.PowerMod;
@@ -51,6 +52,8 @@ public class PowerModBiomes {
 	public static final RegistryObject<Biome> OBLIVION_FOREST = REGISTRY.register("oblivion_forest", () -> OblivionForestBiome.createBiome());
 	public static final RegistryObject<Biome> OBLIVION_PLAINS = REGISTRY.register("oblivion_plains", () -> OblivionPlainsBiome.createBiome());
 	public static final RegistryObject<Biome> OBLIVION_DESERT = REGISTRY.register("oblivion_desert", () -> OblivionDesertBiome.createBiome());
+	public static final RegistryObject<Biome> CRYSTALLIZED_FOREST = REGISTRY.register("crystallized_forest",
+			() -> CrystallizedForestBiome.createBiome());
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -70,6 +73,7 @@ public class PowerModBiomes {
 			OblivionForestBiome.init();
 			OblivionPlainsBiome.init();
 			OblivionDesertBiome.init();
+			CrystallizedForestBiome.init();
 		});
 	}
 }
