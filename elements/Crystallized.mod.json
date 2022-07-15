@@ -5,6 +5,9 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:CrystallizedLands"
+      },
+      {
+        "value": "CUSTOM:CrystallizedForest"
       }
     ],
     "worldGenType": "Normal world gen",

@@ -68,6 +68,8 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> CRYSTAL_PINK = REGISTRY.register("crystal_pink", () -> new CrystalPinkBlock());
 	public static final RegistryObject<Block> CRYSTAL_PURPLE = REGISTRY.register("crystal_purple", () -> new CrystalPurpleBlock());
 	public static final RegistryObject<Block> CRYSTAL_RED = REGISTRY.register("crystal_red", () -> new CrystalRedBlock());
+	public static final RegistryObject<Block> CRYSTAL_VIOLET = REGISTRY.register("crystal_violet", () -> new CrystalVioletBlock());
+	public static final RegistryObject<Block> CRYSTAL_YELLOW = REGISTRY.register("crystal_yellow", () -> new CrystalYellowBlock());
 	public static final RegistryObject<Block> ENERGY_BLOCK = REGISTRY.register("energy_block", () -> new EnergyBlockBlock());
 	public static final RegistryObject<Block> SOUND_BARRIER_BLOCK = REGISTRY.register("sound_barrier_block", () -> new SoundBarrierBlockBlock());
 	public static final RegistryObject<Block> CLUSTER_BLOCK = REGISTRY.register("cluster_block", () -> new ClusterBlockBlock());
@@ -87,8 +89,6 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> GOLD_MAGIC_BOX = REGISTRY.register("gold_magic_box", () -> new GoldMagicBoxBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	public static final RegistryObject<Block> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockBlock());
-	public static final RegistryObject<Block> CRYSTAL_VIOLET = REGISTRY.register("crystal_violet", () -> new CrystalVioletBlock());
-	public static final RegistryObject<Block> CRYSTAL_YELLOW = REGISTRY.register("crystal_yellow", () -> new CrystalYellowBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

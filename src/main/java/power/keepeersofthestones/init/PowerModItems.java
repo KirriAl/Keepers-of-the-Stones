@@ -296,10 +296,13 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CREATION_STONE = REGISTRY.register("creation_stone", () -> new CreationStoneItem());
 	public static final RegistryObject<Item> DESTRUCTION_STONE = REGISTRY.register("destruction_stone", () -> new DestructionStoneItem());
 	public static final RegistryObject<Item> MAGNETIC_CLAWS = REGISTRY.register("magnetic_claws", () -> new MagneticClawsItem());
-	public static final RegistryObject<Item> ELEMENTAL_MUSIC_DISC = REGISTRY.register("elemental_music_disc", () -> new ElementalMusicDiscItem());
-	public static final RegistryObject<Item> BATTERY_CHARGER = block(PowerModBlocks.BATTERY_CHARGER, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> BOOK_OF_ELEMENTS = REGISTRY.register("book_of_elements", () -> new BookOfElementsItem());
 	public static final RegistryObject<Item> ELEMENTAL_COIN = REGISTRY.register("elemental_coin", () -> new ElementalCoinItem());
+	public static final RegistryObject<Item> BATTERY_CHARGER = block(PowerModBlocks.BATTERY_CHARGER, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
+	public static final RegistryObject<Item> ELEMENTAL_MUSIC_DISC = REGISTRY.register("elemental_music_disc", () -> new ElementalMusicDiscItem());
+	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
+	public static final RegistryObject<Item> CRYSTALLIZED = REGISTRY.register("crystallized", () -> new CrystallizedItem());
+	public static final RegistryObject<Item> OBLIVION = REGISTRY.register("oblivion", () -> new OblivionItem());
 	public static final RegistryObject<Item> TYRANNOSAURUS_REX = REGISTRY.register("tyrannosaurus_rex_spawn_egg",
 			() -> new ForgeSpawnEggItem(PowerModEntities.TYRANNOSAURUS_REX, -52480, -39322,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
@@ -311,9 +314,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> PTERODACTYL = REGISTRY.register("pterodactyl_spawn_egg",
 			() -> new ForgeSpawnEggItem(PowerModEntities.PTERODACTYL, -3355648, -103,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
-	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
-	public static final RegistryObject<Item> CRYSTALLIZED = REGISTRY.register("crystallized", () -> new CrystallizedItem());
-	public static final RegistryObject<Item> OBLIVION = REGISTRY.register("oblivion", () -> new OblivionItem());
 	public static final RegistryObject<Item> CRYSTAL_BLUE = block(PowerModBlocks.CRYSTAL_BLUE, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> CRYSTAL_BROWN = block(PowerModBlocks.CRYSTAL_BROWN, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> CRYSTAL_GRAY = block(PowerModBlocks.CRYSTAL_GRAY, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
@@ -325,6 +325,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CRYSTAL_PINK = block(PowerModBlocks.CRYSTAL_PINK, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> CRYSTAL_PURPLE = block(PowerModBlocks.CRYSTAL_PURPLE, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> CRYSTAL_RED = block(PowerModBlocks.CRYSTAL_RED, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
+	public static final RegistryObject<Item> CRYSTAL_VIOLET = block(PowerModBlocks.CRYSTAL_VIOLET, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
+	public static final RegistryObject<Item> CRYSTAL_YELLOW = block(PowerModBlocks.CRYSTAL_YELLOW, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
@@ -649,8 +651,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ACID_PIT = REGISTRY.register("acid_pit", () -> new AcidPitItem());
 	public static final RegistryObject<Item> MAGNETIC_FISHING_ROD = REGISTRY.register("magnetic_fishing_rod", () -> new MagneticFishingRodItem());
 	public static final RegistryObject<Item> ELECTROMAGNETIC_PULSE = REGISTRY.register("electromagnetic_pulse", () -> new ElectromagneticPulseItem());
-	public static final RegistryObject<Item> CRYSTAL_VIOLET = block(PowerModBlocks.CRYSTAL_VIOLET, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
-	public static final RegistryObject<Item> CRYSTAL_YELLOW = block(PowerModBlocks.CRYSTAL_YELLOW, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
