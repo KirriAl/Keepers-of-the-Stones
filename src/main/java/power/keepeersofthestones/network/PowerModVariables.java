@@ -117,7 +117,6 @@ public class PowerModVariables {
 			clone.magnet = original.magnet;
 			clone.mist = original.mist;
 			clone.power_level = original.power_level;
-			clone.water_power = original.water_power;
 			clone.sand = original.sand;
 			clone.speed = original.speed;
 			clone.c1x = original.c1x;
@@ -480,7 +479,6 @@ public class PowerModVariables {
 		public boolean magnet = false;
 		public boolean mist = false;
 		public double power_level = 1.0;
-		public boolean water_power = false;
 		public boolean recharge_spell_mist = false;
 		public boolean sand = false;
 		public boolean speed = false;
@@ -547,7 +545,6 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet", magnet);
 			nbt.putBoolean("mist", mist);
 			nbt.putDouble("power_level", power_level);
-			nbt.putBoolean("water_power", water_power);
 			nbt.putBoolean("recharge_spell_mist", recharge_spell_mist);
 			nbt.putBoolean("sand", sand);
 			nbt.putBoolean("speed", speed);
@@ -611,7 +608,6 @@ public class PowerModVariables {
 			magnet = nbt.getBoolean("magnet");
 			mist = nbt.getBoolean("mist");
 			power_level = nbt.getDouble("power_level");
-			water_power = nbt.getBoolean("water_power");
 			recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
 			sand = nbt.getBoolean("sand");
 			speed = nbt.getBoolean("speed");
@@ -695,7 +691,6 @@ public class PowerModVariables {
 					variables.magnet = message.data.magnet;
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
-					variables.water_power = message.data.water_power;
 					variables.recharge_spell_mist = message.data.recharge_spell_mist;
 					variables.sand = message.data.sand;
 					variables.speed = message.data.speed;

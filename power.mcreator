@@ -12292,57 +12292,6 @@
       "path": "~/Mist"
     },
     {
-      "name": "UpdateToWaterPower",
-      "type": "procedure",
-      "sortid": 751,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "update_to_water_power",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/LevelSystem"
-    },
-    {
-      "name": "NonWaterPower",
-      "type": "procedure",
-      "sortid": 752,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "non_water_power",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/LevelSystem"
-    },
-    {
       "name": "JustAddWater",
       "type": "achievement",
       "sortid": 753,
@@ -14785,12 +14734,6 @@
       "value": "1.0"
     },
     {
-      "name": "water_power",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "recharge_spell_mist",
       "type": "logic",
       "scope": "player_lifetime",
@@ -14962,10 +14905,10 @@
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.moon_battery": "Батарея",
       "item.power.energy_leggings": "Энергетические Поножи",
-      "item.power.sun_battery": "Батарея",
+      "item.power.moon_battery": "Батарея",
       "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.spike": "Шип",
@@ -14984,8 +14927,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Boomerang",
@@ -15000,8 +14943,8 @@
       "power.spawn_animals.cat.text": "Кот",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.pumpkin.text": "Тыква",
       "power.cultivation.potato.text": "Картофель",
+      "power.cultivation.pumpkin.text": "Тыква",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -15020,17 +14963,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.space_leggings": "Космические штаны",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.energy_chestplate": "Энергетическая Кираса",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.space_leggings": "Космические штаны",
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
-      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.shadow_invisible": "Теневая Невидимость",
+      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Шлем солнца",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "power.cultivation.spruce.text": "Ель",
@@ -15038,10 +14981,10 @@
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
-      "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
       "item.power.force_replication": "Репликация Силы",
-      "item.power.sound_imitate": "Звуковой Подражатель",
+      "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
       "item.power.explosion_stone": "Камень Взрыва",
+      "item.power.sound_imitate": "Звуковой Подражатель",
       "power.space_atlas.label.text": "Космический Атлас",
       "power.cultivation.beetroot.text": "Свекла",
       "item.power.earth_helmet": "Земляной Монокль",
@@ -15533,10 +15476,10 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
+      "item.power.energy_leggings": "Energy Leggings",
       "item.power.explode_leggings": "Explode Leggings",
+      "item.power.sun_battery": "Battery",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.spike": "Spike",
@@ -15555,8 +15498,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.boomerang": "Boomerang",
@@ -15571,8 +15514,8 @@
       "power.spawn_animals.cat.text": "Cat",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.potato.text": "Potato",
       "power.cultivation.pumpkin.text": "Pumpkin",
+      "power.cultivation.potato.text": "Potato",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -15591,17 +15534,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.energy_chestplate": "Energy Chestplate",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.space_leggings": "Space Leggings",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.energy_chestplate": "Energy Chestplate",
       "power.cultivation.birch.text": "Birch",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
-      "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.speed_chestplate": "Speed Chestplate",
+      "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.light_helmet": "Light Helmet",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Light Helmet",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "power.cultivation.spruce.text": "Spruce",
@@ -15609,10 +15552,10 @@
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
-      "item.power.force_replication": "Force Replication",
       "power.building.label.text": "Select the structure you want to place",
-      "item.power.sound_imitate": "Sound Emitate",
+      "item.power.force_replication": "Force Replication",
       "item.power.explosion_stone": "Explosion Stone",
+      "item.power.sound_imitate": "Sound Emitate",
       "power.space_atlas.label.text": "Atlas of Space Travel",
       "power.cultivation.beetroot.text": "Beetroot",
       "item.power.earth_helmet": "Earth Helmet",
