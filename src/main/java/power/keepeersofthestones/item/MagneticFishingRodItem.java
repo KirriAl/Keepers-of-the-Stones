@@ -25,7 +25,7 @@ public class MagneticFishingRodItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MagneticFishingRodItem(PowerModElements instance) {
-		super(instance, 911);
+		super(instance, 849);
 	}
 
 	@Override

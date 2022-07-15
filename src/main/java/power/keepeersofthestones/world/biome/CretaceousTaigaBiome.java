@@ -39,7 +39,7 @@ public class CretaceousTaigaBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public CretaceousTaigaBiome(PowerModElements instance) {
-		super(instance, 747);
+		super(instance, 728);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

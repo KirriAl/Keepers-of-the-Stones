@@ -22,24 +22,22 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @OnlyIn(Dist.CLIENT)
-public class BuyAquaPowerGuiWindow extends ContainerScreen<BuyAquaPowerGui.GuiContainerMod> {
+public class EBMagnetGuiWindow extends ContainerScreen<EBMagnetGui.GuiContainerMod> {
 	private World world;
 	private int x, y, z;
 	private PlayerEntity entity;
-	private final static HashMap guistate = BuyAquaPowerGui.guistate;
+	private final static HashMap guistate = EBMagnetGui.guistate;
 
-	public BuyAquaPowerGuiWindow(BuyAquaPowerGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
+	public EBMagnetGuiWindow(EBMagnetGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 400;
-		this.ySize = 166;
+		this.xSize = 0;
+		this.ySize = 0;
 	}
-
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/buy_aqua_power.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -53,13 +51,18 @@ public class BuyAquaPowerGuiWindow extends ContainerScreen<BuyAquaPowerGui.GuiCo
 		RenderSystem.color4f(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		Minecraft.getInstance().getTextureManager().bindTexture(texture);
-		int k = (this.width - this.xSize) / 2;
-		int l = (this.height - this.ySize) / 2;
-		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/elemental_coin.png"));
-		this.blit(ms, this.guiLeft + 172, this.guiTop + 34, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/book_of_elements_book.png"));
+		this.blit(ms, this.guiLeft + -244, this.guiTop + -127, 0, 0, 512, 256, 512, 256);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/magnet_stone.png"));
+		this.blit(ms, this.guiLeft + -104, this.guiTop + -109, 0, 0, 16, 16, 16, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/magnet_master.png"));
+		this.blit(ms, this.guiLeft + 93, this.guiTop + -109, 0, 0, 16, 16, 16, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/magnet_element.png"));
+		this.blit(ms, this.guiLeft + 71, this.guiTop + -85, 0, 0, 53, 128, 53, 128);
 
 		RenderSystem.disableBlend();
 	}
@@ -80,7 +83,9 @@ public class BuyAquaPowerGuiWindow extends ContainerScreen<BuyAquaPowerGui.GuiCo
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "To buy, put the required number of coins in the slot (12)", 46, 7, -12829636);
+		this.font.drawString(ms, "Class: Additional", -162, -85, -12829636);
+		this.font.drawString(ms, "Element: Magnet", -162, -67, -12829636);
+		this.font.drawString(ms, "Force: Convergence", -162, -49, -12829636);
 	}
 
 	@Override
@@ -93,10 +98,10 @@ public class BuyAquaPowerGuiWindow extends ContainerScreen<BuyAquaPowerGui.GuiCo
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 217, this.guiTop + 34, 40, 20, new StringTextComponent("Buy"), e -> {
+		this.addButton(new Button(this.guiLeft + 152, this.guiTop + 86, 30, 20, new StringTextComponent(">"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new BuyAquaPowerGui.ButtonPressedMessage(0, x, y, z));
-				BuyAquaPowerGui.handleButtonAction(entity, 0, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new EBMagnetGui.ButtonPressedMessage(0, x, y, z));
+				EBMagnetGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
 	}

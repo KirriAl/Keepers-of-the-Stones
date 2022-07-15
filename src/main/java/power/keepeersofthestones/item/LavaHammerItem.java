@@ -32,7 +32,7 @@ public class LavaHammerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LavaHammerItem(PowerModElements instance) {
-		super(instance, 278);
+		super(instance, 262);
 	}
 
 	@Override

@@ -48,7 +48,7 @@ public class KunaiItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletkunai").setRegistryName("entitybulletkunai");
 
 	public KunaiItem(PowerModElements instance) {
-		super(instance, 801);
+		super(instance, 777);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new KunaiRenderer.ModelRegisterHandler());
 	}
 

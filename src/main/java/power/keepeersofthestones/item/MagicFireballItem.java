@@ -50,7 +50,7 @@ public class MagicFireballItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletmagic_fireball").setRegistryName("entitybulletmagic_fireball");
 
 	public MagicFireballItem(PowerModElements instance) {
-		super(instance, 119);
+		super(instance, 105);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new MagicFireballRenderer.ModelRegisterHandler());
 	}
 

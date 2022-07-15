@@ -37,7 +37,7 @@ public class EBDestructionGui extends PowerModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public EBDestructionGui(PowerModElements instance) {
-		super(instance, 700);
+		super(instance, 679);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

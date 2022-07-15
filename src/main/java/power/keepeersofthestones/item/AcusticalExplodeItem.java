@@ -49,7 +49,7 @@ public class AcusticalExplodeItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletacustical_explode").setRegistryName("entitybulletacustical_explode");
 
 	public AcusticalExplodeItem(PowerModElements instance) {
-		super(instance, 197);
+		super(instance, 183);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AcusticalExplodeRenderer.ModelRegisterHandler());
 	}
 

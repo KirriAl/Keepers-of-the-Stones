@@ -48,7 +48,7 @@ public class BoomerangItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletboomerang").setRegistryName("entitybulletboomerang");
 
 	public BoomerangItem(PowerModElements instance) {
-		super(instance, 874);
+		super(instance, 814);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BoomerangRenderer.ModelRegisterHandler());
 	}
 

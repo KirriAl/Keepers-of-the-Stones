@@ -32,7 +32,7 @@ public class SpeedBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SpeedBatteryItem(PowerModElements instance) {
-		super(instance, 865);
+		super(instance, 95);
 	}
 
 	@Override

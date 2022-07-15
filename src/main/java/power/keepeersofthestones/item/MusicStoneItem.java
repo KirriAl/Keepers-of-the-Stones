@@ -17,7 +17,7 @@ public class MusicStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MusicStoneItem(PowerModElements instance) {
-		super(instance, 886);
+		super(instance, 826);
 	}
 
 	@Override

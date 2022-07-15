@@ -32,7 +32,7 @@ public class SoundBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SoundBatteryItem(PowerModElements instance) {
-		super(instance, 56);
+		super(instance, 73);
 	}
 
 	@Override

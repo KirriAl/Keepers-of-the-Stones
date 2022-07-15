@@ -27,7 +27,7 @@ public class IceShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public IceShieldItem(PowerModElements instance) {
-		super(instance, 176);
+		super(instance, 162);
 	}
 
 	@Override

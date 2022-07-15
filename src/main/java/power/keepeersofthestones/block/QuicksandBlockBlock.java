@@ -65,7 +65,7 @@ public class QuicksandBlockBlock extends PowerModElements.ModElement {
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 
 	public QuicksandBlockBlock(PowerModElements instance) {
-		super(instance, 876);
+		super(instance, 818);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

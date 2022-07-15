@@ -29,7 +29,7 @@ public class SpeedItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public SpeedItem(PowerModElements instance) {
-		super(instance, 871);
+		super(instance, 811);
 	}
 
 	@Override

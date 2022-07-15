@@ -32,7 +32,7 @@ public class TimeBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TimeBatteryItem(PowerModElements instance) {
-		super(instance, 72);
+		super(instance, 89);
 	}
 
 	@Override

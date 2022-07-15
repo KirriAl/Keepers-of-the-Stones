@@ -57,7 +57,7 @@ public class PlesiosaurusEntity extends PowerModElements.ModElement {
 			.size(1.5f, 2.5f)).build("plesiosaurus").setRegistryName("plesiosaurus");
 
 	public PlesiosaurusEntity(PowerModElements instance) {
-		super(instance, 43);
+		super(instance, 51);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PlesiosaurusRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -96,6 +96,7 @@ public class PlesiosaurusEntity extends PowerModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 120);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 12);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
 			ammma = ammma.createMutableAttribute(ForgeMod.SWIM_SPEED.get(), 0.3);

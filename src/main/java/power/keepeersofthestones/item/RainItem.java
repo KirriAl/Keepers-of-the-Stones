@@ -29,7 +29,7 @@ public class RainItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public RainItem(PowerModElements instance) {
-		super(instance, 269);
+		super(instance, 253);
 	}
 
 	@Override

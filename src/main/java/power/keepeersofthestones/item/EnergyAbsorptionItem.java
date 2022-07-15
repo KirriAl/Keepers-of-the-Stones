@@ -25,7 +25,7 @@ public class EnergyAbsorptionItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public EnergyAbsorptionItem(PowerModElements instance) {
-		super(instance, 667);
+		super(instance, 649);
 	}
 
 	@Override

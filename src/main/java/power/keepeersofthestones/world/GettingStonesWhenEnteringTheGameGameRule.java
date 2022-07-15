@@ -14,7 +14,7 @@ public class GettingStonesWhenEnteringTheGameGameRule extends PowerModElements.M
 			GameRules.Category.PLAYER, create(true));
 
 	public GettingStonesWhenEnteringTheGameGameRule(PowerModElements instance) {
-		super(instance, 443);
+		super(instance, 426);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

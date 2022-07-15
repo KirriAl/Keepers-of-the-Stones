@@ -48,7 +48,7 @@ public class SandFlurryItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletsand_flurry").setRegistryName("entitybulletsand_flurry");
 
 	public SandFlurryItem(PowerModElements instance) {
-		super(instance, 856);
+		super(instance, 798);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SandFlurryRenderer.ModelRegisterHandler());
 	}
 

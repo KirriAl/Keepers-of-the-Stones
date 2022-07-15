@@ -27,7 +27,7 @@ public class TechnobarrierItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TechnobarrierItem(PowerModElements instance) {
-		super(instance, 602);
+		super(instance, 584);
 	}
 
 	@Override

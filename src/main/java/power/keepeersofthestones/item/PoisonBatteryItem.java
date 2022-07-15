@@ -32,7 +32,7 @@ public class PoisonBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public PoisonBatteryItem(PowerModElements instance) {
-		super(instance, 895);
+		super(instance, 96);
 	}
 
 	@Override

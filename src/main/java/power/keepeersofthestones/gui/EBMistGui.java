@@ -37,7 +37,7 @@ public class EBMistGui extends PowerModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public EBMistGui(PowerModElements instance) {
-		super(instance, 807);
+		super(instance, 783);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

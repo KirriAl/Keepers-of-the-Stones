@@ -49,7 +49,7 @@ public class ToxicCloudItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybullettoxic_cloud").setRegistryName("entitybullettoxic_cloud");
 
 	public ToxicCloudItem(PowerModElements instance) {
-		super(instance, 903);
+		super(instance, 843);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ToxicCloudRenderer.ModelRegisterHandler());
 	}
 

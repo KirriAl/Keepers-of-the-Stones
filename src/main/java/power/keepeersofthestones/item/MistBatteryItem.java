@@ -32,7 +32,7 @@ public class MistBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MistBatteryItem(PowerModElements instance) {
-		super(instance, 76);
+		super(instance, 93);
 	}
 
 	@Override

@@ -43,7 +43,7 @@ public class GoldMagicBoxBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public GoldMagicBoxBlock(PowerModElements instance) {
-		super(instance, 80);
+		super(instance, 712);
 	}
 
 	@Override

@@ -34,7 +34,7 @@ public class DetransformKeyKeyBinding extends PowerModElements.ModElement {
 	private KeyBinding keys;
 
 	public DetransformKeyKeyBinding(PowerModElements instance) {
-		super(instance, 112);
+		super(instance, 98);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

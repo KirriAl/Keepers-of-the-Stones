@@ -26,7 +26,7 @@ public class EnergyBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public EnergyBlockBlock(PowerModElements instance) {
-		super(instance, 164);
+		super(instance, 150);
 	}
 
 	@Override

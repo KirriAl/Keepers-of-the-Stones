@@ -49,7 +49,7 @@ public class BlackHoleItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletblack_hole").setRegistryName("entitybulletblack_hole");
 
 	public BlackHoleItem(PowerModElements instance) {
-		super(instance, 437);
+		super(instance, 420);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlackHoleRenderer.ModelRegisterHandler());
 	}
 

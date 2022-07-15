@@ -39,7 +39,7 @@ public class MarsLandBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public MarsLandBiome(PowerModElements instance) {
-		super(instance, 427);
+		super(instance, 410);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

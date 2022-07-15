@@ -29,7 +29,7 @@ public class SoundItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public SoundItem(PowerModElements instance) {
-		super(instance, 266);
+		super(instance, 250);
 	}
 
 	@Override

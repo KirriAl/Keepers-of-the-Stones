@@ -17,7 +17,7 @@ public class GoldenDustStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public GoldenDustStoneItem(PowerModElements instance) {
-		super(instance, 786);
+		super(instance, 765);
 	}
 
 	@Override

@@ -39,7 +39,7 @@ public class SoundImitateChoiceGui extends PowerModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public SoundImitateChoiceGui(PowerModElements instance) {
-		super(instance, 841);
+		super(instance, 785);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

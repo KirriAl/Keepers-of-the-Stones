@@ -53,7 +53,7 @@ public class PterodactylEntity extends PowerModElements.ModElement {
 			.build("pterodactyl").setRegistryName("pterodactyl");
 
 	public PterodactylEntity(PowerModElements instance) {
-		super(instance, 44);
+		super(instance, 52);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PterodactylRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
@@ -77,6 +77,7 @@ public class PterodactylEntity extends PowerModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 65);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 11);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
 			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.6);

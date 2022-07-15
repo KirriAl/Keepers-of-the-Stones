@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @PowerModElements.ModElement.Tag
 public class BatteriesItemGroup extends PowerModElements.ModElement {
 	public BatteriesItemGroup(PowerModElements instance) {
-		super(instance, 568);
+		super(instance, 550);
 	}
 
 	@Override

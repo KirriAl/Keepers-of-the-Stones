@@ -37,7 +37,7 @@ public class EBPoisonGui extends PowerModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public EBPoisonGui(PowerModElements instance) {
-		super(instance, 897);
+		super(instance, 836);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

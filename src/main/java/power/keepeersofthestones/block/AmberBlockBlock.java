@@ -32,7 +32,7 @@ public class AmberBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public AmberBlockBlock(PowerModElements instance) {
-		super(instance, 755);
+		super(instance, 736);
 	}
 
 	@Override

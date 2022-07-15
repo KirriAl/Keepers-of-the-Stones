@@ -50,7 +50,7 @@ public class RaptorEntity extends PowerModElements.ModElement {
 			.build("raptor").setRegistryName("raptor");
 
 	public RaptorEntity(PowerModElements instance) {
-		super(instance, 42);
+		super(instance, 50);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RaptorRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
@@ -74,6 +74,7 @@ public class RaptorEntity extends PowerModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 70);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 8);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
 			event.put(entity, ammma.create());

@@ -38,7 +38,7 @@ public class DetonatorTNTBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public DetonatorTNTBlock(PowerModElements instance) {
-		super(instance, 641);
+		super(instance, 623);
 	}
 
 	@Override

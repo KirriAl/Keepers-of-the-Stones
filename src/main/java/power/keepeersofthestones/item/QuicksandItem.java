@@ -27,7 +27,7 @@ public class QuicksandItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public QuicksandItem(PowerModElements instance) {
-		super(instance, 859);
+		super(instance, 801);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class MagnetStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MagnetStoneItem(PowerModElements instance) {
-		super(instance, 732);
+		super(instance, 29);
 	}
 
 	@Override

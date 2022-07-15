@@ -32,12 +32,12 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @PowerModElements.ModElement.Tag
-public class PageElementalDimensionsGui extends PowerModElements.ModElement {
+public class EBMagnetGui extends PowerModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 
-	public PageElementalDimensionsGui(PowerModElements instance) {
-		super(instance, 884);
+	public EBMagnetGui(PowerModElements instance) {
+		super(instance, 852);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -49,13 +49,13 @@ public class PageElementalDimensionsGui extends PowerModElements.ModElement {
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("page_elemental_dimensions"));
+			event.getRegistry().register(containerType.setRegistryName("eb_magnet"));
 		}
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, PageElementalDimensionsGuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, EBMagnetGuiWindow::new));
 	}
 
 	public static class GuiContainerModFactory implements IContainerFactory {

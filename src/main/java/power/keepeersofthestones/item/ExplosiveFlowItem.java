@@ -49,7 +49,7 @@ public class ExplosiveFlowItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletexplosive_flow").setRegistryName("entitybulletexplosive_flow");
 
 	public ExplosiveFlowItem(PowerModElements instance) {
-		super(instance, 643);
+		super(instance, 625);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ExplosiveFlowRenderer.ModelRegisterHandler());
 	}
 

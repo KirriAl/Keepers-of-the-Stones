@@ -30,7 +30,7 @@ public class OblivionPlainsBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public OblivionPlainsBiome(PowerModElements instance) {
-		super(instance, 793);
+		super(instance, 770);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

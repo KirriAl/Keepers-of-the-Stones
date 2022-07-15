@@ -49,7 +49,7 @@ public class TyrannosaurusRexEntity extends PowerModElements.ModElement {
 			.size(1.5f, 2.5f)).build("tyrannosaurus_rex").setRegistryName("tyrannosaurus_rex");
 
 	public TyrannosaurusRexEntity(PowerModElements instance) {
-		super(instance, 41);
+		super(instance, 49);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TyrannosaurusRexRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
@@ -73,6 +73,7 @@ public class TyrannosaurusRexEntity extends PowerModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 150);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 21);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
 			event.put(entity, ammma.create());

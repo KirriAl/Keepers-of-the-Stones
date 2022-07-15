@@ -32,7 +32,7 @@ public class OceanBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public OceanBatteryItem(PowerModElements instance) {
-		super(instance, 61);
+		super(instance, 78);
 	}
 
 	@Override

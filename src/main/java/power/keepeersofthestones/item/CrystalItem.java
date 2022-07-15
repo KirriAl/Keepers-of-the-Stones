@@ -29,7 +29,7 @@ public class CrystalItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public CrystalItem(PowerModElements instance) {
-		super(instance, 267);
+		super(instance, 251);
 	}
 
 	@Override

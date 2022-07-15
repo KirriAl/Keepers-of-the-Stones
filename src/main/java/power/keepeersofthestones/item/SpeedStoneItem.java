@@ -28,7 +28,7 @@ public class SpeedStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SpeedStoneItem(PowerModElements instance) {
-		super(instance, 672);
+		super(instance, 27);
 	}
 
 	@Override
