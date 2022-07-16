@@ -113,6 +113,7 @@ import power.keepeersofthestones.item.ObscurityItem;
 import power.keepeersofthestones.item.OblivionItem;
 import power.keepeersofthestones.item.MusicStoneItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
+import power.keepeersofthestones.item.MushroomsItem;
 import power.keepeersofthestones.item.MushroomsBatteryItem;
 import power.keepeersofthestones.item.MoonWitherItem;
 import power.keepeersofthestones.item.MoonStonesItem;
@@ -653,6 +654,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MAGNETIC_FISHING_ROD = REGISTRY.register("magnetic_fishing_rod", () -> new MagneticFishingRodItem());
 	public static final RegistryObject<Item> ELECTROMAGNETIC_PULSE = REGISTRY.register("electromagnetic_pulse", () -> new ElectromagneticPulseItem());
 	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
+	public static final RegistryObject<Item> MUSHROOMS_HELMET = REGISTRY.register("mushrooms_helmet", () -> new MushroomsItem.Helmet());
+	public static final RegistryObject<Item> MUSHROOMS_CHESTPLATE = REGISTRY.register("mushrooms_chestplate", () -> new MushroomsItem.Chestplate());
+	public static final RegistryObject<Item> MUSHROOMS_LEGGINGS = REGISTRY.register("mushrooms_leggings", () -> new MushroomsItem.Leggings());
+	public static final RegistryObject<Item> MUSHROOMS_BOOTS = REGISTRY.register("mushrooms_boots", () -> new MushroomsItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
