@@ -77,5 +77,7 @@ public class ClearCopyElementsProcedure {
 			_entity.removeEffect(PowerModMobEffects.POISON_MASTER.get());
 		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(PowerModMobEffects.MAGNET_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MUSHROOMS_MASTER.get());
 	}
 }

@@ -320,10 +320,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mushrooms",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mushrooms",
           "x": 339,
           "y": 53
         }
@@ -487,6 +487,16 @@
           "name": "magnet_master.png",
           "x": 222,
           "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mushrooms_master.png",
+          "use1Xscale": false,
+          "name": "mushrooms_master.png",
+          "x": 321,
+          "y": 53
         }
       }
     ],
