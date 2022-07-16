@@ -14403,11 +14403,66 @@
     },
     {
       "name": "Baton",
-      "type": "item",
+      "type": "tool",
       "sortid": 867,
       "compiles": true,
       "locked_code": false,
       "registry_name": "baton",
+      "path": "~/Mushrooms"
+    },
+    {
+      "name": "Spores",
+      "type": "rangeditem",
+      "sortid": 868,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spores",
+      "path": "~/Mushrooms"
+    },
+    {
+      "name": "SporesUse",
+      "type": "procedure",
+      "sortid": 869,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spores_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mushrooms"
+    },
+    {
+      "name": "SporesUseOnBlock",
+      "type": "procedure",
+      "sortid": 870,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spores_use_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
       "path": "~/Mushrooms"
     }
   ],
@@ -15106,10 +15161,10 @@
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.sun_battery": "Батарея",
+      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.spike": "Шип",
@@ -15128,8 +15183,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Boomerang",
@@ -15145,8 +15200,8 @@
       "effect.power.mushrooms_master": "Мастер Грибов",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.potato.text": "Картофель",
       "power.cultivation.pumpkin.text": "Тыква",
+      "power.cultivation.potato.text": "Картофель",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -15165,17 +15220,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.energy_chestplate": "Энергетическая Кираса",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.space_leggings": "Космические штаны",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.energy_chestplate": "Энергетическая Кираса",
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
-      "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.speed_chestplate": "Speed Chestplate",
+      "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.light_helmet": "Шлем солнца",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Шлем солнца",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "power.cultivation.spruce.text": "Ель",
@@ -15183,10 +15238,10 @@
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
-      "item.power.force_replication": "Репликация Силы",
       "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
-      "item.power.explosion_stone": "Камень Взрыва",
+      "item.power.force_replication": "Репликация Силы",
       "item.power.sound_imitate": "Звуковой Подражатель",
+      "item.power.explosion_stone": "Камень Взрыва",
       "power.space_atlas.label.text": "Космический Атлас",
       "power.cultivation.beetroot.text": "Свекла",
       "item.power.earth_helmet": "Земляной Монокль",
@@ -15582,6 +15637,7 @@
       "item.power.energy_stone": "Камень Энергии",
       "item.power.energy_absorption": "Поглощение Энергии",
       "advancements.put_it_on_charge_overnight.title": "Поставить на ночь на зарядку",
+      "item.power.spores": "Spores",
       "item.power.ice_chestplate": "Ледяная Куртка",
       "power.building.library.text": "Библиотека",
       "item.power.moon_stones": "Лунные Камни",
@@ -16163,6 +16219,7 @@
       "item.power.energy_stone": "Energy stone",
       "item.power.energy_absorption": "Energy Absorption",
       "advancements.put_it_on_charge_overnight.title": "Put it on charge overnight",
+      "item.power.spores": "Spores",
       "item.power.ice_chestplate": "Ice Chestplate",
       "power.building.library.text": "Library",
       "item.power.moon_stones": "Moon Stones",

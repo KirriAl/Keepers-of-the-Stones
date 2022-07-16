@@ -15,6 +15,7 @@ import power.keepeersofthestones.entity.TornadoCreateEntity;
 import power.keepeersofthestones.entity.TimeDilationEntity;
 import power.keepeersofthestones.entity.TigerClawEntity;
 import power.keepeersofthestones.entity.SunExplodeEntity;
+import power.keepeersofthestones.entity.SporesEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
@@ -216,6 +217,9 @@ public class PowerModEntities {
 			EntityType.Builder.<ElectromagneticPulseEntity>of(ElectromagneticPulseEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(ElectromagneticPulseEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SporesEntity>> SPORES = register("projectile_spores",
+			EntityType.Builder.<SporesEntity>of(SporesEntity::new, MobCategory.MISC).setCustomClientFactory(SporesEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

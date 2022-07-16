@@ -53,6 +53,7 @@ import power.keepeersofthestones.item.SunExplodeItem;
 import power.keepeersofthestones.item.SunBatteryItem;
 import power.keepeersofthestones.item.SunAxeItem;
 import power.keepeersofthestones.item.StormItem;
+import power.keepeersofthestones.item.SporesItem;
 import power.keepeersofthestones.item.SpiritStoneItem;
 import power.keepeersofthestones.item.SpikeItem;
 import power.keepeersofthestones.item.SpeedStoneItem;
@@ -660,6 +661,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSHROOMS_LEGGINGS = REGISTRY.register("mushrooms_leggings", () -> new MushroomsItem.Leggings());
 	public static final RegistryObject<Item> MUSHROOMS_BOOTS = REGISTRY.register("mushrooms_boots", () -> new MushroomsItem.Boots());
 	public static final RegistryObject<Item> BATON = REGISTRY.register("baton", () -> new BatonItem());
+	public static final RegistryObject<Item> SPORES = REGISTRY.register("spores", () -> new SporesItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
