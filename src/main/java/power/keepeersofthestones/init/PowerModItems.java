@@ -231,6 +231,7 @@ import power.keepeersofthestones.item.BloodBatteryItem;
 import power.keepeersofthestones.item.BlackHoleItem;
 import power.keepeersofthestones.item.BlackHeartItem;
 import power.keepeersofthestones.item.BeeStingItem;
+import power.keepeersofthestones.item.BatonItem;
 import power.keepeersofthestones.item.AnimalsStoneItem;
 import power.keepeersofthestones.item.AnimalsItem;
 import power.keepeersofthestones.item.AnimalsBatteryItem;
@@ -658,6 +659,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSHROOMS_CHESTPLATE = REGISTRY.register("mushrooms_chestplate", () -> new MushroomsItem.Chestplate());
 	public static final RegistryObject<Item> MUSHROOMS_LEGGINGS = REGISTRY.register("mushrooms_leggings", () -> new MushroomsItem.Leggings());
 	public static final RegistryObject<Item> MUSHROOMS_BOOTS = REGISTRY.register("mushrooms_boots", () -> new MushroomsItem.Boots());
+	public static final RegistryObject<Item> BATON = REGISTRY.register("baton", () -> new BatonItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
