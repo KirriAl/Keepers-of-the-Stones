@@ -270,6 +270,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> WATER_STONE = REGISTRY.register("water_stone", () -> new WaterStoneItem());
 	public static final RegistryObject<Item> EARTH_STONE = REGISTRY.register("earth_stone", () -> new EarthStoneItem());
 	public static final RegistryObject<Item> GREENERY_STONE = REGISTRY.register("greenery_stone", () -> new GreeneryStoneItem());
+	public static final RegistryObject<Item> MUSHROOMS_STONE = REGISTRY.register("mushrooms_stone", () -> new MushroomsStoneItem());
 	public static final RegistryObject<Item> ANIMALS_STONE = REGISTRY.register("animals_stone", () -> new AnimalsStoneItem());
 	public static final RegistryObject<Item> TECHNOLOGY_STONE = REGISTRY.register("technology_stone", () -> new TechnologyStoneItem());
 	public static final RegistryObject<Item> METAL_STONE = REGISTRY.register("metal_stone", () -> new MetalStoneItem());
@@ -365,6 +366,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPEED_BATTERY = REGISTRY.register("speed_battery", () -> new SpeedBatteryItem());
 	public static final RegistryObject<Item> POISON_BATTERY = REGISTRY.register("poison_battery", () -> new PoisonBatteryItem());
 	public static final RegistryObject<Item> MAGNET_BATTERY = REGISTRY.register("magnet_battery", () -> new MagnetBatteryItem());
+	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
 	public static final RegistryObject<Item> BURN = REGISTRY.register("burn", () -> new BurnItem());
 	public static final RegistryObject<Item> MAGIC_FIREBALL = REGISTRY.register("magic_fireball", () -> new MagicFireballItem());
 	public static final RegistryObject<Item> AIR_FLOW = REGISTRY.register("air_flow", () -> new AirFlowItem());
@@ -606,7 +608,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> PLAGUE_STONE = REGISTRY.register("plague_stone", () -> new PlagueStoneItem());
 	public static final RegistryObject<Item> GRAVITY_STONE = REGISTRY.register("gravity_stone", () -> new GravityStoneItem());
 	public static final RegistryObject<Item> SPIRIT_STONE = REGISTRY.register("spirit_stone", () -> new SpiritStoneItem());
-	public static final RegistryObject<Item> MUSHROOMS_STONE = REGISTRY.register("mushrooms_stone", () -> new MushroomsStoneItem());
 	public static final RegistryObject<Item> POINT = REGISTRY.register("point", () -> new PointItem());
 	public static final RegistryObject<Item> WOOD_MAGIC_BOX = block(PowerModBlocks.WOOD_MAGIC_BOX, null);
 	public static final RegistryObject<Item> STONE_MAGIC_BOX = block(PowerModBlocks.STONE_MAGIC_BOX, null);
@@ -656,7 +657,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ACID_PIT = REGISTRY.register("acid_pit", () -> new AcidPitItem());
 	public static final RegistryObject<Item> MAGNETIC_FISHING_ROD = REGISTRY.register("magnetic_fishing_rod", () -> new MagneticFishingRodItem());
 	public static final RegistryObject<Item> ELECTROMAGNETIC_PULSE = REGISTRY.register("electromagnetic_pulse", () -> new ElectromagneticPulseItem());
-	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
 	public static final RegistryObject<Item> MUSHROOMS_HELMET = REGISTRY.register("mushrooms_helmet", () -> new MushroomsItem.Helmet());
 	public static final RegistryObject<Item> MUSHROOMS_CHESTPLATE = REGISTRY.register("mushrooms_chestplate", () -> new MushroomsItem.Chestplate());
 	public static final RegistryObject<Item> MUSHROOMS_LEGGINGS = REGISTRY.register("mushrooms_leggings", () -> new MushroomsItem.Leggings());

@@ -16,7 +16,7 @@ import net.minecraft.world.InteractionHand;
 
 public class MushroomsStoneItem extends Item {
 	public MushroomsStoneItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ADDITIONAL_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(PowerModTabs.TAB_MIDDLE_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
