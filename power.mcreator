@@ -14464,6 +14464,40 @@
         ]
       },
       "path": "~/Mushrooms"
+    },
+    {
+      "name": "MushroomSaturation",
+      "type": "item",
+      "sortid": 871,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushroom_saturation",
+      "path": "~/Mushrooms"
+    },
+    {
+      "name": "MushroomSaturationUse",
+      "type": "procedure",
+      "sortid": 871,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushroom_saturation_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mushrooms"
     }
   ],
   "variable_elements": [
@@ -15541,6 +15575,7 @@
       "item.power.space_chestplate": "Космический нагрудник",
       "item.power.shadow_spawn_egg": "Яйцо призыва Тени",
       "block.power.crystal_lime": "Лаймовый Кристалл",
+      "item.power.mushroom_saturation": "Mushroom Saturation",
       "power.spawn_animals.cow.text": "Корова",
       "item.power.crystal_helmet": "Кристаллическая Каска",
       "item.power.wind_helmet": "Воздушная Шапка",
@@ -15637,7 +15672,7 @@
       "item.power.energy_stone": "Камень Энергии",
       "item.power.energy_absorption": "Поглощение Энергии",
       "advancements.put_it_on_charge_overnight.title": "Поставить на ночь на зарядку",
-      "item.power.spores": "Spores",
+      "item.power.spores": "Споры",
       "item.power.ice_chestplate": "Ледяная Куртка",
       "power.building.library.text": "Библиотека",
       "item.power.moon_stones": "Лунные Камни",
@@ -15741,10 +15776,10 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.moon_battery": "Battery",
       "item.power.energy_leggings": "Energy Leggings",
-      "item.power.explode_leggings": "Explode Leggings",
+      "item.power.moon_battery": "Battery",
       "item.power.sun_battery": "Battery",
+      "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.spike": "Spike",
@@ -15763,8 +15798,8 @@
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.boomerang": "Boomerang",
@@ -15780,8 +15815,8 @@
       "effect.power.mushrooms_master": "Master of Mushrooms",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.pumpkin.text": "Pumpkin",
       "power.cultivation.potato.text": "Potato",
+      "power.cultivation.pumpkin.text": "Pumpkin",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -15800,17 +15835,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.space_leggings": "Space Leggings",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.energy_chestplate": "Energy Chestplate",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.space_leggings": "Space Leggings",
       "power.cultivation.birch.text": "Birch",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
-      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.shadow_invisible": "Shadow Invisible",
+      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "power.cultivation.spruce.text": "Spruce",
@@ -15818,8 +15853,8 @@
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
-      "power.building.label.text": "Select the structure you want to place",
       "item.power.force_replication": "Force Replication",
+      "power.building.label.text": "Select the structure you want to place",
       "item.power.sound_imitate": "Sound Emitate",
       "item.power.explosion_stone": "Explosion Stone",
       "power.space_atlas.label.text": "Atlas of Space Travel",
@@ -16122,6 +16157,7 @@
       "item.power.space_chestplate": "Space Chestplate",
       "item.power.shadow_spawn_egg": "Shadow Spawn Egg",
       "block.power.crystal_lime": "Crystal Lime",
+      "item.power.mushroom_saturation": "Mushroom Saturation",
       "power.spawn_animals.cow.text": "Cow",
       "item.power.crystal_helmet": "Crystal Helmet",
       "item.power.wind_helmet": "Air Helmet",
