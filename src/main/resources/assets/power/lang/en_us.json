@@ -237,6 +237,7 @@
   "entity.power.tornado_entity": "Tornado",
   "advancements.super_charge.descr": "Create the first battery",
   "entity.power.pterodactyl": "Pterodactyl",
+  "item.power.mushrooms_battery": "Battery",
   "block.power.crystal_brown": "Crystal Brown",
   "item.power.ice_stone": "Ice Stone",
   "effect.time_stop_effect": "Time Stop",

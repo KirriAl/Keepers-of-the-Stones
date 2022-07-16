@@ -14259,6 +14259,32 @@
         ]
       },
       "path": "~/ReceivingStones"
+    },
+    {
+      "name": "MushroomsBattery",
+      "type": "item",
+      "sortid": 860,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "MushroomsBatteryUse",
+      "type": "procedure",
+      "sortid": 861,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
     }
   ],
   "variable_elements": [
@@ -15192,6 +15218,7 @@
       "entity.power.tornado_entity": "Торнадо",
       "advancements.super_charge.descr": "Создайте первую батарею",
       "entity.power.pterodactyl": "Птеродактиль",
+      "item.power.mushrooms_battery": "Battery",
       "block.power.crystal_brown": "Коричневый Кристалл",
       "item.power.ice_stone": "Камень Льда",
       "effect.time_stop_effect": "Time Stop",
@@ -15766,6 +15793,7 @@
       "entity.power.tornado_entity": "Tornado",
       "advancements.super_charge.descr": "Create the first battery",
       "entity.power.pterodactyl": "Pterodactyl",
+      "item.power.mushrooms_battery": "Battery",
       "block.power.crystal_brown": "Crystal Brown",
       "item.power.ice_stone": "Ice Stone",
       "effect.time_stop_effect": "Time Stop",
