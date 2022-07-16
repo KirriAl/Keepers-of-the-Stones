@@ -50,7 +50,7 @@ public class WhirlpoolItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletwhirlpool").setRegistryName("entitybulletwhirlpool");
 
 	public WhirlpoolItem(PowerModElements instance) {
-		super(instance, 245);
+		super(instance, 248);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new WhirlpoolRenderer.ModelRegisterHandler());
 	}
 

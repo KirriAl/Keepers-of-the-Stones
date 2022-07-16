@@ -43,7 +43,7 @@ public class WoodMagicBoxBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public WoodMagicBoxBlock(PowerModElements instance) {
-		super(instance, 706);
+		super(instance, 708);
 	}
 
 	@Override

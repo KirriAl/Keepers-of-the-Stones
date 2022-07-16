@@ -25,7 +25,7 @@ public class LightningStrikeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LightningStrikeItem(PowerModElements instance) {
-		super(instance, 256);
+		super(instance, 259);
 	}
 
 	@Override

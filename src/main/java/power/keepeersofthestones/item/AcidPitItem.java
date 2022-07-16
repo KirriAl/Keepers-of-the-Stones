@@ -27,7 +27,7 @@ public class AcidPitItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AcidPitItem(PowerModElements instance) {
-		super(instance, 845);
+		super(instance, 847);
 	}
 
 	@Override

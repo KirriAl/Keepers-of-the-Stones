@@ -29,7 +29,7 @@ public class CultivationItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public CultivationItem(PowerModElements instance) {
-		super(instance, 280);
+		super(instance, 283);
 	}
 
 	@Override

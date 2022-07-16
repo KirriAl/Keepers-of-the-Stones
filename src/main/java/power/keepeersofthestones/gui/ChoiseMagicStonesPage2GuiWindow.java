@@ -106,6 +106,9 @@ public class ChoiseMagicStonesPage2GuiWindow extends ContainerScreen<ChoiseMagic
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/magnet_master.png"));
 		this.blit(ms, this.guiLeft + 208, this.guiTop + 141, 0, 0, 16, 16, 16, 16);
 
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/mushrooms_master.png"));
+		this.blit(ms, this.guiLeft + 307, this.guiTop + 33, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -235,7 +238,7 @@ public class ChoiseMagicStonesPage2GuiWindow extends ContainerScreen<ChoiseMagic
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 15, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 33, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 33, 56, 20, new StringTextComponent("Mushrooms"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2Gui.ButtonPressedMessage(16, x, y, z));
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 16, x, y, z);

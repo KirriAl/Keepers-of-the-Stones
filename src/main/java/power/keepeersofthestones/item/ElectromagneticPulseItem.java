@@ -48,7 +48,7 @@ public class ElectromagneticPulseItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletelectromagnetic_pulse").setRegistryName("entitybulletelectromagnetic_pulse");
 
 	public ElectromagneticPulseItem(PowerModElements instance) {
-		super(instance, 851);
+		super(instance, 853);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ElectromagneticPulseRenderer.ModelRegisterHandler());
 	}
 

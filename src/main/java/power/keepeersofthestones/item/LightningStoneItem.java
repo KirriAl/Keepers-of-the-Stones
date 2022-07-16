@@ -28,7 +28,7 @@ public class LightningStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LightningStoneItem(PowerModElements instance) {
-		super(instance, 14);
+		super(instance, 15);
 	}
 
 	@Override

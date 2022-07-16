@@ -27,7 +27,7 @@ public class ShadowInvisibleItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ShadowInvisibleItem(PowerModElements instance) {
-		super(instance, 343);
+		super(instance, 346);
 	}
 
 	@Override

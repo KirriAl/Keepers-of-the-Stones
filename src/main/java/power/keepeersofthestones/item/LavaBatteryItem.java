@@ -32,7 +32,7 @@ public class LavaBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LavaBatteryItem(PowerModElements instance) {
-		super(instance, 75);
+		super(instance, 77);
 	}
 
 	@Override

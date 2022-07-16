@@ -28,7 +28,7 @@ public class SunStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SunStoneItem(PowerModElements instance) {
-		super(instance, 30);
+		super(instance, 31);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class GalacticSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public GalacticSwordItem(PowerModElements instance) {
-		super(instance, 419);
+		super(instance, 422);
 	}
 
 	@Override

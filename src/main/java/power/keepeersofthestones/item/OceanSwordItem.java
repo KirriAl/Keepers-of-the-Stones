@@ -16,7 +16,7 @@ public class OceanSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public OceanSwordItem(PowerModElements instance) {
-		super(instance, 247);
+		super(instance, 250);
 	}
 
 	@Override

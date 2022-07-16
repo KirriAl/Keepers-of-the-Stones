@@ -27,7 +27,7 @@ public class IronGolemCreateItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public IronGolemCreateItem(PowerModElements instance) {
-		super(instance, 313);
+		super(instance, 316);
 	}
 
 	@Override

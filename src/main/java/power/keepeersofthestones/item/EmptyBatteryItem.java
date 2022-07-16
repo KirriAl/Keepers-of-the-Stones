@@ -24,7 +24,7 @@ public class EmptyBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public EmptyBatteryItem(PowerModElements instance) {
-		super(instance, 65);
+		super(instance, 67);
 	}
 
 	@Override

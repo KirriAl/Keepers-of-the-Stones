@@ -29,7 +29,7 @@ public class IceItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public IceItem(PowerModElements instance) {
-		super(instance, 248);
+		super(instance, 251);
 	}
 
 	@Override

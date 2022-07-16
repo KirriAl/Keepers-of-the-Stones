@@ -49,7 +49,7 @@ public class TornadoCreateItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybullettornado_create").setRegistryName("entitybullettornado_create");
 
 	public TornadoCreateItem(PowerModElements instance) {
-		super(instance, 234);
+		super(instance, 237);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TornadoCreateRenderer.ModelRegisterHandler());
 	}
 

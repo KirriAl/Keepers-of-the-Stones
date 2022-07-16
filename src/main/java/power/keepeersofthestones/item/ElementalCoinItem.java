@@ -17,7 +17,7 @@ public class ElementalCoinItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ElementalCoinItem(PowerModElements instance) {
-		super(instance, 44);
+		super(instance, 45);
 	}
 
 	@Override

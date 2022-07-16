@@ -16,7 +16,7 @@ public class TechnoPickaxeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TechnoPickaxeItem(PowerModElements instance) {
-		super(instance, 559);
+		super(instance, 562);
 	}
 
 	@Override

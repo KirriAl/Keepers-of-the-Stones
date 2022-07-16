@@ -27,7 +27,7 @@ public class AccelerationTimeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AccelerationTimeItem(PowerModElements instance) {
-		super(instance, 504);
+		super(instance, 507);
 	}
 
 	@Override

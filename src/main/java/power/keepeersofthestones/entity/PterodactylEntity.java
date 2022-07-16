@@ -53,7 +53,7 @@ public class PterodactylEntity extends PowerModElements.ModElement {
 			.build("pterodactyl").setRegistryName("pterodactyl");
 
 	public PterodactylEntity(PowerModElements instance) {
-		super(instance, 52);
+		super(instance, 54);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PterodactylRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

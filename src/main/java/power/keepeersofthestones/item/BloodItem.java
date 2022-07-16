@@ -29,7 +29,7 @@ public class BloodItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public BloodItem(PowerModElements instance) {
-		super(instance, 473);
+		super(instance, 476);
 	}
 
 	@Override

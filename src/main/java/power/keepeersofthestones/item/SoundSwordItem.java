@@ -16,7 +16,7 @@ public class SoundSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SoundSwordItem(PowerModElements instance) {
-		super(instance, 182);
+		super(instance, 185);
 	}
 
 	@Override

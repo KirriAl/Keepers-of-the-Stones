@@ -45,7 +45,7 @@ public class JurassicJungleBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public JurassicJungleBiome(PowerModElements instance) {
-		super(instance, 726);
+		super(instance, 728);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

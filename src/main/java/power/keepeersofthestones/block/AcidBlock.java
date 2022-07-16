@@ -46,7 +46,7 @@ public class AcidBlock extends PowerModElements.ModElement {
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 
 	public AcidBlock(PowerModElements instance) {
-		super(instance, 42);
+		super(instance, 43);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 	}
 

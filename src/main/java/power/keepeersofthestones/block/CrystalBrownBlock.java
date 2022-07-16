@@ -48,7 +48,7 @@ public class CrystalBrownBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public CrystalBrownBlock(PowerModElements instance) {
-		super(instance, 54);
+		super(instance, 56);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -113,7 +113,7 @@ public class CrystalBrownBlock extends PowerModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("power:deleted_mod_element")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("power:crystallized")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

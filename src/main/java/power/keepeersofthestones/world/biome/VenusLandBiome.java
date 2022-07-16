@@ -39,7 +39,7 @@ public class VenusLandBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public VenusLandBiome(PowerModElements instance) {
-		super(instance, 411);
+		super(instance, 414);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

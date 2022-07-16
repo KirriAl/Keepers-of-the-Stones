@@ -16,7 +16,7 @@ public class EnergyStaffItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public EnergyStaffItem(PowerModElements instance) {
-		super(instance, 257);
+		super(instance, 260);
 	}
 
 	@Override

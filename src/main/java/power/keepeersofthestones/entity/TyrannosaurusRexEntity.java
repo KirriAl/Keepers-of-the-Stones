@@ -49,7 +49,7 @@ public class TyrannosaurusRexEntity extends PowerModElements.ModElement {
 			.size(1.5f, 2.5f)).build("tyrannosaurus_rex").setRegistryName("tyrannosaurus_rex");
 
 	public TyrannosaurusRexEntity(PowerModElements instance) {
-		super(instance, 49);
+		super(instance, 51);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TyrannosaurusRexRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

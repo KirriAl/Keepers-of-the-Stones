@@ -27,7 +27,7 @@ public class FertilizerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public FertilizerItem(PowerModElements instance) {
-		super(instance, 279);
+		super(instance, 282);
 	}
 
 	@Override

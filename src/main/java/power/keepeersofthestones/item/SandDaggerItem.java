@@ -16,7 +16,7 @@ public class SandDaggerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SandDaggerItem(PowerModElements instance) {
-		super(instance, 797);
+		super(instance, 799);
 	}
 
 	@Override

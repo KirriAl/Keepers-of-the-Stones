@@ -25,7 +25,7 @@ public class FireSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public FireSwordItem(PowerModElements instance) {
-		super(instance, 258);
+		super(instance, 261);
 	}
 
 	@Override

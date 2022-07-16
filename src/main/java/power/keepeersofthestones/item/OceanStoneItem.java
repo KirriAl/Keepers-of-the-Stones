@@ -28,7 +28,7 @@ public class OceanStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public OceanStoneItem(PowerModElements instance) {
-		super(instance, 20);
+		super(instance, 21);
 	}
 
 	@Override

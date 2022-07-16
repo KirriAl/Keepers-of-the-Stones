@@ -49,7 +49,7 @@ public class BlackHeartItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletblack_heart").setRegistryName("entitybulletblack_heart");
 
 	public BlackHeartItem(PowerModElements instance) {
-		super(instance, 489);
+		super(instance, 492);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlackHeartRenderer.ModelRegisterHandler());
 	}
 

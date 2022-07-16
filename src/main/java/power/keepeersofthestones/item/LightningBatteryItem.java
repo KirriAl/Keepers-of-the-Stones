@@ -32,7 +32,7 @@ public class LightningBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LightningBatteryItem(PowerModElements instance) {
-		super(instance, 72);
+		super(instance, 74);
 	}
 
 	@Override

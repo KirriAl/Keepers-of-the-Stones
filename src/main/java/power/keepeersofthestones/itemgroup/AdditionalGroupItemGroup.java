@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @PowerModElements.ModElement.Tag
 public class AdditionalGroupItemGroup extends PowerModElements.ModElement {
 	public AdditionalGroupItemGroup(PowerModElements instance) {
-		super(instance, 519);
+		super(instance, 522);
 	}
 
 	@Override

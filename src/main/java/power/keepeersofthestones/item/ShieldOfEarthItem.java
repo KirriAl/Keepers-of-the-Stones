@@ -27,7 +27,7 @@ public class ShieldOfEarthItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ShieldOfEarthItem(PowerModElements instance) {
-		super(instance, 137);
+		super(instance, 140);
 	}
 
 	@Override

@@ -50,7 +50,7 @@ public class PortalBlastItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletportal_blast").setRegistryName("entitybulletportal_blast");
 
 	public PortalBlastItem(PowerModElements instance) {
-		super(instance, 605);
+		super(instance, 608);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PortalBlastRenderer.ModelRegisterHandler());
 	}
 

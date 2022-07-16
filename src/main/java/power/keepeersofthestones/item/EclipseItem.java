@@ -27,7 +27,7 @@ public class EclipseItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public EclipseItem(PowerModElements instance) {
-		super(instance, 386);
+		super(instance, 389);
 	}
 
 	@Override

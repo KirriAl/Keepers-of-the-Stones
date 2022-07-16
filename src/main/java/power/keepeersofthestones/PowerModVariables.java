@@ -204,6 +204,7 @@ public class PowerModVariables {
 		public boolean sand_stone = false;
 		public boolean speed_stone = false;
 		public boolean poison_stone = false;
+		public boolean mushrooms_stone = false;
 
 		public MapVariables() {
 			super(DATA_NAME);
@@ -233,6 +234,7 @@ public class PowerModVariables {
 			sand_stone = nbt.getBoolean("sand_stone");
 			speed_stone = nbt.getBoolean("speed_stone");
 			poison_stone = nbt.getBoolean("poison_stone");
+			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
 		}
 
 		@Override
@@ -255,6 +257,7 @@ public class PowerModVariables {
 			nbt.putBoolean("sand_stone", sand_stone);
 			nbt.putBoolean("speed_stone", speed_stone);
 			nbt.putBoolean("poison_stone", poison_stone);
+			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
 			return nbt;
 		}
 
@@ -388,7 +391,6 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet", instance.magnet);
 			nbt.putBoolean("mist", instance.mist);
 			nbt.putDouble("power_level", instance.power_level);
-			nbt.putBoolean("water_power", instance.water_power);
 			nbt.putBoolean("recharge_spell_mist", instance.recharge_spell_mist);
 			nbt.putBoolean("sand", instance.sand);
 			nbt.putBoolean("speed", instance.speed);
@@ -403,6 +405,7 @@ public class PowerModVariables {
 			nbt.putDouble("c3y", instance.c3y);
 			nbt.putDouble("c3z", instance.c3z);
 			nbt.putBoolean("poison", instance.poison);
+			nbt.putBoolean("mushrooms", instance.mushrooms);
 			return nbt;
 		}
 
@@ -453,7 +456,6 @@ public class PowerModVariables {
 			instance.magnet = nbt.getBoolean("magnet");
 			instance.mist = nbt.getBoolean("mist");
 			instance.power_level = nbt.getDouble("power_level");
-			instance.water_power = nbt.getBoolean("water_power");
 			instance.recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
 			instance.sand = nbt.getBoolean("sand");
 			instance.speed = nbt.getBoolean("speed");
@@ -468,6 +470,7 @@ public class PowerModVariables {
 			instance.c3y = nbt.getDouble("c3y");
 			instance.c3z = nbt.getDouble("c3z");
 			instance.poison = nbt.getBoolean("poison");
+			instance.mushrooms = nbt.getBoolean("mushrooms");
 		}
 	}
 
@@ -516,7 +519,6 @@ public class PowerModVariables {
 		public boolean magnet = false;
 		public boolean mist = false;
 		public double power_level = 1.0;
-		public boolean water_power = false;
 		public boolean recharge_spell_mist = false;
 		public boolean sand = false;
 		public boolean speed = false;
@@ -531,6 +533,7 @@ public class PowerModVariables {
 		public double c3y = 0;
 		public double c3z = 0;
 		public boolean poison = false;
+		public boolean mushrooms = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -602,7 +605,6 @@ public class PowerModVariables {
 		clone.magnet = original.magnet;
 		clone.mist = original.mist;
 		clone.power_level = original.power_level;
-		clone.water_power = original.water_power;
 		clone.sand = original.sand;
 		clone.speed = original.speed;
 		clone.c1x = original.c1x;
@@ -615,6 +617,7 @@ public class PowerModVariables {
 		clone.c3y = original.c3y;
 		clone.c3z = original.c3z;
 		clone.poison = original.poison;
+		clone.mushrooms = original.mushrooms;
 		if (!event.isWasDeath()) {
 			clone.active = original.active;
 			clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -693,7 +696,6 @@ public class PowerModVariables {
 					variables.magnet = message.data.magnet;
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
-					variables.water_power = message.data.water_power;
 					variables.recharge_spell_mist = message.data.recharge_spell_mist;
 					variables.sand = message.data.sand;
 					variables.speed = message.data.speed;
@@ -708,6 +710,7 @@ public class PowerModVariables {
 					variables.c3y = message.data.c3y;
 					variables.c3z = message.data.c3z;
 					variables.poison = message.data.poison;
+					variables.mushrooms = message.data.mushrooms;
 				}
 			});
 			context.setPacketHandled(true);

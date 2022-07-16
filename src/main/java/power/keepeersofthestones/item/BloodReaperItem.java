@@ -25,7 +25,7 @@ public class BloodReaperItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BloodReaperItem(PowerModElements instance) {
-		super(instance, 488);
+		super(instance, 491);
 	}
 
 	@Override

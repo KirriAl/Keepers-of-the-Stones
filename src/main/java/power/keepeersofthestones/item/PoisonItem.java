@@ -29,7 +29,7 @@ public class PoisonItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public PoisonItem(PowerModElements instance) {
-		super(instance, 834);
+		super(instance, 836);
 	}
 
 	@Override
