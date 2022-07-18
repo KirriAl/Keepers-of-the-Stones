@@ -27,7 +27,7 @@ public class EnergyShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public EnergyShieldItem(PowerModElements instance) {
-		super(instance, 165);
+		super(instance, 154);
 	}
 
 	@Override

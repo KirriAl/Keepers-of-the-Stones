@@ -25,7 +25,7 @@ public class BeeStingItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BeeStingItem(PowerModElements instance) {
-		super(instance, 307);
+		super(instance, 293);
 	}
 
 	@Override

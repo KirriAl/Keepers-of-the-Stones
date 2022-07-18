@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.gui;
 
+import power.keepeersofthestones.procedures.WithoutStoneVarProcedure;
 import power.keepeersofthestones.procedures.WaterGetProcedure;
 import power.keepeersofthestones.procedures.VacuumGetProcedure;
 import power.keepeersofthestones.procedures.TornadoGetProcedure;
@@ -57,7 +58,7 @@ public class ChoiseMagicStoneGUIGui extends PowerModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public ChoiseMagicStoneGUIGui(PowerModElements instance) {
-		super(instance, 444);
+		super(instance, 430);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -328,6 +329,11 @@ public class ChoiseMagicStoneGUIGui extends PowerModElements.ModElement {
 
 			SunGetProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 21) {
+
+			WithoutStoneVarProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 

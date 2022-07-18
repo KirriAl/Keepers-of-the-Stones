@@ -49,7 +49,7 @@ public class VacuumWebItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletvacuum_web").setRegistryName("entitybulletvacuum_web");
 
 	public VacuumWebItem(PowerModElements instance) {
-		super(instance, 376);
+		super(instance, 362);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new VacuumWebRenderer.ModelRegisterHandler());
 	}
 

@@ -16,7 +16,7 @@ public class AirBladeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AirBladeItem(PowerModElements instance) {
-		super(instance, 275);
+		super(instance, 262);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class VacuumStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public VacuumStoneItem(PowerModElements instance) {
-		super(instance, 12);
+		super(instance, 13);
 	}
 
 	@Override

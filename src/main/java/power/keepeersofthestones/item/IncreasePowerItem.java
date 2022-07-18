@@ -27,7 +27,7 @@ public class IncreasePowerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public IncreasePowerItem(PowerModElements instance) {
-		super(instance, 662);
+		super(instance, 647);
 	}
 
 	@Override

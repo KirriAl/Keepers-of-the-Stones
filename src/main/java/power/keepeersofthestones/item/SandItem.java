@@ -29,7 +29,7 @@ public class SandItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public SandItem(PowerModElements instance) {
-		super(instance, 848);
+		super(instance, 793);
 	}
 
 	@Override

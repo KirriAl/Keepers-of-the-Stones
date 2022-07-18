@@ -49,7 +49,7 @@ public class SunExplodeItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletsun_explode").setRegistryName("entitybulletsun_explode");
 
 	public SunExplodeItem(PowerModElements instance) {
-		super(instance, 385);
+		super(instance, 371);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SunExplodeRenderer.ModelRegisterHandler());
 	}
 

@@ -27,7 +27,7 @@ public class AmberShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AmberShieldItem(PowerModElements instance) {
-		super(instance, 753);
+		super(instance, 736);
 	}
 
 	@Override

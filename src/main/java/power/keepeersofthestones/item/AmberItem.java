@@ -29,7 +29,7 @@ public class AmberItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public AmberItem(PowerModElements instance) {
-		super(instance, 650);
+		super(instance, 635);
 	}
 
 	@Override

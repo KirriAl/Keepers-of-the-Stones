@@ -16,7 +16,7 @@ public class CutterSwordItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public CutterSwordItem(PowerModElements instance) {
-		super(instance, 664);
+		super(instance, 649);
 	}
 
 	@Override

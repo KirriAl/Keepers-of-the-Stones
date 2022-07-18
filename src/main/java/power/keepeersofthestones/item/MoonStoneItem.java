@@ -28,7 +28,7 @@ public class MoonStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MoonStoneItem(PowerModElements instance) {
-		super(instance, 27);
+		super(instance, 32);
 	}
 
 	@Override

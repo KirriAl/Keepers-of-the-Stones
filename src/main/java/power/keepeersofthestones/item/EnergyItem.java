@@ -29,7 +29,7 @@ public class EnergyItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public EnergyItem(PowerModElements instance) {
-		super(instance, 162);
+		super(instance, 151);
 	}
 
 	@Override

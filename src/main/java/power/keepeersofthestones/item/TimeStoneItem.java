@@ -28,7 +28,7 @@ public class TimeStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TimeStoneItem(PowerModElements instance) {
-		super(instance, 29);
+		super(instance, 34);
 	}
 
 	@Override

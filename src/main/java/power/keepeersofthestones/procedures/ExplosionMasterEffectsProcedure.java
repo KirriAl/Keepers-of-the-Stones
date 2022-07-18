@@ -1,7 +1,6 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.block.DetonatorTNTBlock;
-import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.potion.Effects;
@@ -38,10 +37,6 @@ public class ExplosionMasterEffectsProcedure {
 							"give @s power:detonator_tnt{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 			}
-		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).water_power) {
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, (int) 20, (int) 0, (false), (false)));
 		}
 	}
 }

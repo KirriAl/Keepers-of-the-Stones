@@ -62,7 +62,7 @@ public class TornadoEntityEntity extends PowerModElements.ModElement {
 			.size(0.6f, 1.8f)).build("tornado_entity").setRegistryName("tornado_entity");
 
 	public TornadoEntityEntity(PowerModElements instance) {
-		super(instance, 36);
+		super(instance, 42);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TornadoEntityRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
@@ -84,6 +84,7 @@ public class TornadoEntityEntity extends PowerModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 1000);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 4);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			event.put(entity, ammma.create());
 		}
 	}

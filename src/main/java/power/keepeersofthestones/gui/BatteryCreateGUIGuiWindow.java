@@ -59,6 +59,12 @@ public class BatteryCreateGUIGuiWindow extends ContainerScreen<BatteryCreateGUIG
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/acceleration_time.png"));
 		this.blit(ms, this.guiLeft + 78, this.guiTop + 34, 0, 0, 16, 16, 16, 16);
 
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/slot_for_stone.png"));
+		this.blit(ms, this.guiLeft + 24, this.guiTop + 35, 0, 0, 16, 16, 16, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/slot_for_battery.png"));
+		this.blit(ms, this.guiLeft + 52, this.guiTop + 35, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

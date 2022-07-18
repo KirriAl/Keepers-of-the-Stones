@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "biome",
   "definition": {
     "name": "Cretaceous Taiga",
@@ -66,7 +66,7 @@
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
     "treesPerChunk": 8,
-    "vanillaTreeType": "Mega pine trees",
+    "vanillaTreeType": "Mega spruce trees",
     "treeType": 0,
     "minHeight": 7,
     "treeStem": {

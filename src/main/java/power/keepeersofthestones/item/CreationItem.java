@@ -29,7 +29,7 @@ public class CreationItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public CreationItem(PowerModElements instance) {
-		super(instance, 478);
+		super(instance, 464);
 	}
 
 	@Override

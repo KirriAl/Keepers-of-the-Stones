@@ -49,7 +49,7 @@ public class IceSharpItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletice_sharp").setRegistryName("entitybulletice_sharp");
 
 	public IceSharpItem(PowerModElements instance) {
-		super(instance, 180);
+		super(instance, 169);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new IceSharpRenderer.ModelRegisterHandler());
 	}
 

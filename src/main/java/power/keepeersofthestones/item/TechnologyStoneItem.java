@@ -28,7 +28,7 @@ public class TechnologyStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TechnologyStoneItem(PowerModElements instance) {
-		super(instance, 7);
+		super(instance, 8);
 	}
 
 	@Override

@@ -93,25 +93,7 @@ public class QuicksandUseProcedure {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:stone");
-					}
-					if (world instanceof ServerWorld) {
-						((World) world).getServer().getCommandManager().handleCommand(
-								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:grass_block");
-					}
-					if (world instanceof ServerWorld) {
-						((World) world).getServer().getCommandManager().handleCommand(
-								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:dirt");
-					}
-					if (world instanceof ServerWorld) {
-						((World) world).getServer().getCommandManager().handleCommand(
-								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:sand");
+								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:quicksand_block[] replace minecraft:sand");
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
@@ -141,7 +123,7 @@ public class QuicksandUseProcedure {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:sand replace power:fake_sand");
+								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:sand replace power:quicksand_block");
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}

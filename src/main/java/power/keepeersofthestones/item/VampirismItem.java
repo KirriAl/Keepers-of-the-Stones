@@ -25,7 +25,7 @@ public class VampirismItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public VampirismItem(PowerModElements instance) {
-		super(instance, 504);
+		super(instance, 490);
 	}
 
 	@Override

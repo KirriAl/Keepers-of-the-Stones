@@ -202,6 +202,9 @@ public class PowerModVariables {
 		public boolean magnet_stone = false;
 		public boolean mist_stone = false;
 		public boolean sand_stone = false;
+		public boolean speed_stone = false;
+		public boolean poison_stone = false;
+		public boolean mushrooms_stone = false;
 
 		public MapVariables() {
 			super(DATA_NAME);
@@ -229,6 +232,9 @@ public class PowerModVariables {
 			magnet_stone = nbt.getBoolean("magnet_stone");
 			mist_stone = nbt.getBoolean("mist_stone");
 			sand_stone = nbt.getBoolean("sand_stone");
+			speed_stone = nbt.getBoolean("speed_stone");
+			poison_stone = nbt.getBoolean("poison_stone");
+			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
 		}
 
 		@Override
@@ -249,6 +255,9 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet_stone", magnet_stone);
 			nbt.putBoolean("mist_stone", mist_stone);
 			nbt.putBoolean("sand_stone", sand_stone);
+			nbt.putBoolean("speed_stone", speed_stone);
+			nbt.putBoolean("poison_stone", poison_stone);
+			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
 			return nbt;
 		}
 
@@ -382,9 +391,21 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet", instance.magnet);
 			nbt.putBoolean("mist", instance.mist);
 			nbt.putDouble("power_level", instance.power_level);
-			nbt.putBoolean("water_power", instance.water_power);
 			nbt.putBoolean("recharge_spell_mist", instance.recharge_spell_mist);
 			nbt.putBoolean("sand", instance.sand);
+			nbt.putBoolean("speed", instance.speed);
+			nbt.putBoolean("turbospeed", instance.turbospeed);
+			nbt.putDouble("c1x", instance.c1x);
+			nbt.putDouble("c1y", instance.c1y);
+			nbt.putDouble("c1z", instance.c1z);
+			nbt.putDouble("c2x", instance.c2x);
+			nbt.putDouble("c2y", instance.c2y);
+			nbt.putDouble("c2z", instance.c2z);
+			nbt.putDouble("c3x", instance.c3x);
+			nbt.putDouble("c3y", instance.c3y);
+			nbt.putDouble("c3z", instance.c3z);
+			nbt.putBoolean("poison", instance.poison);
+			nbt.putBoolean("mushrooms", instance.mushrooms);
 			return nbt;
 		}
 
@@ -435,9 +456,21 @@ public class PowerModVariables {
 			instance.magnet = nbt.getBoolean("magnet");
 			instance.mist = nbt.getBoolean("mist");
 			instance.power_level = nbt.getDouble("power_level");
-			instance.water_power = nbt.getBoolean("water_power");
 			instance.recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
 			instance.sand = nbt.getBoolean("sand");
+			instance.speed = nbt.getBoolean("speed");
+			instance.turbospeed = nbt.getBoolean("turbospeed");
+			instance.c1x = nbt.getDouble("c1x");
+			instance.c1y = nbt.getDouble("c1y");
+			instance.c1z = nbt.getDouble("c1z");
+			instance.c2x = nbt.getDouble("c2x");
+			instance.c2y = nbt.getDouble("c2y");
+			instance.c2z = nbt.getDouble("c2z");
+			instance.c3x = nbt.getDouble("c3x");
+			instance.c3y = nbt.getDouble("c3y");
+			instance.c3z = nbt.getDouble("c3z");
+			instance.poison = nbt.getBoolean("poison");
+			instance.mushrooms = nbt.getBoolean("mushrooms");
 		}
 	}
 
@@ -486,9 +519,21 @@ public class PowerModVariables {
 		public boolean magnet = false;
 		public boolean mist = false;
 		public double power_level = 1.0;
-		public boolean water_power = false;
 		public boolean recharge_spell_mist = false;
 		public boolean sand = false;
+		public boolean speed = false;
+		public boolean turbospeed = false;
+		public double c1x = 0;
+		public double c1y = 0;
+		public double c1z = 0;
+		public double c2x = 0;
+		public double c2y = 0;
+		public double c2z = 0;
+		public double c3x = 0;
+		public double c3y = 0;
+		public double c3z = 0;
+		public boolean poison = false;
+		public boolean mushrooms = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -560,8 +605,19 @@ public class PowerModVariables {
 		clone.magnet = original.magnet;
 		clone.mist = original.mist;
 		clone.power_level = original.power_level;
-		clone.water_power = original.water_power;
 		clone.sand = original.sand;
+		clone.speed = original.speed;
+		clone.c1x = original.c1x;
+		clone.c1y = original.c1y;
+		clone.c1z = original.c1z;
+		clone.c2x = original.c2x;
+		clone.c2y = original.c2y;
+		clone.c2z = original.c2z;
+		clone.c3x = original.c3x;
+		clone.c3y = original.c3y;
+		clone.c3z = original.c3z;
+		clone.poison = original.poison;
+		clone.mushrooms = original.mushrooms;
 		if (!event.isWasDeath()) {
 			clone.active = original.active;
 			clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -570,6 +626,7 @@ public class PowerModVariables {
 			clone.recharge_spell_energy = original.recharge_spell_energy;
 			clone.fog = original.fog;
 			clone.recharge_spell_mist = original.recharge_spell_mist;
+			clone.turbospeed = original.turbospeed;
 		}
 	}
 
@@ -639,9 +696,21 @@ public class PowerModVariables {
 					variables.magnet = message.data.magnet;
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
-					variables.water_power = message.data.water_power;
 					variables.recharge_spell_mist = message.data.recharge_spell_mist;
 					variables.sand = message.data.sand;
+					variables.speed = message.data.speed;
+					variables.turbospeed = message.data.turbospeed;
+					variables.c1x = message.data.c1x;
+					variables.c1y = message.data.c1y;
+					variables.c1z = message.data.c1z;
+					variables.c2x = message.data.c2x;
+					variables.c2y = message.data.c2y;
+					variables.c2z = message.data.c2z;
+					variables.c3x = message.data.c3x;
+					variables.c3y = message.data.c3y;
+					variables.c3z = message.data.c3z;
+					variables.poison = message.data.poison;
+					variables.mushrooms = message.data.mushrooms;
 				}
 			});
 			context.setPacketHandled(true);

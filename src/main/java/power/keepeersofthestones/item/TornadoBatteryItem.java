@@ -32,7 +32,7 @@ public class TornadoBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TornadoBatteryItem(PowerModElements instance) {
-		super(instance, 60);
+		super(instance, 79);
 	}
 
 	@Override

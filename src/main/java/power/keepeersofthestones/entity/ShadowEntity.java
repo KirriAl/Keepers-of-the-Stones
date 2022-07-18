@@ -60,7 +60,7 @@ public class ShadowEntity extends PowerModElements.ModElement {
 			.build("shadow").setRegistryName("shadow");
 
 	public ShadowEntity(PowerModElements instance) {
-		super(instance, 351);
+		super(instance, 337);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadowRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
@@ -82,6 +82,7 @@ public class ShadowEntity extends PowerModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 20);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 10);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
 			event.put(entity, ammma.create());
 		}

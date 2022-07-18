@@ -38,7 +38,7 @@ public class VacuumWebBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public VacuumWebBlockBlock(PowerModElements instance) {
-		super(instance, 374);
+		super(instance, 360);
 	}
 
 	@Override

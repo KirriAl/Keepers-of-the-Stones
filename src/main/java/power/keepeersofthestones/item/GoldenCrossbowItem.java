@@ -48,7 +48,7 @@ public class GoldenCrossbowItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletgolden_crossbow").setRegistryName("entitybulletgolden_crossbow");
 
 	public GoldenCrossbowItem(PowerModElements instance) {
-		super(instance, 646);
+		super(instance, 631);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new GoldenCrossbowRenderer.ModelRegisterHandler());
 	}
 

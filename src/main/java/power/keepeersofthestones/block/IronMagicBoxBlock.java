@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.block;
 
-import power.keepeersofthestones.itemgroup.MagicBoxesItemGroup;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -44,13 +43,13 @@ public class IronMagicBoxBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public IronMagicBoxBlock(PowerModElements instance) {
-		super(instance, 79);
+		super(instance, 712);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(MagicBoxesItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class TimeBladeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TimeBladeItem(PowerModElements instance) {
-		super(instance, 520);
+		super(instance, 506);
 	}
 
 	@Override

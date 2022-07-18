@@ -16,7 +16,7 @@ public class MistyFanItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MistyFanItem(PowerModElements instance) {
-		super(instance, 802);
+		super(instance, 780);
 	}
 
 	@Override

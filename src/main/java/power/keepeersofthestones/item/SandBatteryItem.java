@@ -32,7 +32,7 @@ public class SandBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SandBatteryItem(PowerModElements instance) {
-		super(instance, 849);
+		super(instance, 96);
 	}
 
 	@Override
