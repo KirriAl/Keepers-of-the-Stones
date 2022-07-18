@@ -103,7 +103,8 @@
     "spawnRuinedPortal": "NONE",
     "defaultFeatures": [
       "Caves",
-      "AmethystGeodes"
+      "AmethystGeodes",
+      "Ores"
     ],
     "spawnEntries": []
   }
