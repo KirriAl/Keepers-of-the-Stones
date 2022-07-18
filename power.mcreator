@@ -8086,10 +8086,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14507,6 +14503,23 @@
       "locked_code": false,
       "registry_name": "eb_mushrooms",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "TimeStopEffectTicks",
+      "type": "procedure",
+      "sortid": 872,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stop_effect_ticks",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time"
     }
   ],
   "variable_elements": [
@@ -16618,7 +16631,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.4.0.10",
+    "version": "2.4.1",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
@@ -16638,5 +16651,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200228416
+  "mcreatorVersion": 202200229111
 }
