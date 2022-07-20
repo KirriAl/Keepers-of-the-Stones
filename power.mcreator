@@ -14519,6 +14519,15 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_music_disc_trade"
+    },
+    {
+      "name": "MercuryBattery",
+      "type": "item",
+      "sortid": 874,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery",
+      "path": "~/ElementalBattery"
     }
   ],
   "variable_elements": [
@@ -15737,6 +15746,7 @@
       "item.power.tyrannosaurus_rex_spawn_egg": "Яйцо призыва тираннозавра рекса",
       "item.power.acid_pit": "Кислотная Яма",
       "item.power.misty_fan": "Туманный Веер",
+      "item.power.mercury_battery": "Battery",
       "advancements.power_up.descr": "Разблокируйте второй уровень",
       "item.power.plesiosaurus_spawn_egg": "Яйцо призыва плезиозавра",
       "item.power.speed_stone": "Камень Скорости",
@@ -16318,6 +16328,7 @@
       "item.power.tyrannosaurus_rex_spawn_egg": "Tyrannosaurus Rex Spawn Egg",
       "item.power.acid_pit": "Acid Pit",
       "item.power.misty_fan": "Misty Fan",
+      "item.power.mercury_battery": "Battery",
       "advancements.power_up.descr": "Unlock the second level",
       "item.power.plesiosaurus_spawn_egg": "Plesiosaurus Spawn Egg",
       "item.power.speed_stone": "Speed Stone",
@@ -16622,7 +16633,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.4.1",
+    "version": "2.5.0.1",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

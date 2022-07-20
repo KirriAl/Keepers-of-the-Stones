@@ -131,6 +131,7 @@ import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
 import power.keepeersofthestones.item.MetalBatteryItem;
 import power.keepeersofthestones.item.MercuryStoneItem;
+import power.keepeersofthestones.item.MercuryBatteryItem;
 import power.keepeersofthestones.item.MegawattItem;
 import power.keepeersofthestones.item.MagneticFishingRodItem;
 import power.keepeersofthestones.item.MagneticClawsItem;
@@ -664,6 +665,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BATON = REGISTRY.register("baton", () -> new BatonItem());
 	public static final RegistryObject<Item> SPORES = REGISTRY.register("spores", () -> new SporesItem());
 	public static final RegistryObject<Item> MUSHROOM_SATURATION = REGISTRY.register("mushroom_saturation", () -> new MushroomSaturationItem());
+	public static final RegistryObject<Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", () -> new MercuryBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
