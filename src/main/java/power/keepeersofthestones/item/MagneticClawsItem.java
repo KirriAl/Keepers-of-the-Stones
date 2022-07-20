@@ -7,7 +7,6 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.SwordItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
@@ -46,7 +45,7 @@ public class MagneticClawsItem extends PowerModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.1f, new Item.Properties().group(ItemGroup.TOOLS).isImmuneToFire()) {
+		}, 3, -2.1f, new Item.Properties().group(null).isImmuneToFire()) {
 		}.setRegistryName("magnetic_claws"));
 	}
 }

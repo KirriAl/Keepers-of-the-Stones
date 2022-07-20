@@ -93,6 +93,12 @@
       },
       {
         "value": "CUSTOM:PoisonBattery"
+      },
+      {
+        "value": "CUSTOM:MagnetBattery"
+      },
+      {
+        "value": "CUSTOM:MushroomsBattery"
       }
     ],
     "blocks": [],

@@ -12292,15 +12292,6 @@
       "path": "~/Mist"
     },
     {
-      "name": "JustAddWater",
-      "type": "achievement",
-      "sortid": 752,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "just_add_water",
-      "path": "~/Achievements"
-    },
-    {
       "name": "ResetSkillsAndLevels",
       "type": "procedure",
       "sortid": 753,
@@ -12525,6 +12516,36 @@
       "locked_code": false,
       "registry_name": "aether_stone",
       "path": "~/Aether"
+    },
+    {
+      "name": "CrystallizedLands",
+      "type": "biome",
+      "sortid": 767,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_lands",
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "Crystallized",
+      "type": "dimension",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized",
+      "metadata": {
+        "ep": true
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "CrystallizedCraft",
+      "type": "recipe",
+      "sortid": 768,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_craft",
+      "path": "~/Dimensions"
     },
     {
       "name": "DinoeraCraft",
@@ -14183,6 +14204,15 @@
       "path": "~/Dimensions/CrystalizedBlocks"
     },
     {
+      "name": "CrystallizedForest",
+      "type": "biome",
+      "sortid": 855,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_forest",
+      "path": "~/Dimensions"
+    },
+    {
       "name": "RechargeMushroomsStone",
       "type": "potioneffect",
       "sortid": 856,
@@ -14468,6 +14498,14 @@
       "locked_code": false,
       "registry_name": "eb_mushrooms",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "ElementalMusicDiscTrade",
+      "type": "villagertrade",
+      "sortid": 873,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_music_disc_trade"
     }
   ],
   "variable_elements": [
@@ -15165,10 +15203,10 @@
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.sun_battery": "Батарея",
+      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.spike": "Шип",
@@ -15190,8 +15228,8 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
       "effect.recharge_blood_stone": "Recharge",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Boomerang",
@@ -15207,8 +15245,8 @@
       "effect.power.mushrooms_master": "Мастер Грибов",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.potato.text": "Картофель",
       "power.cultivation.pumpkin.text": "Тыква",
+      "power.cultivation.potato.text": "Картофель",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -15217,8 +15255,8 @@
       "effect.recharge_greenery_stone": "Recharge",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Перезарядка",
-      "effect.power.ice_master": "Мастер Льда",
       "item.power.time_reversed": "Обращение Времени",
+      "effect.power.ice_master": "Мастер Льда",
       "effect.power.recharge_amber_stone": "Перезарядка",
       "item.power.piece_of_earth": "Кусок Земли",
       "block.power.moon_stones_block": "Блок Разрастающихся Лунных Камней",
@@ -15250,8 +15288,8 @@
       "effect.space_master": "Master of Space",
       "item.power.force_replication": "Репликация Силы",
       "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
-      "item.power.sound_imitate": "Звуковой Подражатель",
       "item.power.explosion_stone": "Камень Взрыва",
+      "item.power.sound_imitate": "Звуковой Подражатель",
       "power.space_atlas.label.text": "Космический Атлас",
       "power.cultivation.beetroot.text": "Свекла",
       "effect.sound_master": "Master of Sound",
@@ -15315,7 +15353,6 @@
       "fluid.power.quicksand_block": "Quicksand Block",
       "effect.blood_master": "Master of Blood",
       "item.power.water_helmet": "Водная Маска",
-      "advancements.just_add_water.title": "Просто Добавь Воды!",
       "item.power.cultivation": "Выращивание",
       "effect.amber_master": "Master of Amber",
       "power.cultivation.sugar_cane.text": "Тростник",
@@ -15469,6 +15506,7 @@
       "item.power.shadow_ball": "Теневой Шар",
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Мастер Огня",
+      "biome.power.crystallized_forest": "Кристаллизированный Лес",
       "block.power.crystal_light_blue": "Голубой Кристалл",
       "item.power.ocean_leggings": "Штаны Океана",
       "block.power.wood_magic_box": "Деревянная Волшебная Шкатулка",
@@ -15509,7 +15547,6 @@
       "effect.power.recharge_creation_stone": "Перезарядка",
       "effect.power.speed_master": "Мастер Скорости",
       "item.power.teleportation_helmet": "Шлем перемищения",
-      "advancements.just_add_water.descr": "Изучите способность воды",
       "effect.acceleration_time_effect": "Acceleration Time",
       "block.power.acid": "Acid",
       "effect.power.vacuum_master": "Мастер Пустоты",
@@ -15617,6 +15654,7 @@
       "item.power.sand_flurry": "Песчаный Шквал",
       "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Перезарядка",
+      "biome.power.crystallized_lands": "Кристаллизированные Земли",
       "item.power.mushrooms_boots": "Mushrooms Boots",
       "item.power.vampirism": "Вампиризм",
       "effect.power.recharge_time_stone": "Перезарядка",
@@ -15690,6 +15728,7 @@
       "item.power.mushrooms_stone": "Камень Грибов",
       "item.power.ocean_boots": "Ботинки Океана",
       "effect.power.moon_master": "Мастер Луны",
+      "item.power.crystallized": "Огниво Портала (Кристаллизованный Мир)",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
       "item.power.energy_stone": "Камень Энергии",
       "item.power.energy_absorption": "Поглощение Энергии",
@@ -15818,10 +15857,10 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
+      "item.power.energy_leggings": "Energy Leggings",
       "item.power.explode_leggings": "Explode Leggings",
+      "item.power.sun_battery": "Battery",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.spike": "Spike",
@@ -15843,8 +15882,8 @@
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
       "effect.recharge_blood_stone": "Recharge",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.boomerang": "Boomerang",
@@ -15860,8 +15899,8 @@
       "effect.power.mushrooms_master": "Master of Mushrooms",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.potato.text": "Potato",
       "power.cultivation.pumpkin.text": "Pumpkin",
+      "power.cultivation.potato.text": "Potato",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -15870,8 +15909,8 @@
       "effect.recharge_greenery_stone": "Recharge",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Recharge",
-      "item.power.time_reversed": "Time Reversed",
       "effect.power.ice_master": "Master of Ice",
+      "item.power.time_reversed": "Time Reversed",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
       "block.power.moon_stones_block": "Growing Moon Stones Block",
@@ -15901,10 +15940,10 @@
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
       "effect.space_master": "Master of Space",
-      "item.power.force_replication": "Force Replication",
       "power.building.label.text": "Select the structure you want to place",
-      "item.power.sound_imitate": "Sound Emitate",
+      "item.power.force_replication": "Force Replication",
       "item.power.explosion_stone": "Explosion Stone",
+      "item.power.sound_imitate": "Sound Emitate",
       "power.space_atlas.label.text": "Atlas of Space Travel",
       "power.cultivation.beetroot.text": "Beetroot",
       "effect.sound_master": "Master of Sound",
@@ -15968,7 +16007,6 @@
       "fluid.power.quicksand_block": "Quicksand Block",
       "effect.blood_master": "Master of Blood",
       "item.power.water_helmet": "Water Helmet",
-      "advancements.just_add_water.title": "Just Add Water!",
       "item.power.cultivation": "Cultivation",
       "effect.amber_master": "Master of Amber",
       "power.cultivation.sugar_cane.text": "Sugar Cane",
@@ -16123,6 +16161,7 @@
       "item.power.shadow_ball": "Shadow Ball",
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Master of Fire",
+      "biome.power.crystallized_forest": "Crystallized Forest",
       "block.power.crystal_light_blue": "Crystal Light Blue",
       "item.power.ocean_leggings": "Ocean Leggings",
       "block.power.wood_magic_box": "Wood Magic Box",
@@ -16163,7 +16202,6 @@
       "effect.power.recharge_creation_stone": "Recharge",
       "effect.power.speed_master": "Master of Speed",
       "item.power.teleportation_helmet": "Teleportation Helmet",
-      "advancements.just_add_water.descr": "Learn the water ability",
       "effect.acceleration_time_effect": "Acceleration Time",
       "block.power.acid": "Acid",
       "effect.power.vacuum_master": "Master of Vacuum",
@@ -16271,6 +16309,7 @@
       "item.power.sand_flurry": "Sand Flurry",
       "effect.creation_master": "Master of Creation",
       "effect.power.recharge_destruction_stone": "Recharge",
+      "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.mushrooms_boots": "Mushrooms Boots",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
@@ -16345,6 +16384,7 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
       "effect.power.moon_master": "Master of the Moon",
+      "item.power.crystallized": "Crystallized Portal Igniter",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
       "item.power.energy_absorption": "Energy Absorption",
@@ -16690,10 +16730,6 @@
         "children": []
       },
       {
-        "name": "Particles",
-        "children": []
-      },
-      {
         "name": "Tags",
         "children": []
       },
@@ -16723,7 +16759,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.4.0.10",
+    "version": "2.4.1",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
@@ -16743,5 +16779,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200228416
+  "mcreatorVersion": 202200229111
 }

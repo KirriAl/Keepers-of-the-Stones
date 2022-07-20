@@ -35,6 +35,7 @@ import power.keepeersofthestones.item.SunItem;
 import power.keepeersofthestones.item.SunExplodeItem;
 import power.keepeersofthestones.item.SunAxeItem;
 import power.keepeersofthestones.item.StormItem;
+import power.keepeersofthestones.item.SporesItem;
 import power.keepeersofthestones.item.SpikeItem;
 import power.keepeersofthestones.item.SpeedItem;
 import power.keepeersofthestones.item.SpawnItem;
@@ -73,6 +74,8 @@ import power.keepeersofthestones.item.PieceOfEarthItem;
 import power.keepeersofthestones.item.OceanSwordItem;
 import power.keepeersofthestones.item.OceanItem;
 import power.keepeersofthestones.item.ObscurityItem;
+import power.keepeersofthestones.item.MushroomsItem;
+import power.keepeersofthestones.item.MushroomSaturationItem;
 import power.keepeersofthestones.item.MoonWitherItem;
 import power.keepeersofthestones.item.MoonStonesItem;
 import power.keepeersofthestones.item.MoonAxeItem;
@@ -148,6 +151,7 @@ import power.keepeersofthestones.item.BloodItem;
 import power.keepeersofthestones.item.BlackHoleItem;
 import power.keepeersofthestones.item.BlackHeartItem;
 import power.keepeersofthestones.item.BeeStingItem;
+import power.keepeersofthestones.item.BatonItem;
 import power.keepeersofthestones.item.AnimalsItem;
 import power.keepeersofthestones.item.AmberStreaksItem;
 import power.keepeersofthestones.item.AmberShieldItem;
@@ -1574,6 +1578,41 @@ public class RemovalProhibitedItemsProcedure {
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(MagnetItem.boots);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(BatonItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SporesItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MushroomSaturationItem.block);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MushroomsItem.helmet);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MushroomsItem.body);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MushroomsItem.legs);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(MushroomsItem.boots);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
