@@ -44,6 +44,9 @@
     "spawnWorldTypes": [
       "Surface"
     ],
-    "restrictionBiomes": []
+    "restrictionBiomes": [],
+    "onEntityCollides": {
+      "name": "MercuryLiquidWaitingCrush"
+    }
   }
 }
