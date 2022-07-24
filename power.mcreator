@@ -16950,7 +16950,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.5.0.1",
+    "version": "2.5.0.2",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
@@ -16959,10 +16959,10 @@
     "serverSideOnly": true,
     "updateURL": "https://raw.githubusercontent.com/MagicalAlexey/Keepers-of-the-Stones/main/kos.json",
     "modPicture": "logo",
-    "requiredMods": [],
-    "dependencies": [
-      "vanillaml"
+    "requiredMods": [
+      "pehkui"
     ],
+    "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
