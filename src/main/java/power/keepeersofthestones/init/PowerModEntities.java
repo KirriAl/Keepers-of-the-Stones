@@ -29,6 +29,7 @@ import power.keepeersofthestones.entity.PlesiosaurusEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
 import power.keepeersofthestones.entity.PieceOfEarthEntity;
 import power.keepeersofthestones.entity.MoonStonesEntity;
+import power.keepeersofthestones.entity.MercuryBallEntity;
 import power.keepeersofthestones.entity.MegawattEntity;
 import power.keepeersofthestones.entity.MagicFireballEntity;
 import power.keepeersofthestones.entity.LavaBallEntity;
@@ -219,6 +220,9 @@ public class PowerModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<SporesEntity>> SPORES = register("projectile_spores",
 			EntityType.Builder.<SporesEntity>of(SporesEntity::new, MobCategory.MISC).setCustomClientFactory(SporesEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MercuryBallEntity>> MERCURY_BALL = register("projectile_mercury_ball",
+			EntityType.Builder.<MercuryBallEntity>of(MercuryBallEntity::new, MobCategory.MISC).setCustomClientFactory(MercuryBallEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

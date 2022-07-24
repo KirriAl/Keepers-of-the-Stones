@@ -1,27 +1,21 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.MercuryBatteryUseProcedure;
-import power.keepeersofthestones.init.PowerModTabs;
+import power.keepeersofthestones.procedures.MercuryPitUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.Component;
 
-import java.util.List;
-
-public class MercuryBatteryItem extends Item {
-	public MercuryBatteryItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_BATTERIES).stacksTo(1).rarity(Rarity.COMMON));
+public class MercuryPitItem extends Item {
+	public MercuryPitItem() {
+		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -40,12 +34,6 @@ public class MercuryBatteryItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("\u00A77Mercury"));
-	}
-
-	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		ItemStack itemstack = ar.getObject();
@@ -53,7 +41,7 @@ public class MercuryBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MercuryBatteryUseProcedure.execute(entity);
+		MercuryPitUseProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
 	}
 }

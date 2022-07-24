@@ -5,6 +5,7 @@
 package power.keepeersofthestones.init;
 
 import power.keepeersofthestones.fluid.QuicksandBlockFluid;
+import power.keepeersofthestones.fluid.MercuryLiquidFluid;
 import power.keepeersofthestones.fluid.AcidFluid;
 import power.keepeersofthestones.PowerMod;
 
@@ -27,6 +28,9 @@ public class PowerModFluids {
 	public static final RegistryObject<Fluid> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockFluid.Source());
 	public static final RegistryObject<Fluid> FLOWING_QUICKSAND_BLOCK = REGISTRY.register("flowing_quicksand_block",
 			() -> new QuicksandBlockFluid.Flowing());
+	public static final RegistryObject<Fluid> MERCURY_LIQUID = REGISTRY.register("mercury_liquid", () -> new MercuryLiquidFluid.Source());
+	public static final RegistryObject<Fluid> FLOWING_MERCURY_LIQUID = REGISTRY.register("flowing_mercury_liquid",
+			() -> new MercuryLiquidFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -36,6 +40,8 @@ public class PowerModFluids {
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_ACID.get(), renderType -> renderType == RenderType.translucent());
 			ItemBlockRenderTypes.setRenderLayer(QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_QUICKSAND_BLOCK.get(), renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(MERCURY_LIQUID.get(), renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_MERCURY_LIQUID.get(), renderType -> renderType == RenderType.translucent());
 		}
 	}
 }

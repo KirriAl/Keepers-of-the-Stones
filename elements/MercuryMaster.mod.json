@@ -12,6 +12,15 @@
     "isBad": false,
     "isBenefitical": true,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": false
+    "renderStatusInHUD": false,
+    "onStarted": {
+      "name": "MercuryMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "MercuryMasterEffects"
+    },
+    "onExpired": {
+      "name": "MercuryMasterEffectEnd"
+    }
   }
 }

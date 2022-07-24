@@ -14,6 +14,7 @@ import power.keepeersofthestones.block.QuicksandBlockBlock;
 import power.keepeersofthestones.block.OrangePortalBlock;
 import power.keepeersofthestones.block.OblivionPortalBlock;
 import power.keepeersofthestones.block.MoonStonesBlockBlock;
+import power.keepeersofthestones.block.MercuryLiquidBlock;
 import power.keepeersofthestones.block.IronMagicBoxBlock;
 import power.keepeersofthestones.block.GoldMagicBoxBlock;
 import power.keepeersofthestones.block.EnergyBlockBlock;
@@ -89,6 +90,7 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> GOLD_MAGIC_BOX = REGISTRY.register("gold_magic_box", () -> new GoldMagicBoxBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	public static final RegistryObject<Block> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockBlock());
+	public static final RegistryObject<Block> MERCURY_LIQUID = REGISTRY.register("mercury_liquid", () -> new MercuryLiquidBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

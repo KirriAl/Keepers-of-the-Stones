@@ -16,6 +16,7 @@ import power.keepeersofthestones.world.features.ores.CrystalGreenFeature;
 import power.keepeersofthestones.world.features.ores.CrystalGrayFeature;
 import power.keepeersofthestones.world.features.ores.CrystalBrownFeature;
 import power.keepeersofthestones.world.features.ores.CrystalBlueFeature;
+import power.keepeersofthestones.world.features.lakes.MercuryLiquidFeature;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -65,6 +66,8 @@ public class PowerModFeatures {
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalVioletFeature.GENERATE_BIOMES, CrystalVioletFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> CRYSTAL_YELLOW = register("crystal_yellow", CrystalYellowFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalYellowFeature.GENERATE_BIOMES, CrystalYellowFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> MERCURY_LIQUID = register("mercury_liquid", MercuryLiquidFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.LAKES, MercuryLiquidFeature.GENERATE_BIOMES, MercuryLiquidFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

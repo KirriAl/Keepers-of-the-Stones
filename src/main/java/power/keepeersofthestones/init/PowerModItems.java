@@ -130,8 +130,12 @@ import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
 import power.keepeersofthestones.item.MetalBatteryItem;
+import power.keepeersofthestones.item.MercurySwordItem;
 import power.keepeersofthestones.item.MercuryStoneItem;
+import power.keepeersofthestones.item.MercuryPitItem;
+import power.keepeersofthestones.item.MercuryItem;
 import power.keepeersofthestones.item.MercuryBatteryItem;
+import power.keepeersofthestones.item.MercuryBallItem;
 import power.keepeersofthestones.item.MegawattItem;
 import power.keepeersofthestones.item.MagneticFishingRodItem;
 import power.keepeersofthestones.item.MagneticClawsItem;
@@ -666,6 +670,13 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPORES = REGISTRY.register("spores", () -> new SporesItem());
 	public static final RegistryObject<Item> MUSHROOM_SATURATION = REGISTRY.register("mushroom_saturation", () -> new MushroomSaturationItem());
 	public static final RegistryObject<Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", () -> new MercuryBatteryItem());
+	public static final RegistryObject<Item> MERCURY_HELMET = REGISTRY.register("mercury_helmet", () -> new MercuryItem.Helmet());
+	public static final RegistryObject<Item> MERCURY_CHESTPLATE = REGISTRY.register("mercury_chestplate", () -> new MercuryItem.Chestplate());
+	public static final RegistryObject<Item> MERCURY_LEGGINGS = REGISTRY.register("mercury_leggings", () -> new MercuryItem.Leggings());
+	public static final RegistryObject<Item> MERCURY_BOOTS = REGISTRY.register("mercury_boots", () -> new MercuryItem.Boots());
+	public static final RegistryObject<Item> MERCURY_SWORD = REGISTRY.register("mercury_sword", () -> new MercurySwordItem());
+	public static final RegistryObject<Item> MERCURY_BALL = REGISTRY.register("mercury_ball", () -> new MercuryBallItem());
+	public static final RegistryObject<Item> MERCURY_PIT = REGISTRY.register("mercury_pit", () -> new MercuryPitItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
