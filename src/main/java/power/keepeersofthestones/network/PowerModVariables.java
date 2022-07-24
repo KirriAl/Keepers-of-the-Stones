@@ -130,6 +130,7 @@ public class PowerModVariables {
 			clone.c3z = original.c3z;
 			clone.poison = original.poison;
 			clone.mushrooms = original.mushrooms;
+			clone.mercury = original.mercury;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -169,6 +170,40 @@ public class PowerModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
+
+		public static WorldVariables load(CompoundTag tag) {
+			WorldVariables data = new WorldVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level level && !level.isClientSide())
+				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
+		}
+
+		static WorldVariables clientSide = new WorldVariables();
+
+		public static WorldVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevel level) {
+				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class MapVariables extends SavedData {
+		public static final String DATA_NAME = "power_mapvars";
 		public boolean fire_stone = false;
 		public boolean air_stone = false;
 		public boolean water_stone = false;
@@ -194,10 +229,30 @@ public class PowerModVariables {
 		public boolean destruction_stone = false;
 		public boolean space_stone = false;
 		public boolean blood_stone = false;
+		public boolean technology_stone = false;
 		public boolean time_stone = false;
+		public boolean teleportation_stone = false;
+		public boolean blue_portal = false;
+		public boolean orange_portal = false;
+		public double bposx = 0;
+		public double bposy = 0;
+		public double bposz = 0;
+		public double oposx = 0;
+		public double oposy = 0;
+		public double oposz = 0;
+		public boolean explosion_stone = false;
+		public boolean amber_stone = false;
+		public boolean cosmos_stone = false;
+		public boolean magnet_stone = false;
+		public boolean mist_stone = false;
+		public boolean sand_stone = false;
+		public boolean speed_stone = false;
+		public boolean poison_stone = false;
+		public boolean mushrooms_stone = false;
+		public boolean mercury_stone = false;
 
-		public static WorldVariables load(CompoundTag tag) {
-			WorldVariables data = new WorldVariables();
+		public static MapVariables load(CompoundTag tag) {
+			MapVariables data = new MapVariables();
 			data.read(tag);
 			return data;
 		}
@@ -228,7 +283,27 @@ public class PowerModVariables {
 			destruction_stone = nbt.getBoolean("destruction_stone");
 			space_stone = nbt.getBoolean("space_stone");
 			blood_stone = nbt.getBoolean("blood_stone");
+			technology_stone = nbt.getBoolean("technology_stone");
 			time_stone = nbt.getBoolean("time_stone");
+			teleportation_stone = nbt.getBoolean("teleportation_stone");
+			blue_portal = nbt.getBoolean("blue_portal");
+			orange_portal = nbt.getBoolean("orange_portal");
+			bposx = nbt.getDouble("bposx");
+			bposy = nbt.getDouble("bposy");
+			bposz = nbt.getDouble("bposz");
+			oposx = nbt.getDouble("oposx");
+			oposy = nbt.getDouble("oposy");
+			oposz = nbt.getDouble("oposz");
+			explosion_stone = nbt.getBoolean("explosion_stone");
+			amber_stone = nbt.getBoolean("amber_stone");
+			cosmos_stone = nbt.getBoolean("cosmos_stone");
+			magnet_stone = nbt.getBoolean("magnet_stone");
+			mist_stone = nbt.getBoolean("mist_stone");
+			sand_stone = nbt.getBoolean("sand_stone");
+			speed_stone = nbt.getBoolean("speed_stone");
+			poison_stone = nbt.getBoolean("poison_stone");
+			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
+			mercury_stone = nbt.getBoolean("mercury_stone");
 		}
 
 		@Override
@@ -258,80 +333,8 @@ public class PowerModVariables {
 			nbt.putBoolean("destruction_stone", destruction_stone);
 			nbt.putBoolean("space_stone", space_stone);
 			nbt.putBoolean("blood_stone", blood_stone);
-			nbt.putBoolean("time_stone", time_stone);
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level level && !level.isClientSide())
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
-		}
-
-		static WorldVariables clientSide = new WorldVariables();
-
-		public static WorldVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class MapVariables extends SavedData {
-		public static final String DATA_NAME = "power_mapvars";
-		public boolean technology_stone = false;
-		public boolean teleportation_stone = false;
-		public boolean blue_portal = false;
-		public boolean orange_portal = false;
-		public double bposx = 0;
-		public double bposy = 0;
-		public double bposz = 0;
-		public double oposx = 0;
-		public double oposy = 0;
-		public double oposz = 0;
-		public boolean explosion_stone = false;
-		public boolean amber_stone = false;
-		public boolean cosmos_stone = false;
-		public boolean magnet_stone = false;
-		public boolean mist_stone = false;
-		public boolean sand_stone = false;
-		public boolean speed_stone = false;
-		public boolean poison_stone = false;
-		public boolean mushrooms_stone = false;
-
-		public static MapVariables load(CompoundTag tag) {
-			MapVariables data = new MapVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-			technology_stone = nbt.getBoolean("technology_stone");
-			teleportation_stone = nbt.getBoolean("teleportation_stone");
-			blue_portal = nbt.getBoolean("blue_portal");
-			orange_portal = nbt.getBoolean("orange_portal");
-			bposx = nbt.getDouble("bposx");
-			bposy = nbt.getDouble("bposy");
-			bposz = nbt.getDouble("bposz");
-			oposx = nbt.getDouble("oposx");
-			oposy = nbt.getDouble("oposy");
-			oposz = nbt.getDouble("oposz");
-			explosion_stone = nbt.getBoolean("explosion_stone");
-			amber_stone = nbt.getBoolean("amber_stone");
-			cosmos_stone = nbt.getBoolean("cosmos_stone");
-			magnet_stone = nbt.getBoolean("magnet_stone");
-			mist_stone = nbt.getBoolean("mist_stone");
-			sand_stone = nbt.getBoolean("sand_stone");
-			speed_stone = nbt.getBoolean("speed_stone");
-			poison_stone = nbt.getBoolean("poison_stone");
-			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("technology_stone", technology_stone);
+			nbt.putBoolean("time_stone", time_stone);
 			nbt.putBoolean("teleportation_stone", teleportation_stone);
 			nbt.putBoolean("blue_portal", blue_portal);
 			nbt.putBoolean("orange_portal", orange_portal);
@@ -350,6 +353,7 @@ public class PowerModVariables {
 			nbt.putBoolean("speed_stone", speed_stone);
 			nbt.putBoolean("poison_stone", poison_stone);
 			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
+			nbt.putBoolean("mercury_stone", mercury_stone);
 			return nbt;
 		}
 
@@ -498,6 +502,7 @@ public class PowerModVariables {
 		public double c3z = 0;
 		public boolean poison = false;
 		public boolean mushrooms = false;
+		public boolean mercury = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -565,6 +570,7 @@ public class PowerModVariables {
 			nbt.putDouble("c3z", c3z);
 			nbt.putBoolean("poison", poison);
 			nbt.putBoolean("mushrooms", mushrooms);
+			nbt.putBoolean("mercury", mercury);
 			return nbt;
 		}
 
@@ -629,6 +635,7 @@ public class PowerModVariables {
 			c3z = nbt.getDouble("c3z");
 			poison = nbt.getBoolean("poison");
 			mushrooms = nbt.getBoolean("mushrooms");
+			mercury = nbt.getBoolean("mercury");
 		}
 	}
 
@@ -713,6 +720,7 @@ public class PowerModVariables {
 					variables.c3z = message.data.c3z;
 					variables.poison = message.data.poison;
 					variables.mushrooms = message.data.mushrooms;
+					variables.mercury = message.data.mercury;
 				}
 			});
 			context.setPacketHandled(true);

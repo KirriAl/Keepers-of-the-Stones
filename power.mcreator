@@ -8086,6 +8086,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -14496,23 +14500,6 @@
       "path": "~/ElementalBook"
     },
     {
-      "name": "TimeStopEffectTicks",
-      "type": "procedure",
-      "sortid": 872,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "time_stop_effect_ticks",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Time"
-    },
-    {
       "name": "ElementalMusicDiscTrade",
       "type": "villagertrade",
       "sortid": 873,
@@ -14528,6 +14515,79 @@
       "locked_code": false,
       "registry_name": "mercury_battery",
       "path": "~/ElementalBattery"
+    },
+    {
+      "name": "RechargeMercuryStone",
+      "type": "potioneffect",
+      "sortid": 875,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_mercury_stone",
+      "path": "~/Mercury"
+    },
+    {
+      "name": "MercuryMaster",
+      "type": "potioneffect",
+      "sortid": 876,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_master",
+      "path": "~/Mercury"
+    },
+    {
+      "name": "MercuryStoneUse",
+      "type": "procedure",
+      "sortid": 877,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mercury"
+    },
+    {
+      "name": "MercuryBatteryUse",
+      "type": "procedure",
+      "sortid": 878,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "MercuryGet",
+      "type": "procedure",
+      "sortid": 879,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
     }
   ],
   "variable_elements": [
@@ -14684,7 +14744,7 @@
     {
       "name": "fire_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
@@ -14696,139 +14756,139 @@
     {
       "name": "air_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "water_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "earth_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "energy_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "ice_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "lightning_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "sound_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "crystal_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "lava_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "rain_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "tornado_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "ocean_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "greenery_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "animals_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "metal_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "light_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "shadow_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "vacuum_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "sun_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "moon_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "creation_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "destruction_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "space_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
@@ -14840,7 +14900,7 @@
     {
       "name": "blood_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
@@ -14864,7 +14924,7 @@
     {
       "name": "time_stone",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
@@ -15154,6 +15214,18 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "mercury",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "mercury_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -15299,6 +15371,7 @@
       "effect.power.greenery_master": "Мастер Зелени",
       "power.cultivation.spruce.text": "Ель",
       "power.cultivation.wheat.text": "Пшеница",
+      "effect.power.recharge_mercury_stone": "Recharge",
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
@@ -15792,6 +15865,7 @@
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
       "item.power.amber_shield": "Янтарный Щит",
+      "effect.power.mercury_master": "Master of Mercury",
       "item.power.vacuum_spiral": "Вакуумная Спираль",
       "item.power.magnet_chestplate": "Magnet Chestplate",
       "effect.power.time_master_effect": "Мастер Времени",
@@ -15879,13 +15953,14 @@
       "effect.power.greenery_master": "Master of Greenery",
       "power.cultivation.spruce.text": "Spruce",
       "power.cultivation.wheat.text": "Wheat",
+      "effect.power.recharge_mercury_stone": "Recharge",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
       "power.building.label.text": "Select the structure you want to place",
       "item.power.force_replication": "Force Replication",
-      "item.power.explosion_stone": "Explosion Stone",
       "item.power.sound_imitate": "Sound Emitate",
+      "item.power.explosion_stone": "Explosion Stone",
       "power.space_atlas.label.text": "Atlas of Space Travel",
       "power.cultivation.beetroot.text": "Beetroot",
       "item.power.earth_helmet": "Earth Helmet",
@@ -16374,6 +16449,7 @@
       "effect.power.metal_master": "Master of Metal",
       "effect.power.recharge_metal_stone": "Recharge",
       "item.power.amber_shield": "Amber Shield",
+      "effect.power.mercury_master": "Master of Mercury",
       "item.power.vacuum_spiral": "Vacuum Spiral",
       "item.power.magnet_chestplate": "Magnet Chestplate",
       "effect.power.time_master_effect": "Master of Time",

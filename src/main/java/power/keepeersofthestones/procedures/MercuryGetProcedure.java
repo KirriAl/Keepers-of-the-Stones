@@ -17,18 +17,18 @@ import net.minecraft.advancements.Advancement;
 
 import java.util.Iterator;
 
-public class BloodGetProcedure {
+public class MercuryGetProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
-			if (!PowerModVariables.MapVariables.get(world).blood_stone) {
+			if (!PowerModVariables.MapVariables.get(world).mercury_stone) {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.BLOOD_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get());
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-				PowerModVariables.MapVariables.get(world).blood_stone = true;
+				PowerModVariables.MapVariables.get(world).mercury_stone = true;
 				PowerModVariables.MapVariables.get(world).syncData(world);
 				{
 					boolean _setval = true;

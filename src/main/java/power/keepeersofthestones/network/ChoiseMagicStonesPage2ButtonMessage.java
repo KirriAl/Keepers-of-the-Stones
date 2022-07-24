@@ -13,6 +13,7 @@ import power.keepeersofthestones.procedures.PoisonGetProcedure;
 import power.keepeersofthestones.procedures.NextToPage3Procedure;
 import power.keepeersofthestones.procedures.MoonGetProcedure;
 import power.keepeersofthestones.procedures.MistGetProcedure;
+import power.keepeersofthestones.procedures.MercuryGetProcedure;
 import power.keepeersofthestones.procedures.MagnetGetProcedure;
 import power.keepeersofthestones.procedures.ExplosionGetProcedure;
 import power.keepeersofthestones.procedures.DestructionGetProcedure;
@@ -141,6 +142,10 @@ public class ChoiseMagicStonesPage2ButtonMessage {
 		if (buttonID == 15) {
 
 			MagnetGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 17) {
+
+			MercuryGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 21) {
 

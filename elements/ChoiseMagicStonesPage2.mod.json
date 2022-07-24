@@ -331,10 +331,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mercury",
+          "onClick": {
+            "name": "MercuryGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mercury",
           "x": 339,
           "y": 80
         }
@@ -497,6 +500,16 @@
           "name": "mushrooms_master.png",
           "x": 321,
           "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mercury_master.png",
+          "use1Xscale": false,
+          "name": "mercury_master.png",
+          "x": 321,
+          "y": 80
         }
       }
     ],
