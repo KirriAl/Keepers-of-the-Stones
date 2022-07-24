@@ -1,5 +1,7 @@
 package power.keepeersofthestones.procedures;
 
+import power.keepeersofthestones.network.PowerModVariables;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,8 +37,11 @@ public class MercuryLiquidWaitingCrushProcedure {
 			}
 
 			private void run() {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1, (false), (false)));
+				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).mercury) {
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1, (false), (false)));
+				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, 200);

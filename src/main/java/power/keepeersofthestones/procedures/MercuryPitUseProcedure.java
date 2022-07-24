@@ -50,25 +50,10 @@ public class MercuryPitUseProcedure {
 
 				private void run() {
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:mercury_liquid replace minecraft:stone");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:mercury_liquid replace minecraft:grass_block");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:mercury_liquid replace minecraft:dirt");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:mercury_liquid replace minecraft:sand");
+						_level.getServer().getCommands()
+								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
+										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+										"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:mercury_liquid");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 3);
@@ -97,7 +82,7 @@ public class MercuryPitUseProcedure {
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:air replace minecraft:mercury_liquid");
+								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:air replace power:mercury_liquid");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 400);
