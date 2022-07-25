@@ -131,6 +131,7 @@ public class PowerModVariables {
 			clone.poison = original.poison;
 			clone.mushrooms = original.mushrooms;
 			clone.mercury = original.mercury;
+			clone.music = original.music;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -250,6 +251,7 @@ public class PowerModVariables {
 		public boolean poison_stone = false;
 		public boolean mushrooms_stone = false;
 		public boolean mercury_stone = false;
+		public boolean music_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -304,6 +306,7 @@ public class PowerModVariables {
 			poison_stone = nbt.getBoolean("poison_stone");
 			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
 			mercury_stone = nbt.getBoolean("mercury_stone");
+			music_stone = nbt.getBoolean("music_stone");
 		}
 
 		@Override
@@ -354,6 +357,7 @@ public class PowerModVariables {
 			nbt.putBoolean("poison_stone", poison_stone);
 			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
 			nbt.putBoolean("mercury_stone", mercury_stone);
+			nbt.putBoolean("music_stone", music_stone);
 			return nbt;
 		}
 
@@ -503,6 +507,7 @@ public class PowerModVariables {
 		public boolean poison = false;
 		public boolean mushrooms = false;
 		public boolean mercury = false;
+		public boolean music = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -571,6 +576,7 @@ public class PowerModVariables {
 			nbt.putBoolean("poison", poison);
 			nbt.putBoolean("mushrooms", mushrooms);
 			nbt.putBoolean("mercury", mercury);
+			nbt.putBoolean("music", music);
 			return nbt;
 		}
 
@@ -636,6 +642,7 @@ public class PowerModVariables {
 			poison = nbt.getBoolean("poison");
 			mushrooms = nbt.getBoolean("mushrooms");
 			mercury = nbt.getBoolean("mercury");
+			music = nbt.getBoolean("music");
 		}
 	}
 
@@ -721,6 +728,7 @@ public class PowerModVariables {
 					variables.poison = message.data.poison;
 					variables.mushrooms = message.data.mushrooms;
 					variables.mercury = message.data.mercury;
+					variables.music = message.data.music;
 				}
 			});
 			context.setPacketHandled(true);

@@ -345,10 +345,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Music",
+          "onClick": {
+            "name": "MusicGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Music",
           "x": 339,
           "y": 107
         }
@@ -510,6 +513,16 @@
           "name": "mercury_master.png",
           "x": 321,
           "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "music_master.png",
+          "use1Xscale": false,
+          "name": "music_master.png",
+          "x": 321,
+          "y": 107
         }
       }
     ],

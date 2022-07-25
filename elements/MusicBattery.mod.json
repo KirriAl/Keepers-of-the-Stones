@@ -3,38 +3,40 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "music_stone",
+    "texture": "battery",
     "customModelName": "Normal",
-    "name": "Music Stone",
+    "name": "Battery",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:AdditionalGroup"
+      "value": "CUSTOM:Batteries"
     },
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 0.0,
-    "damageCount": 10,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": true,
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "§5Music"
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "MusicStoneUse"
+      "name": "MistBatteryUse"
     },
     "isFood": false,
-    "nutritionalValue": 4,
-    "saturation": 0.3,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
     "eatResultItem": {
       "value": ""
     },

@@ -113,6 +113,8 @@ import power.keepeersofthestones.item.OceanBatteryItem;
 import power.keepeersofthestones.item.ObscurityItem;
 import power.keepeersofthestones.item.OblivionItem;
 import power.keepeersofthestones.item.MusicStoneItem;
+import power.keepeersofthestones.item.MusicItem;
+import power.keepeersofthestones.item.MusicBatteryItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MushroomsItem;
 import power.keepeersofthestones.item.MushroomsBatteryItem;
@@ -677,6 +679,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MERCURY_SWORD = REGISTRY.register("mercury_sword", () -> new MercurySwordItem());
 	public static final RegistryObject<Item> MERCURY_BALL = REGISTRY.register("mercury_ball", () -> new MercuryBallItem());
 	public static final RegistryObject<Item> MERCURY_PIT = REGISTRY.register("mercury_pit", () -> new MercuryPitItem());
+	public static final RegistryObject<Item> MUSIC_HELMET = REGISTRY.register("music_helmet", () -> new MusicItem.Helmet());
+	public static final RegistryObject<Item> MUSIC_CHESTPLATE = REGISTRY.register("music_chestplate", () -> new MusicItem.Chestplate());
+	public static final RegistryObject<Item> MUSIC_LEGGINGS = REGISTRY.register("music_leggings", () -> new MusicItem.Leggings());
+	public static final RegistryObject<Item> MUSIC_BOOTS = REGISTRY.register("music_boots", () -> new MusicItem.Boots());
+	public static final RegistryObject<Item> MUSIC_BATTERY = REGISTRY.register("music_battery", () -> new MusicBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
