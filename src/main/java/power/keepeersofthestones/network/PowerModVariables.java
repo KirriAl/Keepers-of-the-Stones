@@ -132,6 +132,7 @@ public class PowerModVariables {
 			clone.mushrooms = original.mushrooms;
 			clone.mercury = original.mercury;
 			clone.music = original.music;
+			clone.keeper = original.keeper;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -508,6 +509,7 @@ public class PowerModVariables {
 		public boolean mushrooms = false;
 		public boolean mercury = false;
 		public boolean music = false;
+		public boolean keeper = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -577,6 +579,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mushrooms", mushrooms);
 			nbt.putBoolean("mercury", mercury);
 			nbt.putBoolean("music", music);
+			nbt.putBoolean("keeper", keeper);
 			return nbt;
 		}
 
@@ -643,6 +646,7 @@ public class PowerModVariables {
 			mushrooms = nbt.getBoolean("mushrooms");
 			mercury = nbt.getBoolean("mercury");
 			music = nbt.getBoolean("music");
+			keeper = nbt.getBoolean("keeper");
 		}
 	}
 
@@ -729,6 +733,7 @@ public class PowerModVariables {
 					variables.mushrooms = message.data.mushrooms;
 					variables.mercury = message.data.mercury;
 					variables.music = message.data.music;
+					variables.keeper = message.data.keeper;
 				}
 			});
 			context.setPacketHandled(true);

@@ -14993,6 +14993,81 @@
         ]
       },
       "path": "~/ElementalBattery"
+    },
+    {
+      "name": "AppointKeeper",
+      "type": "procedure",
+      "sortid": 901,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "appoint_keeper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "DemoteKeeper",
+      "type": "procedure",
+      "sortid": 902,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demote_keeper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ChooseStone",
+      "type": "procedure",
+      "sortid": 903,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choose_stone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "Choosestone",
+      "type": "command",
+      "sortid": 903,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choosestone"
     }
   ],
   "variable_elements": [
@@ -15642,6 +15717,12 @@
       "name": "music_stone",
       "type": "logic",
       "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "keeper",
+      "type": "logic",
+      "scope": "player_persistent",
       "value": "false"
     }
   ],
@@ -17164,7 +17245,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.5.0.2",
+    "version": "2.5.0.2607202201",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
