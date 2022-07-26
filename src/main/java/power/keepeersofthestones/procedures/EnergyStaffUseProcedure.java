@@ -79,6 +79,22 @@ public class EnergyStaffUseProcedure {
 						_entity.removeEffect(PowerModMobEffects.EXPLOSION_MASTER.get());
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(PowerModMobEffects.AMBER_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.MIST_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.SAND_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.SPEED_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.POISON_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.MAGNET_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.MUSHROOMS_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.MERCURY_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.MUSIC_MASTER.get());
 					if (sourceentity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.ENERGY_MASTER.get(), 24000, 0, (false), (false)));
 					if (sourceentity instanceof LivingEntity _entity)
@@ -88,7 +104,7 @@ public class EnergyStaffUseProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
-					if (entity instanceof Player _player) {
+					if (sourceentity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_ABSORPTION.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
