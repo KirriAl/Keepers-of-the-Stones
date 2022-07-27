@@ -45,6 +45,7 @@ import power.keepeersofthestones.item.TechnobarrierItem;
 import power.keepeersofthestones.item.TechnoPickaxeItem;
 import power.keepeersofthestones.item.TamerItem;
 import power.keepeersofthestones.item.SupersonicDaggerItem;
+import power.keepeersofthestones.item.SunnyKingdomItem;
 import power.keepeersofthestones.item.SunStoneItem;
 import power.keepeersofthestones.item.SunRegenerationItem;
 import power.keepeersofthestones.item.SunRayItem;
@@ -684,6 +685,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSIC_LEGGINGS = REGISTRY.register("music_leggings", () -> new MusicItem.Leggings());
 	public static final RegistryObject<Item> MUSIC_BOOTS = REGISTRY.register("music_boots", () -> new MusicItem.Boots());
 	public static final RegistryObject<Item> MUSIC_BATTERY = REGISTRY.register("music_battery", () -> new MusicBatteryItem());
+	public static final RegistryObject<Item> SUNNY_KINGDOM = REGISTRY.register("sunny_kingdom", () -> new SunnyKingdomItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
