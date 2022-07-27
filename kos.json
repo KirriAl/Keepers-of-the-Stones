@@ -1,8 +1,8 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
   "promos": {
-    "1.16.5-latest": "2.4.1",
-    "1.16.5-recommended": "2.4.1",
+    "1.16.5-latest": "2.4.2",
+    "1.16.5-recommended": "2.4.2",
     "1.17.1-latest": "1.4.1",
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
@@ -150,6 +150,12 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Now ore appears in the crystallized world
 - Musical record elements can now be bought from a traveling merchant
 - [Bugfix] Minor bugs fixed
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.2": "
+- [Bugfix] Fixed a bug with a mushroom stone, after using the battery
+- [Bugfix] Fixed a bug that caused the mushroom stone to not return after death
+- [Bugfix] Fixed an energy absorption bug that didn't work on new elements starting with mist
+- [Bugfix] Fixed a bug that made it impossible to select a mushroom stone
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   },
   "1.17.1": {
