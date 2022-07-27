@@ -14,6 +14,7 @@ import power.keepeersofthestones.potion.RechargeSandStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeRainStonePotionEffect;
 import power.keepeersofthestones.potion.RechargePoisonStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeOceanStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeMushroomsStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMoonStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMistStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMetalStonePotionEffect;
@@ -49,6 +50,7 @@ import power.keepeersofthestones.item.SandStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
+import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
 import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MetalStoneItem;
@@ -680,6 +682,24 @@ public class RespawnPlayerProcedure {
 						((LivingEntity) entity)
 								.addPotionEffect(new EffectInstance(RechargePoisonStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).mushrooms) {
+					{
+						boolean _setval = (false);
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.mushrooms = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _setstack = new ItemStack(MushroomsStoneItem.block);
+						_setstack.setCount((int) 1);
+						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+					}
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).addPotionEffect(
+								new EffectInstance(RechargeMushroomsStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).battery) {
 				{
@@ -903,6 +923,13 @@ public class RespawnPlayerProcedure {
 					boolean _setval = (false);
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.magnet = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.mushrooms = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
