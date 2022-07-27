@@ -5,12 +5,18 @@ import power.keepeersofthestones.potion.TornadoMasterPotionEffect;
 import power.keepeersofthestones.potion.TeleportationMasterPotionEffect;
 import power.keepeersofthestones.potion.TechnologyMasterPotionEffect;
 import power.keepeersofthestones.potion.SunMasterPotionEffect;
+import power.keepeersofthestones.potion.SpeedMasterPotionEffect;
 import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
+import power.keepeersofthestones.potion.SandMasterPotionEffect;
 import power.keepeersofthestones.potion.RechargeEnergyStonePotionEffect;
 import power.keepeersofthestones.potion.RainMasterPotionEffect;
+import power.keepeersofthestones.potion.PoisonMasterPotionEffect;
 import power.keepeersofthestones.potion.OceanMasterPotionEffect;
+import power.keepeersofthestones.potion.MushroomsMasterPotionEffect;
 import power.keepeersofthestones.potion.MoonMasterPotionEffect;
+import power.keepeersofthestones.potion.MistMasterPotionEffect;
 import power.keepeersofthestones.potion.MetalMasterPotionEffect;
+import power.keepeersofthestones.potion.MagnetMasterPotionEffect;
 import power.keepeersofthestones.potion.LightningMasterPotionEffect;
 import power.keepeersofthestones.potion.LightMasterPotionEffect;
 import power.keepeersofthestones.potion.LavaMasterPotionEffect;
@@ -157,6 +163,24 @@ public class EnergyStaffUseProcedure {
 					if (entity instanceof LivingEntity) {
 						((LivingEntity) entity).removePotionEffect(AmberMasterPotionEffect.potion);
 					}
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).removePotionEffect(MistMasterPotionEffect.potion);
+					}
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).removePotionEffect(SandMasterPotionEffect.potion);
+					}
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).removePotionEffect(SpeedMasterPotionEffect.potion);
+					}
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).removePotionEffect(PoisonMasterPotionEffect.potion);
+					}
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).removePotionEffect(MagnetMasterPotionEffect.potion);
+					}
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).removePotionEffect(MushroomsMasterPotionEffect.potion);
+					}
 					if (sourceentity instanceof LivingEntity)
 						((LivingEntity) sourceentity)
 								.addPotionEffect(new EffectInstance(EnergyMasterPotionEffect.potion, (int) 24000, (int) 0, (false), (false)));
@@ -168,10 +192,10 @@ public class EnergyStaffUseProcedure {
 						((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) sourceentity).container.func_234641_j_());
 					}
-					if (entity instanceof PlayerEntity) {
+					if (sourceentity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(EnergyAbsorptionItem.block);
 						_setstack.setCount((int) 1);
-						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
 					}
 				}
 				{

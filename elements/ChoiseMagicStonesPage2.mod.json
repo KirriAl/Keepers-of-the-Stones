@@ -321,6 +321,9 @@
         "type": "button",
         "data": {
           "text": "Mushrooms",
+          "onClick": {
+            "name": "MushroomsGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Mushrooms",

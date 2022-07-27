@@ -10,6 +10,7 @@ import power.keepeersofthestones.procedures.SandGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPageGUIChoiceStonesProcedure;
 import power.keepeersofthestones.procedures.PoisonGetProcedure;
 import power.keepeersofthestones.procedures.NextToPage3Procedure;
+import power.keepeersofthestones.procedures.MushroomsGetProcedure;
 import power.keepeersofthestones.procedures.MoonGetProcedure;
 import power.keepeersofthestones.procedures.MistGetProcedure;
 import power.keepeersofthestones.procedures.MagnetGetProcedure;
@@ -295,6 +296,12 @@ public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
 		if (buttonID == 15) {
 
 			MagnetGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 16) {
+
+			MushroomsGetProcedure
 					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
