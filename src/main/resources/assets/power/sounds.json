@@ -73,5 +73,14 @@
         "stream": false
       }
     ]
+  },
+  "music.dino_thunder": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:power_rangers_-_dino_thunder_clean_hq",
+        "stream": true
+      }
+    ]
   }
 }

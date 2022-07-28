@@ -15267,6 +15267,48 @@
         ]
       },
       "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusic3",
+      "type": "procedure",
+      "sortid": 915,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "EBMusic",
+      "type": "gui",
+      "sortid": 916,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eb_music",
+      "path": "~/ElementalBook"
     }
   ],
   "variable_elements": [
@@ -15989,6 +16031,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "music.dino_thunder",
+      "files": [
+        "power_rangers_-_dino_thunder_clean_hq"
+      ],
+      "category": "record",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -16000,7 +16050,7 @@
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
-      "item.power.disco_ball": "Disco Ball",
+      "item.power.disco_ball": "Диско-шар",
       "item.power.spike": "Шип",
       "item.power.explosive_flow": "Взрывной Поток",
       "effect.power.recharge_water_stone": "Перезарядка",
@@ -16263,7 +16313,7 @@
       "item.power.vacuum_helmet": "Ваакумный шлем",
       "effect.power.recharge_light_stone": "Перезарядка",
       "item.power.kunai": "Кунаи",
-      "item.power.music_player": "Music Player",
+      "item.power.music_player": "Музыкальный Плеер",
       "subtitles.stone_deactivation": "Камень был деактивирован",
       "item.power.whirlpool": "Водоворот",
       "entity.power.glow": "Светляк",
@@ -16537,6 +16587,7 @@
       "item.power.tyrannosaurus_rex_spawn_egg": "Яйцо призыва тираннозавра рекса",
       "item.power.acid_pit": "Кислотная Яма",
       "item.power.misty_fan": "Туманный Веер",
+      "subtitles.music.dino_thunder": "",
       "item.power.mercury_battery": "Батарея",
       "advancements.power_up.descr": "Разблокируйте второй уровень",
       "item.power.plesiosaurus_spawn_egg": "Яйцо призыва плезиозавра",
@@ -16598,10 +16649,10 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
+      "item.power.energy_leggings": "Energy Leggings",
       "item.power.explode_leggings": "Explode Leggings",
+      "item.power.sun_battery": "Battery",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.disco_ball": "Disco Ball",
@@ -16615,16 +16666,16 @@
       "block.power.detonator_tnt": "Detonator TNT",
       "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
@@ -16641,8 +16692,8 @@
       "effect.power.mushrooms_master": "Master of Mushrooms",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.potato.text": "Potato",
       "power.cultivation.pumpkin.text": "Pumpkin",
+      "power.cultivation.potato.text": "Potato",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -16650,8 +16701,8 @@
       "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Recharge",
-      "item.power.time_reversed": "Time Reversed",
       "effect.power.ice_master": "Master of Ice",
+      "item.power.time_reversed": "Time Reversed",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
       "block.power.moon_stones_block": "Growing Moon Stones Block",
@@ -16661,17 +16712,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.energy_chestplate": "Energy Chestplate",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.space_leggings": "Space Leggings",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.energy_chestplate": "Energy Chestplate",
       "power.cultivation.birch.text": "Birch",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
-      "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.speed_chestplate": "Speed Chestplate",
+      "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.light_helmet": "Light Helmet",
       "item.power.moon": "Moon Portal Igniter",
+      "item.power.light_helmet": "Light Helmet",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "item.power.music_battery": "Battery",
@@ -17143,6 +17194,7 @@
       "item.power.tyrannosaurus_rex_spawn_egg": "Tyrannosaurus Rex Spawn Egg",
       "item.power.acid_pit": "Acid Pit",
       "item.power.misty_fan": "Misty Fan",
+      "subtitles.music.dino_thunder": "",
       "item.power.mercury_battery": "Battery",
       "advancements.power_up.descr": "Unlock the second level",
       "item.power.plesiosaurus_spawn_egg": "Plesiosaurus Spawn Egg",
@@ -17459,7 +17511,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.5.0.3",
+    "version": "2.5.0.280722",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

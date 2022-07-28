@@ -28,6 +28,7 @@ public class PowerModSounds {
 				new SoundEvent(new ResourceLocation("power", "tyrannosaurus_rex.dead")));
 		REGISTRY.put(new ResourceLocation("power", "raptor.dead"), new SoundEvent(new ResourceLocation("power", "raptor.dead")));
 		REGISTRY.put(new ResourceLocation("power", "raptor.hurt"), new SoundEvent(new ResourceLocation("power", "raptor.hurt")));
+		REGISTRY.put(new ResourceLocation("power", "music.dino_thunder"), new SoundEvent(new ResourceLocation("power", "music.dino_thunder")));
 	}
 
 	@SubscribeEvent
