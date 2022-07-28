@@ -16,7 +16,7 @@ public class StopSoundProcedure {
 			return;
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
-					new TextComponent(""), _level.getServer(), null).withSuppressedOutput(), "stopsound @e");
+					new TextComponent(""), _level.getServer(), null).withSuppressedOutput(), "stopsound @a");
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 	}
