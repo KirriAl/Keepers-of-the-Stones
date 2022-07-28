@@ -15108,6 +15108,132 @@
       "locked_code": false,
       "registry_name": "musical_axe",
       "path": "~/Music"
+    },
+    {
+      "name": "DiscoBall",
+      "type": "rangeditem",
+      "sortid": 909,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disco_ball",
+      "path": "~/Music"
+    },
+    {
+      "name": "MusicPlayer",
+      "type": "item",
+      "sortid": 910,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_player",
+      "path": "~/Music"
+    },
+    {
+      "name": "PlayMusic1",
+      "type": "procedure",
+      "sortid": 911,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusic2",
+      "type": "procedure",
+      "sortid": 912,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "MusicPlayerGUI",
+      "type": "gui",
+      "sortid": 911,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_player_gui",
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "OpenMusicPlayerGUI",
+      "type": "procedure",
+      "sortid": 913,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_music_player_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
     }
   ],
   "variable_elements": [
@@ -15835,12 +15961,13 @@
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.moon_battery": "Батарея",
       "item.power.energy_leggings": "Энергетические Поножи",
-      "item.power.sun_battery": "Батарея",
+      "item.power.moon_battery": "Батарея",
       "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
+      "item.power.disco_ball": "Disco Ball",
       "item.power.spike": "Шип",
       "item.power.explosive_flow": "Взрывной Поток",
       "effect.power.recharge_water_stone": "Перезарядка",
@@ -15851,16 +15978,16 @@
       "item.power.cutter_sword": "Куттер-Меч",
       "biome.power.triassic_plains": "Триассовые Равнины",
       "effect.power.recharge_moon_stone": "Перезарядка",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
@@ -15877,8 +16004,8 @@
       "effect.power.mushrooms_master": "Мастер Грибов",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.pumpkin.text": "Тыква",
       "power.cultivation.potato.text": "Картофель",
+      "power.cultivation.pumpkin.text": "Тыква",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -15886,8 +16013,8 @@
       "item.power.tamer": "Приручатель",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Перезарядка",
-      "item.power.time_reversed": "Обращение Времени",
       "effect.power.ice_master": "Мастер Льда",
+      "item.power.time_reversed": "Обращение Времени",
       "effect.power.recharge_amber_stone": "Перезарядка",
       "item.power.piece_of_earth": "Кусок Земли",
       "block.power.moon_stones_block": "Блок Разрастающихся Лунных Камней",
@@ -15897,17 +16024,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.space_leggings": "Космические штаны",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.energy_chestplate": "Энергетическая Кираса",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.space_leggings": "Космические штаны",
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
-      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.shadow_invisible": "Теневая Невидимость",
+      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Камень Эфира",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Шлем солнца",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Штаны времени",
       "effect.power.greenery_master": "Мастер Зелени",
       "item.power.music_battery": "Батарея",
@@ -16103,6 +16230,7 @@
       "item.power.vacuum_helmet": "Ваакумный шлем",
       "effect.power.recharge_light_stone": "Перезарядка",
       "item.power.kunai": "Кунаи",
+      "item.power.music_player": "Music Player",
       "subtitles.stone_deactivation": "Камень был деактивирован",
       "item.power.whirlpool": "Водоворот",
       "entity.power.glow": "Светляк",
@@ -16437,12 +16565,13 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.moon_battery": "Battery",
       "item.power.energy_leggings": "Energy Leggings",
-      "item.power.explode_leggings": "Explode Leggings",
+      "item.power.moon_battery": "Battery",
       "item.power.sun_battery": "Battery",
+      "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
+      "item.power.disco_ball": "Disco Ball",
       "item.power.spike": "Spike",
       "item.power.explosive_flow": "Explosive Flow",
       "effect.power.recharge_water_stone": "Recharge",
@@ -16453,16 +16582,16 @@
       "block.power.detonator_tnt": "Detonator TNT",
       "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
-      "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
@@ -16479,8 +16608,8 @@
       "effect.power.mushrooms_master": "Master of Mushrooms",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.pumpkin.text": "Pumpkin",
       "power.cultivation.potato.text": "Potato",
+      "power.cultivation.pumpkin.text": "Pumpkin",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -16488,8 +16617,8 @@
       "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Recharge",
-      "effect.power.ice_master": "Master of Ice",
       "item.power.time_reversed": "Time Reversed",
+      "effect.power.ice_master": "Master of Ice",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
       "block.power.moon_stones_block": "Growing Moon Stones Block",
@@ -16499,17 +16628,17 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.space_leggings": "Space Leggings",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.energy_chestplate": "Energy Chestplate",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.space_leggings": "Space Leggings",
       "power.cultivation.birch.text": "Birch",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
-      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.shadow_invisible": "Shadow Invisible",
+      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "item.power.music_battery": "Battery",
@@ -16706,6 +16835,7 @@
       "item.power.vacuum_helmet": "Vacuum Helmet",
       "effect.power.recharge_light_stone": "Recharge",
       "item.power.kunai": "Kunai",
+      "item.power.music_player": "Music Player",
       "subtitles.stone_deactivation": "Stone been deactivation",
       "item.power.whirlpool": "Whirlpool",
       "entity.power.glow": "Glow",
@@ -17280,7 +17410,12 @@
       },
       {
         "name": "Music",
-        "children": []
+        "children": [
+          {
+            "name": "MusicSoundtracks",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Form",

@@ -9,6 +9,7 @@ import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
+import power.keepeersofthestones.world.inventory.MusicPlayerGUIMenu;
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
 import power.keepeersofthestones.world.inventory.EBWaterMenu;
 import power.keepeersofthestones.world.inventory.EBVacuumMenu;
@@ -146,6 +147,8 @@ public class PowerModMenus {
 	public static final MenuType<EBMushroomsMenu> EB_MUSHROOMS = register("eb_mushrooms",
 			(id, inv, extraData) -> new EBMushroomsMenu(id, inv, extraData));
 	public static final MenuType<EBMercuryMenu> EB_MERCURY = register("eb_mercury", (id, inv, extraData) -> new EBMercuryMenu(id, inv, extraData));
+	public static final MenuType<MusicPlayerGUIMenu> MUSIC_PLAYER_GUI = register("music_player_gui",
+			(id, inv, extraData) -> new MusicPlayerGUIMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

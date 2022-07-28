@@ -46,7 +46,7 @@ public class MusicMasterEffectEndProcedure {
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.MAGIC_FIREBALL.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.DISCO_BALL.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
@@ -75,14 +75,14 @@ public class MusicMasterEffectEndProcedure {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_FIRE_STONE.get(), 3600, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MUSIC_STONE.get(), 3600, 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).power_level == 3) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_FIRE_STONE.get(), 2400, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MUSIC_STONE.get(), 2400, 0, (false), (false)));
 				} else {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_FIRE_STONE.get(), 6000, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MUSIC_STONE.get(), 6000, 0, (false), (false)));
 				}
 			}
 		}

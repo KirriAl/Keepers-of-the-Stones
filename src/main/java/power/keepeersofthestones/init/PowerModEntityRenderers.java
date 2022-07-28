@@ -73,5 +73,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.ELECTROMAGNETIC_PULSE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPORES.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MERCURY_BALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.DISCO_BALL.get(), ThrownItemRenderer::new);
 	}
 }

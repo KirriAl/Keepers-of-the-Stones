@@ -43,6 +43,7 @@ import power.keepeersofthestones.entity.FlashLightEntity;
 import power.keepeersofthestones.entity.ExplosiveFlowEntity;
 import power.keepeersofthestones.entity.EnergySphereEntity;
 import power.keepeersofthestones.entity.ElectromagneticPulseEntity;
+import power.keepeersofthestones.entity.DiscoBallEntity;
 import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
 import power.keepeersofthestones.entity.BoomerangEntity;
@@ -223,6 +224,9 @@ public class PowerModEntities {
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<MercuryBallEntity>> MERCURY_BALL = register("projectile_mercury_ball",
 			EntityType.Builder.<MercuryBallEntity>of(MercuryBallEntity::new, MobCategory.MISC).setCustomClientFactory(MercuryBallEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DiscoBallEntity>> DISCO_BALL = register("projectile_disco_ball",
+			EntityType.Builder.<DiscoBallEntity>of(DiscoBallEntity::new, MobCategory.MISC).setCustomClientFactory(DiscoBallEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

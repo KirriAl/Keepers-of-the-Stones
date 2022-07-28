@@ -115,6 +115,7 @@ import power.keepeersofthestones.item.ObscurityItem;
 import power.keepeersofthestones.item.OblivionItem;
 import power.keepeersofthestones.item.MusicalAxeItem;
 import power.keepeersofthestones.item.MusicStoneItem;
+import power.keepeersofthestones.item.MusicPlayerItem;
 import power.keepeersofthestones.item.MusicItem;
 import power.keepeersofthestones.item.MusicBatteryItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
@@ -210,6 +211,7 @@ import power.keepeersofthestones.item.EclipseItem;
 import power.keepeersofthestones.item.EarthStoneItem;
 import power.keepeersofthestones.item.EarthItem;
 import power.keepeersofthestones.item.EarthBatteryItem;
+import power.keepeersofthestones.item.DiscoBallItem;
 import power.keepeersofthestones.item.DinoeraItem;
 import power.keepeersofthestones.item.DestructionStoneItem;
 import power.keepeersofthestones.item.DestructionSphereItem;
@@ -688,6 +690,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSIC_LEGGINGS = REGISTRY.register("music_leggings", () -> new MusicItem.Leggings());
 	public static final RegistryObject<Item> MUSIC_BOOTS = REGISTRY.register("music_boots", () -> new MusicItem.Boots());
 	public static final RegistryObject<Item> MUSICAL_AXE = REGISTRY.register("musical_axe", () -> new MusicalAxeItem());
+	public static final RegistryObject<Item> DISCO_BALL = REGISTRY.register("disco_ball", () -> new DiscoBallItem());
+	public static final RegistryObject<Item> MUSIC_PLAYER = REGISTRY.register("music_player", () -> new MusicPlayerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
