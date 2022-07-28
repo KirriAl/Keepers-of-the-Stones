@@ -113,6 +113,7 @@ import power.keepeersofthestones.item.OceanItem;
 import power.keepeersofthestones.item.OceanBatteryItem;
 import power.keepeersofthestones.item.ObscurityItem;
 import power.keepeersofthestones.item.OblivionItem;
+import power.keepeersofthestones.item.MusicalAxeItem;
 import power.keepeersofthestones.item.MusicStoneItem;
 import power.keepeersofthestones.item.MusicItem;
 import power.keepeersofthestones.item.MusicBatteryItem;
@@ -686,6 +687,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSIC_CHESTPLATE = REGISTRY.register("music_chestplate", () -> new MusicItem.Chestplate());
 	public static final RegistryObject<Item> MUSIC_LEGGINGS = REGISTRY.register("music_leggings", () -> new MusicItem.Leggings());
 	public static final RegistryObject<Item> MUSIC_BOOTS = REGISTRY.register("music_boots", () -> new MusicItem.Boots());
+	public static final RegistryObject<Item> MUSICAL_AXE = REGISTRY.register("musical_axe", () -> new MusicalAxeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
