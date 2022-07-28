@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.MistBatteryUseProcedure;
+import power.keepeersofthestones.procedures.MusicBatteryUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -53,7 +53,7 @@ public class MusicBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MistBatteryUseProcedure.execute(entity);
+		MusicBatteryUseProcedure.execute(entity);
 		return ar;
 	}
 }
