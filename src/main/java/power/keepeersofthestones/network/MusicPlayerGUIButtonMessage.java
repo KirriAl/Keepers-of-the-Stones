@@ -3,6 +3,7 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.MusicPlayerGUIMenu;
 import power.keepeersofthestones.procedures.StopSoundProcedure;
+import power.keepeersofthestones.procedures.PlayMusic3Procedure;
 import power.keepeersofthestones.procedures.PlayMusic2Procedure;
 import power.keepeersofthestones.procedures.PlayMusic1Procedure;
 import power.keepeersofthestones.PowerMod;
@@ -75,6 +76,10 @@ public class MusicPlayerGUIButtonMessage {
 		if (buttonID == 2) {
 
 			PlayMusic2Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 3) {
+
+			PlayMusic3Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

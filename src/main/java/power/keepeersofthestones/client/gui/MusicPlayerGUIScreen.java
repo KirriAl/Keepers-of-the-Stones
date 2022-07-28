@@ -104,6 +104,10 @@ public class MusicPlayerGUIScreen extends AbstractContainerScreen<MusicPlayerGUI
 			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 95, this.topPos + 34, 30, 20, new TextComponent("3"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(3, x, y, z));
+				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 34, 30, 20, new TextComponent("4"), e -> {
 		}));
