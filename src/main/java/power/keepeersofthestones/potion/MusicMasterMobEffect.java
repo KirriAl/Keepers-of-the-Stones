@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.potion;
 
+import power.keepeersofthestones.procedures.MusicMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.MusicMasterEffectStartProcedure;
 import power.keepeersofthestones.procedures.MusicMasterEffectEndProcedure;
 
@@ -22,6 +23,11 @@ public class MusicMasterMobEffect extends MobEffect {
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		MusicMasterEffectStartProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		MusicMasterEffectsProcedure.execute(entity);
 	}
 
 	@Override

@@ -16,6 +16,9 @@
     "onStarted": {
       "name": "MusicMasterEffectStart"
     },
+    "onActiveTick": {
+      "name": "MusicMasterEffects"
+    },
     "onExpired": {
       "name": "MusicMasterEffectEnd"
     }

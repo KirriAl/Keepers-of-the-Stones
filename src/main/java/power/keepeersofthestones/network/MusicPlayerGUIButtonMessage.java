@@ -2,6 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.MusicPlayerGUIMenu;
+import power.keepeersofthestones.procedures.StopSoundProcedure;
 import power.keepeersofthestones.procedures.PlayMusic2Procedure;
 import power.keepeersofthestones.procedures.PlayMusic1Procedure;
 import power.keepeersofthestones.PowerMod;
@@ -63,6 +64,10 @@ public class MusicPlayerGUIButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			StopSoundProcedure.execute(world, x, y, z, entity);
+		}
 		if (buttonID == 1) {
 
 			PlayMusic1Procedure.execute(world, x, y, z, entity);

@@ -86,6 +86,10 @@ public class MusicPlayerGUIScreen extends AbstractContainerScreen<MusicPlayerGUI
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + 239, this.topPos + 7, 46, 20, new TextComponent("Stop"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(0, x, y, z));
+				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 34, 30, 20, new TextComponent("1"), e -> {
 			if (true) {
@@ -105,15 +109,15 @@ public class MusicPlayerGUIScreen extends AbstractContainerScreen<MusicPlayerGUI
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 167, this.topPos + 34, 30, 20, new TextComponent("5"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 203, this.topPos + 34, 30, 20, new TextComponent("6"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 61, 30, 20, new TextComponent("6"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 239, this.topPos + 34, 30, 20, new TextComponent("7"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 59, this.topPos + 61, 30, 20, new TextComponent("7"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 61, 30, 20, new TextComponent("8"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 95, this.topPos + 61, 30, 20, new TextComponent("8"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 59, this.topPos + 61, 30, 20, new TextComponent("9"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 61, 30, 20, new TextComponent("9"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 95, this.topPos + 61, 35, 20, new TextComponent("10"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 167, this.topPos + 61, 30, 20, new TextComponent("10"), e -> {
 		}));
 	}
 }
