@@ -56,10 +56,12 @@ import net.minecraft.world.level.block.Block;
 public class PowerModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PowerMod.MODID);
 	public static final RegistryObject<Block> ACID = REGISTRY.register("acid", () -> new AcidBlock());
+	public static final RegistryObject<Block> MERCURY_LIQUID = REGISTRY.register("mercury_liquid", () -> new MercuryLiquidBlock());
 	public static final RegistryObject<Block> BATTERY_CHARGER = REGISTRY.register("battery_charger", () -> new BatteryChargerBlock());
 	public static final RegistryObject<Block> DINOERA_PORTAL = REGISTRY.register("dinoera_portal", () -> new DinoeraPortalBlock());
 	public static final RegistryObject<Block> CRYSTALLIZED_PORTAL = REGISTRY.register("crystallized_portal", () -> new CrystallizedPortalBlock());
 	public static final RegistryObject<Block> OBLIVION_PORTAL = REGISTRY.register("oblivion_portal", () -> new OblivionPortalBlock());
+	public static final RegistryObject<Block> SUNNY_KINGDOM_PORTAL = REGISTRY.register("sunny_kingdom_portal", () -> new SunnyKingdomPortalBlock());
 	public static final RegistryObject<Block> CRYSTAL_BLUE = REGISTRY.register("crystal_blue", () -> new CrystalBlueBlock());
 	public static final RegistryObject<Block> CRYSTAL_BROWN = REGISTRY.register("crystal_brown", () -> new CrystalBrownBlock());
 	public static final RegistryObject<Block> CRYSTAL_GRAY = REGISTRY.register("crystal_gray", () -> new CrystalGrayBlock());
@@ -91,8 +93,6 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> GOLD_MAGIC_BOX = REGISTRY.register("gold_magic_box", () -> new GoldMagicBoxBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	public static final RegistryObject<Block> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockBlock());
-	public static final RegistryObject<Block> MERCURY_LIQUID = REGISTRY.register("mercury_liquid", () -> new MercuryLiquidBlock());
-	public static final RegistryObject<Block> SUNNY_KINGDOM_PORTAL = REGISTRY.register("sunny_kingdom_portal", () -> new SunnyKingdomPortalBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

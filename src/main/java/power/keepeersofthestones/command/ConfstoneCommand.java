@@ -3,7 +3,6 @@ package power.keepeersofthestones.command;
 
 import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
 import power.keepeersofthestones.procedures.ResetSkillsAndLevelsProcedure;
-import power.keepeersofthestones.procedures.DetransformKeyPriNazhatiiKlavishiProcedure;
 import power.keepeersofthestones.procedures.DemoteKeeperProcedure;
 import power.keepeersofthestones.procedures.AppointKeeperProcedure;
 
@@ -37,7 +36,7 @@ public class ConfstoneCommand {
 
 					ResetmychoiceProcedureProcedure.execute(world, x, y, z, entity);
 					return 0;
-				})).then(Commands.literal("detransform").executes(arguments -> {
+				})).then(Commands.literal("reset_level").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -47,21 +46,9 @@ public class ConfstoneCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					DetransformKeyPriNazhatiiKlavishiProcedure.execute(entity);
+					ResetSkillsAndLevelsProcedure.execute(arguments);
 					return 0;
-				})).then(Commands.literal("reset_abilty").executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null)
-						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
-
-					ResetSkillsAndLevelsProcedure.execute(entity);
-					return 0;
-				})).then(Commands.literal("supreme_master")
+				}))).then(Commands.literal("supreme_master")
 						.then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("true").executes(arguments -> {
 							ServerLevel world = arguments.getSource().getLevel();
 							double x = arguments.getSource().getPosition().x();

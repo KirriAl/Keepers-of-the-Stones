@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.command;
 
-import power.keepeersofthestones.procedures.ChooseStoneProcedure;
+import power.keepeersofthestones.procedures.ChoosestoneUseProcedure;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,7 +29,7 @@ public class ChoosestoneCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					ChooseStoneProcedure.execute(world, x, y, z, entity);
+					ChoosestoneUseProcedure.execute(world, x, y, z, entity);
 					return 0;
 				}));
 	}

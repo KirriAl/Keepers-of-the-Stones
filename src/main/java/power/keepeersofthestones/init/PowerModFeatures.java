@@ -41,6 +41,8 @@ import java.util.ArrayList;
 public class PowerModFeatures {
 	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, PowerMod.MODID);
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
+	public static final RegistryObject<Feature<?>> MERCURY_LIQUID = register("mercury_liquid", MercuryLiquidFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.LAKES, MercuryLiquidFeature.GENERATE_BIOMES, MercuryLiquidFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> CRYSTAL_BLUE = register("crystal_blue", CrystalBlueFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalBlueFeature.GENERATE_BIOMES, CrystalBlueFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> CRYSTAL_BROWN = register("crystal_brown", CrystalBrownFeature::feature, new FeatureRegistration(
@@ -66,8 +68,6 @@ public class PowerModFeatures {
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalVioletFeature.GENERATE_BIOMES, CrystalVioletFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> CRYSTAL_YELLOW = register("crystal_yellow", CrystalYellowFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalYellowFeature.GENERATE_BIOMES, CrystalYellowFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> MERCURY_LIQUID = register("mercury_liquid", MercuryLiquidFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.LAKES, MercuryLiquidFeature.GENERATE_BIOMES, MercuryLiquidFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

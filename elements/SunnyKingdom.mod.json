@@ -25,7 +25,7 @@
       "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "LIGHT"
     },
     "portalLuminance": 0,
     "portalSound": {

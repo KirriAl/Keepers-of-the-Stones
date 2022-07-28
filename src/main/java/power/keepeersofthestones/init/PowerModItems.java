@@ -303,13 +303,14 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPEED_STONE = REGISTRY.register("speed_stone", () -> new SpeedStoneItem());
 	public static final RegistryObject<Item> SAND_STONE = REGISTRY.register("sand_stone", () -> new SandStoneItem());
 	public static final RegistryObject<Item> MAGNET_STONE = REGISTRY.register("magnet_stone", () -> new MagnetStoneItem());
+	public static final RegistryObject<Item> MERCURY_STONE = REGISTRY.register("mercury_stone", () -> new MercuryStoneItem());
+	public static final RegistryObject<Item> MUSIC_STONE = REGISTRY.register("music_stone", () -> new MusicStoneItem());
 	public static final RegistryObject<Item> SUN_STONE = REGISTRY.register("sun_stone", () -> new SunStoneItem());
 	public static final RegistryObject<Item> MOON_STONE = REGISTRY.register("moon_stone", () -> new MoonStoneItem());
 	public static final RegistryObject<Item> SPACE_STONE = REGISTRY.register("space_stone", () -> new SpaceStoneItem());
 	public static final RegistryObject<Item> TIME_STONE = REGISTRY.register("time_stone", () -> new TimeStoneItem());
 	public static final RegistryObject<Item> CREATION_STONE = REGISTRY.register("creation_stone", () -> new CreationStoneItem());
 	public static final RegistryObject<Item> DESTRUCTION_STONE = REGISTRY.register("destruction_stone", () -> new DestructionStoneItem());
-	public static final RegistryObject<Item> MAGNETIC_CLAWS = REGISTRY.register("magnetic_claws", () -> new MagneticClawsItem());
 	public static final RegistryObject<Item> BOOK_OF_ELEMENTS = REGISTRY.register("book_of_elements", () -> new BookOfElementsItem());
 	public static final RegistryObject<Item> ELEMENTAL_COIN = REGISTRY.register("elemental_coin", () -> new ElementalCoinItem());
 	public static final RegistryObject<Item> BATTERY_CHARGER = block(PowerModBlocks.BATTERY_CHARGER, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
@@ -317,6 +318,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
 	public static final RegistryObject<Item> CRYSTALLIZED = REGISTRY.register("crystallized", () -> new CrystallizedItem());
 	public static final RegistryObject<Item> OBLIVION = REGISTRY.register("oblivion", () -> new OblivionItem());
+	public static final RegistryObject<Item> SUNNY_KINGDOM = REGISTRY.register("sunny_kingdom", () -> new SunnyKingdomItem());
 	public static final RegistryObject<Item> TYRANNOSAURUS_REX = REGISTRY.register("tyrannosaurus_rex_spawn_egg",
 			() -> new ForgeSpawnEggItem(PowerModEntities.TYRANNOSAURUS_REX, -52480, -39322,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
@@ -375,6 +377,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_BATTERY = REGISTRY.register("poison_battery", () -> new PoisonBatteryItem());
 	public static final RegistryObject<Item> MAGNET_BATTERY = REGISTRY.register("magnet_battery", () -> new MagnetBatteryItem());
 	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
+	public static final RegistryObject<Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", () -> new MercuryBatteryItem());
+	public static final RegistryObject<Item> MUSIC_BATTERY = REGISTRY.register("music_battery", () -> new MusicBatteryItem());
 	public static final RegistryObject<Item> BURN = REGISTRY.register("burn", () -> new BurnItem());
 	public static final RegistryObject<Item> MAGIC_FIREBALL = REGISTRY.register("magic_fireball", () -> new MagicFireballItem());
 	public static final RegistryObject<Item> AIR_FLOW = REGISTRY.register("air_flow", () -> new AirFlowItem());
@@ -633,7 +637,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIST_CHESTPLATE = REGISTRY.register("mist_chestplate", () -> new MistItem.Chestplate());
 	public static final RegistryObject<Item> MIST_LEGGINGS = REGISTRY.register("mist_leggings", () -> new MistItem.Leggings());
 	public static final RegistryObject<Item> MIST_BOOTS = REGISTRY.register("mist_boots", () -> new MistItem.Boots());
-	public static final RegistryObject<Item> MERCURY_STONE = REGISTRY.register("mercury_stone", () -> new MercuryStoneItem());
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
 	public static final RegistryObject<Item> AETHER_STONE = REGISTRY.register("aether_stone", () -> new AetherStoneItem());
 	public static final RegistryObject<Item> OBSCURITY = REGISTRY.register("obscurity", () -> new ObscurityItem());
@@ -655,7 +658,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SUPERSONIC_DAGGER = REGISTRY.register("supersonic_dagger", () -> new SupersonicDaggerItem());
 	public static final RegistryObject<Item> BOOMERANG = REGISTRY.register("boomerang", () -> new BoomerangItem());
 	public static final RegistryObject<Item> TURBO_SPEED = REGISTRY.register("turbo_speed", () -> new TurboSpeedItem());
-	public static final RegistryObject<Item> MUSIC_STONE = REGISTRY.register("music_stone", () -> new MusicStoneItem());
 	public static final RegistryObject<Item> POISON_HELMET = REGISTRY.register("poison_helmet", () -> new PoisonItem.Helmet());
 	public static final RegistryObject<Item> POISON_CHESTPLATE = REGISTRY.register("poison_chestplate", () -> new PoisonItem.Chestplate());
 	public static final RegistryObject<Item> POISON_LEGGINGS = REGISTRY.register("poison_leggings", () -> new PoisonItem.Leggings());
@@ -663,6 +665,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_SWORD = REGISTRY.register("poison_sword", () -> new PoisonSwordItem());
 	public static final RegistryObject<Item> TOXIC_CLOUD = REGISTRY.register("toxic_cloud", () -> new ToxicCloudItem());
 	public static final RegistryObject<Item> ACID_PIT = REGISTRY.register("acid_pit", () -> new AcidPitItem());
+	public static final RegistryObject<Item> MAGNETIC_CLAWS = REGISTRY.register("magnetic_claws", () -> new MagneticClawsItem());
 	public static final RegistryObject<Item> MAGNETIC_FISHING_ROD = REGISTRY.register("magnetic_fishing_rod", () -> new MagneticFishingRodItem());
 	public static final RegistryObject<Item> ELECTROMAGNETIC_PULSE = REGISTRY.register("electromagnetic_pulse", () -> new ElectromagneticPulseItem());
 	public static final RegistryObject<Item> MUSHROOMS_HELMET = REGISTRY.register("mushrooms_helmet", () -> new MushroomsItem.Helmet());
@@ -672,7 +675,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BATON = REGISTRY.register("baton", () -> new BatonItem());
 	public static final RegistryObject<Item> SPORES = REGISTRY.register("spores", () -> new SporesItem());
 	public static final RegistryObject<Item> MUSHROOM_SATURATION = REGISTRY.register("mushroom_saturation", () -> new MushroomSaturationItem());
-	public static final RegistryObject<Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", () -> new MercuryBatteryItem());
 	public static final RegistryObject<Item> MERCURY_HELMET = REGISTRY.register("mercury_helmet", () -> new MercuryItem.Helmet());
 	public static final RegistryObject<Item> MERCURY_CHESTPLATE = REGISTRY.register("mercury_chestplate", () -> new MercuryItem.Chestplate());
 	public static final RegistryObject<Item> MERCURY_LEGGINGS = REGISTRY.register("mercury_leggings", () -> new MercuryItem.Leggings());
@@ -684,8 +686,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSIC_CHESTPLATE = REGISTRY.register("music_chestplate", () -> new MusicItem.Chestplate());
 	public static final RegistryObject<Item> MUSIC_LEGGINGS = REGISTRY.register("music_leggings", () -> new MusicItem.Leggings());
 	public static final RegistryObject<Item> MUSIC_BOOTS = REGISTRY.register("music_boots", () -> new MusicItem.Boots());
-	public static final RegistryObject<Item> MUSIC_BATTERY = REGISTRY.register("music_battery", () -> new MusicBatteryItem());
-	public static final RegistryObject<Item> SUNNY_KINGDOM = REGISTRY.register("sunny_kingdom", () -> new SunnyKingdomItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
