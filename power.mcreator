@@ -15309,6 +15309,274 @@
       "locked_code": false,
       "registry_name": "eb_music",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "PlagueMaster",
+      "type": "potioneffect",
+      "sortid": 917,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_master",
+      "path": "~/Plague"
+    },
+    {
+      "name": "RechargePlagueStone",
+      "type": "potioneffect",
+      "sortid": 918,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_plague_stone",
+      "path": "~/Plague"
+    },
+    {
+      "name": "PlagueStoneUse",
+      "type": "procedure",
+      "sortid": 919,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "PlagueGet",
+      "type": "procedure",
+      "sortid": 920,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "Plague",
+      "type": "armor",
+      "sortid": 921,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "PlagueMasterEffectStart",
+      "type": "procedure",
+      "sortid": 921,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "PlagueMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 922,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "PlagueMasterEffects",
+      "type": "procedure",
+      "sortid": 923,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "WalkingStick",
+      "type": "tool",
+      "sortid": 924,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walking_stick",
+      "path": "~/Plague"
+    },
+    {
+      "name": "Musket",
+      "type": "rangeditem",
+      "sortid": 925,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musket",
+      "path": "~/Plague"
+    },
+    {
+      "name": "MassInfectionRecharge",
+      "type": "procedure",
+      "sortid": 926,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mass_infection_recharge",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "MassInfection",
+      "type": "rangeditem",
+      "sortid": 926,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mass_infection",
+      "path": "~/Light"
+    },
+    {
+      "name": "MassInfectionOneEntity",
+      "type": "procedure",
+      "sortid": 927,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mass_infection_one_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "MAssInfectionTick",
+      "type": "procedure",
+      "sortid": 928,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_ass_infection_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Plague"
     }
   ],
   "variable_elements": [
@@ -16125,6 +16393,7 @@
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
+      "effect.power.recharge_plague_stone": "Перезарядка",
       "item.power.shadow_invisible": "Теневая Невидимость",
       "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Камень Эфира",
@@ -16154,6 +16423,7 @@
       "item.power.mercury_stone": "Камень Ртути",
       "item.power.iron_shield": "Железный Щит",
       "item.power.light_battery": "Батарея",
+      "item.power.plague_helmet": "Plague Helmet",
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "itemGroup.tabadditional_group": "Дополнительные",
@@ -16184,6 +16454,7 @@
       "item.power.sand_battery": "Батарея",
       "biome.power.cretaceous_taiga": "Меловая Тайга",
       "item.power.fire_stone": "Камень Огня",
+      "item.power.plague_leggings": "Plague Leggings",
       "item.power.blood_stone": "Камень Крови",
       "item.power.rain_boots": "Дождевые Сапоги",
       "item.power.ice_spear": "Ледяное Копьё",
@@ -16295,6 +16566,7 @@
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Технологии \u0026 Артефакты",
       "item.power.dinoera": "Огниво Портала (Диноэра)",
+      "item.power.mass_infection": "Mass Infection",
       "item.power.mist_leggings": "Mist Leggings",
       "power.cultivation.bamboo.text": "Бамбук",
       "block.power.energy_block": "Энергетический блок",
@@ -16367,6 +16639,7 @@
       "effect.power.sound_master": "Мастер Звука",
       "item.power.rainfall": "Ливень",
       "item.power.magnet_helmet": "Magnet Helmet",
+      "item.power.musket": "Musket",
       "effect.power.time_stop_effect": "Остановка Времени",
       "item.power.greenery_chestplate": "Травяной нагрудник",
       "item.power.teleportation_leggings": "Штаны телепортации",
@@ -16448,6 +16721,7 @@
       "item.power.energy_battery": "Батарея",
       "item.power.vacuum_battery": "Батарея",
       "item.power.creation_boots": "Creation Boots",
+      "item.power.plague_boots": "Plague Boots",
       "item.power.space_chestplate": "Космический нагрудник",
       "item.power.shadow_spawn_egg": "Яйцо призыва Тени",
       "block.power.crystal_lime": "Лаймовый Кристалл",
@@ -16475,8 +16749,10 @@
       "item.power.amber_boots": "Amber Boots",
       "item.power.sand_flurry": "Песчаный Шквал",
       "effect.power.recharge_destruction_stone": "Перезарядка",
+      "effect.power.plague_master": "Мастер Чумы",
       "biome.power.crystallized_lands": "Кристаллизированные Земли",
       "item.power.mushrooms_boots": "Mushrooms Boots",
+      "item.power.walking_stick": "Трость",
       "item.power.vampirism": "Вампиризм",
       "effect.power.recharge_time_stone": "Перезарядка",
       "item.power.shield_of_earth": "Щит Земли",
@@ -16492,6 +16768,7 @@
       "effect.power.recharge_tornado_stone": "Перезарядка",
       "item.power.animals_battery": "Батарея",
       "item.power.ocean_chestplate": "Акваланг Океана",
+      "item.power.plague_chestplate": "Plague Chestplate",
       "item.power.teleportation_chestplate": "Телепортационный нагрудник",
       "item.power.lava_helmet": "Лавовые Очки",
       "item.power.time_battery": "Батарея",
@@ -16661,10 +16938,10 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.moon_battery": "Battery",
       "item.power.energy_leggings": "Energy Leggings",
-      "item.power.explode_leggings": "Explode Leggings",
+      "item.power.moon_battery": "Battery",
       "item.power.sun_battery": "Battery",
+      "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.disco_ball": "Disco Ball",
@@ -16678,16 +16955,16 @@
       "block.power.detonator_tnt": "Detonator TNT",
       "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
-      "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
@@ -16704,8 +16981,8 @@
       "effect.power.mushrooms_master": "Master of Mushrooms",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.pumpkin.text": "Pumpkin",
       "power.cultivation.potato.text": "Potato",
+      "power.cultivation.pumpkin.text": "Pumpkin",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -16713,8 +16990,8 @@
       "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Recharge",
-      "effect.power.ice_master": "Master of Ice",
       "item.power.time_reversed": "Time Reversed",
+      "effect.power.ice_master": "Master of Ice",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
       "block.power.moon_stones_block": "Growing Moon Stones Block",
@@ -16724,17 +17001,18 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Explode Chestplate",
       "item.power.lava_ball": "Lava Ball",
-      "item.power.space_leggings": "Space Leggings",
-      "item.power.ocean_sword": "Ocean Sword",
       "item.power.energy_chestplate": "Energy Chestplate",
+      "item.power.ocean_sword": "Ocean Sword",
+      "item.power.space_leggings": "Space Leggings",
       "power.cultivation.birch.text": "Birch",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.destruction_sphere": "Destruction Sphere",
-      "item.power.speed_chestplate": "Speed Chestplate",
+      "effect.power.recharge_plague_stone": "Recharge",
       "item.power.shadow_invisible": "Shadow Invisible",
+      "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "item.power.music_battery": "Battery",
@@ -16759,6 +17037,7 @@
       "item.power.mercury_stone": "Mercury Stone",
       "item.power.iron_shield": "Iron Shield",
       "item.power.light_battery": "Battery",
+      "item.power.plague_helmet": "Plague Helmet",
       "effect.power.tornado_master": "Master of Tornado",
       "biome.power.enceladus_ice_desert": "Enceladus Ice Desert",
       "itemGroup.tabadditional_group": "Additional Group",
@@ -16789,6 +17068,7 @@
       "item.power.sand_battery": "Battery",
       "biome.power.cretaceous_taiga": "Cretaceous Taiga",
       "item.power.fire_stone": "Fire stone",
+      "item.power.plague_leggings": "Plague Leggings",
       "item.power.blood_stone": "Blood Stone",
       "item.power.rain_boots": "Rain Boots",
       "item.power.ice_spear": "Ice Spear",
@@ -16901,6 +17181,7 @@
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Technologies \u0026 Artifacts",
       "item.power.dinoera": "Dinoera Portal Igniter",
+      "item.power.mass_infection": "Mass Infection",
       "item.power.mist_leggings": "Mist Leggings",
       "power.cultivation.bamboo.text": "Bamboo",
       "block.power.energy_block": "Energy Block",
@@ -16973,6 +17254,7 @@
       "effect.power.sound_master": "Master of Sound",
       "item.power.rainfall": "Rainfall",
       "item.power.magnet_helmet": "Magnet Helmet",
+      "item.power.musket": "Musket",
       "effect.power.time_stop_effect": "Time Stop",
       "item.power.greenery_chestplate": "Greenery Chestplate",
       "item.power.teleportation_leggings": "Teleportation Leggings",
@@ -17054,6 +17336,7 @@
       "item.power.energy_battery": "Battery",
       "item.power.vacuum_battery": "Battery",
       "item.power.creation_boots": "Creation Boots",
+      "item.power.plague_boots": "Plague Boots",
       "item.power.space_chestplate": "Space Chestplate",
       "item.power.shadow_spawn_egg": "Shadow Spawn Egg",
       "block.power.crystal_lime": "Crystal Lime",
@@ -17081,8 +17364,10 @@
       "item.power.amber_boots": "Amber Boots",
       "item.power.sand_flurry": "Sand Flurry",
       "effect.power.recharge_destruction_stone": "Recharge",
+      "effect.power.plague_master": "Master of Plague",
       "biome.power.crystallized_lands": "Crystallized Lands",
       "item.power.mushrooms_boots": "Mushrooms Boots",
+      "item.power.walking_stick": "Walking Stick",
       "item.power.vampirism": "Vampirism",
       "effect.power.recharge_time_stone": "Recharge",
       "item.power.shield_of_earth": "Shield of the Earth",
@@ -17098,6 +17383,7 @@
       "effect.power.recharge_tornado_stone": "Recharge",
       "item.power.animals_battery": "Battery",
       "item.power.ocean_chestplate": "Ocean Chestplate",
+      "item.power.plague_chestplate": "Plague Chestplate",
       "item.power.teleportation_chestplate": "Teleportation Chestplate",
       "item.power.lava_helmet": "Lava Helmet",
       "item.power.time_battery": "Battery",

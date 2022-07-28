@@ -31,6 +31,7 @@ import power.keepeersofthestones.potion.RechargeShadowStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSandStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeRainStoneMobEffect;
 import power.keepeersofthestones.potion.RechargePoisonStoneMobEffect;
+import power.keepeersofthestones.potion.RechargePlagueStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeOceanStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMusicStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMushroomsStoneMobEffect;
@@ -58,6 +59,7 @@ import power.keepeersofthestones.potion.RechargeAirStoneMobEffect;
 import power.keepeersofthestones.potion.RainMasterMobEffect;
 import power.keepeersofthestones.potion.RainFlyMobEffect;
 import power.keepeersofthestones.potion.PoisonMasterMobEffect;
+import power.keepeersofthestones.potion.PlagueMasterMobEffect;
 import power.keepeersofthestones.potion.OceanMasterMobEffect;
 import power.keepeersofthestones.potion.MusicMasterMobEffect;
 import power.keepeersofthestones.potion.MushroomsMasterMobEffect;
@@ -216,4 +218,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_MUSIC_STONE = REGISTRY.register("recharge_music_stone",
 			() -> new RechargeMusicStoneMobEffect());
+	public static final RegistryObject<MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_PLAGUE_STONE = REGISTRY.register("recharge_plague_stone",
+			() -> new RechargePlagueStoneMobEffect());
 }

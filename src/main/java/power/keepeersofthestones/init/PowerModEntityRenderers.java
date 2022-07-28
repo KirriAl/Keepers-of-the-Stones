@@ -12,6 +12,7 @@ import power.keepeersofthestones.client.renderer.RaptorRenderer;
 import power.keepeersofthestones.client.renderer.RainBowRenderer;
 import power.keepeersofthestones.client.renderer.PterodactylRenderer;
 import power.keepeersofthestones.client.renderer.PlesiosaurusRenderer;
+import power.keepeersofthestones.client.renderer.MusketRenderer;
 import power.keepeersofthestones.client.renderer.GoldenCrossbowRenderer;
 import power.keepeersofthestones.client.renderer.GlowRenderer;
 
@@ -74,5 +75,7 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.SPORES.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MERCURY_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.DISCO_BALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MUSKET.get(), MusketRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MASS_INFECTION.get(), ThrownItemRenderer::new);
 	}
 }

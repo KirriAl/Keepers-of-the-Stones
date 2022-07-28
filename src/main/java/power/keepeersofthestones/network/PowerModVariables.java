@@ -133,6 +133,7 @@ public class PowerModVariables {
 			clone.mercury = original.mercury;
 			clone.music = original.music;
 			clone.keeper = original.keeper;
+			clone.plague = original.plague;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -253,6 +254,7 @@ public class PowerModVariables {
 		public boolean mushrooms_stone = false;
 		public boolean mercury_stone = false;
 		public boolean music_stone = false;
+		public boolean plague_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -308,6 +310,7 @@ public class PowerModVariables {
 			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
 			mercury_stone = nbt.getBoolean("mercury_stone");
 			music_stone = nbt.getBoolean("music_stone");
+			plague_stone = nbt.getBoolean("plague_stone");
 		}
 
 		@Override
@@ -359,6 +362,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
 			nbt.putBoolean("mercury_stone", mercury_stone);
 			nbt.putBoolean("music_stone", music_stone);
+			nbt.putBoolean("plague_stone", plague_stone);
 			return nbt;
 		}
 
@@ -510,6 +514,7 @@ public class PowerModVariables {
 		public boolean mercury = false;
 		public boolean music = false;
 		public boolean keeper = false;
+		public boolean plague = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -580,6 +585,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mercury", mercury);
 			nbt.putBoolean("music", music);
 			nbt.putBoolean("keeper", keeper);
+			nbt.putBoolean("plague", plague);
 			return nbt;
 		}
 
@@ -647,6 +653,7 @@ public class PowerModVariables {
 			mercury = nbt.getBoolean("mercury");
 			music = nbt.getBoolean("music");
 			keeper = nbt.getBoolean("keeper");
+			plague = nbt.getBoolean("plague");
 		}
 	}
 
@@ -734,6 +741,7 @@ public class PowerModVariables {
 					variables.mercury = message.data.mercury;
 					variables.music = message.data.music;
 					variables.keeper = message.data.keeper;
+					variables.plague = message.data.plague;
 				}
 			});
 			context.setPacketHandled(true);

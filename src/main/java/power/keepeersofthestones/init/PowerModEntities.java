@@ -28,9 +28,11 @@ import power.keepeersofthestones.entity.PortalBlastEntity;
 import power.keepeersofthestones.entity.PlesiosaurusEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
 import power.keepeersofthestones.entity.PieceOfEarthEntity;
+import power.keepeersofthestones.entity.MusketEntity;
 import power.keepeersofthestones.entity.MoonStonesEntity;
 import power.keepeersofthestones.entity.MercuryBallEntity;
 import power.keepeersofthestones.entity.MegawattEntity;
+import power.keepeersofthestones.entity.MassInfectionEntity;
 import power.keepeersofthestones.entity.MagicFireballEntity;
 import power.keepeersofthestones.entity.LavaBallEntity;
 import power.keepeersofthestones.entity.KunaiEntity;
@@ -227,6 +229,12 @@ public class PowerModEntities {
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DiscoBallEntity>> DISCO_BALL = register("projectile_disco_ball",
 			EntityType.Builder.<DiscoBallEntity>of(DiscoBallEntity::new, MobCategory.MISC).setCustomClientFactory(DiscoBallEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MusketEntity>> MUSKET = register("projectile_musket",
+			EntityType.Builder.<MusketEntity>of(MusketEntity::new, MobCategory.MISC).setCustomClientFactory(MusketEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MassInfectionEntity>> MASS_INFECTION = register("projectile_mass_infection",
+			EntityType.Builder.<MassInfectionEntity>of(MassInfectionEntity::new, MobCategory.MISC).setCustomClientFactory(MassInfectionEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

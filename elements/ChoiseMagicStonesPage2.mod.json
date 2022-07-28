@@ -382,10 +382,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Plague",
+          "onClick": {
+            "name": "PlagueGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Plague",
           "x": 339,
           "y": 134
         }
@@ -526,6 +529,16 @@
           "name": "music_master.png",
           "x": 321,
           "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "plague_master.png",
+          "use1Xscale": false,
+          "name": "plague_master.png",
+          "x": 321,
+          "y": 134
         }
       }
     ],

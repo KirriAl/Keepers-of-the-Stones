@@ -111,6 +111,9 @@ public class ChoiseMagicStonesPage2Screen extends AbstractContainerScreen<Choise
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/music_master.png"));
 		this.blit(ms, this.leftPos + 307, this.topPos + 87, 0, 0, 16, 16, 16, 16);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/plague_master.png"));
+		this.blit(ms, this.leftPos + 307, this.topPos + 114, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -258,7 +261,11 @@ public class ChoiseMagicStonesPage2Screen extends AbstractContainerScreen<Choise
 				ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 18, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, new TextComponent("Plague"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(19, x, y, z));
+				ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 19, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
 		}));
