@@ -2,14 +2,8 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.particles.ParticleTypes;
@@ -55,14 +49,6 @@ public class IceSharpFreezingProcedure {
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 200, (int) 255, (false), (false)));
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(ParticleTypes.CRIT, x, y, z, (int) 25, 2, 2, 2, 1);
-		}
-		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos(x, y, z),
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.NEUTRAL, (float) 1,
-					(float) 1);
-		} else {
-			((World) world).playSound(x, y, z, (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 		}
 	}
 }
