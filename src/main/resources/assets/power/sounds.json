@@ -28,16 +28,6 @@
       }
     ]
   },
-  "time_power": {
-    "category": "player",
-    "subtitle": "subtitles.time_power",
-    "sounds": [
-      {
-        "name": "power:time_travel",
-        "stream": false
-      }
-    ]
-  },
   "tyrannosaurus_rex.hurt": {
     "category": "neutral",
     "sounds": [
@@ -71,6 +61,25 @@
       {
         "name": "power:raptor.hurt",
         "stream": false
+      }
+    ]
+  },
+  "time_power": {
+    "category": "player",
+    "subtitle": "subtitles.time_power",
+    "sounds": [
+      {
+        "name": "power:time_travel",
+        "stream": false
+      }
+    ]
+  },
+  "music.dino_thunder": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:power_rangers_-_dino_thunder_clean_hq",
+        "stream": true
       }
     ]
   }

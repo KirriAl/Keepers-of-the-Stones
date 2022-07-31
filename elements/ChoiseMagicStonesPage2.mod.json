@@ -334,10 +334,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mercury",
+          "onClick": {
+            "name": "MercuryGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mercury",
           "x": 339,
           "y": 80
         }
@@ -345,10 +348,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Music",
+          "onClick": {
+            "name": "MusicGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Music",
           "x": 339,
           "y": 107
         }
@@ -376,10 +382,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Plague",
+          "onClick": {
+            "name": "PlagueGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Plague",
           "x": 339,
           "y": 134
         }
@@ -500,6 +509,36 @@
           "name": "mushrooms_master.png",
           "x": 321,
           "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mercury_master.png",
+          "use1Xscale": false,
+          "name": "mercury_master.png",
+          "x": 321,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "music_master.png",
+          "use1Xscale": false,
+          "name": "music_master.png",
+          "x": 321,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "plague_master.png",
+          "use1Xscale": false,
+          "name": "plague_master.png",
+          "x": 321,
+          "y": 134
         }
       }
     ],

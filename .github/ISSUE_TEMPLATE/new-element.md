@@ -15,6 +15,5 @@ Tasks assigned to add an element:
 - [ ] Add a battery
 - [ ] Add amber support to copy
 - [ ] Adding information to the Book of Elements
-- [ ]  Add the possibility of damage
 2. Adding spells
 - [ ]
