@@ -25,7 +25,7 @@ public class MoonWitherItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MoonWitherItem(PowerModElements instance) {
-		super(instance, 391);
+		super(instance, 396);
 	}
 
 	@Override

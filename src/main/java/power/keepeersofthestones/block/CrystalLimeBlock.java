@@ -48,7 +48,7 @@ public class CrystalLimeBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public CrystalLimeBlock(PowerModElements instance) {
-		super(instance, 60);
+		super(instance, 63);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

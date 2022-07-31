@@ -50,7 +50,7 @@ public class SporesItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletspores").setRegistryName("entitybulletspores");
 
 	public SporesItem(PowerModElements instance) {
-		super(instance, 866);
+		super(instance, 869);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SporesRenderer.ModelRegisterHandler());
 	}
 

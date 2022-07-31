@@ -49,7 +49,7 @@ public class PlasmaBallItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletplasma_ball").setRegistryName("entitybulletplasma_ball");
 
 	public PlasmaBallItem(PowerModElements instance) {
-		super(instance, 178);
+		super(instance, 183);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PlasmaBallRenderer.ModelRegisterHandler());
 	}
 

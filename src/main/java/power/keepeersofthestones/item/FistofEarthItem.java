@@ -30,7 +30,7 @@ public class FistofEarthItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public FistofEarthItem(PowerModElements instance) {
-		super(instance, 138);
+		super(instance, 143);
 	}
 
 	@Override

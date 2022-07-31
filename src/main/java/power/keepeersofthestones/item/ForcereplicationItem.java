@@ -25,7 +25,7 @@ public class ForcereplicationItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ForcereplicationItem(PowerModElements instance) {
-		super(instance, 640);
+		super(instance, 645);
 	}
 
 	@Override

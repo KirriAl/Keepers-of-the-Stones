@@ -60,7 +60,7 @@ public class ShadowEntity extends PowerModElements.ModElement {
 			.build("shadow").setRegistryName("shadow");
 
 	public ShadowEntity(PowerModElements instance) {
-		super(instance, 337);
+		super(instance, 342);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadowRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

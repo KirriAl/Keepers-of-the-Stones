@@ -1,41 +1,46 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.init.PowerModTabs;
-import power.keepeersofthestones.block.SunnyKingdomPortalBlock;
+import power.keepeersofthestones.world.dimension.SunnyKingdomDimension;
+import power.keepeersofthestones.itemgroup.TechnologiesAndArtifactsItemGroup;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
 
 public class SunnyKingdomItem extends Item {
+	@ObjectHolder("power:sunny_kingdom")
+	public static final Item block = null;
+
 	public SunnyKingdomItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).durability(64));
+		super(new Item.Properties().group(TechnologiesAndArtifactsItemGroup.tab).maxDamage(64));
 	}
 
 	@Override
-	public InteractionResult useOn(UseOnContext context) {
-		Player entity = context.getPlayer();
-		BlockPos pos = context.getClickedPos().relative(context.getClickedFace());
-		ItemStack itemstack = context.getItemInHand();
-		Level world = context.getLevel();
-		if (!entity.mayUseItemAt(pos, context.getClickedFace(), itemstack)) {
-			return InteractionResult.FAIL;
+	public ActionResultType onItemUse(ItemUseContext context) {
+		PlayerEntity entity = context.getPlayer();
+		BlockPos pos = context.getPos().offset(context.getFace());
+		ItemStack itemstack = context.getItem();
+		World world = context.getWorld();
+		if (!entity.canPlayerEdit(pos, context.getFace(), itemstack)) {
+			return ActionResultType.FAIL;
 		} else {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			boolean success = false;
-			if (world.isEmptyBlock(pos) && true) {
-				SunnyKingdomPortalBlock.portalSpawn(world, pos);
-				itemstack.hurtAndBreak(1, entity, c -> c.broadcastBreakEvent(context.getHand()));
+			if (world.isAirBlock(pos) && true) {
+				SunnyKingdomDimension.portal.portalSpawn(world, pos);
+				itemstack.damageItem(1, entity, c -> c.sendBreakAnimation(context.getHand()));
 				success = true;
 			}
-			return success ? InteractionResult.SUCCESS : InteractionResult.FAIL;
+			return success ? ActionResultType.SUCCESS : ActionResultType.FAIL;
 		}
 	}
 }

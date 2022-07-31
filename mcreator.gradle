@@ -1,6 +1,6 @@
-def extraModsDir = 'extra-mods-1.18.2'
+def extraModsDir = 'extra-mods-1.16.5'
 task addnewfoldersmods(type: DefaultTask){
-  ant.mkdir(dir: 'extra-mods-1.18.2/');
+  ant.mkdir(dir: 'extra-mods-1.16.5/');
 }
 repositories {
   flatDir {
@@ -19,10 +19,8 @@ dependencies
   def version = basename.substring(versionSep + 1)
   runtimeOnly fg.deobf("extra-mods:$artifactId:$version")}
 }
-
 minecraft {
- mappings channel: 'official', version: '1.18.2'
-  accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+ mappings channel: 'snapshot', version: '20201028-1.16.3'
  runs {
   client {
       workingDirectory project.file('run')

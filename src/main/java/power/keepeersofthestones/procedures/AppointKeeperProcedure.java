@@ -1,20 +1,30 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.network.PowerModVariables;
+import power.keepeersofthestones.PowerModVariables;
+import power.keepeersofthestones.PowerMod;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.commands.arguments.EntityArgument;
-import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.entity.Entity;
+import net.minecraft.command.arguments.EntityArgument;
+import net.minecraft.command.CommandSource;
+
+import java.util.Map;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 public class AppointKeeperProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments) {
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("arguments") == null) {
+			if (!dependencies.containsKey("arguments"))
+				PowerMod.LOGGER.warn("Failed to load dependency arguments for procedure AppointKeeper!");
+			return;
+		}
+		CommandContext<CommandSource> arguments = (CommandContext<CommandSource>) dependencies.get("arguments");
 		try {
-			for (Entity entityiterator : EntityArgument.getEntities(arguments, "name")) {
+			for (Entity entityiterator : EntityArgument.getEntitiesAllowingNone(arguments, "name")) {
 				{
-					boolean _setval = true;
+					boolean _setval = (true);
 					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.keeper = _setval;
 						capability.syncPlayerVariables(entityiterator);

@@ -27,7 +27,7 @@ public class StormItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public StormItem(PowerModElements instance) {
-		super(instance, 180);
+		super(instance, 185);
 	}
 
 	@Override

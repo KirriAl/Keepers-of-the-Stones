@@ -16,7 +16,7 @@ public class SupersonicDaggerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SupersonicDaggerItem(PowerModElements instance) {
-		super(instance, 814);
+		super(instance, 817);
 	}
 
 	@Override

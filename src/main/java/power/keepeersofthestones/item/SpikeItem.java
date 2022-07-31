@@ -49,7 +49,7 @@ public class SpikeItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletspike").setRegistryName("entitybulletspike");
 
 	public SpikeItem(PowerModElements instance) {
-		super(instance, 279);
+		super(instance, 284);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SpikeRenderer.ModelRegisterHandler());
 	}
 

@@ -57,7 +57,7 @@ public class CrystallizedForestBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public CrystallizedForestBiome(PowerModElements instance) {
-		super(instance, 855);
+		super(instance, 858);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

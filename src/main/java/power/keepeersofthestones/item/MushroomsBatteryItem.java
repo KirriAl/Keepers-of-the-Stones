@@ -32,7 +32,7 @@ public class MushroomsBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MushroomsBatteryItem(PowerModElements instance) {
-		super(instance, 100);
+		super(instance, 103);
 	}
 
 	@Override

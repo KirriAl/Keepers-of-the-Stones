@@ -27,7 +27,7 @@ public class BlueKnifeItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BlueKnifeItem(PowerModElements instance) {
-		super(instance, 606);
+		super(instance, 611);
 	}
 
 	@Override

@@ -45,7 +45,7 @@ public class JurassicJungleBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public JurassicJungleBiome(PowerModElements instance) {
-		super(instance, 728);
+		super(instance, 733);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
@@ -100,7 +100,7 @@ public class JurassicJungleBiome extends PowerModElements.ModElement {
 				DefaultBiomeFeatures.withDesertDeadBushes(biomeGenerationSettings);
 				DefaultBiomeFeatures.withEmeraldOre(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
-				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.CAVE_SPIDER, 3, 1, 1));
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.CAVE_SPIDER, 10, 1, 1));
 				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(TyrannosaurusRexEntity.entity, 10, 1, 1));
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(0.3f).scale(0.4f)
 						.temperature(1.3f).downfall(0.9f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())

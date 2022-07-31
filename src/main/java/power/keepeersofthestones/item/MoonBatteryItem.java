@@ -32,7 +32,7 @@ public class MoonBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MoonBatteryItem(PowerModElements instance) {
-		super(instance, 88);
+		super(instance, 91);
 	}
 
 	@Override

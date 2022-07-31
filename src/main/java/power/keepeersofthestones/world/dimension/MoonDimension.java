@@ -28,7 +28,7 @@ import com.google.common.collect.ImmutableSet;
 @PowerModElements.ModElement.Tag
 public class MoonDimension extends PowerModElements.ModElement {
 	public MoonDimension(PowerModElements instance) {
-		super(instance, 37);
+		super(instance, 39);
 	}
 
 	@Override

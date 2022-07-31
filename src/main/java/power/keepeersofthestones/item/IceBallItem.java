@@ -50,7 +50,7 @@ public class IceBallItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletice_ball").setRegistryName("entitybulletice_ball");
 
 	public IceBallItem(PowerModElements instance) {
-		super(instance, 162);
+		super(instance, 167);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new IceBallRenderer.ModelRegisterHandler());
 	}
 
@@ -147,8 +147,10 @@ public class IceBallItem extends PowerModElements.ModElement {
 			World world = this.world;
 			Entity imediatesourceentity = this;
 
-			IceBallInEntityProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			IceBallInEntityProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override

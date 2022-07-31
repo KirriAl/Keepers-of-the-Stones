@@ -50,7 +50,7 @@ public class PieceOfEarthItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletpiece_of_earth").setRegistryName("entitybulletpiece_of_earth");
 
 	public PieceOfEarthItem(PowerModElements instance) {
-		super(instance, 142);
+		super(instance, 147);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PieceOfEarthRenderer.ModelRegisterHandler());
 	}
 

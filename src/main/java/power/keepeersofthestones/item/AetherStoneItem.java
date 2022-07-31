@@ -17,7 +17,7 @@ public class AetherStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public AetherStoneItem(PowerModElements instance) {
-		super(instance, 766);
+		super(instance, 769);
 	}
 
 	@Override

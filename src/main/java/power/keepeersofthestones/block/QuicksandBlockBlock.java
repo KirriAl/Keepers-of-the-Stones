@@ -50,7 +50,7 @@ public class QuicksandBlockBlock extends PowerModElements.ModElement {
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 
 	public QuicksandBlockBlock(PowerModElements instance) {
-		super(instance, 820);
+		super(instance, 823);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 	}
 

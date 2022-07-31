@@ -16,7 +16,7 @@ public class MaceItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MaceItem(PowerModElements instance) {
-		super(instance, 629);
+		super(instance, 634);
 	}
 
 	@Override

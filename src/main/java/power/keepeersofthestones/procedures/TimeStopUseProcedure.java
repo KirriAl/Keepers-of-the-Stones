@@ -80,13 +80,6 @@ public class TimeStopUseProcedure {
 				}
 				if (entity instanceof PlayerEntity)
 					((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 800);
-				{
-					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "effect give @e minecraft:slowness 20 255");
-					}
-				}
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity)
 							.addPotionEffect(new EffectInstance(TimeStopEffectPotionEffect.potion, (int) 400, (int) 0, (false), (false)));

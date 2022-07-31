@@ -14,11 +14,14 @@ import power.keepeersofthestones.item.ShadowStoneItem;
 import power.keepeersofthestones.item.SandStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
+import power.keepeersofthestones.item.PlagueStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
+import power.keepeersofthestones.item.MusicStoneItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
 import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MetalStoneItem;
+import power.keepeersofthestones.item.MercuryStoneItem;
 import power.keepeersofthestones.item.MagnetStoneItem;
 import power.keepeersofthestones.item.LightningStoneItem;
 import power.keepeersofthestones.item.LightStoneItem;
@@ -121,8 +124,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).fire_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).fire_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -157,8 +160,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).air_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).air_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -193,8 +196,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).water_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).water_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -229,8 +232,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).earth_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).earth_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -265,8 +268,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).energy_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).energy_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -301,8 +304,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).ice_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).ice_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -338,8 +341,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).lightning_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).lightning_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -374,8 +377,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).sound_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).sound_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -411,8 +414,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).crystal_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).crystal_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -447,8 +450,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).lava_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).lava_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -483,8 +486,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).rain_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).rain_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -520,8 +523,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).tornado_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).tornado_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -556,8 +559,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).ocean_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).ocean_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -593,8 +596,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).greenery_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).greenery_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -630,8 +633,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).animals_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).animals_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -666,8 +669,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).metal_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).metal_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -702,8 +705,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).light_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).light_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -738,8 +741,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).shadow_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).shadow_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -774,8 +777,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).vacuum_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).vacuum_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -810,8 +813,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).sun_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).sun_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -846,8 +849,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).moon_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).moon_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -883,8 +886,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).creation_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).creation_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -920,8 +923,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).destruction_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).destruction_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -956,8 +959,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).space_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).space_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -992,8 +995,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).blood_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).blood_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -1065,8 +1068,8 @@ public class ResetmychoiceProcedureProcedure {
 							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
-			PowerModVariables.WorldVariables.get(world).time_stone = (false);
-			PowerModVariables.WorldVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).time_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -1393,6 +1396,115 @@ public class ResetmychoiceProcedureProcedure {
 				}
 			}
 			PowerModVariables.MapVariables.get(world).mushrooms_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == MercuryStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).mercury_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == MusicStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).music_stone = (false);
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (false);
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.selected = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("ChoiseMagicStoneGUI");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new ChoiseMagicStoneGUIGui.GuiContainerMod(id, inventory,
+									new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == PlagueStoneItem.block) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"replaceitem entity @s weapon.mainhand air");
+				}
+			}
+			PowerModVariables.MapVariables.get(world).plague_stone = (false);
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
 				boolean _setval = (false);

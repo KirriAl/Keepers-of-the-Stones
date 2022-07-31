@@ -77,7 +77,7 @@ public class CrystallizedDimension extends PowerModElements.ModElement {
 	public static final CustomPortalBlock portal = null;
 
 	public CrystallizedDimension(PowerModElements instance) {
-		super(instance, 49);
+		super(instance, 51);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

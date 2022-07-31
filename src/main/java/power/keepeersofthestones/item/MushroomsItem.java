@@ -29,7 +29,7 @@ public class MushroomsItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public MushroomsItem(PowerModElements instance) {
-		super(instance, 860);
+		super(instance, 863);
 	}
 
 	@Override

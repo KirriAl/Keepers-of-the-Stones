@@ -32,7 +32,7 @@ public class TechnobarrierBlockBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public TechnobarrierBlockBlock(PowerModElements instance) {
-		super(instance, 586);
+		super(instance, 591);
 	}
 
 	@Override

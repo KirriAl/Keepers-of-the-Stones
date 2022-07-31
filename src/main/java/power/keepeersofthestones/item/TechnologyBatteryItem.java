@@ -32,7 +32,7 @@ public class TechnologyBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TechnologyBatteryItem(PowerModElements instance) {
-		super(instance, 92);
+		super(instance, 95);
 	}
 
 	@Override
