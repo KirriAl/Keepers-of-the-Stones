@@ -143,6 +143,7 @@ public class PowerModVariables {
 				clone.fog = original.fog;
 				clone.recharge_spell_mist = original.recharge_spell_mist;
 				clone.turbospeed = original.turbospeed;
+				clone.recharge_spell_plague = original.recharge_spell_plague;
 			}
 		}
 
@@ -515,6 +516,7 @@ public class PowerModVariables {
 		public boolean music = false;
 		public boolean keeper = false;
 		public boolean plague = false;
+		public boolean recharge_spell_plague = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -586,6 +588,7 @@ public class PowerModVariables {
 			nbt.putBoolean("music", music);
 			nbt.putBoolean("keeper", keeper);
 			nbt.putBoolean("plague", plague);
+			nbt.putBoolean("recharge_spell_plague", recharge_spell_plague);
 			return nbt;
 		}
 
@@ -654,6 +657,7 @@ public class PowerModVariables {
 			music = nbt.getBoolean("music");
 			keeper = nbt.getBoolean("keeper");
 			plague = nbt.getBoolean("plague");
+			recharge_spell_plague = nbt.getBoolean("recharge_spell_plague");
 		}
 	}
 
@@ -742,6 +746,7 @@ public class PowerModVariables {
 					variables.music = message.data.music;
 					variables.keeper = message.data.keeper;
 					variables.plague = message.data.plague;
+					variables.recharge_spell_plague = message.data.recharge_spell_plague;
 				}
 			});
 			context.setPacketHandled(true);

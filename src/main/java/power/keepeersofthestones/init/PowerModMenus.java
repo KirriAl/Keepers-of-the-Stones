@@ -25,6 +25,7 @@ import power.keepeersofthestones.world.inventory.EBShadowMenu;
 import power.keepeersofthestones.world.inventory.EBSandMenu;
 import power.keepeersofthestones.world.inventory.EBRainMenu;
 import power.keepeersofthestones.world.inventory.EBPoisonMenu;
+import power.keepeersofthestones.world.inventory.EBPlagueMenu;
 import power.keepeersofthestones.world.inventory.EBOceanMenu;
 import power.keepeersofthestones.world.inventory.EBMusicMenu;
 import power.keepeersofthestones.world.inventory.EBMushroomsMenu;
@@ -151,6 +152,7 @@ public class PowerModMenus {
 	public static final MenuType<MusicPlayerGUIMenu> MUSIC_PLAYER_GUI = register("music_player_gui",
 			(id, inv, extraData) -> new MusicPlayerGUIMenu(id, inv, extraData));
 	public static final MenuType<EBMusicMenu> EB_MUSIC = register("eb_music", (id, inv, extraData) -> new EBMusicMenu(id, inv, extraData));
+	public static final MenuType<EBPlagueMenu> EB_PLAGUE = register("eb_plague", (id, inv, extraData) -> new EBPlagueMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

@@ -15577,6 +15577,104 @@
         ]
       },
       "path": "~/Plague"
+    },
+    {
+      "name": "Injection",
+      "type": "item",
+      "sortid": 929,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "injection",
+      "path": "~/Plague"
+    },
+    {
+      "name": "InjectionUseOnMe",
+      "type": "procedure",
+      "sortid": 930,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "injection_use_on_me",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "InjectionOnPlayer",
+      "type": "procedure",
+      "sortid": 931,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "injection_on_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Plague"
+    },
+    {
+      "name": "PlagueBattery",
+      "type": "item",
+      "sortid": 932,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "PlagueBatteryUse",
+      "type": "procedure",
+      "sortid": 933,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "EBPlague",
+      "type": "gui",
+      "sortid": 934,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eb_plague",
+      "path": "~/ElementalBook"
     }
   ],
   "variable_elements": [
@@ -16245,6 +16343,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "recharge_spell_plague",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -16271,14 +16375,6 @@
       ],
       "category": "music",
       "subtitle": ""
-    },
-    {
-      "name": "time_power",
-      "files": [
-        "time_travel"
-      ],
-      "category": "player",
-      "subtitle": "Time Power"
     },
     {
       "name": "tyrannosaurus_rex.hurt",
@@ -16311,6 +16407,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "time_power",
+      "files": [
+        "time_travel"
+      ],
+      "category": "player",
+      "subtitle": "Time Power"
     },
     {
       "name": "music.dino_thunder",
@@ -16354,7 +16458,7 @@
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
-      "item.power.boomerang": "Boomerang",
+      "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
       "block.power.crystal_pink": "Розовый Кристалл",
@@ -16532,6 +16636,7 @@
       "item.power.glow_spawn_egg": "Яйцо призыва Светляка",
       "item.power.oblivion": "Огниво Портала (Обливион)",
       "item.power.sound_barrier": "Звуковой барьер",
+      "item.power.injection": "Инъекция",
       "item.power.blood_leggings": "Ботинки крови",
       "item.power.fire_leggings": "Огненные Штаны",
       "item.power.black_heart": "Черное Сердце",
@@ -16566,7 +16671,7 @@
       "subtitles.time_travel": "Time Travel",
       "itemGroup.tabtechnologies_and_artifacts": "Технологии \u0026 Артефакты",
       "item.power.dinoera": "Огниво Портала (Диноэра)",
-      "item.power.mass_infection": "Mass Infection",
+      "item.power.mass_infection": "Массовое Поражение",
       "item.power.mist_leggings": "Mist Leggings",
       "power.cultivation.bamboo.text": "Бамбук",
       "block.power.energy_block": "Энергетический блок",
@@ -16639,7 +16744,7 @@
       "effect.power.sound_master": "Мастер Звука",
       "item.power.rainfall": "Ливень",
       "item.power.magnet_helmet": "Magnet Helmet",
-      "item.power.musket": "Musket",
+      "item.power.musket": "Мушкет",
       "effect.power.time_stop_effect": "Остановка Времени",
       "item.power.greenery_chestplate": "Травяной нагрудник",
       "item.power.teleportation_leggings": "Штаны телепортации",
@@ -16865,6 +16970,7 @@
       "item.power.toxic_cloud": "Токсичное Облако",
       "item.power.mushrooms_helmet": "Mushrooms Helmet",
       "item.power.tornado_helmet": "Шлем Торнадо",
+      "item.power.plague_battery": "Battery",
       "item.power.magic_fireball": "Волшебный Огненный Шар",
       "item.power.crystal_stone": "Камень Кристалла",
       "item.power.metal_chestplate": "Метталический нагрудник",
@@ -17011,8 +17117,8 @@
       "item.power.speed_chestplate": "Speed Chestplate",
       "item.power.shadow_invisible": "Shadow Invisible",
       "item.power.aether_stone": "Aether Stone",
-      "item.power.moon": "Moon Portal Igniter",
       "item.power.light_helmet": "Light Helmet",
+      "item.power.moon": "Moon Portal Igniter",
       "item.power.time_leggings": "Time Leggings",
       "effect.power.greenery_master": "Master of Greenery",
       "item.power.music_battery": "Battery",
@@ -17146,6 +17252,7 @@
       "item.power.glow_spawn_egg": "Glow Spawn Egg",
       "item.power.oblivion": "Oblivion Portal Igniter",
       "item.power.sound_barrier": "Sound Barrier",
+      "item.power.injection": "Injection",
       "item.power.blood_leggings": "Blood Leggings",
       "item.power.black_heart": "Black Heart",
       "item.power.fire_leggings": "Fire Leggings",
@@ -17481,6 +17588,7 @@
       "item.power.toxic_cloud": "Toxic Cloud",
       "item.power.mushrooms_helmet": "Mushrooms Helmet",
       "item.power.tornado_helmet": "Tornado Helmet",
+      "item.power.plague_battery": "Battery",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.crystal_stone": "Crystal Stone",
       "item.power.metal_chestplate": "Metal Chestplate",
@@ -17809,7 +17917,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.5.0.3",
+    "version": "2.5.0.4",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

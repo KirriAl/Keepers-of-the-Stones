@@ -16,7 +16,7 @@ public class MAssInfectionTickProcedure {
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
 				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-						"effect give @e[dx=50, dy=50, dz=50] wither 1 1");
+						"effect give @e[dx=200, dy=200, dz=200] wither 1 1");
 		}
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 120, 2));

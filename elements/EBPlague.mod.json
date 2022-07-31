@@ -23,12 +23,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Additional, Unique",
+          "text": "Class: Additional",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Class: Additional, Unique",
+          "name": "Class: Additional",
           "x": 51,
           "y": 35
         }
@@ -36,12 +36,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Music",
+          "text": "Element: Plague",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Element: Music",
+          "name": "Element: Plague",
           "x": 51,
           "y": 53
         }
@@ -49,12 +49,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Pleasure",
+          "text": "Force: Infection",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Force: Pleasure",
+          "name": "Force: Infection",
           "x": 51,
           "y": 71
         }
@@ -62,9 +62,9 @@
       {
         "type": "image",
         "data": {
-          "image": "music_stone.png",
+          "image": "plague_stone.png",
           "use1Xscale": false,
-          "name": "music_stone.png",
+          "name": "plague_stone.png",
           "x": 109,
           "y": 11
         }
@@ -72,9 +72,9 @@
       {
         "type": "image",
         "data": {
-          "image": "music_master.png",
+          "image": "plague_master.png",
           "use1Xscale": false,
-          "name": "music_master.png",
+          "name": "plague_master.png",
           "x": 307,
           "y": 11
         }
@@ -82,9 +82,9 @@
       {
         "type": "image",
         "data": {
-          "image": "music_element.png",
+          "image": "plague_element.png",
           "use1Xscale": true,
-          "name": "music_element.png",
+          "name": "plague_element.png",
           "x": 285,
           "y": 35
         }

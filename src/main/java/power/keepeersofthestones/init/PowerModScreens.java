@@ -25,6 +25,7 @@ import power.keepeersofthestones.client.gui.EBShadowScreen;
 import power.keepeersofthestones.client.gui.EBSandScreen;
 import power.keepeersofthestones.client.gui.EBRainScreen;
 import power.keepeersofthestones.client.gui.EBPoisonScreen;
+import power.keepeersofthestones.client.gui.EBPlagueScreen;
 import power.keepeersofthestones.client.gui.EBOceanScreen;
 import power.keepeersofthestones.client.gui.EBMusicScreen;
 import power.keepeersofthestones.client.gui.EBMushroomsScreen;
@@ -127,6 +128,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_MERCURY, EBMercuryScreen::new);
 			MenuScreens.register(PowerModMenus.MUSIC_PLAYER_GUI, MusicPlayerGUIScreen::new);
 			MenuScreens.register(PowerModMenus.EB_MUSIC, EBMusicScreen::new);
+			MenuScreens.register(PowerModMenus.EB_PLAGUE, EBPlagueScreen::new);
 		});
 	}
 }

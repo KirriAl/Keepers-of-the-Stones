@@ -1,8 +1,8 @@
 
 package power.keepeersofthestones.client.gui;
 
-import power.keepeersofthestones.world.inventory.EBMusicMenu;
-import power.keepeersofthestones.network.EBMusicButtonMessage;
+import power.keepeersofthestones.world.inventory.EBPlagueMenu;
+import power.keepeersofthestones.network.EBPlagueButtonMessage;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.Level;
@@ -20,13 +20,13 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class EBMusicScreen extends AbstractContainerScreen<EBMusicMenu> {
-	private final static HashMap<String, Object> guistate = EBMusicMenu.guistate;
+public class EBPlagueScreen extends AbstractContainerScreen<EBPlagueMenu> {
+	private final static HashMap<String, Object> guistate = EBPlagueMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 
-	public EBMusicScreen(EBMusicMenu container, Inventory inventory, Component text) {
+	public EBPlagueScreen(EBPlagueMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -53,13 +53,13 @@ public class EBMusicScreen extends AbstractContainerScreen<EBMusicMenu> {
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/book_of_elements_book.png"));
 		this.blit(ms, this.leftPos + -244, this.topPos + -127, 0, 0, 512, 256, 512, 256);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/music_stone.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/plague_stone.png"));
 		this.blit(ms, this.leftPos + -104, this.topPos + -109, 0, 0, 16, 16, 16, 16);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/music_master.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/plague_master.png"));
 		this.blit(ms, this.leftPos + 93, this.topPos + -109, 0, 0, 16, 16, 16, 16);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/music_element.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/plague_element.png"));
 		this.blit(ms, this.leftPos + 71, this.topPos + -85, 0, 0, 53, 128, 53, 128);
 
 		RenderSystem.disableBlend();
@@ -81,9 +81,9 @@ public class EBMusicScreen extends AbstractContainerScreen<EBMusicMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Additional, Unique", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Music", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Pleasure", -162, -49, -12829636);
+		this.font.draw(poseStack, "Class: Additional", -162, -85, -12829636);
+		this.font.draw(poseStack, "Element: Plague", -162, -67, -12829636);
+		this.font.draw(poseStack, "Force: Infection", -162, -49, -12829636);
 	}
 
 	@Override
@@ -98,8 +98,8 @@ public class EBMusicScreen extends AbstractContainerScreen<EBMusicMenu> {
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TextComponent(">"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBMusicButtonMessage(0, x, y, z));
-				EBMusicButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new EBPlagueButtonMessage(0, x, y, z));
+				EBPlagueButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
 	}

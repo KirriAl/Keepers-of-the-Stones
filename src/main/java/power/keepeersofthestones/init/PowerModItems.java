@@ -108,6 +108,7 @@ import power.keepeersofthestones.item.PointItem;
 import power.keepeersofthestones.item.PlasmaBallItem;
 import power.keepeersofthestones.item.PlagueStoneItem;
 import power.keepeersofthestones.item.PlagueItem;
+import power.keepeersofthestones.item.PlagueBatteryItem;
 import power.keepeersofthestones.item.PieceOfEarthItem;
 import power.keepeersofthestones.item.OceanSwordItem;
 import power.keepeersofthestones.item.OceanStoneItem;
@@ -172,6 +173,7 @@ import power.keepeersofthestones.item.LavaBallItem;
 import power.keepeersofthestones.item.KunaiItem;
 import power.keepeersofthestones.item.IronShieldItem;
 import power.keepeersofthestones.item.IronGolemCreateItem;
+import power.keepeersofthestones.item.InjectionItem;
 import power.keepeersofthestones.item.IncreasePowerItem;
 import power.keepeersofthestones.item.IceStoneItem;
 import power.keepeersofthestones.item.IceSpearItem;
@@ -703,6 +705,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> WALKING_STICK = REGISTRY.register("walking_stick", () -> new WalkingStickItem());
 	public static final RegistryObject<Item> MUSKET = REGISTRY.register("musket", () -> new MusketItem());
 	public static final RegistryObject<Item> MASS_INFECTION = REGISTRY.register("mass_infection", () -> new MassInfectionItem());
+	public static final RegistryObject<Item> INJECTION = REGISTRY.register("injection", () -> new InjectionItem());
+	public static final RegistryObject<Item> PLAGUE_BATTERY = REGISTRY.register("plague_battery", () -> new PlagueBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -28,16 +28,6 @@
       }
     ]
   },
-  "time_power": {
-    "category": "player",
-    "subtitle": "subtitles.time_power",
-    "sounds": [
-      {
-        "name": "power:time_travel",
-        "stream": false
-      }
-    ]
-  },
   "tyrannosaurus_rex.hurt": {
     "category": "neutral",
     "sounds": [
@@ -70,6 +60,16 @@
     "sounds": [
       {
         "name": "power:raptor.hurt",
+        "stream": false
+      }
+    ]
+  },
+  "time_power": {
+    "category": "player",
+    "subtitle": "subtitles.time_power",
+    "sounds": [
+      {
+        "name": "power:time_travel",
         "stream": false
       }
     ]
