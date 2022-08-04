@@ -116,7 +116,7 @@ public class ChoiseMagicStonesPage2GuiWindow extends ContainerScreen<ChoiseMagic
 		this.blit(ms, this.guiLeft + 307, this.guiTop + 87, 0, 0, 16, 16, 16, 16);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/plague_master.png"));
-		this.blit(ms, this.guiLeft + 307, this.guiTop + 114, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.guiLeft + 307, this.guiTop + 114, 0, 0, 17, 17, 17, 17);
 
 		RenderSystem.disableBlend();
 	}

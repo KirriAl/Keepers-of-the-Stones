@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.renderer.MusketRenderer;
 import power.keepeersofthestones.PowerModElements;
 
@@ -32,7 +33,11 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @PowerModElements.ModElement.Tag
 public class MusketItem extends PowerModElements.ModElement {
@@ -86,6 +91,10 @@ public class MusketItem extends PowerModElements.ModElement {
 					ArrowCustomEntity entityarrow = shoot(world, entity, random, 1f, 8.7, 1);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
+
+					RechargeMagicFireballProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				}
 			}
 		}

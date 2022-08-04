@@ -5,7 +5,6 @@ import power.keepeersofthestones.PowerMod;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.IWorld;
 import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
@@ -49,11 +48,12 @@ public class MAssInfectionTickProcedure {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"effect give @e[dx=200, dy=200, dz=200] wither 1 1");
+						"effect give @e wither 1 1");
 			}
 		}
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WITHER, (int) 120, (int) 2));
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(Effects.WITHER);
+		}
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(ParticleTypes.WITCH, x, y, z, (int) 10, 1, 1, 1, 1);
 		}

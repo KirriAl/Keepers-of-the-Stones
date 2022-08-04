@@ -5,6 +5,7 @@ import power.keepeersofthestones.potion.RechargeVacuumStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTornadoStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTimeStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTeleportationStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeTechnologyStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSunStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSpeedStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStonePotionEffect;
@@ -36,7 +37,6 @@ import power.keepeersofthestones.potion.RechargeBloodStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAnimalsStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAmberStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAirStonePotionEffect;
-import power.keepeersofthestones.potion.FireMasterPotionEffect;
 import power.keepeersofthestones.item.WaterStoneItem;
 import power.keepeersofthestones.item.VacuumStoneItem;
 import power.keepeersofthestones.item.TornadoStoneItem;
@@ -66,6 +66,7 @@ import power.keepeersofthestones.item.LavaStoneItem;
 import power.keepeersofthestones.item.IceStoneItem;
 import power.keepeersofthestones.item.GreeneryStoneItem;
 import power.keepeersofthestones.item.FireStoneItem;
+import power.keepeersofthestones.item.ExplosionStoneItem;
 import power.keepeersofthestones.item.EnergyStoneItem;
 import power.keepeersofthestones.item.EarthStoneItem;
 import power.keepeersofthestones.item.DestructionStoneItem;
@@ -612,8 +613,8 @@ public class RespawnPlayerProcedure {
 						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 					}
 					if (entity instanceof LivingEntity)
-						((LivingEntity) entity)
-								.addPotionEffect(new EffectInstance(FireMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+						((LivingEntity) entity).addPotionEffect(
+								new EffectInstance(RechargeTechnologyStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).time) {
@@ -752,6 +753,24 @@ public class RespawnPlayerProcedure {
 					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(PlagueStoneItem.block);
+						_setstack.setCount((int) 1);
+						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+					}
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity)
+								.addPotionEffect(new EffectInstance(RechargePlagueStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).explosion) {
+					{
+						boolean _setval = (false);
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.explosion = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _setstack = new ItemStack(ExplosionStoneItem.block);
 						_setstack.setCount((int) 1);
 						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 					}
@@ -1013,24 +1032,49 @@ public class RespawnPlayerProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.creation = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.destruction = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PowerModVariables.PlayerVariables())).amber) {
-			{
-				boolean _setval = (false);
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.amber = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PowerModVariables.PlayerVariables())).battery) {
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.amber = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof PlayerEntity) {
+					ItemStack _setstack = new ItemStack(AmberStoneItem.block);
+					_setstack.setCount((int) 1);
+					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+				}
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity)
+							.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+			} else {
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.amber = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
-			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = new ItemStack(AmberStoneItem.block);
-				_setstack.setCount((int) 1);
-				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
-			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity)
-						.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 		}
 	}
 }

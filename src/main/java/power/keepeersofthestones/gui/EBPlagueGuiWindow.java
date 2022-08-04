@@ -59,7 +59,7 @@ public class EBPlagueGuiWindow extends ContainerScreen<EBPlagueGui.GuiContainerM
 		this.blit(ms, this.guiLeft + -104, this.guiTop + -109, 0, 0, 16, 16, 16, 16);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/plague_master.png"));
-		this.blit(ms, this.guiLeft + 93, this.guiTop + -109, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.guiLeft + 93, this.guiTop + -109, 0, 0, 17, 17, 17, 17);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/plague_element.png"));
 		this.blit(ms, this.guiLeft + 71, this.guiTop + -85, 0, 0, 53, 128, 53, 128);

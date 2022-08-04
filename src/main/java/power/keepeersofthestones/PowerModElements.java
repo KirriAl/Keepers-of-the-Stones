@@ -60,8 +60,6 @@ public class PowerModElements {
 		sounds.put(new ResourceLocation("power", "raptor.dead"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "raptor.dead")));
 		sounds.put(new ResourceLocation("power", "raptor.hurt"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "raptor.hurt")));
 		sounds.put(new ResourceLocation("power", "time_power"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "time_power")));
-		sounds.put(new ResourceLocation("power", "music.dino_thunder"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music.dino_thunder")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("power").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
