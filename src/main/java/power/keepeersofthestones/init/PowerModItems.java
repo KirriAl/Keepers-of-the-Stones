@@ -223,6 +223,7 @@ import power.keepeersofthestones.item.DestructionStoneItem;
 import power.keepeersofthestones.item.DestructionSphereItem;
 import power.keepeersofthestones.item.DestructionPowerItem;
 import power.keepeersofthestones.item.DestructionItem;
+import power.keepeersofthestones.item.DestructionBatteryItem;
 import power.keepeersofthestones.item.CutterSwordItem;
 import power.keepeersofthestones.item.CultivationItem;
 import power.keepeersofthestones.item.CrystallizedItem;
@@ -234,6 +235,7 @@ import power.keepeersofthestones.item.CrystalBatteryItem;
 import power.keepeersofthestones.item.CrestcentItem;
 import power.keepeersofthestones.item.CreationStoneItem;
 import power.keepeersofthestones.item.CreationItem;
+import power.keepeersofthestones.item.CreationBatteryItem;
 import power.keepeersofthestones.item.CreateShadowItem;
 import power.keepeersofthestones.item.CoralShieldItem;
 import power.keepeersofthestones.item.ConstructionsItem;
@@ -258,6 +260,7 @@ import power.keepeersofthestones.item.AmberStreaksItem;
 import power.keepeersofthestones.item.AmberStoneItem;
 import power.keepeersofthestones.item.AmberShieldItem;
 import power.keepeersofthestones.item.AmberItem;
+import power.keepeersofthestones.item.AmberBatteryItem;
 import power.keepeersofthestones.item.AirStoneItem;
 import power.keepeersofthestones.item.AirFlowItem;
 import power.keepeersofthestones.item.AirBladeItem;
@@ -707,6 +710,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MASS_INFECTION = REGISTRY.register("mass_infection", () -> new MassInfectionItem());
 	public static final RegistryObject<Item> INJECTION = REGISTRY.register("injection", () -> new InjectionItem());
 	public static final RegistryObject<Item> PLAGUE_BATTERY = REGISTRY.register("plague_battery", () -> new PlagueBatteryItem());
+	public static final RegistryObject<Item> AMBER_BATTERY = REGISTRY.register("amber_battery", () -> new AmberBatteryItem());
+	public static final RegistryObject<Item> CREATION_BATTERY = REGISTRY.register("creation_battery", () -> new CreationBatteryItem());
+	public static final RegistryObject<Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", () -> new DestructionBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

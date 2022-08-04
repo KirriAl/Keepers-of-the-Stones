@@ -15675,6 +15675,84 @@
       "locked_code": false,
       "registry_name": "eb_plague",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "AmberBattery",
+      "type": "item",
+      "sortid": 935,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "AmberBatteryUse",
+      "type": "procedure",
+      "sortid": 936,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "CreationBattery",
+      "type": "item",
+      "sortid": 937,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creation_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "CreationBatteryUse",
+      "type": "procedure",
+      "sortid": 938,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creation_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "DestructionBattery",
+      "type": "item",
+      "sortid": 939,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "DestructionBatteryUse",
+      "type": "procedure",
+      "sortid": 940,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
     }
   ],
   "variable_elements": [
@@ -16659,6 +16737,7 @@
       "item.power.explode_boots": "Шахид-ботинки",
       "item.power.lava_chestplate": "Лавовый Пояс",
       "item.power.elemental_music_disc": "Пластинка",
+      "item.power.destruction_battery": "Battery",
       "item.power.time_chestplate": "Нагрудник времени",
       "item.power.mace": "Булава",
       "item.power.lightning_chestplate": "Мантия Молнии",
@@ -16808,6 +16887,7 @@
       "item.power.vacuum_boots": "Ваакумные ботинки",
       "item.power.water_battery": "Батарея",
       "item.power.time_boots": "Ботинки времени",
+      "item.power.creation_battery": "Battery",
       "item.power.plasma_ball": "Плазменный шар",
       "item.power.technology_battery": "Батарея",
       "effect.power.explosion_master": "Мастер Взрыва",
@@ -16926,6 +17006,7 @@
       "item.power.lightning_stone": "Камень Молнии",
       "item.power.mushrooms_stone": "Камень Грибов",
       "item.power.ocean_boots": "Ботинки Океана",
+      "item.power.amber_battery": "Battery",
       "effect.power.moon_master": "Мастер Луны",
       "item.power.crystallized": "Огниво Портала (Кристаллизованный Мир)",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
@@ -17275,6 +17356,7 @@
       "item.power.explode_boots": "Explode Boots",
       "item.power.lava_chestplate": "Lava Chestplate",
       "item.power.elemental_music_disc": "Music Disc",
+      "item.power.destruction_battery": "Battery",
       "item.power.time_chestplate": "Time Chestplate",
       "item.power.mace": "Mace",
       "item.power.lightning_chestplate": "Lightning Chestplate",
@@ -17425,6 +17507,7 @@
       "item.power.vacuum_boots": "Vacuum Boots",
       "item.power.water_battery": "Battery",
       "item.power.time_boots": "Time Boots",
+      "item.power.creation_battery": "Battery",
       "item.power.plasma_ball": "Plasma Ball",
       "item.power.technology_battery": "Battery",
       "effect.power.explosion_master": "Master of Explosion",
@@ -17544,6 +17627,7 @@
       "item.power.lightning_stone": "Lightning Stone",
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
+      "item.power.amber_battery": "Battery",
       "effect.power.moon_master": "Master of the Moon",
       "item.power.crystallized": "Crystallized Portal Igniter",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
