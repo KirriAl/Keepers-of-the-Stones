@@ -28,6 +28,16 @@ public class PowerModSounds {
 		REGISTRY.put(new ResourceLocation("power", "raptor.dead"), new SoundEvent(new ResourceLocation("power", "raptor.dead")));
 		REGISTRY.put(new ResourceLocation("power", "raptor.hurt"), new SoundEvent(new ResourceLocation("power", "raptor.hurt")));
 		REGISTRY.put(new ResourceLocation("power", "time_power"), new SoundEvent(new ResourceLocation("power", "time_power")));
+		REGISTRY.put(new ResourceLocation("power", "music1"), new SoundEvent(new ResourceLocation("power", "music1")));
+		REGISTRY.put(new ResourceLocation("power", "music2"), new SoundEvent(new ResourceLocation("power", "music2")));
+		REGISTRY.put(new ResourceLocation("power", "music3"), new SoundEvent(new ResourceLocation("power", "music3")));
+		REGISTRY.put(new ResourceLocation("power", "music4"), new SoundEvent(new ResourceLocation("power", "music4")));
+		REGISTRY.put(new ResourceLocation("power", "music5"), new SoundEvent(new ResourceLocation("power", "music5")));
+		REGISTRY.put(new ResourceLocation("power", "music6"), new SoundEvent(new ResourceLocation("power", "music6")));
+		REGISTRY.put(new ResourceLocation("power", "music7"), new SoundEvent(new ResourceLocation("power", "music7")));
+		REGISTRY.put(new ResourceLocation("power", "music8"), new SoundEvent(new ResourceLocation("power", "music8")));
+		REGISTRY.put(new ResourceLocation("power", "music9"), new SoundEvent(new ResourceLocation("power", "music9")));
+		REGISTRY.put(new ResourceLocation("power", "music10"), new SoundEvent(new ResourceLocation("power", "music10")));
 	}
 
 	@SubscribeEvent

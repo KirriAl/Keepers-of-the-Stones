@@ -25,11 +25,11 @@ public class PlayMusic9Procedure {
 					new TextComponent(""), _level.getServer(), null).withSuppressedOutput(), "stopsound @a");
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:music.dino_thunder")),
+				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:music9")),
 						SoundSource.MASTER, 1, 1);
 			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:music.dino_thunder")),
-						SoundSource.MASTER, 1, 1, false);
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:music9")), SoundSource.MASTER, 1, 1,
+						false);
 			}
 		}
 		if (entity instanceof Player _player)
