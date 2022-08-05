@@ -26,6 +26,9 @@ public class VacuumStoneUseProcedure {
 							.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
 						if (entity instanceof LivingEntity _entity)
 							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.VACUUM_MASTER.get(), 24000, 0, (false), (false)));
+					} else {
+						if (entity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.VACUUM_MASTER.get(), 12000, 0, (false), (false)));
 					}
 				}
 			}
