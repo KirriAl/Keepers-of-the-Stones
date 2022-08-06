@@ -3,6 +3,8 @@ package power.keepeersofthestones.command;
 
 import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
 import power.keepeersofthestones.procedures.ResetSkillsAndLevelsProcedure;
+import power.keepeersofthestones.procedures.OpenMusicPlayerGUIProcedure;
+import power.keepeersofthestones.procedures.LevelSetProcedure;
 import power.keepeersofthestones.procedures.DemoteKeeperProcedure;
 import power.keepeersofthestones.procedures.AppointKeeperProcedure;
 
@@ -18,6 +20,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
+
+import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
 public class ConfstoneCommand {
@@ -36,20 +40,8 @@ public class ConfstoneCommand {
 
 					ResetmychoiceProcedureProcedure.execute(world, x, y, z, entity);
 					return 0;
-				})).then(Commands.literal("reset_level").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null)
-						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
-
-					ResetSkillsAndLevelsProcedure.execute(arguments);
-					return 0;
-				}))).then(Commands.literal("supreme_master")
-						.then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("true").executes(arguments -> {
+				})).then(Commands.literal("level").then(Commands.literal("set").then(Commands.argument("name", EntityArgument.player())
+						.then(Commands.argument("level", DoubleArgumentType.doubleArg()).executes(arguments -> {
 							ServerLevel world = arguments.getSource().getLevel();
 							double x = arguments.getSource().getPosition().x();
 							double y = arguments.getSource().getPosition().y();
@@ -59,9 +51,9 @@ public class ConfstoneCommand {
 								entity = FakePlayerFactory.getMinecraft(world);
 							Direction direction = entity.getDirection();
 
-							AppointKeeperProcedure.execute(arguments);
+							LevelSetProcedure.execute(arguments, entity);
 							return 0;
-						})).then(Commands.literal("false").executes(arguments -> {
+						})))).then(Commands.literal("reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 							ServerLevel world = arguments.getSource().getLevel();
 							double x = arguments.getSource().getPosition().x();
 							double y = arguments.getSource().getPosition().y();
@@ -71,8 +63,45 @@ public class ConfstoneCommand {
 								entity = FakePlayerFactory.getMinecraft(world);
 							Direction direction = entity.getDirection();
 
-							DemoteKeeperProcedure.execute(arguments);
+							ResetSkillsAndLevelsProcedure.execute(arguments, entity);
 							return 0;
-						})))));
+						})))).then(Commands.literal("music_player").executes(arguments -> {
+							ServerLevel world = arguments.getSource().getLevel();
+							double x = arguments.getSource().getPosition().x();
+							double y = arguments.getSource().getPosition().y();
+							double z = arguments.getSource().getPosition().z();
+							Entity entity = arguments.getSource().getEntity();
+							if (entity == null)
+								entity = FakePlayerFactory.getMinecraft(world);
+							Direction direction = entity.getDirection();
+
+							OpenMusicPlayerGUIProcedure.execute(world, x, y, z, entity);
+							return 0;
+						})).then(Commands.literal("supreme_master")
+								.then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("true").executes(arguments -> {
+									ServerLevel world = arguments.getSource().getLevel();
+									double x = arguments.getSource().getPosition().x();
+									double y = arguments.getSource().getPosition().y();
+									double z = arguments.getSource().getPosition().z();
+									Entity entity = arguments.getSource().getEntity();
+									if (entity == null)
+										entity = FakePlayerFactory.getMinecraft(world);
+									Direction direction = entity.getDirection();
+
+									AppointKeeperProcedure.execute(arguments, entity);
+									return 0;
+								})).then(Commands.literal("false").executes(arguments -> {
+									ServerLevel world = arguments.getSource().getLevel();
+									double x = arguments.getSource().getPosition().x();
+									double y = arguments.getSource().getPosition().y();
+									double z = arguments.getSource().getPosition().z();
+									Entity entity = arguments.getSource().getEntity();
+									if (entity == null)
+										entity = FakePlayerFactory.getMinecraft(world);
+									Direction direction = entity.getDirection();
+
+									DemoteKeeperProcedure.execute(arguments, entity);
+									return 0;
+								})))));
 	}
 }

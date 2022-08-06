@@ -10,17 +10,18 @@ import net.minecraft.commands.CommandSourceStack;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.arguments.DoubleArgumentType;
 
-public class DemoteKeeperProcedure {
+public class LevelSetProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
 			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "name")) {
 				{
-					boolean _setval = false;
+					double _setval = DoubleArgumentType.getDouble(arguments, "level");
 					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.keeper = _setval;
+						capability.power_level = _setval;
 						capability.syncPlayerVariables(entityiterator);
 					});
 				}
@@ -29,6 +30,6 @@ public class DemoteKeeperProcedure {
 			e.printStackTrace();
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(new TextComponent("The player is successfully demoted by the keeper of the stones!"), (false));
+			_player.displayClientMessage(new TextComponent("The level has been successfully set!"), (false));
 	}
 }
