@@ -242,7 +242,7 @@ public class PowerModVariables {
 		public double bposy = 0;
 		public double bposz = 0;
 		public double oposx = 0;
-		public double oposy = 0;
+		public double oposy = 0.0;
 		public double oposz = 0;
 		public boolean explosion_stone = false;
 		public boolean amber_stone = false;
@@ -483,7 +483,7 @@ public class PowerModVariables {
 		public boolean technology = false;
 		public boolean time = false;
 		public double spawnx = 0.0;
-		public double spawny = 75.0;
+		public double spawny = 80.0;
 		public double spawnz = 0.0;
 		public boolean battery = false;
 		public boolean recharge_spell_sun = false;
@@ -502,13 +502,13 @@ public class PowerModVariables {
 		public boolean speed = false;
 		public boolean turbospeed = false;
 		public double c1x = 0;
-		public double c1y = 0;
+		public double c1y = 80.0;
 		public double c1z = 0;
 		public double c2x = 0;
-		public double c2y = 0;
-		public double c2z = 0;
+		public double c2y = 80.0;
+		public double c2z = 0.0;
 		public double c3x = 0;
-		public double c3y = 0;
+		public double c3y = 80.0;
 		public double c3z = 0;
 		public boolean poison = false;
 		public boolean mushrooms = false;
