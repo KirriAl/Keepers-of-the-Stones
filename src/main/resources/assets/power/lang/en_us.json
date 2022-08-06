@@ -1,9 +1,9 @@
 {
   "block.power.crystal_yellow": "Crystal Yellow",
-  "item.power.moon_battery": "Battery",
   "item.power.energy_leggings": "Energy Leggings",
-  "item.power.explode_leggings": "Explode Leggings",
+  "item.power.moon_battery": "Battery",
   "item.power.sun_battery": "Battery",
+  "item.power.explode_leggings": "Explode Leggings",
   "item.power.create_shadow": "Create Shadow",
   "effect.power.recharge_ice_stone": "Recharge",
   "item.power.disco_ball": "Disco Ball",
