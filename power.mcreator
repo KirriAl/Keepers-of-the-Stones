@@ -12296,27 +12296,6 @@
       "path": "~/Mist"
     },
     {
-      "name": "ResetSkillsAndLevels",
-      "type": "procedure",
-      "sortid": 757,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reset_skills_and_levels",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
       "name": "LevelsAndSkillsPage",
       "type": "gui",
       "sortid": 758,
@@ -16366,7 +16345,7 @@
       "name": "spawny",
       "type": "number",
       "scope": "player_persistent",
-      "value": "75.0"
+      "value": "80.0"
     },
     {
       "name": "spawnz",
@@ -16456,7 +16435,7 @@
       "name": "oposy",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "oposz",
@@ -16576,7 +16555,7 @@
       "name": "c1y",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "80.0"
     },
     {
       "name": "c1z",
@@ -16594,13 +16573,13 @@
       "name": "c2y",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "80.0"
     },
     {
       "name": "c2z",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "c3x",
@@ -16612,7 +16591,7 @@
       "name": "c3y",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "80.0"
     },
     {
       "name": "c3z",

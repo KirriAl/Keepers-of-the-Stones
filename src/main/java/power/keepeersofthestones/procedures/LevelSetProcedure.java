@@ -30,6 +30,9 @@ public class LevelSetProcedure {
 			e.printStackTrace();
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(new TextComponent("The level has been successfully set!"), (false));
+			_player.displayClientMessage(new TextComponent(
+					("The player has successfully set the level: " + (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new PowerModVariables.PlayerVariables())).power_level)),
+					(false));
 	}
 }

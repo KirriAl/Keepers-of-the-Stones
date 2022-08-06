@@ -2,7 +2,6 @@
 package power.keepeersofthestones.command;
 
 import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
-import power.keepeersofthestones.procedures.ResetSkillsAndLevelsProcedure;
 import power.keepeersofthestones.procedures.OpenMusicPlayerGUIProcedure;
 import power.keepeersofthestones.procedures.LevelSetProcedure;
 import power.keepeersofthestones.procedures.DemoteKeeperProcedure;
@@ -53,19 +52,7 @@ public class ConfstoneCommand {
 
 							LevelSetProcedure.execute(arguments, entity);
 							return 0;
-						})))).then(Commands.literal("reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-							Direction direction = entity.getDirection();
-
-							ResetSkillsAndLevelsProcedure.execute(arguments, entity);
-							return 0;
-						})))).then(Commands.literal("music_player").executes(arguments -> {
+						}))))).then(Commands.literal("music_player").executes(arguments -> {
 							ServerLevel world = arguments.getSource().getLevel();
 							double x = arguments.getSource().getPosition().x();
 							double y = arguments.getSource().getPosition().y();
