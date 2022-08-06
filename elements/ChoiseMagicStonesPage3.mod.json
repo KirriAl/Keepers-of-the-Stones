@@ -13,10 +13,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Spirit",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Spirit",
           "x": 51,
           "y": 53
         }
@@ -48,10 +48,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Form",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Form",
           "x": 51,
           "y": 134
         }
@@ -59,10 +59,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Aether",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Aether",
           "x": 51,
           "y": 80
         }
@@ -70,10 +70,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mind",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mind",
           "x": 51,
           "y": 161
         }
@@ -81,10 +81,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "G. Dust",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "G. Dust",
           "x": 141,
           "y": 53
         }
@@ -125,44 +125,11 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Smoke",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Smoke",
           "x": 51,
-          "y": 107
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 53
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 80
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
           "y": 107
         }
       },
@@ -177,94 +144,6 @@
           "height": 20,
           "name": "Previous page",
           "x": 24,
-          "y": 188
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 134
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 161
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 53
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 80
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 107
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 134
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 161
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "Next page",
-          "width": 72,
-          "height": 20,
-          "name": "Next page",
-          "x": 330,
           "y": 188
         }
       },
