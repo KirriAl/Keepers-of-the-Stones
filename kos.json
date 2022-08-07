@@ -1,14 +1,14 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
   "promos": {
-    "1.16.5-latest": "2.4.3",
-    "1.16.5-recommended": "2.4.3",
+    "1.16.5-latest": "2.5.0",
+    "1.16.5-recommended": "2.5.0",
     "1.17.1-latest": "1.4.1",
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.4.1",
-    "1.18.2-recommended": "2.4.1"
+    "1.18.2-latest": "2.5.0",
+    "1.18.2-recommended": "2.5.0"
   },
   "1.16.5": {
    "1.1.18": "
@@ -159,6 +159,25 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
  "2.4.3": "
 - [Bugfix] Fixed a bug where projectiles from the ice master caused the game to crash
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.5.0": "
+- Added new elements - mercury, and music
+- Added dimension - Sanny Kingdom
+- Added the ability to be a keeper of stones (via the /confstone supreme_master command)
+- Added batteries of creation, destruction and amber (available only in creative)
+- Added dependency on the Pehkui mod
+- Updated some textures
+- Improved command /confstone
+- [Bugfix] Fixed a bug when in another world, it was possible to select a busy stone
+- [Bugfix] Fixed a bug with a mushroom stone, after using the battery
+- [Bugfix] Fixed a bug where the explosion stone is not returned to inventory
+- [Bugfix] Fixed a bug when the vacuum master received a copy of his stone during transformation
+- [Bugfix] A bug has been fixed due to which the fire stone appeared after the death of the technology master
+- [Bugfix] Fixed a bug that caused the mushroom stone to not return after death
+- [Bugfix] Fixed a bug that made it impossible to select a mushroom stone
+- [Bugfix] Fixed an energy absorption bug that didn't work on new elements starting with mist
+- [Bugfix] Fixed spawn of mobs in some dimensions
+- [Bugfix] Fixed the surface of Venus (for 1.16.5)
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   },
   "1.17.1": {
@@ -604,6 +623,25 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Now ore appears in the crystallized world
 - Musical record elements can now be bought from a traveling merchant
 - [Bugfix] Minor bugs fixed
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.5.0": "
+- Added new elements - mercury, and music
+- Added dimension - Sanny Kingdom
+- Added the ability to be a keeper of stones (via the /confstone supreme_master command)
+- Added batteries of creation, destruction and amber (available only in creative)
+- Added dependency on the Pehkui mod
+- Updated some textures
+- Improved command /confstone
+- [Bugfix] Fixed a bug when in another world, it was possible to select a busy stone
+- [Bugfix] Fixed a bug with a mushroom stone, after using the battery
+- [Bugfix] Fixed a bug where the explosion stone is not returned to inventory
+- [Bugfix] Fixed a bug when the vacuum master received a copy of his stone during transformation
+- [Bugfix] A bug has been fixed due to which the fire stone appeared after the death of the technology master
+- [Bugfix] Fixed a bug that caused the mushroom stone to not return after death
+- [Bugfix] Fixed a bug that made it impossible to select a mushroom stone
+- [Bugfix] Fixed an energy absorption bug that didn't work on new elements starting with mist
+- [Bugfix] Fixed spawn of mobs in some dimensions
+- [Bugfix] Fixed the surface of Venus (for 1.16.5)
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
