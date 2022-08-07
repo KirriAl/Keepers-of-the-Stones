@@ -27,7 +27,7 @@ public class MushroomSaturationItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MushroomSaturationItem(PowerModElements instance) {
-		super(instance, 869);
+		super(instance, 872);
 	}
 
 	@Override

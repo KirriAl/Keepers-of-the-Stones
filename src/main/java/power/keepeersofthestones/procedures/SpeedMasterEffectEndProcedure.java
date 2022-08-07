@@ -127,7 +127,7 @@ public class SpeedMasterEffectEndProcedure {
 						((LivingEntity) entity)
 								.addPotionEffect(new EffectInstance(RechargeSpeedStonePotionEffect.potion, (int) 3600, (int) 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new PowerModVariables.PlayerVariables())).power_level == 3) {
+						.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
 					if (entity instanceof LivingEntity)
 						((LivingEntity) entity)
 								.addPotionEffect(new EffectInstance(RechargeSpeedStonePotionEffect.potion, (int) 2400, (int) 0, (false), (false)));

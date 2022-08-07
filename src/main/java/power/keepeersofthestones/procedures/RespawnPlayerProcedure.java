@@ -5,6 +5,7 @@ import power.keepeersofthestones.potion.RechargeVacuumStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTornadoStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTimeStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTeleportationStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeTechnologyStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSunStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSpeedStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStonePotionEffect;
@@ -13,7 +14,9 @@ import power.keepeersofthestones.potion.RechargeShadowStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSandStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeRainStonePotionEffect;
 import power.keepeersofthestones.potion.RechargePoisonStonePotionEffect;
+import power.keepeersofthestones.potion.RechargePlagueStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeOceanStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeMusicStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMushroomsStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMoonStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMistStonePotionEffect;
@@ -34,7 +37,6 @@ import power.keepeersofthestones.potion.RechargeBloodStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAnimalsStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAmberStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeAirStonePotionEffect;
-import power.keepeersofthestones.potion.FireMasterPotionEffect;
 import power.keepeersofthestones.item.WaterStoneItem;
 import power.keepeersofthestones.item.VacuumStoneItem;
 import power.keepeersofthestones.item.TornadoStoneItem;
@@ -49,11 +51,14 @@ import power.keepeersofthestones.item.ShadowStoneItem;
 import power.keepeersofthestones.item.SandStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
+import power.keepeersofthestones.item.PlagueStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
+import power.keepeersofthestones.item.MusicStoneItem;
 import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
 import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MetalStoneItem;
+import power.keepeersofthestones.item.MercuryStoneItem;
 import power.keepeersofthestones.item.MagnetStoneItem;
 import power.keepeersofthestones.item.LightningStoneItem;
 import power.keepeersofthestones.item.LightStoneItem;
@@ -61,6 +66,7 @@ import power.keepeersofthestones.item.LavaStoneItem;
 import power.keepeersofthestones.item.IceStoneItem;
 import power.keepeersofthestones.item.GreeneryStoneItem;
 import power.keepeersofthestones.item.FireStoneItem;
+import power.keepeersofthestones.item.ExplosionStoneItem;
 import power.keepeersofthestones.item.EnergyStoneItem;
 import power.keepeersofthestones.item.EarthStoneItem;
 import power.keepeersofthestones.item.DestructionStoneItem;
@@ -607,8 +613,8 @@ public class RespawnPlayerProcedure {
 						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 					}
 					if (entity instanceof LivingEntity)
-						((LivingEntity) entity)
-								.addPotionEffect(new EffectInstance(FireMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+						((LivingEntity) entity).addPotionEffect(
+								new EffectInstance(RechargeTechnologyStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).time) {
@@ -699,6 +705,78 @@ public class RespawnPlayerProcedure {
 					if (entity instanceof LivingEntity)
 						((LivingEntity) entity).addPotionEffect(
 								new EffectInstance(RechargeMushroomsStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).mercury) {
+					{
+						boolean _setval = (false);
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.mercury = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _setstack = new ItemStack(MercuryStoneItem.block);
+						_setstack.setCount((int) 1);
+						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+					}
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).addPotionEffect(
+								new EffectInstance(RechargeMushroomsStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).music) {
+					{
+						boolean _setval = (false);
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.music = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _setstack = new ItemStack(MusicStoneItem.block);
+						_setstack.setCount((int) 1);
+						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+					}
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity)
+								.addPotionEffect(new EffectInstance(RechargeMusicStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).plague) {
+					{
+						boolean _setval = (false);
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.plague = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _setstack = new ItemStack(PlagueStoneItem.block);
+						_setstack.setCount((int) 1);
+						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+					}
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity)
+								.addPotionEffect(new EffectInstance(RechargePlagueStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).explosion) {
+					{
+						boolean _setval = (false);
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.explosion = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof PlayerEntity) {
+						ItemStack _setstack = new ItemStack(ExplosionStoneItem.block);
+						_setstack.setCount((int) 1);
+						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+					}
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity)
+								.addPotionEffect(new EffectInstance(RechargePlagueStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).battery) {
@@ -933,24 +1011,70 @@ public class RespawnPlayerProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.mercury = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.music = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.plague = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.creation = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.destruction = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PowerModVariables.PlayerVariables())).amber) {
-			{
-				boolean _setval = (false);
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.amber = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PowerModVariables.PlayerVariables())).battery) {
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.amber = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof PlayerEntity) {
+					ItemStack _setstack = new ItemStack(AmberStoneItem.block);
+					_setstack.setCount((int) 1);
+					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+				}
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity)
+							.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+			} else {
+				{
+					boolean _setval = (false);
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.amber = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
-			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = new ItemStack(AmberStoneItem.block);
-				_setstack.setCount((int) 1);
-				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
-			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity)
-						.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 		}
 	}
 }

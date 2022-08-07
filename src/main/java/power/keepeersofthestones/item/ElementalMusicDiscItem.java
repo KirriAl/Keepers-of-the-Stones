@@ -17,7 +17,7 @@ public class ElementalMusicDiscItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public ElementalMusicDiscItem(PowerModElements instance) {
-		super(instance, 47);
+		super(instance, 49);
 	}
 
 	@Override

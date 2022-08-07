@@ -16,7 +16,7 @@ public class WaterKatanaItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public WaterKatanaItem(PowerModElements instance) {
-		super(instance, 263);
+		super(instance, 268);
 	}
 
 	@Override

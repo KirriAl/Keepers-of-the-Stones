@@ -29,7 +29,7 @@ public class DestructionItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public DestructionItem(PowerModElements instance) {
-		super(instance, 465);
+		super(instance, 470);
 	}
 
 	@Override

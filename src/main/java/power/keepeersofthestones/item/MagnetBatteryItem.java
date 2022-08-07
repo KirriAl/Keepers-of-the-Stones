@@ -32,7 +32,7 @@ public class MagnetBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MagnetBatteryItem(PowerModElements instance) {
-		super(instance, 99);
+		super(instance, 102);
 	}
 
 	@Override

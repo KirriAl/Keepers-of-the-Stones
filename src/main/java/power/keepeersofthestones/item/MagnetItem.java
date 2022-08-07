@@ -29,7 +29,7 @@ public class MagnetItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public MagnetItem(PowerModElements instance) {
-		super(instance, 716);
+		super(instance, 721);
 	}
 
 	@Override

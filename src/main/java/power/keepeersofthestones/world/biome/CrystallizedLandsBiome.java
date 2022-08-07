@@ -1,6 +1,8 @@
 
 package power.keepeersofthestones.world.biome;
 
+import power.keepeersofthestones.entity.ShadowEntity;
+import power.keepeersofthestones.entity.GlowEntity;
 import power.keepeersofthestones.PowerModElements;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,6 +34,7 @@ import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.state.BooleanProperty;
+import net.minecraft.entity.EntityClassification;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
@@ -44,7 +47,7 @@ public class CrystallizedLandsBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public CrystallizedLandsBiome(PowerModElements instance) {
-		super(instance, 767);
+		super(instance, 770);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
@@ -68,6 +71,8 @@ public class CrystallizedLandsBiome extends PowerModElements.ModElement {
 				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
 				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(GlowEntity.entity, 20, 4, 4));
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(ShadowEntity.entity, 20, 4, 4));
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(0f).scale(0f).temperature(1.5f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();

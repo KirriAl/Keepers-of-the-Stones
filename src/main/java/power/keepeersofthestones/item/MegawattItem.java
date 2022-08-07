@@ -49,7 +49,7 @@ public class MegawattItem extends PowerModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletmegawatt").setRegistryName("entitybulletmegawatt");
 
 	public MegawattItem(PowerModElements instance) {
-		super(instance, 589);
+		super(instance, 594);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new MegawattRenderer.ModelRegisterHandler());
 	}
 

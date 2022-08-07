@@ -62,7 +62,7 @@ public class TornadoEntityEntity extends PowerModElements.ModElement {
 			.size(0.6f, 1.8f)).build("tornado_entity").setRegistryName("tornado_entity");
 
 	public TornadoEntityEntity(PowerModElements instance) {
-		super(instance, 42);
+		super(instance, 43);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TornadoEntityRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

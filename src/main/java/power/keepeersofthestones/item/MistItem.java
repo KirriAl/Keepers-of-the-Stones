@@ -29,7 +29,7 @@ public class MistItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public MistItem(PowerModElements instance) {
-		super(instance, 751);
+		super(instance, 756);
 	}
 
 	@Override

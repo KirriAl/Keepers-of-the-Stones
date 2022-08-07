@@ -26,7 +26,7 @@ public class EnceladusIceDesertBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public EnceladusIceDesertBiome(PowerModElements instance) {
-		super(instance, 760);
+		super(instance, 764);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

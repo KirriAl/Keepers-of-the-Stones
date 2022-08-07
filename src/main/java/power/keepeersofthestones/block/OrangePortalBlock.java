@@ -58,7 +58,7 @@ public class OrangePortalBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public OrangePortalBlock(PowerModElements instance) {
-		super(instance, 610);
+		super(instance, 615);
 	}
 
 	@Override

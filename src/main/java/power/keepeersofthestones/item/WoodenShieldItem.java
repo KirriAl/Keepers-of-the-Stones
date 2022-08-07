@@ -27,7 +27,7 @@ public class WoodenShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public WoodenShieldItem(PowerModElements instance) {
-		super(instance, 277);
+		super(instance, 282);
 	}
 
 	@Override

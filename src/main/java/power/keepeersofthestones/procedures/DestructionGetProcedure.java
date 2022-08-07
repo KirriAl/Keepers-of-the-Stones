@@ -36,14 +36,14 @@ public class DestructionGetProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		Entity entity = (Entity) dependencies.get("entity");
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
-			if (!PowerModVariables.WorldVariables.get(world).destruction_stone) {
+			if (!PowerModVariables.MapVariables.get(world).destruction_stone) {
 				if (entity instanceof PlayerEntity) {
 					ItemStack _setstack = new ItemStack(DestructionStoneItem.block);
 					_setstack.setCount((int) 1);
 					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 				}
-				PowerModVariables.WorldVariables.get(world).destruction_stone = (true);
-				PowerModVariables.WorldVariables.get(world).syncData(world);
+				PowerModVariables.MapVariables.get(world).destruction_stone = (true);
+				PowerModVariables.MapVariables.get(world).syncData(world);
 				{
 					boolean _setval = (true);
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

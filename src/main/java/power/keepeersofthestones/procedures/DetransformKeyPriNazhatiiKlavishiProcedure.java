@@ -14,11 +14,14 @@ import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
 import power.keepeersofthestones.potion.SandMasterPotionEffect;
 import power.keepeersofthestones.potion.RainMasterPotionEffect;
 import power.keepeersofthestones.potion.PoisonMasterPotionEffect;
+import power.keepeersofthestones.potion.PlagueMasterPotionEffect;
 import power.keepeersofthestones.potion.OceanMasterPotionEffect;
+import power.keepeersofthestones.potion.MusicMasterPotionEffect;
 import power.keepeersofthestones.potion.MushroomsMasterPotionEffect;
 import power.keepeersofthestones.potion.MoonMasterPotionEffect;
 import power.keepeersofthestones.potion.MistMasterPotionEffect;
 import power.keepeersofthestones.potion.MetalMasterPotionEffect;
+import power.keepeersofthestones.potion.MercuryMasterPotionEffect;
 import power.keepeersofthestones.potion.MagnetMasterPotionEffect;
 import power.keepeersofthestones.potion.LightningMasterPotionEffect;
 import power.keepeersofthestones.potion.LightMasterPotionEffect;
@@ -159,6 +162,15 @@ public class DetransformKeyPriNazhatiiKlavishiProcedure {
 		}
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).removePotionEffect(MushroomsMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(MercuryMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(MusicMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(PlagueMasterPotionEffect.potion);
 		}
 	}
 }

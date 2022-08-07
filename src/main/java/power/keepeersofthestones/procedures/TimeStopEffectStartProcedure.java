@@ -9,8 +9,6 @@ import net.minecraft.world.GameRules;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
-import net.minecraft.potion.Effects;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
@@ -41,8 +39,19 @@ public class TimeStopEffectStartProcedure {
 		if (world instanceof World) {
 			((World) world).getGameRules().get(GameRules.DO_DAYLIGHT_CYCLE).set((false), ((World) world).getServer());
 		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(Effects.SLOWNESS);
+		{
+			Entity _ent = entity;
+			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+						"scale set pehkui:motion 0 @e");
+			}
+		}
+		{
+			Entity _ent = entity;
+			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+						"scale set pehkui:motion 1 @s");
+			}
 		}
 	}
 }

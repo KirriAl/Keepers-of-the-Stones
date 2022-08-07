@@ -70,10 +70,12 @@ public class AmberMasterEffectEndProcedure {
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")),
 					SoundCategory.PLAYERS, (float) 1, (float) 1, false);
 		}
-		if (entity instanceof PlayerEntity) {
-			ItemStack _setstack = new ItemStack(AmberStoneItem.block);
-			_setstack.setCount((int) 1);
-			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery) {
+			if (entity instanceof PlayerEntity) {
+				ItemStack _setstack = new ItemStack(AmberStoneItem.block);
+				_setstack.setCount((int) 1);
+				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+			}
 		}
 		if (entity instanceof PlayerEntity) {
 			ItemStack _stktoremove = new ItemStack(ForcereplicationItem.block);
@@ -110,20 +112,22 @@ public class AmberMasterEffectEndProcedure {
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity)
-						.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 3600, (int) 0, (false), (false)));
-		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity)
-						.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 2400, (int) 0, (false), (false)));
-		} else {
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity)
-						.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity)
+							.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 3600, (int) 0, (false), (false)));
+			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity)
+							.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 2400, (int) 0, (false), (false)));
+			} else {
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity)
+							.addPotionEffect(new EffectInstance(RechargeAmberStonePotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+			}
 		}
 		ClearCopyElementsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
@@ -138,6 +142,13 @@ public class AmberMasterEffectEndProcedure {
 			boolean _setval = (false);
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.amber = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			boolean _setval = (false);
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.battery = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

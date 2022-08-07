@@ -27,7 +27,7 @@ public class SunRayItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SunRayItem(PowerModElements instance) {
-		super(instance, 372);
+		super(instance, 377);
 	}
 
 	@Override

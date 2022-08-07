@@ -90,7 +90,7 @@ public class ChoiseMagicStonesPage3GuiWindow extends ContainerScreen<ChoiseMagic
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 33, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 33, 56, 20, new StringTextComponent("Spirit"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(0, x, y, z));
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 0, x, y, z);
@@ -102,25 +102,25 @@ public class ChoiseMagicStonesPage3GuiWindow extends ContainerScreen<ChoiseMagic
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 114, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 114, 56, 20, new StringTextComponent("Form"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(2, x, y, z));
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 60, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 60, 56, 20, new StringTextComponent("Aether"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(3, x, y, z));
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 141, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 141, 56, 20, new StringTextComponent("Mind"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(4, x, y, z));
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 127, this.guiTop + 33, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 127, this.guiTop + 33, 56, 20, new StringTextComponent("G. Dust"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(5, x, y, z));
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 5, x, y, z);
@@ -144,82 +144,16 @@ public class ChoiseMagicStonesPage3GuiWindow extends ContainerScreen<ChoiseMagic
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 87, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 37, this.guiTop + 87, 56, 20, new StringTextComponent("Smoke"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(9, x, y, z));
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 9, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 226, this.guiTop + 33, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 10, this.guiTop + 168, 93, 20, new StringTextComponent("Previous page"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(10, x, y, z));
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 10, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 226, this.guiTop + 60, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(11, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 11, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 226, this.guiTop + 87, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(12, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 12, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 10, this.guiTop + 168, 93, 20, new StringTextComponent("Previous page"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(13, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 13, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 226, this.guiTop + 114, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(14, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 14, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 226, this.guiTop + 141, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(15, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 15, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 33, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(16, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 16, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 60, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(17, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 17, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 87, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(18, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 18, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 114, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(19, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 19, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 141, 56, 20, new StringTextComponent(" "), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(20, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 20, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 316, this.guiTop + 168, 72, 20, new StringTextComponent("Next page"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(21, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 21, x, y, z);
 			}
 		}));
 	}

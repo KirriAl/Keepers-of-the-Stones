@@ -27,7 +27,7 @@ public class GlowCreateItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public GlowCreateItem(PowerModElements instance) {
-		super(instance, 332);
+		super(instance, 337);
 	}
 
 	@Override

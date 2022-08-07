@@ -17,7 +17,7 @@ public class SmokeStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SmokeStoneItem(PowerModElements instance) {
-		super(instance, 653);
+		super(instance, 658);
 	}
 
 	@Override

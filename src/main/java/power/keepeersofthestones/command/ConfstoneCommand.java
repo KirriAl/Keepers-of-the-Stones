@@ -2,8 +2,9 @@
 package power.keepeersofthestones.command;
 
 import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
-import power.keepeersofthestones.procedures.ResetSkillsAndLevelsProcedure;
-import power.keepeersofthestones.procedures.DetransformKeyPriNazhatiiKlavishiProcedure;
+import power.keepeersofthestones.procedures.OpenMusicPlayerGUIProcedure;
+import power.keepeersofthestones.procedures.DemoteKeeperProcedure;
+import power.keepeersofthestones.procedures.AppointKeeperProcedure;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,6 +14,7 @@ import net.minecraftforge.common.util.FakePlayerFactory;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.util.Direction;
 import net.minecraft.entity.Entity;
+import net.minecraft.command.arguments.EntityArgument;
 import net.minecraft.command.Commands;
 import net.minecraft.command.CommandSource;
 
@@ -22,6 +24,7 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
 public class ConfstoneCommand {
@@ -44,7 +47,11 @@ public class ConfstoneCommand {
 									new AbstractMap.SimpleEntry<>("entity", entity))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
-				})).then(Commands.literal("detransform").executes(arguments -> {
+				}))
+				.then(Commands.literal("level")
+						.then(Commands.literal("set").then(
+								Commands.argument("name", EntityArgument.player()).then(Commands.argument("level", DoubleArgumentType.doubleArg())))))
+				.then(Commands.literal("music_player").executes(arguments -> {
 					ServerWorld world = arguments.getSource().getWorld();
 					double x = arguments.getSource().getPos().getX();
 					double y = arguments.getSource().getPos().getY();
@@ -54,22 +61,39 @@ public class ConfstoneCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getHorizontalFacing();
 
-					DetransformKeyPriNazhatiiKlavishiProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					OpenMusicPlayerGUIProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
-				})).then(Commands.literal("reset_abilty").executes(arguments -> {
-					ServerWorld world = arguments.getSource().getWorld();
-					double x = arguments.getSource().getPos().getX();
-					double y = arguments.getSource().getPos().getY();
-					double z = arguments.getSource().getPos().getZ();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null)
-						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getHorizontalFacing();
+				})).then(Commands.literal("supreme_master")
+						.then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("true").executes(arguments -> {
+							ServerWorld world = arguments.getSource().getWorld();
+							double x = arguments.getSource().getPos().getX();
+							double y = arguments.getSource().getPos().getY();
+							double z = arguments.getSource().getPos().getZ();
+							Entity entity = arguments.getSource().getEntity();
+							if (entity == null)
+								entity = FakePlayerFactory.getMinecraft(world);
+							Direction direction = entity.getHorizontalFacing();
 
-					ResetSkillsAndLevelsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-					return 0;
-				})));
+							AppointKeeperProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("arguments", arguments))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+							return 0;
+						})).then(Commands.literal("false").executes(arguments -> {
+							ServerWorld world = arguments.getSource().getWorld();
+							double x = arguments.getSource().getPos().getX();
+							double y = arguments.getSource().getPos().getY();
+							double z = arguments.getSource().getPos().getZ();
+							Entity entity = arguments.getSource().getEntity();
+							if (entity == null)
+								entity = FakePlayerFactory.getMinecraft(world);
+							Direction direction = entity.getHorizontalFacing();
+
+							DemoteKeeperProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("arguments", arguments))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+							return 0;
+						})))));
 	}
 }

@@ -53,13 +53,23 @@ public class PowerModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("power", "stone_deactivation")));
 		sounds.put(new ResourceLocation("power", "powerful_stone"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("power", "powerful_stone")));
-		sounds.put(new ResourceLocation("power", "time_power"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "time_power")));
 		sounds.put(new ResourceLocation("power", "tyrannosaurus_rex.hurt"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("power", "tyrannosaurus_rex.hurt")));
 		sounds.put(new ResourceLocation("power", "tyrannosaurus_rex.dead"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("power", "tyrannosaurus_rex.dead")));
 		sounds.put(new ResourceLocation("power", "raptor.dead"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "raptor.dead")));
 		sounds.put(new ResourceLocation("power", "raptor.hurt"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "raptor.hurt")));
+		sounds.put(new ResourceLocation("power", "time_power"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "time_power")));
+		sounds.put(new ResourceLocation("power", "music1"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music1")));
+		sounds.put(new ResourceLocation("power", "music2"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music2")));
+		sounds.put(new ResourceLocation("power", "music3"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music3")));
+		sounds.put(new ResourceLocation("power", "music4"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music4")));
+		sounds.put(new ResourceLocation("power", "music5"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music5")));
+		sounds.put(new ResourceLocation("power", "music6"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music6")));
+		sounds.put(new ResourceLocation("power", "music7"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music7")));
+		sounds.put(new ResourceLocation("power", "music8"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music8")));
+		sounds.put(new ResourceLocation("power", "music9"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music9")));
+		sounds.put(new ResourceLocation("power", "music10"), new net.minecraft.util.SoundEvent(new ResourceLocation("power", "music10")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("power").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

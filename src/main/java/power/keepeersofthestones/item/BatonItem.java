@@ -16,7 +16,7 @@ public class BatonItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BatonItem(PowerModElements instance) {
-		super(instance, 865);
+		super(instance, 868);
 	}
 
 	@Override

@@ -7,7 +7,7 @@
       "value": "Blocks.DIRT#1"
     },
     "undergroundBlock": {
-      "value": "Blocks.DRIPSTONE_BLOCK"
+      "value": "Blocks.DIRT#0"
     },
     "underwaterBlock": {
       "value": ""

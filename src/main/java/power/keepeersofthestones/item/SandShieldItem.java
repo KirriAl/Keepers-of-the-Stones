@@ -27,7 +27,7 @@ public class SandShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SandShieldItem(PowerModElements instance) {
-		super(instance, 801);
+		super(instance, 804);
 	}
 
 	@Override

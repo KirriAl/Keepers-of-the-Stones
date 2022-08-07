@@ -48,7 +48,7 @@ public class CrystalRedBlock extends PowerModElements.ModElement {
 	public static final Block block = null;
 
 	public CrystalRedBlock(PowerModElements instance) {
-		super(instance, 64);
+		super(instance, 67);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

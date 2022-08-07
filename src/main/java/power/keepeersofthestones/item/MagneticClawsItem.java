@@ -16,7 +16,7 @@ public class MagneticClawsItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MagneticClawsItem(PowerModElements instance) {
-		super(instance, 41);
+		super(instance, 853);
 	}
 
 	@Override

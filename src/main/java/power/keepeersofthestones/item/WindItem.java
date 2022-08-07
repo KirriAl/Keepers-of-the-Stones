@@ -29,7 +29,7 @@ public class WindItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public WindItem(PowerModElements instance) {
-		super(instance, 141);
+		super(instance, 146);
 	}
 
 	@Override

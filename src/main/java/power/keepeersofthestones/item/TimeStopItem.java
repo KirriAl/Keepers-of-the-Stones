@@ -27,7 +27,7 @@ public class TimeStopItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TimeStopItem(PowerModElements instance) {
-		super(instance, 512);
+		super(instance, 517);
 	}
 
 	@Override

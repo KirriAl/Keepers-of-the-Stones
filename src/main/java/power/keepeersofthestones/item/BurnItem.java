@@ -31,7 +31,7 @@ public class BurnItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BurnItem(PowerModElements instance) {
-		super(instance, 107);
+		super(instance, 112);
 	}
 
 	@Override

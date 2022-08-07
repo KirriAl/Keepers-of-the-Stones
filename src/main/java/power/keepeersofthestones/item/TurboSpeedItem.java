@@ -27,7 +27,7 @@ public class TurboSpeedItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TurboSpeedItem(PowerModElements instance) {
-		super(instance, 817);
+		super(instance, 820);
 	}
 
 	@Override

@@ -27,7 +27,7 @@ public class CoralShieldItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public CoralShieldItem(PowerModElements instance) {
-		super(instance, 246);
+		super(instance, 251);
 	}
 
 	@Override

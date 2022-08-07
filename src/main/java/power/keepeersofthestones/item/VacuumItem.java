@@ -29,7 +29,7 @@ public class VacuumItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public VacuumItem(PowerModElements instance) {
-		super(instance, 458);
+		super(instance, 463);
 	}
 
 	@Override
