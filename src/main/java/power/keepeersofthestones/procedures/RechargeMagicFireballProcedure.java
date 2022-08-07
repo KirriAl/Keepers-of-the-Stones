@@ -1,40 +1,30 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.PowerModVariables;
-import power.keepeersofthestones.PowerMod;
+import power.keepeersofthestones.network.PowerModVariables;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-
-import java.util.Map;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
 public class RechargeMagicFireballProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure RechargeMagicFireball!");
+	public static void execute(Entity entity, ItemStack itemstack) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("itemstack") == null) {
-			if (!dependencies.containsKey("itemstack"))
-				PowerMod.LOGGER.warn("Failed to load dependency itemstack for procedure RechargeMagicFireball!");
-			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
-			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 40);
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
-			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 20);
+				.orElse(new PowerModVariables.PlayerVariables())).power_level == 3) {
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 20);
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new PowerModVariables.PlayerVariables())).power_level >= 4) {
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 0);
 		} else {
-			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 60);
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 60);
 		}
 	}
 }

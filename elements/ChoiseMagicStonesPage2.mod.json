@@ -110,13 +110,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Tech",
+          "text": "Techolog.",
           "onClick": {
             "name": "TechnologyGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Tech",
+          "name": "Techolog.",
           "x": 141,
           "y": 80
         }
@@ -138,13 +138,13 @@
       {
         "type": "button",
         "data": {
-          "text": "TP",
+          "text": "Teleport.",
           "onClick": {
             "name": "TeleportationGet"
           },
           "width": 56,
           "height": 20,
-          "name": "TP",
+          "name": "Teleport.",
           "x": 141,
           "y": 107
         }
@@ -396,10 +396,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Gravity",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Gravity",
           "x": 339,
           "y": 161
         }
