@@ -16,7 +16,6 @@ import power.keepeersofthestones.world.features.ores.CrystalGreenFeature;
 import power.keepeersofthestones.world.features.ores.CrystalGrayFeature;
 import power.keepeersofthestones.world.features.ores.CrystalBrownFeature;
 import power.keepeersofthestones.world.features.ores.CrystalBlueFeature;
-import power.keepeersofthestones.world.features.lakes.MercuryLiquidFeature;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -41,8 +40,6 @@ import java.util.ArrayList;
 public class PowerModFeatures {
 	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, PowerMod.MODID);
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
-	public static final RegistryObject<Feature<?>> MERCURY_LIQUID = register("mercury_liquid", MercuryLiquidFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.LAKES, MercuryLiquidFeature.GENERATE_BIOMES, MercuryLiquidFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> CRYSTAL_BLUE = register("crystal_blue", CrystalBlueFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalBlueFeature.GENERATE_BIOMES, CrystalBlueFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> CRYSTAL_BROWN = register("crystal_brown", CrystalBrownFeature::feature, new FeatureRegistration(
