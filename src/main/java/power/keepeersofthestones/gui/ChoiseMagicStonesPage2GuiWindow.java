@@ -187,7 +187,7 @@ public class ChoiseMagicStonesPage2GuiWindow extends ContainerScreen<ChoiseMagic
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 127, this.guiTop + 60, 56, 20, new StringTextComponent("Tech"), e -> {
+		this.addButton(new Button(this.guiLeft + 127, this.guiTop + 60, 56, 20, new StringTextComponent("Techolog."), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2Gui.ButtonPressedMessage(6, x, y, z));
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 6, x, y, z);
@@ -199,7 +199,7 @@ public class ChoiseMagicStonesPage2GuiWindow extends ContainerScreen<ChoiseMagic
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 7, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 127, this.guiTop + 87, 56, 20, new StringTextComponent("TP"), e -> {
+		this.addButton(new Button(this.guiLeft + 127, this.guiTop + 87, 56, 20, new StringTextComponent("Teleport."), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2Gui.ButtonPressedMessage(8, x, y, z));
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 8, x, y, z);
@@ -271,7 +271,7 @@ public class ChoiseMagicStonesPage2GuiWindow extends ContainerScreen<ChoiseMagic
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 19, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 141, 56, 20, new StringTextComponent(" "), e -> {
+		this.addButton(new Button(this.guiLeft + 325, this.guiTop + 141, 56, 20, new StringTextComponent("Gravity"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2Gui.ButtonPressedMessage(20, x, y, z));
 				ChoiseMagicStonesPage2Gui.handleButtonAction(entity, 20, x, y, z);
