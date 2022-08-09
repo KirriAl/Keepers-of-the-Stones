@@ -38,6 +38,7 @@ public class PowerModSounds {
 		REGISTRY.put(new ResourceLocation("power", "music9"), new SoundEvent(new ResourceLocation("power", "music9")));
 		REGISTRY.put(new ResourceLocation("power", "music10"), new SoundEvent(new ResourceLocation("power", "music10")));
 		REGISTRY.put(new ResourceLocation("power", "stone_activation"), new SoundEvent(new ResourceLocation("power", "stone_activation")));
+		REGISTRY.put(new ResourceLocation("power", "rocket.fly"), new SoundEvent(new ResourceLocation("power", "rocket.fly")));
 	}
 
 	@SubscribeEvent

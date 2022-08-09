@@ -163,5 +163,15 @@
         "stream": false
       }
     ]
+  },
+  "rocket.fly": {
+    "category": "neutral",
+    "subtitle": "subtitles.rocket.fly",
+    "sounds": [
+      {
+        "name": "power:rocket.fly",
+        "stream": false
+      }
+    ]
   }
 }
