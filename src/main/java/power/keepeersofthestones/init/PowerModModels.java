@@ -7,6 +7,7 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.client.model.Modeltyrannosaurus_rex;
 import power.keepeersofthestones.client.model.Modeltornadocc;
 import power.keepeersofthestones.client.model.Modelshadow;
+import power.keepeersofthestones.client.model.Modelrocket;
 import power.keepeersofthestones.client.model.Modelmagic_arrow;
 import power.keepeersofthestones.client.model.Modelglow;
 import power.keepeersofthestones.client.model.ModelRaptor;
@@ -28,6 +29,7 @@ public class PowerModModels {
 		event.registerLayerDefinition(Modelshadow.LAYER_LOCATION, Modelshadow::createBodyLayer);
 		event.registerLayerDefinition(ModelRaptor.LAYER_LOCATION, ModelRaptor::createBodyLayer);
 		event.registerLayerDefinition(Modelmagic_arrow.LAYER_LOCATION, Modelmagic_arrow::createBodyLayer);
+		event.registerLayerDefinition(Modelrocket.LAYER_LOCATION, Modelrocket::createBodyLayer);
 		event.registerLayerDefinition(Modelglow.LAYER_LOCATION, Modelglow::createBodyLayer);
 		event.registerLayerDefinition(ModelPterodactyl.LAYER_LOCATION, ModelPterodactyl::createBodyLayer);
 	}

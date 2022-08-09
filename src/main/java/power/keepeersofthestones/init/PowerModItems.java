@@ -187,6 +187,8 @@ import power.keepeersofthestones.item.GreeneryStoneItem;
 import power.keepeersofthestones.item.GreeneryItem;
 import power.keepeersofthestones.item.GreeneryBatteryItem;
 import power.keepeersofthestones.item.GravityStoneItem;
+import power.keepeersofthestones.item.GravityItem;
+import power.keepeersofthestones.item.GravityBatteryItem;
 import power.keepeersofthestones.item.GoldenDustStoneItem;
 import power.keepeersofthestones.item.GoldenCrossbowItem;
 import power.keepeersofthestones.item.GlowCreateItem;
@@ -717,6 +719,13 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", () -> new DestructionBatteryItem());
 	public static final RegistryObject<Item> FORM_STONE = REGISTRY.register("form_stone", () -> new FormStoneItem());
 	public static final RegistryObject<Item> MIND_STONE = REGISTRY.register("mind_stone", () -> new MindStoneItem());
+	public static final RegistryObject<Item> GRAVITY_BATTERY = REGISTRY.register("gravity_battery", () -> new GravityBatteryItem());
+	public static final RegistryObject<Item> GRAVITY_HELMET = REGISTRY.register("gravity_helmet", () -> new GravityItem.Helmet());
+	public static final RegistryObject<Item> GRAVITY_CHESTPLATE = REGISTRY.register("gravity_chestplate", () -> new GravityItem.Chestplate());
+	public static final RegistryObject<Item> GRAVITY_LEGGINGS = REGISTRY.register("gravity_leggings", () -> new GravityItem.Leggings());
+	public static final RegistryObject<Item> GRAVITY_BOOTS = REGISTRY.register("gravity_boots", () -> new GravityItem.Boots());
+	public static final RegistryObject<Item> ROCKET = REGISTRY.register("rocket_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.ROCKET, -1,
+			-6710887, new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

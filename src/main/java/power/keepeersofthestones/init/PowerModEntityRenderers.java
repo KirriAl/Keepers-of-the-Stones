@@ -8,6 +8,7 @@ import power.keepeersofthestones.client.renderer.TyrannosaurusRexRenderer;
 import power.keepeersofthestones.client.renderer.TornadoEntityRenderer;
 import power.keepeersofthestones.client.renderer.TornadoCreateRenderer;
 import power.keepeersofthestones.client.renderer.ShadowRenderer;
+import power.keepeersofthestones.client.renderer.RocketRenderer;
 import power.keepeersofthestones.client.renderer.RaptorRenderer;
 import power.keepeersofthestones.client.renderer.RainBowRenderer;
 import power.keepeersofthestones.client.renderer.PterodactylRenderer;
@@ -77,5 +78,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.DISCO_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MUSKET.get(), MusketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MASS_INFECTION.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ROCKET.get(), RocketRenderer::new);
 	}
 }

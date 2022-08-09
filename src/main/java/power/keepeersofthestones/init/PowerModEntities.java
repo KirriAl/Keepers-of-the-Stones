@@ -21,6 +21,7 @@ import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
 import power.keepeersofthestones.entity.SandFlurryEntity;
+import power.keepeersofthestones.entity.RocketEntity;
 import power.keepeersofthestones.entity.RaptorEntity;
 import power.keepeersofthestones.entity.RainBowEntity;
 import power.keepeersofthestones.entity.PterodactylEntity;
@@ -236,6 +237,9 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<MassInfectionEntity>> MASS_INFECTION = register("projectile_mass_infection",
 			EntityType.Builder.<MassInfectionEntity>of(MassInfectionEntity::new, MobCategory.MISC).setCustomClientFactory(MassInfectionEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RocketEntity>> ROCKET = register("rocket",
+			EntityType.Builder.<RocketEntity>of(RocketEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(RocketEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -251,6 +255,7 @@ public class PowerModEntities {
 			PterodactylEntity.init();
 			GlowEntity.init();
 			ShadowEntity.init();
+			RocketEntity.init();
 		});
 	}
 
@@ -263,5 +268,6 @@ public class PowerModEntities {
 		event.put(PTERODACTYL.get(), PterodactylEntity.createAttributes().build());
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
+		event.put(ROCKET.get(), RocketEntity.createAttributes().build());
 	}
 }

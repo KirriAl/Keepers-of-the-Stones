@@ -45,6 +45,7 @@ import power.keepeersofthestones.potion.RechargeLightStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeLavaStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeIceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGreeneryStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeGravityStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeFireStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeExplosionStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeEnergyStoneMobEffect;
@@ -74,6 +75,7 @@ import power.keepeersofthestones.potion.LavaMasterMobEffect;
 import power.keepeersofthestones.potion.InvincibilityMobEffect;
 import power.keepeersofthestones.potion.IceMasterMobEffect;
 import power.keepeersofthestones.potion.GreeneryMasterMobEffect;
+import power.keepeersofthestones.potion.GravityMasterMobEffect;
 import power.keepeersofthestones.potion.FogMobEffect;
 import power.keepeersofthestones.potion.FireMasterMobEffect;
 import power.keepeersofthestones.potion.FireFlyingMobEffect;
@@ -221,4 +223,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_PLAGUE_STONE = REGISTRY.register("recharge_plague_stone",
 			() -> new RechargePlagueStoneMobEffect());
+	public static final RegistryObject<MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_GRAVITY_STONE = REGISTRY.register("recharge_gravity_stone",
+			() -> new RechargeGravityStoneMobEffect());
 }

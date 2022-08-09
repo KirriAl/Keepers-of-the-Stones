@@ -134,6 +134,7 @@ public class PowerModVariables {
 			clone.music = original.music;
 			clone.keeper = original.keeper;
 			clone.plague = original.plague;
+			clone.gravity = original.gravity;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -256,6 +257,7 @@ public class PowerModVariables {
 		public boolean mercury_stone = false;
 		public boolean music_stone = false;
 		public boolean plague_stone = false;
+		public boolean gravity_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -312,6 +314,7 @@ public class PowerModVariables {
 			mercury_stone = nbt.getBoolean("mercury_stone");
 			music_stone = nbt.getBoolean("music_stone");
 			plague_stone = nbt.getBoolean("plague_stone");
+			gravity_stone = nbt.getBoolean("gravity_stone");
 		}
 
 		@Override
@@ -364,6 +367,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mercury_stone", mercury_stone);
 			nbt.putBoolean("music_stone", music_stone);
 			nbt.putBoolean("plague_stone", plague_stone);
+			nbt.putBoolean("gravity_stone", gravity_stone);
 			return nbt;
 		}
 
@@ -517,6 +521,7 @@ public class PowerModVariables {
 		public boolean keeper = false;
 		public boolean plague = false;
 		public boolean recharge_spell_plague = false;
+		public boolean gravity = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -589,6 +594,7 @@ public class PowerModVariables {
 			nbt.putBoolean("keeper", keeper);
 			nbt.putBoolean("plague", plague);
 			nbt.putBoolean("recharge_spell_plague", recharge_spell_plague);
+			nbt.putBoolean("gravity", gravity);
 			return nbt;
 		}
 
@@ -658,6 +664,7 @@ public class PowerModVariables {
 			keeper = nbt.getBoolean("keeper");
 			plague = nbt.getBoolean("plague");
 			recharge_spell_plague = nbt.getBoolean("recharge_spell_plague");
+			gravity = nbt.getBoolean("gravity");
 		}
 	}
 
@@ -747,6 +754,7 @@ public class PowerModVariables {
 					variables.keeper = message.data.keeper;
 					variables.plague = message.data.plague;
 					variables.recharge_spell_plague = message.data.recharge_spell_plague;
+					variables.gravity = message.data.gravity;
 				}
 			});
 			context.setPacketHandled(true);

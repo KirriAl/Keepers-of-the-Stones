@@ -114,6 +114,9 @@ public class ChoiseMagicStonesPage2Screen extends AbstractContainerScreen<Choise
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/plague_master.png"));
 		this.blit(ms, this.leftPos + 307, this.topPos + 114, 0, 0, 17, 17, 17, 17);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/gravity_master.png"));
+		this.blit(ms, this.leftPos + 307, this.topPos + 141, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -268,6 +271,10 @@ public class ChoiseMagicStonesPage2Screen extends AbstractContainerScreen<Choise
 			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, new TextComponent("Gravity"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(20, x, y, z));
+				ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 20, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20, new TextComponent("Next page"), e -> {
 			if (true) {

@@ -1,14 +1,4 @@
 {
-  "stone_activation": {
-    "category": "player",
-    "subtitle": "subtitles.stone_activation",
-    "sounds": [
-      {
-        "name": "power:stone_activation",
-        "stream": false
-      }
-    ]
-  },
   "stone_deactivation": {
     "category": "player",
     "subtitle": "subtitles.stone_deactivation",
@@ -161,6 +151,16 @@
       {
         "name": "power:music10",
         "stream": true
+      }
+    ]
+  },
+  "stone_activation": {
+    "category": "player",
+    "subtitle": "subtitles.stone_activation",
+    "sounds": [
+      {
+        "name": "power:stone_activation",
+        "stream": false
       }
     ]
   }

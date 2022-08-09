@@ -397,6 +397,9 @@
         "type": "button",
         "data": {
           "text": "Gravity",
+          "onClick": {
+            "name": "GravityGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Gravity",
@@ -539,6 +542,16 @@
           "name": "plague_master.png",
           "x": 321,
           "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gravity_master.png",
+          "use1Xscale": false,
+          "name": "gravity_master.png",
+          "x": 321,
+          "y": 161
         }
       }
     ],

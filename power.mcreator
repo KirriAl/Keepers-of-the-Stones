@@ -11337,15 +11337,6 @@
       "path": "~/Teleportation"
     },
     {
-      "name": "Confstone",
-      "type": "command",
-      "sortid": 701,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "confstone",
-      "path": "~/Commands"
-    },
-    {
       "name": "Planet",
       "type": "command",
       "sortid": 702,
@@ -16014,6 +16005,204 @@
       "locked_code": false,
       "registry_name": "mind_stone",
       "path": "~/Mind"
+    },
+    {
+      "name": "PW",
+      "type": "command",
+      "sortid": 953,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pw",
+      "path": "~/Commands"
+    },
+    {
+      "name": "GravityMaster",
+      "type": "potioneffect",
+      "sortid": 953,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_master",
+      "path": "~/Gravity"
+    },
+    {
+      "name": "RechargeGravityStone",
+      "type": "potioneffect",
+      "sortid": 954,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_gravity_stone",
+      "path": "~/Gravity"
+    },
+    {
+      "name": "GravityGet",
+      "type": "procedure",
+      "sortid": 955,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "GravityBattery",
+      "type": "item",
+      "sortid": 956,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "GravityBatteryUse",
+      "type": "procedure",
+      "sortid": 957,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "Gravity",
+      "type": "armor",
+      "sortid": 958,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Gravity"
+    },
+    {
+      "name": "GravityStoneUse",
+      "type": "procedure",
+      "sortid": 959,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gravity"
+    },
+    {
+      "name": "GravityMasterEffectStart",
+      "type": "procedure",
+      "sortid": 960,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gravity"
+    },
+    {
+      "name": "GravityMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 961,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gravity"
+    },
+    {
+      "name": "GravityMasterEffects",
+      "type": "procedure",
+      "sortid": 962,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gravity"
+    },
+    {
+      "name": "Rocket",
+      "type": "livingentity",
+      "sortid": 963,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocket",
+      "path": "~/Space/Rocket"
     }
   ],
   "variable_elements": [
@@ -16688,17 +16877,21 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "gravity_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "gravity",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
-    {
-      "name": "stone_activation",
-      "files": [
-        "stone_activation"
-      ],
-      "category": "player",
-      "subtitle": "Stone been activation"
-    },
     {
       "name": "stone_deactivation",
       "files": [
@@ -16834,15 +17027,23 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "stone_activation",
+      "files": [
+        "stone_activation"
+      ],
+      "category": "player",
+      "subtitle": "Stone been activation"
     }
   ],
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.sun_battery": "Батарея",
+      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.disco_ball": "Диско-шар",
@@ -16852,23 +17053,23 @@
       "item.power.lightning_battery": "Батарея",
       "effect.power.recharge_rain_stone": "Перезарядка",
       "effect.recharge_tornado_stone": "Перезарядка",
-      "biome.power.triassic_plains": "Триассовые Равнины",
-      "item.power.cutter_sword": "Куттер-Меч",
       "block.power.detonator_tnt": "Детонатор",
+      "item.power.cutter_sword": "Куттер-Меч",
+      "biome.power.triassic_plains": "Триассовые Равнины",
       "effect.power.recharge_moon_stone": "Перезарядка",
-      "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
@@ -16882,8 +17083,8 @@
       "effect.power.mushrooms_master": "Мастер Грибов",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.potato.text": "Картофель",
       "power.cultivation.pumpkin.text": "Тыква",
+      "power.cultivation.potato.text": "Картофель",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -16891,8 +17092,8 @@
       "item.power.tamer": "Приручатель",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_earth_stone": "Перезарядка",
-      "effect.power.ice_master": "Мастер Льда",
       "item.power.time_reversed": "Обращение Времени",
+      "effect.power.ice_master": "Мастер Льда",
       "effect.power.recharge_amber_stone": "Перезарядка",
       "item.power.piece_of_earth": "Кусок Земли",
       "block.power.moon_stones_block": "Блок Разрастающихся Лунных Камней",
@@ -16902,9 +17103,9 @@
       "item.power.mist_helmet": "Mist Helmet",
       "item.power.explode_chestplate": "Шахид-нагрудник",
       "item.power.lava_ball": "Лавовый Шар",
-      "item.power.energy_chestplate": "Энергетическая Кираса",
-      "item.power.ocean_sword": "Меч Океана",
       "item.power.space_leggings": "Космические штаны",
+      "item.power.ocean_sword": "Меч Океана",
+      "item.power.energy_chestplate": "Энергетическая Кираса",
       "power.cultivation.birch.text": "Береза",
       "item.power.gravity_stone": "Камень Гравитации",
       "item.power.destruction_sphere": "Сфера Разрушения",
@@ -16968,6 +17169,7 @@
       "block.power.gold_magic_box": "Золотая Волшебная Шкатулка",
       "item.power.sand_battery": "Батарея",
       "biome.power.cretaceous_taiga": "Меловая Тайга",
+      "item.power.gravity_battery": "Батарея",
       "item.power.fire_stone": "Камень Огня",
       "item.power.plague_leggings": "Plague Leggings",
       "item.power.blood_stone": "Камень Крови",
@@ -17172,6 +17374,7 @@
       "item.power.teleportation_leggings": "Штаны телепортации",
       "item.power.metal_helmet": "Металлический шлем",
       "effect.power.ocean_master": "Мастер Океана",
+      "item.power.rocket_spawn_egg": "Ракета",
       "effect.power.recharge_creation_stone": "Перезарядка",
       "effect.power.speed_master": "Мастер Скорости",
       "item.power.teleportation_helmet": "Шлем перемищения",
@@ -17191,6 +17394,7 @@
       "item.power.earth_leggings": "Земляные Штаны",
       "effect.power.recharge_sand_stone": "Перезарядка",
       "block.power.sound_barrier_block": "Блок Звукового барьера",
+      "item.power.gravity_leggings": "Gravity Leggings",
       "block.power.crystal_purple": "Пурпурный Кристалл",
       "item.power.fire_helmet": "Огненная корона",
       "effect.power.recharge_mist_stone": "Перезарядка",
@@ -17254,6 +17458,7 @@
       "item.power.shadow_spawn_egg": "Яйцо призыва Тени",
       "block.power.crystal_lime": "Лаймовый Кристалл",
       "item.power.mushroom_saturation": "Грибное Насыщение",
+      "item.power.gravity_chestplate": "Gravity Chestplate",
       "power.spawn_animals.cow.text": "Корова",
       "item.power.crystal_helmet": "Кристаллическая Каска",
       "item.power.wind_helmet": "Воздушная Шапка",
@@ -17301,6 +17506,7 @@
       "item.power.lava_helmet": "Лавовые Очки",
       "item.power.time_battery": "Батарея",
       "item.power.animals_helmet": "Животный шлем",
+      "effect.power.gravity_master": "Мастер Гравитации",
       "item.power.teleportation_battery": "Батарея",
       "block.power.crystal_red": "Красный Кристалл",
       "item.power.water_drop": "Капли Воды",
@@ -17397,6 +17603,7 @@
       "item.power.tornado_helmet": "Шлем Торнадо",
       "item.power.plague_battery": "Батарея",
       "item.power.magic_fireball": "Волшебный Огненный Шар",
+      "item.power.gravity_helmet": "Gravity Helmet",
       "item.power.crystal_stone": "Камень Кристалла",
       "item.power.metal_chestplate": "Метталический нагрудник",
       "item.power.technology_stone": "Камень Технологий",
@@ -17438,6 +17645,7 @@
       "effect.power.recharge_space_stone": "Перезарядка",
       "item.power.blood_helmet": "Шлем крови",
       "item.power.light_chestplate": "Нагрудник света",
+      "effect.power.recharge_gravity_stone": "Перезарядка",
       "effect.power.recharge_poison_stone": "Перезарядка",
       "item.power.light_stone": "Камень Света",
       "item.power.ice_battery": "Батарея",
@@ -17453,6 +17661,7 @@
       "item.power.air_flow": "Поток Воздуха",
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
+      "item.power.gravity_boots": "Gravity Boots",
       "item.power.amber_shield": "Янтарный Щит",
       "effect.power.mercury_master": "Мастер Ртути",
       "item.power.form_stone": "Камень Формы",
@@ -17462,6 +17671,7 @@
       "item.power.acceleration_time": "Ускорение Времени",
       "item.power.mist_stone": "Камень Тумана",
       "block.power.crystal_violet": "Фиолетовый Кристалл",
+      "entity.power.rocket": "Ракета",
       "item.power.storm": "Шторм",
       "item.power.water_leggings": "Водные Штаны",
       "effect.power.recharge_music_stone": "Перезарядка",
@@ -17599,6 +17809,7 @@
       "block.power.gold_magic_box": "Gold Magic Box",
       "item.power.sand_battery": "Battery",
       "biome.power.cretaceous_taiga": "Cretaceous Taiga",
+      "item.power.gravity_battery": "Battery",
       "item.power.fire_stone": "Fire stone",
       "item.power.plague_leggings": "Plague Leggings",
       "item.power.blood_stone": "Blood Stone",
@@ -17804,6 +18015,7 @@
       "item.power.teleportation_leggings": "Teleportation Leggings",
       "item.power.metal_helmet": "Metal Helmet",
       "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.rocket_spawn_egg": "Rocket",
       "effect.power.recharge_creation_stone": "Recharge",
       "effect.power.speed_master": "Master of Speed",
       "item.power.teleportation_helmet": "Teleportation Helmet",
@@ -17823,6 +18035,7 @@
       "item.power.earth_leggings": "Earth Leggings",
       "effect.power.recharge_sand_stone": "Recharge",
       "block.power.sound_barrier_block": "Sound Barrier Block",
+      "item.power.gravity_leggings": "Gravity Leggings",
       "block.power.crystal_purple": "Crystal Purple",
       "item.power.fire_helmet": "Fire Helmet",
       "effect.power.recharge_mist_stone": "Recharge",
@@ -17886,6 +18099,7 @@
       "item.power.shadow_spawn_egg": "Shadow Spawn Egg",
       "block.power.crystal_lime": "Crystal Lime",
       "item.power.mushroom_saturation": "Mushroom Saturation",
+      "item.power.gravity_chestplate": "Gravity Chestplate",
       "power.spawn_animals.cow.text": "Cow",
       "item.power.crystal_helmet": "Crystal Helmet",
       "item.power.wind_helmet": "Air Helmet",
@@ -17933,6 +18147,7 @@
       "item.power.lava_helmet": "Lava Helmet",
       "item.power.time_battery": "Battery",
       "item.power.animals_helmet": "Animals Helmet",
+      "effect.power.gravity_master": "Master of Gravity",
       "item.power.teleportation_battery": "Battery",
       "block.power.crystal_red": "Crystal Red",
       "item.power.water_drop": "Water Drops",
@@ -18030,6 +18245,7 @@
       "item.power.tornado_helmet": "Tornado Helmet",
       "item.power.plague_battery": "Battery",
       "item.power.magic_fireball": "Magic Fireball",
+      "item.power.gravity_helmet": "Gravity Helmet",
       "item.power.crystal_stone": "Crystal Stone",
       "item.power.metal_chestplate": "Metal Chestplate",
       "item.power.technology_stone": "Technology Stone",
@@ -18071,6 +18287,7 @@
       "effect.power.recharge_space_stone": "Recharge",
       "item.power.blood_helmet": "Blood Helmet",
       "item.power.light_chestplate": "Light Chestplate",
+      "effect.power.recharge_gravity_stone": "Recharge",
       "effect.power.recharge_poison_stone": "Recharge",
       "item.power.light_stone": "Light Stone",
       "item.power.ice_battery": "Battery",
@@ -18086,6 +18303,7 @@
       "item.power.air_flow": "Air Flow",
       "effect.power.metal_master": "Master of Metal",
       "effect.power.recharge_metal_stone": "Recharge",
+      "item.power.gravity_boots": "Gravity Boots",
       "item.power.amber_shield": "Amber Shield",
       "effect.power.mercury_master": "Master of Mercury",
       "item.power.form_stone": "Form Stone",
@@ -18095,6 +18313,7 @@
       "item.power.acceleration_time": "Acceleration Time",
       "item.power.mist_stone": "Mist Stone",
       "block.power.crystal_violet": "Crystal Violet",
+      "entity.power.rocket": "Rocket",
       "item.power.storm": "Storm",
       "item.power.water_leggings": "Water Leggings",
       "effect.power.recharge_music_stone": "Recharge",
@@ -18362,7 +18581,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.5.0",
+    "version": "2.6.0",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
