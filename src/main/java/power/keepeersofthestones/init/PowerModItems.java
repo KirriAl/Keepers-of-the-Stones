@@ -90,6 +90,7 @@ import power.keepeersofthestones.item.SandDaggerItem;
 import power.keepeersofthestones.item.SandBatteryItem;
 import power.keepeersofthestones.item.SaiItem;
 import power.keepeersofthestones.item.RoseSwordItem;
+import power.keepeersofthestones.item.RocketItemItem;
 import power.keepeersofthestones.item.RedstoneBundleItem;
 import power.keepeersofthestones.item.RandomItemItem;
 import power.keepeersofthestones.item.RainfallItem;
@@ -724,8 +725,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GRAVITY_CHESTPLATE = REGISTRY.register("gravity_chestplate", () -> new GravityItem.Chestplate());
 	public static final RegistryObject<Item> GRAVITY_LEGGINGS = REGISTRY.register("gravity_leggings", () -> new GravityItem.Leggings());
 	public static final RegistryObject<Item> GRAVITY_BOOTS = REGISTRY.register("gravity_boots", () -> new GravityItem.Boots());
-	public static final RegistryObject<Item> ROCKET = REGISTRY.register("rocket_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.ROCKET, -1,
-			-6710887, new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
+	public static final RegistryObject<Item> ROCKET_ITEM = REGISTRY.register("rocket_item", () -> new RocketItemItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -27,7 +27,12 @@
     ],
     "recipes": [
       "power:craft_battery_charger",
-      "power:battery_craft"
+      "power:battery_craft",
+      "power:crystallized_craft",
+      "power:dinoera_craft",
+      "power:oblivion_craft",
+      "power:sunny_kingdom_craft",
+      "power:rocket_craft"
     ]
   }
 }

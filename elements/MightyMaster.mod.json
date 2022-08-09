@@ -17,7 +17,12 @@
     ],
     "rewardRecipes": [
       "CraftBatteryCharger",
-      "BatteryCraft"
+      "BatteryCraft",
+      "CrystallizedCraft",
+      "DinoeraCraft",
+      "OblivionCraft",
+      "SunnyKingdomCraft",
+      "RocketCraft"
     ],
     "rewardFunction": "No function",
     "rewardXP": 0,
