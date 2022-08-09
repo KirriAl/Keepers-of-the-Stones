@@ -57,7 +57,7 @@
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
+    "guiBoundTo": "RocketPathGUI",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": false,

@@ -7,6 +7,7 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.client.gui.SpawnAnimalsGUIScreen;
 import power.keepeersofthestones.client.gui.SpaceAtlasGUIScreen;
 import power.keepeersofthestones.client.gui.SoundImitateChoiceScreen;
+import power.keepeersofthestones.client.gui.RocketPathGUIScreen;
 import power.keepeersofthestones.client.gui.RedstoneBundleGUIScreen;
 import power.keepeersofthestones.client.gui.PointGUIScreen;
 import power.keepeersofthestones.client.gui.MusicPlayerGUIScreen;
@@ -129,6 +130,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.MUSIC_PLAYER_GUI, MusicPlayerGUIScreen::new);
 			MenuScreens.register(PowerModMenus.EB_MUSIC, EBMusicScreen::new);
 			MenuScreens.register(PowerModMenus.EB_PLAGUE, EBPlagueScreen::new);
+			MenuScreens.register(PowerModMenus.ROCKET_PATH_GUI, RocketPathGUIScreen::new);
 		});
 	}
 }

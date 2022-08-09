@@ -7,6 +7,7 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
 import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
+import power.keepeersofthestones.world.inventory.RocketPathGUIMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
 import power.keepeersofthestones.world.inventory.MusicPlayerGUIMenu;
@@ -153,6 +154,8 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new MusicPlayerGUIMenu(id, inv, extraData));
 	public static final MenuType<EBMusicMenu> EB_MUSIC = register("eb_music", (id, inv, extraData) -> new EBMusicMenu(id, inv, extraData));
 	public static final MenuType<EBPlagueMenu> EB_PLAGUE = register("eb_plague", (id, inv, extraData) -> new EBPlagueMenu(id, inv, extraData));
+	public static final MenuType<RocketPathGUIMenu> ROCKET_PATH_GUI = register("rocket_path_gui",
+			(id, inv, extraData) -> new RocketPathGUIMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
