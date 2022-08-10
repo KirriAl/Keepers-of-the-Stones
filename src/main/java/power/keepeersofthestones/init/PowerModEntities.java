@@ -14,6 +14,7 @@ import power.keepeersofthestones.entity.TornadoEntityEntity;
 import power.keepeersofthestones.entity.TornadoCreateEntity;
 import power.keepeersofthestones.entity.TimeDilationEntity;
 import power.keepeersofthestones.entity.TigerClawEntity;
+import power.keepeersofthestones.entity.ThrowingHammerEntity;
 import power.keepeersofthestones.entity.SunExplodeEntity;
 import power.keepeersofthestones.entity.SporesEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
@@ -240,6 +241,9 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<RocketEntity>> ROCKET = register("rocket",
 			EntityType.Builder.<RocketEntity>of(RocketEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(RocketEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ThrowingHammerEntity>> THROWING_HAMMER = register("projectile_throwing_hammer",
+			EntityType.Builder.<ThrowingHammerEntity>of(ThrowingHammerEntity::new, MobCategory.MISC).setCustomClientFactory(ThrowingHammerEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

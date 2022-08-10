@@ -36,6 +36,7 @@ import power.keepeersofthestones.item.TimeDilationItem;
 import power.keepeersofthestones.item.TimeBladeItem;
 import power.keepeersofthestones.item.TimeBatteryItem;
 import power.keepeersofthestones.item.TigerClawItem;
+import power.keepeersofthestones.item.ThrowingHammerItem;
 import power.keepeersofthestones.item.TeleportationStoneItem;
 import power.keepeersofthestones.item.TeleportationItem;
 import power.keepeersofthestones.item.TeleportationBatteryItem;
@@ -127,6 +128,7 @@ import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MushroomsItem;
 import power.keepeersofthestones.item.MushroomsBatteryItem;
 import power.keepeersofthestones.item.MushroomSaturationItem;
+import power.keepeersofthestones.item.MorgensternItem;
 import power.keepeersofthestones.item.MoonWitherItem;
 import power.keepeersofthestones.item.MoonStonesItem;
 import power.keepeersofthestones.item.MoonStoneItem;
@@ -726,6 +728,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GRAVITY_LEGGINGS = REGISTRY.register("gravity_leggings", () -> new GravityItem.Leggings());
 	public static final RegistryObject<Item> GRAVITY_BOOTS = REGISTRY.register("gravity_boots", () -> new GravityItem.Boots());
 	public static final RegistryObject<Item> ROCKET_ITEM = REGISTRY.register("rocket_item", () -> new RocketItemItem());
+	public static final RegistryObject<Item> MORGENSTERN = REGISTRY.register("morgenstern", () -> new MorgensternItem());
+	public static final RegistryObject<Item> THROWING_HAMMER = REGISTRY.register("throwing_hammer", () -> new ThrowingHammerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -42,11 +42,11 @@ public class GravityMasterEffectEndProcedure {
 			}
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.AIR_FLOW.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.MORGENSTERN.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.AIR_BLADE.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.THROWING_HAMMER.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
