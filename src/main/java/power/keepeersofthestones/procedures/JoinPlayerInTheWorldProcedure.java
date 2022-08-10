@@ -61,8 +61,11 @@ public class JoinPlayerInTheWorldProcedure {
 				}
 			}
 		}
-		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(new TextComponent(("Full information about mod can be found in our wiki at the link: "
-					+ "https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki")), (false));
+		{
+			Entity _ent = entity;
+			if (!_ent.level.isClientSide() && _ent.getServer() != null)
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						"tellraw @s [\"\",{\"text\":\"Full information about mod can be found in our wiki at the link: \"},{\"text\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\"}}]");
+		}
 	}
 }

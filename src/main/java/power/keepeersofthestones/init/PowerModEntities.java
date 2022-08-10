@@ -96,6 +96,9 @@ public class PowerModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PterodactylEntity::new)
 
 					.sized(1.2f, 2f));
+	public static final RegistryObject<EntityType<RocketEntity>> ROCKET = register("rocket",
+			EntityType.Builder.<RocketEntity>of(RocketEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(RocketEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MagicFireballEntity>> MAGIC_FIREBALL = register("projectile_magic_fireball",
 			EntityType.Builder.<MagicFireballEntity>of(MagicFireballEntity::new, MobCategory.MISC).setCustomClientFactory(MagicFireballEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -238,9 +241,6 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<MassInfectionEntity>> MASS_INFECTION = register("projectile_mass_infection",
 			EntityType.Builder.<MassInfectionEntity>of(MassInfectionEntity::new, MobCategory.MISC).setCustomClientFactory(MassInfectionEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<RocketEntity>> ROCKET = register("rocket",
-			EntityType.Builder.<RocketEntity>of(RocketEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(RocketEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ThrowingHammerEntity>> THROWING_HAMMER = register("projectile_throwing_hammer",
 			EntityType.Builder.<ThrowingHammerEntity>of(ThrowingHammerEntity::new, MobCategory.MISC).setCustomClientFactory(ThrowingHammerEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -257,9 +257,9 @@ public class PowerModEntities {
 			RaptorEntity.init();
 			PlesiosaurusEntity.init();
 			PterodactylEntity.init();
+			RocketEntity.init();
 			GlowEntity.init();
 			ShadowEntity.init();
-			RocketEntity.init();
 		});
 	}
 
@@ -270,8 +270,8 @@ public class PowerModEntities {
 		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
 		event.put(PLESIOSAURUS.get(), PlesiosaurusEntity.createAttributes().build());
 		event.put(PTERODACTYL.get(), PterodactylEntity.createAttributes().build());
+		event.put(ROCKET.get(), RocketEntity.createAttributes().build());
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
-		event.put(ROCKET.get(), RocketEntity.createAttributes().build());
 	}
 }

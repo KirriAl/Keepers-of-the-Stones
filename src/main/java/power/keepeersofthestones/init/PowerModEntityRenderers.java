@@ -33,6 +33,7 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.RAPTOR.get(), RaptorRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.PLESIOSAURUS.get(), PlesiosaurusRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.PTERODACTYL.get(), PterodactylRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ROCKET.get(), RocketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MAGIC_FIREBALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AIR_FLOW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.WATER_FLOW.get(), ThrownItemRenderer::new);
@@ -78,7 +79,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.DISCO_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MUSKET.get(), MusketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MASS_INFECTION.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.ROCKET.get(), RocketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.THROWING_HAMMER.get(), ThrownItemRenderer::new);
 	}
 }
