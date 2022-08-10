@@ -135,6 +135,7 @@ public class PowerModVariables {
 			clone.keeper = original.keeper;
 			clone.plague = original.plague;
 			clone.gravity = original.gravity;
+			clone.without_stone = original.without_stone;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -522,6 +523,7 @@ public class PowerModVariables {
 		public boolean plague = false;
 		public boolean recharge_spell_plague = false;
 		public boolean gravity = false;
+		public boolean without_stone = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -595,6 +597,7 @@ public class PowerModVariables {
 			nbt.putBoolean("plague", plague);
 			nbt.putBoolean("recharge_spell_plague", recharge_spell_plague);
 			nbt.putBoolean("gravity", gravity);
+			nbt.putBoolean("without_stone", without_stone);
 			return nbt;
 		}
 
@@ -665,6 +668,7 @@ public class PowerModVariables {
 			plague = nbt.getBoolean("plague");
 			recharge_spell_plague = nbt.getBoolean("recharge_spell_plague");
 			gravity = nbt.getBoolean("gravity");
+			without_stone = nbt.getBoolean("without_stone");
 		}
 	}
 
@@ -755,6 +759,7 @@ public class PowerModVariables {
 					variables.plague = message.data.plague;
 					variables.recharge_spell_plague = message.data.recharge_spell_plague;
 					variables.gravity = message.data.gravity;
+					variables.without_stone = message.data.without_stone;
 				}
 			});
 			context.setPacketHandled(true);

@@ -17,6 +17,13 @@ public class WithoutStoneVarProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				boolean _setval = true;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.without_stone = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}
