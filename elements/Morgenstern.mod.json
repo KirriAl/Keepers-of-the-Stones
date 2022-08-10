@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "morgenstern",
     "customModelName": "Normal",
     "name": "Morgenstern",
     "specialInfo": [],
