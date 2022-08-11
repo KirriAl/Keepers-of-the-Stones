@@ -51,6 +51,7 @@ import power.keepeersofthestones.entity.DiscoBallEntity;
 import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
 import power.keepeersofthestones.entity.BoomerangEntity;
+import power.keepeersofthestones.entity.BlueFireballEntity;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 import power.keepeersofthestones.entity.BlackHeartEntity;
 import power.keepeersofthestones.entity.AmberStreaksEntity;
@@ -243,6 +244,9 @@ public class PowerModEntities {
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ThrowingHammerEntity>> THROWING_HAMMER = register("projectile_throwing_hammer",
 			EntityType.Builder.<ThrowingHammerEntity>of(ThrowingHammerEntity::new, MobCategory.MISC).setCustomClientFactory(ThrowingHammerEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BlueFireballEntity>> BLUE_FIREBALL = register("projectile_blue_fireball",
+			EntityType.Builder.<BlueFireballEntity>of(BlueFireballEntity::new, MobCategory.MISC).setCustomClientFactory(BlueFireballEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

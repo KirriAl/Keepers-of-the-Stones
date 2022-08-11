@@ -80,5 +80,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.MUSKET.get(), MusketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MASS_INFECTION.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.THROWING_HAMMER.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BLUE_FIREBALL.get(), ThrownItemRenderer::new);
 	}
 }

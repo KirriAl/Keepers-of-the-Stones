@@ -251,7 +251,13 @@ import power.keepeersofthestones.item.BurnItem;
 import power.keepeersofthestones.item.BoomerangItem;
 import power.keepeersofthestones.item.BookOfElementsItem;
 import power.keepeersofthestones.item.BoStaffItem;
+import power.keepeersofthestones.item.BlueLightningItem;
 import power.keepeersofthestones.item.BlueKnifeItem;
+import power.keepeersofthestones.item.BlueFlameStoneItem;
+import power.keepeersofthestones.item.BlueFlameItem;
+import power.keepeersofthestones.item.BlueFlameBatteryItem;
+import power.keepeersofthestones.item.BlueFireballItem;
+import power.keepeersofthestones.item.BlueFireSwordItem;
 import power.keepeersofthestones.item.BloodStoneItem;
 import power.keepeersofthestones.item.BloodReaperItem;
 import power.keepeersofthestones.item.BloodItem;
@@ -730,6 +736,15 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GRAVITY_BOOTS = REGISTRY.register("gravity_boots", () -> new GravityItem.Boots());
 	public static final RegistryObject<Item> MORGENSTERN = REGISTRY.register("morgenstern", () -> new MorgensternItem());
 	public static final RegistryObject<Item> THROWING_HAMMER = REGISTRY.register("throwing_hammer", () -> new ThrowingHammerItem());
+	public static final RegistryObject<Item> BLUE_FLAME_STONE = REGISTRY.register("blue_flame_stone", () -> new BlueFlameStoneItem());
+	public static final RegistryObject<Item> BLUE_FLAME_BATTERY = REGISTRY.register("blue_flame_battery", () -> new BlueFlameBatteryItem());
+	public static final RegistryObject<Item> BLUE_FLAME_HELMET = REGISTRY.register("blue_flame_helmet", () -> new BlueFlameItem.Helmet());
+	public static final RegistryObject<Item> BLUE_FLAME_CHESTPLATE = REGISTRY.register("blue_flame_chestplate", () -> new BlueFlameItem.Chestplate());
+	public static final RegistryObject<Item> BLUE_FLAME_LEGGINGS = REGISTRY.register("blue_flame_leggings", () -> new BlueFlameItem.Leggings());
+	public static final RegistryObject<Item> BLUE_FLAME_BOOTS = REGISTRY.register("blue_flame_boots", () -> new BlueFlameItem.Boots());
+	public static final RegistryObject<Item> BLUE_FIREBALL = REGISTRY.register("blue_fireball", () -> new BlueFireballItem());
+	public static final RegistryObject<Item> BLUE_FIRE_SWORD = REGISTRY.register("blue_fire_sword", () -> new BlueFireSwordItem());
+	public static final RegistryObject<Item> BLUE_LIGHTNING = REGISTRY.register("blue_lightning", () -> new BlueLightningItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

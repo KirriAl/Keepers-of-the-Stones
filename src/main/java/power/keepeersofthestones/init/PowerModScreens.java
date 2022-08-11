@@ -47,6 +47,7 @@ import power.keepeersofthestones.client.gui.EBEarthScreen;
 import power.keepeersofthestones.client.gui.EBDestructionScreen;
 import power.keepeersofthestones.client.gui.EBCrystalScreen;
 import power.keepeersofthestones.client.gui.EBCreationScreen;
+import power.keepeersofthestones.client.gui.EBBlueFlameScreen;
 import power.keepeersofthestones.client.gui.EBBloodScreen;
 import power.keepeersofthestones.client.gui.EBAnimalsScreen;
 import power.keepeersofthestones.client.gui.EBAmberScreen;
@@ -131,6 +132,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_MUSIC, EBMusicScreen::new);
 			MenuScreens.register(PowerModMenus.EB_PLAGUE, EBPlagueScreen::new);
 			MenuScreens.register(PowerModMenus.ROCKET_PATH_GUI, RocketPathGUIScreen::new);
+			MenuScreens.register(PowerModMenus.EB_BLUE_FLAME, EBBlueFlameScreen::new);
 		});
 	}
 }

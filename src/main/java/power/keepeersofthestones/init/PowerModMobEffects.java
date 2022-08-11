@@ -53,6 +53,7 @@ import power.keepeersofthestones.potion.RechargeEarthStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeDestructionStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeCrystalStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeCreationStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeBlueFlameStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeBloodStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAnimalsStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAmberStoneMobEffect;
@@ -85,6 +86,7 @@ import power.keepeersofthestones.potion.EarthMasterMobEffect;
 import power.keepeersofthestones.potion.DestructionMasterMobEffect;
 import power.keepeersofthestones.potion.CrystalMasterMobEffect;
 import power.keepeersofthestones.potion.CreationMasterMobEffect;
+import power.keepeersofthestones.potion.BlueFlameMasterMobEffect;
 import power.keepeersofthestones.potion.BloodMasterMobEffect;
 import power.keepeersofthestones.potion.AnimalsMasterMobEffect;
 import power.keepeersofthestones.potion.AmberMasterMobEffect;
@@ -226,4 +228,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_GRAVITY_STONE = REGISTRY.register("recharge_gravity_stone",
 			() -> new RechargeGravityStoneMobEffect());
+	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_BLUE_FLAME_STONE = REGISTRY.register("recharge_blue_flame_stone",
+			() -> new RechargeBlueFlameStoneMobEffect());
 }

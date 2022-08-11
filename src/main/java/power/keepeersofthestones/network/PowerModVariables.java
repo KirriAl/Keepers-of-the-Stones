@@ -136,6 +136,7 @@ public class PowerModVariables {
 			clone.plague = original.plague;
 			clone.gravity = original.gravity;
 			clone.without_stone = original.without_stone;
+			clone.blue_flame = original.blue_flame;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -143,7 +144,7 @@ public class PowerModVariables {
 				clone.recharge_spell_blood = original.recharge_spell_blood;
 				clone.recharge_spell_energy = original.recharge_spell_energy;
 				clone.fog = original.fog;
-				clone.recharge_spell_mist = original.recharge_spell_mist;
+				clone.recharge_spell_blue_flame = original.recharge_spell_blue_flame;
 				clone.turbospeed = original.turbospeed;
 				clone.recharge_spell_plague = original.recharge_spell_plague;
 			}
@@ -259,6 +260,7 @@ public class PowerModVariables {
 		public boolean music_stone = false;
 		public boolean plague_stone = false;
 		public boolean gravity_stone = false;
+		public boolean blue_flame_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -316,6 +318,7 @@ public class PowerModVariables {
 			music_stone = nbt.getBoolean("music_stone");
 			plague_stone = nbt.getBoolean("plague_stone");
 			gravity_stone = nbt.getBoolean("gravity_stone");
+			blue_flame_stone = nbt.getBoolean("blue_flame_stone");
 		}
 
 		@Override
@@ -369,6 +372,7 @@ public class PowerModVariables {
 			nbt.putBoolean("music_stone", music_stone);
 			nbt.putBoolean("plague_stone", plague_stone);
 			nbt.putBoolean("gravity_stone", gravity_stone);
+			nbt.putBoolean("blue_flame_stone", blue_flame_stone);
 			return nbt;
 		}
 
@@ -502,7 +506,7 @@ public class PowerModVariables {
 		public boolean magnet = false;
 		public boolean mist = false;
 		public double power_level = 1.0;
-		public boolean recharge_spell_mist = false;
+		public boolean recharge_spell_blue_flame = false;
 		public boolean sand = false;
 		public boolean speed = false;
 		public boolean turbospeed = false;
@@ -524,6 +528,7 @@ public class PowerModVariables {
 		public boolean recharge_spell_plague = false;
 		public boolean gravity = false;
 		public boolean without_stone = false;
+		public boolean blue_flame = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -576,7 +581,7 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet", magnet);
 			nbt.putBoolean("mist", mist);
 			nbt.putDouble("power_level", power_level);
-			nbt.putBoolean("recharge_spell_mist", recharge_spell_mist);
+			nbt.putBoolean("recharge_spell_blue_flame", recharge_spell_blue_flame);
 			nbt.putBoolean("sand", sand);
 			nbt.putBoolean("speed", speed);
 			nbt.putBoolean("turbospeed", turbospeed);
@@ -598,6 +603,7 @@ public class PowerModVariables {
 			nbt.putBoolean("recharge_spell_plague", recharge_spell_plague);
 			nbt.putBoolean("gravity", gravity);
 			nbt.putBoolean("without_stone", without_stone);
+			nbt.putBoolean("blue_flame", blue_flame);
 			return nbt;
 		}
 
@@ -647,7 +653,7 @@ public class PowerModVariables {
 			magnet = nbt.getBoolean("magnet");
 			mist = nbt.getBoolean("mist");
 			power_level = nbt.getDouble("power_level");
-			recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
+			recharge_spell_blue_flame = nbt.getBoolean("recharge_spell_blue_flame");
 			sand = nbt.getBoolean("sand");
 			speed = nbt.getBoolean("speed");
 			turbospeed = nbt.getBoolean("turbospeed");
@@ -669,6 +675,7 @@ public class PowerModVariables {
 			recharge_spell_plague = nbt.getBoolean("recharge_spell_plague");
 			gravity = nbt.getBoolean("gravity");
 			without_stone = nbt.getBoolean("without_stone");
+			blue_flame = nbt.getBoolean("blue_flame");
 		}
 	}
 
@@ -738,7 +745,7 @@ public class PowerModVariables {
 					variables.magnet = message.data.magnet;
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
-					variables.recharge_spell_mist = message.data.recharge_spell_mist;
+					variables.recharge_spell_blue_flame = message.data.recharge_spell_blue_flame;
 					variables.sand = message.data.sand;
 					variables.speed = message.data.speed;
 					variables.turbospeed = message.data.turbospeed;
@@ -760,6 +767,7 @@ public class PowerModVariables {
 					variables.recharge_spell_plague = message.data.recharge_spell_plague;
 					variables.gravity = message.data.gravity;
 					variables.without_stone = message.data.without_stone;
+					variables.blue_flame = message.data.blue_flame;
 				}
 			});
 			context.setPacketHandled(true);

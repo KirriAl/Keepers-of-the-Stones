@@ -23,6 +23,11 @@ public class InjectionOnPlayerProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (sourceentity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 800);
+			if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PowerModVariables.PlayerVariables())).recharge_spell_moon) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.setHealth(40);
+			}
 			{
 				boolean _setval = true;
 				sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -61,11 +66,6 @@ public class InjectionOnPlayerProcedure {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 800);
-			if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PowerModVariables.PlayerVariables())).recharge_spell_moon) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.setHealth(40);
-			}
 		}
 	}
 }

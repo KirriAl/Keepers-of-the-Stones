@@ -47,6 +47,7 @@ import power.keepeersofthestones.world.inventory.EBEarthMenu;
 import power.keepeersofthestones.world.inventory.EBDestructionMenu;
 import power.keepeersofthestones.world.inventory.EBCrystalMenu;
 import power.keepeersofthestones.world.inventory.EBCreationMenu;
+import power.keepeersofthestones.world.inventory.EBBlueFlameMenu;
 import power.keepeersofthestones.world.inventory.EBBloodMenu;
 import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
 import power.keepeersofthestones.world.inventory.EBAmberMenu;
@@ -156,6 +157,8 @@ public class PowerModMenus {
 	public static final MenuType<EBPlagueMenu> EB_PLAGUE = register("eb_plague", (id, inv, extraData) -> new EBPlagueMenu(id, inv, extraData));
 	public static final MenuType<RocketPathGUIMenu> ROCKET_PATH_GUI = register("rocket_path_gui",
 			(id, inv, extraData) -> new RocketPathGUIMenu(id, inv, extraData));
+	public static final MenuType<EBBlueFlameMenu> EB_BLUE_FLAME = register("eb_blue_flame",
+			(id, inv, extraData) -> new EBBlueFlameMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
