@@ -25,7 +25,6 @@ body:
      description: On which version of Minecraft is the mod installed?
      options:
        - 1.18.2 (Main)
-       - 1.16.5 (LTS)
    validations:
      required: true
  - type: dropdown
@@ -33,7 +32,7 @@ body:
      label: Mod Version
      description: Which version of the mod are you using?
      options:
-       - 2.5.0 (Release)
+       - 2.5.1 (Release)
        - 2.6.0.x (Beta)
    validations:
      required: true
