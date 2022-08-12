@@ -16,6 +16,8 @@
     "power:moon_stones_block",
     "power:unmultiplication_moon_stones_block",
     "power:technobarrier_block",
-    "power:amber_block"
+    "power:amber_block",
+    "power:energium_ore",
+    "power:power_blocker"
   ]
 }

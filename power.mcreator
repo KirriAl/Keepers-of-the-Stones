@@ -16848,6 +16848,114 @@
       "locked_code": false,
       "registry_name": "eb_gravity",
       "path": "~/ElementalBook"
+    },
+    {
+      "name": "EnergiumOre",
+      "type": "block",
+      "sortid": 1001,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_ore",
+      "path": "~/Energium"
+    },
+    {
+      "name": "EnergiumOreSmelting",
+      "type": "recipe",
+      "sortid": 1005,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_ore_smelting",
+      "path": "~/Energium"
+    },
+    {
+      "name": "EnergiumSharp",
+      "type": "item",
+      "sortid": 1006,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_sharp",
+      "path": "~/Energium"
+    },
+    {
+      "name": "PowerBlocker",
+      "type": "block",
+      "sortid": 1007,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_blocker",
+      "path": "~/Energium"
+    },
+    {
+      "name": "PowerLock",
+      "type": "potioneffect",
+      "sortid": 1008,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_lock",
+      "path": "~/Energium"
+    },
+    {
+      "name": "PowerLockStart",
+      "type": "procedure",
+      "sortid": 1009,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_lock_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Energium"
+    },
+    {
+      "name": "PowerLockEnd",
+      "type": "procedure",
+      "sortid": 1010,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_lock_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Energium"
+    },
+    {
+      "name": "PowerBlockerTick",
+      "type": "procedure",
+      "sortid": 1011,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_blocker_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Energium"
     }
   ],
   "variable_elements": [
@@ -17723,25 +17831,26 @@
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.moon_battery": "Батарея",
       "item.power.energy_leggings": "Энергетические Поножи",
+      "item.power.moon_battery": "Батарея",
       "item.power.gravity_boost": "Усиление Гравитации",
-      "item.power.sun_battery": "Батарея",
       "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.disco_ball": "Диско-шар",
       "item.power.spike": "Шип",
+      "block.power.power_blocker": "Block of Energium",
       "item.power.explosive_flow": "Взрывной Поток",
       "effect.power.recharge_water_stone": "Перезарядка",
       "item.power.lightning_battery": "Батарея",
       "effect.power.recharge_rain_stone": "Перезарядка",
       "effect.recharge_tornado_stone": "Перезарядка",
-      "block.power.detonator_tnt": "Детонатор",
-      "item.power.cutter_sword": "Куттер-Меч",
       "biome.power.triassic_plains": "Триассовые Равнины",
-      "item.power.blue_flame_battery": "Батарея",
+      "item.power.cutter_sword": "Куттер-Меч",
+      "block.power.detonator_tnt": "Детонатор",
       "effect.power.recharge_moon_stone": "Перезарядка",
+      "item.power.blue_flame_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
@@ -17750,11 +17859,11 @@
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Батарея",
-      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
+      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
@@ -17768,8 +17877,8 @@
       "effect.power.mushrooms_master": "Мастер Грибов",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.pumpkin.text": "Тыква",
       "power.cultivation.potato.text": "Картофель",
+      "power.cultivation.pumpkin.text": "Тыква",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -17835,6 +17944,7 @@
       "item.power.bo_staff": "Посох Бо",
       "item.power.destruction_helmet": "Шлем разрушения",
       "item.power.sand_leggings": "Sand Leggings",
+      "item.power.energium_sharp": "Energium",
       "item.power.pterodactyl_spawn_egg": "Яйцо призыва птеродактиля",
       "item.power.sun_ray": "Луч Солнца",
       "item.power.destruction_leggings": "Поножи разрушения",
@@ -17890,6 +18000,7 @@
       "effect.power.recharge_speed_stone": "Перезарядка",
       "item.power.tornado_battery": "Батарея",
       "item.power.musical_axe": "Музыкальный Топор",
+      "effect.power.power_lock": "Power Lock",
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
       "advancements.forward_to_the_stars.title": "Вперед ко звездам!",
@@ -18200,6 +18311,7 @@
       "item.power.teleportation_chestplate": "Телепортационный нагрудник",
       "item.power.lava_helmet": "Лавовые Очки",
       "item.power.time_battery": "Батарея",
+      "block.power.energium_ore": "Energium Ore",
       "item.power.animals_helmet": "Животный шлем",
       "effect.power.gravity_master": "Мастер Гравитации",
       "item.power.teleportation_battery": "Батарея",
@@ -18382,25 +18494,26 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.moon_battery": "Battery",
       "item.power.energy_leggings": "Energy Leggings",
+      "item.power.moon_battery": "Battery",
       "item.power.gravity_boost": "Gravity Boost",
-      "item.power.explode_leggings": "Explode Leggings",
       "item.power.sun_battery": "Battery",
+      "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.disco_ball": "Disco Ball",
       "item.power.spike": "Spike",
+      "block.power.power_blocker": "Block of Energium",
       "item.power.explosive_flow": "Explosive Flow",
       "effect.power.recharge_water_stone": "Recharge",
       "item.power.lightning_battery": "Battery",
       "effect.power.recharge_rain_stone": "Recharge",
       "effect.recharge_tornado_stone": "Recharge",
-      "item.power.cutter_sword": "Cutter Sword",
-      "block.power.detonator_tnt": "Detonator TNT",
       "biome.power.triassic_plains": "Triassic Plains",
-      "effect.power.recharge_moon_stone": "Recharge",
+      "block.power.detonator_tnt": "Detonator TNT",
+      "item.power.cutter_sword": "Cutter Sword",
       "item.power.blue_flame_battery": "Battery",
+      "effect.power.recharge_moon_stone": "Recharge",
       "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
@@ -18409,11 +18522,11 @@
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Snow Golem Creator",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "block.power.iron_magic_box": "Iron Magic Box",
@@ -18427,8 +18540,8 @@
       "effect.power.mushrooms_master": "Master of Mushrooms",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Enceladus",
-      "power.cultivation.pumpkin.text": "Pumpkin",
       "power.cultivation.potato.text": "Potato",
+      "power.cultivation.pumpkin.text": "Pumpkin",
       "biome.power.oblivion_plains": "Oblivion Plains",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
@@ -18494,6 +18607,7 @@
       "item.power.bo_staff": "Bo Staff",
       "item.power.destruction_helmet": "Destruction Helmet",
       "item.power.sand_leggings": "Sand Leggings",
+      "item.power.energium_sharp": "Energium",
       "item.power.sun_ray": "Sun Ray",
       "item.power.pterodactyl_spawn_egg": "Pterodactyl Spawn Egg",
       "item.power.destruction_leggings": "Destruction Leggings",
@@ -18549,6 +18663,7 @@
       "effect.power.recharge_speed_stone": "Recharge",
       "item.power.tornado_battery": "Battery",
       "item.power.musical_axe": "Musical Axe",
+      "effect.power.power_lock": "Power Lock",
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
       "advancements.forward_to_the_stars.title": "Forward to the Stars!",
@@ -18860,6 +18975,7 @@
       "item.power.teleportation_chestplate": "Teleportation Chestplate",
       "item.power.lava_helmet": "Lava Helmet",
       "item.power.time_battery": "Battery",
+      "block.power.energium_ore": "Energium Ore",
       "item.power.animals_helmet": "Animals Helmet",
       "effect.power.gravity_master": "Master of Gravity",
       "item.power.teleportation_battery": "Battery",
@@ -19299,6 +19415,10 @@
       },
       {
         "name": "Mind",
+        "children": []
+      },
+      {
+        "name": "Energium",
         "children": []
       }
     ]

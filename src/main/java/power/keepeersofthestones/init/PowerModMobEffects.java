@@ -60,6 +60,7 @@ import power.keepeersofthestones.potion.RechargeAmberStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAirStoneMobEffect;
 import power.keepeersofthestones.potion.RainMasterMobEffect;
 import power.keepeersofthestones.potion.RainFlyMobEffect;
+import power.keepeersofthestones.potion.PowerLockMobEffect;
 import power.keepeersofthestones.potion.PoisonMasterMobEffect;
 import power.keepeersofthestones.potion.PlagueMasterMobEffect;
 import power.keepeersofthestones.potion.OceanMasterMobEffect;
@@ -231,4 +232,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_BLUE_FLAME_STONE = REGISTRY.register("recharge_blue_flame_stone",
 			() -> new RechargeBlueFlameStoneMobEffect());
+	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
 }
