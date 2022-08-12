@@ -147,6 +147,8 @@ public class PowerModVariables {
 				clone.recharge_spell_blue_flame = original.recharge_spell_blue_flame;
 				clone.turbospeed = original.turbospeed;
 				clone.recharge_spell_plague = original.recharge_spell_plague;
+				clone.recharge_spell_gravity_boost = original.recharge_spell_gravity_boost;
+				clone.recharge_spell_gravity_red = original.recharge_spell_gravity_red;
 			}
 		}
 
@@ -529,6 +531,8 @@ public class PowerModVariables {
 		public boolean gravity = false;
 		public boolean without_stone = false;
 		public boolean blue_flame = false;
+		public boolean recharge_spell_gravity_boost = false;
+		public boolean recharge_spell_gravity_red = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -604,6 +608,8 @@ public class PowerModVariables {
 			nbt.putBoolean("gravity", gravity);
 			nbt.putBoolean("without_stone", without_stone);
 			nbt.putBoolean("blue_flame", blue_flame);
+			nbt.putBoolean("recharge_spell_gravity_boost", recharge_spell_gravity_boost);
+			nbt.putBoolean("recharge_spell_gravity_red", recharge_spell_gravity_red);
 			return nbt;
 		}
 
@@ -676,6 +682,8 @@ public class PowerModVariables {
 			gravity = nbt.getBoolean("gravity");
 			without_stone = nbt.getBoolean("without_stone");
 			blue_flame = nbt.getBoolean("blue_flame");
+			recharge_spell_gravity_boost = nbt.getBoolean("recharge_spell_gravity_boost");
+			recharge_spell_gravity_red = nbt.getBoolean("recharge_spell_gravity_red");
 		}
 	}
 
@@ -768,6 +776,8 @@ public class PowerModVariables {
 					variables.gravity = message.data.gravity;
 					variables.without_stone = message.data.without_stone;
 					variables.blue_flame = message.data.blue_flame;
+					variables.recharge_spell_gravity_boost = message.data.recharge_spell_gravity_boost;
+					variables.recharge_spell_gravity_red = message.data.recharge_spell_gravity_red;
 				}
 			});
 			context.setPacketHandled(true);

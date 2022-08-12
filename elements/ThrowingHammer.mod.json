@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "throwing_hammer",
     "customModelName": "Normal",
     "name": "Throwing Hammer",
     "specialInfo": [],
