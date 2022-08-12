@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Power Lock",
-    "icon": "energy_master.png",
+    "icon": "power_lock.png",
     "color": {
       "value": -13312,
       "falpha": 0.0

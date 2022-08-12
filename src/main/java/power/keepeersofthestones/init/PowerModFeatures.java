@@ -4,7 +4,6 @@
  */
 package power.keepeersofthestones.init;
 
-import power.keepeersofthestones.world.features.ores.EnergiumOreFeature;
 import power.keepeersofthestones.world.features.ores.CrystalYellowFeature;
 import power.keepeersofthestones.world.features.ores.CrystalVioletFeature;
 import power.keepeersofthestones.world.features.ores.CrystalRedFeature;
@@ -66,8 +65,6 @@ public class PowerModFeatures {
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalVioletFeature.GENERATE_BIOMES, CrystalVioletFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> CRYSTAL_YELLOW = register("crystal_yellow", CrystalYellowFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalYellowFeature.GENERATE_BIOMES, CrystalYellowFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> ENERGIUM_ORE = register("energium_ore", EnergiumOreFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, EnergiumOreFeature.GENERATE_BIOMES, EnergiumOreFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

@@ -2,7 +2,7 @@
   "_fv": 33,
   "_type": "block",
   "definition": {
-    "texture": "energium_ore_block",
+    "texture": "power_blocker",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Block of Energium",
+    "name": "Power Blocker",
     "specialInfo": [],
     "hardness": 5.0,
     "resistance": 10.0,
@@ -51,7 +51,7 @@
     "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
-    "canRedstoneConnect": false,
+    "canRedstoneConnect": true,
     "lightOpacity": 15,
     "material": {
       "value": "IRON"
@@ -59,7 +59,7 @@
     "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
-    "canProvidePower": false,
+    "canProvidePower": true,
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },

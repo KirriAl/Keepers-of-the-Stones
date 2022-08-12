@@ -218,7 +218,7 @@ import power.keepeersofthestones.item.EnergyShieldItem;
 import power.keepeersofthestones.item.EnergyItem;
 import power.keepeersofthestones.item.EnergyBatteryItem;
 import power.keepeersofthestones.item.EnergyAbsorptionItem;
-import power.keepeersofthestones.item.EnergiumSharpItem;
+import power.keepeersofthestones.item.EnergiumIngotItem;
 import power.keepeersofthestones.item.EmptyBatteryItem;
 import power.keepeersofthestones.item.ElementalMusicDiscItem;
 import power.keepeersofthestones.item.ElementalCoinItem;
@@ -750,9 +750,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BLUE_LIGHTNING = REGISTRY.register("blue_lightning", () -> new BlueLightningItem());
 	public static final RegistryObject<Item> GRAVITY_BOOST = REGISTRY.register("gravity_boost", () -> new GravityBoostItem());
 	public static final RegistryObject<Item> GRAVITY_REDUCTION = REGISTRY.register("gravity_reduction", () -> new GravityReductionItem());
-	public static final RegistryObject<Item> ENERGIUM_ORE = block(PowerModBlocks.ENERGIUM_ORE, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
-	public static final RegistryObject<Item> ENERGIUM_SHARP = REGISTRY.register("energium_sharp", () -> new EnergiumSharpItem());
 	public static final RegistryObject<Item> POWER_BLOCKER = block(PowerModBlocks.POWER_BLOCKER, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
+	public static final RegistryObject<Item> ENERGIUM_INGOT = REGISTRY.register("energium_ingot", () -> new EnergiumIngotItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

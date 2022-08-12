@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "energium_gem",
+    "texture": "energium_ingot",
     "customModelName": "Normal",
-    "name": "Energium",
+    "name": "Energium Ingot",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:TechnologiesAndArtifacts"

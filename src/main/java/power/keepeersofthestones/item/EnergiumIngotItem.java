@@ -8,8 +8,8 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 
-public class EnergiumSharpItem extends Item {
-	public EnergiumSharpItem() {
+public class EnergiumIngotItem extends Item {
+	public EnergiumIngotItem() {
 		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).stacksTo(64).rarity(Rarity.COMMON));
 	}
 
