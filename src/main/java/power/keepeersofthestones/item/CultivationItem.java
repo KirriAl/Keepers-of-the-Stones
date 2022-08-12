@@ -22,11 +22,6 @@ public class CultivationItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
-		return 0;
-	}
-
-	@Override
 	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 		return 0F;
 	}
