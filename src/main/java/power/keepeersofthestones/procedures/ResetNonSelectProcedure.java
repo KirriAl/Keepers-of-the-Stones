@@ -22,6 +22,13 @@ public class ResetNonSelectProcedure {
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
+					{
+						boolean _setval = false;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.selected = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
 				}
 			}
 		} catch (CommandSyntaxException e) {
