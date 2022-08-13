@@ -93,6 +93,7 @@ import power.keepeersofthestones.item.SaiItem;
 import power.keepeersofthestones.item.RoseSwordItem;
 import power.keepeersofthestones.item.RocketItemItem;
 import power.keepeersofthestones.item.RedstoneBundleItem;
+import power.keepeersofthestones.item.RawEnergiumItem;
 import power.keepeersofthestones.item.RandomItemItem;
 import power.keepeersofthestones.item.RainfallItem;
 import power.keepeersofthestones.item.RainStoneItem;
@@ -335,6 +336,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSIC_STONE = REGISTRY.register("music_stone", () -> new MusicStoneItem());
 	public static final RegistryObject<Item> PLAGUE_STONE = REGISTRY.register("plague_stone", () -> new PlagueStoneItem());
 	public static final RegistryObject<Item> GRAVITY_STONE = REGISTRY.register("gravity_stone", () -> new GravityStoneItem());
+	public static final RegistryObject<Item> BLUE_FLAME_STONE = REGISTRY.register("blue_flame_stone", () -> new BlueFlameStoneItem());
 	public static final RegistryObject<Item> SUN_STONE = REGISTRY.register("sun_stone", () -> new SunStoneItem());
 	public static final RegistryObject<Item> MOON_STONE = REGISTRY.register("moon_stone", () -> new MoonStoneItem());
 	public static final RegistryObject<Item> SPACE_STONE = REGISTRY.register("space_stone", () -> new SpaceStoneItem());
@@ -374,6 +376,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CRYSTAL_RED = block(PowerModBlocks.CRYSTAL_RED, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> CRYSTAL_VIOLET = block(PowerModBlocks.CRYSTAL_VIOLET, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
 	public static final RegistryObject<Item> CRYSTAL_YELLOW = block(PowerModBlocks.CRYSTAL_YELLOW, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
+	public static final RegistryObject<Item> ENERGIUM_ORE = block(PowerModBlocks.ENERGIUM_ORE, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
+	public static final RegistryObject<Item> POWER_BLOCKER = block(PowerModBlocks.POWER_BLOCKER, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
+	public static final RegistryObject<Item> ENERGIUM_INGOT = REGISTRY.register("energium_ingot", () -> new EnergiumIngotItem());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
@@ -415,6 +420,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CREATION_BATTERY = REGISTRY.register("creation_battery", () -> new CreationBatteryItem());
 	public static final RegistryObject<Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", () -> new DestructionBatteryItem());
 	public static final RegistryObject<Item> GRAVITY_BATTERY = REGISTRY.register("gravity_battery", () -> new GravityBatteryItem());
+	public static final RegistryObject<Item> BLUE_FLAME_BATTERY = REGISTRY.register("blue_flame_battery", () -> new BlueFlameBatteryItem());
 	public static final RegistryObject<Item> BURN = REGISTRY.register("burn", () -> new BurnItem());
 	public static final RegistryObject<Item> MAGIC_FIREBALL = REGISTRY.register("magic_fireball", () -> new MagicFireballItem());
 	public static final RegistryObject<Item> AIR_FLOW = REGISTRY.register("air_flow", () -> new AirFlowItem());
@@ -655,6 +661,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SMOKE_STONE = REGISTRY.register("smoke_stone", () -> new SmokeStoneItem());
 	public static final RegistryObject<Item> SPIRIT_STONE = REGISTRY.register("spirit_stone", () -> new SpiritStoneItem());
 	public static final RegistryObject<Item> POINT = REGISTRY.register("point", () -> new PointItem());
+	public static final RegistryObject<Item> BLUE_FLAME_HELMET = REGISTRY.register("blue_flame_helmet", () -> new BlueFlameItem.Helmet());
+	public static final RegistryObject<Item> BLUE_FLAME_CHESTPLATE = REGISTRY.register("blue_flame_chestplate", () -> new BlueFlameItem.Chestplate());
+	public static final RegistryObject<Item> BLUE_FLAME_LEGGINGS = REGISTRY.register("blue_flame_leggings", () -> new BlueFlameItem.Leggings());
+	public static final RegistryObject<Item> BLUE_FLAME_BOOTS = REGISTRY.register("blue_flame_boots", () -> new BlueFlameItem.Boots());
 	public static final RegistryObject<Item> WOOD_MAGIC_BOX = block(PowerModBlocks.WOOD_MAGIC_BOX, null);
 	public static final RegistryObject<Item> STONE_MAGIC_BOX = block(PowerModBlocks.STONE_MAGIC_BOX, null);
 	public static final RegistryObject<Item> IRON_MAGIC_BOX = block(PowerModBlocks.IRON_MAGIC_BOX, null);
@@ -739,19 +749,12 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GRAVITY_BOOTS = REGISTRY.register("gravity_boots", () -> new GravityItem.Boots());
 	public static final RegistryObject<Item> MORGENSTERN = REGISTRY.register("morgenstern", () -> new MorgensternItem());
 	public static final RegistryObject<Item> THROWING_HAMMER = REGISTRY.register("throwing_hammer", () -> new ThrowingHammerItem());
-	public static final RegistryObject<Item> BLUE_FLAME_STONE = REGISTRY.register("blue_flame_stone", () -> new BlueFlameStoneItem());
-	public static final RegistryObject<Item> BLUE_FLAME_BATTERY = REGISTRY.register("blue_flame_battery", () -> new BlueFlameBatteryItem());
-	public static final RegistryObject<Item> BLUE_FLAME_HELMET = REGISTRY.register("blue_flame_helmet", () -> new BlueFlameItem.Helmet());
-	public static final RegistryObject<Item> BLUE_FLAME_CHESTPLATE = REGISTRY.register("blue_flame_chestplate", () -> new BlueFlameItem.Chestplate());
-	public static final RegistryObject<Item> BLUE_FLAME_LEGGINGS = REGISTRY.register("blue_flame_leggings", () -> new BlueFlameItem.Leggings());
-	public static final RegistryObject<Item> BLUE_FLAME_BOOTS = REGISTRY.register("blue_flame_boots", () -> new BlueFlameItem.Boots());
 	public static final RegistryObject<Item> BLUE_FIREBALL = REGISTRY.register("blue_fireball", () -> new BlueFireballItem());
 	public static final RegistryObject<Item> BLUE_FIRE_SWORD = REGISTRY.register("blue_fire_sword", () -> new BlueFireSwordItem());
 	public static final RegistryObject<Item> BLUE_LIGHTNING = REGISTRY.register("blue_lightning", () -> new BlueLightningItem());
 	public static final RegistryObject<Item> GRAVITY_BOOST = REGISTRY.register("gravity_boost", () -> new GravityBoostItem());
 	public static final RegistryObject<Item> GRAVITY_REDUCTION = REGISTRY.register("gravity_reduction", () -> new GravityReductionItem());
-	public static final RegistryObject<Item> POWER_BLOCKER = block(PowerModBlocks.POWER_BLOCKER, PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS);
-	public static final RegistryObject<Item> ENERGIUM_INGOT = REGISTRY.register("energium_ingot", () -> new EnergiumIngotItem());
+	public static final RegistryObject<Item> RAW_ENERGIUM = REGISTRY.register("raw_energium", () -> new RawEnergiumItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

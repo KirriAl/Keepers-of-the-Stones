@@ -5,7 +5,7 @@
     "achievementName": "Forbidden Zone",
     "achievementDescription": "Create and place a power blocker",
     "achievementIcon": {
-      "value": "Blocks.BARRIER"
+      "value": "CUSTOM:EnergiumIngot"
     },
     "background": "Default",
     "disableDisplay": false,

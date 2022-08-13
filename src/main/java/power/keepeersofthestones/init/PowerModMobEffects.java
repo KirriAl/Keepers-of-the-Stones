@@ -198,6 +198,9 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_AMBER_STONE = REGISTRY.register("recharge_amber_stone",
 			() -> new RechargeAmberStoneMobEffect());
 	public static final RegistryObject<MobEffect> AMBER_MASTER = REGISTRY.register("amber_master", () -> new AmberMasterMobEffect());
+	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_BLUE_FLAME_STONE = REGISTRY.register("recharge_blue_flame_stone",
+			() -> new RechargeBlueFlameStoneMobEffect());
 	public static final RegistryObject<MobEffect> FOG = REGISTRY.register("fog", () -> new FogMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_MAGNET_STONE = REGISTRY.register("recharge_magnet_stone",
 			() -> new RechargeMagnetStoneMobEffect());
@@ -229,8 +232,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_GRAVITY_STONE = REGISTRY.register("recharge_gravity_stone",
 			() -> new RechargeGravityStoneMobEffect());
-	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
-	public static final RegistryObject<MobEffect> RECHARGE_BLUE_FLAME_STONE = REGISTRY.register("recharge_blue_flame_stone",
-			() -> new RechargeBlueFlameStoneMobEffect());
 	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
 }

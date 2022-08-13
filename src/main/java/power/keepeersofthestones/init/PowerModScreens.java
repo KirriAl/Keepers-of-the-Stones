@@ -115,6 +115,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_EXPLOSION, EBExplosionScreen::new);
 			MenuScreens.register(PowerModMenus.EB_AMBER, EBAmberScreen::new);
 			MenuScreens.register(PowerModMenus.POINT_GUI, PointGUIScreen::new);
+			MenuScreens.register(PowerModMenus.EB_BLUE_FLAME, EBBlueFlameScreen::new);
 			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_STONES_PAGE_3, ChoiseMagicStonesPage3Screen::new);
 			MenuScreens.register(PowerModMenus.SPACE_ATLAS_GUI, SpaceAtlasGUIScreen::new);
 			MenuScreens.register(PowerModMenus.CHECK_POINT_TP, CheckPointTPScreen::new);
@@ -133,7 +134,6 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_MUSIC, EBMusicScreen::new);
 			MenuScreens.register(PowerModMenus.EB_PLAGUE, EBPlagueScreen::new);
 			MenuScreens.register(PowerModMenus.ROCKET_PATH_GUI, RocketPathGUIScreen::new);
-			MenuScreens.register(PowerModMenus.EB_BLUE_FLAME, EBBlueFlameScreen::new);
 			MenuScreens.register(PowerModMenus.EB_GRAVITY, EBGravityScreen::new);
 		});
 	}
