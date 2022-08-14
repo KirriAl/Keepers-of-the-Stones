@@ -8053,78 +8053,19 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "itemstack",
             "type": "itemstack"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/Time"
-    },
-    {
-      "name": "TimeStopEffectStart",
-      "type": "procedure",
-      "sortid": 533,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "time_stop_effect_start",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Time"
-    },
-    {
-      "name": "TimeStopEffectEnd",
-      "type": "procedure",
-      "sortid": 534,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "time_stop_effect_end",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Time"
-    },
-    {
-      "name": "TimeStopEffect",
-      "type": "potioneffect",
-      "sortid": 535,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "time_stop_effect",
       "path": "~/Time"
     },
     {
@@ -18128,11 +18069,11 @@
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
+      "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.gravity_boost": "Усиление Гравитации",
-      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.sun_battery": "Батарея",
+      "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.disco_ball": "Диско-шар",
@@ -18143,11 +18084,11 @@
       "item.power.lightning_battery": "Батарея",
       "effect.power.recharge_rain_stone": "Перезарядка",
       "effect.recharge_tornado_stone": "Перезарядка",
-      "biome.power.triassic_plains": "Триассовые Равнины",
-      "item.power.cutter_sword": "Куттер-Меч",
       "block.power.detonator_tnt": "Детонатор",
-      "effect.power.recharge_moon_stone": "Перезарядка",
+      "item.power.cutter_sword": "Куттер-Меч",
+      "biome.power.triassic_plains": "Триассовые Равнины",
       "item.power.blue_flame_battery": "Батарея",
+      "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
@@ -18156,11 +18097,11 @@
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
@@ -18174,8 +18115,8 @@
       "effect.power.mushrooms_master": "Мастер Грибов",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.potato.text": "Картофель",
       "power.cultivation.pumpkin.text": "Тыква",
+      "power.cultivation.potato.text": "Картофель",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -18476,7 +18417,6 @@
       "item.power.rainfall": "Ливень",
       "item.power.magnet_helmet": "Magnet Helmet",
       "item.power.musket": "Мушкет",
-      "effect.power.time_stop_effect": "Остановка Времени",
       "item.power.greenery_chestplate": "Травяной нагрудник",
       "item.power.teleportation_leggings": "Штаны телепортации",
       "item.power.metal_helmet": "Металлический шлем",
@@ -18804,11 +18744,11 @@
     },
     "en_us": {
       "block.power.crystal_yellow": "Crystal Yellow",
-      "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
+      "item.power.energy_leggings": "Energy Leggings",
       "item.power.gravity_boost": "Gravity Boost",
-      "item.power.sun_battery": "Battery",
       "item.power.explode_leggings": "Explode Leggings",
+      "item.power.sun_battery": "Battery",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.disco_ball": "Disco Ball",
@@ -18819,11 +18759,11 @@
       "item.power.lightning_battery": "Battery",
       "effect.power.recharge_rain_stone": "Recharge",
       "effect.recharge_tornado_stone": "Recharge",
-      "biome.power.triassic_plains": "Triassic Plains",
-      "block.power.detonator_tnt": "Detonator TNT",
       "item.power.cutter_sword": "Cutter Sword",
-      "item.power.blue_flame_battery": "Battery",
+      "block.power.detonator_tnt": "Detonator TNT",
+      "biome.power.triassic_plains": "Triassic Plains",
       "effect.power.recharge_moon_stone": "Recharge",
+      "item.power.blue_flame_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
@@ -18832,11 +18772,11 @@
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
-      "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
+      "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "block.power.iron_magic_box": "Iron Magic Box",
@@ -19153,7 +19093,6 @@
       "item.power.rainfall": "Rainfall",
       "item.power.magnet_helmet": "Magnet Helmet",
       "item.power.musket": "Musket",
-      "effect.power.time_stop_effect": "Time Stop",
       "item.power.greenery_chestplate": "Greenery Chestplate",
       "item.power.teleportation_leggings": "Teleportation Leggings",
       "item.power.metal_helmet": "Metal Helmet",

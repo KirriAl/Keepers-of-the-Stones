@@ -7,7 +7,6 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.potion.WaterMasterMobEffect;
 import power.keepeersofthestones.potion.VacuumMasterMobEffect;
 import power.keepeersofthestones.potion.TornadoMasterMobEffect;
-import power.keepeersofthestones.potion.TimeStopEffectMobEffect;
 import power.keepeersofthestones.potion.TimeMasterEffectMobEffect;
 import power.keepeersofthestones.potion.TeleportationMasterMobEffect;
 import power.keepeersofthestones.potion.TechnologyMasterMobEffect;
@@ -187,7 +186,6 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> TIME_MASTER_EFFECT = REGISTRY.register("time_master_effect", () -> new TimeMasterEffectMobEffect());
 	public static final RegistryObject<MobEffect> ACCELERATION_TIME_EFFECT = REGISTRY.register("acceleration_time_effect",
 			() -> new AccelerationTimeEffectMobEffect());
-	public static final RegistryObject<MobEffect> TIME_STOP_EFFECT = REGISTRY.register("time_stop_effect", () -> new TimeStopEffectMobEffect());
 	public static final RegistryObject<MobEffect> FIRE_FLYING = REGISTRY.register("fire_flying", () -> new FireFlyingMobEffect());
 	public static final RegistryObject<MobEffect> RAIN_FLY = REGISTRY.register("rain_fly", () -> new RainFlyMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_TELEPORTATION_STONE = REGISTRY.register("recharge_teleportation_stone",
