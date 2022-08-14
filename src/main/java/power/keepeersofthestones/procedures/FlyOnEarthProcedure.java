@@ -56,8 +56,6 @@ public class FlyOnEarthProcedure {
 			}
 
 			private void run() {
-				if (!entity.level.isClientSide())
-					entity.discard();
 				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
