@@ -12,6 +12,7 @@ import power.keepeersofthestones.potion.TimeMasterEffectMobEffect;
 import power.keepeersofthestones.potion.TeleportationMasterMobEffect;
 import power.keepeersofthestones.potion.TechnologyMasterMobEffect;
 import power.keepeersofthestones.potion.SunMasterMobEffect;
+import power.keepeersofthestones.potion.SpiritMasterMobEffect;
 import power.keepeersofthestones.potion.SpeedMasterMobEffect;
 import power.keepeersofthestones.potion.SpaceMasterMobEffect;
 import power.keepeersofthestones.potion.SoundMasterMobEffect;
@@ -24,6 +25,7 @@ import power.keepeersofthestones.potion.RechargeTimeStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTeleportationStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTechnologyStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSunStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSpiritStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSpeedStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSoundStoneMobEffect;
@@ -233,4 +235,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_GRAVITY_STONE = REGISTRY.register("recharge_gravity_stone",
 			() -> new RechargeGravityStoneMobEffect());
 	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
+	public static final RegistryObject<MobEffect> SPIRIT_MASTER = REGISTRY.register("spirit_master", () -> new SpiritMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SPIRIT_STONE = REGISTRY.register("recharge_spirit_stone",
+			() -> new RechargeSpiritStoneMobEffect());
 }

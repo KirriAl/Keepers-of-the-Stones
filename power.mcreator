@@ -17009,6 +17009,212 @@
       "locked_code": false,
       "registry_name": "power_blocker_craft",
       "path": "~/Energium"
+    },
+    {
+      "name": "SpiritMaster",
+      "type": "potioneffect",
+      "sortid": 1012,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_master",
+      "path": "~/Spirit"
+    },
+    {
+      "name": "Spirit",
+      "type": "armor",
+      "sortid": 1013,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Spirit"
+    },
+    {
+      "name": "RechargeSpiritStone",
+      "type": "potioneffect",
+      "sortid": 1014,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_spirit_stone",
+      "path": "~/Spirit"
+    },
+    {
+      "name": "SpiritGet",
+      "type": "procedure",
+      "sortid": 1015,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "SpiritStoneUse",
+      "type": "procedure",
+      "sortid": 1016,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Spirit"
+    },
+    {
+      "name": "SpiritMasterEffectStart",
+      "type": "procedure",
+      "sortid": 1017,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spirit"
+    },
+    {
+      "name": "SpiritMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 1018,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spirit"
+    },
+    {
+      "name": "SpiritMasterEffects",
+      "type": "procedure",
+      "sortid": 1019,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Spirit"
+    },
+    {
+      "name": "Scythe",
+      "type": "tool",
+      "sortid": 1020,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scythe",
+      "path": "~/Spirit"
+    },
+    {
+      "name": "EctoplasmAttack",
+      "type": "rangeditem",
+      "sortid": 1021,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ectoplasm_attack",
+      "path": "~/Spirit"
+    },
+    {
+      "name": "GhostForm",
+      "type": "item",
+      "sortid": 1022,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_form",
+      "path": "~/Spirit"
+    },
+    {
+      "name": "GhostFormUse",
+      "type": "procedure",
+      "sortid": 1023,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_form_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spirit"
     }
   ],
   "variable_elements": [
@@ -17725,6 +17931,18 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "spirit_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "spirit",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -17884,11 +18102,11 @@
   "language_map": {
     "ru_ru": {
       "block.power.crystal_yellow": "Желтый Кристалл",
-      "item.power.moon_battery": "Батарея",
       "item.power.energy_leggings": "Энергетические Поножи",
+      "item.power.moon_battery": "Батарея",
       "item.power.gravity_boost": "Усиление Гравитации",
-      "item.power.sun_battery": "Батарея",
       "item.power.explode_leggings": "Нагрудник взрыва",
+      "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.disco_ball": "Диско-шар",
@@ -17899,11 +18117,11 @@
       "item.power.lightning_battery": "Батарея",
       "effect.power.recharge_rain_stone": "Перезарядка",
       "effect.recharge_tornado_stone": "Перезарядка",
-      "block.power.detonator_tnt": "Детонатор",
-      "item.power.cutter_sword": "Куттер-Меч",
       "biome.power.triassic_plains": "Триассовые Равнины",
-      "item.power.blue_flame_battery": "Батарея",
+      "item.power.cutter_sword": "Куттер-Меч",
+      "block.power.detonator_tnt": "Детонатор",
       "effect.power.recharge_moon_stone": "Перезарядка",
+      "item.power.blue_flame_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
@@ -17912,11 +18130,11 @@
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Батарея",
-      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
+      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
@@ -17930,8 +18148,8 @@
       "effect.power.mushrooms_master": "Мастер Грибов",
       "item.power.magnet_leggings": "Magnet Leggings",
       "power.space_atlas.enceladus.text": "Энцелад",
-      "power.cultivation.pumpkin.text": "Тыква",
       "power.cultivation.potato.text": "Картофель",
+      "power.cultivation.pumpkin.text": "Тыква",
       "biome.power.oblivion_plains": "Равнины Обливиона",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
@@ -18094,6 +18312,7 @@
       "item.power.tornado_create": "Создание Торнадо",
       "item.power.sun_stone": "Камень Солнца",
       "item.power.mercury_boots": "Mercury Boots",
+      "item.power.spirit_helmet": "Spirit Helmet",
       "item.power.crystal_chestplate": "Кристаллическая Куртка",
       "effect.power.creation_master": "Мастер Творения",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
@@ -18163,7 +18382,9 @@
       "entity.power.pterodactyl": "Птеродактиль",
       "item.power.mushrooms_battery": "Батарея",
       "item.power.gravity_reduction": "Уменьшение Гравитации",
+      "item.power.spirit_leggings": "Spirit Leggings",
       "block.power.crystal_brown": "Коричневый Кристалл",
+      "item.power.ectoplasm_attack": "Ectoplasm Attack",
       "item.power.ice_stone": "Камень Льда",
       "effect.time_stop_effect": "Time Stop",
       "item.power.shadow_sword": "Теневой Мач",
@@ -18172,6 +18393,7 @@
       "item.power.wind_boots": "Воздушные Сапоги",
       "item.power.rain_helmet": "Дождевая Шапка",
       "item.power.quicksand_block_bucket": "Quicksand Block Bucket",
+      "item.power.spirit_chestplate": "Spirit Chestplate",
       "item.power.animals_leggings": "Штаны животных",
       "advancements.maximum_power.descr": "Получите максимальный уровень мощности",
       "item.power.air_battery": "Батарея",
@@ -18191,6 +18413,7 @@
       "item.power.speed_battery": "Батарея",
       "item.power.music_leggings": "Music Leggings",
       "item.power.technology_boots": "Технологичные штаны",
+      "item.power.ghost_form": "Ghost Form",
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Дождевые Штаны",
       "item.power.shadow_ball": "Теневой Шар",
@@ -18247,6 +18470,8 @@
       "item.power.poison_boots": "Poison Boots",
       "item.power.coral_shield": "Коралловый щит",
       "effect.power.rain_master": "Мастер Дождя",
+      "effect.power.spirit_master": "Мастер Духа",
+      "item.power.spirit_boots": "Spirit Boots",
       "item.power.wooden_shield": "Древесный Щит",
       "item.power.earth_leggings": "Земляные Штаны",
       "effect.power.recharge_sand_stone": "Перезарядка",
@@ -18264,6 +18489,7 @@
       "item.power.crestcent_helmet": "Crestcent Helmet",
       "power.building.blacksmith.text": "Кузница",
       "item.power.rain_chestplate": "Дождевая Накидка",
+      "item.power.scythe": "Scythe",
       "item.power.venus": "Venus Portal Igniter",
       "item.power.technology_leggings": "Технологичные штаны",
       "item.power.moon_wither": "Лунное Иссушение",
@@ -18507,6 +18733,7 @@
       "item.power.tornado_battle_axe": "Боевой Топор Торнадо",
       "biome.power.venus_land": "Венерианская Земля",
       "item.power.sun_leggings": "Штаны солнца",
+      "effect.power.recharge_spirit_stone": "Перезарядка",
       "effect.power.sand_master": "Мастер Песка",
       "item.power.rain_bow": "Дождевой Лук",
       "item.power.wind_leggings": "Воздушные Штаны",
@@ -18760,6 +18987,7 @@
       "item.power.tornado_create": "Tornado Create",
       "item.power.sun_stone": "Sun Stone",
       "item.power.mercury_boots": "Mercury Boots",
+      "item.power.spirit_helmet": "Spirit Helmet",
       "item.power.crystal_chestplate": "Crystal Chestplate",
       "effect.power.creation_master": "Master of Creation",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
@@ -18830,7 +19058,9 @@
       "entity.power.pterodactyl": "Pterodactyl",
       "item.power.mushrooms_battery": "Battery",
       "item.power.gravity_reduction": "Gravity Reduction",
+      "item.power.spirit_leggings": "Spirit Leggings",
       "block.power.crystal_brown": "Crystal Brown",
+      "item.power.ectoplasm_attack": "Ectoplasm Attack",
       "item.power.ice_stone": "Ice Stone",
       "effect.time_stop_effect": "Time Stop",
       "item.power.shadow_sword": "Shadow Sword",
@@ -18839,6 +19069,7 @@
       "item.power.wind_boots": "Air Boots",
       "item.power.rain_helmet": "Rain Helmet",
       "item.power.quicksand_block_bucket": "Quicksand Block Bucket",
+      "item.power.spirit_chestplate": "Spirit Chestplate",
       "item.power.animals_leggings": "Animals Leggings",
       "advancements.maximum_power.descr": "Get the maximum power level",
       "item.power.air_battery": "Battery",
@@ -18858,6 +19089,7 @@
       "item.power.speed_battery": "Battery",
       "item.power.music_leggings": "Music Leggings",
       "item.power.technology_boots": "Technology Boots",
+      "item.power.ghost_form": "Ghost Form",
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Rain Leggings",
       "item.power.shadow_ball": "Shadow Ball",
@@ -18914,6 +19146,8 @@
       "item.power.poison_boots": "Poison Boots",
       "effect.power.rain_master": "Master of Rain",
       "item.power.coral_shield": "Coral Shield",
+      "effect.power.spirit_master": "Master of Spirit",
+      "item.power.spirit_boots": "Spirit Boots",
       "item.power.wooden_shield": "Wooden Shield",
       "item.power.earth_leggings": "Earth Leggings",
       "effect.power.recharge_sand_stone": "Recharge",
@@ -18931,6 +19165,7 @@
       "item.power.crestcent_helmet": "Crestcent Helmet",
       "power.building.blacksmith.text": "Blacksmith",
       "item.power.rain_chestplate": "Rain Chestplate",
+      "item.power.scythe": "Scythe",
       "item.power.venus": "Venus Portal Igniter",
       "item.power.technology_leggings": "Technology Leggings",
       "item.power.moon_wither": "Moon Wither",
@@ -19175,6 +19410,7 @@
       "item.power.tornado_battle_axe": "Tornado Battle Axe",
       "biome.power.venus_land": "Venus Land",
       "item.power.sun_leggings": "Sun Leggings",
+      "effect.power.recharge_spirit_stone": "Recharge",
       "effect.power.sand_master": "Master of Sand",
       "item.power.rain_bow": "Rain Bow",
       "item.power.wind_leggings": "Air Leggings",

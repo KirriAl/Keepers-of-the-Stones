@@ -8,7 +8,7 @@
     "name": "Spirit Stone",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:MiddleGroup"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -29,6 +29,9 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "SpiritStoneUse"
+    },
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,
