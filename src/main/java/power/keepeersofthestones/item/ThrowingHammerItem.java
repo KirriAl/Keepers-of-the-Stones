@@ -18,7 +18,7 @@ import net.minecraft.server.level.ServerPlayer;
 
 public class ThrowingHammerItem extends Item {
 	public ThrowingHammerItem() {
-		super(new Item.Properties().tab(null).durability(100));
+		super(new Item.Properties().tab(null).durability(5000));
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class ThrowingHammerItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				ThrowingHammerEntity entityarrow = ThrowingHammerEntity.shoot(world, entity, world.getRandom(), 0.7000000000000001f, 16, 6);
+				ThrowingHammerEntity entityarrow = ThrowingHammerEntity.shoot(world, entity, world.getRandom(), 0.7000000000000001f, 12, 6);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 

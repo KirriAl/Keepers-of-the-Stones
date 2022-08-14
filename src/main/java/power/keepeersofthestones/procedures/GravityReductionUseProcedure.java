@@ -58,7 +58,7 @@ public class GravityReductionUseProcedure {
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
 								_ent.getServer().getCommands().performCommand(
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-										"attribute @s forge:entity_gravity base set 0.00999999999999995");
+										"attribute @s forge:entity_gravity base set 0.08");
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
