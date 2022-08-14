@@ -59,6 +59,7 @@ import power.keepeersofthestones.item.StormItem;
 import power.keepeersofthestones.item.SporesItem;
 import power.keepeersofthestones.item.SpiritStoneItem;
 import power.keepeersofthestones.item.SpiritItem;
+import power.keepeersofthestones.item.SpiritBatteryItem;
 import power.keepeersofthestones.item.SpikeItem;
 import power.keepeersofthestones.item.SpeedStoneItem;
 import power.keepeersofthestones.item.SpeedItem;
@@ -766,6 +767,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SCYTHE = REGISTRY.register("scythe", () -> new ScytheItem());
 	public static final RegistryObject<Item> ECTOPLASM_ATTACK = REGISTRY.register("ectoplasm_attack", () -> new EctoplasmAttackItem());
 	public static final RegistryObject<Item> GHOST_FORM = REGISTRY.register("ghost_form", () -> new GhostFormItem());
+	public static final RegistryObject<Item> SPIRIT_BATTERY = REGISTRY.register("spirit_battery", () -> new SpiritBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
