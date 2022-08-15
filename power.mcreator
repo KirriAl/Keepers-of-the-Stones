@@ -17182,6 +17182,231 @@
         ]
       },
       "path": "~/ElementalBattery"
+    },
+    {
+      "name": "RechargeAetherStone",
+      "type": "potioneffect",
+      "sortid": 1026,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_aether_stone",
+      "path": "~/Aether"
+    },
+    {
+      "name": "AetherMaster",
+      "type": "potioneffect",
+      "sortid": 1027,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_master",
+      "path": "~/Aether"
+    },
+    {
+      "name": "AetherGet",
+      "type": "procedure",
+      "sortid": 1028,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "AetherBattery",
+      "type": "item",
+      "sortid": 1029,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "AetherBatteryUse",
+      "type": "procedure",
+      "sortid": 1030,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "Aether",
+      "type": "armor",
+      "sortid": 1031,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Aether"
+    },
+    {
+      "name": "AetherStoneUse",
+      "type": "procedure",
+      "sortid": 1032,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aether"
+    },
+    {
+      "name": "AetherMasterEffectStart",
+      "type": "procedure",
+      "sortid": 1033,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Aether"
+    },
+    {
+      "name": "AetherMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 1034,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Aether"
+    },
+    {
+      "name": "AetherMasterEffects",
+      "type": "procedure",
+      "sortid": 1035,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aether_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aether"
+    },
+    {
+      "name": "EtherealStaff",
+      "type": "tool",
+      "sortid": 1036,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ethereal_staff",
+      "path": "~/Aether"
+    },
+    {
+      "name": "PegasusWings",
+      "type": "item",
+      "sortid": 1038,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegasus_wings",
+      "path": "~/Aether"
+    },
+    {
+      "name": "NeptuneSword",
+      "type": "tool",
+      "sortid": 1039,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "neptune_sword",
+      "path": "~/Aether"
+    },
+    {
+      "name": "FirebirdFeather",
+      "type": "rangeditem",
+      "sortid": 1040,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firebird_feather",
+      "path": "~/Aether"
+    },
+    {
+      "name": "GnomePickaxe",
+      "type": "tool",
+      "sortid": 1041,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gnome_pickaxe",
+      "path": "~/Aether"
     }
   ],
   "variable_elements": [
@@ -17910,6 +18135,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "aether_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "aether",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -18163,6 +18400,7 @@
       "item.power.sound_imitate": "Звуковой Подражатель",
       "power.space_atlas.label.text": "Космический Атлас",
       "power.cultivation.beetroot.text": "Свекла",
+      "item.power.ethereal_staff": "Ethereal Staff",
       "item.power.earth_helmet": "Земляной Монокль",
       "item.power.water_flow": "Струя Воды",
       "item.power.animals_stone": "Камень Животных",
@@ -18239,6 +18477,7 @@
       "item.power.tornado_battery": "Батарея",
       "item.power.musical_axe": "Музыкальный Топор",
       "effect.power.power_lock": "Блокировка Силы",
+      "effect.power.aether_master": "Master of the Aether",
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
       "advancements.forward_to_the_stars.title": "Вперед ко звездам!",
@@ -18405,6 +18644,7 @@
       "item.power.metal_invulnerability": "Неуязвимость Металла",
       "effect.power.recharge_technology_stone": "Перезарядка",
       "effect.power.recharge_magnet_stone": "Перезарядка",
+      "item.power.gnome_pickaxe": "Gnome Pickaxe",
       "block.power.unmultiplication_moon_stones_block": "Блок Лунных Камней",
       "item.power.energy_sphere": "Энергетический Шар",
       "item.power.vacuum_web": "Вакуумная Сеть",
@@ -18437,6 +18677,7 @@
       "item.power.poison_boots": "Poison Boots",
       "item.power.coral_shield": "Коралловый щит",
       "effect.power.rain_master": "Мастер Дождя",
+      "item.power.aether_helmet": "Aether Helmet",
       "effect.power.spirit_master": "Мастер Духа",
       "item.power.spirit_boots": "Spirit Boots",
       "item.power.wooden_shield": "Древесный Щит",
@@ -18488,6 +18729,7 @@
       "item.power.creation_battery": "Батарея",
       "item.power.plasma_ball": "Плазменный шар",
       "item.power.technology_battery": "Батарея",
+      "item.power.firebird_feather": "Firebird Feather",
       "effect.power.explosion_master": "Мастер Взрыва",
       "fluid.power.acid": "Acid",
       "item.power.sand_boots": "Sand Boots",
@@ -18564,6 +18806,7 @@
       "effect.power.gravity_master": "Мастер Гравитации",
       "item.power.teleportation_battery": "Батарея",
       "block.power.crystal_red": "Красный Кристалл",
+      "item.power.aether_leggings": "Aether Leggings",
       "item.power.water_drop": "Капли Воды",
       "item.power.tornado_leggings": "Штаны Торнадо",
       "item.power.creation_stone": "Камень Творения",
@@ -18596,9 +18839,11 @@
       "block.power.battery_charger": "Зарядник для батарей",
       "effect.power.rain_fly": "Дождевой Полёт",
       "item.power.sound_sword": "Звуковой кинжал",
+      "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Мастер Магнита",
       "item.power.ice_boots": "Ледяные Сапоги",
       "block.power.crystal_blue": "Синий Кристалл",
+      "effect.power.recharge_aether_stone": "Recharge",
       "item.power.earth_chestplate": "Земляной Желет",
       "item.power.ocean_helmet": "Шлем Океана",
       "key.power.special_ability_key": "Клавиша специальных способностей",
@@ -18708,6 +18953,7 @@
       "effect.power.recharge_space_stone": "Перезарядка",
       "item.power.blood_helmet": "Шлем крови",
       "item.power.light_chestplate": "Нагрудник света",
+      "item.power.aether_chestplate": "Aether Chestplate",
       "effect.power.recharge_gravity_stone": "Перезарядка",
       "effect.power.recharge_poison_stone": "Перезарядка",
       "item.power.light_stone": "Камень Света",
@@ -18720,8 +18966,10 @@
       "effect.power.technology_master": "Мастер Технологий",
       "power.cultivation.label.text": "Выберите растение, чтобы получить",
       "item.power.eclipse": "Затмение",
+      "item.power.aether_battery": "Battery",
       "biome.power.mars_land": "Марсианская Земля",
       "effect.power.light_master": "Мастер Света",
+      "item.power.aether_boots": "Aether Boots",
       "item.power.air_flow": "Поток Воздуха",
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
@@ -18739,6 +18987,7 @@
       "item.power.storm": "Шторм",
       "item.power.water_leggings": "Водные Штаны",
       "effect.power.recharge_music_stone": "Перезарядка",
+      "item.power.neptune_sword": "Neptune Sword",
       "item.power.technology_helmet": "Технологичный шлем",
       "item.power.shuriken": "Сюрикен"
     },
@@ -18838,6 +19087,7 @@
       "item.power.explosion_stone": "Explosion Stone",
       "power.space_atlas.label.text": "Atlas of Space Travel",
       "power.cultivation.beetroot.text": "Beetroot",
+      "item.power.ethereal_staff": "Ethereal Staff",
       "item.power.earth_helmet": "Earth Helmet",
       "item.power.water_flow": "Water Flow",
       "item.power.animals_stone": "Animals Stone",
@@ -18914,6 +19164,7 @@
       "item.power.tornado_battery": "Battery",
       "item.power.musical_axe": "Musical Axe",
       "effect.power.power_lock": "Power Lock",
+      "effect.power.aether_master": "Master of the Aether",
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
       "advancements.forward_to_the_stars.title": "Forward to the Stars!",
@@ -19081,6 +19332,7 @@
       "item.power.metal_invulnerability": "Invulnerability of Metal",
       "effect.power.recharge_technology_stone": "Recharge",
       "effect.power.recharge_magnet_stone": "Recharge",
+      "item.power.gnome_pickaxe": "Gnome Pickaxe",
       "block.power.unmultiplication_moon_stones_block": "Moon Stones Block",
       "item.power.vacuum_web": "Vacuum Web",
       "item.power.energy_sphere": "Energy Sphere",
@@ -19113,6 +19365,7 @@
       "item.power.poison_boots": "Poison Boots",
       "effect.power.rain_master": "Master of Rain",
       "item.power.coral_shield": "Coral Shield",
+      "item.power.aether_helmet": "Aether Helmet",
       "effect.power.spirit_master": "Master of Spirit",
       "item.power.spirit_boots": "Spirit Boots",
       "item.power.wooden_shield": "Wooden Shield",
@@ -19164,6 +19417,7 @@
       "item.power.creation_battery": "Battery",
       "item.power.plasma_ball": "Plasma Ball",
       "item.power.technology_battery": "Battery",
+      "item.power.firebird_feather": "Firebird Feather",
       "effect.power.explosion_master": "Master of Explosion",
       "fluid.power.acid": "Acid",
       "item.power.sand_boots": "Sand Boots",
@@ -19240,6 +19494,7 @@
       "effect.power.gravity_master": "Master of Gravity",
       "item.power.teleportation_battery": "Battery",
       "block.power.crystal_red": "Crystal Red",
+      "item.power.aether_leggings": "Aether Leggings",
       "item.power.water_drop": "Water Drops",
       "item.power.tornado_leggings": "Tornado Leggings",
       "item.power.creation_stone": "Creation Stone",
@@ -19273,9 +19528,11 @@
       "block.power.battery_charger": "Battery Charger",
       "effect.power.rain_fly": "RainFly",
       "item.power.sound_sword": "Sound Sword",
+      "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Master of Magnet",
       "item.power.ice_boots": "Ice Boots",
       "block.power.crystal_blue": "Crystal Blue",
+      "effect.power.recharge_aether_stone": "Recharge",
       "item.power.earth_chestplate": "Earth Chestplate",
       "item.power.ocean_helmet": "Ocean Helmet",
       "key.power.special_ability_key": "Special Ability Key",
@@ -19385,6 +19642,7 @@
       "effect.power.recharge_space_stone": "Recharge",
       "item.power.blood_helmet": "Blood Helmet",
       "item.power.light_chestplate": "Light Chestplate",
+      "item.power.aether_chestplate": "Aether Chestplate",
       "effect.power.recharge_gravity_stone": "Recharge",
       "effect.power.recharge_poison_stone": "Recharge",
       "item.power.light_stone": "Light Stone",
@@ -19397,8 +19655,10 @@
       "effect.power.technology_master": "Master of Technology",
       "power.cultivation.label.text": "Select a plant to get",
       "item.power.eclipse": "Eclipse",
+      "item.power.aether_battery": "Battery",
       "biome.power.mars_land": "Mars Land",
       "effect.power.light_master": "Master of Light",
+      "item.power.aether_boots": "Aether Boots",
       "item.power.air_flow": "Air Flow",
       "effect.power.metal_master": "Master of Metal",
       "effect.power.recharge_metal_stone": "Recharge",
@@ -19416,6 +19676,7 @@
       "item.power.storm": "Storm",
       "item.power.water_leggings": "Water Leggings",
       "effect.power.recharge_music_stone": "Recharge",
+      "item.power.neptune_sword": "Neptune Sword",
       "item.power.technology_helmet": "Technology Helmet",
       "item.power.shuriken": "Shuriken"
     }
@@ -19688,7 +19949,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.6.0.6",
+    "version": "2.6.0.7",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

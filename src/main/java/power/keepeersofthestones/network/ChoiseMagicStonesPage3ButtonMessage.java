@@ -4,6 +4,7 @@ package power.keepeersofthestones.network;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.procedures.SpiritGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPage2Procedure;
+import power.keepeersofthestones.procedures.AetherGetProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -66,6 +67,10 @@ public class ChoiseMagicStonesPage3ButtonMessage {
 		if (buttonID == 0) {
 
 			SpiritGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			AetherGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 10) {
 

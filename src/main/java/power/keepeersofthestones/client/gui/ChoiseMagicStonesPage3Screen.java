@@ -101,6 +101,10 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TextComponent("Form"), e -> {
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, new TextComponent("Aether"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(3, x, y, z));
+				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20, new TextComponent("Mind"), e -> {
 		}));

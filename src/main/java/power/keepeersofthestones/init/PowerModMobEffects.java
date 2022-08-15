@@ -59,6 +59,7 @@ import power.keepeersofthestones.potion.RechargeBloodStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAnimalsStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAmberStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAirStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeAetherStoneMobEffect;
 import power.keepeersofthestones.potion.RainMasterMobEffect;
 import power.keepeersofthestones.potion.RainFlyMobEffect;
 import power.keepeersofthestones.potion.PowerLockMobEffect;
@@ -93,6 +94,7 @@ import power.keepeersofthestones.potion.BloodMasterMobEffect;
 import power.keepeersofthestones.potion.AnimalsMasterMobEffect;
 import power.keepeersofthestones.potion.AmberMasterMobEffect;
 import power.keepeersofthestones.potion.AirMasterMobEffect;
+import power.keepeersofthestones.potion.AetherMasterMobEffect;
 import power.keepeersofthestones.potion.AccelerationTimeEffectMobEffect;
 import power.keepeersofthestones.PowerMod;
 
@@ -236,4 +238,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> SPIRIT_MASTER = REGISTRY.register("spirit_master", () -> new SpiritMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_SPIRIT_STONE = REGISTRY.register("recharge_spirit_stone",
 			() -> new RechargeSpiritStoneMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_AETHER_STONE = REGISTRY.register("recharge_aether_stone",
+			() -> new RechargeAetherStoneMobEffect());
+	public static final RegistryObject<MobEffect> AETHER_MASTER = REGISTRY.register("aether_master", () -> new AetherMasterMobEffect());
 }

@@ -138,6 +138,7 @@ public class PowerModVariables {
 			clone.without_stone = original.without_stone;
 			clone.blue_flame = original.blue_flame;
 			clone.spirit = original.spirit;
+			clone.aether = original.aether;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -265,6 +266,7 @@ public class PowerModVariables {
 		public boolean gravity_stone = false;
 		public boolean blue_flame_stone = false;
 		public boolean spirit_stone = false;
+		public boolean aether_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -324,6 +326,7 @@ public class PowerModVariables {
 			gravity_stone = nbt.getBoolean("gravity_stone");
 			blue_flame_stone = nbt.getBoolean("blue_flame_stone");
 			spirit_stone = nbt.getBoolean("spirit_stone");
+			aether_stone = nbt.getBoolean("aether_stone");
 		}
 
 		@Override
@@ -379,6 +382,7 @@ public class PowerModVariables {
 			nbt.putBoolean("gravity_stone", gravity_stone);
 			nbt.putBoolean("blue_flame_stone", blue_flame_stone);
 			nbt.putBoolean("spirit_stone", spirit_stone);
+			nbt.putBoolean("aether_stone", aether_stone);
 			return nbt;
 		}
 
@@ -538,6 +542,7 @@ public class PowerModVariables {
 		public boolean recharge_spell_gravity_boost = false;
 		public boolean recharge_spell_gravity_red = false;
 		public boolean spirit = false;
+		public boolean aether = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -616,6 +621,7 @@ public class PowerModVariables {
 			nbt.putBoolean("recharge_spell_gravity_boost", recharge_spell_gravity_boost);
 			nbt.putBoolean("recharge_spell_gravity_red", recharge_spell_gravity_red);
 			nbt.putBoolean("spirit", spirit);
+			nbt.putBoolean("aether", aether);
 			return nbt;
 		}
 
@@ -691,6 +697,7 @@ public class PowerModVariables {
 			recharge_spell_gravity_boost = nbt.getBoolean("recharge_spell_gravity_boost");
 			recharge_spell_gravity_red = nbt.getBoolean("recharge_spell_gravity_red");
 			spirit = nbt.getBoolean("spirit");
+			aether = nbt.getBoolean("aether");
 		}
 	}
 
@@ -786,6 +793,7 @@ public class PowerModVariables {
 					variables.recharge_spell_gravity_boost = message.data.recharge_spell_gravity_boost;
 					variables.recharge_spell_gravity_red = message.data.recharge_spell_gravity_red;
 					variables.spirit = message.data.spirit;
+					variables.aether = message.data.aether;
 				}
 			});
 			context.setPacketHandled(true);

@@ -63,6 +63,9 @@
         "type": "button",
         "data": {
           "text": "Aether",
+          "onClick": {
+            "name": "AetherGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Aether",
