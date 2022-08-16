@@ -49,6 +49,7 @@ import power.keepeersofthestones.potion.RechargeLavaStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeIceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGreeneryStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGravityStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeFormStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeFireStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeExplosionStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeEnergyStoneMobEffect;
@@ -82,6 +83,7 @@ import power.keepeersofthestones.potion.InvincibilityMobEffect;
 import power.keepeersofthestones.potion.IceMasterMobEffect;
 import power.keepeersofthestones.potion.GreeneryMasterMobEffect;
 import power.keepeersofthestones.potion.GravityMasterMobEffect;
+import power.keepeersofthestones.potion.FormMasterMobEffect;
 import power.keepeersofthestones.potion.FogMobEffect;
 import power.keepeersofthestones.potion.FireMasterMobEffect;
 import power.keepeersofthestones.potion.FireFlyingMobEffect;
@@ -246,4 +248,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_SMOKE_STONE = REGISTRY.register("recharge_smoke_stone",
 			() -> new RechargeSmokeStoneMobEffect());
 	public static final RegistryObject<MobEffect> SMOKE_MASTER = REGISTRY.register("smoke_master", () -> new SmokeMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_FORM_STONE = REGISTRY.register("recharge_form_stone",
+			() -> new RechargeFormStoneMobEffect());
+	public static final RegistryObject<MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
 }

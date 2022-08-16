@@ -17685,6 +17685,251 @@
         ]
       },
       "path": "~/Smoke"
+    },
+    {
+      "name": "RechargeFormStone",
+      "type": "potioneffect",
+      "sortid": 1058,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_form_stone",
+      "path": "~/Form"
+    },
+    {
+      "name": "FormMaster",
+      "type": "potioneffect",
+      "sortid": 1059,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_master",
+      "path": "~/Form"
+    },
+    {
+      "name": "FormBattery",
+      "type": "item",
+      "sortid": 1060,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "FormBatteryUse",
+      "type": "procedure",
+      "sortid": 1061,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "Form",
+      "type": "armor",
+      "sortid": 1062,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Form"
+    },
+    {
+      "name": "FormStoneUse",
+      "type": "procedure",
+      "sortid": 1063,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Form"
+    },
+    {
+      "name": "FormMasterEffectStart",
+      "type": "procedure",
+      "sortid": 1064,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Form"
+    },
+    {
+      "name": "FormMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 1065,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Form"
+    },
+    {
+      "name": "FormMasterEffects",
+      "type": "procedure",
+      "sortid": 1066,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Form"
+    },
+    {
+      "name": "JadeSword",
+      "type": "tool",
+      "sortid": 1067,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jade_sword",
+      "path": "~/Form"
+    },
+    {
+      "name": "TransformSphere",
+      "type": "rangeditem",
+      "sortid": 1068,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transform_sphere",
+      "path": "~/Form"
+    },
+    {
+      "name": "LittleSize",
+      "type": "item",
+      "sortid": 1069,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "little_size",
+      "path": "~/Form"
+    },
+    {
+      "name": "BigSize",
+      "type": "item",
+      "sortid": 1070,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_size",
+      "path": "~/Form"
+    },
+    {
+      "name": "LittleSizeUse",
+      "type": "procedure",
+      "sortid": 1071,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "little_size_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Form"
+    },
+    {
+      "name": "BigSizeUse",
+      "type": "procedure",
+      "sortid": 1072,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_size_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Form"
     }
   ],
   "variable_elements": [
@@ -18443,6 +18688,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "form_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "form",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -18605,6 +18862,7 @@
       "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
       "item.power.gravity_boost": "Усиление Гравитации",
+      "item.power.form_battery": "Battery",
       "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
@@ -18638,6 +18896,7 @@
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "block.power.iron_magic_box": "Железная Волшебная Шкатулка",
+      "item.power.form_chestplate": "Form Chestplate",
       "block.power.crystal_pink": "Розовый Кристалл",
       "advancements.mighty_master.title": "Могучий Мастер",
       "item.power.magnet_battery": "Батарея",
@@ -18655,6 +18914,7 @@
       "effect.power.recharge_vacuum_stone": "Перезарядка",
       "item.power.amber_leggings": "Amber Leggings",
       "item.power.dispersion": "Dispersion",
+      "item.power.jade_sword": "Jade Sword",
       "item.power.tamer": "Приручатель",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_smoke_stone": "Recharge",
@@ -18837,6 +19097,7 @@
       "item.power.oblivion": "Огниво Портала (Обливион)",
       "item.power.sound_barrier": "Звуковой барьер",
       "item.power.injection": "Инъекция",
+      "item.power.form_boots": "Form Boots",
       "item.power.blood_leggings": "Ботинки крови",
       "advancements.forbidden_zone.descr": "Создайте и разместите блокировщик силы",
       "item.power.fire_leggings": "Огненные Штаны",
@@ -18846,6 +19107,7 @@
       "item.power.spawn": "Порождение",
       "effect.power.water_master": "Мастер Воды",
       "item.power.light_boots": "Ботинки света",
+      "item.power.transform_sphere": "Transform Sphere",
       "item.power.smoke_stone": "Камень Дыма",
       "effect.power.recharge_explosion_stone": "Перезарядка",
       "item.power.earth_stone": "Камень Земли",
@@ -18923,6 +19185,7 @@
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Дождевые Штаны",
       "item.power.shadow_ball": "Теневой Шар",
+      "item.power.big_size": "Big Size",
       "item.power.nunchucks": "Nunchucks",
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Мастер Огня",
@@ -18968,6 +19231,7 @@
       "item.power.teleportation_helmet": "Шлем перемищения",
       "effect.acceleration_time_effect": "Acceleration Time",
       "block.power.acid": "Acid",
+      "item.power.form_leggings": "Form Leggings",
       "effect.power.vacuum_master": "Мастер Пустоты",
       "block.power.crystal_orange": "Оранжевый Кристалл",
       "item.power.golden_crossbow": "Золотой Арбалет",
@@ -19111,6 +19375,7 @@
       "item.power.teleportation_battery": "Батарея",
       "block.power.crystal_red": "Красный Кристалл",
       "item.power.aether_leggings": "Aether Leggings",
+      "item.power.form_helmet": "Form Helmet",
       "item.power.water_drop": "Капли Воды",
       "item.power.tornado_leggings": "Штаны Торнадо",
       "item.power.creation_stone": "Камень Творения",
@@ -19153,6 +19418,7 @@
       "item.power.ocean_helmet": "Шлем Океана",
       "key.power.special_ability_key": "Клавиша специальных способностей",
       "effect.power.recharge_mushrooms_stone": "Перезарядка",
+      "effect.power.form_master": "Master of Form",
       "fluid.power.mercury_liquid": "Жидкая Ртуть",
       "item.power.explode_helmet": "Шахид-шлем",
       "effect.power.recharge_sound_stone": "Перезарядка",
@@ -19204,6 +19470,7 @@
       "item.power.obscurity": "Неясность",
       "item.power.increase_power": "Увеличение Силы",
       "item.power.destruction_stone": "Камень Разрушения",
+      "effect.power.recharge_form_stone": "Recharge",
       "item.power.ice_ball": "Ледяной шар",
       "item.power.toxic_cloud": "Токсичное Облако",
       "item.power.mushrooms_helmet": "Mushrooms Helmet",
@@ -19233,6 +19500,7 @@
       "power.spawn_animals.sheep.text": "Овца",
       "block.power.cluster_block": "Блок Кластера",
       "item.power.fistof_earth": "Земляной Кулак",
+      "item.power.little_size": "Little Size",
       "advancements.forward_to_the_stars.descr": "Создайте и поставьте ракету на землю. Готовьтесь ко взлету!",
       "item.power.blood_chestplate": "Нагрудник крови",
       "item.power.energium_ingot": "Энерджиумный Слиток",
@@ -19302,6 +19570,7 @@
       "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
       "item.power.gravity_boost": "Gravity Boost",
+      "item.power.form_battery": "Battery",
       "item.power.sun_battery": "Battery",
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
@@ -19335,6 +19604,7 @@
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "block.power.iron_magic_box": "Iron Magic Box",
+      "item.power.form_chestplate": "Form Chestplate",
       "block.power.crystal_pink": "Crystal Pink",
       "advancements.mighty_master.title": "Mighty Master",
       "item.power.magnet_battery": "Battery",
@@ -19352,6 +19622,7 @@
       "effect.power.recharge_vacuum_stone": "Recharge",
       "item.power.amber_leggings": "Amber Leggings",
       "item.power.dispersion": "Dispersion",
+      "item.power.jade_sword": "Jade Sword",
       "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_smoke_stone": "Recharge",
@@ -19534,6 +19805,7 @@
       "item.power.oblivion": "Oblivion Portal Igniter",
       "item.power.sound_barrier": "Sound Barrier",
       "item.power.injection": "Injection",
+      "item.power.form_boots": "Form Boots",
       "item.power.blood_leggings": "Blood Leggings",
       "advancements.forbidden_zone.descr": "Create and place a power blocker",
       "item.power.black_heart": "Black Heart",
@@ -19543,6 +19815,7 @@
       "item.power.spawn": "Spawn",
       "effect.power.water_master": "Master of Water",
       "item.power.light_boots": "Light Boots",
+      "item.power.transform_sphere": "Transform Sphere",
       "item.power.smoke_stone": "Smoke Stone",
       "effect.power.recharge_explosion_stone": "Recharge",
       "item.power.earth_stone": "Earth Stone",
@@ -19621,6 +19894,7 @@
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Rain Leggings",
       "item.power.shadow_ball": "Shadow Ball",
+      "item.power.big_size": "Big Size",
       "item.power.nunchucks": "Nunchucks",
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Master of Fire",
@@ -19666,6 +19940,7 @@
       "item.power.teleportation_helmet": "Teleportation Helmet",
       "effect.acceleration_time_effect": "Acceleration Time",
       "block.power.acid": "Acid",
+      "item.power.form_leggings": "Form Leggings",
       "effect.power.vacuum_master": "Master of Vacuum",
       "block.power.crystal_orange": "Crystal Orange",
       "item.power.golden_crossbow": "Golden Crossbow",
@@ -19809,6 +20084,7 @@
       "item.power.teleportation_battery": "Battery",
       "block.power.crystal_red": "Crystal Red",
       "item.power.aether_leggings": "Aether Leggings",
+      "item.power.form_helmet": "Form Helmet",
       "item.power.water_drop": "Water Drops",
       "item.power.tornado_leggings": "Tornado Leggings",
       "item.power.creation_stone": "Creation Stone",
@@ -19852,6 +20128,7 @@
       "item.power.ocean_helmet": "Ocean Helmet",
       "key.power.special_ability_key": "Special Ability Key",
       "effect.power.recharge_mushrooms_stone": "Recharge",
+      "effect.power.form_master": "Master of Form",
       "fluid.power.mercury_liquid": "Mercury Liquid",
       "item.power.explode_helmet": "Explode Helmet",
       "effect.power.recharge_sound_stone": "Recharge",
@@ -19903,6 +20180,7 @@
       "item.power.obscurity": "Obscurity",
       "item.power.increase_power": "Increase Power",
       "item.power.destruction_stone": "Destruction Stone",
+      "effect.power.recharge_form_stone": "Recharge",
       "item.power.ice_ball": "Ice Ball",
       "item.power.toxic_cloud": "Toxic Cloud",
       "item.power.mushrooms_helmet": "Mushrooms Helmet",
@@ -19932,6 +20210,7 @@
       "power.spawn_animals.sheep.text": "Sheep",
       "block.power.cluster_block": "Cluster Block",
       "item.power.fistof_earth": "Fist of Earth",
+      "item.power.little_size": "Little Size",
       "advancements.forward_to_the_stars.descr": "Create and put a rocket on the ground. Get ready for takeoff!",
       "item.power.blood_chestplate": "Blood Chestplate",
       "item.power.energium_ingot": "Energium Ingot",

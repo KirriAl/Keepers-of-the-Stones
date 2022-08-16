@@ -9,6 +9,7 @@ import power.keepeersofthestones.entity.WaterFlowEntity;
 import power.keepeersofthestones.entity.VacuumWebEntity;
 import power.keepeersofthestones.entity.VacuumSpiralEntity;
 import power.keepeersofthestones.entity.TyrannosaurusRexEntity;
+import power.keepeersofthestones.entity.TransformSphereEntity;
 import power.keepeersofthestones.entity.ToxicCloudEntity;
 import power.keepeersofthestones.entity.TornadoEntityEntity;
 import power.keepeersofthestones.entity.TornadoCreateEntity;
@@ -262,6 +263,10 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<SmokeScreenEntity>> SMOKE_SCREEN = register("projectile_smoke_screen",
 			EntityType.Builder.<SmokeScreenEntity>of(SmokeScreenEntity::new, MobCategory.MISC).setCustomClientFactory(SmokeScreenEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TransformSphereEntity>> TRANSFORM_SPHERE = register("projectile_transform_sphere",
+			EntityType.Builder.<TransformSphereEntity>of(TransformSphereEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(TransformSphereEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

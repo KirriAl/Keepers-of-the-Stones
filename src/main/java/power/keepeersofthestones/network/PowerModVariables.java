@@ -140,6 +140,7 @@ public class PowerModVariables {
 			clone.spirit = original.spirit;
 			clone.aether = original.aether;
 			clone.smoke = original.smoke;
+			clone.form = original.form;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -270,6 +271,7 @@ public class PowerModVariables {
 		public boolean spirit_stone = false;
 		public boolean aether_stone = false;
 		public boolean smoke_stone = false;
+		public boolean form_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -331,6 +333,7 @@ public class PowerModVariables {
 			spirit_stone = nbt.getBoolean("spirit_stone");
 			aether_stone = nbt.getBoolean("aether_stone");
 			smoke_stone = nbt.getBoolean("smoke_stone");
+			form_stone = nbt.getBoolean("form_stone");
 		}
 
 		@Override
@@ -388,6 +391,7 @@ public class PowerModVariables {
 			nbt.putBoolean("spirit_stone", spirit_stone);
 			nbt.putBoolean("aether_stone", aether_stone);
 			nbt.putBoolean("smoke_stone", smoke_stone);
+			nbt.putBoolean("form_stone", form_stone);
 			return nbt;
 		}
 
@@ -550,6 +554,7 @@ public class PowerModVariables {
 		public boolean aether = false;
 		public boolean recharge_spell_time = false;
 		public boolean smoke = false;
+		public boolean form = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -631,6 +636,7 @@ public class PowerModVariables {
 			nbt.putBoolean("aether", aether);
 			nbt.putBoolean("recharge_spell_time", recharge_spell_time);
 			nbt.putBoolean("smoke", smoke);
+			nbt.putBoolean("form", form);
 			return nbt;
 		}
 
@@ -709,6 +715,7 @@ public class PowerModVariables {
 			aether = nbt.getBoolean("aether");
 			recharge_spell_time = nbt.getBoolean("recharge_spell_time");
 			smoke = nbt.getBoolean("smoke");
+			form = nbt.getBoolean("form");
 		}
 	}
 
@@ -807,6 +814,7 @@ public class PowerModVariables {
 					variables.aether = message.data.aether;
 					variables.recharge_spell_time = message.data.recharge_spell_time;
 					variables.smoke = message.data.smoke;
+					variables.form = message.data.form;
 				}
 			});
 			context.setPacketHandled(true);
