@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.potion;
 
+import power.keepeersofthestones.procedures.FormMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.FormMasterEffectStartProcedure;
 import power.keepeersofthestones.procedures.FormMasterEffectEndProcedure;
 
@@ -26,7 +27,7 @@ public class FormMasterMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		FormMasterEffectEndProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+		FormMasterEffectsProcedure.execute(entity);
 	}
 
 	@Override
