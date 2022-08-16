@@ -30,7 +30,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onEntityHitWith": {
-      "name": "TimeStoneUse"
+      "name": "TimeStopUse"
     },
     "isFood": false,
     "nutritionalValue": 0,

@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.TimeStoneUseProcedure;
+import power.keepeersofthestones.procedures.TimeStopUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.UseAnim;
@@ -28,7 +28,7 @@ public class TimeStopItem extends Item {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		TimeStoneUseProcedure.execute(entity);
+		TimeStopUseProcedure.execute(entity.level, entity, sourceentity, itemstack);
 		return retval;
 	}
 }
