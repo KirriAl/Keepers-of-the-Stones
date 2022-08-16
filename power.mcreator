@@ -17441,6 +17441,250 @@
         ]
       },
       "path": "~/Aether"
+    },
+    {
+      "name": "RechargeSmokeStone",
+      "type": "potioneffect",
+      "sortid": 1044,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_smoke_stone",
+      "path": "~/Smoke"
+    },
+    {
+      "name": "SmokeMaster",
+      "type": "potioneffect",
+      "sortid": 1045,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_master",
+      "path": "~/Smoke"
+    },
+    {
+      "name": "SmokeBattery",
+      "type": "item",
+      "sortid": 1046,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "SmokeBatteryUse",
+      "type": "procedure",
+      "sortid": 1047,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "SmokeGet",
+      "type": "procedure",
+      "sortid": 1048,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "Smoke",
+      "type": "armor",
+      "sortid": 1049,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Smoke"
+    },
+    {
+      "name": "SmokeStoneUse",
+      "type": "procedure",
+      "sortid": 1050,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Smoke"
+    },
+    {
+      "name": "SmokeMasterEffectStart",
+      "type": "procedure",
+      "sortid": 1051,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Smoke"
+    },
+    {
+      "name": "SmokeMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 1052,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Smoke"
+    },
+    {
+      "name": "SmokeMasterEffects",
+      "type": "procedure",
+      "sortid": 1053,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Smoke"
+    },
+    {
+      "name": "Nunchucks",
+      "type": "tool",
+      "sortid": 1054,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nunchucks",
+      "path": "~/Smoke"
+    },
+    {
+      "name": "SmokeScreen",
+      "type": "rangeditem",
+      "sortid": 1055,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_screen",
+      "path": "~/Smoke"
+    },
+    {
+      "name": "Dispersion",
+      "type": "item",
+      "sortid": 1056,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dispersion",
+      "path": "~/Smoke"
+    },
+    {
+      "name": "DispersionUse",
+      "type": "procedure",
+      "sortid": 1057,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dispersion_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Smoke"
     }
   ],
   "variable_elements": [
@@ -18187,6 +18431,18 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "smoke_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "smoke",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -18398,8 +18654,10 @@
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
       "item.power.amber_leggings": "Amber Leggings",
+      "item.power.dispersion": "Dispersion",
       "item.power.tamer": "Приручатель",
       "item.power.mist_chestplate": "Mist Chestplate",
+      "effect.power.recharge_smoke_stone": "Recharge",
       "effect.power.recharge_earth_stone": "Перезарядка",
       "item.power.time_reversed": "Обращение Времени",
       "effect.power.ice_master": "Мастер Льда",
@@ -18574,6 +18832,7 @@
       "item.power.space_helmet": "Космический шлем",
       "item.power.time_dilation": "Замедление Времени",
       "advancements.super_charge.title": "Супер Заряд!",
+      "item.power.smoke_helmet": "Smoke Helmet",
       "item.power.glow_spawn_egg": "Яйцо призыва Светляка",
       "item.power.oblivion": "Огниво Портала (Обливион)",
       "item.power.sound_barrier": "Звуковой барьер",
@@ -18664,6 +18923,7 @@
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Дождевые Штаны",
       "item.power.shadow_ball": "Теневой Шар",
+      "item.power.nunchucks": "Nunchucks",
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Мастер Огня",
       "biome.power.crystallized_forest": "Кристаллизированный Лес",
@@ -18696,6 +18956,7 @@
       "effect.power.sound_master": "Мастер Звука",
       "item.power.rainfall": "Ливень",
       "item.power.magnet_helmet": "Magnet Helmet",
+      "effect.power.smoke_master": "Master of Smoke",
       "item.power.musket": "Мушкет",
       "item.power.greenery_chestplate": "Травяной нагрудник",
       "item.power.teleportation_leggings": "Штаны телепортации",
@@ -18713,6 +18974,7 @@
       "item.power.lightning_leggings": "Штаны Молнии",
       "item.power.water_katana": "Водяная Катана",
       "item.power.greenery_leggings": "Greenery Leggings",
+      "item.power.smoke_chestplate": "Smoke Chestplate",
       "item.power.speed_boots": "Speed Boots",
       "item.power.poison_boots": "Poison Boots",
       "item.power.coral_shield": "Коралловый щит",
@@ -18777,6 +19039,7 @@
       "item.power.mercury_pit": "Ртутная Яма",
       "advancements.maximum_power.title": "Максимум Силы!",
       "block.power.quicksand_block": "Quicksand Block",
+      "item.power.smoke_leggings": "Smoke Leggings",
       "item.power.greenery_helmet": "Травяной шлем",
       "item.power.greenery_battery": "Батарея",
       "item.power.elemental_music_disc.desc": "Элементы",
@@ -18812,6 +19075,7 @@
       "item.power.blue_flame_boots": "Blue Flame Boots",
       "subtitles.tyrannosaurus_rex.dead": "",
       "item.power.metal_battery": "Батарея",
+      "item.power.smoke_battery": "Battery",
       "item.power.energy_boots": "Энергетические Ботинки",
       "item.power.baton": "Жезл",
       "item.power.burn": "Поджёг",
@@ -18878,6 +19142,7 @@
       "item.power.shadow_stone": "Камень Тени",
       "block.power.battery_charger": "Зарядник для батарей",
       "effect.power.rain_fly": "Дождевой Полёт",
+      "item.power.smoke_boots": "Smoke Boots",
       "item.power.sound_sword": "Звуковой кинжал",
       "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Мастер Магнита",
@@ -18958,6 +19223,7 @@
       "item.power.misty_fan": "Туманный Веер",
       "subtitles.music.dino_thunder": "",
       "effect.power.blue_flame_master": "Мастер Синего Пламени",
+      "item.power.smoke_screen": "Smoke Screen",
       "item.power.mercury_battery": "Батарея",
       "advancements.power_up.descr": "Разблокируйте второй уровень",
       "item.power.plesiosaurus_spawn_egg": "Яйцо призыва плезиозавра",
@@ -19085,8 +19351,10 @@
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
       "item.power.amber_leggings": "Amber Leggings",
+      "item.power.dispersion": "Dispersion",
       "item.power.tamer": "Tamer",
       "item.power.mist_chestplate": "Mist Chestplate",
+      "effect.power.recharge_smoke_stone": "Recharge",
       "effect.power.recharge_earth_stone": "Recharge",
       "item.power.time_reversed": "Time Reversed",
       "effect.power.ice_master": "Master of Ice",
@@ -19261,6 +19529,7 @@
       "item.power.space_helmet": "Space Helmet",
       "item.power.time_dilation": "Time Dilation",
       "advancements.super_charge.title": "Super Charge!",
+      "item.power.smoke_helmet": "Smoke Helmet",
       "item.power.glow_spawn_egg": "Glow Spawn Egg",
       "item.power.oblivion": "Oblivion Portal Igniter",
       "item.power.sound_barrier": "Sound Barrier",
@@ -19352,6 +19621,7 @@
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Rain Leggings",
       "item.power.shadow_ball": "Shadow Ball",
+      "item.power.nunchucks": "Nunchucks",
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Master of Fire",
       "biome.power.crystallized_forest": "Crystallized Forest",
@@ -19384,6 +19654,7 @@
       "effect.power.sound_master": "Master of Sound",
       "item.power.rainfall": "Rainfall",
       "item.power.magnet_helmet": "Magnet Helmet",
+      "effect.power.smoke_master": "Master of Smoke",
       "item.power.musket": "Musket",
       "item.power.greenery_chestplate": "Greenery Chestplate",
       "item.power.teleportation_leggings": "Teleportation Leggings",
@@ -19401,6 +19672,7 @@
       "item.power.lightning_leggings": "Lightning Leggings",
       "item.power.water_katana": "Water Katana",
       "item.power.greenery_leggings": "Greenery Leggings",
+      "item.power.smoke_chestplate": "Smoke Chestplate",
       "item.power.speed_boots": "Speed Boots",
       "item.power.poison_boots": "Poison Boots",
       "effect.power.rain_master": "Master of Rain",
@@ -19465,6 +19737,7 @@
       "item.power.mercury_pit": "Mercury Pit",
       "advancements.maximum_power.title": "Maximum Power!",
       "block.power.quicksand_block": "Quicksand Block",
+      "item.power.smoke_leggings": "Smoke Leggings",
       "item.power.greenery_helmet": "Greenery Helmet",
       "item.power.greenery_battery": "Battery",
       "item.power.elemental_music_disc.desc": "Elements",
@@ -19500,6 +19773,7 @@
       "item.power.blue_flame_boots": "Blue Flame Boots",
       "subtitles.tyrannosaurus_rex.dead": "",
       "item.power.metal_battery": "Battery",
+      "item.power.smoke_battery": "Battery",
       "item.power.energy_boots": "Energy Boots",
       "item.power.baton": "Baton",
       "item.power.burn": "Burn",
@@ -19567,6 +19841,7 @@
       "item.power.shadow_stone": "Shadow Stone",
       "block.power.battery_charger": "Battery Charger",
       "effect.power.rain_fly": "RainFly",
+      "item.power.smoke_boots": "Smoke Boots",
       "item.power.sound_sword": "Sound Sword",
       "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Master of Magnet",
@@ -19647,6 +19922,7 @@
       "item.power.misty_fan": "Misty Fan",
       "subtitles.music.dino_thunder": "",
       "effect.power.blue_flame_master": "Master of Blue Flame",
+      "item.power.smoke_screen": "Smoke Screen",
       "item.power.mercury_battery": "Battery",
       "advancements.power_up.descr": "Unlock the second level",
       "item.power.plesiosaurus_spawn_egg": "Plesiosaurus Spawn Egg",

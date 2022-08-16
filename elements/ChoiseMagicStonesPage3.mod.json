@@ -132,6 +132,9 @@
         "type": "button",
         "data": {
           "text": "Smoke",
+          "onClick": {
+            "name": "SmokeGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Smoke",

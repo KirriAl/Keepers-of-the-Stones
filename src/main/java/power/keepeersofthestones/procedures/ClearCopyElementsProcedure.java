@@ -91,5 +91,7 @@ public class ClearCopyElementsProcedure {
 			_entity.removeEffect(PowerModMobEffects.BLUE_FLAME_MASTER.get());
 		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(PowerModMobEffects.SPIRIT_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SMOKE_MASTER.get());
 	}
 }

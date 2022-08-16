@@ -18,6 +18,7 @@ import power.keepeersofthestones.entity.ThrowingHammerEntity;
 import power.keepeersofthestones.entity.SunExplodeEntity;
 import power.keepeersofthestones.entity.SporesEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
+import power.keepeersofthestones.entity.SmokeScreenEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
@@ -258,6 +259,9 @@ public class PowerModEntities {
 			EntityType.Builder.<FirebirdFeatherEntity>of(FirebirdFeatherEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(FirebirdFeatherEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SmokeScreenEntity>> SMOKE_SCREEN = register("projectile_smoke_screen",
+			EntityType.Builder.<SmokeScreenEntity>of(SmokeScreenEntity::new, MobCategory.MISC).setCustomClientFactory(SmokeScreenEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

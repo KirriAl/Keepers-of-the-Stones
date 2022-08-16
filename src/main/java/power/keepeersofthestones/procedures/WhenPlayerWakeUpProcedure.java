@@ -112,5 +112,7 @@ public class WhenPlayerWakeUpProcedure {
 			_entity.removeEffect(PowerModMobEffects.RECHARGE_SPIRIT_STONE.get());
 		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(PowerModMobEffects.RECHARGE_AETHER_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_SMOKE_STONE.get());
 	}
 }

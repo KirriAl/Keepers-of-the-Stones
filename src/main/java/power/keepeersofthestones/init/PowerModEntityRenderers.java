@@ -83,5 +83,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.BLUE_FIREBALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ECTOPLASM_ATTACK.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.FIREBIRD_FEATHER.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SMOKE_SCREEN.get(), ThrownItemRenderer::new);
 	}
 }

@@ -139,6 +139,7 @@ public class PowerModVariables {
 			clone.blue_flame = original.blue_flame;
 			clone.spirit = original.spirit;
 			clone.aether = original.aether;
+			clone.smoke = original.smoke;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -268,6 +269,7 @@ public class PowerModVariables {
 		public boolean blue_flame_stone = false;
 		public boolean spirit_stone = false;
 		public boolean aether_stone = false;
+		public boolean smoke_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -328,6 +330,7 @@ public class PowerModVariables {
 			blue_flame_stone = nbt.getBoolean("blue_flame_stone");
 			spirit_stone = nbt.getBoolean("spirit_stone");
 			aether_stone = nbt.getBoolean("aether_stone");
+			smoke_stone = nbt.getBoolean("smoke_stone");
 		}
 
 		@Override
@@ -384,6 +387,7 @@ public class PowerModVariables {
 			nbt.putBoolean("blue_flame_stone", blue_flame_stone);
 			nbt.putBoolean("spirit_stone", spirit_stone);
 			nbt.putBoolean("aether_stone", aether_stone);
+			nbt.putBoolean("smoke_stone", smoke_stone);
 			return nbt;
 		}
 
@@ -545,6 +549,7 @@ public class PowerModVariables {
 		public boolean spirit = false;
 		public boolean aether = false;
 		public boolean recharge_spell_time = false;
+		public boolean smoke = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -625,6 +630,7 @@ public class PowerModVariables {
 			nbt.putBoolean("spirit", spirit);
 			nbt.putBoolean("aether", aether);
 			nbt.putBoolean("recharge_spell_time", recharge_spell_time);
+			nbt.putBoolean("smoke", smoke);
 			return nbt;
 		}
 
@@ -702,6 +708,7 @@ public class PowerModVariables {
 			spirit = nbt.getBoolean("spirit");
 			aether = nbt.getBoolean("aether");
 			recharge_spell_time = nbt.getBoolean("recharge_spell_time");
+			smoke = nbt.getBoolean("smoke");
 		}
 	}
 
@@ -799,6 +806,7 @@ public class PowerModVariables {
 					variables.spirit = message.data.spirit;
 					variables.aether = message.data.aether;
 					variables.recharge_spell_time = message.data.recharge_spell_time;
+					variables.smoke = message.data.smoke;
 				}
 			});
 			context.setPacketHandled(true);
