@@ -151,6 +151,7 @@ public class PowerModVariables {
 				clone.recharge_spell_plague = original.recharge_spell_plague;
 				clone.recharge_spell_gravity_boost = original.recharge_spell_gravity_boost;
 				clone.recharge_spell_gravity_red = original.recharge_spell_gravity_red;
+				clone.recharge_spell_time = original.recharge_spell_time;
 			}
 		}
 
@@ -543,6 +544,7 @@ public class PowerModVariables {
 		public boolean recharge_spell_gravity_red = false;
 		public boolean spirit = false;
 		public boolean aether = false;
+		public boolean recharge_spell_time = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -622,6 +624,7 @@ public class PowerModVariables {
 			nbt.putBoolean("recharge_spell_gravity_red", recharge_spell_gravity_red);
 			nbt.putBoolean("spirit", spirit);
 			nbt.putBoolean("aether", aether);
+			nbt.putBoolean("recharge_spell_time", recharge_spell_time);
 			return nbt;
 		}
 
@@ -698,6 +701,7 @@ public class PowerModVariables {
 			recharge_spell_gravity_red = nbt.getBoolean("recharge_spell_gravity_red");
 			spirit = nbt.getBoolean("spirit");
 			aether = nbt.getBoolean("aether");
+			recharge_spell_time = nbt.getBoolean("recharge_spell_time");
 		}
 	}
 
@@ -794,6 +798,7 @@ public class PowerModVariables {
 					variables.recharge_spell_gravity_red = message.data.recharge_spell_gravity_red;
 					variables.spirit = message.data.spirit;
 					variables.aether = message.data.aether;
+					variables.recharge_spell_time = message.data.recharge_spell_time;
 				}
 			});
 			context.setPacketHandled(true);

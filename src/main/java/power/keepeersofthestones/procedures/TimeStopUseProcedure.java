@@ -24,7 +24,7 @@ public class TimeStopUseProcedure {
 			if (sourceentity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 800);
 			if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PowerModVariables.PlayerVariables())).fire) {
+					.orElse(new PowerModVariables.PlayerVariables())).recharge_spell_time) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -65,7 +65,7 @@ public class TimeStopUseProcedure {
 			{
 				boolean _setval = true;
 				sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fire = _setval;
+					capability.recharge_spell_time = _setval;
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
@@ -93,7 +93,7 @@ public class TimeStopUseProcedure {
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.fire = _setval;
+							capability.recharge_spell_time = _setval;
 							capability.syncPlayerVariables(sourceentity);
 						});
 					}
