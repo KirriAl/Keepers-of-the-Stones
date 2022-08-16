@@ -55,7 +55,7 @@
     "temperature": 2.0,
     "baseHeight": 1.1,
     "heightVariation": 1.2000000000000002,
-    "usePureMultiNoise": true,
+    "usePureMultiNoise": false,
     "minTemperature": -0.55,
     "maxTemperature": 0.0,
     "minHumidity": -1.0,
