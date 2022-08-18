@@ -12,11 +12,11 @@
     },
     "toolType": "Sword",
     "harvestLevel": 2,
-    "efficiency": 6.0,
+    "efficiency": 12.0,
     "attackSpeed": 1.5999999999999999,
     "enchantability": 14,
     "damageVsEntity": 9.0,
-    "usageCount": 250,
+    "usageCount": 650,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [

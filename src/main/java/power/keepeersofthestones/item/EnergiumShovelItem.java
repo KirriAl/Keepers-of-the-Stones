@@ -17,11 +17,11 @@ public class EnergiumShovelItem extends ShovelItem {
 	public EnergiumShovelItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 250;
+				return 650;
 			}
 
 			public float getSpeed() {
-				return 6f;
+				return 12f;
 			}
 
 			public float getAttackDamageBonus() {
