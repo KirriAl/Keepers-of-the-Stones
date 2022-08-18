@@ -16,8 +16,10 @@ public class PowerModTabs {
 	public static CreativeModeTab TAB_MIDDLE_GROUP;
 	public static CreativeModeTab TAB_GREAT_GROUP;
 	public static CreativeModeTab TAB_BATTERIES;
-	public static CreativeModeTab TAB_TECHNOLOGIES_AND_ARTIFACTS;
 	public static CreativeModeTab TAB_ENERGIUM;
+	public static CreativeModeTab TAB_DIMENSIONS;
+	public static CreativeModeTab TAB_TECHNOLOGIES;
+	public static CreativeModeTab TAB_ARTIFACTS;
 
 	public static void load() {
 		TAB_BASIC_GROUP = new CreativeModeTab("tabbasic_group") {
@@ -75,10 +77,10 @@ public class PowerModTabs {
 				return false;
 			}
 		};
-		TAB_TECHNOLOGIES_AND_ARTIFACTS = new CreativeModeTab("tabtechnologies_and_artifacts") {
+		TAB_ENERGIUM = new CreativeModeTab("tabenergium") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.BOOK_OF_ELEMENTS.get());
+				return new ItemStack(PowerModItems.ENERGIUM_INGOT.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -86,10 +88,32 @@ public class PowerModTabs {
 				return false;
 			}
 		};
-		TAB_ENERGIUM = new CreativeModeTab("tabenergium") {
+		TAB_DIMENSIONS = new CreativeModeTab("tabdimensions") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.ENERGIUM_INGOT.get());
+				return new ItemStack(PowerModItems.DINOERA.get());
+			}
+
+			@OnlyIn(Dist.CLIENT)
+			public boolean hasSearchBar() {
+				return false;
+			}
+		};
+		TAB_TECHNOLOGIES = new CreativeModeTab("tabtechnologies") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(PowerModItems.ROCKET_ITEM.get());
+			}
+
+			@OnlyIn(Dist.CLIENT)
+			public boolean hasSearchBar() {
+				return false;
+			}
+		};
+		TAB_ARTIFACTS = new CreativeModeTab("tabartifacts") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(PowerModItems.BOOK_OF_ELEMENTS.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)

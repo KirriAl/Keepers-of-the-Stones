@@ -5,7 +5,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 
 public class GnomePickaxeItem extends PickaxeItem {
 	public GnomePickaxeItem() {
@@ -33,6 +32,6 @@ public class GnomePickaxeItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.5f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).fireResistant());
+		}, 1, -2.5f, new Item.Properties().tab(null).fireResistant());
 	}
 }

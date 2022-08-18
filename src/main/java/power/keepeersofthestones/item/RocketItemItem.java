@@ -13,7 +13,7 @@ import net.minecraft.world.InteractionResult;
 
 public class RocketItemItem extends Item {
 	public RocketItemItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES).stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

@@ -40,7 +40,7 @@
     },
     "igniterName": "Crystallized Portal Igniter",
     "igniterTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Dimensions"
     },
     "texture": "crystal_flint_and_steel",
     "portalTexture": "crystallized_portal",

@@ -33,7 +33,7 @@
     },
     "igniterName": "Sunny Kingdom Portal Igniter",
     "igniterTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Dimensions"
     },
     "texture": "sun_kingdom_flint_and_steel",
     "portalTexture": "sun_kingdom_portal",

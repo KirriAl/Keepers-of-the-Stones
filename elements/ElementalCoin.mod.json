@@ -6,9 +6,9 @@
     "texture": "elemental_coin",
     "customModelName": "Normal",
     "name": "Elemental Coin",
-    "rarity": "COMMON",
+    "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Artifacts"
     },
     "stackSize": 16,
     "enchantability": 0,

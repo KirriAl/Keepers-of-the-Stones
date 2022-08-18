@@ -99,6 +99,30 @@
       },
       {
         "value": "CUSTOM:MushroomsBattery"
+      },
+      {
+        "value": "CUSTOM:MercuryBattery"
+      },
+      {
+        "value": "CUSTOM:MusicBattery"
+      },
+      {
+        "value": "CUSTOM:PlagueBattery"
+      },
+      {
+        "value": "CUSTOM:GravityBattery"
+      },
+      {
+        "value": "CUSTOM:SpiritBattery"
+      },
+      {
+        "value": "CUSTOM:AetherBattery"
+      },
+      {
+        "value": "CUSTOM:SmokeBattery"
+      },
+      {
+        "value": "CUSTOM:FormBattery"
       }
     ],
     "blocks": [],

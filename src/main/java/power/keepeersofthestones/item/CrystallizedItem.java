@@ -14,7 +14,7 @@ import net.minecraft.core.BlockPos;
 
 public class CrystallizedItem extends Item {
 	public CrystallizedItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).durability(64));
+		super(new Item.Properties().tab(PowerModTabs.TAB_DIMENSIONS).durability(64));
 	}
 
 	@Override

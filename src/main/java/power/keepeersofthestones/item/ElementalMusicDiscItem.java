@@ -12,6 +12,6 @@ import net.minecraft.resources.ResourceLocation;
 public class ElementalMusicDiscItem extends RecordItem {
 	public ElementalMusicDiscItem() {
 		super(0, PowerModSounds.REGISTRY.get(new ResourceLocation("power:powerful_stone")),
-				new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).stacksTo(1).rarity(Rarity.RARE));
+				new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).stacksTo(1).rarity(Rarity.RARE));
 	}
 }

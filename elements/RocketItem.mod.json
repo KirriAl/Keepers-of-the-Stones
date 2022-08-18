@@ -8,7 +8,7 @@
     "name": "Rocket",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Technologies"
     },
     "stackSize": 64,
     "enchantability": 0,

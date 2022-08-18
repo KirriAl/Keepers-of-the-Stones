@@ -43,7 +43,7 @@
     },
     "igniterName": "Oblivion Portal Igniter",
     "igniterTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Dimensions"
     },
     "texture": "oblivion_flint_and_steel",
     "portalTexture": "oblivion_portal",
