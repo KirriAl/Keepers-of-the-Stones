@@ -1,5 +1,5 @@
 {
-  "parent": "power:block/power_blocker",
+  "parent": "power:block/energium_block",
   "display": {
     "thirdperson": {
       "rotation": [

@@ -20,7 +20,7 @@
       "conditions": {
         "item": {
           "items": [
-            "power:power_blocker"
+            "power:deleted_mod_element"
           ]
         }
       }

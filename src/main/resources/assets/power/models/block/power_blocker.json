@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "power:blocks/power_blocker",
-    "particle": "power:blocks/power_blocker"
-  }
-}

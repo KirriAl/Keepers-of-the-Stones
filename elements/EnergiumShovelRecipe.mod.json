@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
         "value": "CUSTOM:EnergiumIngot"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": "Items.STICK"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": "Items.STICK"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:EnergiumBlock"
+      "value": "CUSTOM:EnergiumShovel"
     },
-    "name": "power_blocker_craft",
+    "name": "energium_shovel_recipe",
     "namespace": "mod"
   }
 }

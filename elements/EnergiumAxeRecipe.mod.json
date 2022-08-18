@@ -16,31 +16,31 @@
         "value": "CUSTOM:EnergiumIngot"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
         "value": "CUSTOM:EnergiumIngot"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": "Items.STICK"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": "Items.STICK"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:EnergiumBlock"
+      "value": "CUSTOM:EnergiumAxe"
     },
-    "name": "power_blocker_craft",
+    "name": "energium_axe_recipe",
     "namespace": "mod"
   }
 }

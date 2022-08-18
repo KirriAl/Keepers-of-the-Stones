@@ -8,7 +8,7 @@
     "name": "Raw Energium",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Energium"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -30,7 +30,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onItemInInventoryTick": {
-      "name": "EnergiumBlock"
+      "name": "EnergiumBlockUse"
     },
     "isFood": false,
     "nutritionalValue": 4,

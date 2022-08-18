@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.block;
 
-import power.keepeersofthestones.procedures.EnergiumBlockProcedure;
+import power.keepeersofthestones.procedures.EnergiumBlockUseProcedure;
 import power.keepeersofthestones.init.PowerModItems;
 
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -49,7 +49,13 @@ public class EnergiumOreBlock extends Block {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		EnergiumBlockProcedure.execute(entity);
+		EnergiumBlockUseProcedure.execute(entity);
 		return retval;
+	}
+
+	@Override
+	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
+		super.attack(blockstate, world, pos, entity);
+		EnergiumBlockUseProcedure.execute(entity);
 	}
 }

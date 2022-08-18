@@ -12,7 +12,6 @@ import power.keepeersofthestones.block.SunnyKingdomPortalBlock;
 import power.keepeersofthestones.block.StoneMagicBoxBlock;
 import power.keepeersofthestones.block.SoundBarrierBlockBlock;
 import power.keepeersofthestones.block.QuicksandBlockBlock;
-import power.keepeersofthestones.block.PowerBlockerBlock;
 import power.keepeersofthestones.block.OrangePortalBlock;
 import power.keepeersofthestones.block.OblivionPortalBlock;
 import power.keepeersofthestones.block.MoonStonesBlockBlock;
@@ -21,6 +20,7 @@ import power.keepeersofthestones.block.IronMagicBoxBlock;
 import power.keepeersofthestones.block.GoldMagicBoxBlock;
 import power.keepeersofthestones.block.EnergyBlockBlock;
 import power.keepeersofthestones.block.EnergiumOreBlock;
+import power.keepeersofthestones.block.EnergiumBlockBlock;
 import power.keepeersofthestones.block.DinoeraPortalBlock;
 import power.keepeersofthestones.block.DetonatorTNTBlock;
 import power.keepeersofthestones.block.CrystallizedPortalBlock;
@@ -57,6 +57,8 @@ import net.minecraft.world.level.block.Block;
 
 public class PowerModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PowerMod.MODID);
+	public static final RegistryObject<Block> ENERGIUM_ORE = REGISTRY.register("energium_ore", () -> new EnergiumOreBlock());
+	public static final RegistryObject<Block> ENERGIUM_BLOCK = REGISTRY.register("energium_block", () -> new EnergiumBlockBlock());
 	public static final RegistryObject<Block> ACID = REGISTRY.register("acid", () -> new AcidBlock());
 	public static final RegistryObject<Block> MERCURY_LIQUID = REGISTRY.register("mercury_liquid", () -> new MercuryLiquidBlock());
 	public static final RegistryObject<Block> BATTERY_CHARGER = REGISTRY.register("battery_charger", () -> new BatteryChargerBlock());
@@ -76,8 +78,6 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> CRYSTAL_RED = REGISTRY.register("crystal_red", () -> new CrystalRedBlock());
 	public static final RegistryObject<Block> CRYSTAL_VIOLET = REGISTRY.register("crystal_violet", () -> new CrystalVioletBlock());
 	public static final RegistryObject<Block> CRYSTAL_YELLOW = REGISTRY.register("crystal_yellow", () -> new CrystalYellowBlock());
-	public static final RegistryObject<Block> ENERGIUM_ORE = REGISTRY.register("energium_ore", () -> new EnergiumOreBlock());
-	public static final RegistryObject<Block> POWER_BLOCKER = REGISTRY.register("power_blocker", () -> new PowerBlockerBlock());
 	public static final RegistryObject<Block> ENERGY_BLOCK = REGISTRY.register("energy_block", () -> new EnergyBlockBlock());
 	public static final RegistryObject<Block> SOUND_BARRIER_BLOCK = REGISTRY.register("sound_barrier_block", () -> new SoundBarrierBlockBlock());
 	public static final RegistryObject<Block> CLUSTER_BLOCK = REGISTRY.register("cluster_block", () -> new ClusterBlockBlock());

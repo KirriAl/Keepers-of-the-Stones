@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.EnergiumBlockProcedure;
+import power.keepeersofthestones.procedures.EnergiumBlockUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.Level;
@@ -13,7 +13,7 @@ import net.minecraft.world.entity.Entity;
 
 public class EnergiumIngotItem extends Item {
 	public EnergiumIngotItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(PowerModTabs.TAB_ENERGIUM).stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -24,6 +24,6 @@ public class EnergiumIngotItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EnergiumBlockProcedure.execute(entity);
+		EnergiumBlockUseProcedure.execute(entity);
 	}
 }

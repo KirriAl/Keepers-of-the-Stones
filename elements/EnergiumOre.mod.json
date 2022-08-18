@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Energium"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -124,7 +124,10 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onDestroyedByPlayer": {
-      "name": "EnergiumBlock"
+      "name": "EnergiumBlockUse"
+    },
+    "onStartToDestroy": {
+      "name": "EnergiumBlockUse"
     },
     "spawnWorldTypes": [
       "Surface"

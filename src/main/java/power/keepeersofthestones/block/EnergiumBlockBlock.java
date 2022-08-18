@@ -22,8 +22,8 @@ import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-public class PowerBlockerBlock extends Block {
-	public PowerBlockerBlock() {
+public class EnergiumBlockBlock extends Block {
+	public EnergiumBlockBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(5f, 10f).requiresCorrectToolForDrops());
 	}
 
