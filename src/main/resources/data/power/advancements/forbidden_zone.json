@@ -20,7 +20,7 @@
       "conditions": {
         "item": {
           "items": [
-            "power:deleted_mod_element"
+            "power:energium_block"
           ]
         }
       }
