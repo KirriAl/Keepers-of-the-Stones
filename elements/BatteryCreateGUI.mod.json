@@ -74,16 +74,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "acceleration_time.png",
-          "use1Xscale": false,
-          "name": "acceleration_time.png",
-          "x": 204,
-          "y": 71
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "<BNBT:integer:fuelRemaining>",
@@ -114,6 +104,16 @@
           "name": "slot_for_battery.png",
           "x": 178,
           "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_gui.png",
+          "use1Xscale": false,
+          "name": "arrow_gui.png",
+          "x": 201,
+          "y": 73
         }
       }
     ],
