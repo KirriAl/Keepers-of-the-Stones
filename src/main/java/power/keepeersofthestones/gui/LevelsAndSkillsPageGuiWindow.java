@@ -4,7 +4,6 @@ package power.keepeersofthestones.gui;
 import power.keepeersofthestones.procedures.ReturnLevel3Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel2Procedure;
 import power.keepeersofthestones.procedures.ReturnLevel1Procedure;
-import power.keepeersofthestones.procedures.NonWaterPowerProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -72,11 +71,6 @@ public class LevelsAndSkillsPageGuiWindow extends ContainerScreen<LevelsAndSkill
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/elemental_coin.png"));
 			this.blit(ms, this.guiLeft + -113, this.guiTop + -40, 0, 0, 16, 16, 16, 16);
 		}
-		if (NonWaterPowerProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/elemental_coin.png"));
-			this.blit(ms, this.guiLeft + 86, this.guiTop + -95, 0, 0, 16, 16, 16, 16);
-		}
 		if (ReturnLevel2Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/level_checked.png"));
@@ -87,10 +81,6 @@ public class LevelsAndSkillsPageGuiWindow extends ContainerScreen<LevelsAndSkill
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/level_checked.png"));
 			this.blit(ms, this.guiLeft + -63, this.guiTop + -45, 0, 0, 19, 18, 19, 18);
 		}
-
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/level_checked.png"));
-		this.blit(ms, this.guiLeft + 136, this.guiTop + -95, 0, 0, 19, 18, 19, 18);
-
 		if (ReturnLevel1Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("power:textures/screens/level_checked.png"));
@@ -115,11 +105,8 @@ public class LevelsAndSkillsPageGuiWindow extends ContainerScreen<LevelsAndSkill
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Levels", -108, -112, -13421773);
 		this.font.drawString(ms, "Level 2", -163, -65, -13421773);
 		this.font.drawString(ms, "Level 3", -163, -40, -13421773);
-		this.font.drawString(ms, "Skills", 89, -112, -13421773);
-		this.font.drawString(ms, "Aqua Power", 26, -90, -13421773);
 		this.font.drawString(ms, "Level 1", -163, -90, -13421773);
 	}
 
@@ -161,21 +148,13 @@ public class LevelsAndSkillsPageGuiWindow extends ContainerScreen<LevelsAndSkill
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + 111, this.guiTop + -95, 61, 20, new StringTextComponent("12"), e -> {
-			if (NonWaterPowerProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+		this.addButton(new Button(this.guiLeft + -180, this.guiTop + 86, 30, 20, new StringTextComponent("<"), e -> {
+			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageGui.ButtonPressedMessage(2, x, y, z));
 				LevelsAndSkillsPageGui.handleButtonAction(entity, 2, x, y, z);
 			}
-		}) {
-			@Override
-			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (NonWaterPowerProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-					super.render(ms, gx, gy, ticks);
-			}
-		});
-		this.addButton(new Button(this.guiLeft + -171, this.guiTop + 86, 30, 20, new StringTextComponent("<"), e -> {
+		}));
+		this.addButton(new Button(this.guiLeft + 152, this.guiTop + 86, 30, 20, new StringTextComponent(">"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageGui.ButtonPressedMessage(3, x, y, z));
 				LevelsAndSkillsPageGui.handleButtonAction(entity, 3, x, y, z);

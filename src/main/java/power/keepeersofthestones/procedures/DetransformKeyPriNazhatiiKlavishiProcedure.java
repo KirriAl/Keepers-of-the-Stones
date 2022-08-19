@@ -7,14 +7,22 @@ import power.keepeersofthestones.potion.TimeMasterEffectPotionEffect;
 import power.keepeersofthestones.potion.TeleportationMasterPotionEffect;
 import power.keepeersofthestones.potion.TechnologyMasterPotionEffect;
 import power.keepeersofthestones.potion.SunMasterPotionEffect;
+import power.keepeersofthestones.potion.SpeedMasterPotionEffect;
 import power.keepeersofthestones.potion.SpaceMasterPotionEffect;
 import power.keepeersofthestones.potion.SoundMasterPotionEffect;
 import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
+import power.keepeersofthestones.potion.SandMasterPotionEffect;
 import power.keepeersofthestones.potion.RainMasterPotionEffect;
+import power.keepeersofthestones.potion.PoisonMasterPotionEffect;
+import power.keepeersofthestones.potion.PlagueMasterPotionEffect;
 import power.keepeersofthestones.potion.OceanMasterPotionEffect;
+import power.keepeersofthestones.potion.MusicMasterPotionEffect;
+import power.keepeersofthestones.potion.MushroomsMasterPotionEffect;
 import power.keepeersofthestones.potion.MoonMasterPotionEffect;
 import power.keepeersofthestones.potion.MistMasterPotionEffect;
 import power.keepeersofthestones.potion.MetalMasterPotionEffect;
+import power.keepeersofthestones.potion.MercuryMasterPotionEffect;
+import power.keepeersofthestones.potion.MagnetMasterPotionEffect;
 import power.keepeersofthestones.potion.LightningMasterPotionEffect;
 import power.keepeersofthestones.potion.LightMasterPotionEffect;
 import power.keepeersofthestones.potion.LavaMasterPotionEffect;
@@ -139,6 +147,30 @@ public class DetransformKeyPriNazhatiiKlavishiProcedure {
 		}
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).removePotionEffect(MistMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(SandMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(SpeedMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(PoisonMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(MagnetMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(MushroomsMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(MercuryMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(MusicMasterPotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(PlagueMasterPotionEffect.potion);
 		}
 	}
 }

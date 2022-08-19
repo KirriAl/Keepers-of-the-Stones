@@ -28,7 +28,7 @@ public class BloodStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BloodStoneItem(PowerModElements instance) {
-		super(instance, 21);
+		super(instance, 22);
 	}
 
 	@Override

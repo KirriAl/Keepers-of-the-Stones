@@ -29,7 +29,7 @@ public class TeleportationItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public TeleportationItem(PowerModElements instance) {
-		super(instance, 619);
+		super(instance, 610);
 	}
 
 	@Override

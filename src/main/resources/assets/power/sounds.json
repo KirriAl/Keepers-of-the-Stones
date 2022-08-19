@@ -28,16 +28,6 @@
       }
     ]
   },
-  "time_power": {
-    "category": "player",
-    "subtitle": "subtitles.time_power",
-    "sounds": [
-      {
-        "name": "power:time_travel",
-        "stream": false
-      }
-    ]
-  },
   "tyrannosaurus_rex.hurt": {
     "category": "neutral",
     "sounds": [
@@ -71,6 +61,106 @@
       {
         "name": "power:raptor.hurt",
         "stream": false
+      }
+    ]
+  },
+  "time_power": {
+    "category": "player",
+    "subtitle": "subtitles.time_power",
+    "sounds": [
+      {
+        "name": "power:time_travel",
+        "stream": false
+      }
+    ]
+  },
+  "music1": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music1",
+        "stream": true
+      }
+    ]
+  },
+  "music2": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music2",
+        "stream": true
+      }
+    ]
+  },
+  "music3": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music3",
+        "stream": true
+      }
+    ]
+  },
+  "music4": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music4",
+        "stream": true
+      }
+    ]
+  },
+  "music5": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music5",
+        "stream": true
+      }
+    ]
+  },
+  "music6": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music6",
+        "stream": true
+      }
+    ]
+  },
+  "music7": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music7",
+        "stream": true
+      }
+    ]
+  },
+  "music8": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music8",
+        "stream": true
+      }
+    ]
+  },
+  "music9": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music9",
+        "stream": true
+      }
+    ]
+  },
+  "music10": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "power:music10",
+        "stream": true
       }
     ]
   }

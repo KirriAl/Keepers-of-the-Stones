@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "biome",
   "definition": {
     "name": "Oblivion Plains",
@@ -114,39 +114,30 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "EntityGiantZombie"
+          "value": "EntityZombie"
         },
-        "minGroup": 2,
+        "minGroup": 4,
         "maxGroup": 3,
-        "weight": 5,
-        "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "EntityPillager"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 5,
+        "weight": 15,
         "spawnType": "monster"
       },
       {
         "entity": {
           "value": "EntityEnderman"
         },
-        "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 5,
+        "minGroup": 4,
+        "maxGroup": 3,
+        "weight": 10,
         "spawnType": "monster"
       },
       {
         "entity": {
-          "value": "EntityAnimal"
+          "value": "EntitySkeleton"
         },
-        "minGroup": 3,
+        "minGroup": 4,
         "maxGroup": 4,
-        "weight": 20,
-        "spawnType": "creature"
+        "weight": 15,
+        "spawnType": "monster"
       }
     ]
   }

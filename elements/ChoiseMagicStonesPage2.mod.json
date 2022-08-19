@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -110,13 +110,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Tech",
+          "text": "Techolog.",
           "onClick": {
             "name": "TechnologyGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Tech",
+          "name": "Techolog.",
           "x": 141,
           "y": 80
         }
@@ -138,13 +138,13 @@
       {
         "type": "button",
         "data": {
-          "text": "TP",
+          "text": "Teleport.",
           "onClick": {
             "name": "TeleportationGet"
           },
           "width": 56,
           "height": 20,
-          "name": "TP",
+          "name": "Teleport.",
           "x": 141,
           "y": 107
         }
@@ -180,10 +180,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Sand",
+          "onClick": {
+            "name": "SandGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Sand",
           "x": 240,
           "y": 80
         }
@@ -191,10 +194,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Speed",
+          "onClick": {
+            "name": "SpeedGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Speed",
           "x": 240,
           "y": 107
         }
@@ -286,10 +292,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Poison",
+          "onClick": {
+            "name": "PoisonGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Poison",
           "x": 240,
           "y": 134
         }
@@ -297,10 +306,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Magnet",
+          "onClick": {
+            "name": "MagnetGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Magnet",
           "x": 240,
           "y": 161
         }
@@ -308,10 +320,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mushrooms",
+          "onClick": {
+            "name": "MushroomsGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mushrooms",
           "x": 339,
           "y": 53
         }
@@ -319,10 +334,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mercury",
+          "onClick": {
+            "name": "MercuryGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mercury",
           "x": 339,
           "y": 80
         }
@@ -330,10 +348,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Music",
+          "onClick": {
+            "name": "MusicGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Music",
           "x": 339,
           "y": 107
         }
@@ -361,10 +382,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Plague",
+          "onClick": {
+            "name": "PlagueGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Plague",
           "x": 339,
           "y": 134
         }
@@ -372,10 +396,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Gravity",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Gravity",
           "x": 339,
           "y": 161
         }
@@ -435,6 +459,86 @@
           "name": "mist_master.png",
           "x": 222,
           "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sand_master.png",
+          "use1Xscale": false,
+          "name": "sand_master.png",
+          "x": 222,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "speed_master.png",
+          "use1Xscale": false,
+          "name": "speed_master.png",
+          "x": 222,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "poison_master.png",
+          "use1Xscale": false,
+          "name": "poison_master.png",
+          "x": 222,
+          "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "magnet_master.png",
+          "use1Xscale": false,
+          "name": "magnet_master.png",
+          "x": 222,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mushrooms_master.png",
+          "use1Xscale": false,
+          "name": "mushrooms_master.png",
+          "x": 321,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mercury_master.png",
+          "use1Xscale": false,
+          "name": "mercury_master.png",
+          "x": 321,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "music_master.png",
+          "use1Xscale": false,
+          "name": "music_master.png",
+          "x": 321,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "plague_master.png",
+          "use1Xscale": false,
+          "name": "plague_master.png",
+          "x": 321,
+          "y": 134
         }
       }
     ],

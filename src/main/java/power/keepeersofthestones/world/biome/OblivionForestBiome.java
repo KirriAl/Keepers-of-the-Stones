@@ -37,7 +37,7 @@ public class OblivionForestBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public OblivionForestBiome(PowerModElements instance) {
-		super(instance, 792);
+		super(instance, 773);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

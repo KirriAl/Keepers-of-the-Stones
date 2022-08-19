@@ -27,7 +27,7 @@ public class SpaceAtlasItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SpaceAtlasItem(PowerModElements instance) {
-		super(instance, 750);
+		super(instance, 737);
 	}
 
 	@Override

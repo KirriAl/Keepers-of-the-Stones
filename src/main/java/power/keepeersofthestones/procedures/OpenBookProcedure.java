@@ -7,14 +7,22 @@ import power.keepeersofthestones.item.TimeStoneItem;
 import power.keepeersofthestones.item.TeleportationStoneItem;
 import power.keepeersofthestones.item.TechnologyStoneItem;
 import power.keepeersofthestones.item.SunStoneItem;
+import power.keepeersofthestones.item.SpeedStoneItem;
 import power.keepeersofthestones.item.SpaceStoneItem;
 import power.keepeersofthestones.item.SoundStoneItem;
 import power.keepeersofthestones.item.ShadowStoneItem;
+import power.keepeersofthestones.item.SandStoneItem;
 import power.keepeersofthestones.item.RainStoneItem;
+import power.keepeersofthestones.item.PoisonStoneItem;
+import power.keepeersofthestones.item.PlagueStoneItem;
 import power.keepeersofthestones.item.OceanStoneItem;
+import power.keepeersofthestones.item.MusicStoneItem;
+import power.keepeersofthestones.item.MushroomsStoneItem;
 import power.keepeersofthestones.item.MoonStoneItem;
 import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MetalStoneItem;
+import power.keepeersofthestones.item.MercuryStoneItem;
+import power.keepeersofthestones.item.MagnetStoneItem;
 import power.keepeersofthestones.item.LightningStoneItem;
 import power.keepeersofthestones.item.LightStoneItem;
 import power.keepeersofthestones.item.LavaStoneItem;
@@ -38,14 +46,22 @@ import power.keepeersofthestones.gui.EBTimeGui;
 import power.keepeersofthestones.gui.EBTeleportationGui;
 import power.keepeersofthestones.gui.EBTechnologyGui;
 import power.keepeersofthestones.gui.EBSunGui;
+import power.keepeersofthestones.gui.EBSpeedGui;
 import power.keepeersofthestones.gui.EBSpaceGui;
 import power.keepeersofthestones.gui.EBSoundGui;
 import power.keepeersofthestones.gui.EBShadowGui;
+import power.keepeersofthestones.gui.EBSandGui;
 import power.keepeersofthestones.gui.EBRainGui;
+import power.keepeersofthestones.gui.EBPoisonGui;
+import power.keepeersofthestones.gui.EBPlagueGui;
 import power.keepeersofthestones.gui.EBOceanGui;
+import power.keepeersofthestones.gui.EBMusicGui;
+import power.keepeersofthestones.gui.EBMushroomsGui;
 import power.keepeersofthestones.gui.EBMoonGui;
 import power.keepeersofthestones.gui.EBMistGui;
 import power.keepeersofthestones.gui.EBMetalGui;
+import power.keepeersofthestones.gui.EBMercuryGui;
+import power.keepeersofthestones.gui.EBMagnetGui;
 import power.keepeersofthestones.gui.EBLightningGui;
 import power.keepeersofthestones.gui.EBLightGui;
 import power.keepeersofthestones.gui.EBLavaGui;
@@ -700,6 +716,158 @@ public class OpenBookProcedure {
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
 							return new EBMistGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SandStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSand");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSandGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SpeedStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSpeed");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSpeedGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(PoisonStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBPoison");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBPoisonGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MagnetStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMagnet");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMagnetGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MushroomsStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMushrooms");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMushroomsGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MercuryStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMercury");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMercuryGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MusicStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMusic");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMusicGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(PlagueStoneItem.block)) : false) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBPlague");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBPlagueGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

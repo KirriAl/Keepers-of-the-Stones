@@ -4,11 +4,19 @@ package power.keepeersofthestones.gui;
 import power.keepeersofthestones.procedures.TimeGetProcedure;
 import power.keepeersofthestones.procedures.TeleportationGetProcedure;
 import power.keepeersofthestones.procedures.TechnologyGetProcedure;
+import power.keepeersofthestones.procedures.SpeedGetProcedure;
 import power.keepeersofthestones.procedures.SpaceGetProcedure;
+import power.keepeersofthestones.procedures.SandGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPageGUIChoiceStonesProcedure;
+import power.keepeersofthestones.procedures.PoisonGetProcedure;
+import power.keepeersofthestones.procedures.PlagueGetProcedure;
 import power.keepeersofthestones.procedures.NextToPage3Procedure;
+import power.keepeersofthestones.procedures.MusicGetProcedure;
+import power.keepeersofthestones.procedures.MushroomsGetProcedure;
 import power.keepeersofthestones.procedures.MoonGetProcedure;
 import power.keepeersofthestones.procedures.MistGetProcedure;
+import power.keepeersofthestones.procedures.MercuryGetProcedure;
+import power.keepeersofthestones.procedures.MagnetGetProcedure;
 import power.keepeersofthestones.procedures.ExplosionGetProcedure;
 import power.keepeersofthestones.procedures.DestructionGetProcedure;
 import power.keepeersofthestones.procedures.CreationGetProcedure;
@@ -49,7 +57,7 @@ public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public ChoiseMagicStonesPage2Gui(PowerModElements instance) {
-		super(instance, 450);
+		super(instance, 443);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -263,12 +271,60 @@ public class ChoiseMagicStonesPage2Gui extends PowerModElements.ModElement {
 					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
+		if (buttonID == 11) {
+
+			SandGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 12) {
+
+			SpeedGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
 		if (buttonID == 13) {
 
 			PreviousPageGUIChoiceStonesProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 14) {
+
+			PoisonGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 15) {
+
+			MagnetGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 16) {
+
+			MushroomsGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 17) {
+
+			MercuryGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 18) {
+
+			MusicGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 19) {
+
+			PlagueGetProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 		if (buttonID == 21) {
 

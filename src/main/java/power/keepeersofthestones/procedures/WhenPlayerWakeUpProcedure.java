@@ -7,14 +7,21 @@ import power.keepeersofthestones.potion.RechargeTimeStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTeleportationStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeTechnologyStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSunStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeSpeedStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeSoundStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeShadowStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeSandStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeRainStonePotionEffect;
+import power.keepeersofthestones.potion.RechargePoisonStonePotionEffect;
+import power.keepeersofthestones.potion.RechargePlagueStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeOceanStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeMusicStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeMushroomsStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMoonStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMistStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMetalStonePotionEffect;
+import power.keepeersofthestones.potion.RechargeMercuryStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeMagnetStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeLightningStonePotionEffect;
 import power.keepeersofthestones.potion.RechargeLightStonePotionEffect;
@@ -168,6 +175,27 @@ public class WhenPlayerWakeUpProcedure {
 		}
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).removePotionEffect(RechargeMistStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargeSandStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargeSpeedStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargePoisonStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargeMushroomsStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargeMercuryStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargeMusicStonePotionEffect.potion);
+		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(RechargePlagueStonePotionEffect.potion);
 		}
 	}
 }

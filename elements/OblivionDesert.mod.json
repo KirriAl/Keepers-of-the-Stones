@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "biome",
   "definition": {
     "name": "Oblivion Desert",
@@ -116,8 +116,8 @@
         "entity": {
           "value": "EntityGhast"
         },
-        "minGroup": 1,
-        "maxGroup": 2,
+        "minGroup": 4,
+        "maxGroup": 4,
         "weight": 15,
         "spawnType": "monster"
       },
@@ -125,7 +125,7 @@
         "entity": {
           "value": "EntityEndermite"
         },
-        "minGroup": 2,
+        "minGroup": 4,
         "maxGroup": 6,
         "weight": 10,
         "spawnType": "monster"
@@ -134,8 +134,8 @@
         "entity": {
           "value": "EntityCreeper"
         },
-        "minGroup": 1,
-        "maxGroup": 1,
+        "minGroup": 4,
+        "maxGroup": 2,
         "weight": 15,
         "spawnType": "monster"
       }

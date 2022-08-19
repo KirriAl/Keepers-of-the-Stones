@@ -7,14 +7,22 @@ import power.keepeersofthestones.potion.TimeMasterEffectPotionEffect;
 import power.keepeersofthestones.potion.TeleportationMasterPotionEffect;
 import power.keepeersofthestones.potion.TechnologyMasterPotionEffect;
 import power.keepeersofthestones.potion.SunMasterPotionEffect;
+import power.keepeersofthestones.potion.SpeedMasterPotionEffect;
 import power.keepeersofthestones.potion.SpaceMasterPotionEffect;
 import power.keepeersofthestones.potion.SoundMasterPotionEffect;
 import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
+import power.keepeersofthestones.potion.SandMasterPotionEffect;
 import power.keepeersofthestones.potion.RainMasterPotionEffect;
+import power.keepeersofthestones.potion.PoisonMasterPotionEffect;
+import power.keepeersofthestones.potion.PlagueMasterPotionEffect;
 import power.keepeersofthestones.potion.OceanMasterPotionEffect;
+import power.keepeersofthestones.potion.MusicMasterPotionEffect;
+import power.keepeersofthestones.potion.MushroomsMasterPotionEffect;
 import power.keepeersofthestones.potion.MoonMasterPotionEffect;
 import power.keepeersofthestones.potion.MistMasterPotionEffect;
 import power.keepeersofthestones.potion.MetalMasterPotionEffect;
+import power.keepeersofthestones.potion.MercuryMasterPotionEffect;
+import power.keepeersofthestones.potion.MagnetMasterPotionEffect;
 import power.keepeersofthestones.potion.LightningMasterPotionEffect;
 import power.keepeersofthestones.potion.LightMasterPotionEffect;
 import power.keepeersofthestones.potion.LavaMasterPotionEffect;
@@ -29,6 +37,7 @@ import power.keepeersofthestones.potion.BloodMasterPotionEffect;
 import power.keepeersofthestones.potion.AnimalsMasterPotionEffect;
 import power.keepeersofthestones.potion.AirMasterPotionEffect;
 import power.keepeersofthestones.item.ForcereplicationItem;
+import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.potion.EffectInstance;
@@ -55,19 +64,9 @@ public class ForceReplicationUseProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == FireMasterPotionEffect.potion)
-							return true;
-					}
-				}
-				return false;
-			}
-		}.check(entity)) {
-			if (!(new Object() {
+		if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new PowerModVariables.PlayerVariables())).battery) {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -78,25 +77,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(FireMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == AirMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == FireMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(FireMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -107,25 +106,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(AirMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == WaterMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == AirMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(AirMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -136,25 +135,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(WaterMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EarthMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == WaterMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(WaterMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -165,25 +164,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(EarthMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EnergyMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == EarthMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(EarthMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -194,25 +193,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(EnergyMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == IceMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == EnergyMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(EnergyMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -223,25 +222,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(IceMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == LightningMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == IceMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(IceMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -252,25 +251,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(LightningMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == SoundMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == LightningMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(LightningMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -281,25 +280,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(SoundMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == CrystalMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == SoundMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(SoundMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -310,25 +309,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(CrystalMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == LavaMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == CrystalMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(CrystalMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -339,25 +338,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(LavaMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == RainMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == LavaMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(LavaMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -368,25 +367,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(RainMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == TornadoMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == RainMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(RainMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -397,25 +396,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(TornadoMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == OceanMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == TornadoMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(TornadoMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -426,25 +425,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(OceanMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == GreeneryMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == OceanMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(OceanMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -455,25 +454,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(GreeneryMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == AnimalsMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == GreeneryMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(GreeneryMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -484,25 +483,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(AnimalsMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == MetalMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == AnimalsMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(AnimalsMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -513,25 +512,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(MetalMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == LightMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == MetalMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(MetalMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -542,25 +541,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(LightMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == ShadowMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == LightMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(LightMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -571,25 +570,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(ShadowMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == VacuumMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == ShadowMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(ShadowMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -600,25 +599,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(VacuumMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == SunMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == VacuumMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(VacuumMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -629,25 +628,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(SunMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == MoonMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == SunMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(SunMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -658,25 +657,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(MoonMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == SpaceMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == MoonMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(MoonMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -687,25 +686,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(SpaceMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == BloodMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == SpaceMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(SpaceMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -716,25 +715,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(BloodMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == TechnologyMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == BloodMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(BloodMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -745,25 +744,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(TechnologyMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == TimeMasterEffectPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == TechnologyMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(TechnologyMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -774,25 +773,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(TimeMasterEffectPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == TeleportationMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == TimeMasterEffectPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(TimeMasterEffectPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -803,25 +802,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(TeleportationMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == ExplosionMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == TeleportationMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(TeleportationMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -832,25 +831,25 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(ExplosionMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
-			}
-		}
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == MistMasterPotionEffect.potion)
-							return true;
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == ExplosionMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
 					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(ExplosionMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
 				}
-				return false;
 			}
-		}.check(entity)) {
-			if (!(new Object() {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -861,20 +860,266 @@ public class ForceReplicationUseProcedure {
 					}
 					return false;
 				}
-			}.check(sourceentity))) {
-				if (sourceentity instanceof LivingEntity)
-					((LivingEntity) sourceentity)
-							.addPotionEffect(new EffectInstance(MistMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == MistMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(MistMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
 			}
-		}
-		if (!((sourceentity instanceof PlayerEntity)
-				? ((PlayerEntity) sourceentity).inventory.hasItemStack(new ItemStack(ForcereplicationItem.block))
-				: false)) {
-			{
-				Entity _ent = sourceentity;
-				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"give @s power:force_replication{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == SandMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == SandMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(SandMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == SpeedMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == SpeedMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(SpeedMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == PoisonMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == PoisonMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(PoisonMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == MagnetMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == MagnetMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(MagnetMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == MushroomsMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == MushroomsMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(MushroomsMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == MercuryMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == MercuryMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(MercuryMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == MusicMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == MusicMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(MusicMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == PlagueMasterPotionEffect.potion)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == PlagueMasterPotionEffect.potion)
+									return true;
+							}
+						}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.addPotionEffect(new EffectInstance(PlagueMasterPotionEffect.potion, (int) 6000, (int) 0, (false), (false)));
+				}
+			}
+			if (!((sourceentity instanceof PlayerEntity)
+					? ((PlayerEntity) sourceentity).inventory.hasItemStack(new ItemStack(ForcereplicationItem.block))
+					: false)) {
+				{
+					Entity _ent = sourceentity;
+					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+						_ent.world.getServer().getCommandManager().handleCommand(
+								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+								"give @s power:force_replication{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+					}
 				}
 			}
 		}

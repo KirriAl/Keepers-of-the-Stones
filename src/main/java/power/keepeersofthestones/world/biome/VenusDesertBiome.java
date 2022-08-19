@@ -39,7 +39,7 @@ public class VenusDesertBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public VenusDesertBiome(PowerModElements instance) {
-		super(instance, 427);
+		super(instance, 420);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
@@ -50,8 +50,8 @@ public class VenusDesertBiome extends PowerModElements.ModElement {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-26368).setWaterColor(-26368).setWaterFogColor(-26368)
 						.withSkyColor(-26368).withFoliageColor(-26368).withGrassColor(-26368).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
-						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(
-								new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(), Blocks.AIR.getDefaultState(), Blocks.AIR.getDefaultState())));
+						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(),
+								Blocks.COARSE_DIRT.getDefaultState(), Blocks.COARSE_DIRT.getDefaultState())));
 				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
 				DefaultBiomeFeatures.withEmeraldOre(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();

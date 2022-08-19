@@ -16,7 +16,7 @@ public class BoStaffItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BoStaffItem(PowerModElements instance) {
-		super(instance, 658);
+		super(instance, 649);
 	}
 
 	@Override

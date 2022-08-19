@@ -32,7 +32,7 @@ public class IceBatteryItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public IceBatteryItem(PowerModElements instance) {
-		super(instance, 52);
+		super(instance, 76);
 	}
 
 	@Override

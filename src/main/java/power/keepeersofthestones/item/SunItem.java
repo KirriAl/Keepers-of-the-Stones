@@ -29,7 +29,7 @@ public class SunItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public SunItem(PowerModElements instance) {
-		super(instance, 469);
+		super(instance, 462);
 	}
 
 	@Override

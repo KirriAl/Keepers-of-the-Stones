@@ -27,7 +27,7 @@ public class PointItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public PointItem(PowerModElements instance) {
-		super(instance, 710);
+		super(instance, 697);
 	}
 
 	@Override

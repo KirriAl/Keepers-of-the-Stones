@@ -28,7 +28,7 @@ public class SpaceStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SpaceStoneItem(PowerModElements instance) {
-		super(instance, 28);
+		super(instance, 35);
 	}
 
 	@Override

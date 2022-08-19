@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "biome",
   "definition": {
     "name": "Venus Desert",
@@ -7,7 +7,7 @@
       "value": "Blocks.SAND#0"
     },
     "undergroundBlock": {
-      "value": "Blocks.DRIPSTONE_BLOCK"
+      "value": "Blocks.DIRT#1"
     },
     "underwaterBlock": {
       "value": ""

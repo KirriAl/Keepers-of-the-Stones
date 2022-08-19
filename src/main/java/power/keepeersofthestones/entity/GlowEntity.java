@@ -62,7 +62,7 @@ public class GlowEntity extends PowerModElements.ModElement {
 			.build("glow").setRegistryName("glow");
 
 	public GlowEntity(PowerModElements instance) {
-		super(instance, 334);
+		super(instance, 327);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new GlowRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
@@ -84,6 +84,7 @@ public class GlowEntity extends PowerModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 20);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 10);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1.5);
 			event.put(entity, ammma.create());
 		}

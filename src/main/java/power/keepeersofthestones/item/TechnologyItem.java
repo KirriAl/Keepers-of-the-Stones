@@ -29,7 +29,7 @@ public class TechnologyItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public TechnologyItem(PowerModElements instance) {
-		super(instance, 575);
+		super(instance, 566);
 	}
 
 	@Override

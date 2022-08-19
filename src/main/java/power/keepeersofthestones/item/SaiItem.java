@@ -16,7 +16,7 @@ public class SaiItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public SaiItem(PowerModElements instance) {
-		super(instance, 325);
+		super(instance, 318);
 	}
 
 	@Override

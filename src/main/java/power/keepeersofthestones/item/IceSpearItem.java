@@ -16,7 +16,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
@@ -55,10 +54,10 @@ public class IceSpearItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("projectile_ice_spear").setRegistryName("projectile_ice_spear");
+			.size(0.5f, 0.5f)).build("entitybulletice_spear").setRegistryName("entitybulletice_spear");
 
 	public IceSpearItem(PowerModElements instance) {
-		super(instance, 644);
+		super(instance, 635);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new IceSpearRenderer.ModelRegisterHandler());
 	}
 
@@ -157,30 +156,22 @@ public class IceSpearItem extends PowerModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return ItemStack.EMPTY;
+			return null;
 		}
 
 		@Override
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
-		}
-
-		@Override
-		public void onEntityHit(EntityRayTraceResult entityRayTraceResult) {
-			super.onEntityHit(entityRayTraceResult);
-			Entity entity = entityRayTraceResult.getEntity();
 			Entity sourceentity = this.func_234616_v_();
-			Entity immediatesourceentity = this;
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			World world = this.world;
+			Entity imediatesourceentity = this;
 
-			IceBallInEntityProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			IceBallInEntityProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -191,7 +182,7 @@ public class IceSpearItem extends PowerModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
-			Entity immediatesourceentity = this;
+			Entity imediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}
@@ -200,7 +191,7 @@ public class IceSpearItem extends PowerModElements.ModElement {
 
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
-		entityarrow.shoot(entity.getLook(1).x, entity.getLook(1).y, entity.getLook(1).z, power * 2, 0);
+		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setIsCritical(false);
 		entityarrow.setDamage(damage);

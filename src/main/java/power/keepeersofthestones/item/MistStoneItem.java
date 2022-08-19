@@ -28,7 +28,7 @@ public class MistStoneItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public MistStoneItem(PowerModElements instance) {
-		super(instance, 25);
+		super(instance, 26);
 	}
 
 	@Override

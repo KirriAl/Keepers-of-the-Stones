@@ -25,7 +25,7 @@ public class BloodReaperItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public BloodReaperItem(PowerModElements instance) {
-		super(instance, 503);
+		super(instance, 496);
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class BloodReaperItem extends PowerModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -3f, new Item.Properties().group(null).isImmuneToFire()) {
+		}, 1, -2.7f, new Item.Properties().group(null).isImmuneToFire()) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

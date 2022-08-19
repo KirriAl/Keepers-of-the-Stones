@@ -39,7 +39,7 @@ public class CretaceousTaigaBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public CretaceousTaigaBiome(PowerModElements instance) {
-		super(instance, 748);
+		super(instance, 735);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
@@ -56,10 +56,10 @@ public class CretaceousTaigaBiome extends PowerModElements.ModElement {
 						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.SPRUCE_LOG.getDefaultState()),
 								new SimpleBlockStateProvider(Blocks.SPRUCE_LEAVES.getDefaultState()),
 								new MegaPineFoliagePlacer(FeatureSpread.func_242252_a(0), FeatureSpread.func_242252_a(0),
-										FeatureSpread.func_242253_a(13, 17)),
+										FeatureSpread.func_242253_a(13, 4)),
 								new GiantTrunkPlacer(13, 2, 14), new TwoLayerFeature(1, 1, 2))).build())
 						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
+						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.GRASS_PATCH_CONFIG).withPlacement(Features.Placements.PATCH_PLACEMENT)
 								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 4))));

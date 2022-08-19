@@ -29,7 +29,7 @@ public class ExplodeItem extends PowerModElements.ModElement {
 	public static final Item boots = null;
 
 	public ExplodeItem(PowerModElements instance) {
-		super(instance, 638);
+		super(instance, 629);
 	}
 
 	@Override

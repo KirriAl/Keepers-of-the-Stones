@@ -34,7 +34,7 @@ public class TriassicPlainsBiome extends PowerModElements.ModElement {
 	public static Biome biome;
 
 	public TriassicPlainsBiome(PowerModElements instance) {
-		super(instance, 745);
+		super(instance, 732);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 
@@ -60,7 +60,7 @@ public class TriassicPlainsBiome extends PowerModElements.ModElement {
 				DefaultBiomeFeatures.withFossils(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
 				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PIG, 20, 1, 1));
-				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(RaptorEntity.entity, 20, 2, 4));
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(RaptorEntity.entity, 25, 4, 4));
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(0.1f).scale(0.1f)
 						.temperature(1.5f).downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();

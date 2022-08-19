@@ -32,7 +32,7 @@ public class LavaHammerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public LavaHammerItem(PowerModElements instance) {
-		super(instance, 276);
+		super(instance, 270);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class LavaHammerItem extends PowerModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 12f;
+				return 16f;
 			}
 
 			public int getHarvestLevel() {
@@ -61,7 +61,7 @@ public class LavaHammerItem extends PowerModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -3f, new Item.Properties().group(null).isImmuneToFire()) {
+		}, 1, -2.5f, new Item.Properties().group(null).isImmuneToFire()) {
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);

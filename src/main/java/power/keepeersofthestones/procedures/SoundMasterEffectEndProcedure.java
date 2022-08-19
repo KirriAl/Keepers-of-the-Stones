@@ -4,7 +4,7 @@ import power.keepeersofthestones.potion.RechargeSoundStonePotionEffect;
 import power.keepeersofthestones.item.SoundSwordItem;
 import power.keepeersofthestones.item.SoundStoneItem;
 import power.keepeersofthestones.item.SoundItem;
-import power.keepeersofthestones.item.SoundEmitateItem;
+import power.keepeersofthestones.item.SoundImitateItem;
 import power.keepeersofthestones.item.SoundBarrierItem;
 import power.keepeersofthestones.item.AcusticalExplodeItem;
 import power.keepeersofthestones.PowerModVariables;
@@ -94,7 +94,7 @@ public class SoundMasterEffectEndProcedure {
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(SoundEmitateItem.block);
+			ItemStack _stktoremove = new ItemStack(SoundImitateItem.block);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}

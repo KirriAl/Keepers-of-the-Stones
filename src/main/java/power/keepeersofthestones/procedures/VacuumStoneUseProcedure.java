@@ -50,6 +50,10 @@ public class VacuumStoneUseProcedure {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity)
 									.addPotionEffect(new EffectInstance(VacuumMasterPotionEffect.potion, (int) 24000, (int) 0, (false), (false)));
+					} else {
+						if (entity instanceof LivingEntity)
+							((LivingEntity) entity)
+									.addPotionEffect(new EffectInstance(VacuumMasterPotionEffect.potion, (int) 12000, (int) 0, (false), (false)));
 					}
 				}
 			}

@@ -1,11 +1,11 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.potion.RechargeMagnetStonePotionEffect;
+import power.keepeersofthestones.item.MagneticFishingRodItem;
+import power.keepeersofthestones.item.MagneticClawsItem;
 import power.keepeersofthestones.item.MagnetStoneItem;
 import power.keepeersofthestones.item.MagnetItem;
-import power.keepeersofthestones.item.MagicFireballItem;
-import power.keepeersofthestones.item.FireSwordItem;
-import power.keepeersofthestones.item.BurnItem;
+import power.keepeersofthestones.item.ElectromagneticPulseItem;
 import power.keepeersofthestones.PowerModVariables;
 import power.keepeersofthestones.PowerMod;
 
@@ -78,17 +78,17 @@ public class MagnetMasterEffectEndProcedure {
 			}
 		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(BurnItem.block);
+			ItemStack _stktoremove = new ItemStack(MagneticClawsItem.block);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(MagicFireballItem.block);
+			ItemStack _stktoremove = new ItemStack(MagneticFishingRodItem.block);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(FireSwordItem.block);
+			ItemStack _stktoremove = new ItemStack(ElectromagneticPulseItem.block);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
@@ -108,7 +108,7 @@ public class MagnetMasterEffectEndProcedure {
 					((PlayerEntity) entity).container.func_234641_j_());
 		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(MagnetItem.legs);
+			ItemStack _stktoremove = new ItemStack(MagnetItem.boots);
 			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 					((PlayerEntity) entity).container.func_234641_j_());
 		}

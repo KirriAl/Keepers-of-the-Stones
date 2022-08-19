@@ -25,7 +25,7 @@ public class TamerItem extends PowerModElements.ModElement {
 	public static final Item block = null;
 
 	public TamerItem(PowerModElements instance) {
-		super(instance, 307);
+		super(instance, 300);
 	}
 
 	@Override
