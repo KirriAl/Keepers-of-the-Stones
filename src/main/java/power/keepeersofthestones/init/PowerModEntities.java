@@ -9,15 +9,22 @@ import power.keepeersofthestones.entity.WaterFlowEntity;
 import power.keepeersofthestones.entity.VacuumWebEntity;
 import power.keepeersofthestones.entity.VacuumSpiralEntity;
 import power.keepeersofthestones.entity.TyrannosaurusRexEntity;
+import power.keepeersofthestones.entity.TransformSphereEntity;
+import power.keepeersofthestones.entity.ToxicCloudEntity;
 import power.keepeersofthestones.entity.TornadoEntityEntity;
 import power.keepeersofthestones.entity.TornadoCreateEntity;
 import power.keepeersofthestones.entity.TimeDilationEntity;
 import power.keepeersofthestones.entity.TigerClawEntity;
+import power.keepeersofthestones.entity.ThrowingHammerEntity;
 import power.keepeersofthestones.entity.SunExplodeEntity;
+import power.keepeersofthestones.entity.SporesEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
+import power.keepeersofthestones.entity.SmokeScreenEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
+import power.keepeersofthestones.entity.SandFlurryEntity;
+import power.keepeersofthestones.entity.RocketEntity;
 import power.keepeersofthestones.entity.RaptorEntity;
 import power.keepeersofthestones.entity.RainBowEntity;
 import power.keepeersofthestones.entity.PterodactylEntity;
@@ -25,8 +32,11 @@ import power.keepeersofthestones.entity.PortalBlastEntity;
 import power.keepeersofthestones.entity.PlesiosaurusEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
 import power.keepeersofthestones.entity.PieceOfEarthEntity;
+import power.keepeersofthestones.entity.MusketEntity;
 import power.keepeersofthestones.entity.MoonStonesEntity;
+import power.keepeersofthestones.entity.MercuryBallEntity;
 import power.keepeersofthestones.entity.MegawattEntity;
+import power.keepeersofthestones.entity.MassInfectionEntity;
 import power.keepeersofthestones.entity.MagicFireballEntity;
 import power.keepeersofthestones.entity.LavaBallEntity;
 import power.keepeersofthestones.entity.KunaiEntity;
@@ -36,10 +46,16 @@ import power.keepeersofthestones.entity.IceBallEntity;
 import power.keepeersofthestones.entity.GoldenCrossbowEntity;
 import power.keepeersofthestones.entity.GlowEntity;
 import power.keepeersofthestones.entity.FlashLightEntity;
+import power.keepeersofthestones.entity.FirebirdFeatherEntity;
 import power.keepeersofthestones.entity.ExplosiveFlowEntity;
 import power.keepeersofthestones.entity.EnergySphereEntity;
+import power.keepeersofthestones.entity.ElectromagneticPulseEntity;
+import power.keepeersofthestones.entity.EctoplasmAttackEntity;
+import power.keepeersofthestones.entity.DiscoBallEntity;
 import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
+import power.keepeersofthestones.entity.BoomerangEntity;
+import power.keepeersofthestones.entity.BlueFireballEntity;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 import power.keepeersofthestones.entity.BlackHeartEntity;
 import power.keepeersofthestones.entity.AmberStreaksEntity;
@@ -85,6 +101,9 @@ public class PowerModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PterodactylEntity::new)
 
 					.sized(1.2f, 2f));
+	public static final RegistryObject<EntityType<RocketEntity>> ROCKET = register("rocket",
+			EntityType.Builder.<RocketEntity>of(RocketEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(RocketEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MagicFireballEntity>> MAGIC_FIREBALL = register("projectile_magic_fireball",
 			EntityType.Builder.<MagicFireballEntity>of(MagicFireballEntity::new, MobCategory.MISC).setCustomClientFactory(MagicFireballEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -199,6 +218,55 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<KunaiEntity>> KUNAI = register("projectile_kunai",
 			EntityType.Builder.<KunaiEntity>of(KunaiEntity::new, MobCategory.MISC).setCustomClientFactory(KunaiEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SandFlurryEntity>> SAND_FLURRY = register("projectile_sand_flurry",
+			EntityType.Builder.<SandFlurryEntity>of(SandFlurryEntity::new, MobCategory.MISC).setCustomClientFactory(SandFlurryEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BoomerangEntity>> BOOMERANG = register("projectile_boomerang",
+			EntityType.Builder.<BoomerangEntity>of(BoomerangEntity::new, MobCategory.MISC).setCustomClientFactory(BoomerangEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ToxicCloudEntity>> TOXIC_CLOUD = register("projectile_toxic_cloud",
+			EntityType.Builder.<ToxicCloudEntity>of(ToxicCloudEntity::new, MobCategory.MISC).setCustomClientFactory(ToxicCloudEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ElectromagneticPulseEntity>> ELECTROMAGNETIC_PULSE = register("projectile_electromagnetic_pulse",
+			EntityType.Builder.<ElectromagneticPulseEntity>of(ElectromagneticPulseEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(ElectromagneticPulseEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SporesEntity>> SPORES = register("projectile_spores",
+			EntityType.Builder.<SporesEntity>of(SporesEntity::new, MobCategory.MISC).setCustomClientFactory(SporesEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MercuryBallEntity>> MERCURY_BALL = register("projectile_mercury_ball",
+			EntityType.Builder.<MercuryBallEntity>of(MercuryBallEntity::new, MobCategory.MISC).setCustomClientFactory(MercuryBallEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DiscoBallEntity>> DISCO_BALL = register("projectile_disco_ball",
+			EntityType.Builder.<DiscoBallEntity>of(DiscoBallEntity::new, MobCategory.MISC).setCustomClientFactory(DiscoBallEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MusketEntity>> MUSKET = register("projectile_musket",
+			EntityType.Builder.<MusketEntity>of(MusketEntity::new, MobCategory.MISC).setCustomClientFactory(MusketEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MassInfectionEntity>> MASS_INFECTION = register("projectile_mass_infection",
+			EntityType.Builder.<MassInfectionEntity>of(MassInfectionEntity::new, MobCategory.MISC).setCustomClientFactory(MassInfectionEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ThrowingHammerEntity>> THROWING_HAMMER = register("projectile_throwing_hammer",
+			EntityType.Builder.<ThrowingHammerEntity>of(ThrowingHammerEntity::new, MobCategory.MISC).setCustomClientFactory(ThrowingHammerEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BlueFireballEntity>> BLUE_FIREBALL = register("projectile_blue_fireball",
+			EntityType.Builder.<BlueFireballEntity>of(BlueFireballEntity::new, MobCategory.MISC).setCustomClientFactory(BlueFireballEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EctoplasmAttackEntity>> ECTOPLASM_ATTACK = register("projectile_ectoplasm_attack",
+			EntityType.Builder.<EctoplasmAttackEntity>of(EctoplasmAttackEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(EctoplasmAttackEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FirebirdFeatherEntity>> FIREBIRD_FEATHER = register("projectile_firebird_feather",
+			EntityType.Builder.<FirebirdFeatherEntity>of(FirebirdFeatherEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(FirebirdFeatherEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SmokeScreenEntity>> SMOKE_SCREEN = register("projectile_smoke_screen",
+			EntityType.Builder.<SmokeScreenEntity>of(SmokeScreenEntity::new, MobCategory.MISC).setCustomClientFactory(SmokeScreenEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TransformSphereEntity>> TRANSFORM_SPHERE = register("projectile_transform_sphere",
+			EntityType.Builder.<TransformSphereEntity>of(TransformSphereEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(TransformSphereEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -212,6 +280,7 @@ public class PowerModEntities {
 			RaptorEntity.init();
 			PlesiosaurusEntity.init();
 			PterodactylEntity.init();
+			RocketEntity.init();
 			GlowEntity.init();
 			ShadowEntity.init();
 		});
@@ -224,6 +293,7 @@ public class PowerModEntities {
 		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
 		event.put(PLESIOSAURUS.get(), PlesiosaurusEntity.createAttributes().build());
 		event.put(PTERODACTYL.get(), PterodactylEntity.createAttributes().build());
+		event.put(ROCKET.get(), RocketEntity.createAttributes().build());
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 	}

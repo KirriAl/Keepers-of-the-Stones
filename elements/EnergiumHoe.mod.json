@@ -1,0 +1,34 @@
+{
+  "_fv": 33,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "energium_hoe",
+    "customModelName": "Normal",
+    "name": "Energium Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Energium"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 2,
+    "efficiency": 12.0,
+    "attackSpeed": 1.0,
+    "enchantability": 14,
+    "damageVsEntity": 2.0,
+    "usageCount": 650,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:EnergiumIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "EnergiumBlockUse"
+    }
+  }
+}

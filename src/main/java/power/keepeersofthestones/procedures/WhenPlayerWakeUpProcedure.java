@@ -90,5 +90,31 @@ public class WhenPlayerWakeUpProcedure {
 			_entity.removeEffect(PowerModMobEffects.RECHARGE_MAGNET_STONE.get());
 		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(PowerModMobEffects.RECHARGE_MIST_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_SAND_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_SPEED_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_POISON_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_MUSHROOMS_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_MERCURY_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_MUSIC_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_PLAGUE_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_GRAVITY_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_BLUE_FLAME_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_SPIRIT_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_AETHER_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_SMOKE_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RECHARGE_FORM_STONE.get());
 	}
 }

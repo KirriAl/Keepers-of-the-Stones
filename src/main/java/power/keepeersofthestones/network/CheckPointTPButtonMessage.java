@@ -2,8 +2,12 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
-import power.keepeersofthestones.procedures.TimeCheckpointProcedure;
-import power.keepeersofthestones.procedures.ReturnCheckpointProcedure;
+import power.keepeersofthestones.procedures.ThirdPointTPProcedure;
+import power.keepeersofthestones.procedures.ThirdPointSetProcedure;
+import power.keepeersofthestones.procedures.SecondPointTPProcedure;
+import power.keepeersofthestones.procedures.SecondPointSetProcedure;
+import power.keepeersofthestones.procedures.FirstPointTPProcedure;
+import power.keepeersofthestones.procedures.FirstPointSetProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -65,11 +69,27 @@ public class CheckPointTPButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			ReturnCheckpointProcedure.execute(entity);
+			FirstPointTPProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			TimeCheckpointProcedure.execute(x, y, z, entity);
+			SecondPointTPProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			ThirdPointTPProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			FirstPointSetProcedure.execute(x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			SecondPointSetProcedure.execute(x, y, z, entity);
+		}
+		if (buttonID == 5) {
+
+			ThirdPointSetProcedure.execute(x, y, z, entity);
 		}
 	}
 

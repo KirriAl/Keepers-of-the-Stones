@@ -53,6 +53,10 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/blue_flame_master.png"));
+		this.blit(ms, this.leftPos + 19, this.topPos + 33, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -86,53 +90,43 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, new TextComponent("Spirit"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(0, x, y, z));
+				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 141, 56, 20, new TextComponent("  "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TextComponent("Form"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, new TextComponent("Aether"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(3, x, y, z));
+				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20, new TextComponent("Mind"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 60, 56, 20, new TextComponent("G. Dust"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20, new TextComponent("Blue Flame"), e -> {
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, new TextComponent("Smoke"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(9, x, y, z));
+				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 9, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 10, this.topPos + 168, 93, 20, new TextComponent("Previous page"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(13, x, y, z));
-				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(10, x, y, z));
+				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20, new TextComponent("Next page"), e -> {
 		}));
 	}
 }

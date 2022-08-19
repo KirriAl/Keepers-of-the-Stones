@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 33,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,12 +13,15 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Spirit",
+          "onClick": {
+            "name": "SpiritGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Spirit",
           "x": 51,
-          "y": 53
+          "y": 80
         }
       },
       {
@@ -48,32 +51,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Form",
           "width": 56,
           "height": 20,
-          "name": " ",
-          "x": 51,
-          "y": 134
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 51,
-          "y": 80
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
+          "name": "Form",
           "x": 51,
           "y": 161
         }
@@ -81,10 +62,24 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Aether",
+          "onClick": {
+            "name": "AetherGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Aether",
+          "x": 51,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mind",
+          "width": 56,
+          "height": 20,
+          "name": "Mind",
           "x": 141,
           "y": 53
         }
@@ -92,12 +87,23 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "G. Dust",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "G. Dust",
           "x": 141,
           "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Blue Flame",
+          "width": 56,
+          "height": 20,
+          "name": "Blue Flame",
+          "x": 51,
+          "y": 53
         }
       },
       {
@@ -125,45 +131,15 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Smoke",
+          "onClick": {
+            "name": "SmokeGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Smoke",
           "x": 51,
-          "y": 107
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 53
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 80
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 107
+          "y": 134
         }
       },
       {
@@ -181,94 +157,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 134
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 240,
-          "y": 161
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 53
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 80
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 107
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 134
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 339,
-          "y": 161
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "Next page",
-          "width": 72,
-          "height": 20,
-          "name": "Next page",
-          "x": 330,
-          "y": 188
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "3/3",
@@ -279,6 +167,16 @@
           "name": "3/3",
           "x": 24,
           "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blue_flame_master.png",
+          "use1Xscale": false,
+          "name": "blue_flame_master.png",
+          "x": 33,
+          "y": 53
         }
       }
     ],

@@ -1,12 +1,12 @@
 {
-  "_fv": 29,
+  "_fv": 33,
   "_type": "musicdisc",
   "definition": {
     "texture": "elemental_music_disc",
     "name": "Music Disc",
     "description": "Elements",
     "creativeTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Artifacts"
     },
     "music": {
       "value": "CUSTOM:powerful_stone"

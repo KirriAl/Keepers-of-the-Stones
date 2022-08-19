@@ -1,0 +1,105 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Choose where to fly",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Choose where to fly",
+          "x": 159,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Moon",
+          "onClick": {
+            "name": "FlyOnMoon"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Moon",
+          "x": 96,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mars",
+          "onClick": {
+            "name": "FlyOnMars"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Mars",
+          "x": 96,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Venus",
+          "onClick": {
+            "name": "FlyOnVenus"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Venus",
+          "x": 96,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Enceladus",
+          "onClick": {
+            "name": "FlyOnEnceladus"
+          },
+          "width": 72,
+          "height": 20,
+          "name": "Enceladus",
+          "x": 96,
+          "y": 152
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Back to Earth",
+          "onClick": {
+            "name": "FlyOnEarth"
+          },
+          "width": 92,
+          "height": 20,
+          "name": "Back to Earth",
+          "x": 258,
+          "y": 188
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

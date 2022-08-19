@@ -61,15 +61,11 @@ public class JoinPlayerInTheWorldProcedure {
 				}
 			}
 		}
-		if (PowerModVariables.MapVariables.get(world).cosmos_stone) {
-			PowerModVariables.MapVariables.get(world).cosmos_stone = false;
-			PowerModVariables.MapVariables.get(world).syncData(world);
-			PowerModVariables.WorldVariables.get(world).space_stone = true;
-			PowerModVariables.WorldVariables.get(world).syncData(world);
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(
-						new TextComponent("Attention! The space stone has had its identifier changed, use the /give command to give it back."),
-						(false));
+		{
+			Entity _ent = entity;
+			if (!_ent.level.isClientSide() && _ent.getServer() != null)
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						"tellraw @s [\"\",{\"text\":\"Full information about mod can be found in our wiki at the link: \"},{\"text\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\"}}]");
 		}
 	}
 }

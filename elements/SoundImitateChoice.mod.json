@@ -1,9 +1,9 @@
 {
-  "_fv": 29,
+  "_fv": 33,
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 220,
+    "width": 176,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:power.sound_emitate.label.text>",
+          "text": "Select the mob for emitate sound",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:power.sound_emitate.label.text>",
+          "name": "Select the mob for emitate sound",
           "x": 132,
           "y": 44
         }
@@ -26,13 +26,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.sound_emitate.creeper.text>",
+          "text": "Creeper",
           "onClick": {
             "name": "EmitateCreeper"
           },
           "width": 60,
           "height": 20,
-          "name": "<t:power.sound_emitate.creeper.text>",
+          "name": "Creeper",
           "x": 177,
           "y": 62
         }
@@ -40,13 +40,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.sound_emitate.zombie.text>",
+          "text": "Zombie",
           "onClick": {
             "name": "EmitateZombie"
           },
           "width": 55,
           "height": 20,
-          "name": "<t:power.sound_emitate.zombie.text>",
+          "name": "Zombie",
           "x": 177,
           "y": 116
         }
@@ -54,13 +54,13 @@
       {
         "type": "button",
         "data": {
-          "text": "<t:power.sound_emitate.skeleton.text>",
+          "text": "Skeleton",
           "onClick": {
             "name": "EmitateSkeleton"
           },
           "width": 65,
           "height": 20,
-          "name": "<t:power.sound_emitate.skeleton.text>",
+          "name": "Skeleton",
           "x": 177,
           "y": 89
         }

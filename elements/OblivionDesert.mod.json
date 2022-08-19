@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 33,
   "_type": "biome",
   "definition": {
     "name": "Oblivion Desert",
@@ -55,6 +55,20 @@
     "temperature": 2.0,
     "baseHeight": 0.1,
     "heightVariation": 0.2,
+    "usePureMultiNoise": false,
+    "minTemperature": 0.0,
+    "maxTemperature": 0.0,
+    "minHumidity": 0.0,
+    "maxHumidity": 0.0,
+    "minContinentalness": 0.0,
+    "maxContinentalness": 0.0,
+    "minWeirdness": 0.0,
+    "maxWeirdness": 0.0,
+    "minErosion": 0.0,
+    "maxErosion": 0.0,
+    "minDepth": 0.0,
+    "maxDepth": 0.0,
+    "offset": 0.0,
     "spawnBiome": false,
     "spawnBiomeNether": false,
     "spawnInCaves": false,
@@ -116,8 +130,8 @@
         "entity": {
           "value": "EntityGhast"
         },
-        "minGroup": 1,
-        "maxGroup": 2,
+        "minGroup": 4,
+        "maxGroup": 4,
         "weight": 15,
         "spawnType": "monster"
       },
@@ -125,7 +139,7 @@
         "entity": {
           "value": "EntityEndermite"
         },
-        "minGroup": 2,
+        "minGroup": 4,
         "maxGroup": 6,
         "weight": 10,
         "spawnType": "monster"
@@ -134,8 +148,8 @@
         "entity": {
           "value": "EntityCreeper"
         },
-        "minGroup": 1,
-        "maxGroup": 1,
+        "minGroup": 4,
+        "maxGroup": 2,
         "weight": 15,
         "spawnType": "monster"
       }

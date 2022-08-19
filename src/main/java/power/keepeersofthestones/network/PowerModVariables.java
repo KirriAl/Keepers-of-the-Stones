@@ -117,7 +117,30 @@ public class PowerModVariables {
 			clone.magnet = original.magnet;
 			clone.mist = original.mist;
 			clone.power_level = original.power_level;
-			clone.water_power = original.water_power;
+			clone.sand = original.sand;
+			clone.speed = original.speed;
+			clone.c1x = original.c1x;
+			clone.c1y = original.c1y;
+			clone.c1z = original.c1z;
+			clone.c2x = original.c2x;
+			clone.c2y = original.c2y;
+			clone.c2z = original.c2z;
+			clone.c3x = original.c3x;
+			clone.c3y = original.c3y;
+			clone.c3z = original.c3z;
+			clone.poison = original.poison;
+			clone.mushrooms = original.mushrooms;
+			clone.mercury = original.mercury;
+			clone.music = original.music;
+			clone.keeper = original.keeper;
+			clone.plague = original.plague;
+			clone.gravity = original.gravity;
+			clone.without_stone = original.without_stone;
+			clone.blue_flame = original.blue_flame;
+			clone.spirit = original.spirit;
+			clone.aether = original.aether;
+			clone.smoke = original.smoke;
+			clone.form = original.form;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -125,7 +148,12 @@ public class PowerModVariables {
 				clone.recharge_spell_blood = original.recharge_spell_blood;
 				clone.recharge_spell_energy = original.recharge_spell_energy;
 				clone.fog = original.fog;
-				clone.recharge_spell_mist = original.recharge_spell_mist;
+				clone.recharge_spell_blue_flame = original.recharge_spell_blue_flame;
+				clone.turbospeed = original.turbospeed;
+				clone.recharge_spell_plague = original.recharge_spell_plague;
+				clone.recharge_spell_gravity_boost = original.recharge_spell_gravity_boost;
+				clone.recharge_spell_gravity_red = original.recharge_spell_gravity_red;
+				clone.recharge_spell_time = original.recharge_spell_time;
 			}
 		}
 
@@ -156,6 +184,40 @@ public class PowerModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
+
+		public static WorldVariables load(CompoundTag tag) {
+			WorldVariables data = new WorldVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level level && !level.isClientSide())
+				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
+		}
+
+		static WorldVariables clientSide = new WorldVariables();
+
+		public static WorldVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevel level) {
+				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class MapVariables extends SavedData {
+		public static final String DATA_NAME = "power_mapvars";
 		public boolean fire_stone = false;
 		public boolean air_stone = false;
 		public boolean water_stone = false;
@@ -181,10 +243,38 @@ public class PowerModVariables {
 		public boolean destruction_stone = false;
 		public boolean space_stone = false;
 		public boolean blood_stone = false;
+		public boolean technology_stone = false;
 		public boolean time_stone = false;
+		public boolean teleportation_stone = false;
+		public boolean blue_portal = false;
+		public boolean orange_portal = false;
+		public double bposx = 0;
+		public double bposy = 0;
+		public double bposz = 0;
+		public double oposx = 0;
+		public double oposy = 0.0;
+		public double oposz = 0;
+		public boolean explosion_stone = false;
+		public boolean amber_stone = false;
+		public boolean cosmos_stone = false;
+		public boolean magnet_stone = false;
+		public boolean mist_stone = false;
+		public boolean sand_stone = false;
+		public boolean speed_stone = false;
+		public boolean poison_stone = false;
+		public boolean mushrooms_stone = false;
+		public boolean mercury_stone = false;
+		public boolean music_stone = false;
+		public boolean plague_stone = false;
+		public boolean gravity_stone = false;
+		public boolean blue_flame_stone = false;
+		public boolean spirit_stone = false;
+		public boolean aether_stone = false;
+		public boolean smoke_stone = false;
+		public boolean form_stone = false;
 
-		public static WorldVariables load(CompoundTag tag) {
-			WorldVariables data = new WorldVariables();
+		public static MapVariables load(CompoundTag tag) {
+			MapVariables data = new MapVariables();
 			data.read(tag);
 			return data;
 		}
@@ -215,7 +305,35 @@ public class PowerModVariables {
 			destruction_stone = nbt.getBoolean("destruction_stone");
 			space_stone = nbt.getBoolean("space_stone");
 			blood_stone = nbt.getBoolean("blood_stone");
+			technology_stone = nbt.getBoolean("technology_stone");
 			time_stone = nbt.getBoolean("time_stone");
+			teleportation_stone = nbt.getBoolean("teleportation_stone");
+			blue_portal = nbt.getBoolean("blue_portal");
+			orange_portal = nbt.getBoolean("orange_portal");
+			bposx = nbt.getDouble("bposx");
+			bposy = nbt.getDouble("bposy");
+			bposz = nbt.getDouble("bposz");
+			oposx = nbt.getDouble("oposx");
+			oposy = nbt.getDouble("oposy");
+			oposz = nbt.getDouble("oposz");
+			explosion_stone = nbt.getBoolean("explosion_stone");
+			amber_stone = nbt.getBoolean("amber_stone");
+			cosmos_stone = nbt.getBoolean("cosmos_stone");
+			magnet_stone = nbt.getBoolean("magnet_stone");
+			mist_stone = nbt.getBoolean("mist_stone");
+			sand_stone = nbt.getBoolean("sand_stone");
+			speed_stone = nbt.getBoolean("speed_stone");
+			poison_stone = nbt.getBoolean("poison_stone");
+			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
+			mercury_stone = nbt.getBoolean("mercury_stone");
+			music_stone = nbt.getBoolean("music_stone");
+			plague_stone = nbt.getBoolean("plague_stone");
+			gravity_stone = nbt.getBoolean("gravity_stone");
+			blue_flame_stone = nbt.getBoolean("blue_flame_stone");
+			spirit_stone = nbt.getBoolean("spirit_stone");
+			aether_stone = nbt.getBoolean("aether_stone");
+			smoke_stone = nbt.getBoolean("smoke_stone");
+			form_stone = nbt.getBoolean("form_stone");
 		}
 
 		@Override
@@ -245,72 +363,8 @@ public class PowerModVariables {
 			nbt.putBoolean("destruction_stone", destruction_stone);
 			nbt.putBoolean("space_stone", space_stone);
 			nbt.putBoolean("blood_stone", blood_stone);
-			nbt.putBoolean("time_stone", time_stone);
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level level && !level.isClientSide())
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
-		}
-
-		static WorldVariables clientSide = new WorldVariables();
-
-		public static WorldVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class MapVariables extends SavedData {
-		public static final String DATA_NAME = "power_mapvars";
-		public boolean technology_stone = false;
-		public boolean teleportation_stone = false;
-		public boolean blue_portal = false;
-		public boolean orange_portal = false;
-		public double bposx = 0;
-		public double bposy = 0;
-		public double bposz = 0;
-		public double oposx = 0;
-		public double oposy = 0;
-		public double oposz = 0;
-		public boolean explosion_stone = false;
-		public boolean amber_stone = false;
-		public boolean cosmos_stone = false;
-		public boolean magnet_stone = false;
-		public boolean mist_stone = false;
-
-		public static MapVariables load(CompoundTag tag) {
-			MapVariables data = new MapVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-			technology_stone = nbt.getBoolean("technology_stone");
-			teleportation_stone = nbt.getBoolean("teleportation_stone");
-			blue_portal = nbt.getBoolean("blue_portal");
-			orange_portal = nbt.getBoolean("orange_portal");
-			bposx = nbt.getDouble("bposx");
-			bposy = nbt.getDouble("bposy");
-			bposz = nbt.getDouble("bposz");
-			oposx = nbt.getDouble("oposx");
-			oposy = nbt.getDouble("oposy");
-			oposz = nbt.getDouble("oposz");
-			explosion_stone = nbt.getBoolean("explosion_stone");
-			amber_stone = nbt.getBoolean("amber_stone");
-			cosmos_stone = nbt.getBoolean("cosmos_stone");
-			magnet_stone = nbt.getBoolean("magnet_stone");
-			mist_stone = nbt.getBoolean("mist_stone");
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("technology_stone", technology_stone);
+			nbt.putBoolean("time_stone", time_stone);
 			nbt.putBoolean("teleportation_stone", teleportation_stone);
 			nbt.putBoolean("blue_portal", blue_portal);
 			nbt.putBoolean("orange_portal", orange_portal);
@@ -325,6 +379,19 @@ public class PowerModVariables {
 			nbt.putBoolean("cosmos_stone", cosmos_stone);
 			nbt.putBoolean("magnet_stone", magnet_stone);
 			nbt.putBoolean("mist_stone", mist_stone);
+			nbt.putBoolean("sand_stone", sand_stone);
+			nbt.putBoolean("speed_stone", speed_stone);
+			nbt.putBoolean("poison_stone", poison_stone);
+			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
+			nbt.putBoolean("mercury_stone", mercury_stone);
+			nbt.putBoolean("music_stone", music_stone);
+			nbt.putBoolean("plague_stone", plague_stone);
+			nbt.putBoolean("gravity_stone", gravity_stone);
+			nbt.putBoolean("blue_flame_stone", blue_flame_stone);
+			nbt.putBoolean("spirit_stone", spirit_stone);
+			nbt.putBoolean("aether_stone", aether_stone);
+			nbt.putBoolean("smoke_stone", smoke_stone);
+			nbt.putBoolean("form_stone", form_stone);
 			return nbt;
 		}
 
@@ -444,7 +511,7 @@ public class PowerModVariables {
 		public boolean technology = false;
 		public boolean time = false;
 		public double spawnx = 0.0;
-		public double spawny = 75.0;
+		public double spawny = 80.0;
 		public double spawnz = 0.0;
 		public boolean battery = false;
 		public boolean recharge_spell_sun = false;
@@ -458,8 +525,36 @@ public class PowerModVariables {
 		public boolean magnet = false;
 		public boolean mist = false;
 		public double power_level = 1.0;
-		public boolean water_power = false;
-		public boolean recharge_spell_mist = false;
+		public boolean recharge_spell_blue_flame = false;
+		public boolean sand = false;
+		public boolean speed = false;
+		public boolean turbospeed = false;
+		public double c1x = 0;
+		public double c1y = 80.0;
+		public double c1z = 0;
+		public double c2x = 0;
+		public double c2y = 80.0;
+		public double c2z = 0.0;
+		public double c3x = 0;
+		public double c3y = 80.0;
+		public double c3z = 0;
+		public boolean poison = false;
+		public boolean mushrooms = false;
+		public boolean mercury = false;
+		public boolean music = false;
+		public boolean keeper = false;
+		public boolean plague = false;
+		public boolean recharge_spell_plague = false;
+		public boolean gravity = false;
+		public boolean without_stone = false;
+		public boolean blue_flame = false;
+		public boolean recharge_spell_gravity_boost = false;
+		public boolean recharge_spell_gravity_red = false;
+		public boolean spirit = false;
+		public boolean aether = false;
+		public boolean recharge_spell_time = false;
+		public boolean smoke = false;
+		public boolean form = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -512,8 +607,36 @@ public class PowerModVariables {
 			nbt.putBoolean("magnet", magnet);
 			nbt.putBoolean("mist", mist);
 			nbt.putDouble("power_level", power_level);
-			nbt.putBoolean("water_power", water_power);
-			nbt.putBoolean("recharge_spell_mist", recharge_spell_mist);
+			nbt.putBoolean("recharge_spell_blue_flame", recharge_spell_blue_flame);
+			nbt.putBoolean("sand", sand);
+			nbt.putBoolean("speed", speed);
+			nbt.putBoolean("turbospeed", turbospeed);
+			nbt.putDouble("c1x", c1x);
+			nbt.putDouble("c1y", c1y);
+			nbt.putDouble("c1z", c1z);
+			nbt.putDouble("c2x", c2x);
+			nbt.putDouble("c2y", c2y);
+			nbt.putDouble("c2z", c2z);
+			nbt.putDouble("c3x", c3x);
+			nbt.putDouble("c3y", c3y);
+			nbt.putDouble("c3z", c3z);
+			nbt.putBoolean("poison", poison);
+			nbt.putBoolean("mushrooms", mushrooms);
+			nbt.putBoolean("mercury", mercury);
+			nbt.putBoolean("music", music);
+			nbt.putBoolean("keeper", keeper);
+			nbt.putBoolean("plague", plague);
+			nbt.putBoolean("recharge_spell_plague", recharge_spell_plague);
+			nbt.putBoolean("gravity", gravity);
+			nbt.putBoolean("without_stone", without_stone);
+			nbt.putBoolean("blue_flame", blue_flame);
+			nbt.putBoolean("recharge_spell_gravity_boost", recharge_spell_gravity_boost);
+			nbt.putBoolean("recharge_spell_gravity_red", recharge_spell_gravity_red);
+			nbt.putBoolean("spirit", spirit);
+			nbt.putBoolean("aether", aether);
+			nbt.putBoolean("recharge_spell_time", recharge_spell_time);
+			nbt.putBoolean("smoke", smoke);
+			nbt.putBoolean("form", form);
 			return nbt;
 		}
 
@@ -563,8 +686,36 @@ public class PowerModVariables {
 			magnet = nbt.getBoolean("magnet");
 			mist = nbt.getBoolean("mist");
 			power_level = nbt.getDouble("power_level");
-			water_power = nbt.getBoolean("water_power");
-			recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
+			recharge_spell_blue_flame = nbt.getBoolean("recharge_spell_blue_flame");
+			sand = nbt.getBoolean("sand");
+			speed = nbt.getBoolean("speed");
+			turbospeed = nbt.getBoolean("turbospeed");
+			c1x = nbt.getDouble("c1x");
+			c1y = nbt.getDouble("c1y");
+			c1z = nbt.getDouble("c1z");
+			c2x = nbt.getDouble("c2x");
+			c2y = nbt.getDouble("c2y");
+			c2z = nbt.getDouble("c2z");
+			c3x = nbt.getDouble("c3x");
+			c3y = nbt.getDouble("c3y");
+			c3z = nbt.getDouble("c3z");
+			poison = nbt.getBoolean("poison");
+			mushrooms = nbt.getBoolean("mushrooms");
+			mercury = nbt.getBoolean("mercury");
+			music = nbt.getBoolean("music");
+			keeper = nbt.getBoolean("keeper");
+			plague = nbt.getBoolean("plague");
+			recharge_spell_plague = nbt.getBoolean("recharge_spell_plague");
+			gravity = nbt.getBoolean("gravity");
+			without_stone = nbt.getBoolean("without_stone");
+			blue_flame = nbt.getBoolean("blue_flame");
+			recharge_spell_gravity_boost = nbt.getBoolean("recharge_spell_gravity_boost");
+			recharge_spell_gravity_red = nbt.getBoolean("recharge_spell_gravity_red");
+			spirit = nbt.getBoolean("spirit");
+			aether = nbt.getBoolean("aether");
+			recharge_spell_time = nbt.getBoolean("recharge_spell_time");
+			smoke = nbt.getBoolean("smoke");
+			form = nbt.getBoolean("form");
 		}
 	}
 
@@ -634,8 +785,36 @@ public class PowerModVariables {
 					variables.magnet = message.data.magnet;
 					variables.mist = message.data.mist;
 					variables.power_level = message.data.power_level;
-					variables.water_power = message.data.water_power;
-					variables.recharge_spell_mist = message.data.recharge_spell_mist;
+					variables.recharge_spell_blue_flame = message.data.recharge_spell_blue_flame;
+					variables.sand = message.data.sand;
+					variables.speed = message.data.speed;
+					variables.turbospeed = message.data.turbospeed;
+					variables.c1x = message.data.c1x;
+					variables.c1y = message.data.c1y;
+					variables.c1z = message.data.c1z;
+					variables.c2x = message.data.c2x;
+					variables.c2y = message.data.c2y;
+					variables.c2z = message.data.c2z;
+					variables.c3x = message.data.c3x;
+					variables.c3y = message.data.c3y;
+					variables.c3z = message.data.c3z;
+					variables.poison = message.data.poison;
+					variables.mushrooms = message.data.mushrooms;
+					variables.mercury = message.data.mercury;
+					variables.music = message.data.music;
+					variables.keeper = message.data.keeper;
+					variables.plague = message.data.plague;
+					variables.recharge_spell_plague = message.data.recharge_spell_plague;
+					variables.gravity = message.data.gravity;
+					variables.without_stone = message.data.without_stone;
+					variables.blue_flame = message.data.blue_flame;
+					variables.recharge_spell_gravity_boost = message.data.recharge_spell_gravity_boost;
+					variables.recharge_spell_gravity_red = message.data.recharge_spell_gravity_red;
+					variables.spirit = message.data.spirit;
+					variables.aether = message.data.aether;
+					variables.recharge_spell_time = message.data.recharge_spell_time;
+					variables.smoke = message.data.smoke;
+					variables.form = message.data.form;
 				}
 			});
 			context.setPacketHandled(true);

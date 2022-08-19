@@ -7,14 +7,17 @@ package power.keepeersofthestones.init;
 import power.keepeersofthestones.potion.WaterMasterMobEffect;
 import power.keepeersofthestones.potion.VacuumMasterMobEffect;
 import power.keepeersofthestones.potion.TornadoMasterMobEffect;
-import power.keepeersofthestones.potion.TimeStopEffectMobEffect;
 import power.keepeersofthestones.potion.TimeMasterEffectMobEffect;
 import power.keepeersofthestones.potion.TeleportationMasterMobEffect;
 import power.keepeersofthestones.potion.TechnologyMasterMobEffect;
 import power.keepeersofthestones.potion.SunMasterMobEffect;
+import power.keepeersofthestones.potion.SpiritMasterMobEffect;
+import power.keepeersofthestones.potion.SpeedMasterMobEffect;
 import power.keepeersofthestones.potion.SpaceMasterMobEffect;
 import power.keepeersofthestones.potion.SoundMasterMobEffect;
+import power.keepeersofthestones.potion.SmokeMasterMobEffect;
 import power.keepeersofthestones.potion.ShadowMasterMobEffect;
+import power.keepeersofthestones.potion.SandMasterMobEffect;
 import power.keepeersofthestones.potion.RechargeWaterStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeVacuumStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTornadoStoneMobEffect;
@@ -22,20 +25,31 @@ import power.keepeersofthestones.potion.RechargeTimeStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTeleportationStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTechnologyStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSunStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSpiritStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSpeedStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSoundStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSmokeStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeShadowStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSandStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeRainStoneMobEffect;
+import power.keepeersofthestones.potion.RechargePoisonStoneMobEffect;
+import power.keepeersofthestones.potion.RechargePlagueStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeOceanStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeMusicStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeMushroomsStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMoonStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMistStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMetalStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeMercuryStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMagnetStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeLightningStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeLightStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeLavaStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeIceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGreeneryStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeGravityStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeFormStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeFireStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeExplosionStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeEnergyStoneMobEffect;
@@ -43,22 +57,33 @@ import power.keepeersofthestones.potion.RechargeEarthStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeDestructionStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeCrystalStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeCreationStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeBlueFlameStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeBloodStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAnimalsStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAmberStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAirStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeAetherStoneMobEffect;
 import power.keepeersofthestones.potion.RainMasterMobEffect;
 import power.keepeersofthestones.potion.RainFlyMobEffect;
+import power.keepeersofthestones.potion.PowerLockMobEffect;
+import power.keepeersofthestones.potion.PoisonMasterMobEffect;
+import power.keepeersofthestones.potion.PlagueMasterMobEffect;
 import power.keepeersofthestones.potion.OceanMasterMobEffect;
+import power.keepeersofthestones.potion.MusicMasterMobEffect;
+import power.keepeersofthestones.potion.MushroomsMasterMobEffect;
 import power.keepeersofthestones.potion.MoonMasterMobEffect;
 import power.keepeersofthestones.potion.MistMasterMobEffect;
 import power.keepeersofthestones.potion.MetalMasterMobEffect;
+import power.keepeersofthestones.potion.MercuryMasterMobEffect;
+import power.keepeersofthestones.potion.MagnetMasterMobEffect;
 import power.keepeersofthestones.potion.LightningMasterMobEffect;
 import power.keepeersofthestones.potion.LightMasterMobEffect;
 import power.keepeersofthestones.potion.LavaMasterMobEffect;
 import power.keepeersofthestones.potion.InvincibilityMobEffect;
 import power.keepeersofthestones.potion.IceMasterMobEffect;
 import power.keepeersofthestones.potion.GreeneryMasterMobEffect;
+import power.keepeersofthestones.potion.GravityMasterMobEffect;
+import power.keepeersofthestones.potion.FormMasterMobEffect;
 import power.keepeersofthestones.potion.FogMobEffect;
 import power.keepeersofthestones.potion.FireMasterMobEffect;
 import power.keepeersofthestones.potion.FireFlyingMobEffect;
@@ -68,10 +93,12 @@ import power.keepeersofthestones.potion.EarthMasterMobEffect;
 import power.keepeersofthestones.potion.DestructionMasterMobEffect;
 import power.keepeersofthestones.potion.CrystalMasterMobEffect;
 import power.keepeersofthestones.potion.CreationMasterMobEffect;
+import power.keepeersofthestones.potion.BlueFlameMasterMobEffect;
 import power.keepeersofthestones.potion.BloodMasterMobEffect;
 import power.keepeersofthestones.potion.AnimalsMasterMobEffect;
 import power.keepeersofthestones.potion.AmberMasterMobEffect;
 import power.keepeersofthestones.potion.AirMasterMobEffect;
+import power.keepeersofthestones.potion.AetherMasterMobEffect;
 import power.keepeersofthestones.potion.AccelerationTimeEffectMobEffect;
 import power.keepeersofthestones.PowerMod;
 
@@ -165,7 +192,6 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> TIME_MASTER_EFFECT = REGISTRY.register("time_master_effect", () -> new TimeMasterEffectMobEffect());
 	public static final RegistryObject<MobEffect> ACCELERATION_TIME_EFFECT = REGISTRY.register("acceleration_time_effect",
 			() -> new AccelerationTimeEffectMobEffect());
-	public static final RegistryObject<MobEffect> TIME_STOP_EFFECT = REGISTRY.register("time_stop_effect", () -> new TimeStopEffectMobEffect());
 	public static final RegistryObject<MobEffect> FIRE_FLYING = REGISTRY.register("fire_flying", () -> new FireFlyingMobEffect());
 	public static final RegistryObject<MobEffect> RAIN_FLY = REGISTRY.register("rain_fly", () -> new RainFlyMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_TELEPORTATION_STONE = REGISTRY.register("recharge_teleportation_stone",
@@ -178,10 +204,51 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_AMBER_STONE = REGISTRY.register("recharge_amber_stone",
 			() -> new RechargeAmberStoneMobEffect());
 	public static final RegistryObject<MobEffect> AMBER_MASTER = REGISTRY.register("amber_master", () -> new AmberMasterMobEffect());
+	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_BLUE_FLAME_STONE = REGISTRY.register("recharge_blue_flame_stone",
+			() -> new RechargeBlueFlameStoneMobEffect());
 	public static final RegistryObject<MobEffect> FOG = REGISTRY.register("fog", () -> new FogMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_MAGNET_STONE = REGISTRY.register("recharge_magnet_stone",
 			() -> new RechargeMagnetStoneMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_MIST_STONE = REGISTRY.register("recharge_mist_stone",
 			() -> new RechargeMistStoneMobEffect());
 	public static final RegistryObject<MobEffect> MIST_MASTER = REGISTRY.register("mist_master", () -> new MistMasterMobEffect());
+	public static final RegistryObject<MobEffect> SAND_MASTER = REGISTRY.register("sand_master", () -> new SandMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SAND_STONE = REGISTRY.register("recharge_sand_stone",
+			() -> new RechargeSandStoneMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SPEED_STONE = REGISTRY.register("recharge_speed_stone",
+			() -> new RechargeSpeedStoneMobEffect());
+	public static final RegistryObject<MobEffect> SPEED_MASTER = REGISTRY.register("speed_master", () -> new SpeedMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_POISON_STONE = REGISTRY.register("recharge_poison_stone",
+			() -> new RechargePoisonStoneMobEffect());
+	public static final RegistryObject<MobEffect> POISON_MASTER = REGISTRY.register("poison_master", () -> new PoisonMasterMobEffect());
+	public static final RegistryObject<MobEffect> MAGNET_MASTER = REGISTRY.register("magnet_master", () -> new MagnetMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_MUSHROOMS_STONE = REGISTRY.register("recharge_mushrooms_stone",
+			() -> new RechargeMushroomsStoneMobEffect());
+	public static final RegistryObject<MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_MERCURY_STONE = REGISTRY.register("recharge_mercury_stone",
+			() -> new RechargeMercuryStoneMobEffect());
+	public static final RegistryObject<MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
+	public static final RegistryObject<MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_MUSIC_STONE = REGISTRY.register("recharge_music_stone",
+			() -> new RechargeMusicStoneMobEffect());
+	public static final RegistryObject<MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_PLAGUE_STONE = REGISTRY.register("recharge_plague_stone",
+			() -> new RechargePlagueStoneMobEffect());
+	public static final RegistryObject<MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_GRAVITY_STONE = REGISTRY.register("recharge_gravity_stone",
+			() -> new RechargeGravityStoneMobEffect());
+	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
+	public static final RegistryObject<MobEffect> SPIRIT_MASTER = REGISTRY.register("spirit_master", () -> new SpiritMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SPIRIT_STONE = REGISTRY.register("recharge_spirit_stone",
+			() -> new RechargeSpiritStoneMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_AETHER_STONE = REGISTRY.register("recharge_aether_stone",
+			() -> new RechargeAetherStoneMobEffect());
+	public static final RegistryObject<MobEffect> AETHER_MASTER = REGISTRY.register("aether_master", () -> new AetherMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SMOKE_STONE = REGISTRY.register("recharge_smoke_stone",
+			() -> new RechargeSmokeStoneMobEffect());
+	public static final RegistryObject<MobEffect> SMOKE_MASTER = REGISTRY.register("smoke_master", () -> new SmokeMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_FORM_STONE = REGISTRY.register("recharge_form_stone",
+			() -> new RechargeFormStoneMobEffect());
+	public static final RegistryObject<MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
 }

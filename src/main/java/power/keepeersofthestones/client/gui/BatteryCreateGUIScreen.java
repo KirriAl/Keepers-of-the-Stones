@@ -8,7 +8,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -53,8 +52,14 @@ public class BatteryCreateGUIScreen extends AbstractContainerScreen<BatteryCreat
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/acceleration_time.png"));
-		this.blit(ms, this.leftPos + 78, this.topPos + 34, 0, 0, 16, 16, 16, 16);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/slot_for_stone.png"));
+		this.blit(ms, this.leftPos + 24, this.topPos + 35, 0, 0, 16, 16, 16, 16);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/slot_for_battery.png"));
+		this.blit(ms, this.leftPos + 52, this.topPos + 35, 0, 0, 16, 16, 16, 16);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/arrow_gui.png"));
+		this.blit(ms, this.leftPos + 75, this.topPos + 36, 0, 0, 22, 15, 22, 15);
 
 		RenderSystem.disableBlend();
 	}
@@ -75,7 +80,7 @@ public class BatteryCreateGUIScreen extends AbstractContainerScreen<BatteryCreat
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("power.battery_charger.label.text"), 42, 7, -12829636);
+		this.font.draw(poseStack, "Charging the battery", 42, 7, -12829636);
 		this.font.draw(poseStack, "" + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				BlockEntity BlockEntity = world.getBlockEntity(pos);

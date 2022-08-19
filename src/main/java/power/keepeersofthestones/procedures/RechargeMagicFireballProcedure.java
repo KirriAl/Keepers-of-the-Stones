@@ -15,9 +15,13 @@ public class RechargeMagicFireballProcedure {
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
+				.orElse(new PowerModVariables.PlayerVariables())).power_level == 3) {
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 20);
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new PowerModVariables.PlayerVariables())).power_level >= 4) {
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 0);
 		} else {
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 60);

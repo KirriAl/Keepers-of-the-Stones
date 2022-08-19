@@ -273,5 +273,11 @@ public class ChoiseMagicStoneGUIScreen extends AbstractContainerScreen<ChoiseMag
 				ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 20, x, y, z);
 			}
 		}));
+		this.addRenderableWidget(new Button(this.leftPos + 208, this.topPos + 168, 93, 20, new TextComponent("Without stone"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(21, x, y, z));
+				ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 21, x, y, z);
+			}
+		}));
 	}
 }

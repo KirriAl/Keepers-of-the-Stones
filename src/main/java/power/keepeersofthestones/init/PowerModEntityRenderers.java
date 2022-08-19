@@ -8,10 +8,12 @@ import power.keepeersofthestones.client.renderer.TyrannosaurusRexRenderer;
 import power.keepeersofthestones.client.renderer.TornadoEntityRenderer;
 import power.keepeersofthestones.client.renderer.TornadoCreateRenderer;
 import power.keepeersofthestones.client.renderer.ShadowRenderer;
+import power.keepeersofthestones.client.renderer.RocketRenderer;
 import power.keepeersofthestones.client.renderer.RaptorRenderer;
 import power.keepeersofthestones.client.renderer.RainBowRenderer;
 import power.keepeersofthestones.client.renderer.PterodactylRenderer;
 import power.keepeersofthestones.client.renderer.PlesiosaurusRenderer;
+import power.keepeersofthestones.client.renderer.MusketRenderer;
 import power.keepeersofthestones.client.renderer.GoldenCrossbowRenderer;
 import power.keepeersofthestones.client.renderer.GlowRenderer;
 
@@ -31,6 +33,7 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.RAPTOR.get(), RaptorRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.PLESIOSAURUS.get(), PlesiosaurusRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.PTERODACTYL.get(), PterodactylRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ROCKET.get(), RocketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MAGIC_FIREBALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AIR_FLOW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.WATER_FLOW.get(), ThrownItemRenderer::new);
@@ -67,5 +70,20 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_SPHERE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AMBER_STREAKS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.KUNAI.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SAND_FLURRY.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BOOMERANG.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.TOXIC_CLOUD.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ELECTROMAGNETIC_PULSE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SPORES.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MERCURY_BALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.DISCO_BALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MUSKET.get(), MusketRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MASS_INFECTION.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.THROWING_HAMMER.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BLUE_FIREBALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ECTOPLASM_ATTACK.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.FIREBIRD_FEATHER.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SMOKE_SCREEN.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.TRANSFORM_SPHERE.get(), ThrownItemRenderer::new);
 	}
 }

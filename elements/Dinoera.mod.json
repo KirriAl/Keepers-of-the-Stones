@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 33,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -41,7 +41,7 @@
     "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
     "portalFrame": {
-      "value": "Blocks.BONE_BLOCK"
+      "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
       "value": "WHITE_ASH"
@@ -52,7 +52,7 @@
     },
     "igniterName": "Dinoera Portal Igniter",
     "igniterTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "CUSTOM:Dimensions"
     },
     "texture": "dinoera_flint_and_steel",
     "portalTexture": "dinoera_portal",

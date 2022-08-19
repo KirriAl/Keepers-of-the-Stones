@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 33,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:power.battery_charger.label.text>",
+          "text": "Charging the battery",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:power.battery_charger.label.text>",
+          "name": "Charging the battery",
           "x": 168,
           "y": 44
         }
@@ -74,16 +74,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "acceleration_time.png",
-          "use1Xscale": false,
-          "name": "acceleration_time.png",
-          "x": 204,
-          "y": 71
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "<BNBT:integer:fuelRemaining>",
@@ -94,6 +84,36 @@
           "name": "<BNBT:integer:fuelRemaining>",
           "x": 209,
           "y": 88
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot_for_stone.png",
+          "use1Xscale": false,
+          "name": "slot_for_stone.png",
+          "x": 150,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot_for_battery.png",
+          "use1Xscale": false,
+          "name": "slot_for_battery.png",
+          "x": 178,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_gui.png",
+          "use1Xscale": false,
+          "name": "arrow_gui.png",
+          "x": 201,
+          "y": 73
         }
       }
     ],

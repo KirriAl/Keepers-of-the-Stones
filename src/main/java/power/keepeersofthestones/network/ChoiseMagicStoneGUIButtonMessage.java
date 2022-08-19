@@ -2,6 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
+import power.keepeersofthestones.procedures.WithoutStoneVarProcedure;
 import power.keepeersofthestones.procedures.WaterGetProcedure;
 import power.keepeersofthestones.procedures.VacuumGetProcedure;
 import power.keepeersofthestones.procedures.TornadoGetProcedure;
@@ -165,6 +166,10 @@ public class ChoiseMagicStoneGUIButtonMessage {
 		if (buttonID == 20) {
 
 			SunGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 21) {
+
+			WithoutStoneVarProcedure.execute(entity);
 		}
 	}
 

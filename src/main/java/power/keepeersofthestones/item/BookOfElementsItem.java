@@ -16,17 +16,12 @@ import net.minecraft.world.InteractionHand;
 
 public class BookOfElementsItem extends Item {
 	public BookOfElementsItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).stacksTo(1).fireResistant().rarity(Rarity.RARE));
 	}
 
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
-	}
-
-	@Override
-	public int getUseDuration(ItemStack itemstack) {
-		return 0;
 	}
 
 	@Override

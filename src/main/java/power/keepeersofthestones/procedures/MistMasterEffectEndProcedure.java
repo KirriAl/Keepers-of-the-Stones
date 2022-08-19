@@ -73,7 +73,7 @@ public class MistMasterEffectEndProcedure {
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE.get(), 3600, 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new PowerModVariables.PlayerVariables())).power_level == 3) {
+						.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE.get(), 2400, 0, (false), (false)));
 				} else {
@@ -102,13 +102,6 @@ public class MistMasterEffectEndProcedure {
 			boolean _setval = false;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.battery = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
-			boolean _setval = false;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.recharge_spell_mist = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

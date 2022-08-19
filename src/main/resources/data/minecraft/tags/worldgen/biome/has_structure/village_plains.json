@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "power:oblivion_forest"
+    "power:oblivion_forest",
+    "power:sun_plains"
   ]
 }

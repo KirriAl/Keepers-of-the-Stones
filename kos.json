@@ -1,14 +1,14 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
   "promos": {
-    "1.16.5-latest": "2.2.0",
-    "1.16.5-recommended": "2.2.0",
+    "1.16.5-latest": "2.5.0",
+    "1.16.5-recommended": "2.5.0",
     "1.17.1-latest": "1.4.1",
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.2.0",
-    "1.18.2-recommended": "2.2.0"
+    "1.18.2-latest": "2.5.1",
+    "1.18.2-recommended": "2.5.1"
   },
   "1.16.5": {
    "1.1.18": "
@@ -104,6 +104,80 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Improved the appearance of mobs in the Dinoera
 - Removed the French language
 - [Bugfix] Fixed a bug when opening a book with a technology stone opened the sound wizard interface
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.2.1": "
+- [Bugfix] Fixed a bug where some Destruction Wizard spells could remain in inventory
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.0": "
+- Added a new element - sand
+- Changed the mechanics of cultivation, now instead of giving out plants with it, you need to plant them
+- Removed unnecessary headers in the levels and skills interface
+- The stone damage function has been completely removed
+- [Bugfix] Fixed the id of the sound imitator.
+- [Bugfix] Fixed a bug where some Destruction master spells could remain in the inventory. 
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.1": "
+- [Bugfix] Fixed a bug where the purchase interface opened when using quicksand (#58)
+- [Bugfix] Fixed a bug where it was possible to endlessly summon entities using some spells (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.2": "
+- Increased damage and attack speed of lava and blood masters
+- [Bugfix] Fixed a bug when the master of animals died, he was given the effect of the master of fire
+- [Bugfix] Fixed a bug when the tame remained in the inventory of players without master effects
+- [Bugfix] Fixed a bug that caused the ambiguity effect not to be issued
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.0": "
+- Added new elements - speed, poison, magnet and mushrooms
+- Redesigned generation of the entire Crystallized world
+- Added crystal blocks from Forest X
+- Now all portals are made from obsidian
+- Added the possibility of teleportation with the installation of several control points
+- Changed the texture of the sand dagger
+- Now quicksand is a liquid and can only be created on sand
+- The player will take damage when drowning in quicksand
+- Added designations in the battery charger interface
+- Added the ability to refuse to receive a stone
+- Added a link to the wiki when entering the minecraft world
+- Skills removed
+- Removed magic boxes, because they are not used
+- [Bugfix] Fixed a bug that caused elemental flint to have a shaped recipe
+- [Bugfix] Fixed /confstone and /planet commands (for 1.16.5)
+- [Bugfix] Fixed cretaceous taiga generation (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.1": "
+- Added missing batteries to the tag
+- Added support for the crystallized world in 1.16.5
+- Now ore appears in the crystallized world
+- Musical record elements can now be bought from a traveling merchant
+- [Bugfix] Minor bugs fixed
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.2": "
+- [Bugfix] Fixed a bug with a mushroom stone, after using the battery
+- [Bugfix] Fixed a bug that caused the mushroom stone to not return after death
+- [Bugfix] Fixed an energy absorption bug that didn't work on new elements starting with mist
+- [Bugfix] Fixed a bug that made it impossible to select a mushroom stone
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.3": "
+- [Bugfix] Fixed a bug where projectiles from the ice master caused the game to crash
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.5.0": "
+- Added new elements - mercury, and music
+- Added dimension - Sanny Kingdom
+- Added the ability to be a keeper of stones (via the /confstone supreme_master command)
+- Added batteries of creation, destruction and amber (available only in creative)
+- Added dependency on the Pehkui mod
+- Updated some textures
+- Improved command /confstone
+- [Bugfix] Fixed a bug when in another world, it was possible to select a busy stone
+- [Bugfix] Fixed a bug with a mushroom stone, after using the battery
+- [Bugfix] Fixed a bug where the explosion stone is not returned to inventory
+- [Bugfix] Fixed a bug when the vacuum master received a copy of his stone during transformation
+- [Bugfix] A bug has been fixed due to which the fire stone appeared after the death of the technology master
+- [Bugfix] Fixed a bug that caused the mushroom stone to not return after death
+- [Bugfix] Fixed a bug that made it impossible to select a mushroom stone
+- [Bugfix] Fixed an energy absorption bug that didn't work on new elements starting with mist
+- [Bugfix] Fixed spawn of mobs in some dimensions
+- [Bugfix] Fixed the surface of Venus (for 1.16.5)
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   },
   "1.17.1": {
@@ -506,6 +580,73 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Improved the appearance of mobs in the Dinoera
 - Removed the French language
 - [Bugfix] Fixed a bug when opening a book with a technology stone opened the sound wizard interface
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.0": "
+- Added a new element - sand
+- Changed the mechanics of cultivation, now instead of giving out plants with it, you need to plant them
+- Removed unnecessary headers in the levels and skills interface
+- The stone damage function has been completely removed
+- [Bugfix] Fixed the id of the sound imitator.
+- [Bugfix] Fixed a bug where some Destruction master spells could remain in the inventory. 
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.1": "
+- [Bugfix] Fixed a bug where the purchase interface opened when using quicksand (#58)
+- [Bugfix] Fixed a bug where it was possible to endlessly summon entities using some spells (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.2": "
+- Increased damage and attack speed of lava and blood masters
+- [Bugfix] Fixed a bug when the master of animals died, he was given the effect of the master of fire
+- [Bugfix] Fixed a bug when the tame remained in the inventory of players without master effects
+- [Bugfix] Fixed a bug that caused the ambiguity effect not to be issued
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.0": "
+- Added new elements - speed, poison, magnet and mushrooms
+- Redesigned generation of the entire Crystallized world
+- Added crystal blocks from Forest X
+- Now all portals are made from obsidian
+- Added the possibility of teleportation with the installation of several control points
+- Changed the texture of the sand dagger
+- Now quicksand is a liquid and can only be created on sand
+- The player will take damage when drowning in quicksand
+- Added designations in the battery charger interface
+- Added the ability to refuse to receive a stone
+- Added a link to the wiki when entering the minecraft world
+- Skills removed
+- Removed magic boxes, because they are not used
+- [Bugfix] Fixed a bug that caused elemental flint to have a shaped recipe
+- [Bugfix] Fixed /confstone and /planet commands (for 1.16.5)
+- [Bugfix] Fixed cretaceous taiga generation (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.1": "
+- Added missing batteries to the tag
+- Added support for the crystallized world in 1.16.5
+- Now ore appears in the crystallized world
+- Musical record elements can now be bought from a traveling merchant
+- [Bugfix] Minor bugs fixed
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.5.0": "
+- Added new elements - mercury, and music
+- Added dimension - Sanny Kingdom
+- Added the ability to be a keeper of stones (via the /confstone supreme_master command)
+- Added batteries of creation, destruction and amber (available only in creative)
+- Added dependency on the Pehkui mod
+- Updated some textures
+- Improved command /confstone
+- [Bugfix] Fixed a bug when in another world, it was possible to select a busy stone
+- [Bugfix] Fixed a bug with a mushroom stone, after using the battery
+- [Bugfix] Fixed a bug where the explosion stone is not returned to inventory
+- [Bugfix] Fixed a bug when the vacuum master received a copy of his stone during transformation
+- [Bugfix] A bug has been fixed due to which the fire stone appeared after the death of the technology master
+- [Bugfix] Fixed a bug that caused the mushroom stone to not return after death
+- [Bugfix] Fixed a bug that made it impossible to select a mushroom stone
+- [Bugfix] Fixed an energy absorption bug that didn't work on new elements starting with mist
+- [Bugfix] Fixed spawn of mobs in some dimensions
+- [Bugfix] Fixed the surface of Venus (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.5.1": "
+- [Bugfix] Fixed a bug where the vacuum stone could be copied during transformation
+- [Bugfix] Fixed a bug with copying stone music
+- [Bugfix] Fixed a bug where the vacuum master could breathe underwater
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
