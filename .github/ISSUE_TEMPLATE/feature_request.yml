@@ -1,6 +1,6 @@
 name: New feature
 description: Suggest a new feature (search for duplicates first)
-labels: bug
+labels: new feature
 body:
  - type: textarea
    attributes:
