@@ -52,7 +52,7 @@ public class SpecialAbilityKeyMessage {
 			return;
 		if (type == 0) {
 
-			SpecialAbilityUseProcedure.execute(entity);
+			SpecialAbilityUseProcedure.execute(world, entity);
 		}
 	}
 
