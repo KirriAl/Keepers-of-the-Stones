@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.5.1",
-    "1.18.2-recommended": "2.5.1"
+    "1.18.2-latest": "2.6.0",
+    "1.18.2-recommended": "2.6.0"
   },
   "1.16.5": {
    "1.1.18": "
@@ -647,6 +647,26 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed a bug where the vacuum stone could be copied during transformation
 - [Bugfix] Fixed a bug with copying stone music
 - [Bugfix] Fixed a bug where the vacuum master could breathe underwater
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.0": "
+- Added new elements - blue flame and gravity
+- Added a rocket to travel to other planets
+- Added energium ore
+- Added tools from energium
+- Added an energium block, in the radius of which the forces of the elements do not work
+- Added the ability to select a stone if you did not select it through the pw command
+- Added sections for music stone (built-in and customizable music)
+- Added the ability to delete lost portals by teleportation master (R key)
+- Obscurity now works for all players in the world
+- Now the time stop only applies to the other player
+- Increased spawn of raptors
+- Improved battery charger interface
+- Updated the armor of some masters
+- Updated the texture of the music stone
+- Updated mushroom master effect and music player textures
+- The confstone team has been renamed pw
+- [Bugfix] Fixed a bug with a non-working link to the mod wiki
+- [Bugfix] Fixed a bug where checkpoints could cause a server crash
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
