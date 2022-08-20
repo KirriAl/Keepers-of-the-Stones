@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "power:items/unknown"
+    "layer0": "power:items/smoke_screen"
   },
   "display": {
     "thirdperson_righthand": {

@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "smoke_screen",
     "customModelName": "Normal",
     "name": "Smoke Screen",
     "specialInfo": [],
