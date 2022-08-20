@@ -14,9 +14,6 @@
         "type": "button",
         "data": {
           "text": "Spirit",
-          "onClick": {
-            "name": "SpiritGet"
-          },
           "width": 56,
           "height": 20,
           "name": "Spirit",
@@ -63,9 +60,6 @@
         "type": "button",
         "data": {
           "text": "Aether",
-          "onClick": {
-            "name": "AetherGet"
-          },
           "width": 56,
           "height": 20,
           "name": "Aether",
@@ -132,9 +126,6 @@
         "type": "button",
         "data": {
           "text": "Smoke",
-          "onClick": {
-            "name": "SmokeGet"
-          },
           "width": 56,
           "height": 20,
           "name": "Smoke",
