@@ -91,64 +91,16 @@ public class MusicPlayerGUIScreen extends AbstractContainerScreen<MusicPlayerGUI
 				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 34, 30, 20, new TextComponent("1"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 50, this.topPos + 61, 67, 20, new TextComponent("Build-In"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(1, x, y, z));
 				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 59, this.topPos + 34, 30, 20, new TextComponent("2"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 176, this.topPos + 61, 56, 20, new TextComponent("Custom"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(2, x, y, z));
 				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 95, this.topPos + 34, 30, 20, new TextComponent("3"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(3, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 34, 30, 20, new TextComponent("4"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(4, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 167, this.topPos + 34, 30, 20, new TextComponent("5"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(5, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 61, 30, 20, new TextComponent("6"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(6, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 59, this.topPos + 61, 30, 20, new TextComponent("7"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(7, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 95, this.topPos + 61, 30, 20, new TextComponent("8"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(8, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 61, 30, 20, new TextComponent("9"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(9, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 167, this.topPos + 61, 30, 20, new TextComponent("10"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(10, x, y, z));
-				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
 		}));
 	}

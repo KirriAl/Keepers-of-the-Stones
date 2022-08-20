@@ -1,0 +1,217 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Music Player",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Music Player",
+          "x": 186,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Stop",
+          "onClick": {
+            "name": "StopSound"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Stop",
+          "x": 303,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Cat",
+          "onClick": {
+            "name": "PlayMusicCat"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Cat",
+          "x": 87,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Blocks",
+          "onClick": {
+            "name": "PlayMusicBlocks"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Blocks",
+          "x": 132,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Far",
+          "onClick": {
+            "name": "PlayMusicFar"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Far",
+          "x": 195,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mall",
+          "onClick": {
+            "name": "PlayMusicMall"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Mall",
+          "x": 87,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mellohi",
+          "onClick": {
+            "name": "PlayMusicMellohi"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Mellohi",
+          "x": 141,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Chirp",
+          "onClick": {
+            "name": "PlayMusicChirp"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Chirp",
+          "x": 204,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Stal",
+          "onClick": {
+            "name": "PlayMusicStal"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Stal",
+          "x": 258,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Strad",
+          "onClick": {
+            "name": "PlayMusicStrad"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Strad",
+          "x": 87,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Ward",
+          "onClick": {
+            "name": "PlayMusicWard"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Ward",
+          "x": 141,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Wait",
+          "onClick": {
+            "name": "PlayMusicWait"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Wait",
+          "x": 195,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Pigstep",
+          "onClick": {
+            "name": "PlayMusicPigstep"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Pigstep",
+          "x": 249,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Otherside",
+          "onClick": {
+            "name": "PlayMusicOtherside"
+          },
+          "width": 72,
+          "height": 20,
+          "name": "Otherside",
+          "x": 87,
+          "y": 143
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

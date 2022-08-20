@@ -53,6 +53,7 @@ import power.keepeersofthestones.client.gui.EBBloodScreen;
 import power.keepeersofthestones.client.gui.EBAnimalsScreen;
 import power.keepeersofthestones.client.gui.EBAmberScreen;
 import power.keepeersofthestones.client.gui.EBAirScreen;
+import power.keepeersofthestones.client.gui.CustomMusicPlayerScreen;
 import power.keepeersofthestones.client.gui.CultivationGUIScreen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage3Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage2Screen;
@@ -62,6 +63,7 @@ import power.keepeersofthestones.client.gui.CheckPointTPScreen;
 import power.keepeersofthestones.client.gui.BuyLevel3Screen;
 import power.keepeersofthestones.client.gui.BuyLevel2Screen;
 import power.keepeersofthestones.client.gui.BuildingGUIScreen;
+import power.keepeersofthestones.client.gui.BuildInMusicPlayerScreen;
 import power.keepeersofthestones.client.gui.BatteryCreateGUIScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -135,6 +137,8 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_PLAGUE, EBPlagueScreen::new);
 			MenuScreens.register(PowerModMenus.ROCKET_PATH_GUI, RocketPathGUIScreen::new);
 			MenuScreens.register(PowerModMenus.EB_GRAVITY, EBGravityScreen::new);
+			MenuScreens.register(PowerModMenus.CUSTOM_MUSIC_PLAYER, CustomMusicPlayerScreen::new);
+			MenuScreens.register(PowerModMenus.BUILD_IN_MUSIC_PLAYER, BuildInMusicPlayerScreen::new);
 		});
 	}
 }

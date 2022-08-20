@@ -18047,6 +18047,486 @@
       "locked_code": false,
       "registry_name": "artifacts",
       "path": "~/Artifacts"
+    },
+    {
+      "name": "CustomMusicPlayer",
+      "type": "gui",
+      "sortid": 1081,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_music_player",
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "BuildInMusicPlayer",
+      "type": "gui",
+      "sortid": 1082,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "build_in_music_player",
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "OpenBuitinMusic",
+      "type": "procedure",
+      "sortid": 1083,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_buitin_music",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "OpenCastomMusic",
+      "type": "procedure",
+      "sortid": 1084,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_castom_music",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicCat",
+      "type": "procedure",
+      "sortid": 1085,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_cat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicBlocks",
+      "type": "procedure",
+      "sortid": 1086,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_blocks",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicFar",
+      "type": "procedure",
+      "sortid": 1087,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_far",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicMall",
+      "type": "procedure",
+      "sortid": 1088,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_mall",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicMellohi",
+      "type": "procedure",
+      "sortid": 1089,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_mellohi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicChirp",
+      "type": "procedure",
+      "sortid": 1090,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_chirp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicStal",
+      "type": "procedure",
+      "sortid": 1091,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_stal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicStrad",
+      "type": "procedure",
+      "sortid": 1092,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_strad",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicWard",
+      "type": "procedure",
+      "sortid": 1093,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_ward",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicWait",
+      "type": "procedure",
+      "sortid": 1094,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_wait",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicPigstep",
+      "type": "procedure",
+      "sortid": 1095,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_pigstep",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "PlayMusicOtherside",
+      "type": "procedure",
+      "sortid": 1096,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_otherside",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Music/MusicSoundtracks"
     }
   ],
   "variable_elements": [

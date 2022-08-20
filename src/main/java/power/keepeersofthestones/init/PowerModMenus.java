@@ -53,6 +53,7 @@ import power.keepeersofthestones.world.inventory.EBBloodMenu;
 import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
 import power.keepeersofthestones.world.inventory.EBAmberMenu;
 import power.keepeersofthestones.world.inventory.EBAirMenu;
+import power.keepeersofthestones.world.inventory.CustomMusicPlayerMenu;
 import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
@@ -62,6 +63,7 @@ import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
 import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
 import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
+import power.keepeersofthestones.world.inventory.BuildInMusicPlayerMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
 
 import net.minecraftforge.network.IContainerFactory;
@@ -161,6 +163,10 @@ public class PowerModMenus {
 	public static final MenuType<RocketPathGUIMenu> ROCKET_PATH_GUI = register("rocket_path_gui",
 			(id, inv, extraData) -> new RocketPathGUIMenu(id, inv, extraData));
 	public static final MenuType<EBGravityMenu> EB_GRAVITY = register("eb_gravity", (id, inv, extraData) -> new EBGravityMenu(id, inv, extraData));
+	public static final MenuType<CustomMusicPlayerMenu> CUSTOM_MUSIC_PLAYER = register("custom_music_player",
+			(id, inv, extraData) -> new CustomMusicPlayerMenu(id, inv, extraData));
+	public static final MenuType<BuildInMusicPlayerMenu> BUILD_IN_MUSIC_PLAYER = register("build_in_music_player",
+			(id, inv, extraData) -> new BuildInMusicPlayerMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
