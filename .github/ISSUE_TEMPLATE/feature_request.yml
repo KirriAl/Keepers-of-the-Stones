@@ -1,5 +1,5 @@
 name: New feature
-description: Suggest a new feature (search for duplicates first)
+description: Suggest a new feature
 labels: new feature
 body:
  - type: textarea
@@ -12,7 +12,7 @@ body:
  - type: textarea
    attributes:
     label: Concepts
-    description: Attach concepts ideas.
-    placeholder: Attach concepts ideas.
+    description: Attach concepts for idea.
+    placeholder: Attach concepts for idea.
    validations:
     required: false
