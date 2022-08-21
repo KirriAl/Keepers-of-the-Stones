@@ -12,6 +12,10 @@
     "underwaterBlock": {
       "value": ""
     },
+    "airColor": {
+      "value": -16711783,
+      "falpha": 0.0
+    },
     "grassColor": {
       "value": -16724839,
       "falpha": 0.0
@@ -56,7 +60,7 @@
     "spawnInCaves": false,
     "biomeWeight": 10,
     "biomeDictionaryTypes": [],
-    "grassPerChunk": 18,
+    "grassPerChunk": 4,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 3,
     "mushroomsPerChunk": 0,

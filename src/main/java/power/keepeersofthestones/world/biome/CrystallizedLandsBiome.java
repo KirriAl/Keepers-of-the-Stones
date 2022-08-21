@@ -22,12 +22,12 @@ import java.util.List;
 
 public class CrystallizedLandsBiome {
 	public static Biome createBiome() {
-		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(-16737895).waterFogColor(-16737895)
-				.skyColor(7972607).foliageColorOverride(-16724839).grassColorOverride(-16724839).build();
+		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-16711783).waterColor(-16737895).waterFogColor(-16737895)
+				.skyColor(-16711783).foliageColorOverride(-16724839).grassColorOverride(-16724839).build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				PlacementUtils.register("power:grass_crystallized_lands", VegetationFeatures.PATCH_GRASS,
-						List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 18), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+						List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
 								BiomeFilter.biome())));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				PlacementUtils.register("power:flower_crystallized_lands", VegetationFeatures.FLOWER_DEFAULT, List.of(CountPlacement.of(3),

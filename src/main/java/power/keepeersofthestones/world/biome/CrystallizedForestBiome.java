@@ -36,8 +36,8 @@ import com.google.common.collect.ImmutableList;
 
 public class CrystallizedForestBiome {
 	public static Biome createBiome() {
-		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(-16737895).waterFogColor(-16737895)
-				.skyColor(7972607).foliageColorOverride(-16724839).grassColorOverride(-16724839).build();
+		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-16711783).waterColor(-16737895).waterFogColor(-16737895)
+				.skyColor(-16711783).foliageColorOverride(-16724839).grassColorOverride(-16724839).build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				PlacementUtils.register("power:tree_crystallized_forest", FeatureUtils.register("power:tree_crystallized_forest", Feature.TREE,
@@ -53,7 +53,7 @@ public class CrystallizedForestBiome {
 								BiomeFilter.biome())));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				PlacementUtils.register("power:grass_crystallized_forest", VegetationFeatures.PATCH_GRASS,
-						List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 18), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+						List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
 								BiomeFilter.biome())));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				PlacementUtils.register("power:flower_crystallized_forest", VegetationFeatures.FLOWER_DEFAULT, List.of(CountPlacement.of(3),
