@@ -116,8 +116,8 @@
         "entity": {
           "value": "EntityZombie"
         },
-        "minGroup": 4,
-        "maxGroup": 3,
+        "minGroup": 1,
+        "maxGroup": 2,
         "weight": 15,
         "spawnType": "monster"
       },
@@ -125,8 +125,8 @@
         "entity": {
           "value": "EntityEnderman"
         },
-        "minGroup": 4,
-        "maxGroup": 3,
+        "minGroup": 1,
+        "maxGroup": 2,
         "weight": 10,
         "spawnType": "monster"
       },
@@ -134,8 +134,8 @@
         "entity": {
           "value": "EntitySkeleton"
         },
-        "minGroup": 4,
-        "maxGroup": 4,
+        "minGroup": 1,
+        "maxGroup": 2,
         "weight": 15,
         "spawnType": "monster"
       }
