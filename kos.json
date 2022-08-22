@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.6.0",
-    "1.18.2-recommended": "2.6.0"
+    "1.18.2-latest": "2.6.1",
+    "1.18.2-recommended": "2.6.1"
   },
   "1.16.5": {
    "1.1.18": "
@@ -667,6 +667,10 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - The confstone team has been renamed pw
 - [Bugfix] Fixed a bug with a non-working link to the mod wiki
 - [Bugfix] Fixed a bug where checkpoints could cause a server crash
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.1": "
+- [Bugfix] Fixed a crash when switching to other dimensions (such as the crystal world and oblivion)
+- [Bugfix] Villages are no longer generated in the sunny kingdom
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
