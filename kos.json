@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.6.1",
-    "1.18.2-recommended": "2.6.1"
+    "1.18.2-latest": "2.6.2",
+    "1.18.2-recommended": "2.6.2"
   },
   "1.16.5": {
    "1.1.18": "
@@ -671,6 +671,12 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 "2.6.1": "
 - [Bugfix] Fixed a crash when switching to other dimensions (such as the crystal world and oblivion)
 - [Bugfix] Villages are no longer generated in the sunny kingdom
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.2": "
+- Added a new element - smoke
+- Updated the texture of the magnet master effect
+- The mod's logo has been updated
+- [Bugfix] Fixed a bug where a player could activate a stone if he had armor on him
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
