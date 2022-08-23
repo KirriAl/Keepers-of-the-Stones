@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Spirit",
-    "icon": "uknown_master.png",
+    "icon": "spirit_master.png",
     "color": {
       "value": -16763905,
       "falpha": 0.0
