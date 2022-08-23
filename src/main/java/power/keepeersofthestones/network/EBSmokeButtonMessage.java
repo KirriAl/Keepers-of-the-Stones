@@ -1,9 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
-import power.keepeersofthestones.procedures.SmokeGetProcedure;
-import power.keepeersofthestones.procedures.PreviousPage2Procedure;
+import power.keepeersofthestones.world.inventory.EBSmokeMenu;
+import power.keepeersofthestones.procedures.OpenLevelsAndSkillsPageProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -20,31 +19,31 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ChoiseMagicStonesPage3ButtonMessage {
+public class EBSmokeButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public ChoiseMagicStonesPage3ButtonMessage(FriendlyByteBuf buffer) {
+	public EBSmokeButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public ChoiseMagicStonesPage3ButtonMessage(int buttonID, int x, int y, int z) {
+	public EBSmokeButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(ChoiseMagicStonesPage3ButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(EBSmokeButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(ChoiseMagicStonesPage3ButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(EBSmokeButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -59,23 +58,19 @@ public class ChoiseMagicStonesPage3ButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = ChoiseMagicStonesPage3Menu.guistate;
+		HashMap guistate = EBSmokeMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 9) {
+		if (buttonID == 0) {
 
-			SmokeGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 10) {
-
-			PreviousPage2Procedure.execute(world, x, y, z, entity);
+			OpenLevelsAndSkillsPageProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(ChoiseMagicStonesPage3ButtonMessage.class, ChoiseMagicStonesPage3ButtonMessage::buffer,
-				ChoiseMagicStonesPage3ButtonMessage::new, ChoiseMagicStonesPage3ButtonMessage::handler);
+		PowerMod.addNetworkMessage(EBSmokeButtonMessage.class, EBSmokeButtonMessage::buffer, EBSmokeButtonMessage::new,
+				EBSmokeButtonMessage::handler);
 	}
 }

@@ -18531,6 +18531,32 @@
         ]
       },
       "path": "~/Music/MusicSoundtracks"
+    },
+    {
+      "name": "SmokeScreenUse",
+      "type": "procedure",
+      "sortid": 1097,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_screen_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Smoke"
+    },
+    {
+      "name": "EBSmoke",
+      "type": "gui",
+      "sortid": 1098,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eb_smoke",
+      "path": "~/ElementalBook"
     }
   ],
   "variable_elements": [
@@ -19462,8 +19488,8 @@
       "block.power.crystal_yellow": "Желтый кристалл",
       "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.gravity_boost": "Усиление Гравитации",
       "item.power.form_battery": "Батарея",
+      "item.power.gravity_boost": "Усиление Гравитации",
       "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
@@ -19481,16 +19507,16 @@
       "item.power.blue_flame_battery": "Батарея",
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Огненная Мантия",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
       "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
@@ -20178,8 +20204,8 @@
       "block.power.crystal_yellow": "Crystal Yellow",
       "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
-      "item.power.gravity_boost": "Gravity Boost",
       "item.power.form_battery": "Battery",
+      "item.power.gravity_boost": "Gravity Boost",
       "item.power.sun_battery": "Battery",
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
@@ -20197,16 +20223,16 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
       "item.power.mercury_liquid_bucket": "Mercury Liquid Bucket",
       "item.power.fire_chestplate": "Fire Chestplate",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",

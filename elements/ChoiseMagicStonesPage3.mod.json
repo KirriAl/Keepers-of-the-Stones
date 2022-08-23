@@ -18,7 +18,7 @@
           "height": 20,
           "name": "Spirit",
           "x": 51,
-          "y": 80
+          "y": 107
         }
       },
       {
@@ -64,7 +64,7 @@
           "height": 20,
           "name": "Aether",
           "x": 51,
-          "y": 107
+          "y": 134
         }
       },
       {
@@ -126,11 +126,14 @@
         "type": "button",
         "data": {
           "text": "Smoke",
+          "onClick": {
+            "name": "SmokeGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Smoke",
           "x": 51,
-          "y": 134
+          "y": 80
         }
       },
       {
@@ -177,7 +180,7 @@
           "use1Xscale": false,
           "name": "smoke_master.png",
           "x": 33,
-          "y": 134
+          "y": 80
         }
       }
     ],

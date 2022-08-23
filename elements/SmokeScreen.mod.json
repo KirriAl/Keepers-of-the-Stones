@@ -35,6 +35,9 @@
       "value": "CUSTOM:SmokeScreen"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "SmokeScreenUse"
+    }
   }
 }
