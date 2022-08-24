@@ -1,10 +1,14 @@
 
 package power.keepeersofthestones.command;
 
+import power.keepeersofthestones.procedures.VenusOnMeProcedure;
 import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
 import power.keepeersofthestones.procedures.ResetNonSelectProcedure;
-import power.keepeersofthestones.procedures.OpenMusicPlayerGUIProcedure;
+import power.keepeersofthestones.procedures.MoonOnMeProcedure;
+import power.keepeersofthestones.procedures.MarsOnMeProcedure;
 import power.keepeersofthestones.procedures.LevelSetProcedure;
+import power.keepeersofthestones.procedures.EnceladusOnMeProcedure;
+import power.keepeersofthestones.procedures.EarthOnMeProcedure;
 import power.keepeersofthestones.procedures.DemoteKeeperProcedure;
 import power.keepeersofthestones.procedures.AppointKeeperProcedure;
 
@@ -52,7 +56,7 @@ public class PWCommand {
 
 					ResetNonSelectProcedure.execute(arguments);
 					return 0;
-				})))).then(Commands.literal("level").then(Commands.literal("set").then(Commands.argument("name", EntityArgument.player())
+				})))).then(Commands.literal("set_level").then(Commands.argument("name", EntityArgument.player())
 						.then(Commands.argument("level", DoubleArgumentType.doubleArg()).executes(arguments -> {
 							ServerLevel world = arguments.getSource().getLevel();
 							double x = arguments.getSource().getPosition().x();
@@ -65,8 +69,8 @@ public class PWCommand {
 
 							LevelSetProcedure.execute(arguments, entity);
 							return 0;
-						})))))
-				.then(Commands.literal("music_player").executes(arguments -> {
+						}))))
+				.then(Commands.literal("planet").then(Commands.literal("earth").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -76,9 +80,57 @@ public class PWCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					OpenMusicPlayerGUIProcedure.execute(world, x, y, z, entity);
+					EarthOnMeProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("supreme_master")
+				})).then(Commands.literal("moon").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					MoonOnMeProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("venus").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					VenusOnMeProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("mars").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					MarsOnMeProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("enceladus").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					EnceladusOnMeProcedure.execute(entity);
+					return 0;
+				}))).then(Commands.literal("supreme_master")
 						.then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("true").executes(arguments -> {
 							ServerLevel world = arguments.getSource().getLevel();
 							double x = arguments.getSource().getPosition().x();

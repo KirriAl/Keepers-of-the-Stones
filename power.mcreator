@@ -11426,15 +11426,6 @@
       "path": "~/ElementalBattery"
     },
     {
-      "name": "Planet",
-      "type": "command",
-      "sortid": 726,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "planet",
-      "path": "~/Commands"
-    },
-    {
       "name": "PutItOnChargeOvernight",
       "type": "achievement",
       "sortid": 727,
