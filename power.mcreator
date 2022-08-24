@@ -11683,78 +11683,6 @@
       "path": "~/ReceivingStones"
     },
     {
-      "name": "WoodMagicBox",
-      "type": "block",
-      "sortid": 741,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_magic_box",
-      "path": "~/MagicBox"
-    },
-    {
-      "name": "WoodMagicBoxCraft",
-      "type": "recipe",
-      "sortid": 742,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_magic_box_craft",
-      "path": "~/MagicBox"
-    },
-    {
-      "name": "StoneMagicBox",
-      "type": "block",
-      "sortid": 743,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_magic_box",
-      "path": "~/MagicBox"
-    },
-    {
-      "name": "StoneMagicBoxCraft",
-      "type": "recipe",
-      "sortid": 744,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_magic_box_craft",
-      "path": "~/MagicBox"
-    },
-    {
-      "name": "IronMagicBox",
-      "type": "block",
-      "sortid": 745,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "iron_magic_box",
-      "path": "~/MagicBox"
-    },
-    {
-      "name": "IronMagicBoxCraft",
-      "type": "recipe",
-      "sortid": 746,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "iron_magic_box_craft",
-      "path": "~/MagicBox"
-    },
-    {
-      "name": "GoldMagicBox",
-      "type": "block",
-      "sortid": 747,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gold_magic_box",
-      "path": "~/MagicBox"
-    },
-    {
-      "name": "GoldMagicBoxCraft",
-      "type": "recipe",
-      "sortid": 748,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gold_magic_box_craft",
-      "path": "~/MagicBox"
-    },
-    {
       "name": "MagnetStone",
       "type": "item",
       "sortid": 32,
@@ -18595,6 +18523,15 @@
       "locked_code": false,
       "registry_name": "revenge",
       "path": "~/Enchantments"
+    },
+    {
+      "name": "Fitems",
+      "type": "tag",
+      "sortid": 1104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fitems",
+      "path": "~/Tags"
     }
   ],
   "variable_elements": [
@@ -19561,7 +19498,6 @@
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
-      "block.power.iron_magic_box": "Железная волшебная шкатулка",
       "item.power.form_chestplate": "Form Chestplate",
       "block.power.crystal_pink": "Розовый кристалл",
       "advancements.mighty_master.title": "Могучий Мастер",
@@ -19663,7 +19599,6 @@
       "effect.power.recharge_lightning_stone": "Перезарядка",
       "power.cultivation.water_lily.text": "Кувшинка",
       "item.power.fertilizer": "Удобрение",
-      "block.power.gold_magic_box": "Золотая волшебная шкатулка",
       "item.power.sand_battery": "Батарея",
       "biome.power.cretaceous_taiga": "Меловая Тайга",
       "item.power.gravity_battery": "Батарея",
@@ -19706,7 +19641,6 @@
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
       "advancements.forward_to_the_stars.title": "Вперед ко звездам!",
-      "block.power.stone_magic_box": "Каменная волшебная шкатулка",
       "subtitles.music4": "",
       "item.power.vacuum_leggings": "Ваакумные штаны",
       "power.spawn_animals.wolf.text": "Волк",
@@ -19862,7 +19796,6 @@
       "biome.power.crystallized_forest": "Кристаллизированный лес",
       "block.power.crystal_light_blue": "Голубой кристалл",
       "item.power.ocean_leggings": "Штаны Океана",
-      "block.power.wood_magic_box": "Деревянная волшебная шкатулка",
       "power.cultivation.oak.text": "Дуб",
       "item.power.ocean_stone": "Камень Океана",
       "effect.power.animals_master": "Мастер Животных",
@@ -20278,7 +20211,6 @@
       "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
-      "block.power.iron_magic_box": "Iron Magic Box",
       "item.power.form_chestplate": "Form Chestplate",
       "block.power.crystal_pink": "Crystal Pink",
       "advancements.mighty_master.title": "Mighty Master",
@@ -20380,7 +20312,6 @@
       "effect.power.recharge_lightning_stone": "Recharge",
       "item.power.fertilizer": "Fertilizer",
       "power.cultivation.water_lily.text": "Water Lily",
-      "block.power.gold_magic_box": "Gold Magic Box",
       "item.power.sand_battery": "Battery",
       "biome.power.cretaceous_taiga": "Cretaceous Taiga",
       "item.power.gravity_battery": "Battery",
@@ -20423,7 +20354,6 @@
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
       "advancements.forward_to_the_stars.title": "Forward to the Stars!",
-      "block.power.stone_magic_box": "Stone Magic Box",
       "subtitles.music4": "",
       "item.power.vacuum_leggings": "Vacuum Leggings",
       "power.spawn_animals.wolf.text": "Wolf",
@@ -20580,7 +20510,6 @@
       "biome.power.crystallized_forest": "Crystallized Forest",
       "block.power.crystal_light_blue": "Crystal Light Blue",
       "item.power.ocean_leggings": "Ocean Leggings",
-      "block.power.wood_magic_box": "Wood Magic Box",
       "power.cultivation.oak.text": "Oak",
       "item.power.ocean_stone": "Ocean Stone",
       "effect.power.animals_master": "Master of Animals",
@@ -21170,10 +21099,6 @@
       },
       {
         "name": "Magnet",
-        "children": []
-      },
-      {
-        "name": "MagicBox",
         "children": []
       },
       {
