@@ -27,8 +27,11 @@
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "Enchant"
+    },
     "onItemInInventoryTick": {
-      "name": "EnergiumBlockUse"
+      "name": "EnergiumItems"
     }
   }
 }

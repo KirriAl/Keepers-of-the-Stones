@@ -19,6 +19,7 @@ import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModFluids;
 import power.keepeersofthestones.init.PowerModFeatures;
 import power.keepeersofthestones.init.PowerModEntities;
+import power.keepeersofthestones.init.PowerModEnchantments;
 import power.keepeersofthestones.init.PowerModBlocks;
 import power.keepeersofthestones.init.PowerModBlockEntities;
 import power.keepeersofthestones.init.PowerModBiomes;
@@ -58,7 +59,7 @@ public class PowerMod {
 		PowerModBlockEntities.REGISTRY.register(bus);
 		PowerModFeatures.REGISTRY.register(bus);
 		PowerModFluids.REGISTRY.register(bus);
-
+		PowerModEnchantments.REGISTRY.register(bus);
 		PowerModMobEffects.REGISTRY.register(bus);
 
 		PowerModBiomes.REGISTRY.register(bus);
