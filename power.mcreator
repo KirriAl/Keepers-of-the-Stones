@@ -18523,15 +18523,6 @@
       "locked_code": false,
       "registry_name": "revenge",
       "path": "~/Enchantments"
-    },
-    {
-      "name": "Fitems",
-      "type": "tag",
-      "sortid": 1104,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fitems",
-      "path": "~/Tags"
     }
   ],
   "variable_elements": [
