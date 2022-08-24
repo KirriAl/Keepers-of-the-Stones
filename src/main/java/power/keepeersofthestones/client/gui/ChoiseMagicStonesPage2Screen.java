@@ -112,7 +112,7 @@ public class ChoiseMagicStonesPage2Screen extends AbstractContainerScreen<Choise
 		this.blit(ms, this.leftPos + 307, this.topPos + 87, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/plague_master.png"));
-		this.blit(ms, this.leftPos + 307, this.topPos + 114, 0, 0, 17, 17, 17, 17);
+		this.blit(ms, this.leftPos + 307, this.topPos + 114, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/gravity_master.png"));
 		this.blit(ms, this.leftPos + 307, this.topPos + 141, 0, 0, 16, 16, 16, 16);

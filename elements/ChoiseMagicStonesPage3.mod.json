@@ -182,6 +182,26 @@
           "x": 33,
           "y": 80
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spirit_master.png",
+          "use1Xscale": false,
+          "name": "spirit_master.png",
+          "x": 33,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "form_master.png",
+          "use1Xscale": false,
+          "name": "form_master.png",
+          "x": 33,
+          "y": 161
+        }
       }
     ],
     "gridSettings": {
