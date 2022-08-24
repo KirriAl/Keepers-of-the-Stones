@@ -18523,6 +18523,96 @@
       "locked_code": false,
       "registry_name": "revenge",
       "path": "~/Enchantments"
+    },
+    {
+      "name": "MergeBalance",
+      "type": "potioneffect",
+      "sortid": 1103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "merge_balance",
+      "path": "~/Balance"
+    },
+    {
+      "name": "Balance",
+      "type": "armor",
+      "sortid": 1104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balance",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Balance"
+    },
+    {
+      "name": "MergeBalanceEffectStart",
+      "type": "procedure",
+      "sortid": 1104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "merge_balance_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Balance"
+    },
+    {
+      "name": "MergeBalanceEffectEnd",
+      "type": "procedure",
+      "sortid": 1105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "merge_balance_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Balance"
     }
   ],
   "variable_elements": [
@@ -19454,13 +19544,14 @@
       "block.power.crystal_yellow": "Желтый кристалл",
       "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
-      "item.power.form_battery": "Батарея",
       "item.power.gravity_boost": "Усиление Гравитации",
+      "item.power.form_battery": "Батарея",
       "item.power.explode_leggings": "Нагрудник взрыва",
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.disco_ball": "Диско-шар",
+      "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Шип",
       "item.power.explosive_flow": "Взрывной Поток",
       "effect.power.recharge_water_stone": "Перезарядка",
@@ -19485,8 +19576,8 @@
       "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
-      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
+      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "item.power.form_chestplate": "Form Chestplate",
@@ -19554,6 +19645,7 @@
       "item.power.ethereal_staff": "Ethereal Staff",
       "item.power.earth_helmet": "Земляной Монокль",
       "item.power.water_flow": "Струя Воды",
+      "item.power.balance_leggings": "Balance Leggings",
       "item.power.animals_stone": "Камень Животных",
       "advancements.put_it_on_charge_overnight.descr": "Создайте зарядник для батарей",
       "item.power.redstone_bundle": "Мешок С Редстоуном",
@@ -19658,6 +19750,7 @@
       "item.power.sound_helmet": "Звуковая Маска",
       "item.power.metal_stone": "Камень Металла",
       "item.power.greenery_boots": "Лиственные ботинки",
+      "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
       "power.cultivation.jungle_tree.text": "Тропич. Дер.",
       "item.power.music_chestplate": "Music Chestplate",
@@ -20065,6 +20158,7 @@
       "item.power.acid_bucket": "Acid Bucket",
       "item.power.ice_helmet": "Ледяной Шарф",
       "item.power.obscurity": "Неясность",
+      "item.power.balance_chestplate": "Balance Chestplate",
       "item.power.increase_power": "Увеличение Силы",
       "item.power.destruction_stone": "Камень Разрушения",
       "effect.power.recharge_form_stone": "Перезарядка",
@@ -20138,6 +20232,7 @@
       "power.cultivation.label.text": "Выберите растение, чтобы получить",
       "item.power.eclipse": "Затмение",
       "item.power.aether_battery": "Батарея",
+      "item.power.balance_boots": "Balance Boots",
       "biome.power.mars_land": "Марсианская Земля",
       "effect.power.light_master": "Мастер Света",
       "item.power.aether_boots": "Aether Boots",
@@ -20167,13 +20262,14 @@
       "block.power.crystal_yellow": "Crystal Yellow",
       "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
-      "item.power.form_battery": "Battery",
       "item.power.gravity_boost": "Gravity Boost",
+      "item.power.form_battery": "Battery",
       "item.power.sun_battery": "Battery",
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.disco_ball": "Disco Ball",
+      "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
       "item.power.explosive_flow": "Explosive Flow",
       "effect.power.recharge_water_stone": "Recharge",
@@ -20198,8 +20294,8 @@
       "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Snow Golem Creator",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.form_chestplate": "Form Chestplate",
@@ -20267,6 +20363,7 @@
       "item.power.ethereal_staff": "Ethereal Staff",
       "item.power.earth_helmet": "Earth Helmet",
       "item.power.water_flow": "Water Flow",
+      "item.power.balance_leggings": "Balance Leggings",
       "item.power.animals_stone": "Animals Stone",
       "advancements.put_it_on_charge_overnight.descr": "Create a charger for batteries",
       "item.power.redstone_bundle": "Redstone Bundle",
@@ -20371,6 +20468,7 @@
       "item.power.sound_helmet": "Sound Helmet",
       "item.power.metal_stone": "Metal Stone",
       "item.power.greenery_boots": "Greenery Boots",
+      "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
       "power.cultivation.jungle_tree.text": "Jungle Tree",
       "item.power.music_chestplate": "Music Chestplate",
@@ -20780,6 +20878,7 @@
       "item.power.acid_bucket": "Acid Bucket",
       "item.power.ice_helmet": "Ice Helmet",
       "item.power.obscurity": "Obscurity",
+      "item.power.balance_chestplate": "Balance Chestplate",
       "item.power.increase_power": "Increase Power",
       "item.power.destruction_stone": "Destruction Stone",
       "effect.power.recharge_form_stone": "Recharge",
@@ -20853,6 +20952,7 @@
       "power.cultivation.label.text": "Select a plant to get",
       "item.power.eclipse": "Eclipse",
       "item.power.aether_battery": "Battery",
+      "item.power.balance_boots": "Balance Boots",
       "biome.power.mars_land": "Mars Land",
       "effect.power.light_master": "Master of Light",
       "item.power.aether_boots": "Aether Boots",
@@ -21149,13 +21249,17 @@
       {
         "name": "MagicKeys",
         "children": []
+      },
+      {
+        "name": "Balance",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.6.10.1",
+    "version": "2.6.10.2",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

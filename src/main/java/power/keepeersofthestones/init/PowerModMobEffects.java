@@ -74,6 +74,7 @@ import power.keepeersofthestones.potion.MushroomsMasterMobEffect;
 import power.keepeersofthestones.potion.MoonMasterMobEffect;
 import power.keepeersofthestones.potion.MistMasterMobEffect;
 import power.keepeersofthestones.potion.MetalMasterMobEffect;
+import power.keepeersofthestones.potion.MergeBalanceMobEffect;
 import power.keepeersofthestones.potion.MercuryMasterMobEffect;
 import power.keepeersofthestones.potion.MagnetMasterMobEffect;
 import power.keepeersofthestones.potion.LightningMasterMobEffect;
@@ -251,4 +252,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_FORM_STONE = REGISTRY.register("recharge_form_stone",
 			() -> new RechargeFormStoneMobEffect());
 	public static final RegistryObject<MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
+	public static final RegistryObject<MobEffect> MERGE_BALANCE = REGISTRY.register("merge_balance", () -> new MergeBalanceMobEffect());
 }

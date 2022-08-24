@@ -296,6 +296,7 @@ import power.keepeersofthestones.item.BlackHeartItem;
 import power.keepeersofthestones.item.BigSizeItem;
 import power.keepeersofthestones.item.BeeStingItem;
 import power.keepeersofthestones.item.BatonItem;
+import power.keepeersofthestones.item.BalanceItem;
 import power.keepeersofthestones.item.AnimalsStoneItem;
 import power.keepeersofthestones.item.AnimalsItem;
 import power.keepeersofthestones.item.AnimalsBatteryItem;
@@ -815,6 +816,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TRANSFORM_SPHERE = REGISTRY.register("transform_sphere", () -> new TransformSphereItem());
 	public static final RegistryObject<Item> LITTLE_SIZE = REGISTRY.register("little_size", () -> new LittleSizeItem());
 	public static final RegistryObject<Item> BIG_SIZE = REGISTRY.register("big_size", () -> new BigSizeItem());
+	public static final RegistryObject<Item> BALANCE_HELMET = REGISTRY.register("balance_helmet", () -> new BalanceItem.Helmet());
+	public static final RegistryObject<Item> BALANCE_CHESTPLATE = REGISTRY.register("balance_chestplate", () -> new BalanceItem.Chestplate());
+	public static final RegistryObject<Item> BALANCE_LEGGINGS = REGISTRY.register("balance_leggings", () -> new BalanceItem.Leggings());
+	public static final RegistryObject<Item> BALANCE_BOOTS = REGISTRY.register("balance_boots", () -> new BalanceItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
