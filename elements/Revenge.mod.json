@@ -26,10 +26,10 @@
         "value": "CUSTOM:EnergiumHoe"
       }
     ],
-    "isTreasureEnchantment": true,
+    "isTreasureEnchantment": false,
     "isCurse": false,
     "isAllowedOnBooks": true,
-    "canGenerateInLootTables": false,
-    "canVillagerTrade": false
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
   }
 }

@@ -25,19 +25,4 @@ public class RevengeEnchantment extends Enchantment {
 		return item == PowerModItems.ENERGIUM_SWORD.get() || item == PowerModItems.ENERGIUM_PICKAXE.get() || item == PowerModItems.ENERGIUM_AXE.get()
 				|| item == PowerModItems.ENERGIUM_SHOVEL.get() || item == PowerModItems.ENERGIUM_HOE.get();
 	}
-
-	@Override
-	public boolean isTreasureOnly() {
-		return true;
-	}
-
-	@Override
-	public boolean isDiscoverable() {
-		return false;
-	}
-
-	@Override
-	public boolean isTradeable() {
-		return false;
-	}
 }
