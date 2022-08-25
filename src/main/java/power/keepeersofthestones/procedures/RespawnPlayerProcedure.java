@@ -372,38 +372,6 @@ public class RespawnPlayerProcedure {
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_SUN_STONE.get(), 6000, 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new PowerModVariables.PlayerVariables())).creation) {
-					{
-						boolean _setval = false;
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.creation = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
-						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_CREATION_STONE.get(), 6000, 0, (false), (false)));
-				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new PowerModVariables.PlayerVariables())).destruction) {
-					{
-						boolean _setval = false;
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.destruction = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
-						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_DESTRUCTION_STONE.get(), 6000, 0, (false), (false)));
-				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).magnet) {
 					{
 						boolean _setval = false;
@@ -483,6 +451,40 @@ public class RespawnPlayerProcedure {
 					}
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE.get(), 6000, 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).creation) {
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.creation = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_CREATION_STONE.get(), 6000, 0, (false), (false)));
+				}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).destruction) {
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.destruction = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_DESTRUCTION_STONE.get(), 6000, 0, (false), (false)));
 				}
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).technology) {
