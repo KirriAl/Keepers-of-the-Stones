@@ -141,6 +141,8 @@ public class PowerModVariables {
 			clone.aether = original.aether;
 			clone.smoke = original.smoke;
 			clone.form = original.form;
+			clone.mind = original.mind;
+			clone.golden_dust = original.golden_dust;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -272,6 +274,8 @@ public class PowerModVariables {
 		public boolean aether_stone = false;
 		public boolean smoke_stone = false;
 		public boolean form_stone = false;
+		public boolean mind_stone = false;
+		public boolean golden_dust_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -334,6 +338,8 @@ public class PowerModVariables {
 			aether_stone = nbt.getBoolean("aether_stone");
 			smoke_stone = nbt.getBoolean("smoke_stone");
 			form_stone = nbt.getBoolean("form_stone");
+			mind_stone = nbt.getBoolean("mind_stone");
+			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
 		}
 
 		@Override
@@ -392,6 +398,8 @@ public class PowerModVariables {
 			nbt.putBoolean("aether_stone", aether_stone);
 			nbt.putBoolean("smoke_stone", smoke_stone);
 			nbt.putBoolean("form_stone", form_stone);
+			nbt.putBoolean("mind_stone", mind_stone);
+			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
 			return nbt;
 		}
 
@@ -555,6 +563,8 @@ public class PowerModVariables {
 		public boolean recharge_spell_time = false;
 		public boolean smoke = false;
 		public boolean form = false;
+		public boolean mind = false;
+		public boolean golden_dust = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -637,6 +647,8 @@ public class PowerModVariables {
 			nbt.putBoolean("recharge_spell_time", recharge_spell_time);
 			nbt.putBoolean("smoke", smoke);
 			nbt.putBoolean("form", form);
+			nbt.putBoolean("mind", mind);
+			nbt.putBoolean("golden_dust", golden_dust);
 			return nbt;
 		}
 
@@ -716,6 +728,8 @@ public class PowerModVariables {
 			recharge_spell_time = nbt.getBoolean("recharge_spell_time");
 			smoke = nbt.getBoolean("smoke");
 			form = nbt.getBoolean("form");
+			mind = nbt.getBoolean("mind");
+			golden_dust = nbt.getBoolean("golden_dust");
 		}
 	}
 
@@ -815,6 +829,8 @@ public class PowerModVariables {
 					variables.recharge_spell_time = message.data.recharge_spell_time;
 					variables.smoke = message.data.smoke;
 					variables.form = message.data.form;
+					variables.mind = message.data.mind;
+					variables.golden_dust = message.data.golden_dust;
 				}
 			});
 			context.setPacketHandled(true);

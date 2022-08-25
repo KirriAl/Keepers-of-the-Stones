@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "ectoplasm_attack",
+    "texture": "unknown",
     "customModelName": "Normal",
     "name": "Ectoplasm Attack",
     "specialInfo": [],
