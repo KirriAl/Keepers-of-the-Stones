@@ -9,20 +9,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.EquipmentSlot;
 
-public class RevengeEnchantment extends Enchantment {
-	public RevengeEnchantment(EquipmentSlot... slots) {
+public class IsolationEnchantment extends Enchantment {
+	public IsolationEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, slots);
-	}
-
-	@Override
-	public int getMaxLevel() {
-		return 3;
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
 		Item item = stack.getItem();
-		return item == PowerModItems.ENERGIUM_SWORD.get() || item == PowerModItems.ENERGIUM_PICKAXE.get() || item == PowerModItems.ENERGIUM_AXE.get()
+		return item == PowerModItems.ENERGIUM_PICKAXE.get() || item == PowerModItems.ENERGIUM_AXE.get() || item == PowerModItems.ENERGIUM_SWORD.get()
 				|| item == PowerModItems.ENERGIUM_SHOVEL.get() || item == PowerModItems.ENERGIUM_HOE.get();
 	}
 }

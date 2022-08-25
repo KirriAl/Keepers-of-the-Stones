@@ -18489,6 +18489,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       },
@@ -18613,6 +18617,15 @@
         ]
       },
       "path": "~/Balance"
+    },
+    {
+      "name": "Isolation",
+      "type": "enchantment",
+      "sortid": 1106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "isolation",
+      "path": "~/Enchantments"
     }
   ],
   "variable_elements": [
@@ -20163,6 +20176,7 @@
       "item.power.space_battery": "Батарея",
       "power.spawn_animals.label.text": "Выберите животное для вызова",
       "effect.power.music_master": "Мастер Музыки",
+      "enchantment.power.isolation": "Isolation",
       "item.power.sun_explode": "Солнечный Взрыв",
       "item.power.vacuum_sword": "Пустотный Меч",
       "block.power.crystal_green": "Зеленый кристалл",
@@ -20883,6 +20897,7 @@
       "item.power.space_battery": "Battery",
       "power.spawn_animals.label.text": "Choose an animal to summon ",
       "effect.power.music_master": "Master of Music",
+      "enchantment.power.isolation": "Isolation",
       "item.power.sun_explode": "Sun Explode",
       "item.power.vacuum_sword": "Vacuum Sword",
       "block.power.crystal_green": "Crystal Green",

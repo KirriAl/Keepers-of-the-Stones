@@ -2,22 +2,22 @@
   "_fv": 33,
   "_type": "enchantment",
   "definition": {
-    "name": "Revenge",
+    "name": "Isolation",
     "type": "WEAPON",
     "rarity": "UNCOMMON",
     "minLevel": 1,
-    "maxLevel": 3,
+    "maxLevel": 1,
     "damageModifier": 0,
     "compatibleEnchantments": [],
     "compatibleItems": [
-      {
-        "value": "CUSTOM:EnergiumSword"
-      },
       {
         "value": "CUSTOM:EnergiumPickaxe"
       },
       {
         "value": "CUSTOM:EnergiumAxe"
+      },
+      {
+        "value": "CUSTOM:EnergiumSword"
       },
       {
         "value": "CUSTOM:EnergiumShovel"
