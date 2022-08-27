@@ -19601,8 +19601,8 @@
       "item.power.blue_flame_battery": "Батарея",
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -19610,8 +19610,8 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "enchantment.power.revenge": "Возмездие",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
       "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
@@ -20176,7 +20176,7 @@
       "item.power.space_battery": "Батарея",
       "power.spawn_animals.label.text": "Выберите животное для вызова",
       "effect.power.music_master": "Мастер Музыки",
-      "enchantment.power.isolation": "Isolation",
+      "enchantment.power.isolation": "Изоляция",
       "item.power.sun_explode": "Солнечный Взрыв",
       "item.power.vacuum_sword": "Пустотный Меч",
       "block.power.crystal_green": "Зеленый кристалл",
@@ -21298,7 +21298,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.6.10.2",
+    "version": "2.6.10.3",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
@@ -21320,5 +21320,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200334313
+  "mcreatorVersion": 202200334417
 }
