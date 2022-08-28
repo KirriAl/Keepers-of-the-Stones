@@ -208,6 +208,16 @@
           "x": 33,
           "y": 161
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_dust_master.png",
+          "use1Xscale": false,
+          "name": "golden_dust_master.png",
+          "x": 123,
+          "y": 80
+        }
       }
     ],
     "gridSettings": {

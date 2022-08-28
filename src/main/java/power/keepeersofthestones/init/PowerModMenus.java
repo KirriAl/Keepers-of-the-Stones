@@ -19,6 +19,7 @@ import power.keepeersofthestones.world.inventory.EBTimeMenu;
 import power.keepeersofthestones.world.inventory.EBTeleportationMenu;
 import power.keepeersofthestones.world.inventory.EBTechnologyMenu;
 import power.keepeersofthestones.world.inventory.EBSunMenu;
+import power.keepeersofthestones.world.inventory.EBSpiritMenu;
 import power.keepeersofthestones.world.inventory.EBSpeedMenu;
 import power.keepeersofthestones.world.inventory.EBSpaceMenu;
 import power.keepeersofthestones.world.inventory.EBSoundMenu;
@@ -169,6 +170,7 @@ public class PowerModMenus {
 	public static final MenuType<BuildInMusicPlayerMenu> BUILD_IN_MUSIC_PLAYER = register("build_in_music_player",
 			(id, inv, extraData) -> new BuildInMusicPlayerMenu(id, inv, extraData));
 	public static final MenuType<EBSmokeMenu> EB_SMOKE = register("eb_smoke", (id, inv, extraData) -> new EBSmokeMenu(id, inv, extraData));
+	public static final MenuType<EBSpiritMenu> EB_SPIRIT = register("eb_spirit", (id, inv, extraData) -> new EBSpiritMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

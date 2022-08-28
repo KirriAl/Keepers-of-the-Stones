@@ -66,6 +66,9 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/form_master.png"));
 		this.blit(ms, this.leftPos + 19, this.topPos + 141, 0, 0, 16, 16, 16, 16);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/golden_dust_master.png"));
+		this.blit(ms, this.leftPos + 109, this.topPos + 60, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

@@ -19,6 +19,7 @@ import power.keepeersofthestones.client.gui.EBTimeScreen;
 import power.keepeersofthestones.client.gui.EBTeleportationScreen;
 import power.keepeersofthestones.client.gui.EBTechnologyScreen;
 import power.keepeersofthestones.client.gui.EBSunScreen;
+import power.keepeersofthestones.client.gui.EBSpiritScreen;
 import power.keepeersofthestones.client.gui.EBSpeedScreen;
 import power.keepeersofthestones.client.gui.EBSpaceScreen;
 import power.keepeersofthestones.client.gui.EBSoundScreen;
@@ -141,6 +142,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.CUSTOM_MUSIC_PLAYER, CustomMusicPlayerScreen::new);
 			MenuScreens.register(PowerModMenus.BUILD_IN_MUSIC_PLAYER, BuildInMusicPlayerScreen::new);
 			MenuScreens.register(PowerModMenus.EB_SMOKE, EBSmokeScreen::new);
+			MenuScreens.register(PowerModMenus.EB_SPIRIT, EBSpiritScreen::new);
 		});
 	}
 }

@@ -18626,6 +18626,15 @@
       "locked_code": false,
       "registry_name": "isolation",
       "path": "~/Enchantments"
+    },
+    {
+      "name": "EBSpirit",
+      "type": "gui",
+      "sortid": 1107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eb_spirit",
+      "path": "~/ElementalBook"
     }
   ],
   "variable_elements": [
