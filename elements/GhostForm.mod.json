@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "ghost_form",
     "customModelName": "Normal",
     "name": "Ghost Form",
     "rarity": "COMMON",
