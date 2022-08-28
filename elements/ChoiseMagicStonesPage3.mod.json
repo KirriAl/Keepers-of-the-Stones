@@ -14,6 +14,9 @@
         "type": "button",
         "data": {
           "text": "Spirit",
+          "onClick": {
+            "name": "SpiritGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Spirit",
@@ -93,6 +96,9 @@
         "type": "button",
         "data": {
           "text": "Blue Flame",
+          "onClick": {
+            "name": "BlueFlameGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Blue Flame",

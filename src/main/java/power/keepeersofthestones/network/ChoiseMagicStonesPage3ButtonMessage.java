@@ -2,8 +2,10 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
+import power.keepeersofthestones.procedures.SpiritGetProcedure;
 import power.keepeersofthestones.procedures.SmokeGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPage2Procedure;
+import power.keepeersofthestones.procedures.BlueFlameGetProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -63,6 +65,14 @@ public class ChoiseMagicStonesPage3ButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			SpiritGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 6) {
+
+			BlueFlameGetProcedure.execute(world, entity);
+		}
 		if (buttonID == 9) {
 
 			SmokeGetProcedure.execute(world, entity);
