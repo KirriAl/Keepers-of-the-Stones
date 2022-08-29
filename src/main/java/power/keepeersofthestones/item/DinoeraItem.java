@@ -14,7 +14,7 @@ import net.minecraft.core.BlockPos;
 
 public class DinoeraItem extends Item {
 	public DinoeraItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_DIMENSIONS).durability(64));
+		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).durability(64));
 	}
 
 	@Override

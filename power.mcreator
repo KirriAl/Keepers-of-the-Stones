@@ -14137,7 +14137,7 @@
       "name": "CrystallizedForest",
       "type": "biome",
       "sortid": 884,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "crystallized_forest",
       "path": "~/Dimensions"
@@ -17810,15 +17810,6 @@
       "path": "~/Energium"
     },
     {
-      "name": "Dimensions",
-      "type": "tab",
-      "sortid": 1078,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dimensions",
-      "path": "~/Dimensions"
-    },
-    {
       "name": "Technologies",
       "type": "tab",
       "sortid": 1079,
@@ -19868,7 +19859,6 @@
       "item.power.moon_axe": "Лунная Секира",
       "power.sound_emitate.zombie.text": "Зомби",
       "item.power.techno_pickaxe": "Техно-Кирка",
-      "itemGroup.tabdimensions": "Измерения",
       "power.building.streetlight.text": "Уличный Фонарь",
       "effect.power.lava_master": "Мастер Лавы",
       "effect.power.blood_master": "Мастер Крови",
@@ -20576,7 +20566,6 @@
       "item.power.moon_axe": "Moon Axe",
       "power.sound_emitate.zombie.text": "Zombie",
       "item.power.techno_pickaxe": "Techno Pickaxe",
-      "itemGroup.tabdimensions": "Dimensions",
       "power.building.streetlight.text": "Streetlight",
       "effect.power.lava_master": "Master of Lava",
       "effect.power.blood_master": "Master of Blood",
