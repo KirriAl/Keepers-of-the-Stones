@@ -12587,6 +12587,27 @@
       "path": "~/Dimensions"
     },
     {
+      "name": "Crystallized",
+      "type": "dimension",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized",
+      "metadata": {
+        "ep": true
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "CrystallizedCraft",
+      "type": "recipe",
+      "sortid": 797,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystallized_craft",
+      "path": "~/Dimensions"
+    },
+    {
       "name": "DinoeraCraft",
       "type": "recipe",
       "sortid": 798,
@@ -12602,6 +12623,27 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "oblivion_forest",
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "Oblivion",
+      "type": "dimension",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oblivion",
+      "metadata": {
+        "ep": true
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "OblivionCraft",
+      "type": "recipe",
+      "sortid": 800,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oblivion_craft",
       "path": "~/Dimensions"
     },
     {
@@ -14110,6 +14152,114 @@
       "path": "~/ElementalBook"
     },
     {
+      "name": "CrystalBlue",
+      "type": "block",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_blue",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalBrown",
+      "type": "block",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_brown",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalGray",
+      "type": "block",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_gray",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalGreen",
+      "type": "block",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_green",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalLightBlue",
+      "type": "block",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_light_blue",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalLime",
+      "type": "block",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_lime",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalOrange",
+      "type": "block",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_orange",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalPink",
+      "type": "block",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_pink",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalRed",
+      "type": "block",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_red",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalPurple",
+      "type": "block",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_purple",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalViolet",
+      "type": "block",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_violet",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
+      "name": "CrystalYellow",
+      "type": "block",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_yellow",
+      "path": "~/Dimensions/CrystalizedBlocks"
+    },
+    {
       "name": "CrystallizedForest",
       "type": "biome",
       "sortid": 884,
@@ -14946,6 +15096,27 @@
       "locked_code": false,
       "registry_name": "choosestone",
       "path": "~/Commands"
+    },
+    {
+      "name": "SunnyKingdom",
+      "type": "dimension",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunny_kingdom",
+      "metadata": {
+        "ep": true
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "SunnyKingdomCraft",
+      "type": "recipe",
+      "sortid": 930,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunny_kingdom_craft",
+      "path": "~/Dimensions"
     },
     {
       "name": "SunPlains",
@@ -17774,6 +17945,15 @@
       "path": "~/Energium"
     },
     {
+      "name": "Dimensions",
+      "type": "tab",
+      "sortid": 1078,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimensions",
+      "path": "~/Dimensions"
+    },
+    {
       "name": "Technologies",
       "type": "tab",
       "sortid": 1079,
@@ -19407,6 +19587,7 @@
   ],
   "language_map": {
     "ru_ru": {
+      "block.power.crystal_yellow": "Желтый кристалл",
       "item.power.energy_leggings": "Энергетические Поножи",
       "item.power.moon_battery": "Батарея",
       "item.power.gravity_boost": "Усиление Гравитации",
@@ -19429,8 +19610,8 @@
       "item.power.blue_flame_battery": "Батарея",
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -19438,14 +19619,15 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "enchantment.power.revenge": "Возмездие",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Батарея",
       "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "item.power.form_chestplate": "Form Chestplate",
+      "block.power.crystal_pink": "Розовый кристалл",
       "advancements.mighty_master.title": "Могучий Мастер",
       "item.power.magnet_battery": "Батарея",
       "item.power.black_hole": "Черная Дыра",
@@ -19594,6 +19776,7 @@
       "item.power.quicksand": "Зыбучий Песок",
       "subtitles.music5": "",
       "item.power.fire_battery": "Батарея",
+      "block.power.crystal_gray": "Серый кристалл",
       "subtitles.music2": "",
       "item.power.blood_reaper": "Кровавый Жнец",
       "subtitles.music3": "",
@@ -19644,6 +19827,7 @@
       "advancements.super_charge.title": "Супер Заряд!",
       "item.power.smoke_helmet": "Smoke Helmet",
       "item.power.glow_spawn_egg": "Яйцо призыва Светляка",
+      "item.power.oblivion": "Огниво портала (Обливион)",
       "item.power.sound_barrier": "Звуковой барьер",
       "item.power.injection": "Инъекция",
       "item.power.form_boots": "Form Boots",
@@ -19699,6 +19883,7 @@
       "item.power.mushrooms_battery": "Батарея",
       "item.power.gravity_reduction": "Уменьшение Гравитации",
       "item.power.spirit_leggings": "Spirit Leggings",
+      "block.power.crystal_brown": "Коричневый кристалл",
       "item.power.ectoplasm_attack": "Ectoplasm Attack",
       "item.power.ice_stone": "Камень Льда",
       "effect.time_stop_effect": "Time Stop",
@@ -19739,6 +19924,7 @@
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Мастер Огня",
       "biome.power.crystallized_forest": "Кристаллизированный лес",
+      "block.power.crystal_light_blue": "Голубой кристалл",
       "item.power.ocean_leggings": "Штаны Океана",
       "power.cultivation.oak.text": "Дуб",
       "item.power.ocean_stone": "Камень Океана",
@@ -19780,6 +19966,7 @@
       "block.power.acid": "Acid",
       "item.power.form_leggings": "Form Leggings",
       "effect.power.vacuum_master": "Мастер Пустоты",
+      "block.power.crystal_orange": "Оранжевый кристалл",
       "item.power.golden_crossbow": "Золотой Арбалет",
       "item.power.lightning_leggings": "Штаны Молнии",
       "item.power.water_katana": "Водяная Катана",
@@ -19797,6 +19984,7 @@
       "effect.power.recharge_sand_stone": "Перезарядка",
       "block.power.sound_barrier_block": "Блок звукового барьера",
       "item.power.gravity_leggings": "Gravity Leggings",
+      "block.power.crystal_purple": "Пурпурный кристалл",
       "item.power.fire_helmet": "Огненная корона",
       "effect.power.recharge_mist_stone": "Перезарядка",
       "power.building.butcher_shop.text": "Мясная Лавка",
@@ -19822,6 +20010,7 @@
       "item.power.moon_axe": "Лунная Секира",
       "power.sound_emitate.zombie.text": "Зомби",
       "item.power.techno_pickaxe": "Техно-Кирка",
+      "itemGroup.tabdimensions": "Измерения",
       "power.building.streetlight.text": "Уличный Фонарь",
       "effect.power.lava_master": "Мастер Лавы",
       "effect.power.blood_master": "Мастер Крови",
@@ -19862,6 +20051,7 @@
       "item.power.plague_boots": "Plague Boots",
       "item.power.space_chestplate": "Космический нагрудник",
       "item.power.shadow_spawn_egg": "Яйцо призыва Тени",
+      "block.power.crystal_lime": "Лаймовый кристалл",
       "item.power.mushroom_saturation": "Грибное Насыщение",
       "item.power.gravity_chestplate": "Gravity Chestplate",
       "power.spawn_animals.cow.text": "Корова",
@@ -19919,6 +20109,7 @@
       "item.power.animals_helmet": "Животный шлем",
       "effect.power.gravity_master": "Мастер Гравитации",
       "item.power.teleportation_battery": "Батарея",
+      "block.power.crystal_red": "Красный кристалл",
       "item.power.aether_leggings": "Aether Leggings",
       "item.power.form_helmet": "Form Helmet",
       "item.power.water_drop": "Капли Воды",
@@ -19948,6 +20139,7 @@
       "item.power.water_stone": "Камень Воды",
       "effect.power.energy_master": "Мастер Энергии",
       "subtitles.raptor.dead": "",
+      "item.power.sunny_kingdom": "Огниво портала (Солнечное королевство)",
       "item.power.shadow_stone": "Камень Тени",
       "block.power.battery_charger": "Зарядник для батарей",
       "effect.power.rain_fly": "Дождевой Полёт",
@@ -19956,6 +20148,7 @@
       "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Мастер Магнита",
       "item.power.ice_boots": "Ледяные Сапоги",
+      "block.power.crystal_blue": "Синий кристалл",
       "effect.power.recharge_aether_stone": "Перезарядка",
       "item.power.earth_chestplate": "Земляной Желет",
       "item.power.ocean_helmet": "Шлем Океана",
@@ -19973,6 +20166,7 @@
       "item.power.ocean_boots": "Ботинки Океана",
       "item.power.amber_battery": "Батарея",
       "effect.power.moon_master": "Мастер Луны",
+      "item.power.crystallized": "Огниво портала (Кристаллизованный мир)",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
       "item.power.energy_stone": "Камень Энергии",
       "item.power.energy_absorption": "Поглощение Энергии",
@@ -19994,6 +20188,7 @@
       "enchantment.power.isolation": "Изоляция",
       "item.power.sun_explode": "Солнечный Взрыв",
       "item.power.vacuum_sword": "Пустотный Меч",
+      "block.power.crystal_green": "Зеленый кристалл",
       "item.power.fire_sword": "Меч Огня",
       "item.power.vacuum_chestplate": "Ваакумный нагрудник",
       "item.power.music_boots": "Music Boots",
@@ -20101,6 +20296,7 @@
       "effect.power.time_master_effect": "Мастер Времени",
       "item.power.acceleration_time": "Ускорение Времени",
       "item.power.mist_stone": "Камень Тумана",
+      "block.power.crystal_violet": "Фиолетовый кристалл",
       "entity.power.rocket": "Ракета",
       "item.power.storm": "Шторм",
       "item.power.water_leggings": "Водные Штаны",
@@ -20110,6 +20306,7 @@
       "item.power.shuriken": "Сюрикен"
     },
     "en_us": {
+      "block.power.crystal_yellow": "Crystal Yellow",
       "item.power.energy_leggings": "Energy Leggings",
       "item.power.moon_battery": "Battery",
       "item.power.gravity_boost": "Gravity Boost",
@@ -20132,8 +20329,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -20141,14 +20338,15 @@
       "item.power.fire_chestplate": "Fire Chestplate",
       "enchantment.power.revenge": "Revenge",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.form_chestplate": "Form Chestplate",
+      "block.power.crystal_pink": "Crystal Pink",
       "advancements.mighty_master.title": "Mighty Master",
       "item.power.magnet_battery": "Battery",
       "item.power.black_hole": "Black Hole",
@@ -20297,6 +20495,7 @@
       "item.power.quicksand": "Quicksand",
       "subtitles.music5": "",
       "item.power.fire_battery": "Battery",
+      "block.power.crystal_gray": "Crystal Gray",
       "subtitles.music2": "",
       "item.power.blood_reaper": "Blood Reaper",
       "subtitles.music3": "",
@@ -20347,6 +20546,7 @@
       "advancements.super_charge.title": "Super Charge!",
       "item.power.smoke_helmet": "Smoke Helmet",
       "item.power.glow_spawn_egg": "Glow Spawn Egg",
+      "item.power.oblivion": "Oblivion Portal Igniter",
       "item.power.sound_barrier": "Sound Barrier",
       "item.power.injection": "Injection",
       "item.power.form_boots": "Form Boots",
@@ -20403,6 +20603,7 @@
       "item.power.mushrooms_battery": "Battery",
       "item.power.gravity_reduction": "Gravity Reduction",
       "item.power.spirit_leggings": "Spirit Leggings",
+      "block.power.crystal_brown": "Crystal Brown",
       "item.power.ectoplasm_attack": "Ectoplasm Attack",
       "item.power.ice_stone": "Ice Stone",
       "effect.time_stop_effect": "Time Stop",
@@ -20443,6 +20644,7 @@
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Master of Fire",
       "biome.power.crystallized_forest": "Crystallized Forest",
+      "block.power.crystal_light_blue": "Crystal Light Blue",
       "item.power.ocean_leggings": "Ocean Leggings",
       "power.cultivation.oak.text": "Oak",
       "item.power.ocean_stone": "Ocean Stone",
@@ -20484,6 +20686,7 @@
       "block.power.acid": "Acid",
       "item.power.form_leggings": "Form Leggings",
       "effect.power.vacuum_master": "Master of Vacuum",
+      "block.power.crystal_orange": "Crystal Orange",
       "item.power.golden_crossbow": "Golden Crossbow",
       "item.power.lightning_leggings": "Lightning Leggings",
       "item.power.water_katana": "Water Katana",
@@ -20501,6 +20704,7 @@
       "effect.power.recharge_sand_stone": "Recharge",
       "block.power.sound_barrier_block": "Sound Barrier Block",
       "item.power.gravity_leggings": "Gravity Leggings",
+      "block.power.crystal_purple": "Crystal Purple",
       "item.power.fire_helmet": "Fire Helmet",
       "effect.power.recharge_mist_stone": "Recharge",
       "power.building.butcher_shop.text": "Butcher Shop",
@@ -20526,6 +20730,7 @@
       "item.power.moon_axe": "Moon Axe",
       "power.sound_emitate.zombie.text": "Zombie",
       "item.power.techno_pickaxe": "Techno Pickaxe",
+      "itemGroup.tabdimensions": "Dimensions",
       "power.building.streetlight.text": "Streetlight",
       "effect.power.lava_master": "Master of Lava",
       "effect.power.blood_master": "Master of Blood",
@@ -20566,6 +20771,7 @@
       "item.power.plague_boots": "Plague Boots",
       "item.power.space_chestplate": "Space Chestplate",
       "item.power.shadow_spawn_egg": "Shadow Spawn Egg",
+      "block.power.crystal_lime": "Crystal Lime",
       "item.power.mushroom_saturation": "Mushroom Saturation",
       "item.power.gravity_chestplate": "Gravity Chestplate",
       "power.spawn_animals.cow.text": "Cow",
@@ -20623,6 +20829,7 @@
       "item.power.animals_helmet": "Animals Helmet",
       "effect.power.gravity_master": "Master of Gravity",
       "item.power.teleportation_battery": "Battery",
+      "block.power.crystal_red": "Crystal Red",
       "item.power.aether_leggings": "Aether Leggings",
       "item.power.form_helmet": "Form Helmet",
       "item.power.water_drop": "Water Drops",
@@ -20653,6 +20860,7 @@
       "item.power.water_stone": "Water Stone",
       "effect.power.energy_master": "Master of Energy",
       "subtitles.raptor.dead": "",
+      "item.power.sunny_kingdom": "Sunny Kingdom Portal Igniter",
       "item.power.shadow_stone": "Shadow Stone",
       "block.power.battery_charger": "Battery Charger",
       "effect.power.rain_fly": "RainFly",
@@ -20661,6 +20869,7 @@
       "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Master of Magnet",
       "item.power.ice_boots": "Ice Boots",
+      "block.power.crystal_blue": "Crystal Blue",
       "effect.power.recharge_aether_stone": "Recharge",
       "item.power.earth_chestplate": "Earth Chestplate",
       "item.power.ocean_helmet": "Ocean Helmet",
@@ -20678,6 +20887,7 @@
       "item.power.ocean_boots": "Ocean Boots",
       "item.power.amber_battery": "Battery",
       "effect.power.moon_master": "Master of the Moon",
+      "item.power.crystallized": "Crystallized Portal Igniter",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
       "item.power.energy_absorption": "Energy Absorption",
@@ -20699,6 +20909,7 @@
       "enchantment.power.isolation": "Isolation",
       "item.power.sun_explode": "Sun Explode",
       "item.power.vacuum_sword": "Vacuum Sword",
+      "block.power.crystal_green": "Crystal Green",
       "item.power.fire_sword": "Fire Sword",
       "item.power.vacuum_chestplate": "Vacuum Chestplate",
       "item.power.music_boots": "Music Boots",
@@ -20806,6 +21017,7 @@
       "effect.power.time_master_effect": "Master of Time",
       "item.power.acceleration_time": "Acceleration Time",
       "item.power.mist_stone": "Mist Stone",
+      "block.power.crystal_violet": "Crystal Violet",
       "entity.power.rocket": "Rocket",
       "item.power.storm": "Storm",
       "item.power.water_leggings": "Water Leggings",
@@ -21046,7 +21258,12 @@
       },
       {
         "name": "Dimensions",
-        "children": []
+        "children": [
+          {
+            "name": "CrystalizedBlocks",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Music",

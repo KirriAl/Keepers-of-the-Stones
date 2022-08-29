@@ -52,7 +52,7 @@
     },
     "igniterName": "Dinoera Portal Igniter",
     "igniterTab": {
-      "value": "CUSTOM:Artifacts"
+      "value": "CUSTOM:Dimensions"
     },
     "texture": "dinoera_flint_and_steel",
     "portalTexture": "dinoera_portal",

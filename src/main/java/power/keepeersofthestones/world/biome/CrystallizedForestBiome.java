@@ -4,6 +4,7 @@ package power.keepeersofthestones.world.biome;
 import power.keepeersofthestones.world.features.treedecorators.CrystallizedForestTrunkDecorator;
 import power.keepeersofthestones.world.features.treedecorators.CrystallizedForestLeaveDecorator;
 import power.keepeersofthestones.world.features.treedecorators.CrystallizedForestFruitDecorator;
+import power.keepeersofthestones.init.PowerModBlocks;
 
 import net.minecraft.world.level.levelgen.placement.SurfaceWaterDepthFilter;
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
@@ -38,16 +39,18 @@ public class CrystallizedForestBiome {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-16711783).waterColor(-16737895).waterFogColor(-16737895)
 				.skyColor(-16711783).foliageColorOverride(-16724839).grassColorOverride(-16724839).build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
-		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacementUtils.register("power:tree_crystallized_forest",
-				FeatureUtils.register("power:tree_crystallized_forest", Feature.TREE,
-						new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(Blocks.OAK_LOG.defaultBlockState()),
-								new StraightTrunkPlacer(4, 2, 0), BlockStateProvider.simple(Blocks.OAK_LEAVES.defaultBlockState()),
+		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+				PlacementUtils.register("power:tree_crystallized_forest", FeatureUtils.register("power:tree_crystallized_forest", Feature.TREE,
+						new TreeConfiguration.TreeConfigurationBuilder(
+								BlockStateProvider.simple(PowerModBlocks.CRYSTAL_BROWN.get().defaultBlockState()), new StraightTrunkPlacer(5, 2, 0),
+								BlockStateProvider.simple(PowerModBlocks.CRYSTAL_GREEN.get().defaultBlockState()),
 								new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), new TwoLayersFeatureSize(1, 0, 1))
 								.decorators(ImmutableList.of(CrystallizedForestLeaveDecorator.INSTANCE, CrystallizedForestTrunkDecorator.INSTANCE,
 										CrystallizedForestFruitDecorator.INSTANCE))
 								.build()),
-				List.of(CountPlacement.of(4), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(0),
-						PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING), BiomeFilter.biome())));
+						List.of(CountPlacement.of(4), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(0),
+								PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING),
+								BiomeFilter.biome())));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				PlacementUtils.register("power:grass_crystallized_forest", VegetationFeatures.PATCH_GRASS,
 						List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,

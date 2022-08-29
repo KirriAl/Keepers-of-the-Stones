@@ -18,6 +18,7 @@ import java.util.HashMap;
 public class PowerModSounds {
 	public static Map<ResourceLocation, SoundEvent> REGISTRY = new HashMap<>();
 	static {
+		REGISTRY.put(new ResourceLocation("power", "stone_deactivation"), new SoundEvent(new ResourceLocation("power", "stone_deactivation")));
 		REGISTRY.put(new ResourceLocation("power", "powerful_stone"), new SoundEvent(new ResourceLocation("power", "powerful_stone")));
 		REGISTRY.put(new ResourceLocation("power", "tyrannosaurus_rex.hurt"),
 				new SoundEvent(new ResourceLocation("power", "tyrannosaurus_rex.hurt")));
@@ -38,7 +39,6 @@ public class PowerModSounds {
 		REGISTRY.put(new ResourceLocation("power", "music10"), new SoundEvent(new ResourceLocation("power", "music10")));
 		REGISTRY.put(new ResourceLocation("power", "stone_activation"), new SoundEvent(new ResourceLocation("power", "stone_activation")));
 		REGISTRY.put(new ResourceLocation("power", "rocket.fly"), new SoundEvent(new ResourceLocation("power", "rocket.fly")));
-		REGISTRY.put(new ResourceLocation("power", "stone_deactivation"), new SoundEvent(new ResourceLocation("power", "stone_deactivation")));
 	}
 
 	@SubscribeEvent

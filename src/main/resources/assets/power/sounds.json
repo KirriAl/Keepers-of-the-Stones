@@ -1,4 +1,14 @@
 {
+  "stone_deactivation": {
+    "category": "player",
+    "subtitle": "subtitles.stone_deactivation",
+    "sounds": [
+      {
+        "name": "power:stone_deactivation",
+        "stream": false
+      }
+    ]
+  },
   "powerful_stone": {
     "category": "music",
     "sounds": [
@@ -160,16 +170,6 @@
     "sounds": [
       {
         "name": "power:rocket.fly",
-        "stream": false
-      }
-    ]
-  },
-  "stone_deactivation": {
-    "category": "player",
-    "subtitle": "subtitles.stone_deactivation",
-    "sounds": [
-      {
-        "name": "power:stone_deactivation",
         "stream": false
       }
     ]

@@ -71,7 +71,7 @@
     "cactiPerChunk": 0,
     "treesPerChunk": 4,
     "vanillaTreeType": "Default",
-    "treeType": 0,
+    "treeType": 1,
     "minHeight": 5,
     "treeStem": {
       "value": "CUSTOM:CrystalBrown"

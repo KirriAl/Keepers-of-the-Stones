@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "power:block/sunny_kingdom_portal_ew"
+    },
+    "axis=x": {
+      "model": "power:block/sunny_kingdom_portal_ns"
+    }
+  }
+}
