@@ -19433,14 +19433,6 @@
   ],
   "sound_elements": [
     {
-      "name": "stone_deactivation",
-      "files": [
-        "stone_deactivation"
-      ],
-      "category": "player",
-      "subtitle": "Stone been deactivation"
-    },
-    {
       "name": "powerful_stone",
       "files": [
         "7ef0c7b9f11f69a"
@@ -19583,6 +19575,14 @@
       ],
       "category": "neutral",
       "subtitle": "The rocket was launched into space"
+    },
+    {
+      "name": "stone_deactivation",
+      "files": [
+        "stone_deactivation"
+      ],
+      "category": "player",
+      "subtitle": "Stone been deactivation"
     }
   ],
   "language_map": {
