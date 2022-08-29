@@ -5950,6 +5950,14 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -21132,7 +21140,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.6.10.4",
+    "version": "2.6.10.5",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

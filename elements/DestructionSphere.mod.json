@@ -35,9 +35,6 @@
       "value": "CUSTOM:DestructionSphere"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": "",
-    "onBulletHitsBlock": {
-      "name": "DestructionPowerUse"
-    }
+    "customBulletModelTexture": ""
   }
 }
