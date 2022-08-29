@@ -44,6 +44,6 @@
     },
     "texture": "crystal_flint_and_steel",
     "portalTexture": "crystallized_portal",
-    "enablePortal": true
+    "enablePortal": false
   }
 }

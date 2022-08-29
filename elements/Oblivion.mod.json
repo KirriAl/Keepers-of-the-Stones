@@ -47,6 +47,6 @@
     },
     "texture": "oblivion_flint_and_steel",
     "portalTexture": "oblivion_portal",
-    "enablePortal": true
+    "enablePortal": false
   }
 }

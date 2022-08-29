@@ -37,6 +37,6 @@
     },
     "texture": "sun_kingdom_flint_and_steel",
     "portalTexture": "sun_kingdom_portal",
-    "enablePortal": true
+    "enablePortal": false
   }
 }
