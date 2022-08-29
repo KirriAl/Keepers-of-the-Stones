@@ -218,6 +218,16 @@
           "x": 123,
           "y": 80
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mind_master.png",
+          "use1Xscale": false,
+          "name": "mind_master.png",
+          "x": 123,
+          "y": 53
+        }
       }
     ],
     "gridSettings": {
