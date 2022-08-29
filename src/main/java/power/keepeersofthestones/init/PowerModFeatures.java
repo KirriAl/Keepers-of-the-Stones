@@ -5,18 +5,6 @@
 package power.keepeersofthestones.init;
 
 import power.keepeersofthestones.world.features.ores.EnergiumOreFeature;
-import power.keepeersofthestones.world.features.ores.CrystalYellowFeature;
-import power.keepeersofthestones.world.features.ores.CrystalVioletFeature;
-import power.keepeersofthestones.world.features.ores.CrystalRedFeature;
-import power.keepeersofthestones.world.features.ores.CrystalPurpleFeature;
-import power.keepeersofthestones.world.features.ores.CrystalPinkFeature;
-import power.keepeersofthestones.world.features.ores.CrystalOrangeFeature;
-import power.keepeersofthestones.world.features.ores.CrystalLimeFeature;
-import power.keepeersofthestones.world.features.ores.CrystalLightBlueFeature;
-import power.keepeersofthestones.world.features.ores.CrystalGreenFeature;
-import power.keepeersofthestones.world.features.ores.CrystalGrayFeature;
-import power.keepeersofthestones.world.features.ores.CrystalBrownFeature;
-import power.keepeersofthestones.world.features.ores.CrystalBlueFeature;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -43,31 +31,6 @@ public class PowerModFeatures {
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
 	public static final RegistryObject<Feature<?>> ENERGIUM_ORE = register("energium_ore", EnergiumOreFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.UNDERGROUND_ORES, EnergiumOreFeature.GENERATE_BIOMES, EnergiumOreFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_BLUE = register("crystal_blue", CrystalBlueFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalBlueFeature.GENERATE_BIOMES, CrystalBlueFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_BROWN = register("crystal_brown", CrystalBrownFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalBrownFeature.GENERATE_BIOMES, CrystalBrownFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_GRAY = register("crystal_gray", CrystalGrayFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalGrayFeature.GENERATE_BIOMES, CrystalGrayFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_GREEN = register("crystal_green", CrystalGreenFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalGreenFeature.GENERATE_BIOMES, CrystalGreenFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_LIGHT_BLUE = register("crystal_light_blue", CrystalLightBlueFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, CrystalLightBlueFeature.GENERATE_BIOMES,
-					CrystalLightBlueFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_LIME = register("crystal_lime", CrystalLimeFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalLimeFeature.GENERATE_BIOMES, CrystalLimeFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_ORANGE = register("crystal_orange", CrystalOrangeFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalOrangeFeature.GENERATE_BIOMES, CrystalOrangeFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_PINK = register("crystal_pink", CrystalPinkFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalPinkFeature.GENERATE_BIOMES, CrystalPinkFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_PURPLE = register("crystal_purple", CrystalPurpleFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalPurpleFeature.GENERATE_BIOMES, CrystalPurpleFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_RED = register("crystal_red", CrystalRedFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, CrystalRedFeature.GENERATE_BIOMES, CrystalRedFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_VIOLET = register("crystal_violet", CrystalVioletFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalVioletFeature.GENERATE_BIOMES, CrystalVioletFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> CRYSTAL_YELLOW = register("crystal_yellow", CrystalYellowFeature::feature, new FeatureRegistration(
-			GenerationStep.Decoration.UNDERGROUND_ORES, CrystalYellowFeature.GENERATE_BIOMES, CrystalYellowFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

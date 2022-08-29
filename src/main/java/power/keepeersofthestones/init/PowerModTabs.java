@@ -17,7 +17,6 @@ public class PowerModTabs {
 	public static CreativeModeTab TAB_GREAT_GROUP;
 	public static CreativeModeTab TAB_BATTERIES;
 	public static CreativeModeTab TAB_ENERGIUM;
-	public static CreativeModeTab TAB_DIMENSIONS;
 	public static CreativeModeTab TAB_TECHNOLOGIES;
 	public static CreativeModeTab TAB_ARTIFACTS;
 
@@ -81,17 +80,6 @@ public class PowerModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(PowerModItems.ENERGIUM_INGOT.get());
-			}
-
-			@OnlyIn(Dist.CLIENT)
-			public boolean hasSearchBar() {
-				return false;
-			}
-		};
-		TAB_DIMENSIONS = new CreativeModeTab("tabdimensions") {
-			@Override
-			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.DINOERA.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)
