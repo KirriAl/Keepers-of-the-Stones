@@ -2,9 +2,9 @@
   "_fv": 33,
   "_type": "tab",
   "definition": {
-    "name": "Middle Group",
+    "name": "Stones",
     "icon": {
-      "value": "CUSTOM:GreeneryStone"
+      "value": "CUSTOM:GoldenDustStone"
     },
     "showSearch": false
   }

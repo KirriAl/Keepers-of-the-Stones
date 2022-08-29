@@ -16,7 +16,7 @@ import net.minecraft.world.InteractionHand;
 
 public class TimeStoneItem extends Item {
 	public TimeStoneItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_GREAT_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(PowerModTabs.TAB_STONES).durability(10).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
