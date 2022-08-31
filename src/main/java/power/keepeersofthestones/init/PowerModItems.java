@@ -206,6 +206,7 @@ import power.keepeersofthestones.item.GravityItem;
 import power.keepeersofthestones.item.GravityBoostItem;
 import power.keepeersofthestones.item.GravityBatteryItem;
 import power.keepeersofthestones.item.GoldenDustStoneItem;
+import power.keepeersofthestones.item.GoldenDustItem;
 import power.keepeersofthestones.item.GoldenCrossbowItem;
 import power.keepeersofthestones.item.GnomePickaxeItem;
 import power.keepeersofthestones.item.GlowCreateItem;
@@ -802,6 +803,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BALANCE_CHESTPLATE = REGISTRY.register("balance_chestplate", () -> new BalanceItem.Chestplate());
 	public static final RegistryObject<Item> BALANCE_LEGGINGS = REGISTRY.register("balance_leggings", () -> new BalanceItem.Leggings());
 	public static final RegistryObject<Item> BALANCE_BOOTS = REGISTRY.register("balance_boots", () -> new BalanceItem.Boots());
+	public static final RegistryObject<Item> GOLDEN_DUST_HELMET = REGISTRY.register("golden_dust_helmet", () -> new GoldenDustItem.Helmet());
+	public static final RegistryObject<Item> GOLDEN_DUST_CHESTPLATE = REGISTRY.register("golden_dust_chestplate",
+			() -> new GoldenDustItem.Chestplate());
+	public static final RegistryObject<Item> GOLDEN_DUST_LEGGINGS = REGISTRY.register("golden_dust_leggings", () -> new GoldenDustItem.Leggings());
+	public static final RegistryObject<Item> GOLDEN_DUST_BOOTS = REGISTRY.register("golden_dust_boots", () -> new GoldenDustItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

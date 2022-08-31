@@ -49,6 +49,7 @@ import power.keepeersofthestones.potion.RechargeLavaStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeIceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGreeneryStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGravityStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeGoldenDustStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeFormStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeFireStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeExplosionStoneMobEffect;
@@ -84,6 +85,7 @@ import power.keepeersofthestones.potion.InvincibilityMobEffect;
 import power.keepeersofthestones.potion.IceMasterMobEffect;
 import power.keepeersofthestones.potion.GreeneryMasterMobEffect;
 import power.keepeersofthestones.potion.GravityMasterMobEffect;
+import power.keepeersofthestones.potion.GoldenDustMasterMobEffect;
 import power.keepeersofthestones.potion.FormMasterMobEffect;
 import power.keepeersofthestones.potion.FogMobEffect;
 import power.keepeersofthestones.potion.FireMasterMobEffect;
@@ -253,4 +255,7 @@ public class PowerModMobEffects {
 			() -> new RechargeFormStoneMobEffect());
 	public static final RegistryObject<MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
 	public static final RegistryObject<MobEffect> MERGE_BALANCE = REGISTRY.register("merge_balance", () -> new MergeBalanceMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_GOLDEN_DUST_STONE = REGISTRY.register("recharge_golden_dust_stone",
+			() -> new RechargeGoldenDustStoneMobEffect());
+	public static final RegistryObject<MobEffect> GOLDEN_DUST_MASTER = REGISTRY.register("golden_dust_master", () -> new GoldenDustMasterMobEffect());
 }

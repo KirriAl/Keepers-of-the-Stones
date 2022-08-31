@@ -18382,6 +18382,139 @@
       "locked_code": false,
       "registry_name": "stones",
       "path": "~/ElementalGroups"
+    },
+    {
+      "name": "RechargeGoldenDustStone",
+      "type": "potioneffect",
+      "sortid": 1071,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_golden_dust_stone",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenDustMaster",
+      "type": "potioneffect",
+      "sortid": 1072,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_master",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenDustStoneUse",
+      "type": "procedure",
+      "sortid": 1073,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenDust",
+      "type": "armor",
+      "sortid": 1074,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenDustEffectStart",
+      "type": "procedure",
+      "sortid": 1075,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenDustEffectEnd",
+      "type": "procedure",
+      "sortid": 1076,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenDustEffects",
+      "type": "procedure",
+      "sortid": 1077,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
     }
   ],
   "variable_elements": [
@@ -19343,6 +19476,7 @@
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
       "item.power.disco_ball": "Диско-шар",
+      "effect.power.recharge_golden_dust_stone": "Перезарядка",
       "effect.power.merge_balance": "Слияние Баланс",
       "item.power.spike": "Шип",
       "item.power.explosive_flow": "Взрывной Поток",
@@ -19470,6 +19604,7 @@
       "effect.power.recharge_lightning_stone": "Перезарядка",
       "power.cultivation.water_lily.text": "Кувшинка",
       "item.power.fertilizer": "Удобрение",
+      "item.power.golden_dust_helmet": "Golden Dust Helmet",
       "item.power.sand_battery": "Батарея",
       "biome.power.cretaceous_taiga": "Меловая Тайга",
       "item.power.gravity_battery": "Батарея",
@@ -19496,6 +19631,7 @@
       "item.power.mist_battery": "Батарея",
       "item.power.space_atlas": "Космический Атлас",
       "item.power.animals_boots": "Животные ботинки",
+      "item.power.golden_dust_boots": "Golden Dust Boost",
       "item.power.mercury_ball": "Ртутный Шар",
       "item.power.poison_leggings": "Poison Leggings",
       "item.power.wind_chestplate": "Воздушный Жилет",
@@ -19733,6 +19869,7 @@
       "item.power.venus": "Venus Portal Igniter",
       "item.power.technology_leggings": "Технологичные штаны",
       "item.power.moon_wither": "Лунное Иссушение",
+      "effect.power.golden_dust_master": "Мастер Золотой Пыльцы",
       "item.power.sound_boots": "Звуковые Ботинки",
       "item.power.animals_chestplate": "Животный нагрудник",
       "item.power.mercury_sword": "Ртутный Меч",
@@ -19911,6 +20048,7 @@
       "power.spawn_animals.label.text": "Выберите животное для вызова",
       "effect.power.music_master": "Мастер Музыки",
       "enchantment.power.isolation": "Изоляция",
+      "item.power.golden_dust_chestplate": "Golden Dust Chestplate",
       "item.power.sun_explode": "Солнечный Взрыв",
       "item.power.vacuum_sword": "Пустотный Меч",
       "item.power.fire_sword": "Меч Огня",
@@ -19993,6 +20131,7 @@
       "effect.power.recharge_poison_stone": "Перезарядка",
       "item.power.light_stone": "Камень Света",
       "item.power.ice_battery": "Батарея",
+      "item.power.golden_dust_leggings": "Golden Dust Leggings",
       "item.power.sand_stone": "Камень Песка",
       "item.power.blue_fire_sword": "Синий Пламенный Меч",
       "item.power.constructions": "Материализация Конструкций",
@@ -20037,6 +20176,7 @@
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
       "item.power.disco_ball": "Disco Ball",
+      "effect.power.recharge_golden_dust_stone": "Recharge",
       "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
       "item.power.explosive_flow": "Explosive Flow",
@@ -20044,14 +20184,14 @@
       "item.power.lightning_battery": "Battery",
       "effect.power.recharge_rain_stone": "Recharge",
       "effect.recharge_tornado_stone": "Recharge",
-      "item.power.cutter_sword": "Cutter Sword",
-      "block.power.detonator_tnt": "Detonator TNT",
       "biome.power.triassic_plains": "Triassic Plains",
+      "block.power.detonator_tnt": "Detonator TNT",
+      "item.power.cutter_sword": "Cutter Sword",
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -20059,11 +20199,11 @@
       "item.power.fire_chestplate": "Fire Chestplate",
       "enchantment.power.revenge": "Revenge",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
-      "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
+      "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.form_chestplate": "Form Chestplate",
@@ -20164,6 +20304,7 @@
       "effect.power.recharge_lightning_stone": "Recharge",
       "item.power.fertilizer": "Fertilizer",
       "power.cultivation.water_lily.text": "Water Lily",
+      "item.power.golden_dust_helmet": "Golden Dust Helmet",
       "item.power.sand_battery": "Battery",
       "biome.power.cretaceous_taiga": "Cretaceous Taiga",
       "item.power.gravity_battery": "Battery",
@@ -20190,6 +20331,7 @@
       "item.power.mist_battery": "Battery",
       "item.power.space_atlas": "Space Atlas",
       "item.power.animals_boots": "Animals Boots",
+      "item.power.golden_dust_boots": "Golden Dust Boost",
       "item.power.mercury_ball": "Mercury Ball",
       "item.power.poison_leggings": "Poison Leggings",
       "item.power.wind_chestplate": "Air Chestplate",
@@ -20428,6 +20570,7 @@
       "item.power.venus": "Venus Portal Igniter",
       "item.power.technology_leggings": "Technology Leggings",
       "item.power.moon_wither": "Moon Wither",
+      "effect.power.golden_dust_master": "Master of the Golden Dust",
       "item.power.sound_boots": "Sound Boots",
       "item.power.animals_chestplate": "Animals Chestplate",
       "item.power.mercury_sword": "Mercury Sword",
@@ -20607,6 +20750,7 @@
       "power.spawn_animals.label.text": "Choose an animal to summon ",
       "effect.power.music_master": "Master of Music",
       "enchantment.power.isolation": "Isolation",
+      "item.power.golden_dust_chestplate": "Golden Dust Chestplate",
       "item.power.sun_explode": "Sun Explode",
       "item.power.vacuum_sword": "Vacuum Sword",
       "item.power.fire_sword": "Fire Sword",
@@ -20689,6 +20833,7 @@
       "effect.power.recharge_poison_stone": "Recharge",
       "item.power.light_stone": "Light Stone",
       "item.power.ice_battery": "Battery",
+      "item.power.golden_dust_leggings": "Golden Dust Leggings",
       "item.power.sand_stone": "Sand Stone",
       "item.power.blue_fire_sword": "Blue Fire Sword",
       "item.power.constructions": "Materialization of Constructions",
