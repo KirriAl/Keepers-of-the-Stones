@@ -18570,6 +18570,15 @@
         ]
       },
       "path": "~/ElementalBattery"
+    },
+    {
+      "name": "EnergiumOre1",
+      "type": "loottable",
+      "sortid": 1087,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_ore_1",
+      "path": "~/Energium"
     }
   ],
   "variable_elements": [
@@ -19370,6 +19379,18 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "little",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "big",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -19551,8 +19572,8 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -19560,11 +19581,11 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "enchantment.power.revenge": "Возмездие",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Батарея",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "item.power.form_chestplate": "Form Chestplate",
@@ -19655,6 +19676,7 @@
       "item.power.shadow_helmet": "Шлем тьмы",
       "item.power.crystal_leggings": "Кристаллические Штаны",
       "item.power.crystal_dagger": "Кристаллический Кинжал",
+      "little": "",
       "item.power.spirit_battery": "Батарея",
       "item.power.energium_axe": "Энерджиумный топор",
       "item.power.lava_leggings": "Лавовые Брюки",
@@ -19821,7 +19843,7 @@
       "item.power.mushrooms_battery": "Батарея",
       "item.power.gravity_reduction": "Уменьшение Гравитации",
       "item.power.spirit_leggings": "Spirit Leggings",
-      "item.power.ectoplasm_attack": "Ectoplasm Attack",
+      "item.power.ectoplasm_attack": "Атака Эктоплазмы",
       "item.power.ice_stone": "Камень Льда",
       "effect.time_stop_effect": "Time Stop",
       "item.power.shadow_sword": "Теневой Мач",
@@ -19852,7 +19874,7 @@
       "block.power.energium_block": "Блок энерджиума",
       "item.power.music_leggings": "Music Leggings",
       "item.power.technology_boots": "Технологичные штаны",
-      "item.power.ghost_form": "Ghost Form",
+      "item.power.ghost_form": "Призрачная Форма",
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Дождевые Штаны",
       "item.power.shadow_ball": "Теневой Шар",
@@ -19929,7 +19951,7 @@
       "item.power.crestcent_helmet": "Crestcent Helmet",
       "power.building.blacksmith.text": "Кузница",
       "item.power.rain_chestplate": "Дождевая Накидка",
-      "item.power.scythe": "Scythe",
+      "item.power.scythe": "Коса",
       "item.power.venus": "Venus Portal Igniter",
       "item.power.technology_leggings": "Технологичные штаны",
       "item.power.moon_wither": "Лунное Иссушение",
@@ -20358,6 +20380,7 @@
       "effect.power.recharge_fire_stone": "Recharge",
       "item.power.crystal_leggings": "Crystal Leggings",
       "item.power.crystal_dagger": "Crystal Dagger",
+      "little": "",
       "item.power.spirit_battery": "Battery",
       "item.power.energium_axe": "Energium Axe",
       "item.power.lava_leggings": "Lava Leggings",
@@ -21207,7 +21230,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.6.10.5",
+    "version": "2.6.10.6",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

@@ -157,6 +157,8 @@ public class PowerModVariables {
 				clone.recharge_spell_gravity_red = original.recharge_spell_gravity_red;
 				clone.recharge_spell_time = original.recharge_spell_time;
 				clone.ally = original.ally;
+				clone.little = original.little;
+				clone.big = original.big;
 			}
 		}
 
@@ -567,6 +569,8 @@ public class PowerModVariables {
 		public boolean mind = false;
 		public boolean golden_dust = false;
 		public boolean ally = false;
+		public boolean little = false;
+		public boolean big = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -652,6 +656,8 @@ public class PowerModVariables {
 			nbt.putBoolean("mind", mind);
 			nbt.putBoolean("golden_dust", golden_dust);
 			nbt.putBoolean("ally", ally);
+			nbt.putBoolean("little", little);
+			nbt.putBoolean("big", big);
 			return nbt;
 		}
 
@@ -734,6 +740,8 @@ public class PowerModVariables {
 			mind = nbt.getBoolean("mind");
 			golden_dust = nbt.getBoolean("golden_dust");
 			ally = nbt.getBoolean("ally");
+			little = nbt.getBoolean("little");
+			big = nbt.getBoolean("big");
 		}
 	}
 
@@ -836,6 +844,8 @@ public class PowerModVariables {
 					variables.mind = message.data.mind;
 					variables.golden_dust = message.data.golden_dust;
 					variables.ally = message.data.ally;
+					variables.little = message.data.little;
+					variables.big = message.data.big;
 				}
 			});
 			context.setPacketHandled(true);

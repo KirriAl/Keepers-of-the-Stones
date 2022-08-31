@@ -789,6 +789,12 @@ public class RespawnPlayerProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					{
+						Entity _ent = entity;
+						if (!_ent.level.isClientSide() && _ent.getServer() != null)
+							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+									"team remove golden_dust");
+					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get());
 						_setstack.setCount(1);

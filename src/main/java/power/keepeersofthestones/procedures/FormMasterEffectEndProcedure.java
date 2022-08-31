@@ -113,5 +113,19 @@ public class FormMasterEffectEndProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			boolean _setval = false;
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.little = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			boolean _setval = false;
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.big = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }
