@@ -58,7 +58,7 @@ public class GoldenDustEffectStartProcedure {
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
 				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-						"team modify golden_dust gold");
+						"team modify golden_dust color gold");
 		}
 		{
 			Entity _ent = entity;
