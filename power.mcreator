@@ -18411,6 +18411,165 @@
         ]
       },
       "path": "~/GoldenDust"
+    },
+    {
+      "name": "RechargeMindStone",
+      "type": "potioneffect",
+      "sortid": 1078,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_mind_stone",
+      "path": "~/Mind"
+    },
+    {
+      "name": "MindMaster",
+      "type": "potioneffect",
+      "sortid": 1079,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_master",
+      "path": "~/Mind"
+    },
+    {
+      "name": "Mind",
+      "type": "armor",
+      "sortid": 1080,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Mind"
+    },
+    {
+      "name": "MindStoneUse",
+      "type": "procedure",
+      "sortid": 1081,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mind"
+    },
+    {
+      "name": "MindMasterEffectStart",
+      "type": "procedure",
+      "sortid": 1082,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_master_effect_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mind"
+    },
+    {
+      "name": "MindMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 1083,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_master_effect_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mind"
+    },
+    {
+      "name": "MindMasterEffects",
+      "type": "procedure",
+      "sortid": 1084,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_master_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mind"
+    },
+    {
+      "name": "MindBattery",
+      "type": "item",
+      "sortid": 1085,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_battery",
+      "path": "~/ElementalBattery"
+    },
+    {
+      "name": "MindBatteryUse",
+      "type": "procedure",
+      "sortid": 1086,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ElementalBattery"
     }
   ],
   "variable_elements": [
@@ -19205,6 +19364,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "ally",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -19536,6 +19701,7 @@
       "item.power.blue_lightning": "Синяя Молния",
       "item.power.bee_sting": "Пчелиное Жало",
       "effect.power.recharge_speed_stone": "Перезарядка",
+      "item.power.mind_chestplate": "Mind Chestplate",
       "item.power.tornado_battery": "Батарея",
       "item.power.musical_axe": "Музыкальный Топор",
       "effect.power.power_lock": "Блокировка силы",
@@ -19594,10 +19760,12 @@
       "item.power.elemental_coin": "Элементальная монета",
       "item.power.magnet_stone": "Камень Магнита",
       "item.power.space_helmet": "Космический шлем",
+      "item.power.mind_leggings": "Mind Leggings",
       "item.power.time_dilation": "Замедление Времени",
       "advancements.super_charge.title": "Супер Заряд!",
       "item.power.smoke_helmet": "Smoke Helmet",
       "item.power.glow_spawn_egg": "Яйцо призыва Светляка",
+      "effect.power.mind_master": "Мастер Сознания",
       "item.power.sound_barrier": "Звуковой барьер",
       "item.power.injection": "Инъекция",
       "item.power.form_boots": "Form Boots",
@@ -19607,6 +19775,7 @@
       "item.power.black_heart": "Черное Сердце",
       "block.power.black_hole_block": "Блок черной дыры",
       "item.power.blue_flame_chestplate": "Blue Flame Chestplate",
+      "effect.power.recharge_mind_stone": "Перезарядка",
       "item.power.spawn": "Порождение",
       "effect.power.water_master": "Мастер Воды",
       "item.power.light_boots": "Ботинки света",
@@ -19902,6 +20071,7 @@
       "block.power.battery_charger": "Зарядник для батарей",
       "effect.power.rain_fly": "Дождевой Полёт",
       "item.power.smoke_boots": "Smoke Boots",
+      "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Звуковой кинжал",
       "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Мастер Магнита",
@@ -20004,6 +20174,7 @@
       "power.cultivation.melon.text": "Арбуз",
       "item.power.magnet_boots": "Magnet Boots",
       "power.cultivation.vine.text": "Лоза",
+      "item.power.mind_battery": "Батарея",
       "item.power.destruction_power": "Анигиляция",
       "item.power.greenery_stone": "Камень Зелени",
       "item.power.blue_fireball": "Синий Огненный Шар",
@@ -20041,6 +20212,7 @@
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
       "item.power.gravity_boots": "Gravity Boots",
+      "item.power.mind_helmet": "Mind Helmet",
       "item.power.amber_shield": "Янтарный Щит",
       "itemGroup.tabartifacts": "Артефакты",
       "effect.power.mercury_master": "Мастер Ртути",
@@ -20082,8 +20254,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -20091,11 +20263,11 @@
       "item.power.fire_chestplate": "Fire Chestplate",
       "enchantment.power.revenge": "Revenge",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Snow Golem Creator",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.form_chestplate": "Form Chestplate",
@@ -20232,6 +20404,7 @@
       "item.power.blue_lightning": "Blue Lightning",
       "item.power.bee_sting": "Bee Sting",
       "effect.power.recharge_speed_stone": "Recharge",
+      "item.power.mind_chestplate": "Mind Chestplate",
       "item.power.tornado_battery": "Battery",
       "item.power.musical_axe": "Musical Axe",
       "effect.power.power_lock": "Power Lock",
@@ -20290,10 +20463,12 @@
       "item.power.elemental_coin": "Elemental Coin",
       "item.power.magnet_stone": "Magnet Stone",
       "item.power.space_helmet": "Space Helmet",
+      "item.power.mind_leggings": "Mind Leggings",
       "item.power.time_dilation": "Time Dilation",
       "advancements.super_charge.title": "Super Charge!",
       "item.power.smoke_helmet": "Smoke Helmet",
       "item.power.glow_spawn_egg": "Glow Spawn Egg",
+      "effect.power.mind_master": "Master of Mind",
       "item.power.sound_barrier": "Sound Barrier",
       "item.power.injection": "Injection",
       "item.power.form_boots": "Form Boots",
@@ -20303,6 +20478,7 @@
       "item.power.fire_leggings": "Fire Leggings",
       "block.power.black_hole_block": "Black Hole Block",
       "item.power.blue_flame_chestplate": "Blue Flame Chestplate",
+      "effect.power.recharge_mind_stone": "Recharge",
       "item.power.spawn": "Spawn",
       "effect.power.water_master": "Master of Water",
       "item.power.light_boots": "Light Boots",
@@ -20600,6 +20776,7 @@
       "block.power.battery_charger": "Battery Charger",
       "effect.power.rain_fly": "RainFly",
       "item.power.smoke_boots": "Smoke Boots",
+      "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Sound Sword",
       "item.power.pegasus_wings": "Pegasus Wings",
       "effect.power.magnet_master": "Master of Magnet",
@@ -20702,6 +20879,7 @@
       "power.cultivation.melon.text": "Melon",
       "item.power.magnet_boots": "Magnet Boots",
       "power.cultivation.vine.text": "Vine",
+      "item.power.mind_battery": "Battery",
       "item.power.destruction_power": "Destruction Power",
       "item.power.greenery_stone": "Greenery Stone",
       "item.power.blue_fireball": "Blue Fireball",
@@ -20739,6 +20917,7 @@
       "effect.power.metal_master": "Master of Metal",
       "effect.power.recharge_metal_stone": "Recharge",
       "item.power.gravity_boots": "Gravity Boots",
+      "item.power.mind_helmet": "Mind Helmet",
       "item.power.amber_shield": "Amber Shield",
       "itemGroup.tabartifacts": "Artifacts",
       "effect.power.mercury_master": "Master of Mercury",

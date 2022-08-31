@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "mind_stone",
+    "texture": "battery",
     "customModelName": "Normal",
-    "name": "Mind Stone",
+    "name": "Battery",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Stones"
+      "value": "CUSTOM:Batteries"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -19,22 +19,24 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": true,
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "§dMind"
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "MindStoneUse"
+      "name": "MindBatteryUse"
     },
     "isFood": false,
-    "nutritionalValue": 4,
-    "saturation": 0.3,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
     "eatResultItem": {
       "value": ""
     },

@@ -13,8 +13,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
-public abstract class GoldenDustItem extends ArmorItem {
-	public GoldenDustItem(EquipmentSlot slot, Item.Properties properties) {
+public abstract class MindItem extends ArmorItem {
+	public MindItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
@@ -43,7 +43,7 @@ public abstract class GoldenDustItem extends ArmorItem {
 
 			@Override
 			public String getName() {
-				return "golden_dust";
+				return "mind";
 			}
 
 			@Override
@@ -58,47 +58,47 @@ public abstract class GoldenDustItem extends ArmorItem {
 		}, slot, properties);
 	}
 
-	public static class Helmet extends GoldenDustItem {
+	public static class Helmet extends MindItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/golden_dust_layer_1.png";
+			return "power:textures/models/armor/mind_layer_1.png";
 		}
 	}
 
-	public static class Chestplate extends GoldenDustItem {
+	public static class Chestplate extends MindItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/golden_dust_layer_1.png";
+			return "power:textures/models/armor/mind_layer_1.png";
 		}
 	}
 
-	public static class Leggings extends GoldenDustItem {
+	public static class Leggings extends MindItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/golden_dust_layer_2.png";
+			return "power:textures/models/armor/mind_layer_2.png";
 		}
 	}
 
-	public static class Boots extends GoldenDustItem {
+	public static class Boots extends MindItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/golden_dust_layer_1.png";
+			return "power:textures/models/armor/mind_layer_1.png";
 		}
 	}
 }

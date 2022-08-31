@@ -13,11 +13,11 @@
     "creativeTab": {
       "value": "No creative tab entry"
     },
-    "armorTextureFile": "golden_dust",
-    "helmetName": "Golden Dust Helmet",
-    "bodyName": "Golden Dust Chestplate",
-    "leggingsName": "Golden Dust Leggings",
-    "bootsName": "Golden Dust Boost",
+    "armorTextureFile": "mind",
+    "helmetName": "Mind Helmet",
+    "bodyName": "Mind Chestplate",
+    "leggingsName": "Mind Leggings",
+    "bootsName": "Mind Boots",
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],

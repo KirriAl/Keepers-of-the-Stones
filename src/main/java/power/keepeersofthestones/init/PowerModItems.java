@@ -148,6 +148,8 @@ import power.keepeersofthestones.item.MistStoneItem;
 import power.keepeersofthestones.item.MistItem;
 import power.keepeersofthestones.item.MistBatteryItem;
 import power.keepeersofthestones.item.MindStoneItem;
+import power.keepeersofthestones.item.MindItem;
+import power.keepeersofthestones.item.MindBatteryItem;
 import power.keepeersofthestones.item.MetalStoneItem;
 import power.keepeersofthestones.item.MetalItem;
 import power.keepeersofthestones.item.MetalInvulnerabilityItem;
@@ -800,6 +802,11 @@ public class PowerModItems {
 			() -> new GoldenDustItem.Chestplate());
 	public static final RegistryObject<Item> GOLDEN_DUST_LEGGINGS = REGISTRY.register("golden_dust_leggings", () -> new GoldenDustItem.Leggings());
 	public static final RegistryObject<Item> GOLDEN_DUST_BOOTS = REGISTRY.register("golden_dust_boots", () -> new GoldenDustItem.Boots());
+	public static final RegistryObject<Item> MIND_HELMET = REGISTRY.register("mind_helmet", () -> new MindItem.Helmet());
+	public static final RegistryObject<Item> MIND_CHESTPLATE = REGISTRY.register("mind_chestplate", () -> new MindItem.Chestplate());
+	public static final RegistryObject<Item> MIND_LEGGINGS = REGISTRY.register("mind_leggings", () -> new MindItem.Leggings());
+	public static final RegistryObject<Item> MIND_BOOTS = REGISTRY.register("mind_boots", () -> new MindItem.Boots());
+	public static final RegistryObject<Item> MIND_BATTERY = REGISTRY.register("mind_battery", () -> new MindBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

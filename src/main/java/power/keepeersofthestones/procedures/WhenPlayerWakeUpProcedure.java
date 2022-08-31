@@ -118,5 +118,7 @@ public class WhenPlayerWakeUpProcedure {
 			_entity.removeEffect(PowerModMobEffects.RECHARGE_FORM_STONE.get());
 		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(PowerModMobEffects.RECHARGE_GOLDEN_DUST_STONE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MIND_MASTER.get());
 	}
 }
