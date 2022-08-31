@@ -3,6 +3,7 @@ package power.keepeersofthestones.enchantment;
 
 import power.keepeersofthestones.init.PowerModItems;
 
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.ItemStack;
@@ -12,6 +13,14 @@ import net.minecraft.world.entity.EquipmentSlot;
 public class IsolationEnchantment extends Enchantment {
 	public IsolationEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, slots);
+	}
+
+	@Override
+	protected boolean checkCompatibility(Enchantment ench) {
+		return ench == Enchantments.SHARPNESS || ench == Enchantments.SMITE || ench == Enchantments.BANE_OF_ARTHROPODS
+				|| ench == Enchantments.KNOCKBACK || ench == Enchantments.SWEEPING_EDGE || ench == Enchantments.FIRE_ASPECT
+				|| ench == Enchantments.MOB_LOOTING || ench == Enchantments.MENDING || ench == Enchantments.UNBREAKING
+				|| ench == Enchantments.VANISHING_CURSE;
 	}
 
 	@Override

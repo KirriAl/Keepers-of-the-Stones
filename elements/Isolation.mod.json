@@ -8,7 +8,38 @@
     "minLevel": 1,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
+    "compatibleEnchantments": [
+      {
+        "value": "SHARPNESS"
+      },
+      {
+        "value": "SMITE"
+      },
+      {
+        "value": "BANE_OF_ARTHROPODS"
+      },
+      {
+        "value": "KNOCKBACK"
+      },
+      {
+        "value": "SWEEPING"
+      },
+      {
+        "value": "FIRE_ASPECT"
+      },
+      {
+        "value": "LOOTING"
+      },
+      {
+        "value": "MENDING"
+      },
+      {
+        "value": "UNBREAKING"
+      },
+      {
+        "value": "VANISHING_CURSE"
+      }
+    ],
     "compatibleItems": [
       {
         "value": "CUSTOM:EnergiumPickaxe"
