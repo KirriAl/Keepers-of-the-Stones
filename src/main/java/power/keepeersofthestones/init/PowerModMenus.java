@@ -60,6 +60,9 @@ import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
+import power.keepeersofthestones.world.inventory.ChoiseMagicPower3Menu;
+import power.keepeersofthestones.world.inventory.ChoiseMagicPower2Menu;
+import power.keepeersofthestones.world.inventory.ChoiseMagicPower1Menu;
 import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
 import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
 import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
@@ -171,6 +174,12 @@ public class PowerModMenus {
 			(id, inv, extraData) -> new BuildInMusicPlayerMenu(id, inv, extraData));
 	public static final MenuType<EBSmokeMenu> EB_SMOKE = register("eb_smoke", (id, inv, extraData) -> new EBSmokeMenu(id, inv, extraData));
 	public static final MenuType<EBSpiritMenu> EB_SPIRIT = register("eb_spirit", (id, inv, extraData) -> new EBSpiritMenu(id, inv, extraData));
+	public static final MenuType<ChoiseMagicPower1Menu> CHOISE_MAGIC_POWER_1 = register("choise_magic_power_1",
+			(id, inv, extraData) -> new ChoiseMagicPower1Menu(id, inv, extraData));
+	public static final MenuType<ChoiseMagicPower3Menu> CHOISE_MAGIC_POWER_3 = register("choise_magic_power_3",
+			(id, inv, extraData) -> new ChoiseMagicPower3Menu(id, inv, extraData));
+	public static final MenuType<ChoiseMagicPower2Menu> CHOISE_MAGIC_POWER_2 = register("choise_magic_power_2",
+			(id, inv, extraData) -> new ChoiseMagicPower2Menu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

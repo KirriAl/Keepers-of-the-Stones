@@ -18579,6 +18579,108 @@
       "locked_code": false,
       "registry_name": "energium_ore_1",
       "path": "~/Energium"
+    },
+    {
+      "name": "PowerTransfer",
+      "type": "item",
+      "sortid": 1088,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_transfer",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "ChooseStonePower",
+      "type": "procedure",
+      "sortid": 1089,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choose_stone_power",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ReceivingStones"
+    },
+    {
+      "name": "ChoiseMagicPower1",
+      "type": "gui",
+      "sortid": 1090,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choise_magic_power_1",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "ChoiseMagicPower3",
+      "type": "gui",
+      "sortid": 1092,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choise_magic_power_3",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "OpenPowerTransfer",
+      "type": "procedure",
+      "sortid": 1093,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_power_transfer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "ChoiseMagicPower2",
+      "type": "gui",
+      "sortid": 1094,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choise_magic_power_2",
+      "path": "~/GoldenDust"
     }
   ],
   "variable_elements": [
@@ -19572,8 +19674,8 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -19581,11 +19683,11 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "enchantment.power.revenge": "Возмездие",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
-      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
+      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "item.power.form_chestplate": "Form Chestplate",
@@ -20016,6 +20118,7 @@
       "item.power.creation_leggings": "Штаны созидания",
       "item.power.magnetic_fishing_rod": "Магнитная Удочка",
       "item.power.shadow_battery": "Батарея",
+      "item.power.power_transfer": "Power Transfer",
       "item.power.metal_boots": "Металлические ботинки",
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень Пустоты",
@@ -20276,8 +20379,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -20285,11 +20388,11 @@
       "item.power.fire_chestplate": "Fire Chestplate",
       "enchantment.power.revenge": "Revenge",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Snow Golem Creator",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Boomerang",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.form_chestplate": "Form Chestplate",
@@ -20721,6 +20824,7 @@
       "item.power.creation_leggings": "Creation Leggings",
       "item.power.magnetic_fishing_rod": "Magnetic Fishing Rod",
       "item.power.shadow_battery": "Battery",
+      "item.power.power_transfer": "Power Transfer",
       "item.power.metal_boots": "Metal Boots",
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
@@ -21182,7 +21286,12 @@
       },
       {
         "name": "GoldenDust",
-        "children": []
+        "children": [
+          {
+            "name": "ChoosePower",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Aether",

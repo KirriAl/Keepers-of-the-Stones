@@ -60,6 +60,9 @@ import power.keepeersofthestones.client.gui.CultivationGUIScreen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage3Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage2Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStoneGUIScreen;
+import power.keepeersofthestones.client.gui.ChoiseMagicPower3Screen;
+import power.keepeersofthestones.client.gui.ChoiseMagicPower2Screen;
+import power.keepeersofthestones.client.gui.ChoiseMagicPower1Screen;
 import power.keepeersofthestones.client.gui.CheckpointGUIScreen;
 import power.keepeersofthestones.client.gui.CheckPointTPScreen;
 import power.keepeersofthestones.client.gui.BuyLevel3Screen;
@@ -143,6 +146,9 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.BUILD_IN_MUSIC_PLAYER, BuildInMusicPlayerScreen::new);
 			MenuScreens.register(PowerModMenus.EB_SMOKE, EBSmokeScreen::new);
 			MenuScreens.register(PowerModMenus.EB_SPIRIT, EBSpiritScreen::new);
+			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_POWER_1, ChoiseMagicPower1Screen::new);
+			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_POWER_3, ChoiseMagicPower3Screen::new);
+			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_POWER_2, ChoiseMagicPower2Screen::new);
 		});
 	}
 }

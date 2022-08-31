@@ -1,0 +1,178 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Spirit",
+          "width": 56,
+          "height": 20,
+          "name": "Spirit",
+          "x": 51,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Choose the desired power of the elements",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Choose the desired power of the elements",
+          "x": 141,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Form",
+          "width": 56,
+          "height": 20,
+          "name": "Form",
+          "x": 51,
+          "y": 161
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Aether",
+          "width": 56,
+          "height": 20,
+          "name": "Aether",
+          "x": 51,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mind",
+          "width": 56,
+          "height": 20,
+          "name": "Mind",
+          "x": 141,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Blue Flame",
+          "width": 56,
+          "height": 20,
+          "name": "Blue Flame",
+          "x": 51,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Smoke",
+          "width": 56,
+          "height": 20,
+          "name": "Smoke",
+          "x": 51,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Previous page",
+          "onClick": {
+            "name": "PreviousPage2"
+          },
+          "width": 93,
+          "height": 20,
+          "name": "Previous page",
+          "x": 24,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "3/3",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "3/3",
+          "x": 24,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blue_flame_master.png",
+          "use1Xscale": false,
+          "name": "blue_flame_master.png",
+          "x": 33,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smoke_master.png",
+          "use1Xscale": false,
+          "name": "smoke_master.png",
+          "x": 33,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spirit_master.png",
+          "use1Xscale": false,
+          "name": "spirit_master.png",
+          "x": 33,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "form_master.png",
+          "use1Xscale": false,
+          "name": "form_master.png",
+          "x": 33,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mind_master.png",
+          "use1Xscale": false,
+          "name": "mind_master.png",
+          "x": 123,
+          "y": 53
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
