@@ -15484,84 +15484,6 @@
       "path": "~/ElementalBook"
     },
     {
-      "name": "AmberBattery",
-      "type": "item",
-      "sortid": 112,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amber_battery",
-      "path": "~/ElementalBattery"
-    },
-    {
-      "name": "AmberBatteryUse",
-      "type": "procedure",
-      "sortid": 926,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amber_battery_use",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ElementalBattery"
-    },
-    {
-      "name": "CreationBattery",
-      "type": "item",
-      "sortid": 113,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "creation_battery",
-      "path": "~/ElementalBattery"
-    },
-    {
-      "name": "CreationBatteryUse",
-      "type": "procedure",
-      "sortid": 927,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "creation_battery_use",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ElementalBattery"
-    },
-    {
-      "name": "DestructionBattery",
-      "type": "item",
-      "sortid": 114,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "destruction_battery",
-      "path": "~/ElementalBattery"
-    },
-    {
-      "name": "DestructionBatteryUse",
-      "type": "procedure",
-      "sortid": 928,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "destruction_battery_use",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ElementalBattery"
-    },
-    {
       "name": "PlayMusic4",
       "type": "procedure",
       "sortid": 929,
@@ -16856,32 +16778,6 @@
         ]
       },
       "path": "~/ReceivingStones"
-    },
-    {
-      "name": "AetherBattery",
-      "type": "item",
-      "sortid": 992,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aether_battery",
-      "path": "~/ElementalBattery"
-    },
-    {
-      "name": "AetherBatteryUse",
-      "type": "procedure",
-      "sortid": 993,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aether_battery_use",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ElementalBattery"
     },
     {
       "name": "Aether",
@@ -19730,7 +19626,6 @@
       "item.power.explode_boots": "Шахид-ботинки",
       "item.power.lava_chestplate": "Лавовый Пояс",
       "item.power.elemental_music_disc": "Пластинка",
-      "item.power.destruction_battery": "Батарея",
       "item.power.time_chestplate": "Нагрудник времени",
       "item.power.mace": "Булава",
       "item.power.lightning_chestplate": "Мантия Молнии",
@@ -19895,7 +19790,6 @@
       "item.power.vacuum_boots": "Ваакумные ботинки",
       "item.power.water_battery": "Батарея",
       "item.power.time_boots": "Ботинки времени",
-      "item.power.creation_battery": "Батарея",
       "item.power.plasma_ball": "Плазменный шар",
       "item.power.technology_battery": "Батарея",
       "item.power.firebird_feather": "Firebird Feather",
@@ -20027,7 +19921,6 @@
       "item.power.blue_flame_stone": "Камень Синего Пламени",
       "item.power.mushrooms_stone": "Камень Грибов",
       "item.power.ocean_boots": "Ботинки Океана",
-      "item.power.amber_battery": "Батарея",
       "effect.power.moon_master": "Мастер Луны",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
       "item.power.energy_stone": "Камень Энергии",
@@ -20140,7 +20033,6 @@
       "effect.power.technology_master": "Мастер Технологий",
       "power.cultivation.label.text": "Выберите растение, чтобы получить",
       "item.power.eclipse": "Затмение",
-      "item.power.aether_battery": "Батарея",
       "item.power.balance_boots": "Balance Boots",
       "biome.power.mars_land": "Марсианская Земля",
       "effect.power.light_master": "Мастер Света",
@@ -20430,7 +20322,6 @@
       "item.power.explode_boots": "Explode Boots",
       "item.power.lava_chestplate": "Lava Chestplate",
       "item.power.elemental_music_disc": "Music Disc",
-      "item.power.destruction_battery": "Battery",
       "item.power.time_chestplate": "Time Chestplate",
       "item.power.mace": "Mace",
       "item.power.lightning_chestplate": "Lightning Chestplate",
@@ -20596,7 +20487,6 @@
       "item.power.vacuum_boots": "Vacuum Boots",
       "item.power.water_battery": "Battery",
       "item.power.time_boots": "Time Boots",
-      "item.power.creation_battery": "Battery",
       "item.power.plasma_ball": "Plasma Ball",
       "item.power.technology_battery": "Battery",
       "item.power.firebird_feather": "Firebird Feather",
@@ -20729,7 +20619,6 @@
       "item.power.blue_flame_stone": "Blue Flame Stone",
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.ocean_boots": "Ocean Boots",
-      "item.power.amber_battery": "Battery",
       "effect.power.moon_master": "Master of the Moon",
       "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
       "item.power.energy_stone": "Energy stone",
@@ -20842,7 +20731,6 @@
       "effect.power.technology_master": "Master of Technology",
       "power.cultivation.label.text": "Select a plant to get",
       "item.power.eclipse": "Eclipse",
-      "item.power.aether_battery": "Battery",
       "item.power.balance_boots": "Balance Boots",
       "biome.power.mars_land": "Mars Land",
       "effect.power.light_master": "Master of Light",
