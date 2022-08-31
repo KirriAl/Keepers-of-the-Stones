@@ -18648,6 +18648,72 @@
       "locked_code": false,
       "registry_name": "pinch_of_golden_dust",
       "path": "~/GoldenDust"
+    },
+    {
+      "name": "CM2",
+      "type": "procedure",
+      "sortid": 1096,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cm_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "CM3",
+      "type": "procedure",
+      "sortid": 1097,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cm_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
     }
   ],
   "variable_elements": [

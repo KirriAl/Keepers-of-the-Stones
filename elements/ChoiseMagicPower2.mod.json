@@ -171,7 +171,7 @@
         "data": {
           "text": "Previous page",
           "onClick": {
-            "name": "PreviousPageGUIChoiceStones"
+            "name": "OpenPowerTransfer"
           },
           "width": 93,
           "height": 20,
@@ -352,7 +352,7 @@
         "data": {
           "text": "Next page",
           "onClick": {
-            "name": "NextToPage3"
+            "name": "CM3"
           },
           "width": 72,
           "height": 20,

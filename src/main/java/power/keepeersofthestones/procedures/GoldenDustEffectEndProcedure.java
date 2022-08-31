@@ -46,7 +46,7 @@ public class GoldenDustEffectEndProcedure {
 			}
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.WALKING_STICK.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.PINCH_OF_GOLDEN_DUST.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {

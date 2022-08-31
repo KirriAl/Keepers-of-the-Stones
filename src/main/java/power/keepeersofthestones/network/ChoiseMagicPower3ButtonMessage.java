@@ -2,7 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower3Menu;
-import power.keepeersofthestones.procedures.PreviousPage2Procedure;
+import power.keepeersofthestones.procedures.CM2Procedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -64,7 +64,7 @@ public class ChoiseMagicPower3ButtonMessage {
 			return;
 		if (buttonID == 6) {
 
-			PreviousPage2Procedure.execute(world, x, y, z, entity);
+			CM2Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

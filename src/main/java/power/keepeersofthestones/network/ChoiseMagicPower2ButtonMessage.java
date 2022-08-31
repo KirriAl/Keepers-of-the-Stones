@@ -2,8 +2,8 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower2Menu;
-import power.keepeersofthestones.procedures.PreviousPageGUIChoiceStonesProcedure;
-import power.keepeersofthestones.procedures.NextToPage3Procedure;
+import power.keepeersofthestones.procedures.OpenPowerTransferProcedure;
+import power.keepeersofthestones.procedures.CM3Procedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -65,11 +65,11 @@ public class ChoiseMagicPower2ButtonMessage {
 			return;
 		if (buttonID == 13) {
 
-			PreviousPageGUIChoiceStonesProcedure.execute(world, x, y, z, entity);
+			OpenPowerTransferProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 21) {
 
-			NextToPage3Procedure.execute(world, x, y, z, entity);
+			CM3Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

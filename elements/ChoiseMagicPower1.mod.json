@@ -322,7 +322,7 @@
         "data": {
           "text": "Next page",
           "onClick": {
-            "name": "NextPageGUIChoiceStone"
+            "name": "CM2"
           },
           "width": 72,
           "height": 20,
