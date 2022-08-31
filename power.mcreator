@@ -18581,48 +18581,6 @@
       "path": "~/Energium"
     },
     {
-      "name": "PowerTransfer",
-      "type": "item",
-      "sortid": 1088,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_transfer",
-      "path": "~/GoldenDust"
-    },
-    {
-      "name": "ChooseStonePower",
-      "type": "procedure",
-      "sortid": 1089,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "choose_stone_power",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ReceivingStones"
-    },
-    {
       "name": "ChoiseMagicPower1",
       "type": "gui",
       "sortid": 1090,
@@ -18680,6 +18638,15 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "choise_magic_power_2",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "PinchOfGoldenDust",
+      "type": "item",
+      "sortid": 1095,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pinch_of_golden_dust",
       "path": "~/GoldenDust"
     }
   ],
@@ -19873,6 +19840,7 @@
       "item.power.spirit_helmet": "Spirit Helmet",
       "item.power.crystal_chestplate": "Кристаллическая Куртка",
       "effect.power.creation_master": "Мастер Творения",
+      "item.power.pinch_of_golden_dust": "Power Transfer",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
       "item.power.ice_shield": "Ледяной щит",
       "item.power.sound_leggings": "Звуковые Брюки",
@@ -20118,7 +20086,6 @@
       "item.power.creation_leggings": "Штаны созидания",
       "item.power.magnetic_fishing_rod": "Магнитная Удочка",
       "item.power.shadow_battery": "Батарея",
-      "item.power.power_transfer": "Power Transfer",
       "item.power.metal_boots": "Металлические ботинки",
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень Пустоты",
@@ -20578,6 +20545,7 @@
       "item.power.spirit_helmet": "Spirit Helmet",
       "item.power.crystal_chestplate": "Crystal Chestplate",
       "effect.power.creation_master": "Master of Creation",
+      "item.power.pinch_of_golden_dust": "Power Transfer",
       "item.power.crestcent_chestplate": "Crestcent Chestplate",
       "item.power.ice_shield": "Ice Shield",
       "item.power.sound_leggings": "Sound Leggings",
@@ -20824,7 +20792,6 @@
       "item.power.creation_leggings": "Creation Leggings",
       "item.power.magnetic_fishing_rod": "Magnetic Fishing Rod",
       "item.power.shadow_battery": "Battery",
-      "item.power.power_transfer": "Power Transfer",
       "item.power.metal_boots": "Metal Boots",
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",

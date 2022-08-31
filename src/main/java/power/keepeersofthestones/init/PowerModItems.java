@@ -108,7 +108,6 @@ import power.keepeersofthestones.item.RainItem;
 import power.keepeersofthestones.item.RainBowItem;
 import power.keepeersofthestones.item.RainBatteryItem;
 import power.keepeersofthestones.item.QuicksandItem;
-import power.keepeersofthestones.item.PowerTransferItem;
 import power.keepeersofthestones.item.PortalBlastItem;
 import power.keepeersofthestones.item.PoisonSwordItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
@@ -119,6 +118,7 @@ import power.keepeersofthestones.item.PlasmaBallItem;
 import power.keepeersofthestones.item.PlagueStoneItem;
 import power.keepeersofthestones.item.PlagueItem;
 import power.keepeersofthestones.item.PlagueBatteryItem;
+import power.keepeersofthestones.item.PinchOfGoldenDustItem;
 import power.keepeersofthestones.item.PieceOfEarthItem;
 import power.keepeersofthestones.item.PegasusWingsItem;
 import power.keepeersofthestones.item.OceanSwordItem;
@@ -808,7 +808,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIND_LEGGINGS = REGISTRY.register("mind_leggings", () -> new MindItem.Leggings());
 	public static final RegistryObject<Item> MIND_BOOTS = REGISTRY.register("mind_boots", () -> new MindItem.Boots());
 	public static final RegistryObject<Item> MIND_BATTERY = REGISTRY.register("mind_battery", () -> new MindBatteryItem());
-	public static final RegistryObject<Item> POWER_TRANSFER = REGISTRY.register("power_transfer", () -> new PowerTransferItem());
+	public static final RegistryObject<Item> PINCH_OF_GOLDEN_DUST = REGISTRY.register("pinch_of_golden_dust", () -> new PinchOfGoldenDustItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
