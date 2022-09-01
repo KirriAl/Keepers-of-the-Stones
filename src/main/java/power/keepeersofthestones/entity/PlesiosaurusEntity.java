@@ -115,7 +115,7 @@ public class PlesiosaurusEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 5, 40));
+		this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 15, 40));
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, WaterAnimal.class, false, true));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, true));
 		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {

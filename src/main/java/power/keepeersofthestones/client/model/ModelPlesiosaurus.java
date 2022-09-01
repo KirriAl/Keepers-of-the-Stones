@@ -15,7 +15,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.2.4
+// Made with Blockbench 4.3.1
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class ModelPlesiosaurus<T extends Entity> extends EntityModel<T> {
@@ -39,16 +39,18 @@ public class ModelPlesiosaurus<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition head = partdefinition.addOrReplaceChild("head",
-				CubeListBuilder.create().texOffs(436, 476).addBox(-7.0F, -35.0F, 46.0F, 14.0F, 12.0F, 24.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, -5.0F, 35.0F));
+		PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, -5.0F, 35.0F));
+		PartDefinition head_r1 = head.addOrReplaceChild("head_r1",
+				CubeListBuilder.create().texOffs(436, 476).addBox(-6.5F, -25.0F, 67.8813F, 14.0F, 12.0F, 24.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-0.5F, -10.0F, -62.8813F, 0.0F, 3.1416F, 0.0F));
 		PartDefinition neck = head.addOrReplaceChild("neck", CubeListBuilder.create(), PartPose.offset(0.0F, -0.1603F, 0.134F));
 		PartDefinition neck_r1 = neck.addOrReplaceChild("neck_r1",
-				CubeListBuilder.create().texOffs(0, 300).addBox(-5.0F, -56.1865F, -4.8923F, 10.0F, 64.0F, 10.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.0472F, 0.0F, 0.0F));
-		PartDefinition lower_jaw = head.addOrReplaceChild("lower_jaw",
-				CubeListBuilder.create().texOffs(64, 484).addBox(-7.0F, -2.0F, -1.0F, 14.0F, 4.0F, 24.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, -21.0F, 47.0F));
+				CubeListBuilder.create().texOffs(0, 300).addBox(-4.5F, -70.3325F, 14.6368F, 10.0F, 64.0F, 10.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-0.5F, -9.8397F, -63.0153F, -1.0472F, 3.1416F, 0.0F));
+		PartDefinition lower_jaw = head.addOrReplaceChild("lower_jaw", CubeListBuilder.create(), PartPose.offset(0.0F, -21.0F, 47.0F));
+		PartDefinition lower_jaw_r1 = lower_jaw.addOrReplaceChild("lower_jaw_r1",
+				CubeListBuilder.create().texOffs(64, 484).addBox(-6.5F, -13.0F, 67.8813F, 14.0F, 4.0F, 24.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-0.5F, 11.0F, -109.8813F, 0.0F, 3.1416F, 0.0F));
 		PartDefinition fins0 = partdefinition.addOrReplaceChild("fins0", CubeListBuilder.create(), PartPose.offset(16.5F, 15.0F, -9.0F));
 		PartDefinition fin0_r1 = fins0.addOrReplaceChild("fin0_r1",
 				CubeListBuilder.create().texOffs(346, 280).addBox(-1.4418F, -0.7598F, -8.0F, 32.0F, 2.0F, 16.0F, new CubeDeformation(0.0F)),
@@ -63,13 +65,14 @@ public class ModelPlesiosaurus<T extends Entity> extends EntityModel<T> {
 		PartDefinition fin3_r1 = fins1.addOrReplaceChild("fin3_r1",
 				CubeListBuilder.create().texOffs(323, 345).addBox(-32.7489F, -0.3115F, -8.0F, 32.0F, 2.0F, 16.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(2.0F, -5.0F, -25.0F, 0.0F, 0.0F, -0.2618F));
-		PartDefinition body = partdefinition.addOrReplaceChild("body",
-				CubeListBuilder.create().texOffs(1, 395).addBox(-17.0F, -16.0F, -42.5F, 34.0F, 32.0F, 85.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(-1.0F, 4.0F, -8.5F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(-1.0F, 4.0F, -8.5F));
+		PartDefinition body_r1 = body.addOrReplaceChild("body_r1",
+				CubeListBuilder.create().texOffs(1, 395).addBox(-17.5F, 3.0F, -64.1187F, 34.0F, 32.0F, 85.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.5F, -19.0F, -19.3813F, 0.0F, 3.1416F, 0.0F));
 		PartDefinition tail = partdefinition.addOrReplaceChild("tail", CubeListBuilder.create(), PartPose.offset(-1.0F, -5.3129F, -51.7626F));
 		PartDefinition tail_r1 = tail.addOrReplaceChild("tail_r1",
-				CubeListBuilder.create().texOffs(472, 0).addBox(-5.0F, -4.6474F, -4.9176F, 10.0F, 40.0F, 10.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, -0.0532F, -0.1919F, -1.309F, 0.0F, 0.0F));
+				CubeListBuilder.create().texOffs(472, 0).addBox(-5.5F, 60.7019F, -12.454F, 10.0F, 40.0F, 10.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.5F, -9.6871F, 23.8813F, -1.309F, 3.1416F, 0.0F));
 		return LayerDefinition.create(meshdefinition, 512, 512);
 	}
 
