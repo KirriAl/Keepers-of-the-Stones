@@ -27,6 +27,7 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -115,16 +116,17 @@ public class PlesiosaurusEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 15, 40));
+		this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 10, 40));
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, WaterAnimal.class, false, true));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, true));
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 3.5, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
 		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 	}
 
 	@Override

@@ -66,17 +66,7 @@ public class PterodactylEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 0.8, 20) {
-			@Override
-			protected Vec3 getPosition() {
-				Random random = PterodactylEntity.this.getRandom();
-				double dir_x = PterodactylEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = PterodactylEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = PterodactylEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
-				return new Vec3(dir_x, dir_y, dir_z);
-			}
-		});
-		this.goalSelector.addGoal(2, new Goal() {
+		this.goalSelector.addGoal(1, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
 			}
@@ -116,8 +106,18 @@ public class PterodactylEntity extends Monster {
 				}
 			}
 		});
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Rabbit.class, true, true));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Rabbit.class, true, true));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8, 20) {
+			@Override
+			protected Vec3 getPosition() {
+				Random random = PterodactylEntity.this.getRandom();
+				double dir_x = PterodactylEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = PterodactylEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = PterodactylEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
+			}
+		});
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
 		this.goalSelector.addGoal(7, new AvoidEntityGoal<>(this, PlesiosaurusEntity.class, (float) 24, 1, 1.2));
