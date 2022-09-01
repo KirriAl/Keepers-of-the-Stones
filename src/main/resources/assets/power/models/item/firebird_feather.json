@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "power:items/unknown"
+    "layer0": "power:items/firebird_feather"
   },
   "display": {
     "thirdperson_righthand": {

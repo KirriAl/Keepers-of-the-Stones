@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "firebird_feather",
     "customModelName": "Normal",
     "name": "Firebird Feather",
     "specialInfo": [],
