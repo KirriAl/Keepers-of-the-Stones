@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "neptune_sword",
     "customModelName": "Normal",
     "name": "Neptune Sword",
     "specialInfo": [],

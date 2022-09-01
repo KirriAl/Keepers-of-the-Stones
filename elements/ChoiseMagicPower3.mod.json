@@ -165,6 +165,16 @@
           "x": 123,
           "y": 53
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aether_master.png",
+          "use1Xscale": false,
+          "name": "aether_master.png",
+          "x": 33,
+          "y": 134
+        }
       }
     ],
     "gridSettings": {

@@ -69,6 +69,9 @@ public class ChoiseMagicPower3Screen extends AbstractContainerScreen<ChoiseMagic
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/mind_master.png"));
 		this.blit(ms, this.leftPos + 109, this.topPos + 33, 0, 0, 16, 16, 16, 16);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/aether_master.png"));
+		this.blit(ms, this.leftPos + 19, this.topPos + 114, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
