@@ -33,7 +33,7 @@ public class BigSizeUseProcedure {
 				{
 					boolean _setval = true;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.little = _setval;
+						capability.big = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -67,7 +67,7 @@ public class BigSizeUseProcedure {
 						{
 							boolean _setval = false;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.little = _setval;
+								capability.big = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
