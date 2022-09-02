@@ -35,7 +35,6 @@ import power.keepeersofthestones.world.inventory.EBFireMenu;
 import power.keepeersofthestones.world.inventory.EBExplosionMenu;
 import power.keepeersofthestones.world.inventory.EBEnergyMenu;
 import power.keepeersofthestones.world.inventory.EBEarthMenu;
-import power.keepeersofthestones.world.inventory.EBDestructionMenu;
 import power.keepeersofthestones.world.inventory.EBCrystalMenu;
 import power.keepeersofthestones.world.inventory.EBCreationMenu;
 import power.keepeersofthestones.world.inventory.EBBlueFlameMenu;
@@ -43,6 +42,8 @@ import power.keepeersofthestones.world.inventory.EBBloodMenu;
 import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
 import power.keepeersofthestones.world.inventory.EBAmberMenu;
 import power.keepeersofthestones.world.inventory.EBAirMenu;
+import power.keepeersofthestones.world.inventory.EBAetherMenu;
+import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
 import power.keepeersofthestones.init.PowerModItems;
 
 import net.minecraftforge.network.NetworkHooks;
@@ -539,12 +540,12 @@ public class OpenBookProcedure {
 					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBDestruction");
+							return new TextComponent("CultivationGUI");
 						}
 
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBDestructionMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new CultivationGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
@@ -901,6 +902,26 @@ public class OpenBookProcedure {
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new EBSpiritMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (entity instanceof Player _playerHasItem
+				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.AETHER_STONE.get()))
+				: false) {
+			{
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return new TextComponent("EBAether");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new EBAetherMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
