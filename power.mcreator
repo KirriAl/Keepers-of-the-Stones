@@ -18714,6 +18714,15 @@
         ]
       },
       "path": "~/GoldenDust"
+    },
+    {
+      "name": "EBAether",
+      "type": "gui",
+      "sortid": 1098,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eb_aether",
+      "path": "~/ElementalBook"
     }
   ],
   "variable_elements": [
