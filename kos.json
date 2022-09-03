@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.6.2",
-    "1.18.2-recommended": "2.6.2"
+    "1.18.2-latest": "2.6.10",
+    "1.18.2-recommended": "2.6.10"
   },
   "1.16.5": {
    "1.1.18": "
@@ -677,6 +677,25 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Updated the texture of the magnet master effect
 - The mod's logo has been updated
 - [Bugfix] Fixed a bug where a player could activate a stone if he had armor on him
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.10": "
+- Added new elements - spirit and aether
+- Added merge balance to combine the stones of creation and destruction
+- Added new special enchantments for tools from energium
+- Changed the mechanics of destructive power
+- Increased the cooldown of a random item
+- All stones have been moved to one inventory category
+- Updated the activation and deactivation sounds of the stone
+- Updated all textures related to energium
+- Updated some stone spell textures
+- The planet command was replaced by pw planet
+- The dimensions of the Crystallized World, the Solar Kingdom and Oblivion have been made into a separate mod
+- Remove amber, creation and destruction batteries
+- [Bugfix] Fixed a bug where it was impossible to select the blue flame stone
+- [Bugfix] Fixed a bug due to which luck did not work on energium ore
+- [Bugfix] Fixed the direction of the plesiosaur model
+- [Bugfix] Fixed the movement of some dinosaurs
+- [Bugfix] Fixed a bug where using variance in a creative could make a player vulnerable
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }

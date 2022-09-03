@@ -51,9 +51,11 @@ public class DispersionUseProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 						_player.inventoryMenu.getCraftSlots());
 			}
-			if (entity instanceof Player _player) {
-				_player.getAbilities().invulnerable = (true);
-				_player.onUpdateAbilities();
+			if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+				if (entity instanceof Player _player) {
+					_player.getAbilities().invulnerable = (true);
+					_player.onUpdateAbilities();
+				}
 			}
 			new Object() {
 				private int ticks = 0;
@@ -78,9 +80,11 @@ public class DispersionUseProcedure {
 				private void run() {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PowerModVariables.PlayerVariables())).smoke) {
-						if (entity instanceof Player _player) {
-							_player.getAbilities().invulnerable = (false);
-							_player.onUpdateAbilities();
+						if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+							if (entity instanceof Player _player) {
+								_player.getAbilities().invulnerable = (false);
+								_player.onUpdateAbilities();
+							}
 						}
 						{
 							Entity _ent = entity;
