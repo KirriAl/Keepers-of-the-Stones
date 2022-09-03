@@ -114,6 +114,12 @@ public class FormMasterEffectEndProcedure {
 			});
 		}
 		{
+			Entity _ent = entity;
+			if (!_ent.level.isClientSide() && _ent.getServer() != null)
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						"scale set pehkui:base 1 @s");
+		}
+		{
 			boolean _setval = false;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.little = _setval;

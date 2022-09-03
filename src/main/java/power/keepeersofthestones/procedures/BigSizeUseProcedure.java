@@ -19,11 +19,11 @@ public class BigSizeUseProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.BIG_SIZE.get()) {
-			if (world.isClientSide())
-				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).little) {
+				if (world.isClientSide())
+					Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
+				if (entity instanceof Player _player)
+					_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
