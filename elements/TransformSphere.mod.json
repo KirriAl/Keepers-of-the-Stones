@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "transform_sphere",
     "customModelName": "Normal",
     "name": "Transform Sphere",
     "specialInfo": [],

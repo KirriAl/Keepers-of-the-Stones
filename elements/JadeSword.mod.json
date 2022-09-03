@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "jade_sword",
     "customModelName": "Normal",
     "name": "Jade Sword",
     "specialInfo": [],
