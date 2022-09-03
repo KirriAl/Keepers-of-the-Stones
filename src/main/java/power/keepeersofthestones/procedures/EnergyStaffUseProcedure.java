@@ -108,6 +108,8 @@ public class EnergyStaffUseProcedure {
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(PowerModMobEffects.SMOKE_MASTER.get());
 					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PowerModMobEffects.FORM_MASTER.get());
+					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(PowerModMobEffects.MIND_MASTER.get());
 					if (sourceentity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.ENERGY_MASTER.get(), 24000, 0, (false), (false)));

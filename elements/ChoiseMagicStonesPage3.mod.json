@@ -52,6 +52,9 @@
         "type": "button",
         "data": {
           "text": "Form",
+          "onClick": {
+            "name": "FormGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Form",
@@ -77,6 +80,9 @@
         "type": "button",
         "data": {
           "text": "Mind",
+          "onClick": {
+            "name": "MindGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Mind",

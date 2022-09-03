@@ -117,6 +117,10 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 141, 56, 20, new TextComponent("  "), e -> {
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TextComponent("Form"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(2, x, y, z));
+				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, new TextComponent("Aether"), e -> {
 			if (true) {
@@ -125,6 +129,10 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20, new TextComponent("Mind"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(4, x, y, z));
+				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 60, 56, 20, new TextComponent("G. Dust"), e -> {
 		}));
