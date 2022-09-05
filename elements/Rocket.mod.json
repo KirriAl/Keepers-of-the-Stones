@@ -87,7 +87,7 @@
       "value": ""
     },
     "deathSound": {
-      "value": "block.anvil.destroy"
+      "value": "block.anvil.fall"
     },
     "stepSound": {
       "value": ""
