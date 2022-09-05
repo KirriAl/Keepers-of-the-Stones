@@ -21,7 +21,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:TechnologiesAndArtifacts"
+      "value": "MISC"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -53,7 +53,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 10,
+    "health": 1,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -71,7 +71,7 @@
     "immuneToDrowning": true,
     "immuneToLightning": true,
     "immuneToPotions": true,
-    "immuneToPlayer": true,
+    "immuneToPlayer": false,
     "immuneToExplosion": true,
     "immuneToTrident": true,
     "immuneToAnvil": true,
@@ -87,7 +87,7 @@
       "value": ""
     },
     "deathSound": {
-      "value": ""
+      "value": "block.anvil.destroy"
     },
     "stepSound": {
       "value": ""
@@ -99,6 +99,9 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
+    "whenMobDies": {
+      "name": "ReturnRocketItem"
+    },
     "hasAI": false,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
