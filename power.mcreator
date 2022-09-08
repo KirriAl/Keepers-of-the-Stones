@@ -18927,6 +18927,27 @@
         ]
       },
       "path": "~/Mind"
+    },
+    {
+      "name": "IfDayCanBurn",
+      "type": "procedure",
+      "sortid": 1110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_day_can_burn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mind/Companions"
     }
   ],
   "variable_elements": [
@@ -19920,8 +19941,8 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Батарея",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -19929,11 +19950,11 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "enchantment.power.revenge": "Возмездие",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
-      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
+      "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "item.power.form_chestplate": "Form Chestplate",
@@ -19990,7 +20011,7 @@
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
       "item.power.rocket_item": "Ракета",
-      "entity.power.mind_zombie": "Mind Zombie",
+      "entity.power.mind_zombie": "Зомби",
       "item.power.force_replication": "Репликация Силы",
       "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
       "item.power.explosion_stone": "Камень Взрыва",
@@ -20211,7 +20232,7 @@
       "item.power.rain_knife": "Дождевой Нож",
       "power.spawn_animals.horse.text": "Лошадь",
       "effect.power.mist_master": "Мастер Тумана",
-      "item.power.mind_zombie_spawn_egg": "Mind Zombie Spawn Egg",
+      "item.power.mind_zombie_spawn_egg": "Zombie Spawn Egg",
       "item.power.iron_golem_create": "Создание Железного Голема",
       "item.power.lightning_boots": "Ботинки Молнии",
       "item.power.vacuum_helmet": "Ваакумный шлем",
@@ -20630,8 +20651,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -20639,8 +20660,8 @@
       "item.power.fire_chestplate": "Fire Chestplate",
       "enchantment.power.revenge": "Revenge",
       "item.power.glow_create": "Glow Create",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Recharge",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
@@ -20700,7 +20721,7 @@
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
       "item.power.rocket_item": "Rocket",
-      "entity.power.mind_zombie": "Mind Zombie",
+      "entity.power.mind_zombie": "Zombie",
       "power.building.label.text": "Select the structure you want to place",
       "item.power.force_replication": "Force Replication",
       "item.power.sound_imitate": "Sound Emitate",
@@ -20922,7 +20943,7 @@
       "item.power.rain_knife": "Rain Knife",
       "power.spawn_animals.horse.text": "Horse",
       "effect.power.mist_master": "Master of Mist",
-      "item.power.mind_zombie_spawn_egg": "Mind Zombie Spawn Egg",
+      "item.power.mind_zombie_spawn_egg": "Zombie Spawn Egg",
       "item.power.iron_golem_create": "Iron Golem Create",
       "item.power.lightning_boots": "Lightning Boots",
       "item.power.vacuum_helmet": "Vacuum Helmet",

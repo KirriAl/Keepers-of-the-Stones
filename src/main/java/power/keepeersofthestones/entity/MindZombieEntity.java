@@ -2,6 +2,7 @@
 package power.keepeersofthestones.entity;
 
 import power.keepeersofthestones.procedures.TameMindZombieProcedure;
+import power.keepeersofthestones.procedures.IfDayCanBurnProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,7 +19,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RestrictSunGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -65,21 +65,20 @@ public class MindZombieEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RestrictSunGoal(this));
-		this.goalSelector.addGoal(2, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(3, new OwnerHurtTargetGoal(this));
-		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1, (float) 8, (float) 16, false));
-		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1, false) {
+		this.goalSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
+		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1, (float) 8, (float) 16, false));
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(7, new BreakDoorGoal(this, e -> true));
-		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(10, new FloatGoal(this));
+		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(6, new BreakDoorGoal(this, e -> true));
+		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new FloatGoal(this));
 	}
 
 	@Override
@@ -162,6 +161,12 @@ public class MindZombieEntity extends TamableAnimal {
 
 		TameMindZombieProcedure.execute(entity, sourceentity);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		IfDayCanBurnProcedure.execute(this.level, this);
 	}
 
 	@Override
