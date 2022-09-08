@@ -35,6 +35,7 @@ import power.keepeersofthestones.entity.PieceOfEarthEntity;
 import power.keepeersofthestones.entity.MusketEntity;
 import power.keepeersofthestones.entity.MoonStonesEntity;
 import power.keepeersofthestones.entity.MercuryBallEntity;
+import power.keepeersofthestones.entity.MentalAttackEntity;
 import power.keepeersofthestones.entity.MegawattEntity;
 import power.keepeersofthestones.entity.MassInfectionEntity;
 import power.keepeersofthestones.entity.MagicFireballEntity;
@@ -267,6 +268,9 @@ public class PowerModEntities {
 			EntityType.Builder.<TransformSphereEntity>of(TransformSphereEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(TransformSphereEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MentalAttackEntity>> MENTAL_ATTACK = register("projectile_mental_attack",
+			EntityType.Builder.<MentalAttackEntity>of(MentalAttackEntity::new, MobCategory.MISC).setCustomClientFactory(MentalAttackEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -5,6 +5,7 @@
 package power.keepeersofthestones.init;
 
 import power.keepeersofthestones.item.WoodenShieldItem;
+import power.keepeersofthestones.item.WisdomSwordItem;
 import power.keepeersofthestones.item.WindItem;
 import power.keepeersofthestones.item.WhirlpoolItem;
 import power.keepeersofthestones.item.WaterStoneItem;
@@ -161,6 +162,7 @@ import power.keepeersofthestones.item.MercuryPitItem;
 import power.keepeersofthestones.item.MercuryItem;
 import power.keepeersofthestones.item.MercuryBatteryItem;
 import power.keepeersofthestones.item.MercuryBallItem;
+import power.keepeersofthestones.item.MentalAttackItem;
 import power.keepeersofthestones.item.MegawattItem;
 import power.keepeersofthestones.item.MassInfectionItem;
 import power.keepeersofthestones.item.MagneticFishingRodItem;
@@ -274,6 +276,7 @@ import power.keepeersofthestones.item.CreationItem;
 import power.keepeersofthestones.item.CreateShadowItem;
 import power.keepeersofthestones.item.CoralShieldItem;
 import power.keepeersofthestones.item.ConstructionsItem;
+import power.keepeersofthestones.item.CompanionsItem;
 import power.keepeersofthestones.item.ClusterSharpItem;
 import power.keepeersofthestones.item.BurnItem;
 import power.keepeersofthestones.item.BoomerangItem;
@@ -809,6 +812,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIND_BOOTS = REGISTRY.register("mind_boots", () -> new MindItem.Boots());
 	public static final RegistryObject<Item> MIND_BATTERY = REGISTRY.register("mind_battery", () -> new MindBatteryItem());
 	public static final RegistryObject<Item> PINCH_OF_GOLDEN_DUST = REGISTRY.register("pinch_of_golden_dust", () -> new PinchOfGoldenDustItem());
+	public static final RegistryObject<Item> WISDOM_SWORD = REGISTRY.register("wisdom_sword", () -> new WisdomSwordItem());
+	public static final RegistryObject<Item> MENTAL_ATTACK = REGISTRY.register("mental_attack", () -> new MentalAttackItem());
+	public static final RegistryObject<Item> COMPANIONS = REGISTRY.register("companions", () -> new CompanionsItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
