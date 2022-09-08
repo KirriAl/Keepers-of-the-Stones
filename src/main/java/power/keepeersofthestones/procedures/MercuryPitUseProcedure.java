@@ -97,7 +97,7 @@ public class MercuryPitUseProcedure {
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:air replace power:mercury_liquid");
+								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:dirt replace power:mercury_liquid");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 400);
