@@ -14,6 +14,7 @@ import power.keepeersofthestones.client.renderer.RainBowRenderer;
 import power.keepeersofthestones.client.renderer.PterodactylRenderer;
 import power.keepeersofthestones.client.renderer.PlesiosaurusRenderer;
 import power.keepeersofthestones.client.renderer.MusketRenderer;
+import power.keepeersofthestones.client.renderer.MindZombieRenderer;
 import power.keepeersofthestones.client.renderer.GoldenCrossbowRenderer;
 import power.keepeersofthestones.client.renderer.GlowRenderer;
 
@@ -86,5 +87,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.SMOKE_SCREEN.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TRANSFORM_SPHERE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MENTAL_ATTACK.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MIND_ZOMBIE.get(), MindZombieRenderer::new);
 	}
 }

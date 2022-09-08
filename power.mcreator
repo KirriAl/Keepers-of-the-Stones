@@ -18818,6 +18818,115 @@
       "locked_code": false,
       "registry_name": "companions",
       "path": "~/Mind"
+    },
+    {
+      "name": "CompanionsGui",
+      "type": "gui",
+      "sortid": 1106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "companions_gui",
+      "path": "~/Mind"
+    },
+    {
+      "name": "OpenCompanionsGUI",
+      "type": "procedure",
+      "sortid": 1106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_companions_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mind"
+    },
+    {
+      "name": "MindZombie",
+      "type": "livingentity",
+      "sortid": 1107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_zombie",
+      "path": "~/Mind/Companions"
+    },
+    {
+      "name": "SummonMyZombie",
+      "type": "procedure",
+      "sortid": 1108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summon_my_zombie",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mind/Companions"
+    },
+    {
+      "name": "TameMindZombie",
+      "type": "procedure",
+      "sortid": 1109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tame_mind_zombie",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mind"
     }
   ],
   "variable_elements": [
@@ -19881,6 +19990,7 @@
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
       "item.power.rocket_item": "Ракета",
+      "entity.power.mind_zombie": "Mind Zombie",
       "item.power.force_replication": "Репликация Силы",
       "power.building.label.text": "Выберите структуру, которую вы хотите разместить",
       "item.power.explosion_stone": "Камень Взрыва",
@@ -20101,6 +20211,7 @@
       "item.power.rain_knife": "Дождевой Нож",
       "power.spawn_animals.horse.text": "Лошадь",
       "effect.power.mist_master": "Мастер Тумана",
+      "item.power.mind_zombie_spawn_egg": "Mind Zombie Spawn Egg",
       "item.power.iron_golem_create": "Создание Железного Голема",
       "item.power.lightning_boots": "Ботинки Молнии",
       "item.power.vacuum_helmet": "Ваакумный шлем",
@@ -20589,6 +20700,7 @@
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
       "item.power.rocket_item": "Rocket",
+      "entity.power.mind_zombie": "Mind Zombie",
       "power.building.label.text": "Select the structure you want to place",
       "item.power.force_replication": "Force Replication",
       "item.power.sound_imitate": "Sound Emitate",
@@ -20810,6 +20922,7 @@
       "item.power.rain_knife": "Rain Knife",
       "power.spawn_animals.horse.text": "Horse",
       "effect.power.mist_master": "Master of Mist",
+      "item.power.mind_zombie_spawn_egg": "Mind Zombie Spawn Egg",
       "item.power.iron_golem_create": "Iron Golem Create",
       "item.power.lightning_boots": "Lightning Boots",
       "item.power.vacuum_helmet": "Vacuum Helmet",
@@ -21455,7 +21568,12 @@
       },
       {
         "name": "Mind",
-        "children": []
+        "children": [
+          {
+            "name": "Companions",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Energium",

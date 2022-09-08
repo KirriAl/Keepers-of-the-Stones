@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.MentalAttackEntity;
 
 import net.minecraft.world.level.Level;
@@ -46,6 +47,8 @@ public class MentalAttackItem extends Item {
 				MentalAttackEntity entityarrow = MentalAttackEntity.shoot(world, entity, world.getRandom(), 1.2000000000000002f, 12, 0);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
+				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}
 	}

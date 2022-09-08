@@ -13,6 +13,7 @@ import power.keepeersofthestones.client.model.Modelglow;
 import power.keepeersofthestones.client.model.ModelRaptor;
 import power.keepeersofthestones.client.model.ModelPterodactyl;
 import power.keepeersofthestones.client.model.ModelPlesiosaurus;
+import power.keepeersofthestones.client.model.ModelMindZombie;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -27,6 +28,7 @@ public class PowerModModels {
 		event.registerLayerDefinition(ModelPlesiosaurus.LAYER_LOCATION, ModelPlesiosaurus::createBodyLayer);
 		event.registerLayerDefinition(Modeltornadocc.LAYER_LOCATION, Modeltornadocc::createBodyLayer);
 		event.registerLayerDefinition(Modelshadow.LAYER_LOCATION, Modelshadow::createBodyLayer);
+		event.registerLayerDefinition(ModelMindZombie.LAYER_LOCATION, ModelMindZombie::createBodyLayer);
 		event.registerLayerDefinition(ModelRaptor.LAYER_LOCATION, ModelRaptor::createBodyLayer);
 		event.registerLayerDefinition(Modelmagic_arrow.LAYER_LOCATION, Modelmagic_arrow::createBodyLayer);
 		event.registerLayerDefinition(Modelrocket.LAYER_LOCATION, Modelrocket::createBodyLayer);

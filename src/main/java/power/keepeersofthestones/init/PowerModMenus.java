@@ -58,6 +58,7 @@ import power.keepeersofthestones.world.inventory.EBAirMenu;
 import power.keepeersofthestones.world.inventory.EBAetherMenu;
 import power.keepeersofthestones.world.inventory.CustomMusicPlayerMenu;
 import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
+import power.keepeersofthestones.world.inventory.CompanionsGuiMenu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
@@ -182,6 +183,8 @@ public class PowerModMenus {
 	public static final MenuType<ChoiseMagicPower2Menu> CHOISE_MAGIC_POWER_2 = register("choise_magic_power_2",
 			(id, inv, extraData) -> new ChoiseMagicPower2Menu(id, inv, extraData));
 	public static final MenuType<EBAetherMenu> EB_AETHER = register("eb_aether", (id, inv, extraData) -> new EBAetherMenu(id, inv, extraData));
+	public static final MenuType<CompanionsGuiMenu> COMPANIONS_GUI = register("companions_gui",
+			(id, inv, extraData) -> new CompanionsGuiMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
