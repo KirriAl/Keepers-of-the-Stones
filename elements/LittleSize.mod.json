@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "little_size",
     "customModelName": "Normal",
     "name": "Little Size",
     "rarity": "COMMON",

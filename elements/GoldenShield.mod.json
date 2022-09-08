@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "golden_shield",
     "customModelName": "Normal",
     "name": "Golden Shield",
     "rarity": "COMMON",
