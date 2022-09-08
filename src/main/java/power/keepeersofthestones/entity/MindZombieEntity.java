@@ -2,7 +2,6 @@
 package power.keepeersofthestones.entity;
 
 import power.keepeersofthestones.procedures.TameMindZombieProcedure;
-import power.keepeersofthestones.procedures.IfDayCanBurnProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,6 +31,7 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AgeableMob;
@@ -55,6 +55,11 @@ public class MindZombieEntity extends TamableAnimal {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.LEATHER_HELMET));
+		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.LEATHER_CHESTPLATE));
+		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.LEATHER_LEGGINGS));
+		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.LEATHER_BOOTS));
 	}
 
 	@Override
@@ -161,12 +166,6 @@ public class MindZombieEntity extends TamableAnimal {
 
 		TameMindZombieProcedure.execute(entity, sourceentity);
 		return retval;
-	}
-
-	@Override
-	public void baseTick() {
-		super.baseTick();
-		IfDayCanBurnProcedure.execute(this.level, this);
 	}
 
 	@Override

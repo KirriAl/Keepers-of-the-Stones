@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Mind Zombie",
     "mobLabel": "",
-    "mobModelName": "ModelMindZombie",
+    "mobModelName": "Biped",
     "mobModelTexture": "mind_zombie.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
@@ -27,22 +27,22 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": ""
+      "value": "Items.STONE_SWORD"
     },
     "equipmentOffHand": {
       "value": ""
     },
     "equipmentHelmet": {
-      "value": ""
+      "value": "Items.LEATHER_HELMET"
     },
     "equipmentBody": {
-      "value": ""
+      "value": "Items.LEATHER_CHESTPLATE"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "Items.LEATHER_LEGGINGS"
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "Items.LEATHER_BOOTS"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEAD",
@@ -101,9 +101,6 @@
     "particleAmount": 4,
     "onRightClickedOn": {
       "name": "TameMindZombie"
-    },
-    "onMobTickUpdate": {
-      "name": "IfDayCanBurn"
     },
     "hasAI": true,
     "aiBase": "(none)",
