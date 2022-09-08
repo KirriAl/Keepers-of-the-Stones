@@ -18610,22 +18610,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18927,6 +18911,70 @@
         ]
       },
       "path": "~/Mind"
+    },
+    {
+      "name": "GoldenStaff",
+      "type": "tool",
+      "sortid": 1110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_staff",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenSphere",
+      "type": "rangeditem",
+      "sortid": 1111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_sphere",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenShield",
+      "type": "item",
+      "sortid": 1112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_shield",
+      "path": "~/GoldenDust"
+    },
+    {
+      "name": "GoldenShieldUse",
+      "type": "procedure",
+      "sortid": 1113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_shield_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
     }
   ],
   "variable_elements": [
@@ -19920,8 +19968,8 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -19929,11 +19977,11 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "enchantment.power.revenge": "Возмездие",
       "item.power.glow_create": "Создать Светляка",
-      "item.power.technology_chestplate": "Technology Chestplate",
       "effect.power.recharge_energy_stone": "Перезарядка",
+      "item.power.technology_chestplate": "Technology Chestplate",
       "item.power.poison_battery": "Батарея",
-      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.snow_golem_creator": "Создание Снежного голема",
+      "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Бумеранг",
       "item.power.lava_hammer": "Лавовый Молот",
       "item.power.form_chestplate": "Form Chestplate",
@@ -20056,6 +20104,7 @@
       "block.power.vacuum_web_block": "Блок вакуумной сети",
       "item.power.earth_boots": "Земляные Ботинки",
       "fluid.power.quicksand_block": "Блок зыбучего песка",
+      "item.power.golden_shield": "Golden Shield",
       "item.power.water_helmet": "Водная Маска",
       "item.power.cultivation": "Выращивание",
       "power.cultivation.sugar_cane.text": "Тростник",
@@ -20174,11 +20223,13 @@
       "item.power.time_blade": "Клинок Времени",
       "effect.power.recharge_sun_stone": "Перезарядка",
       "item.power.sound_chestplate": "Звуковой Нагрудник",
+      "item.power.golden_staff": "Golden Staff",
       "item.power.flash_light": "Вспышка Света",
       "item.power.shadow_chestplate": "Нагрудник тьмы",
       "item.power.music_stone": "Камень Музыки",
       "subtitles.time_travel": "Time Travel",
       "advancements.forbidden_zone.title": "Запретная зона",
+      "item.power.golden_sphere": "Golden Sphere",
       "item.power.dinoera": "Огниво портала (Диноэра)",
       "item.power.mass_infection": "Массовое Поражение",
       "item.power.mist_leggings": "Mist Leggings",
@@ -20630,8 +20681,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -20639,8 +20690,8 @@
       "item.power.fire_chestplate": "Fire Chestplate",
       "enchantment.power.revenge": "Revenge",
       "item.power.glow_create": "Glow Create",
-      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Recharge",
       "item.power.poison_battery": "Battery",
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
@@ -20766,6 +20817,7 @@
       "block.power.vacuum_web_block": "Vacuum Web Block",
       "item.power.earth_boots": "Earth Boots",
       "fluid.power.quicksand_block": "Quicksand Block",
+      "item.power.golden_shield": "Golden Shield",
       "item.power.water_helmet": "Water Helmet",
       "item.power.cultivation": "Cultivation",
       "power.cultivation.sugar_cane.text": "Sugar Cane",
@@ -20884,12 +20936,14 @@
       "item.power.time_blade": "Time Blade",
       "effect.power.recharge_sun_stone": "Recharge",
       "item.power.sound_chestplate": "Sound Chestplate",
+      "item.power.golden_staff": "Golden Staff",
       "item.power.flash_light": "Flash Light",
       "item.power.shadow_chestplate": "Shadow Chestplate",
       "battery.empty": "",
       "item.power.music_stone": "Music Stone",
       "subtitles.time_travel": "Time Travel",
       "advancements.forbidden_zone.title": "Forbidden Zone",
+      "item.power.golden_sphere": "Golden Sphere",
       "item.power.dinoera": "Dinoera Portal Igniter",
       "item.power.mass_infection": "Mass Infection",
       "item.power.mist_leggings": "Mist Leggings",

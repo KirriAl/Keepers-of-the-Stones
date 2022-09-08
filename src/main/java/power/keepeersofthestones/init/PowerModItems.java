@@ -210,6 +210,9 @@ import power.keepeersofthestones.item.GravityReductionItem;
 import power.keepeersofthestones.item.GravityItem;
 import power.keepeersofthestones.item.GravityBoostItem;
 import power.keepeersofthestones.item.GravityBatteryItem;
+import power.keepeersofthestones.item.GoldenStaffItem;
+import power.keepeersofthestones.item.GoldenSphereItem;
+import power.keepeersofthestones.item.GoldenShieldItem;
 import power.keepeersofthestones.item.GoldenDustStoneItem;
 import power.keepeersofthestones.item.GoldenDustItem;
 import power.keepeersofthestones.item.GoldenCrossbowItem;
@@ -815,6 +818,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> WISDOM_SWORD = REGISTRY.register("wisdom_sword", () -> new WisdomSwordItem());
 	public static final RegistryObject<Item> MENTAL_ATTACK = REGISTRY.register("mental_attack", () -> new MentalAttackItem());
 	public static final RegistryObject<Item> COMPANIONS = REGISTRY.register("companions", () -> new CompanionsItem());
+	public static final RegistryObject<Item> GOLDEN_STAFF = REGISTRY.register("golden_staff", () -> new GoldenStaffItem());
+	public static final RegistryObject<Item> GOLDEN_SPHERE = REGISTRY.register("golden_sphere", () -> new GoldenSphereItem());
+	public static final RegistryObject<Item> GOLDEN_SHIELD = REGISTRY.register("golden_shield", () -> new GoldenShieldItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

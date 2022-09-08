@@ -65,7 +65,7 @@ public class ChoiseMagicPower2ButtonMessage {
 			return;
 		if (buttonID == 13) {
 
-			OpenPowerTransferProcedure.execute(world, x, y, z, entity);
+			OpenPowerTransferProcedure.execute(entity);
 		}
 		if (buttonID == 21) {
 

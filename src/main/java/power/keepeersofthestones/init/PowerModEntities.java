@@ -45,6 +45,7 @@ import power.keepeersofthestones.entity.KunaiEntity;
 import power.keepeersofthestones.entity.IceSpearEntity;
 import power.keepeersofthestones.entity.IceSharpEntity;
 import power.keepeersofthestones.entity.IceBallEntity;
+import power.keepeersofthestones.entity.GoldenSphereEntity;
 import power.keepeersofthestones.entity.GoldenCrossbowEntity;
 import power.keepeersofthestones.entity.GlowEntity;
 import power.keepeersofthestones.entity.FlashLightEntity;
@@ -277,6 +278,9 @@ public class PowerModEntities {
 					.setTrackingRange(20).setUpdateInterval(3).setCustomClientFactory(MindZombieEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GoldenSphereEntity>> GOLDEN_SPHERE = register("projectile_golden_sphere",
+			EntityType.Builder.<GoldenSphereEntity>of(GoldenSphereEntity::new, MobCategory.MISC).setCustomClientFactory(GoldenSphereEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
