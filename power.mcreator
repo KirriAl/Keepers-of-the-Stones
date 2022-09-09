@@ -18975,6 +18975,15 @@
         ]
       },
       "path": "~/GoldenDust"
+    },
+    {
+      "name": "EBForm",
+      "type": "gui",
+      "sortid": 1114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eb_form",
+      "path": "~/ElementalBook"
     }
   ],
   "variable_elements": [
@@ -20000,7 +20009,7 @@
       "effect.power.recharge_vacuum_stone": "Перезарядка",
       "item.power.amber_leggings": "Amber Leggings",
       "item.power.dispersion": "Дисперсия",
-      "item.power.jade_sword": "Jade Sword",
+      "item.power.jade_sword": "Нефритовый Меч",
       "item.power.tamer": "Приручатель",
       "item.power.mist_chestplate": "Mist Chestplate",
       "effect.power.recharge_smoke_stone": "Перезарядка",
@@ -20201,7 +20210,7 @@
       "item.power.wisdom_sword": "Wisdom Sword",
       "effect.power.water_master": "Мастер Воды",
       "item.power.light_boots": "Ботинки света",
-      "item.power.transform_sphere": "Transform Sphere",
+      "item.power.transform_sphere": "Сфера Трансформации",
       "item.power.smoke_stone": "Камень Дыма",
       "effect.power.recharge_explosion_stone": "Перезарядка",
       "item.power.earth_stone": "Камень Земли",
@@ -20281,7 +20290,7 @@
       "item.power.enceladus": "Enceladus Portal Igniter",
       "item.power.rain_leggings": "Дождевые Штаны",
       "item.power.shadow_ball": "Теневой Шар",
-      "item.power.big_size": "Big Size",
+      "item.power.big_size": "Увеличение Размера",
       "item.power.nunchucks": "Нунчаки",
       "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Мастер Огня",
@@ -20589,7 +20598,7 @@
       "power.spawn_animals.sheep.text": "Овца",
       "block.power.cluster_block": "Блок кластера",
       "item.power.fistof_earth": "Земляной Кулак",
-      "item.power.little_size": "Little Size",
+      "item.power.little_size": "Уменьшение Размера",
       "advancements.forward_to_the_stars.descr": "Создайте и поставьте ракету на землю. Готовьтесь ко взлету!",
       "item.power.blood_chestplate": "Нагрудник крови",
       "item.power.energium_ingot": "Энерджиумный слиток",
@@ -20681,8 +20690,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.music_helmet": "Music Helmet",
       "item.power.earth_battery": "Battery",
+      "item.power.music_helmet": "Music Helmet",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",

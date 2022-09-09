@@ -43,6 +43,7 @@ import power.keepeersofthestones.client.gui.EBLavaScreen;
 import power.keepeersofthestones.client.gui.EBIceScreen;
 import power.keepeersofthestones.client.gui.EBGreeneryScreen;
 import power.keepeersofthestones.client.gui.EBGravityScreen;
+import power.keepeersofthestones.client.gui.EBFormScreen;
 import power.keepeersofthestones.client.gui.EBFireScreen;
 import power.keepeersofthestones.client.gui.EBExplosionScreen;
 import power.keepeersofthestones.client.gui.EBEnergyScreen;
@@ -153,6 +154,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_POWER_2, ChoiseMagicPower2Screen::new);
 			MenuScreens.register(PowerModMenus.EB_AETHER, EBAetherScreen::new);
 			MenuScreens.register(PowerModMenus.COMPANIONS_GUI, CompanionsGuiScreen::new);
+			MenuScreens.register(PowerModMenus.EB_FORM, EBFormScreen::new);
 		});
 	}
 }
