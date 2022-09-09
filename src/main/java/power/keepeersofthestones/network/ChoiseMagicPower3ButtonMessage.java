@@ -2,7 +2,13 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower3Menu;
+import power.keepeersofthestones.procedures.SpiritUseProcedure;
+import power.keepeersofthestones.procedures.SmokeUseProcedure;
+import power.keepeersofthestones.procedures.MindUseProcedure;
+import power.keepeersofthestones.procedures.FormUseProcedure;
 import power.keepeersofthestones.procedures.CM2Procedure;
+import power.keepeersofthestones.procedures.BlueFlameUseProcedure;
+import power.keepeersofthestones.procedures.AetherUseProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -62,6 +68,30 @@ public class ChoiseMagicPower3ButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			SpiritUseProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			FormUseProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			AetherUseProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			MindUseProcedure.execute(entity);
+		}
+		if (buttonID == 4) {
+
+			BlueFlameUseProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			SmokeUseProcedure.execute(entity);
+		}
 		if (buttonID == 6) {
 
 			CM2Procedure.execute(world, x, y, z, entity);

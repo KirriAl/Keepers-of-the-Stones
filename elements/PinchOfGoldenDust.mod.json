@@ -33,7 +33,7 @@
       "name": "OpenPowerTransfer"
     },
     "onEntityHitWith": {
-      "name": "OpenPowerTransfer"
+      "name": "OpenGotPowerByPlayer"
     },
     "isFood": false,
     "nutritionalValue": 4,

@@ -2,8 +2,26 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower1Menu;
+import power.keepeersofthestones.procedures.WaterUseProcedure;
+import power.keepeersofthestones.procedures.VacuumUseProcedure;
+import power.keepeersofthestones.procedures.TornadoUseProcedure;
+import power.keepeersofthestones.procedures.SunUseProcedure;
+import power.keepeersofthestones.procedures.SoundUseProcedure;
+import power.keepeersofthestones.procedures.ShadowUseProcedure;
+import power.keepeersofthestones.procedures.RainUseProcedure;
+import power.keepeersofthestones.procedures.OceanUseProcedure;
+import power.keepeersofthestones.procedures.MetalUseProcedure;
+import power.keepeersofthestones.procedures.LightningUseProcedure;
+import power.keepeersofthestones.procedures.LightUseProcedure;
+import power.keepeersofthestones.procedures.LavaUseProcedure;
+import power.keepeersofthestones.procedures.IceUseProcedure;
+import power.keepeersofthestones.procedures.GreeneryUseProcedure;
 import power.keepeersofthestones.procedures.FireUseProcedure;
+import power.keepeersofthestones.procedures.EnergyUseProcedure;
+import power.keepeersofthestones.procedures.EarthUseProcedure;
+import power.keepeersofthestones.procedures.CrystalUseProcedure;
 import power.keepeersofthestones.procedures.CM2Procedure;
+import power.keepeersofthestones.procedures.AnimalsUseProcedure;
 import power.keepeersofthestones.procedures.AirUseProcedure;
 import power.keepeersofthestones.PowerMod;
 
@@ -72,9 +90,81 @@ public class ChoiseMagicPower1ButtonMessage {
 
 			AirUseProcedure.execute(entity);
 		}
+		if (buttonID == 2) {
+
+			WaterUseProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			EarthUseProcedure.execute(entity);
+		}
+		if (buttonID == 4) {
+
+			EnergyUseProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			IceUseProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			LightningUseProcedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			SoundUseProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			CrystalUseProcedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			LavaUseProcedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			RainUseProcedure.execute(entity);
+		}
+		if (buttonID == 11) {
+
+			OceanUseProcedure.execute(entity);
+		}
+		if (buttonID == 12) {
+
+			GreeneryUseProcedure.execute(entity);
+		}
+		if (buttonID == 13) {
+
+			TornadoUseProcedure.execute(entity);
+		}
 		if (buttonID == 14) {
 
 			CM2Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 15) {
+
+			AnimalsUseProcedure.execute(entity);
+		}
+		if (buttonID == 16) {
+
+			MetalUseProcedure.execute(entity);
+		}
+		if (buttonID == 17) {
+
+			LightUseProcedure.execute(entity);
+		}
+		if (buttonID == 18) {
+
+			ShadowUseProcedure.execute(entity);
+		}
+		if (buttonID == 19) {
+
+			VacuumUseProcedure.execute(entity);
+		}
+		if (buttonID == 20) {
+
+			SunUseProcedure.execute(entity);
 		}
 	}
 

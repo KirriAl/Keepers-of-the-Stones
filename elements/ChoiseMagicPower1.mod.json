@@ -85,6 +85,9 @@
         "type": "button",
         "data": {
           "text": "Water",
+          "onClick": {
+            "name": "WaterUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Water",
@@ -96,6 +99,9 @@
         "type": "button",
         "data": {
           "text": "Earth",
+          "onClick": {
+            "name": "EarthUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Earth",
@@ -117,6 +123,9 @@
         "type": "button",
         "data": {
           "text": "Energy",
+          "onClick": {
+            "name": "EnergyUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Energy",
@@ -138,6 +147,9 @@
         "type": "button",
         "data": {
           "text": "Ice",
+          "onClick": {
+            "name": "IceUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Ice",
@@ -159,6 +171,9 @@
         "type": "button",
         "data": {
           "text": "Lightning",
+          "onClick": {
+            "name": "LightningUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Lightning",
@@ -180,6 +195,9 @@
         "type": "button",
         "data": {
           "text": "Sound",
+          "onClick": {
+            "name": "SoundUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Sound",
@@ -201,6 +219,9 @@
         "type": "button",
         "data": {
           "text": "Crystal",
+          "onClick": {
+            "name": "CrystalUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Crystal",
@@ -222,6 +243,9 @@
         "type": "button",
         "data": {
           "text": "Lava",
+          "onClick": {
+            "name": "LavaUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Lava",
@@ -243,6 +267,9 @@
         "type": "button",
         "data": {
           "text": "Rain",
+          "onClick": {
+            "name": "RainUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Rain",
@@ -264,6 +291,9 @@
         "type": "button",
         "data": {
           "text": "Ocean",
+          "onClick": {
+            "name": "OceanUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Ocean",
@@ -285,6 +315,9 @@
         "type": "button",
         "data": {
           "text": "Greenery",
+          "onClick": {
+            "name": "GreeneryUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Greenery",
@@ -316,6 +349,9 @@
         "type": "button",
         "data": {
           "text": "Tornado",
+          "onClick": {
+            "name": "TornadoUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Tornado",
@@ -341,6 +377,9 @@
         "type": "button",
         "data": {
           "text": "Animals",
+          "onClick": {
+            "name": "AnimalsUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Animals",
@@ -352,6 +391,9 @@
         "type": "button",
         "data": {
           "text": "Metal",
+          "onClick": {
+            "name": "MetalUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Metal",
@@ -393,6 +435,9 @@
         "type": "button",
         "data": {
           "text": "Light",
+          "onClick": {
+            "name": "LightUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Light",
@@ -404,6 +449,9 @@
         "type": "button",
         "data": {
           "text": "Shadow",
+          "onClick": {
+            "name": "ShadowUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Shadow",
@@ -415,6 +463,9 @@
         "type": "button",
         "data": {
           "text": "Vacuum",
+          "onClick": {
+            "name": "VacuumUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Vacuum",
@@ -426,6 +477,9 @@
         "type": "button",
         "data": {
           "text": "Sun",
+          "onClick": {
+            "name": "SunUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Sun",

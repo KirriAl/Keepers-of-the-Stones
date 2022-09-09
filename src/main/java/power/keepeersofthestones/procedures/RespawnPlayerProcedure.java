@@ -1099,6 +1099,27 @@ public class RespawnPlayerProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.creation = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.destruction = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.aether = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
@@ -1417,6 +1438,27 @@ public class RespawnPlayerProcedure {
 					boolean _setval = false;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.mind = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.destruction = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.creation = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.aether = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

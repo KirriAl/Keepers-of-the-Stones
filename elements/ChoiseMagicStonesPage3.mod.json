@@ -94,6 +94,9 @@
         "type": "button",
         "data": {
           "text": "G. Dust",
+          "onClick": {
+            "name": "GoldenDustGet"
+          },
           "width": 56,
           "height": 20,
           "name": "G. Dust",

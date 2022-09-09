@@ -81,9 +81,6 @@ public class ChoiseMagicPower2Screen extends AbstractContainerScreen<ChoiseMagic
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/destruction_master.png"));
 		this.blit(ms, this.leftPos + 19, this.topPos + 114, 0, 0, 16, 16, 16, 16);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/amber_master.png"));
-		this.blit(ms, this.leftPos + 109, this.topPos + 141, 0, 0, 16, 16, 16, 16);
-
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/space_master.png"));
 		this.blit(ms, this.leftPos + 19, this.topPos + 60, 0, 0, 16, 16, 16, 16);
 
@@ -115,7 +112,7 @@ public class ChoiseMagicPower2Screen extends AbstractContainerScreen<ChoiseMagic
 		this.blit(ms, this.leftPos + 307, this.topPos + 114, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/gravity_master.png"));
-		this.blit(ms, this.leftPos + 307, this.topPos + 141, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 109, this.topPos + 141, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -151,55 +148,129 @@ public class ChoiseMagicPower2Screen extends AbstractContainerScreen<ChoiseMagic
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20, new TextComponent(" Moon"), e -> {
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 141, 56, 20, new TextComponent(" Amber"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(0, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, new TextComponent(" Destruct"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(1, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, new TextComponent("Space"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(2, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TextComponent("Blood"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(3, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20, new TextComponent("Time"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(4, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 60, 56, 20, new TextComponent("Techolog."), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(5, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 114, 56, 20, new TextComponent("Explosion"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(6, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 87, 56, 20, new TextComponent("Teleport."), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(7, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, new TextComponent("Creation"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(8, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 33, 56, 20, new TextComponent("Mist"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(9, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 9, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 60, 56, 20, new TextComponent("Sand"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(10, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 87, 56, 20, new TextComponent(" Speed"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(11, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 10, this.topPos + 168, 93, 20, new TextComponent("Previous page"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(12, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 114, 56, 20, new TextComponent(" Poison"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(13, x, y, z));
 				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 13, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 114, 56, 20, new TextComponent(" Poison"), e -> {
-		}));
 		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 141, 56, 20, new TextComponent("Magnet"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(14, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 14, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20, new TextComponent("Mushrooms"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(15, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 15, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20, new TextComponent("Mercury"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(16, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 16, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20, new TextComponent("Music"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(17, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 17, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, new TextComponent("Plague"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(18, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 18, x, y, z);
+			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, new TextComponent("Gravity"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 141, 56, 20, new TextComponent("Gravity"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(19, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 19, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20, new TextComponent("Next page"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(21, x, y, z));
-				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 21, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower2ButtonMessage(20, x, y, z));
+				ChoiseMagicPower2ButtonMessage.handleButtonAction(entity, 20, x, y, z);
 			}
 		}));
 	}

@@ -2,6 +2,7 @@
 package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.OpenPowerTransferProcedure;
+import power.keepeersofthestones.procedures.OpenGotPowerByPlayerProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -38,7 +39,7 @@ public class PinchOfGoldenDustItem extends Item {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		OpenPowerTransferProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+		OpenGotPowerByPlayerProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return retval;
 	}
 }
