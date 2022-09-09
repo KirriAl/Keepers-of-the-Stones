@@ -2,7 +2,9 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower1Menu;
+import power.keepeersofthestones.procedures.FireUseProcedure;
 import power.keepeersofthestones.procedures.CM2Procedure;
+import power.keepeersofthestones.procedures.AirUseProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -62,6 +64,14 @@ public class ChoiseMagicPower1ButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			FireUseProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			AirUseProcedure.execute(entity);
+		}
 		if (buttonID == 14) {
 
 			CM2Procedure.execute(world, x, y, z, entity);

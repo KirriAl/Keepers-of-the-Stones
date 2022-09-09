@@ -84,6 +84,7 @@ public class GoldenDustEffectEndProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		ClearCopyElementsProcedure.execute(entity);
 		{
 			boolean _setval = false;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -31,14 +31,14 @@ public class PinchOfGoldenDustItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		OpenPowerTransferProcedure.execute(entity);
+		OpenPowerTransferProcedure.execute(world, x, y, z, entity);
 		return ar;
 	}
 
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		OpenPowerTransferProcedure.execute(entity);
+		OpenPowerTransferProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return retval;
 	}
 }

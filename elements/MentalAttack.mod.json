@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "mental_attack",
     "customModelName": "Normal",
     "name": "Mental Attack",
     "specialInfo": [],

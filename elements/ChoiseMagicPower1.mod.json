@@ -24,6 +24,9 @@
         "type": "button",
         "data": {
           "text": "Fire",
+          "onClick": {
+            "name": "FireUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Fire",
@@ -58,6 +61,9 @@
         "type": "button",
         "data": {
           "text": "Air",
+          "onClick": {
+            "name": "AirUse"
+          },
           "width": 56,
           "height": 20,
           "name": "Air",
