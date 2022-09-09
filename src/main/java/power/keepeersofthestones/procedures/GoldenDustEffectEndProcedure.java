@@ -77,6 +77,7 @@ public class GoldenDustEffectEndProcedure {
 			ItemStack _stktoremove = new ItemStack(PowerModItems.GOLDEN_DUST_BOOTS.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
+		ClearCopyElementsProcedure.execute(entity);
 		{
 			boolean _setval = false;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -84,7 +85,6 @@ public class GoldenDustEffectEndProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		ClearCopyElementsProcedure.execute(entity);
 		{
 			boolean _setval = false;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
