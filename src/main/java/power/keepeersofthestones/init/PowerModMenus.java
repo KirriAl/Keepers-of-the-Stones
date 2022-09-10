@@ -34,6 +34,7 @@ import power.keepeersofthestones.world.inventory.EBMusicMenu;
 import power.keepeersofthestones.world.inventory.EBMushroomsMenu;
 import power.keepeersofthestones.world.inventory.EBMoonMenu;
 import power.keepeersofthestones.world.inventory.EBMistMenu;
+import power.keepeersofthestones.world.inventory.EBMindMenu;
 import power.keepeersofthestones.world.inventory.EBMetalMenu;
 import power.keepeersofthestones.world.inventory.EBMercuryMenu;
 import power.keepeersofthestones.world.inventory.EBMagnetMenu;
@@ -187,6 +188,7 @@ public class PowerModMenus {
 	public static final MenuType<CompanionsGuiMenu> COMPANIONS_GUI = register("companions_gui",
 			(id, inv, extraData) -> new CompanionsGuiMenu(id, inv, extraData));
 	public static final MenuType<EBFormMenu> EB_FORM = register("eb_form", (id, inv, extraData) -> new EBFormMenu(id, inv, extraData));
+	public static final MenuType<EBMindMenu> EB_MIND = register("eb_mind", (id, inv, extraData) -> new EBMindMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
