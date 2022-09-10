@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "golden_sphere",
     "customModelName": "Normal",
     "name": "Golden Sphere",
     "specialInfo": [],
