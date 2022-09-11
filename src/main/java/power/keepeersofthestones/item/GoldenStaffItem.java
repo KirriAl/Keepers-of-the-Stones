@@ -14,7 +14,7 @@ public class GoldenStaffItem extends SwordItem {
 			}
 
 			public float getSpeed() {
-				return 24f;
+				return 8f;
 			}
 
 			public float getAttackDamageBonus() {
