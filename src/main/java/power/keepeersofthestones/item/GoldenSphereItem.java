@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
+import power.keepeersofthestones.procedures.ReachargeGoldenSphereProcedure;
 import power.keepeersofthestones.entity.GoldenSphereEntity;
 
 import net.minecraft.world.level.Level;
@@ -48,7 +48,7 @@ public class GoldenSphereItem extends Item {
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 
-				RechargeMagicFireballProcedure.execute(entity, itemstack);
+				ReachargeGoldenSphereProcedure.execute(entity, itemstack);
 			}
 		}
 	}

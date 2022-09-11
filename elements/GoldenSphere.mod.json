@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "onRangedItemUsed": {
-      "name": "RechargeMagicFireball"
+      "name": "ReachargeGoldenSphere"
     },
     "bulletPower": 1.0,
     "bulletDamage": 9.0,

@@ -19836,6 +19836,27 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_book_craft"
+    },
+    {
+      "name": "ReachargeGoldenSphere",
+      "type": "procedure",
+      "sortid": 1164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reacharge_golden_sphere",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/GoldenDust"
     }
   ],
   "variable_elements": [
