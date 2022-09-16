@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.6.10",
-    "1.18.2-recommended": "2.6.10"
+    "1.18.2-latest": "2.7.0",
+    "1.18.2-recommended": "2.7.0"
   },
   "1.16.5": {
    "1.1.18": "
@@ -696,6 +696,18 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed the direction of the plesiosaur model
 - [Bugfix] Fixed the movement of some dinosaurs
 - [Bugfix] Fixed a bug where using variance in a creative could make a player vulnerable
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.7.0": "
+- Added new elements - form, mind and golden dust
+- Now after using mercury and acid pits, the dirt remains
+- Now the lava pit can be used on a cobblestone
+- Energium textures have been updated again
+- Added crafting for the book of elements
+- The aether icon has been updated
+- All sounds have now become mono
+- [Bugfix] Fixed an bug due to which it was impossible to get ingots back from the energium blocks
+- [Bugfix] Fixed a bug due to which the player could not destroy the rocket
+- [Bugfix] After death with the copied element amber after a while, duplicate stones no longer appear
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
