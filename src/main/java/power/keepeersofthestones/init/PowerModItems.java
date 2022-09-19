@@ -110,7 +110,6 @@ import power.keepeersofthestones.item.RainBowItem;
 import power.keepeersofthestones.item.RainBatteryItem;
 import power.keepeersofthestones.item.QuicksandItem;
 import power.keepeersofthestones.item.PortalBlastItem;
-import power.keepeersofthestones.item.PolarisStarItem;
 import power.keepeersofthestones.item.PoisonSwordItem;
 import power.keepeersofthestones.item.PoisonStoneItem;
 import power.keepeersofthestones.item.PoisonItem;
@@ -123,7 +122,6 @@ import power.keepeersofthestones.item.PlagueBatteryItem;
 import power.keepeersofthestones.item.PinchOfGoldenDustItem;
 import power.keepeersofthestones.item.PieceOfEarthItem;
 import power.keepeersofthestones.item.PegasusWingsItem;
-import power.keepeersofthestones.item.PearlAquaticaItem;
 import power.keepeersofthestones.item.OceanSwordItem;
 import power.keepeersofthestones.item.OceanStoneItem;
 import power.keepeersofthestones.item.OceanItem;
@@ -234,7 +232,6 @@ import power.keepeersofthestones.item.FireStoneItem;
 import power.keepeersofthestones.item.FireItem;
 import power.keepeersofthestones.item.FireBatteryItem;
 import power.keepeersofthestones.item.FertilizerItem;
-import power.keepeersofthestones.item.EyeFireSalamanderItem;
 import power.keepeersofthestones.item.ExplosiveFlowItem;
 import power.keepeersofthestones.item.ExplosionStoneItem;
 import power.keepeersofthestones.item.ExplosionBatteryItem;
@@ -824,9 +821,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GOLDEN_STAFF = REGISTRY.register("golden_staff", () -> new GoldenStaffItem());
 	public static final RegistryObject<Item> GOLDEN_SPHERE = REGISTRY.register("golden_sphere", () -> new GoldenSphereItem());
 	public static final RegistryObject<Item> GOLDEN_SHIELD = REGISTRY.register("golden_shield", () -> new GoldenShieldItem());
-	public static final RegistryObject<Item> POLARIS_STAR = REGISTRY.register("polaris_star", () -> new PolarisStarItem());
-	public static final RegistryObject<Item> EYE_FIRE_SALAMANDER = REGISTRY.register("eye_fire_salamander", () -> new EyeFireSalamanderItem());
-	public static final RegistryObject<Item> PEARL_AQUATICA = REGISTRY.register("pearl_aquatica", () -> new PearlAquaticaItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
