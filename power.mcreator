@@ -20091,6 +20091,15 @@
         ]
       },
       "path": "~/Items/Polaris"
+    },
+    {
+      "name": "PolarFrost",
+      "type": "achievement",
+      "sortid": 1178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polar_frost",
+      "path": "~/Achievements"
     }
   ],
   "variable_elements": [
@@ -21424,7 +21433,7 @@
       "entity.power.raptor": "Раптор",
       "item.power.air_stone": "Камень Воздуха",
       "item.power.amber_helmet": "Amber Helmet",
-      "item.power.polaris_shield": "Polaris Shield",
+      "item.power.polaris_shield": "Щит Поляриса",
       "item.power.sound_stone": "Камень Звука",
       "item.power.electromagnetic_pulse": "Электромагнитный Пульс",
       "item.power.metal_invulnerability": "Неуязвимость Металла",
@@ -21551,6 +21560,7 @@
       "item.power.crystal_shield": "Кристаллический Щит",
       "item.power.creation_leggings": "Штаны созидания",
       "item.power.magnetic_fishing_rod": "Магнитная Удочка",
+      "advancements.polar_frost.descr": "Добудьте на Энцеладе Звезду Поляриса",
       "item.power.shadow_battery": "Батарея",
       "item.power.metal_boots": "Металлические ботинки",
       "item.power.lava_battery": "Батарея",
@@ -21646,6 +21656,7 @@
       "effect.power.recharge_sound_stone": "Перезарядка",
       "item.power.sai": "Саи",
       "entity.power.shadow": "Тень",
+      "advancements.polar_frost.title": "Полярный мороз",
       "item.power.lightning_stone": "Камень Молнии",
       "item.power.blue_flame_stone": "Камень Синего Пламени",
       "item.power.mushrooms_stone": "Камень Грибов",
@@ -21773,7 +21784,7 @@
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
       "item.power.gravity_boots": "Gravity Boots",
-      "item.power.polaris_sword": "Polaris Sword",
+      "item.power.polaris_sword": "Меч Поляриса",
       "item.power.mind_helmet": "Mind Helmet",
       "item.power.amber_shield": "Янтарный Щит",
       "itemGroup.tabartifacts": "Артефакты",
@@ -22272,6 +22283,7 @@
       "effect.power.recharge_greenery_stone": "Recharge",
       "item.power.creation_leggings": "Creation Leggings",
       "item.power.magnetic_fishing_rod": "Magnetic Fishing Rod",
+      "advancements.polar_frost.descr": "Get the Polaris Star on Enceladus",
       "item.power.shadow_battery": "Battery",
       "item.power.metal_boots": "Metal Boots",
       "item.power.lava_battery": "Battery",
@@ -22368,6 +22380,7 @@
       "effect.power.recharge_sound_stone": "Recharge",
       "item.power.sai": "Sai",
       "entity.power.shadow": "Shadow",
+      "advancements.polar_frost.title": "Polar frost",
       "item.power.lightning_stone": "Lightning Stone",
       "item.power.blue_flame_stone": "Blue Flame Stone",
       "item.power.mushrooms_stone": "Mushrooms Stone",
