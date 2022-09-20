@@ -57,7 +57,7 @@ public class PolarisEffectEndProcedure {
 		{
 			boolean _setval = false;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.active = _setval;
+				capability.active_pw = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
