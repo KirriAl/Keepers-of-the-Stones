@@ -56,8 +56,8 @@ public class PWCommand {
 
 					ResetNonSelectProcedure.execute(arguments);
 					return 0;
-				})))).then(Commands.literal("set_level").then(Commands.argument("name", EntityArgument.player())
-						.then(Commands.argument("level", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				})))).then(Commands.literal("set_level").then(Commands.argument("level", DoubleArgumentType.doubleArg())
+						.then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 							ServerLevel world = arguments.getSource().getLevel();
 							double x = arguments.getSource().getPosition().x();
 							double y = arguments.getSource().getPosition().y();
