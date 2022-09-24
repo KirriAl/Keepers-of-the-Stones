@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "biome",
   "definition": {
     "name": "Cretaceous Pine Forest",
@@ -46,7 +46,6 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "ICY",
     "rainingPossibility": 0.4,
     "temperature": -0.5,
     "baseHeight": 0.30000000000000004,
@@ -55,7 +54,6 @@
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 10,
-    "biomeDictionaryTypes": [],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,

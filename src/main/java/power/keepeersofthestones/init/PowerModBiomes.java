@@ -20,13 +20,9 @@ import power.keepeersofthestones.PowerMod;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.world.level.biome.Biome;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModBiomes {
 	public static final DeferredRegister<Biome> REGISTRY = DeferredRegister.create(ForgeRegistries.BIOMES, PowerMod.MODID);
 	public static final RegistryObject<Biome> MOON_LAND = REGISTRY.register("moon_land", () -> MoonLandBiome.createBiome());
@@ -42,21 +38,4 @@ public class PowerModBiomes {
 			() -> CretaceousPineForestBiome.createBiome());
 	public static final RegistryObject<Biome> ENCELADUS_ICE_DESERT = REGISTRY.register("enceladus_ice_desert",
 			() -> EnceladusIceDesertBiome.createBiome());
-
-	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> {
-			MoonLandBiome.init();
-			MarsLandBiome.init();
-			VenusLandBiome.init();
-			VenusDesertBiome.init();
-			TriassicDesertBiome.init();
-			TriassicPlainsBiome.init();
-			JurassicJungleBiome.init();
-			JurassicSwampBiome.init();
-			CretaceousTaigaBiome.init();
-			CretaceousPineForestBiome.init();
-			EnceladusIceDesertBiome.init();
-		});
-	}
 }

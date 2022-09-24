@@ -19875,24 +19875,6 @@
       "path": "~/Items/Elemental Book"
     },
     {
-      "name": "CanMind",
-      "type": "procedure",
-      "sortid": 1166,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "can_mind",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Stones/Mind/Companions"
-    },
-    {
       "name": "StarOfPolaris",
       "type": "item",
       "sortid": 1167,
@@ -22888,5 +22870,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200334417
+  "mcreatorVersion": 202200338700
 }

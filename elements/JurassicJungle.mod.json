@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "biome",
   "definition": {
     "name": "Jurassic Jungle",
@@ -46,7 +46,6 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "JUNGLE",
     "rainingPossibility": 0.9,
     "temperature": 1.3,
     "baseHeight": 0.30000000000000004,
@@ -55,7 +54,6 @@
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 10,
-    "biomeDictionaryTypes": [],
     "grassPerChunk": 6,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 2,
