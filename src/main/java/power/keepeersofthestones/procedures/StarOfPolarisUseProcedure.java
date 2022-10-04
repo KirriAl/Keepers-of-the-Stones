@@ -9,7 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 
 public class StarOfPolarisUseProcedure {
 	public static void execute(Entity entity) {
@@ -28,7 +28,7 @@ public class StarOfPolarisUseProcedure {
 						} else {
 							if (entity instanceof Player _player && !_player.level.isClientSide())
 								_player.displayClientMessage(
-										new TextComponent("\u00A74You can't use this artifact, so you don't have power level 3."), (false));
+										Component.literal("\u00A74You can't use this artifact, so you don't have power level 3."), (false));
 						}
 					}
 				}
