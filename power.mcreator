@@ -20065,15 +20065,6 @@
       "locked_code": false,
       "registry_name": "polar_frost",
       "path": "~/Achievements"
-    },
-    {
-      "name": "AmethystWarrior",
-      "type": "livingentity",
-      "sortid": 1179,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethyst_warrior",
-      "path": "~/Dark Stones/Horror"
     }
   ],
   "variable_elements": [
@@ -21268,7 +21259,6 @@
       "item.power.greenery_boots": "Лиственные ботинки",
       "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
-      "entity.power.amethyst_warrior": "Amethyst Warrior",
       "power.cultivation.jungle_tree.text": "Тропич. Дер.",
       "item.power.music_chestplate": "Music Chestplate",
       "key.power.detransform_key": "Клавиша детрансформации",
@@ -21541,7 +21531,6 @@
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень Пустоты",
       "item.power.raw_energium": "Рудный энерджиум",
-      "item.power.amethyst_warrior_spawn_egg": "Amethyst Warrior Spawn Egg",
       "effect.power.destruction_master": "Мастер Разрушения",
       "item.power.poison_stone": "Камень Яда",
       "biome.power.jurassic_swamp": "Юрское Болото",
@@ -21992,7 +21981,6 @@
       "item.power.greenery_boots": "Greenery Boots",
       "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
-      "entity.power.amethyst_warrior": "Amethyst Warrior",
       "power.cultivation.jungle_tree.text": "Jungle Tree",
       "item.power.music_chestplate": "Music Chestplate",
       "key.power.detransform_key": "Detransform key",
@@ -22266,7 +22254,6 @@
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.raw_energium": "Raw Energium",
-      "item.power.amethyst_warrior_spawn_egg": "Amethyst Warrior Spawn Egg",
       "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_stone": "Poison Stone",
       "biome.power.jurassic_swamp": "Jurassic Swamp",
