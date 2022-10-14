@@ -23,7 +23,7 @@
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onRightClickedInAir": {
+    "onEntityHitWith": {
       "name": "BurnProcedure"
     }
   }

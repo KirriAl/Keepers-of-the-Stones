@@ -54,32 +54,32 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:stone");
+								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:stone");
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:grass_block");
+								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:grass_block");
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:dirt");
+								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:dirt");
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:sand");
+								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:sand");
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:cobblestone");
+								"fill ~-1 ~-1 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:cobblestone");
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~-4 ~-2 ~2 ~-4 ~2 minecraft:magma_block");
+										"fill ~-2 ~-2 ~-2 ~2 ~-2 ~2 minecraft:magma_block");
 				}
 			}
 			new WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12().start(world, 3);
@@ -109,12 +109,12 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:sand replace minecraft:water[]");
+								"fill ~-2 ~-1 ~-2 ~2 ~ ~2 minecraft:air replace minecraft:water[]");
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:cobblestone replace minecraft:magma_block");
+								"fill ~-2 ~-2 ~-2 ~2 ~-2 ~2 minecraft:cobblestone replace minecraft:magma_block");
 				}
 			}
 			new WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15().start(world, 400);
