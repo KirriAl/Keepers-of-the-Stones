@@ -285,6 +285,11 @@ import power.keepeersofthestones.item.ClusterSharpItem;
 import power.keepeersofthestones.item.BurnItem;
 import power.keepeersofthestones.item.BoomerangItem;
 import power.keepeersofthestones.item.BookOfElementsItem;
+import power.keepeersofthestones.item.BoilingWaterItem;
+import power.keepeersofthestones.item.BoilingStoneItem;
+import power.keepeersofthestones.item.BoilingKatanaItem;
+import power.keepeersofthestones.item.BoilingItem;
+import power.keepeersofthestones.item.BoilingCraterItem;
 import power.keepeersofthestones.item.BoStaffItem;
 import power.keepeersofthestones.item.BlueLightningItem;
 import power.keepeersofthestones.item.BlueKnifeItem;
@@ -833,6 +838,14 @@ public class PowerModItems {
 	public static final RegistryObject<Item> AMETHYST_CASTER_BOOTS = REGISTRY.register("amethyst_caster_boots", () -> new AmethystCasterItem.Boots());
 	public static final RegistryObject<Item> AMETHYST_WARRIOR = REGISTRY.register("amethyst_warrior_spawn_egg",
 			() -> new ForgeSpawnEggItem(PowerModEntities.AMETHYST_WARRIOR, -6749953, -3394561, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BOILING_STONE = REGISTRY.register("boiling_stone", () -> new BoilingStoneItem());
+	public static final RegistryObject<Item> BOILING_HELMET = REGISTRY.register("boiling_helmet", () -> new BoilingItem.Helmet());
+	public static final RegistryObject<Item> BOILING_CHESTPLATE = REGISTRY.register("boiling_chestplate", () -> new BoilingItem.Chestplate());
+	public static final RegistryObject<Item> BOILING_LEGGINGS = REGISTRY.register("boiling_leggings", () -> new BoilingItem.Leggings());
+	public static final RegistryObject<Item> BOILING_BOOTS = REGISTRY.register("boiling_boots", () -> new BoilingItem.Boots());
+	public static final RegistryObject<Item> BOILING_KATANA = REGISTRY.register("boiling_katana", () -> new BoilingKatanaItem());
+	public static final RegistryObject<Item> BOILING_CRATER = REGISTRY.register("boiling_crater", () -> new BoilingCraterItem());
+	public static final RegistryObject<Item> BOILING_WATER = REGISTRY.register("boiling_water", () -> new BoilingWaterItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

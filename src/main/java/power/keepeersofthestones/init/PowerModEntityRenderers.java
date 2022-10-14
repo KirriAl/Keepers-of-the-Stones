@@ -91,5 +91,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.MIND_ZOMBIE.get(), MindZombieRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.GOLDEN_SPHERE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AMETHYST_WARRIOR.get(), AmethystWarriorRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BOILING_WATER.get(), ThrownItemRenderer::new);
 	}
 }

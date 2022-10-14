@@ -58,6 +58,7 @@ import power.keepeersofthestones.entity.DiscoBallEntity;
 import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
 import power.keepeersofthestones.entity.BoomerangEntity;
+import power.keepeersofthestones.entity.BoilingWaterEntity;
 import power.keepeersofthestones.entity.BlueFireballEntity;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 import power.keepeersofthestones.entity.BlackHeartEntity;
@@ -285,6 +286,9 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<AmethystWarriorEntity>> AMETHYST_WARRIOR = register("amethyst_warrior",
 			EntityType.Builder.<AmethystWarriorEntity>of(AmethystWarriorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(AmethystWarriorEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BoilingWaterEntity>> BOILING_WATER = register("projectile_boiling_water",
+			EntityType.Builder.<BoilingWaterEntity>of(BoilingWaterEntity::new, MobCategory.MISC).setCustomClientFactory(BoilingWaterEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

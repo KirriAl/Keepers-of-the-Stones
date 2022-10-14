@@ -20086,6 +20086,275 @@
       "locked_code": false,
       "registry_name": "amethyst_warrior",
       "path": "~/Items/AmethystCaster"
+    },
+    {
+      "name": "ChoiseSecretStoneGUI",
+      "type": "gui",
+      "sortid": 1177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choise_secret_stone_gui",
+      "path": "~/Main Mod System/ReceivingStones"
+    },
+    {
+      "name": "OpenSecretStones",
+      "type": "procedure",
+      "sortid": 1178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_secret_stones",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/ReceivingStones"
+    },
+    {
+      "name": "BoilingStone",
+      "type": "item",
+      "sortid": 1179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_stone",
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingMasterKoghdaEffiektNachatprimienien",
+      "type": "procedure",
+      "sortid": 1180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_master_koghda_effiekt_nachatprimienien",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "RechargeBoilingStone",
+      "type": "potioneffect",
+      "sortid": 1181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_boiling_stone",
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingMasterKoghdaEffiektZakanchivaietsia",
+      "type": "procedure",
+      "sortid": 1181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_master_koghda_effiekt_zakanchivaietsia",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingMasterKazhdyiTikVoVriemiaEffiekta",
+      "type": "procedure",
+      "sortid": 1182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_master_kazhdyi_tik_vo_vriemia_effiekta",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingMaster",
+      "type": "potioneffect",
+      "sortid": 1180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_master",
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingStonePriNazhatiiPravoiKnopkoiMyshi",
+      "type": "procedure",
+      "sortid": 1183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_stone_pri_nazhatii_pravoi_knopkoi_myshi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingGet",
+      "type": "procedure",
+      "sortid": 1184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/ReceivingStones"
+    },
+    {
+      "name": "Boiling",
+      "type": "armor",
+      "sortid": 1185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingKatana",
+      "type": "tool",
+      "sortid": 1186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_katana",
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingCraterPriNazhatiiPravoiKnopkoiMyshi",
+      "type": "procedure",
+      "sortid": 1187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_crater_pri_nazhatii_pravoi_knopkoi_myshi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingCrater",
+      "type": "item",
+      "sortid": 1187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_crater",
+      "path": "~/SecretStones/Boiling"
+    },
+    {
+      "name": "BoilingWater",
+      "type": "rangeditem",
+      "sortid": 1188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boiling_water",
+      "path": "~/SecretStones/Boiling"
     }
   ],
   "variable_elements": [
@@ -20904,6 +21173,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "boiling",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "boiling_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -21074,6 +21355,7 @@
       "effect.power.recharge_golden_dust_stone": "Перезарядка",
       "effect.power.merge_balance": "Слияние Баланс",
       "item.power.spike": "Шип",
+      "effect.power.boiling_master": "Master of Boiling",
       "item.power.explosive_flow": "Взрывной Поток",
       "effect.power.recharge_water_stone": "Перезарядка",
       "item.power.lightning_battery": "Батарея",
@@ -21153,6 +21435,7 @@
       "power.cultivation.spruce.text": "Ель",
       "power.cultivation.wheat.text": "Пшеница",
       "effect.power.recharge_mercury_stone": "Перезарядка",
+      "item.power.boiling_leggings": "Boiling Leggings",
       "item.power.golden_dust_stone": "Камень Золотой Пыльцы",
       "effect.power.recharge_animals_stone": "Перезарядка",
       "key.categories.stones": "Хранители Камней",
@@ -21211,6 +21494,7 @@
       "item.power.plague_leggings": "Plague Leggings",
       "item.power.blood_stone": "Камень Крови",
       "item.power.rain_boots": "Дождевые Сапоги",
+      "item.power.boiling_helmet": "Boiling Helmet",
       "item.power.ice_spear": "Ледяное Копьё",
       "item.power.portal_blast": "Портальная Пушка",
       "item.power.morgenstern": "Моргенштерн",
@@ -21247,6 +21531,7 @@
       "effect.power.aether_master": "Мастер Эфира",
       "item.power.crystal_boots": "Кристаллические Сапоги",
       "item.power.tornado_chestplate": "Нагрудник Торнадо",
+      "item.power.boiling_stone": "Boiling Stone",
       "advancements.forward_to_the_stars.title": "Вперед ко звездам!",
       "subtitles.music4": "",
       "item.power.vacuum_leggings": "Ваакумные штаны",
@@ -21411,6 +21696,7 @@
       "item.power.ocean_stone": "Камень Океана",
       "effect.power.animals_master": "Мастер Животных",
       "block.power.blue_portal": "Голубой Портал",
+      "item.power.boiling_water": "Boiling Water",
       "item.power.rose_sword": "Розовая Шпага",
       "entity.power.raptor": "Раптор",
       "item.power.air_stone": "Камень Воздуха",
@@ -21449,6 +21735,7 @@
       "effect.power.vacuum_master": "Мастер Пустоты",
       "item.power.golden_crossbow": "Золотой Арбалет",
       "item.power.lightning_leggings": "Штаны Молнии",
+      "item.power.boiling_chestplate": "Boiling Chestplate",
       "item.power.water_katana": "Водяная Катана",
       "item.power.greenery_leggings": "Greenery Leggings",
       "item.power.smoke_chestplate": "Smoke Chestplate",
@@ -21474,6 +21761,7 @@
       "item.power.blue_knife": "Голубой Нож",
       "item.power.crestcent_helmet": "Crestcent Helmet",
       "power.building.blacksmith.text": "Кузница",
+      "item.power.boiling_katana": "Boiling Katana",
       "item.power.rain_chestplate": "Дождевая Накидка",
       "item.power.scythe": "Коса",
       "item.power.venus": "Venus Portal Igniter",
@@ -21633,6 +21921,7 @@
       "effect.power.form_master": "Master of Form",
       "fluid.power.mercury_liquid": "Жидкая Ртуть",
       "item.power.explode_helmet": "Шахид-шлем",
+      "effect.power.recharge_boiling_stone": "Recharge",
       "effect.power.recharge_sound_stone": "Перезарядка",
       "item.power.sai": "Саи",
       "entity.power.shadow": "Тень",
@@ -21649,6 +21938,7 @@
       "item.power.ice_chestplate": "Ледяная Куртка",
       "power.building.library.text": "Библиотека",
       "item.power.moon_stones": "Лунные Камни",
+      "item.power.boiling_crater": "Boiling Crater",
       "item.power.mercury_helmet": "Mercury Helmet",
       "power.space_atlas.earth.text": "Земля",
       "item.power.poison_helmet": "Poison Helmet",
@@ -21686,6 +21976,7 @@
       "item.power.ice_ball": "Ледяной шар",
       "item.power.toxic_cloud": "Токсичное Облако",
       "item.power.mushrooms_helmet": "Mushrooms Helmet",
+      "item.power.boiling_boots": "Boiling Boots",
       "item.power.tornado_helmet": "Шлем Торнадо",
       "item.power.plague_battery": "Батарея",
       "item.power.magic_fireball": "Волшебный Огненный Шар",
@@ -21794,6 +22085,7 @@
       "effect.power.recharge_golden_dust_stone": "Recharge",
       "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
+      "effect.power.boiling_master": "Master of Boiling",
       "item.power.explosive_flow": "Explosive Flow",
       "effect.power.recharge_water_stone": "Recharge",
       "item.power.lightning_battery": "Battery",
@@ -21873,6 +22165,7 @@
       "power.cultivation.spruce.text": "Spruce",
       "power.cultivation.wheat.text": "Wheat",
       "effect.power.recharge_mercury_stone": "Recharge",
+      "item.power.boiling_leggings": "Boiling Leggings",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "effect.power.recharge_animals_stone": "Recharge",
       "key.categories.stones": "Keepers of the Stones",
@@ -21931,6 +22224,7 @@
       "item.power.plague_leggings": "Plague Leggings",
       "item.power.blood_stone": "Blood Stone",
       "item.power.rain_boots": "Rain Boots",
+      "item.power.boiling_helmet": "Boiling Helmet",
       "item.power.ice_spear": "Ice Spear",
       "item.power.portal_blast": "Portal Blaster",
       "item.power.morgenstern": "Morgenstern",
@@ -21967,6 +22261,7 @@
       "effect.power.aether_master": "Master of the Aether",
       "item.power.crystal_boots": "Crystal Boots",
       "item.power.tornado_chestplate": "Tornado Chestplate",
+      "item.power.boiling_stone": "Boiling Stone",
       "advancements.forward_to_the_stars.title": "Forward to the Stars!",
       "subtitles.music4": "",
       "item.power.vacuum_leggings": "Vacuum Leggings",
@@ -22132,6 +22427,7 @@
       "item.power.ocean_stone": "Ocean Stone",
       "effect.power.animals_master": "Master of Animals",
       "block.power.blue_portal": "Blue Portal",
+      "item.power.boiling_water": "Boiling Water",
       "item.power.rose_sword": "Rose Sword",
       "entity.power.raptor": "Raptor",
       "item.power.air_stone": "Air Stone",
@@ -22170,6 +22466,7 @@
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.golden_crossbow": "Golden Crossbow",
       "item.power.lightning_leggings": "Lightning Leggings",
+      "item.power.boiling_chestplate": "Boiling Chestplate",
       "item.power.water_katana": "Water Katana",
       "item.power.greenery_leggings": "Greenery Leggings",
       "item.power.smoke_chestplate": "Smoke Chestplate",
@@ -22195,6 +22492,7 @@
       "item.power.blue_knife": "Blue Knife",
       "item.power.crestcent_helmet": "Crestcent Helmet",
       "power.building.blacksmith.text": "Blacksmith",
+      "item.power.boiling_katana": "Boiling Katana",
       "item.power.rain_chestplate": "Rain Chestplate",
       "item.power.scythe": "Scythe",
       "item.power.venus": "Venus Portal Igniter",
@@ -22355,6 +22653,7 @@
       "effect.power.form_master": "Master of Form",
       "fluid.power.mercury_liquid": "Mercury Liquid",
       "item.power.explode_helmet": "Explode Helmet",
+      "effect.power.recharge_boiling_stone": "Recharge",
       "effect.power.recharge_sound_stone": "Recharge",
       "item.power.sai": "Sai",
       "entity.power.shadow": "Shadow",
@@ -22371,6 +22670,7 @@
       "item.power.ice_chestplate": "Ice Chestplate",
       "power.building.library.text": "Library",
       "item.power.moon_stones": "Moon Stones",
+      "item.power.boiling_crater": "Boiling Crater",
       "item.power.mercury_helmet": "Mercury Helmet",
       "power.space_atlas.earth.text": "Earth",
       "item.power.poison_helmet": "Poison Helmet",
@@ -22408,6 +22708,7 @@
       "item.power.ice_ball": "Ice Ball",
       "item.power.toxic_cloud": "Toxic Cloud",
       "item.power.mushrooms_helmet": "Mushrooms Helmet",
+      "item.power.boiling_boots": "Boiling Boots",
       "item.power.tornado_helmet": "Tornado Helmet",
       "item.power.plague_battery": "Battery",
       "item.power.magic_fireball": "Magic Fireball",
@@ -22803,6 +23104,23 @@
       {
         "name": "Particles",
         "children": []
+      },
+      {
+        "name": "SecretStones",
+        "children": [
+          {
+            "name": "Boiling",
+            "children": []
+          },
+          {
+            "name": "SilverDust",
+            "children": []
+          },
+          {
+            "name": "Neon",
+            "children": []
+          }
+        ]
       }
     ]
   },

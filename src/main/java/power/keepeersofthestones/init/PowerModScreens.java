@@ -62,6 +62,7 @@ import power.keepeersofthestones.client.gui.EBAetherScreen;
 import power.keepeersofthestones.client.gui.CustomMusicPlayerScreen;
 import power.keepeersofthestones.client.gui.CultivationGUIScreen;
 import power.keepeersofthestones.client.gui.CompanionsGuiScreen;
+import power.keepeersofthestones.client.gui.ChoiseSecretStoneGUIScreen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage3Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStonesPage2Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicStoneGUIScreen;
@@ -159,6 +160,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_FORM.get(), EBFormScreen::new);
 			MenuScreens.register(PowerModMenus.EB_MIND.get(), EBMindScreen::new);
 			MenuScreens.register(PowerModMenus.EB_GOLDEN_DUST.get(), EBGoldenDustScreen::new);
+			MenuScreens.register(PowerModMenus.CHOISE_SECRET_STONE_GUI.get(), ChoiseSecretStoneGUIScreen::new);
 		});
 	}
 }
