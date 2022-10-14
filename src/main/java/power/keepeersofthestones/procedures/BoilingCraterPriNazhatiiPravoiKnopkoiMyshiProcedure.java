@@ -76,10 +76,10 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:cobblestone");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~-4 ~2 minecraft:water[] replace minecraft:cobblestone");
+						_level.getServer().getCommands()
+								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
+										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+										"fill ~-2 ~-4 ~-2 ~2 ~-4 ~2 minecraft:magma_block");
 				}
 			}
 			new WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12().start(world, 3);
