@@ -28,7 +28,7 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12 {
+			class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12.this);
+					MinecraftForge.EVENT_BUS.register(BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12.this.ticks += 1;
-						if (WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12.this.ticks >= WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12.this.waitTicks)
+						BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12.this.ticks += 1;
+						if (BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12.this.ticks >= BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12.this);
+					MinecraftForge.EVENT_BUS.unregister(BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -82,8 +82,8 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 										"fill ~-2 ~-2 ~-2 ~2 ~-2 ~2 minecraft:magma_block");
 				}
 			}
-			new WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi12().start(world, 3);
-			class WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15 {
+			new BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12().start(world, 3);
+			class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -91,20 +91,20 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15.this);
+					MinecraftForge.EVENT_BUS.register(BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15.this.ticks += 1;
-						if (WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15.this.ticks >= WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15.this.waitTicks)
+						BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15.this.ticks += 1;
+						if (BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15.this.ticks >= BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15.this);
+					MinecraftForge.EVENT_BUS.unregister(BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -117,7 +117,7 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 								"fill ~-2 ~-2 ~-2 ~2 ~-2 ~2 minecraft:cobblestone replace minecraft:magma_block");
 				}
 			}
-			new WaitHandlerBoilingCraterPriNazhatiiPravoiKnopkoiMyshi15().start(world, 400);
+			new BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15().start(world, 400);
 		}
 	}
 }
