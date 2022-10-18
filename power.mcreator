@@ -6260,10 +6260,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20657,6 +20653,27 @@
         ]
       },
       "path": "~/Stones/Technology"
+    },
+    {
+      "name": "TornadoGone",
+      "type": "procedure",
+      "sortid": 1213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_gone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Stones/Tornado"
     }
   ],
   "variable_elements": [
