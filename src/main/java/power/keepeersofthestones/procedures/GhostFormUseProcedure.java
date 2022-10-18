@@ -1,63 +1,82 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.item.GhostFormItem;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.GameType;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.GameType;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.Minecraft;
 
+import java.util.Map;
+
 public class GhostFormUseProcedure {
-	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure GhostFormUse!");
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.GHOST_FORM.get()) {
-			if (world.isClientSide())
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure GhostFormUse!");
+			return;
+		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				PowerMod.LOGGER.warn("Failed to load dependency itemstack for procedure GhostFormUse!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == GhostFormItem.block) {
+			if (world.isRemote()) {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
-			if (entity instanceof ServerPlayer _player)
-				_player.setGameMode(GameType.SPECTATOR);
-			class GhostFormUseWait11 {
+			}
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 1200);
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).setGameType(GameType.SPECTATOR);
+			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private LevelAccessor world;
+				private IWorld world;
 
-				public void start(LevelAccessor world, int waitTicks) {
+				public void start(IWorld world, int waitTicks) {
 					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(GhostFormUseWait11.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						GhostFormUseWait11.this.ticks += 1;
-						if (GhostFormUseWait11.this.ticks >= GhostFormUseWait11.this.waitTicks)
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(GhostFormUseWait11.this);
-					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-						if (entity instanceof ServerPlayer _player)
-							_player.setGameMode(GameType.SURVIVAL);
-					} else if (entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) {
-						if (entity instanceof ServerPlayer _player)
-							_player.setGameMode(GameType.CREATIVE);
+					if (!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
+						if (entity instanceof PlayerEntity)
+							((PlayerEntity) entity).setGameType(GameType.SURVIVAL);
+					} else if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false) {
+						if (entity instanceof PlayerEntity)
+							((PlayerEntity) entity).setGameType(GameType.CREATIVE);
 					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
-			new GhostFormUseWait11().start(world, 200);
+			}.start(world, (int) 200);
 		}
 	}
 }

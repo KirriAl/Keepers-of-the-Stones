@@ -1,66 +1,88 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.item.EclipseItem;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.Minecraft;
 
+import java.util.Map;
+
 public class EclipseUseProcedure {
-	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure EclipseUse!");
 			return;
-		if (world instanceof Level _lvl && _lvl.isDay()) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ECLIPSE.get()) {
-				if (world.isClientSide())
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure EclipseUse!");
+			return;
+		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				PowerMod.LOGGER.warn("Failed to load dependency itemstack for procedure EclipseUse!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if ((world instanceof World) ? ((World) world).isDaytime() : false) {
+			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == EclipseItem.block) {
+				if (world.isRemote()) {
 					Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(itemstack.getItem(), 600);
+				}
+				if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 600);
 				{
 					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands()
-								.performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set night");
+					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+						_ent.world.getServer().getCommandManager()
+								.handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "time set night");
+					}
 				}
-				class EclipseUseWait9 {
+				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
-					private LevelAccessor world;
+					private IWorld world;
 
-					public void start(LevelAccessor world, int waitTicks) {
+					public void start(IWorld world, int waitTicks) {
 						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(EclipseUseWait9.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							EclipseUseWait9.this.ticks += 1;
-							if (EclipseUseWait9.this.ticks >= EclipseUseWait9.this.waitTicks)
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(EclipseUseWait9.this);
 						{
 							Entity _ent = entity;
-							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performPrefixedCommand(
-										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set day");
+							if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+								_ent.world.getServer().getCommandManager()
+										.handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "time set day");
+							}
 						}
+						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}
-				new EclipseUseWait9().start(world, 400);
+				}.start(world, (int) 400);
 			}
 		}
 	}

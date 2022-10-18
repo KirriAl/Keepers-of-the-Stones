@@ -1,985 +1,1041 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.world.inventory.EBWaterMenu;
-import power.keepeersofthestones.world.inventory.EBVacuumMenu;
-import power.keepeersofthestones.world.inventory.EBTornadoMenu;
-import power.keepeersofthestones.world.inventory.EBTimeMenu;
-import power.keepeersofthestones.world.inventory.EBTeleportationMenu;
-import power.keepeersofthestones.world.inventory.EBTechnologyMenu;
-import power.keepeersofthestones.world.inventory.EBSunMenu;
-import power.keepeersofthestones.world.inventory.EBSpiritMenu;
-import power.keepeersofthestones.world.inventory.EBSpeedMenu;
-import power.keepeersofthestones.world.inventory.EBSpaceMenu;
-import power.keepeersofthestones.world.inventory.EBSoundMenu;
-import power.keepeersofthestones.world.inventory.EBSmokeMenu;
-import power.keepeersofthestones.world.inventory.EBShadowMenu;
-import power.keepeersofthestones.world.inventory.EBSandMenu;
-import power.keepeersofthestones.world.inventory.EBRainMenu;
-import power.keepeersofthestones.world.inventory.EBPoisonMenu;
-import power.keepeersofthestones.world.inventory.EBPlagueMenu;
-import power.keepeersofthestones.world.inventory.EBOceanMenu;
-import power.keepeersofthestones.world.inventory.EBMusicMenu;
-import power.keepeersofthestones.world.inventory.EBMushroomsMenu;
-import power.keepeersofthestones.world.inventory.EBMoonMenu;
-import power.keepeersofthestones.world.inventory.EBMistMenu;
-import power.keepeersofthestones.world.inventory.EBMindMenu;
-import power.keepeersofthestones.world.inventory.EBMetalMenu;
-import power.keepeersofthestones.world.inventory.EBMercuryMenu;
-import power.keepeersofthestones.world.inventory.EBMagnetMenu;
-import power.keepeersofthestones.world.inventory.EBLightningMenu;
-import power.keepeersofthestones.world.inventory.EBLightMenu;
-import power.keepeersofthestones.world.inventory.EBLavaMenu;
-import power.keepeersofthestones.world.inventory.EBIceMenu;
-import power.keepeersofthestones.world.inventory.EBGreeneryMenu;
-import power.keepeersofthestones.world.inventory.EBGravityMenu;
-import power.keepeersofthestones.world.inventory.EBGoldenDustMenu;
-import power.keepeersofthestones.world.inventory.EBFormMenu;
-import power.keepeersofthestones.world.inventory.EBFireMenu;
-import power.keepeersofthestones.world.inventory.EBExplosionMenu;
-import power.keepeersofthestones.world.inventory.EBEnergyMenu;
-import power.keepeersofthestones.world.inventory.EBEarthMenu;
-import power.keepeersofthestones.world.inventory.EBCrystalMenu;
-import power.keepeersofthestones.world.inventory.EBCreationMenu;
-import power.keepeersofthestones.world.inventory.EBBlueFlameMenu;
-import power.keepeersofthestones.world.inventory.EBBloodMenu;
-import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
-import power.keepeersofthestones.world.inventory.EBAmberMenu;
-import power.keepeersofthestones.world.inventory.EBAirMenu;
-import power.keepeersofthestones.world.inventory.EBAetherMenu;
-import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.item.WaterStoneItem;
+import power.keepeersofthestones.item.VacuumStoneItem;
+import power.keepeersofthestones.item.TornadoStoneItem;
+import power.keepeersofthestones.item.TimeStoneItem;
+import power.keepeersofthestones.item.TeleportationStoneItem;
+import power.keepeersofthestones.item.TechnologyStoneItem;
+import power.keepeersofthestones.item.SunStoneItem;
+import power.keepeersofthestones.item.SpiritStoneItem;
+import power.keepeersofthestones.item.SpeedStoneItem;
+import power.keepeersofthestones.item.SpaceStoneItem;
+import power.keepeersofthestones.item.SoundStoneItem;
+import power.keepeersofthestones.item.SmokeStoneItem;
+import power.keepeersofthestones.item.ShadowStoneItem;
+import power.keepeersofthestones.item.SandStoneItem;
+import power.keepeersofthestones.item.RainStoneItem;
+import power.keepeersofthestones.item.PoisonStoneItem;
+import power.keepeersofthestones.item.PlagueStoneItem;
+import power.keepeersofthestones.item.OceanStoneItem;
+import power.keepeersofthestones.item.MusicStoneItem;
+import power.keepeersofthestones.item.MushroomsStoneItem;
+import power.keepeersofthestones.item.MoonStoneItem;
+import power.keepeersofthestones.item.MistStoneItem;
+import power.keepeersofthestones.item.MindStoneItem;
+import power.keepeersofthestones.item.MetalStoneItem;
+import power.keepeersofthestones.item.MercuryStoneItem;
+import power.keepeersofthestones.item.MagnetStoneItem;
+import power.keepeersofthestones.item.LightningStoneItem;
+import power.keepeersofthestones.item.LightStoneItem;
+import power.keepeersofthestones.item.LavaStoneItem;
+import power.keepeersofthestones.item.IceStoneItem;
+import power.keepeersofthestones.item.GreeneryStoneItem;
+import power.keepeersofthestones.item.GravityStoneItem;
+import power.keepeersofthestones.item.GoldenDustStoneItem;
+import power.keepeersofthestones.item.FormStoneItem;
+import power.keepeersofthestones.item.FireStoneItem;
+import power.keepeersofthestones.item.ExplosionStoneItem;
+import power.keepeersofthestones.item.EnergyStoneItem;
+import power.keepeersofthestones.item.EarthStoneItem;
+import power.keepeersofthestones.item.DestructionStoneItem;
+import power.keepeersofthestones.item.CrystalStoneItem;
+import power.keepeersofthestones.item.CreationStoneItem;
+import power.keepeersofthestones.item.BlueFlameStoneItem;
+import power.keepeersofthestones.item.BloodStoneItem;
+import power.keepeersofthestones.item.AnimalsStoneItem;
+import power.keepeersofthestones.item.AmberStoneItem;
+import power.keepeersofthestones.item.AirStoneItem;
+import power.keepeersofthestones.item.AetherStoneItem;
+import power.keepeersofthestones.gui.EBWaterGui;
+import power.keepeersofthestones.gui.EBVacuumGui;
+import power.keepeersofthestones.gui.EBTornadoGui;
+import power.keepeersofthestones.gui.EBTimeGui;
+import power.keepeersofthestones.gui.EBTeleportationGui;
+import power.keepeersofthestones.gui.EBTechnologyGui;
+import power.keepeersofthestones.gui.EBSunGui;
+import power.keepeersofthestones.gui.EBSpiritGui;
+import power.keepeersofthestones.gui.EBSpeedGui;
+import power.keepeersofthestones.gui.EBSpaceGui;
+import power.keepeersofthestones.gui.EBSoundGui;
+import power.keepeersofthestones.gui.EBSmokeGui;
+import power.keepeersofthestones.gui.EBShadowGui;
+import power.keepeersofthestones.gui.EBSandGui;
+import power.keepeersofthestones.gui.EBRainGui;
+import power.keepeersofthestones.gui.EBPoisonGui;
+import power.keepeersofthestones.gui.EBPlagueGui;
+import power.keepeersofthestones.gui.EBOceanGui;
+import power.keepeersofthestones.gui.EBMusicGui;
+import power.keepeersofthestones.gui.EBMushroomsGui;
+import power.keepeersofthestones.gui.EBMoonGui;
+import power.keepeersofthestones.gui.EBMistGui;
+import power.keepeersofthestones.gui.EBMindGui;
+import power.keepeersofthestones.gui.EBMetalGui;
+import power.keepeersofthestones.gui.EBMercuryGui;
+import power.keepeersofthestones.gui.EBMagnetGui;
+import power.keepeersofthestones.gui.EBLightningGui;
+import power.keepeersofthestones.gui.EBLightGui;
+import power.keepeersofthestones.gui.EBLavaGui;
+import power.keepeersofthestones.gui.EBIceGui;
+import power.keepeersofthestones.gui.EBGreeneryGui;
+import power.keepeersofthestones.gui.EBGravityGui;
+import power.keepeersofthestones.gui.EBGoldenDustGui;
+import power.keepeersofthestones.gui.EBFormGui;
+import power.keepeersofthestones.gui.EBFireGui;
+import power.keepeersofthestones.gui.EBExplosionGui;
+import power.keepeersofthestones.gui.EBEnergyGui;
+import power.keepeersofthestones.gui.EBEarthGui;
+import power.keepeersofthestones.gui.EBCrystalGui;
+import power.keepeersofthestones.gui.EBCreationGui;
+import power.keepeersofthestones.gui.EBBlueFlameGui;
+import power.keepeersofthestones.gui.EBBloodGui;
+import power.keepeersofthestones.gui.EBAnimalsGui;
+import power.keepeersofthestones.gui.EBAmberGui;
+import power.keepeersofthestones.gui.EBAirGui;
+import power.keepeersofthestones.gui.EBAetherGui;
+import power.keepeersofthestones.gui.CultivationGUIGui;
+import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fml.network.NetworkHooks;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.network.PacketBuffer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.Map;
 
 import io.netty.buffer.Unpooled;
 
 public class OpenBookProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure OpenBook!");
 			return;
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.FIRE_STONE.get())) : false) {
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure OpenBook!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure OpenBook!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure OpenBook!");
+			return;
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure OpenBook!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(FireStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBFire");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBFire");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBFireMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBFireGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.AIR_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AirStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBAir");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBAir");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBAirMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBAirGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.WATER_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(WaterStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBWater");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBWater");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBWaterMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBWaterGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.EARTH_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(EarthStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBEarth");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBEarth");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBEarthMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBEarthGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ENERGY_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(EnergyStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBEnergy");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBEnergy");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBEnergyMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBEnergyGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ICE_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(IceStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBIce");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBIce");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBIceMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBIceGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.LIGHTNING_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(LightningStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBLightning");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBLightning");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBLightningMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBLightningGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SOUND_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SoundStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBSound");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSound");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBSoundMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSoundGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.CRYSTAL_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(CrystalStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBCrystal");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBCrystal");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBCrystalMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBCrystalGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.LAVA_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(LavaStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBLava");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBLava");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBLavaMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBLavaGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.RAIN_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(RainStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBRain");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBRain");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBRainMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBRainGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.TORNADO_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(TornadoStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBTornado");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBTornado");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBTornadoMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBTornadoGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.OCEAN_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(OceanStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBOcean");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBOcean");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBOceanMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBOceanGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.GREENERY_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(GreeneryStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBGreenery");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBGreenery");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBGreeneryMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBGreeneryGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ANIMALS_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AnimalsStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBAnimals");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBAnimals");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBAnimalsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBAnimalsGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.METAL_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MetalStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMetal");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMetal");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMetalMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMetalGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.LIGHT_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(LightStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBLight");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBLight");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBLightMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBLightGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SHADOW_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ShadowStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBShadow");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBShadow");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBShadowMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBShadowGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.VACUUM_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(VacuumStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBVacuum");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBVacuum");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBVacuumMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBVacuumGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SUN_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SunStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBSun");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSun");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBSunMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSunGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MOON_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MoonStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMoon");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMoon");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMoonMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMoonGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SPACE_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SpaceStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBSpace");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSpace");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBSpaceMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSpaceGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.TIME_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(TimeStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBTime");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBTime");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBTimeMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBTimeGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.CREATION_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(CreationStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBCreation");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBCreation");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBCreationMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBCreationGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.DESTRUCTION_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(DestructionStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("CultivationGUI");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("CultivationGUI");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new CultivationGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new CultivationGUIGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.BLOOD_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(BloodStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBBlood");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBBlood");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBBloodMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBBloodGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.TECHNOLOGY_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(TechnologyStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBTechnology");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBTechnology");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBTechnologyMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBTechnologyGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.TELEPORTATION_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(TeleportationStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBTeleportation");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBTeleportation");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBTeleportationMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBTeleportationGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.EXPLOSION_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ExplosionStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBExplosion");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBExplosion");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBExplosionMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBExplosionGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.AMBER_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmberStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBAmber");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBAmber");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBAmberMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBAmberGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MIST_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MistStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMist");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMist");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMistMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMistGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SAND_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SandStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBSand");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSand");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBSandMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSandGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SPEED_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SpeedStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBSpeed");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSpeed");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBSpeedMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSpeedGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.POISON_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(PoisonStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBPoison");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBPoison");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBPoisonMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBPoisonGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MAGNET_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MagnetStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMagnet");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMagnet");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMagnetMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMagnetGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MUSHROOMS_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MushroomsStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMushrooms");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMushrooms");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMushroomsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMushroomsGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MERCURY_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MercuryStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMercury");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMercury");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMercuryMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMercuryGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MUSIC_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MusicStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMusic");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMusic");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMusicMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMusicGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.PLAGUE_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(PlagueStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBPlague");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBPlague");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBPlagueMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBPlagueGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.BLUE_FLAME_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(BlueFlameStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBBlueFlame");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBBlueFlame");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBBlueFlameMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBBlueFlameGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.GRAVITY_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(GravityStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBGravity");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBGravity");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBGravityMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBGravityGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SMOKE_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SmokeStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBSmoke");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSmoke");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBSmokeMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSmokeGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SPIRIT_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SpiritStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBSpirit");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBSpirit");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBSpiritMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBSpiritGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.AETHER_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AetherStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBAether");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBAether");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBAetherMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBAetherGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.FORM_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(FormStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBForm");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBForm");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBFormMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBFormGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MIND_STONE.get())) : false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MindStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBMind");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBMind");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBMindMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBMindGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
 			}
 		}
-		if (entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get()))
-				: false) {
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(GoldenDustStoneItem.block)) : false) {
 			{
-				if (entity instanceof ServerPlayer _ent) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
-						public Component getDisplayName() {
-							return Component.literal("EBGoldenDust");
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("EBGoldenDust");
 						}
 
 						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EBGoldenDustMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new EBGoldenDustGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

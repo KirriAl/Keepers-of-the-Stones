@@ -19,9 +19,7 @@
       "trigger": "minecraft:placed_block",
       "conditions": {
         "item": {
-          "items": [
-            "power:energium_block"
-          ]
+          "item": "power:energium_block"
         }
       }
     }

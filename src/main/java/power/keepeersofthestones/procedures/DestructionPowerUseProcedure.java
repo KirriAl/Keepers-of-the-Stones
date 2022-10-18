@@ -1,65 +1,104 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.item.DestructionPowerItem;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.Explosion;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.Minecraft;
 
+import java.util.Map;
+
 public class DestructionPowerUseProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure DestructionPowerUse!");
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.DESTRUCTION_POWER
-				.get()) {
-			if (world.isClientSide())
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure DestructionPowerUse!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure DestructionPowerUse!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure DestructionPowerUse!");
+			return;
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure DestructionPowerUse!");
+			return;
+		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				PowerMod.LOGGER.warn("Failed to load dependency itemstack for procedure DestructionPowerUse!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == DestructionPowerItem.block) {
+			if (world.isRemote()) {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
-			if (entity instanceof Player _player) {
-				_player.getAbilities().invulnerable = (true);
-				_player.onUpdateAbilities();
 			}
-			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 20, Explosion.BlockInteraction.DESTROY);
-			class DestructionPowerUseWait9 {
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 1200);
+			if (entity instanceof PlayerEntity) {
+				((PlayerEntity) entity).abilities.disableDamage = (true);
+				((PlayerEntity) entity).sendPlayerAbilities();
+			}
+			if (world instanceof World && !((World) world).isRemote) {
+				((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 20, Explosion.Mode.DESTROY);
+			}
+			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private LevelAccessor world;
+				private IWorld world;
 
-				public void start(LevelAccessor world, int waitTicks) {
+				public void start(IWorld world, int waitTicks) {
 					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(DestructionPowerUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						DestructionPowerUseWait9.this.ticks += 1;
-						if (DestructionPowerUseWait9.this.ticks >= DestructionPowerUseWait9.this.waitTicks)
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(DestructionPowerUseWait9.this);
-					if (entity instanceof Player _player) {
-						_player.getAbilities().invulnerable = (false);
-						_player.onUpdateAbilities();
+					if (entity instanceof PlayerEntity) {
+						((PlayerEntity) entity).abilities.disableDamage = (false);
+						((PlayerEntity) entity).sendPlayerAbilities();
 					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
-			new DestructionPowerUseWait9().start(world, 20);
+			}.start(world, (int) 20);
 		}
 	}
 }

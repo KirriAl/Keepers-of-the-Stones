@@ -1,42 +1,56 @@
 package power.keepeersofthestones.procedures;
 
+import power.keepeersofthestones.PowerMod;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.IWorld;
+import net.minecraft.entity.Entity;
+
+import java.util.Map;
 
 public class TornadoGoneProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure TornadoGone!");
 			return;
-		class TornadoGoneWait1 {
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure TornadoGone!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
+		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
-			private LevelAccessor world;
+			private IWorld world;
 
-			public void start(LevelAccessor world, int waitTicks) {
+			public void start(IWorld world, int waitTicks) {
 				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(TornadoGoneWait1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					TornadoGoneWait1.this.ticks += 1;
-					if (TornadoGoneWait1.this.ticks >= TornadoGoneWait1.this.waitTicks)
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(TornadoGoneWait1.this);
-				if (!entity.level.isClientSide())
-					entity.discard();
+				if (!entity.world.isRemote())
+					entity.remove();
+				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}
-		new TornadoGoneWait1().start(world, 400);
+		}.start(world, (int) 400);
 	}
 }

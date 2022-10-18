@@ -1,41 +1,68 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.init.PowerModBlocks;
+import power.keepeersofthestones.block.VacuumWebBlockBlock;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+
+import java.util.Map;
 
 public class VacuumWebUseProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		class VacuumWebUseWait1 {
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure VacuumWebUse!");
+			return;
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure VacuumWebUse!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure VacuumWebUse!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure VacuumWebUse!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
-			private LevelAccessor world;
+			private IWorld world;
 
-			public void start(LevelAccessor world, int waitTicks) {
+			public void start(IWorld world, int waitTicks) {
 				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(VacuumWebUseWait1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					VacuumWebUseWait1.this.ticks += 1;
-					if (VacuumWebUseWait1.this.ticks >= VacuumWebUseWait1.this.waitTicks)
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(VacuumWebUseWait1.this);
-				world.setBlock(new BlockPos(x, y + 1, z), PowerModBlocks.VACUUM_WEB_BLOCK.get().defaultBlockState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), VacuumWebBlockBlock.block.getDefaultState(), 3);
+				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}
-		new VacuumWebUseWait1().start(world, 3);
+		}.start(world, (int) 3);
 	}
 }

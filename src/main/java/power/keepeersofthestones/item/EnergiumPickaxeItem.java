@@ -3,57 +3,86 @@ package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.EnergiumItemsProcedure;
 import power.keepeersofthestones.procedures.EnchantProcedure;
-import power.keepeersofthestones.init.PowerModTabs;
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.itemgroup.EnergiumItemGroup;
+import power.keepeersofthestones.PowerModElements;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.registries.ObjectHolder;
 
-public class EnergiumPickaxeItem extends PickaxeItem {
-	public EnergiumPickaxeItem() {
-		super(new Tier() {
-			public int getUses() {
+import net.minecraft.world.World;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.IItemTier;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
+
+@PowerModElements.ModElement.Tag
+public class EnergiumPickaxeItem extends PowerModElements.ModElement {
+	@ObjectHolder("power:energium_pickaxe")
+	public static final Item block = null;
+
+	public EnergiumPickaxeItem(PowerModElements instance) {
+		super(instance, 57);
+	}
+
+	@Override
+	public void initElements() {
+		elements.items.add(() -> new PickaxeItem(new IItemTier() {
+			public int getMaxUses() {
 				return 650;
 			}
 
-			public float getSpeed() {
+			public float getEfficiency() {
 				return 12f;
 			}
 
-			public float getAttackDamageBonus() {
+			public float getAttackDamage() {
 				return 0f;
 			}
 
-			public int getLevel() {
+			public int getHarvestLevel() {
 				return 2;
 			}
 
-			public int getEnchantmentValue() {
+			public int getEnchantability() {
 				return 14;
 			}
 
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get()));
+			public Ingredient getRepairMaterial() {
+				return Ingredient.fromStacks(new ItemStack(EnergiumIngotItem.block));
 			}
-		}, 1, -3f, new Item.Properties().tab(PowerModTabs.TAB_ENERGIUM));
-	}
+		}, 1, -3f, new Item.Properties().group(EnergiumItemGroup.tab)) {
+			@Override
+			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+				boolean retval = super.hitEntity(itemstack, entity, sourceentity);
+				double x = entity.getPosX();
+				double y = entity.getPosY();
+				double z = entity.getPosZ();
+				World world = entity.world;
 
-	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		EnchantProcedure.execute(entity, itemstack);
-		return retval;
-	}
+				EnchantProcedure.executeProcedure(
+						Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				return retval;
+			}
 
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EnergiumItemsProcedure.execute(entity, itemstack);
+			@Override
+			public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
+				super.inventoryTick(itemstack, world, entity, slot, selected);
+				double x = entity.getPosX();
+				double y = entity.getPosY();
+				double z = entity.getPosZ();
+
+				EnergiumItemsProcedure.executeProcedure(
+						Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			}
+		}.setRegistryName("energium_pickaxe"));
 	}
 }

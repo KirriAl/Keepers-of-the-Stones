@@ -1,93 +1,133 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.item.SandShieldItem;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.command.ICommandSource;
+import net.minecraft.command.CommandSource;
 import net.minecraft.client.Minecraft;
 
+import java.util.Map;
+
 public class SandShieldUseProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure SandShieldUse!");
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SAND_SHIELD.get()) {
-			if (world.isClientSide())
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure SandShieldUse!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure SandShieldUse!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure SandShieldUse!");
+			return;
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure SandShieldUse!");
+			return;
+		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				PowerMod.LOGGER.warn("Failed to load dependency itemstack for procedure SandShieldUse!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SandShieldItem.block) {
+			if (world.isRemote()) {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class SandShieldUseWait7 {
+			}
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 400);
+			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private LevelAccessor world;
+				private IWorld world;
 
-				public void start(LevelAccessor world, int waitTicks) {
+				public void start(IWorld world, int waitTicks) {
 					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(SandShieldUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						SandShieldUseWait7.this.ticks += 1;
-						if (SandShieldUseWait7.this.ticks >= SandShieldUseWait7.this.waitTicks)
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(SandShieldUseWait7.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands()
-								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
-										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~ ~-2 ~2 ~4 ~2 sandstone outline");
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								"fill ~-2 ~ ~-2 ~2 ~4 ~2 sandstone outline");
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
-			new SandShieldUseWait7().start(world, 3);
-			class SandShieldUseWait9 {
+			}.start(world, (int) 3);
+			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private LevelAccessor world;
+				private IWorld world;
 
-				public void start(LevelAccessor world, int waitTicks) {
+				public void start(IWorld world, int waitTicks) {
 					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(SandShieldUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						SandShieldUseWait9.this.ticks += 1;
-						if (SandShieldUseWait9.this.ticks >= SandShieldUseWait9.this.waitTicks)
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(SandShieldUseWait9.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands()
-								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
-										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
-			new SandShieldUseWait9().start(world, 400);
+			}.start(world, (int) 400);
 		}
 	}
 }

@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "power:raw_energium"
   },
-  "result": "power:energium_ingot"
+  "result": {
+    "item": "power:energium_ingot"
+  }
 }

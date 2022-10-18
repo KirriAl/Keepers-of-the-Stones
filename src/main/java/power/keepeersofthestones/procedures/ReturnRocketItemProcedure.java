@@ -1,22 +1,30 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.item.RocketItemItem;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.Map;
 
 public class ReturnRocketItemProcedure {
-	public static void execute(Entity sourceentity) {
-		if (sourceentity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				PowerMod.LOGGER.warn("Failed to load dependency sourceentity for procedure ReturnRocketItem!");
 			return;
-		if (!(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-			if (sourceentity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PowerModItems.ROCKET_ITEM.get());
-				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+		}
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		if (!((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).abilities.isCreativeMode : false)) {
+			if (sourceentity instanceof PlayerEntity) {
+				ItemStack _setstack = new ItemStack(RocketItemItem.block);
+				_setstack.setCount((int) 1);
+				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
 			}
 		}
 	}

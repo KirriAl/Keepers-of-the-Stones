@@ -1,108 +1,146 @@
 package power.keepeersofthestones.procedures;
 
+import power.keepeersofthestones.PowerMod;
+
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
-import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
-import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
-import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.network.play.server.SPlayerAbilitiesPacket;
+import net.minecraft.network.play.server.SPlaySoundEventPacket;
+import net.minecraft.network.play.server.SPlayEntityEffectPacket;
+import net.minecraft.network.play.server.SChangeGameStatePacket;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.Map;
 
 public class FlyOnEarthProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure FlyOnEarth!");
 			return;
-		if (entity instanceof Player _player)
-			_player.closeContainer();
-		if (world instanceof Level _level) {
-			if (!_level.isClientSide()) {
-				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:rocket.fly")),
-						SoundSource.NEUTRAL, 1, 1);
-			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:rocket.fly")), SoundSource.NEUTRAL,
-						1, 1, false);
-			}
 		}
-		class FlyOnEarthWait5 {
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure FlyOnEarth!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure FlyOnEarth!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure FlyOnEarth!");
+			return;
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure FlyOnEarth!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
+		if (entity instanceof PlayerEntity)
+			((PlayerEntity) entity).closeScreen();
+		if (world instanceof World && !world.isRemote()) {
+			((World) world).playSound(null, new BlockPos(x, y, z),
+					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:rocket.fly")),
+					SoundCategory.NEUTRAL, (float) 1, (float) 1);
+		} else {
+			((World) world).playSound(x, y, z,
+					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:rocket.fly")),
+					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+		}
+		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
-			private LevelAccessor world;
+			private IWorld world;
 
-			public void start(LevelAccessor world, int waitTicks) {
+			public void start(IWorld world, int waitTicks) {
 				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(FlyOnEarthWait5.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					FlyOnEarthWait5.this.ticks += 1;
-					if (FlyOnEarthWait5.this.ticks >= FlyOnEarthWait5.this.waitTicks)
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(FlyOnEarthWait5.this);
-				class FlyOnEarthWait4 {
+				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
-					private LevelAccessor world;
+					private IWorld world;
 
-					public void start(LevelAccessor world, int waitTicks) {
+					public void start(IWorld world, int waitTicks) {
 						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(FlyOnEarthWait4.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							FlyOnEarthWait4.this.ticks += 1;
-							if (FlyOnEarthWait4.this.ticks >= FlyOnEarthWait4.this.waitTicks)
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(FlyOnEarthWait4.this);
-						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
-							ResourceKey<Level> destinationType = Level.OVERWORLD;
-							if (_player.level.dimension() == destinationType)
-								return;
-							ServerLevel nextLevel = _player.server.getLevel(destinationType);
-							if (nextLevel != null) {
-								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
-								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
-								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
-								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
+						{
+							Entity _ent = entity;
+							if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+								RegistryKey<World> destinationType = World.OVERWORLD;
+								ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+								if (nextWorld != null) {
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+									((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+											nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+											_ent.rotationPitch);
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+									for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+										((ServerPlayerEntity) _ent).connection
+												.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+									}
+									((ServerPlayerEntity) _ent).connection.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+								}
 							}
 						}
-						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
+						if (entity instanceof LivingEntity)
+							((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 400, (int) 1));
+						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}
-				new FlyOnEarthWait4().start(world, 20);
+				}.start(world, (int) 20);
+				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}
-		new FlyOnEarthWait5().start(world, 200);
+		}.start(world, (int) 200);
 	}
 }

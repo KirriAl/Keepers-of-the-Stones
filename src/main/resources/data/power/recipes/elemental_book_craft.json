@@ -7,19 +7,19 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:glow_ink_sac"
+      "item": "minecraft:air"
     },
     "3": {
-      "item": "minecraft:glow_ink_sac"
+      "item": "minecraft:air"
     },
     "4": {
       "item": "minecraft:book"
     },
     "5": {
-      "item": "minecraft:glow_ink_sac"
+      "item": "minecraft:air"
     },
     "7": {
-      "item": "minecraft:glow_ink_sac"
+      "item": "minecraft:air"
     }
   },
   "result": {

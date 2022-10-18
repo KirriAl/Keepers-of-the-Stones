@@ -1,75 +1,101 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.network.PowerModVariables;
-import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.item.VampirismItem;
+import power.keepeersofthestones.PowerModVariables;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.IWorld;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.Map;
 
 public class VampirismUseProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, ItemStack itemstack) {
-		if (entity == null || sourceentity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure VampirismUse!");
 			return;
-		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.VAMPIRISM.get()) {
-			if (sourceentity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure VampirismUse!");
+			return;
+		}
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				PowerMod.LOGGER.warn("Failed to load dependency sourceentity for procedure VampirismUse!");
+			return;
+		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				PowerMod.LOGGER.warn("Failed to load dependency itemstack for procedure VampirismUse!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == VampirismItem.block) {
+			if (sourceentity instanceof PlayerEntity)
+				((PlayerEntity) sourceentity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 400);
 			if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).recharge_spell_blood) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 2, (false), (false)));
-				if (sourceentity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 300, 2, (false), (false)));
-				if (sourceentity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 40, 2, (false), (false)));
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WITHER, (int) 100, (int) 2, (false), (false)));
+				if (sourceentity instanceof LivingEntity)
+					((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(Effects.SATURATION, (int) 300, (int) 2, (false), (false)));
+				if (sourceentity instanceof LivingEntity)
+					((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 40, (int) 2, (false), (false)));
 			}
 			{
-				boolean _setval = true;
+				boolean _setval = (true);
 				sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.recharge_spell_blood = _setval;
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class VampirismUseWait7 {
+			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private LevelAccessor world;
+				private IWorld world;
 
-				public void start(LevelAccessor world, int waitTicks) {
+				public void start(IWorld world, int waitTicks) {
 					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(VampirismUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						VampirismUseWait7.this.ticks += 1;
-						if (VampirismUseWait7.this.ticks >= VampirismUseWait7.this.waitTicks)
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(VampirismUseWait7.this);
 					{
-						boolean _setval = false;
+						boolean _setval = (false);
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.recharge_spell_blood = _setval;
 							capability.syncPlayerVariables(sourceentity);
 						});
 					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
-			new VampirismUseWait7().start(world, 400);
+			}.start(world, (int) 400);
 		}
 	}
 }

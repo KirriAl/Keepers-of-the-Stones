@@ -1,37 +1,51 @@
 
 package power.keepeersofthestones.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Item;
+import power.keepeersofthestones.PowerModElements;
 
-public class JadeSwordItem extends SwordItem {
-	public JadeSwordItem() {
-		super(new Tier() {
-			public int getUses() {
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.IItemTier;
+
+@PowerModElements.ModElement.Tag
+public class JadeSwordItem extends PowerModElements.ModElement {
+	@ObjectHolder("power:jade_sword")
+	public static final Item block = null;
+
+	public JadeSwordItem(PowerModElements instance) {
+		super(instance, 1028);
+	}
+
+	@Override
+	public void initElements() {
+		elements.items.add(() -> new SwordItem(new IItemTier() {
+			public int getMaxUses() {
 				return 5000;
 			}
 
-			public float getSpeed() {
+			public float getEfficiency() {
 				return 4f;
 			}
 
-			public float getAttackDamageBonus() {
+			public float getAttackDamage() {
 				return 14f;
 			}
 
-			public int getLevel() {
+			public int getHarvestLevel() {
 				return 1;
 			}
 
-			public int getEnchantmentValue() {
+			public int getEnchantability() {
 				return 2;
 			}
 
-			public Ingredient getRepairIngredient() {
+			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.1f, new Item.Properties().tab(null).fireResistant());
+		}, 3, -2.1f, new Item.Properties().group(null).isImmuneToFire()) {
+		}.setRegistryName("jade_sword"));
 	}
 }

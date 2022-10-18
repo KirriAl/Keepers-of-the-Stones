@@ -12,148 +12,169 @@ import power.keepeersofthestones.procedures.EarthOnMeProcedure;
 import power.keepeersofthestones.procedures.DemoteKeeperProcedure;
 import power.keepeersofthestones.procedures.AppointKeeperProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.common.util.FakePlayerFactory;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.Direction;
-import net.minecraft.commands.arguments.EntityArgument;
-import net.minecraft.commands.Commands;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.util.Direction;
+import net.minecraft.entity.Entity;
+import net.minecraft.command.arguments.EntityArgument;
+import net.minecraft.command.Commands;
+import net.minecraft.command.CommandSource;
 
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
+
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
 public class PWCommand {
 	@SubscribeEvent
-	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("pw").requires(s -> s.hasPermission(4))
+	public static void registerCommands(RegisterCommandsEvent event) {
+		event.getDispatcher().register(LiteralArgumentBuilder.<CommandSource>literal("pw").requires(s -> s.hasPermissionLevel(4))
 				.then(Commands.literal("stone").then(Commands.literal("rechoice").executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
+					ServerWorld world = arguments.getSource().getWorld();
+					double x = arguments.getSource().getPos().getX();
+					double y = arguments.getSource().getPos().getY();
+					double z = arguments.getSource().getPos().getZ();
 					Entity entity = arguments.getSource().getEntity();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
+					Direction direction = entity.getHorizontalFacing();
 
-					ResetmychoiceProcedureProcedure.execute(world, x, y, z, entity);
+					ResetmychoiceProcedureProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				})).then(Commands.literal("choose").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
+					ServerWorld world = arguments.getSource().getWorld();
+					double x = arguments.getSource().getPos().getX();
+					double y = arguments.getSource().getPos().getY();
+					double z = arguments.getSource().getPos().getZ();
 					Entity entity = arguments.getSource().getEntity();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
+					Direction direction = entity.getHorizontalFacing();
 
-					ResetNonSelectProcedure.execute(arguments);
+					ResetNonSelectProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("arguments", arguments)).collect(HashMap::new,
+							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				})))).then(Commands.literal("set_level").then(Commands.argument("level", DoubleArgumentType.doubleArg())
 						.then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+							ServerWorld world = arguments.getSource().getWorld();
+							double x = arguments.getSource().getPos().getX();
+							double y = arguments.getSource().getPos().getY();
+							double z = arguments.getSource().getPos().getZ();
 							Entity entity = arguments.getSource().getEntity();
 							if (entity == null)
 								entity = FakePlayerFactory.getMinecraft(world);
-							Direction direction = entity.getDirection();
+							Direction direction = entity.getHorizontalFacing();
 
-							LevelSetProcedure.execute(arguments, entity);
+							LevelSetProcedure.executeProcedure(
+									Stream.of(new AbstractMap.SimpleEntry<>("arguments", arguments), new AbstractMap.SimpleEntry<>("entity", entity))
+											.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 							return 0;
 						}))))
 				.then(Commands.literal("planet").then(Commands.literal("earth").executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
+					ServerWorld world = arguments.getSource().getWorld();
+					double x = arguments.getSource().getPos().getX();
+					double y = arguments.getSource().getPos().getY();
+					double z = arguments.getSource().getPos().getZ();
 					Entity entity = arguments.getSource().getEntity();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
+					Direction direction = entity.getHorizontalFacing();
 
-					EarthOnMeProcedure.execute(entity);
+					EarthOnMeProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				})).then(Commands.literal("moon").executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
+					ServerWorld world = arguments.getSource().getWorld();
+					double x = arguments.getSource().getPos().getX();
+					double y = arguments.getSource().getPos().getY();
+					double z = arguments.getSource().getPos().getZ();
 					Entity entity = arguments.getSource().getEntity();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
+					Direction direction = entity.getHorizontalFacing();
 
-					MoonOnMeProcedure.execute(entity);
+					MoonOnMeProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				})).then(Commands.literal("venus").executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
+					ServerWorld world = arguments.getSource().getWorld();
+					double x = arguments.getSource().getPos().getX();
+					double y = arguments.getSource().getPos().getY();
+					double z = arguments.getSource().getPos().getZ();
 					Entity entity = arguments.getSource().getEntity();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
+					Direction direction = entity.getHorizontalFacing();
 
-					VenusOnMeProcedure.execute(entity);
+					VenusOnMeProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				})).then(Commands.literal("mars").executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
+					ServerWorld world = arguments.getSource().getWorld();
+					double x = arguments.getSource().getPos().getX();
+					double y = arguments.getSource().getPos().getY();
+					double z = arguments.getSource().getPos().getZ();
 					Entity entity = arguments.getSource().getEntity();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
+					Direction direction = entity.getHorizontalFacing();
 
-					MarsOnMeProcedure.execute(entity);
+					MarsOnMeProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				})).then(Commands.literal("enceladus").executes(arguments -> {
-					ServerLevel world = arguments.getSource().getLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
+					ServerWorld world = arguments.getSource().getWorld();
+					double x = arguments.getSource().getPos().getX();
+					double y = arguments.getSource().getPos().getY();
+					double z = arguments.getSource().getPos().getZ();
 					Entity entity = arguments.getSource().getEntity();
 					if (entity == null)
 						entity = FakePlayerFactory.getMinecraft(world);
-					Direction direction = entity.getDirection();
+					Direction direction = entity.getHorizontalFacing();
 
-					EnceladusOnMeProcedure.execute(entity);
+					EnceladusOnMeProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				}))).then(Commands.literal("supreme_master")
 						.then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("true").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+							ServerWorld world = arguments.getSource().getWorld();
+							double x = arguments.getSource().getPos().getX();
+							double y = arguments.getSource().getPos().getY();
+							double z = arguments.getSource().getPos().getZ();
 							Entity entity = arguments.getSource().getEntity();
 							if (entity == null)
 								entity = FakePlayerFactory.getMinecraft(world);
-							Direction direction = entity.getDirection();
+							Direction direction = entity.getHorizontalFacing();
 
-							AppointKeeperProcedure.execute(arguments, entity);
+							AppointKeeperProcedure.executeProcedure(
+									Stream.of(new AbstractMap.SimpleEntry<>("arguments", arguments), new AbstractMap.SimpleEntry<>("entity", entity))
+											.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 							return 0;
 						})).then(Commands.literal("false").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+							ServerWorld world = arguments.getSource().getWorld();
+							double x = arguments.getSource().getPos().getX();
+							double y = arguments.getSource().getPos().getY();
+							double z = arguments.getSource().getPos().getZ();
 							Entity entity = arguments.getSource().getEntity();
 							if (entity == null)
 								entity = FakePlayerFactory.getMinecraft(world);
-							Direction direction = entity.getDirection();
+							Direction direction = entity.getHorizontalFacing();
 
-							DemoteKeeperProcedure.execute(arguments, entity);
+							DemoteKeeperProcedure.executeProcedure(
+									Stream.of(new AbstractMap.SimpleEntry<>("arguments", arguments), new AbstractMap.SimpleEntry<>("entity", entity))
+											.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 							return 0;
 						})))));
 	}

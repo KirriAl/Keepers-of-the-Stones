@@ -1,88 +1,115 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.init.PowerModBlocks;
+import power.keepeersofthestones.block.UnmultiplicationMoonStonesBlock;
+import power.keepeersofthestones.block.MoonStonesBlockBlock;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+
+import java.util.Map;
 
 public class MultiplicationMoonstoneBlockToTicksProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				PowerMod.LOGGER.warn("Failed to load dependency world for procedure MultiplicationMoonstoneBlockToTicks!");
+			return;
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PowerMod.LOGGER.warn("Failed to load dependency x for procedure MultiplicationMoonstoneBlockToTicks!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PowerMod.LOGGER.warn("Failed to load dependency y for procedure MultiplicationMoonstoneBlockToTicks!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PowerMod.LOGGER.warn("Failed to load dependency z for procedure MultiplicationMoonstoneBlockToTicks!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		if (Math.random() < 0.5) {
-			class MultiplicationMoonstoneBlockToTicksWait10 {
+			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private LevelAccessor world;
+				private IWorld world;
 
-				public void start(LevelAccessor world, int waitTicks) {
+				public void start(IWorld world, int waitTicks) {
 					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(MultiplicationMoonstoneBlockToTicksWait10.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						MultiplicationMoonstoneBlockToTicksWait10.this.ticks += 1;
-						if (MultiplicationMoonstoneBlockToTicksWait10.this.ticks >= MultiplicationMoonstoneBlockToTicksWait10.this.waitTicks)
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(MultiplicationMoonstoneBlockToTicksWait10.this);
-					if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == PowerModBlocks.MOON_STONES_BLOCK.get()) {
-						world.setBlock(new BlockPos(x, y, z), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x, y + 1, z), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x + 1, y, z + 1), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x, y, z + 1), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x + 1, y, z), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x - 1, y, z - 1), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x, y, z - 1), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x - 1, y, z), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
+					if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == MoonStonesBlockBlock.block) {
+						world.setBlockState(new BlockPos(x, y, z), MoonStonesBlockBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y + 1, z), MoonStonesBlockBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x + 1, y, z + 1), MoonStonesBlockBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y, z + 1), MoonStonesBlockBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x + 1, y, z), MoonStonesBlockBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x - 1, y, z - 1), MoonStonesBlockBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y, z - 1), MoonStonesBlockBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x - 1, y, z), MoonStonesBlockBlock.block.getDefaultState(), 3);
 					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
-			new MultiplicationMoonstoneBlockToTicksWait10().start(world, 400);
+			}.start(world, (int) 400);
 		} else if (Math.random() > 0.5) {
-			class MultiplicationMoonstoneBlockToTicksWait21 {
+			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private LevelAccessor world;
+				private IWorld world;
 
-				public void start(LevelAccessor world, int waitTicks) {
+				public void start(IWorld world, int waitTicks) {
 					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(MultiplicationMoonstoneBlockToTicksWait21.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						MultiplicationMoonstoneBlockToTicksWait21.this.ticks += 1;
-						if (MultiplicationMoonstoneBlockToTicksWait21.this.ticks >= MultiplicationMoonstoneBlockToTicksWait21.this.waitTicks)
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(MultiplicationMoonstoneBlockToTicksWait21.this);
-					if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == PowerModBlocks.MOON_STONES_BLOCK.get()) {
-						world.setBlock(new BlockPos(x, y, z), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x, y + 1, z), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x + 1, y, z + 1), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x, y, z + 1), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x + 1, y, z), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x - 1, y, z - 1), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x, y, z - 1), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
-						world.setBlock(new BlockPos(x - 1, y, z), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get().defaultBlockState(), 3);
+					if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == MoonStonesBlockBlock.block) {
+						world.setBlockState(new BlockPos(x, y, z), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y + 1, z), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x + 1, y, z + 1), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y, z + 1), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x + 1, y, z), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x - 1, y, z - 1), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y, z - 1), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x - 1, y, z), UnmultiplicationMoonStonesBlock.block.getDefaultState(), 3);
 					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
-			new MultiplicationMoonstoneBlockToTicksWait21().start(world, 400);
+			}.start(world, (int) 400);
 		}
 	}
 }
