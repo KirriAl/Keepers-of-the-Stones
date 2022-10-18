@@ -56,6 +56,9 @@ public class ChoiseSecretStoneGUIScreen extends AbstractContainerScreen<ChoiseSe
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/boiling_master.png"));
 		this.blit(ms, this.leftPos + 19, this.topPos + 33, 0, 0, 16, 16, 16, 16);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/silver_dust_master.png"));
+		this.blit(ms, this.leftPos + 19, this.topPos + 60, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -94,7 +97,11 @@ public class ChoiseSecretStoneGUIScreen extends AbstractContainerScreen<ChoiseSe
 				ChoiseSecretStoneGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.literal(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.literal("Sil.Dust"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseSecretStoneGUIButtonMessage(1, x, y, z));
+				ChoiseSecretStoneGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, Component.literal(" "), e -> {
 		}));
