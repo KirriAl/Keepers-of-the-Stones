@@ -2,10 +2,10 @@
   "replace": false,
   "values": [
     "power:quicksand_block",
-    "power:flowing_quicksand_block",
+    "power:quicksand_block_flowing",
     "power:acid",
-    "power:flowing_acid",
+    "power:acid_flowing",
     "power:mercury_liquid",
-    "power:flowing_mercury_liquid"
+    "power:mercury_liquid_flowing"
   ]
 }
