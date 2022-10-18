@@ -13,6 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 
 import net.minecraft.world.World;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
@@ -22,16 +23,30 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.passive.RabbitEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.LookAtGoal;
+import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.Goal;
+import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.block.BlockState;
+
+import java.util.Random;
+import java.util.EnumSet;
 
 @PowerModElements.ModElement.Tag
 public class PterodactylEntity extends PowerModElements.ModElement {
@@ -93,7 +108,62 @@ public class PterodactylEntity extends PowerModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
+			this.goalSelector.addGoal(1, new Goal() {
+				{
+					this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
+				}
 
+				public boolean shouldExecute() {
+					if (CustomEntity.this.getAttackTarget() != null && !CustomEntity.this.getMoveHelper().isUpdating()) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+
+				@Override
+				public boolean shouldContinueExecuting() {
+					return CustomEntity.this.getMoveHelper().isUpdating() && CustomEntity.this.getAttackTarget() != null
+							&& CustomEntity.this.getAttackTarget().isAlive();
+				}
+
+				@Override
+				public void startExecuting() {
+					LivingEntity livingentity = CustomEntity.this.getAttackTarget();
+					Vector3d vec3d = livingentity.getEyePosition(1);
+					CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1.5);
+				}
+
+				@Override
+				public void tick() {
+					LivingEntity livingentity = CustomEntity.this.getAttackTarget();
+					if (CustomEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
+						CustomEntity.this.attackEntityAsMob(livingentity);
+					} else {
+						double d0 = CustomEntity.this.getDistanceSq(livingentity);
+						if (d0 < 24) {
+							Vector3d vec3d = livingentity.getEyePosition(1);
+							CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1.5);
+						}
+					}
+				}
+			});
+			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp());
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, RabbitEntity.class, true, true));
+			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 0.8, 20) {
+				@Override
+				protected Vector3d getPosition() {
+					Random random = CustomEntity.this.getRNG();
+					double dir_x = CustomEntity.this.getPosX() + ((random.nextFloat() * 2 - 1) * 16);
+					double dir_y = CustomEntity.this.getPosY() + ((random.nextFloat() * 2 - 1) * 16);
+					double dir_z = CustomEntity.this.getPosZ() + ((random.nextFloat() * 2 - 1) * 16);
+					return new Vector3d(dir_x, dir_y, dir_z);
+				}
+			});
+			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
+			this.goalSelector.addGoal(7, new AvoidEntityGoal(this, PlesiosaurusEntity.CustomEntity.class, (float) 24, 1, 1.2));
+			this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, (float) 16));
 		}
 
 		@Override

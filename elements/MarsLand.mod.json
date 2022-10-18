@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 33,
   "_type": "biome",
   "definition": {
     "name": "Mars Land",
@@ -50,6 +50,7 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
+    "biomeCategory": "NONE",
     "rainingPossibility": 0.0,
     "temperature": 2.0,
     "baseHeight": 0.2,
@@ -58,6 +59,7 @@
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 1,
+    "biomeDictionaryTypes": [],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
