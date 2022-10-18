@@ -47,7 +47,6 @@ public class MassInfectionItem extends Item {
 				MassInfectionEntity entityarrow = MassInfectionEntity.shoot(world, entity, world.getRandom(), 1f, 0, 0);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				MassInfectionRechargeProcedure.execute(entity, itemstack);
 			}
 		}

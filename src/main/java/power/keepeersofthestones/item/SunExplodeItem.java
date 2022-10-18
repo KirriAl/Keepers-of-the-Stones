@@ -47,7 +47,6 @@ public class SunExplodeItem extends Item {
 				SunExplodeEntity entityarrow = SunExplodeEntity.shoot(world, entity, world.getRandom(), 1f, 9, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

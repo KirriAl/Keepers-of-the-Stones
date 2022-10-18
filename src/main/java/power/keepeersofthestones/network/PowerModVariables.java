@@ -53,23 +53,23 @@ public class PowerModVariables {
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getPlayer().level.isClientSide())
-				((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
-						.syncPlayerVariables(event.getPlayer());
+			if (!event.getEntity().level.isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
+						.syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getPlayer().level.isClientSide())
-				((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
-						.syncPlayerVariables(event.getPlayer());
+			if (!event.getEntity().level.isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
+						.syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getPlayer().level.isClientSide())
-				((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
-						.syncPlayerVariables(event.getPlayer());
+			if (!event.getEntity().level.isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
+						.syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
@@ -143,7 +143,9 @@ public class PowerModVariables {
 			clone.form = original.form;
 			clone.mind = original.mind;
 			clone.golden_dust = original.golden_dust;
-			clone.polaris = original.polaris;
+			clone.cursed_amethyst = original.cursed_amethyst;
+			clone.boiling = original.boiling;
+			clone.silver_dust = original.silver_dust;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -160,30 +162,29 @@ public class PowerModVariables {
 				clone.ally = original.ally;
 				clone.little = original.little;
 				clone.big = original.big;
-				clone.active_pw = original.active_pw;
 			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getPlayer().level.isClientSide()) {
-				SavedData mapdata = MapVariables.get(event.getPlayer().level);
-				SavedData worlddata = WorldVariables.get(event.getPlayer().level);
+			if (!event.getEntity().level.isClientSide()) {
+				SavedData mapdata = MapVariables.get(event.getEntity().level);
+				SavedData worlddata = WorldVariables.get(event.getEntity().level);
 				if (mapdata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()),
+					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()),
 							new SavedDataSyncMessage(0, mapdata));
 				if (worlddata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()),
+					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()),
 							new SavedDataSyncMessage(1, worlddata));
 			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getPlayer().level.isClientSide()) {
-				SavedData worlddata = WorldVariables.get(event.getPlayer().level);
+			if (!event.getEntity().level.isClientSide()) {
+				SavedData worlddata = WorldVariables.get(event.getEntity().level);
 				if (worlddata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()),
+					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()),
 							new SavedDataSyncMessage(1, worlddata));
 			}
 		}
@@ -281,6 +282,8 @@ public class PowerModVariables {
 		public boolean form_stone = false;
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
+		public boolean boiling_stone = false;
+		public boolean silver_dust_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -345,6 +348,8 @@ public class PowerModVariables {
 			form_stone = nbt.getBoolean("form_stone");
 			mind_stone = nbt.getBoolean("mind_stone");
 			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
+			boiling_stone = nbt.getBoolean("boiling_stone");
+			silver_dust_stone = nbt.getBoolean("silver_dust_stone");
 		}
 
 		@Override
@@ -405,6 +410,8 @@ public class PowerModVariables {
 			nbt.putBoolean("form_stone", form_stone);
 			nbt.putBoolean("mind_stone", mind_stone);
 			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
+			nbt.putBoolean("boiling_stone", boiling_stone);
+			nbt.putBoolean("silver_dust_stone", silver_dust_stone);
 			return nbt;
 		}
 
@@ -573,8 +580,9 @@ public class PowerModVariables {
 		public boolean ally = false;
 		public boolean little = false;
 		public boolean big = false;
-		public boolean polaris = false;
-		public boolean active_pw = false;
+		public boolean cursed_amethyst = false;
+		public boolean boiling = false;
+		public boolean silver_dust = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -662,8 +670,9 @@ public class PowerModVariables {
 			nbt.putBoolean("ally", ally);
 			nbt.putBoolean("little", little);
 			nbt.putBoolean("big", big);
-			nbt.putBoolean("polaris", polaris);
-			nbt.putBoolean("active_pw", active_pw);
+			nbt.putBoolean("cursed_amethyst", cursed_amethyst);
+			nbt.putBoolean("boiling", boiling);
+			nbt.putBoolean("silver_dust", silver_dust);
 			return nbt;
 		}
 
@@ -748,8 +757,9 @@ public class PowerModVariables {
 			ally = nbt.getBoolean("ally");
 			little = nbt.getBoolean("little");
 			big = nbt.getBoolean("big");
-			polaris = nbt.getBoolean("polaris");
-			active_pw = nbt.getBoolean("active_pw");
+			cursed_amethyst = nbt.getBoolean("cursed_amethyst");
+			boiling = nbt.getBoolean("boiling");
+			silver_dust = nbt.getBoolean("silver_dust");
 		}
 	}
 
@@ -854,8 +864,9 @@ public class PowerModVariables {
 					variables.ally = message.data.ally;
 					variables.little = message.data.little;
 					variables.big = message.data.big;
-					variables.polaris = message.data.polaris;
-					variables.active_pw = message.data.active_pw;
+					variables.cursed_amethyst = message.data.cursed_amethyst;
+					variables.boiling = message.data.boiling;
+					variables.silver_dust = message.data.silver_dust;
 				}
 			});
 			context.setPacketHandled(true);

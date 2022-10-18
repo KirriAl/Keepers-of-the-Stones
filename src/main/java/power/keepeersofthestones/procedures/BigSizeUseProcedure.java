@@ -27,8 +27,8 @@ public class BigSizeUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"scale set pehkui:base 10 @s");
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "scale set pehkui:base 10 @s");
 				}
 				{
 					boolean _setval = true;
@@ -37,31 +37,32 @@ public class BigSizeUseProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				new Object() {
+				class BigSizeUseWait8 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(BigSizeUseWait8.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							BigSizeUseWait8.this.ticks += 1;
+							if (BigSizeUseWait8.this.ticks >= BigSizeUseWait8.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(BigSizeUseWait8.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performCommand(
+								_ent.getServer().getCommands().performPrefixedCommand(
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "scale set pehkui:base 1 @s");
 						}
 						{
@@ -71,9 +72,9 @@ public class BigSizeUseProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 800);
+				}
+				new BigSizeUseWait8().start(world, 800);
 			}
 		}
 	}

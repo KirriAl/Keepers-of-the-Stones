@@ -51,61 +51,62 @@ public class ShadowInvisibleUseProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
-					new Object() {
+					class ShadowInvisibleUseWait15 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
 
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
 							this.world = world;
+							MinecraftForge.EVENT_BUS.register(ShadowInvisibleUseWait15.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
+								ShadowInvisibleUseWait15.this.ticks += 1;
+								if (ShadowInvisibleUseWait15.this.ticks >= ShadowInvisibleUseWait15.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
+							MinecraftForge.EVENT_BUS.unregister(ShadowInvisibleUseWait15.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.head with power:shadow_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.chest with power:shadow_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.legs with power:shadow_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.feet with power:shadow_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 200);
+					}
+					new ShadowInvisibleUseWait15().start(world, 200);
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
 					if (world.isClientSide())
@@ -134,61 +135,62 @@ public class ShadowInvisibleUseProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
-					new Object() {
+					class ShadowInvisibleUseWait29 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
 
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
 							this.world = world;
+							MinecraftForge.EVENT_BUS.register(ShadowInvisibleUseWait29.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
+								ShadowInvisibleUseWait29.this.ticks += 1;
+								if (ShadowInvisibleUseWait29.this.ticks >= ShadowInvisibleUseWait29.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
+							MinecraftForge.EVENT_BUS.unregister(ShadowInvisibleUseWait29.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.head with power:golden_dust_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.chest with power:golden_dust_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.legs with power:golden_dust_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 								{
 									Entity _ent = entity;
 									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performCommand(
+										_ent.getServer().getCommands().performPrefixedCommand(
 												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 												"item replace entity @s armor.feet with power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 200);
+					}
+					new ShadowInvisibleUseWait29().start(world, 200);
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -218,61 +220,62 @@ public class ShadowInvisibleUseProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 							_player.inventoryMenu.getCraftSlots());
 				}
-				new Object() {
+				class ShadowInvisibleUseWait43 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(ShadowInvisibleUseWait43.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							ShadowInvisibleUseWait43.this.ticks += 1;
+							if (ShadowInvisibleUseWait43.this.ticks >= ShadowInvisibleUseWait43.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(ShadowInvisibleUseWait43.this);
 						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performCommand(
+									_ent.getServer().getCommands().performPrefixedCommand(
 											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 											"item replace entity @s armor.head with power:amber_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performCommand(
+									_ent.getServer().getCommands().performPrefixedCommand(
 											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 											"item replace entity @s armor.chest with power:amber_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performCommand(
+									_ent.getServer().getCommands().performPrefixedCommand(
 											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 											"item replace entity @s armor.legs with power:amber_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performCommand(
+									_ent.getServer().getCommands().performPrefixedCommand(
 											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 											"item replace entity @s armor.feet with power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 200);
+				}
+				new ShadowInvisibleUseWait43().start(world, 200);
 			}
 		}
 	}

@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 public class RespawnPlayerProcedure {
 	@SubscribeEvent
 	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
-		execute(event, event.getPlayer());
+		execute(event, event.getEntity());
 	}
 
 	public static void execute(Entity entity) {
@@ -804,19 +804,38 @@ public class RespawnPlayerProcedure {
 							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIND_STONE.get(), 6000, 0, (false), (false)));
 					}
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new PowerModVariables.PlayerVariables())).polaris) {
+							.orElse(new PowerModVariables.PlayerVariables())).boiling) {
 						{
 							boolean _setval = false;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.polaris = _setval;
+								capability.boiling = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PowerModItems.STAR_OF_POLARIS.get());
+							ItemStack _setstack = new ItemStack(PowerModItems.BOILING_STONE.get());
 							_setstack.setCount(1);
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
+						if (entity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_BOILING_STONE.get(), 6000, 0, (false), (false)));
+					}
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new PowerModVariables.PlayerVariables())).silver_dust) {
+						{
+							boolean _setval = false;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.silver_dust = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PowerModItems.BOILING_STONE.get());
+							_setstack.setCount(1);
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+						if (entity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_SILVER_DUST_STONE.get(), 6000, 0, (false), (false)));
 					}
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).battery) {
@@ -1150,8 +1169,8 @@ public class RespawnPlayerProcedure {
 					{
 						Entity _ent = entity;
 						if (!_ent.level.isClientSide() && _ent.getServer() != null)
-							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-									"team remove golden_dust");
+							_ent.getServer().getCommands().performPrefixedCommand(
+									_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "team remove golden_dust");
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get());

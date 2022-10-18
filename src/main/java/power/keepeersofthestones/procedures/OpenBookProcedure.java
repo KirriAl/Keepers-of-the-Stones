@@ -59,7 +59,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -74,10 +73,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBFire");
+							return Component.literal("EBFire");
 						}
 
 						@Override
@@ -92,10 +91,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBAir");
+							return Component.literal("EBAir");
 						}
 
 						@Override
@@ -112,10 +111,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBWater");
+							return Component.literal("EBWater");
 						}
 
 						@Override
@@ -132,10 +131,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBEarth");
+							return Component.literal("EBEarth");
 						}
 
 						@Override
@@ -152,10 +151,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBEnergy");
+							return Component.literal("EBEnergy");
 						}
 
 						@Override
@@ -170,10 +169,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBIce");
+							return Component.literal("EBIce");
 						}
 
 						@Override
@@ -190,10 +189,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBLightning");
+							return Component.literal("EBLightning");
 						}
 
 						@Override
@@ -210,10 +209,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBSound");
+							return Component.literal("EBSound");
 						}
 
 						@Override
@@ -230,10 +229,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBCrystal");
+							return Component.literal("EBCrystal");
 						}
 
 						@Override
@@ -248,10 +247,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBLava");
+							return Component.literal("EBLava");
 						}
 
 						@Override
@@ -266,10 +265,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBRain");
+							return Component.literal("EBRain");
 						}
 
 						@Override
@@ -286,10 +285,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBTornado");
+							return Component.literal("EBTornado");
 						}
 
 						@Override
@@ -306,10 +305,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBOcean");
+							return Component.literal("EBOcean");
 						}
 
 						@Override
@@ -326,10 +325,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBGreenery");
+							return Component.literal("EBGreenery");
 						}
 
 						@Override
@@ -346,10 +345,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBAnimals");
+							return Component.literal("EBAnimals");
 						}
 
 						@Override
@@ -366,10 +365,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMetal");
+							return Component.literal("EBMetal");
 						}
 
 						@Override
@@ -386,10 +385,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBLight");
+							return Component.literal("EBLight");
 						}
 
 						@Override
@@ -406,10 +405,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBShadow");
+							return Component.literal("EBShadow");
 						}
 
 						@Override
@@ -426,10 +425,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBVacuum");
+							return Component.literal("EBVacuum");
 						}
 
 						@Override
@@ -444,10 +443,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBSun");
+							return Component.literal("EBSun");
 						}
 
 						@Override
@@ -462,10 +461,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMoon");
+							return Component.literal("EBMoon");
 						}
 
 						@Override
@@ -482,10 +481,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBSpace");
+							return Component.literal("EBSpace");
 						}
 
 						@Override
@@ -500,10 +499,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBTime");
+							return Component.literal("EBTime");
 						}
 
 						@Override
@@ -520,10 +519,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBCreation");
+							return Component.literal("EBCreation");
 						}
 
 						@Override
@@ -540,10 +539,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("CultivationGUI");
+							return Component.literal("CultivationGUI");
 						}
 
 						@Override
@@ -560,10 +559,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBBlood");
+							return Component.literal("EBBlood");
 						}
 
 						@Override
@@ -580,10 +579,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBTechnology");
+							return Component.literal("EBTechnology");
 						}
 
 						@Override
@@ -600,10 +599,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBTeleportation");
+							return Component.literal("EBTeleportation");
 						}
 
 						@Override
@@ -620,10 +619,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBExplosion");
+							return Component.literal("EBExplosion");
 						}
 
 						@Override
@@ -640,10 +639,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBAmber");
+							return Component.literal("EBAmber");
 						}
 
 						@Override
@@ -658,10 +657,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMist");
+							return Component.literal("EBMist");
 						}
 
 						@Override
@@ -676,10 +675,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBSand");
+							return Component.literal("EBSand");
 						}
 
 						@Override
@@ -696,10 +695,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBSpeed");
+							return Component.literal("EBSpeed");
 						}
 
 						@Override
@@ -716,10 +715,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBPoison");
+							return Component.literal("EBPoison");
 						}
 
 						@Override
@@ -736,10 +735,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMagnet");
+							return Component.literal("EBMagnet");
 						}
 
 						@Override
@@ -756,10 +755,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMushrooms");
+							return Component.literal("EBMushrooms");
 						}
 
 						@Override
@@ -776,10 +775,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMercury");
+							return Component.literal("EBMercury");
 						}
 
 						@Override
@@ -796,10 +795,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMusic");
+							return Component.literal("EBMusic");
 						}
 
 						@Override
@@ -816,10 +815,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBPlague");
+							return Component.literal("EBPlague");
 						}
 
 						@Override
@@ -836,10 +835,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBBlueFlame");
+							return Component.literal("EBBlueFlame");
 						}
 
 						@Override
@@ -856,10 +855,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBGravity");
+							return Component.literal("EBGravity");
 						}
 
 						@Override
@@ -876,10 +875,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBSmoke");
+							return Component.literal("EBSmoke");
 						}
 
 						@Override
@@ -896,10 +895,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBSpirit");
+							return Component.literal("EBSpirit");
 						}
 
 						@Override
@@ -916,10 +915,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBAether");
+							return Component.literal("EBAether");
 						}
 
 						@Override
@@ -934,10 +933,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBForm");
+							return Component.literal("EBForm");
 						}
 
 						@Override
@@ -952,10 +951,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBMind");
+							return Component.literal("EBMind");
 						}
 
 						@Override
@@ -972,10 +971,10 @@ public class OpenBookProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("EBGoldenDust");
+							return Component.literal("EBGoldenDust");
 						}
 
 						@Override
