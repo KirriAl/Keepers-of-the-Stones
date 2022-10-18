@@ -1,22 +1,22 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.RainFlyTickProcedure;
-import power.keepeersofthestones.procedures.RainEndProcedure;
+import power.keepeersofthestones.procedures.FireFlyingTickProcedure;
+import power.keepeersofthestones.procedures.FireFlyingEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-public class RainFlyMobEffect extends MobEffect {
-	public RainFlyMobEffect() {
-		super(MobEffectCategory.NEUTRAL, -3355393);
+public class FlyingMobEffect extends MobEffect {
+	public FlyingMobEffect() {
+		super(MobEffectCategory.BENEFICIAL, -1);
 	}
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.rain_fly";
+		return "effect.power.flying";
 	}
 
 	@Override
@@ -26,13 +26,13 @@ public class RainFlyMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		RainFlyTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+		FireFlyingTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		RainEndProcedure.execute(entity.level, entity);
+		FireFlyingEndProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

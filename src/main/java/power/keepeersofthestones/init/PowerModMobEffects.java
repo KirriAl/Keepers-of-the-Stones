@@ -69,7 +69,6 @@ import power.keepeersofthestones.potion.RechargeAmberStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAirStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAetherStoneMobEffect;
 import power.keepeersofthestones.potion.RainMasterMobEffect;
-import power.keepeersofthestones.potion.RainFlyMobEffect;
 import power.keepeersofthestones.potion.PowerLockMobEffect;
 import power.keepeersofthestones.potion.PoisonMasterMobEffect;
 import power.keepeersofthestones.potion.PlagueMasterMobEffect;
@@ -93,8 +92,8 @@ import power.keepeersofthestones.potion.GravityMasterMobEffect;
 import power.keepeersofthestones.potion.GoldenDustMasterMobEffect;
 import power.keepeersofthestones.potion.FormMasterMobEffect;
 import power.keepeersofthestones.potion.FogMobEffect;
+import power.keepeersofthestones.potion.FlyingMobEffect;
 import power.keepeersofthestones.potion.FireMasterMobEffect;
-import power.keepeersofthestones.potion.FireFlyingMobEffect;
 import power.keepeersofthestones.potion.ExplosionMasterMobEffect;
 import power.keepeersofthestones.potion.EnergyMasterMobEffect;
 import power.keepeersofthestones.potion.EarthMasterMobEffect;
@@ -201,8 +200,6 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> TIME_MASTER_EFFECT = REGISTRY.register("time_master_effect", () -> new TimeMasterEffectMobEffect());
 	public static final RegistryObject<MobEffect> ACCELERATION_TIME_EFFECT = REGISTRY.register("acceleration_time_effect",
 			() -> new AccelerationTimeEffectMobEffect());
-	public static final RegistryObject<MobEffect> FIRE_FLYING = REGISTRY.register("fire_flying", () -> new FireFlyingMobEffect());
-	public static final RegistryObject<MobEffect> RAIN_FLY = REGISTRY.register("rain_fly", () -> new RainFlyMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_TELEPORTATION_STONE = REGISTRY.register("recharge_teleportation_stone",
 			() -> new RechargeTeleportationStoneMobEffect());
 	public static final RegistryObject<MobEffect> TELEPORTATION_MASTER = REGISTRY.register("teleportation_master",
@@ -273,4 +270,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> SILVER_DUST_MASTER = REGISTRY.register("silver_dust_master", () -> new SilverDustMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_SILVER_DUST_STONE = REGISTRY.register("recharge_silver_dust_stone",
 			() -> new RechargeSilverDustStoneMobEffect());
+	public static final RegistryObject<MobEffect> FLYING = REGISTRY.register("flying", () -> new FlyingMobEffect());
 }

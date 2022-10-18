@@ -15,6 +15,7 @@ package power.keepeersofthestones;
 
 import power.keepeersofthestones.init.PowerModTabs;
 import power.keepeersofthestones.init.PowerModSounds;
+import power.keepeersofthestones.init.PowerModParticleTypes;
 import power.keepeersofthestones.init.PowerModMobEffects;
 import power.keepeersofthestones.init.PowerModMenus;
 import power.keepeersofthestones.init.PowerModItems;
@@ -68,7 +69,7 @@ public class PowerMod {
 		PowerModMobEffects.REGISTRY.register(bus);
 
 		PowerModEnchantments.REGISTRY.register(bus);
-
+		PowerModParticleTypes.REGISTRY.register(bus);
 		PowerModMenus.REGISTRY.register(bus);
 		PowerModBiomes.REGISTRY.register(bus);
 	}

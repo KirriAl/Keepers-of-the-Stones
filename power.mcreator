@@ -8268,15 +8268,6 @@
       "path": "~/Stones/Earth"
     },
     {
-      "name": "FireFlying",
-      "type": "potioneffect",
-      "sortid": 543,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fire_flying",
-      "path": "~/Stones/Fire"
-    },
-    {
       "name": "FireFlyingTick",
       "type": "procedure",
       "sortid": 544,
@@ -8321,6 +8312,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -8454,69 +8461,6 @@
         ]
       },
       "path": "~/Stones/Sound"
-    },
-    {
-      "name": "RainFly",
-      "type": "potioneffect",
-      "sortid": 551,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rain_fly",
-      "path": "~/Stones/Rain"
-    },
-    {
-      "name": "RainFlyTick",
-      "type": "procedure",
-      "sortid": 552,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rain_fly_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Stones/Rain"
-    },
-    {
-      "name": "RainEnd",
-      "type": "procedure",
-      "sortid": 553,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rain_end",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Stones/Rain"
     },
     {
       "name": "GetSugarCane",
@@ -20559,6 +20503,24 @@
         ]
       },
       "path": "~/SecretStones/SilverDust"
+    },
+    {
+      "name": "Flying",
+      "type": "potioneffect",
+      "sortid": 1202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying",
+      "path": "~/Stones/Fire"
+    },
+    {
+      "name": "LightningParticle",
+      "type": "particle",
+      "sortid": 1203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_particle",
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -21567,8 +21529,8 @@
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
-      "item.power.disco_ball": "Диско-шар",
       "effect.power.recharge_golden_dust_stone": "Перезарядка",
+      "item.power.disco_ball": "Диско-шар",
       "effect.power.merge_balance": "Слияние Баланс",
       "item.power.spike": "Шип",
       "effect.power.boiling_master": "Мастер Кипения",
@@ -22041,6 +22003,7 @@
       "power.spawn_animals.cow.text": "Корова",
       "item.power.crystal_helmet": "Кристаллическая Каска",
       "item.power.wind_helmet": "Воздушная Шапка",
+      "effect.power.flying": "Fire Flying",
       "itemGroup.tabenergium": "Энерджиум",
       "effect.power.recharge_greenery_stone": "Перезарядка",
       "item.power.crystal_shield": "Кристаллический Щит",
@@ -22080,7 +22043,6 @@
       "item.power.creation_helmet": "Шлем созидания",
       "item.power.time_stop": "Остановка Времени",
       "block.power.crystal_shield_block": "Блок кристаллического щита",
-      "effect.power.fire_flying": "Огненный Полёт",
       "effect.power.recharge_tornado_stone": "Перезарядка",
       "item.power.animals_battery": "Батарея",
       "item.power.energium_pickaxe": "Энерджиумная кирка",
@@ -22123,7 +22085,6 @@
       "subtitles.raptor.dead": "",
       "item.power.shadow_stone": "Камень Тени",
       "block.power.battery_charger": "Зарядник для батарей",
-      "effect.power.rain_fly": "Дождевой Полёт",
       "item.power.smoke_boots": "Smoke Boots",
       "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Звуковой кинжал",
@@ -22301,8 +22262,8 @@
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
-      "effect.power.recharge_golden_dust_stone": "Recharge",
       "item.power.disco_ball": "Disco Ball",
+      "effect.power.recharge_golden_dust_stone": "Recharge",
       "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
       "effect.power.boiling_master": "Master of Boiling",
@@ -22776,6 +22737,7 @@
       "power.spawn_animals.cow.text": "Cow",
       "item.power.crystal_helmet": "Crystal Helmet",
       "item.power.wind_helmet": "Air Helmet",
+      "effect.power.flying": "Fire Flying",
       "itemGroup.tabenergium": "Energium",
       "item.power.crystal_shield": "Crystal Shield",
       "effect.power.recharge_greenery_stone": "Recharge",
@@ -22815,7 +22777,6 @@
       "item.power.creation_helmet": "Creation Helmet",
       "item.power.time_stop": "Time Stop",
       "block.power.crystal_shield_block": "Crystal Shield Block",
-      "effect.power.fire_flying": "Fire Flying",
       "effect.power.recharge_tornado_stone": "Recharge",
       "item.power.animals_battery": "Battery",
       "item.power.energium_pickaxe": "Energium Pickaxe",
@@ -22859,7 +22820,6 @@
       "subtitles.raptor.dead": "",
       "item.power.shadow_stone": "Shadow Stone",
       "block.power.battery_charger": "Battery Charger",
-      "effect.power.rain_fly": "RainFly",
       "item.power.smoke_boots": "Smoke Boots",
       "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Sound Sword",
