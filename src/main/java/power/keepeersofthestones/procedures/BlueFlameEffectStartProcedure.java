@@ -77,7 +77,7 @@ public class BlueFlameEffectStartProcedure {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"item replace entity @s weapon.mainhand with air");
+						"replaceitem entity @s weapon.mainhand air");
 			}
 		}
 		if (entity instanceof LivingEntity)
@@ -90,7 +90,7 @@ public class BlueFlameEffectStartProcedure {
 					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 						_ent.world.getServer().getCommandManager().handleCommand(
 								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-								"item replace entity @s armor.head with power:blue_flame_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+								"replaceitem entity @s armor.head power:blue_flame_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 					}
 				}
 				{
@@ -98,7 +98,7 @@ public class BlueFlameEffectStartProcedure {
 					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 						_ent.world.getServer().getCommandManager().handleCommand(
 								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-								"item replace entity @s armor.chest with power:blue_flame_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+								"replaceitem entity @s armor.chest power:blue_flame_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 					}
 				}
 				{
@@ -106,7 +106,7 @@ public class BlueFlameEffectStartProcedure {
 					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 						_ent.world.getServer().getCommandManager().handleCommand(
 								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-								"item replace entity @s armor.legs with power:blue_flame_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+								"replaceitem entity @s armor.legs power:blue_flame_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 					}
 				}
 				{
@@ -114,7 +114,7 @@ public class BlueFlameEffectStartProcedure {
 					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 						_ent.world.getServer().getCommandManager().handleCommand(
 								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-								"item replace entity @s armor.feet with power:blue_flame_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+								"replaceitem entity @s armor.feet power:blue_flame_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 					}
 				}
 			}
