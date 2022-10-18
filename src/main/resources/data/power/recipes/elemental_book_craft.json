@@ -7,19 +7,19 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:air"
+      "item": "minecraft:ink_sac"
     },
     "3": {
-      "item": "minecraft:air"
+      "item": "minecraft:ink_sac"
     },
     "4": {
       "item": "minecraft:book"
     },
     "5": {
-      "item": "minecraft:air"
+      "item": "minecraft:ink_sac"
     },
     "7": {
-      "item": "minecraft:air"
+      "item": "minecraft:ink_sac"
     }
   },
   "result": {
