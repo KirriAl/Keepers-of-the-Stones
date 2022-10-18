@@ -21567,8 +21567,8 @@
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
-      "effect.power.recharge_golden_dust_stone": "Перезарядка",
       "item.power.disco_ball": "Диско-шар",
+      "effect.power.recharge_golden_dust_stone": "Перезарядка",
       "effect.power.merge_balance": "Слияние Баланс",
       "item.power.spike": "Шип",
       "effect.power.boiling_master": "Мастер Кипения",
@@ -22301,8 +22301,8 @@
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
-      "item.power.disco_ball": "Disco Ball",
       "effect.power.recharge_golden_dust_stone": "Recharge",
+      "item.power.disco_ball": "Disco Ball",
       "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
       "effect.power.boiling_master": "Master of Boiling",
@@ -23058,6 +23058,10 @@
           {
             "name": "Music Discs",
             "children": []
+          },
+          {
+            "name": "Energy Generating Crystal",
+            "children": []
           }
         ]
       },
@@ -23369,5 +23373,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200341614
+  "mcreatorVersion": 202200342214
 }
