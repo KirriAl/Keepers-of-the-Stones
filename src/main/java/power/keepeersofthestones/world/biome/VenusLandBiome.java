@@ -51,7 +51,7 @@ public class VenusLandBiome extends PowerModElements.ModElement {
 						.withSkyColor(-26368).withFoliageColor(-26368).withGrassColor(-26368).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.COARSE_DIRT.getDefaultState(),
-								Blocks.AIR.getDefaultState(), Blocks.AIR.getDefaultState())));
+								Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState())));
 				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
 				DefaultBiomeFeatures.withExtraGoldOre(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
