@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Recharge",
-    "icon": "recharge_gravity_master.png",
+    "icon": "recharge_gravity_stone.png",
     "color": {
       "value": -26215,
       "falpha": 0.0

@@ -34,7 +34,9 @@ import power.keepeersofthestones.entity.PlasmaBallEntity;
 import power.keepeersofthestones.entity.PieceOfEarthEntity;
 import power.keepeersofthestones.entity.MusketEntity;
 import power.keepeersofthestones.entity.MoonStonesEntity;
+import power.keepeersofthestones.entity.MindZombieEntity;
 import power.keepeersofthestones.entity.MercuryBallEntity;
+import power.keepeersofthestones.entity.MentalAttackEntity;
 import power.keepeersofthestones.entity.MegawattEntity;
 import power.keepeersofthestones.entity.MassInfectionEntity;
 import power.keepeersofthestones.entity.MagicFireballEntity;
@@ -43,6 +45,7 @@ import power.keepeersofthestones.entity.KunaiEntity;
 import power.keepeersofthestones.entity.IceSpearEntity;
 import power.keepeersofthestones.entity.IceSharpEntity;
 import power.keepeersofthestones.entity.IceBallEntity;
+import power.keepeersofthestones.entity.GoldenSphereEntity;
 import power.keepeersofthestones.entity.GoldenCrossbowEntity;
 import power.keepeersofthestones.entity.GlowEntity;
 import power.keepeersofthestones.entity.FlashLightEntity;
@@ -58,6 +61,7 @@ import power.keepeersofthestones.entity.BoomerangEntity;
 import power.keepeersofthestones.entity.BlueFireballEntity;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 import power.keepeersofthestones.entity.BlackHeartEntity;
+import power.keepeersofthestones.entity.AmethystWarriorEntity;
 import power.keepeersofthestones.entity.AmberStreaksEntity;
 import power.keepeersofthestones.entity.AirFlowEntity;
 import power.keepeersofthestones.entity.AcusticalExplodeEntity;
@@ -267,6 +271,20 @@ public class PowerModEntities {
 			EntityType.Builder.<TransformSphereEntity>of(TransformSphereEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(TransformSphereEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MentalAttackEntity>> MENTAL_ATTACK = register("projectile_mental_attack",
+			EntityType.Builder.<MentalAttackEntity>of(MentalAttackEntity::new, MobCategory.MISC).setCustomClientFactory(MentalAttackEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MindZombieEntity>> MIND_ZOMBIE = register("mind_zombie",
+			EntityType.Builder.<MindZombieEntity>of(MindZombieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(20).setUpdateInterval(3).setCustomClientFactory(MindZombieEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GoldenSphereEntity>> GOLDEN_SPHERE = register("projectile_golden_sphere",
+			EntityType.Builder.<GoldenSphereEntity>of(GoldenSphereEntity::new, MobCategory.MISC).setCustomClientFactory(GoldenSphereEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AmethystWarriorEntity>> AMETHYST_WARRIOR = register("amethyst_warrior",
+			EntityType.Builder.<AmethystWarriorEntity>of(AmethystWarriorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(AmethystWarriorEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -283,6 +301,8 @@ public class PowerModEntities {
 			RocketEntity.init();
 			GlowEntity.init();
 			ShadowEntity.init();
+			MindZombieEntity.init();
+			AmethystWarriorEntity.init();
 		});
 	}
 
@@ -296,5 +316,7 @@ public class PowerModEntities {
 		event.put(ROCKET.get(), RocketEntity.createAttributes().build());
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
+		event.put(MIND_ZOMBIE.get(), MindZombieEntity.createAttributes().build());
+		event.put(AMETHYST_WARRIOR.get(), AmethystWarriorEntity.createAttributes().build());
 	}
 }

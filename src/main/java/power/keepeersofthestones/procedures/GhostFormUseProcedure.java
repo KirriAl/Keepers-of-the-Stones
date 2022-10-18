@@ -47,8 +47,13 @@ public class GhostFormUseProcedure {
 				}
 
 				private void run() {
-					if (entity instanceof ServerPlayer _player)
-						_player.setGameMode(GameType.SURVIVAL);
+					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+						if (entity instanceof ServerPlayer _player)
+							_player.setGameMode(GameType.SURVIVAL);
+					} else if (entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) {
+						if (entity instanceof ServerPlayer _player)
+							_player.setGameMode(GameType.CREATIVE);
+					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 200);

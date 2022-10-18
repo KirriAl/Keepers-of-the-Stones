@@ -3,16 +3,8 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.MusicPlayerGUIMenu;
 import power.keepeersofthestones.procedures.StopSoundProcedure;
-import power.keepeersofthestones.procedures.PlayMusic9Procedure;
-import power.keepeersofthestones.procedures.PlayMusic8Procedure;
-import power.keepeersofthestones.procedures.PlayMusic7Procedure;
-import power.keepeersofthestones.procedures.PlayMusic6Procedure;
-import power.keepeersofthestones.procedures.PlayMusic5Procedure;
-import power.keepeersofthestones.procedures.PlayMusic4Procedure;
-import power.keepeersofthestones.procedures.PlayMusic3Procedure;
-import power.keepeersofthestones.procedures.PlayMusic2Procedure;
-import power.keepeersofthestones.procedures.PlayMusic1Procedure;
-import power.keepeersofthestones.procedures.PlayMusic10Procedure;
+import power.keepeersofthestones.procedures.OpenCastomMusicProcedure;
+import power.keepeersofthestones.procedures.OpenBuitinMusicProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -78,43 +70,11 @@ public class MusicPlayerGUIButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			PlayMusic1Procedure.execute(world, x, y, z, entity);
+			OpenBuitinMusicProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			PlayMusic2Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
-			PlayMusic3Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
-			PlayMusic4Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 5) {
-
-			PlayMusic5Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 6) {
-
-			PlayMusic6Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 7) {
-
-			PlayMusic7Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 8) {
-
-			PlayMusic8Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 9) {
-
-			PlayMusic9Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 10) {
-
-			PlayMusic10Procedure.execute(world, x, y, z, entity);
+			OpenCastomMusicProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

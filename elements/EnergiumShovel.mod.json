@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "tool",
   "definition": {
     "renderType": 0,
@@ -27,8 +27,11 @@
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "BigSizeUse"
+    },
     "onItemInInventoryTick": {
-      "name": "EnergiumBlockUse"
+      "name": "EnergiumItems"
     }
   }
 }

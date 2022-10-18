@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
@@ -35,9 +35,6 @@
       "value": "CUSTOM:DestructionSphere"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": "",
-    "onBulletHitsBlock": {
-      "name": "DestructionPowerUse"
-    }
+    "customBulletModelTexture": ""
   }
 }

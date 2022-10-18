@@ -19,9 +19,11 @@ import power.keepeersofthestones.world.inventory.EBTimeMenu;
 import power.keepeersofthestones.world.inventory.EBTeleportationMenu;
 import power.keepeersofthestones.world.inventory.EBTechnologyMenu;
 import power.keepeersofthestones.world.inventory.EBSunMenu;
+import power.keepeersofthestones.world.inventory.EBSpiritMenu;
 import power.keepeersofthestones.world.inventory.EBSpeedMenu;
 import power.keepeersofthestones.world.inventory.EBSpaceMenu;
 import power.keepeersofthestones.world.inventory.EBSoundMenu;
+import power.keepeersofthestones.world.inventory.EBSmokeMenu;
 import power.keepeersofthestones.world.inventory.EBShadowMenu;
 import power.keepeersofthestones.world.inventory.EBSandMenu;
 import power.keepeersofthestones.world.inventory.EBRainMenu;
@@ -32,6 +34,7 @@ import power.keepeersofthestones.world.inventory.EBMusicMenu;
 import power.keepeersofthestones.world.inventory.EBMushroomsMenu;
 import power.keepeersofthestones.world.inventory.EBMoonMenu;
 import power.keepeersofthestones.world.inventory.EBMistMenu;
+import power.keepeersofthestones.world.inventory.EBMindMenu;
 import power.keepeersofthestones.world.inventory.EBMetalMenu;
 import power.keepeersofthestones.world.inventory.EBMercuryMenu;
 import power.keepeersofthestones.world.inventory.EBMagnetMenu;
@@ -41,6 +44,8 @@ import power.keepeersofthestones.world.inventory.EBLavaMenu;
 import power.keepeersofthestones.world.inventory.EBIceMenu;
 import power.keepeersofthestones.world.inventory.EBGreeneryMenu;
 import power.keepeersofthestones.world.inventory.EBGravityMenu;
+import power.keepeersofthestones.world.inventory.EBGoldenDustMenu;
+import power.keepeersofthestones.world.inventory.EBFormMenu;
 import power.keepeersofthestones.world.inventory.EBFireMenu;
 import power.keepeersofthestones.world.inventory.EBExplosionMenu;
 import power.keepeersofthestones.world.inventory.EBEnergyMenu;
@@ -53,15 +58,22 @@ import power.keepeersofthestones.world.inventory.EBBloodMenu;
 import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
 import power.keepeersofthestones.world.inventory.EBAmberMenu;
 import power.keepeersofthestones.world.inventory.EBAirMenu;
+import power.keepeersofthestones.world.inventory.EBAetherMenu;
+import power.keepeersofthestones.world.inventory.CustomMusicPlayerMenu;
 import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
+import power.keepeersofthestones.world.inventory.CompanionsGuiMenu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
+import power.keepeersofthestones.world.inventory.ChoiseMagicPower3Menu;
+import power.keepeersofthestones.world.inventory.ChoiseMagicPower2Menu;
+import power.keepeersofthestones.world.inventory.ChoiseMagicPower1Menu;
 import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
 import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
 import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
 import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
+import power.keepeersofthestones.world.inventory.BuildInMusicPlayerMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
 
 import net.minecraftforge.network.IContainerFactory;
@@ -161,6 +173,25 @@ public class PowerModMenus {
 	public static final MenuType<RocketPathGUIMenu> ROCKET_PATH_GUI = register("rocket_path_gui",
 			(id, inv, extraData) -> new RocketPathGUIMenu(id, inv, extraData));
 	public static final MenuType<EBGravityMenu> EB_GRAVITY = register("eb_gravity", (id, inv, extraData) -> new EBGravityMenu(id, inv, extraData));
+	public static final MenuType<CustomMusicPlayerMenu> CUSTOM_MUSIC_PLAYER = register("custom_music_player",
+			(id, inv, extraData) -> new CustomMusicPlayerMenu(id, inv, extraData));
+	public static final MenuType<BuildInMusicPlayerMenu> BUILD_IN_MUSIC_PLAYER = register("build_in_music_player",
+			(id, inv, extraData) -> new BuildInMusicPlayerMenu(id, inv, extraData));
+	public static final MenuType<EBSmokeMenu> EB_SMOKE = register("eb_smoke", (id, inv, extraData) -> new EBSmokeMenu(id, inv, extraData));
+	public static final MenuType<EBSpiritMenu> EB_SPIRIT = register("eb_spirit", (id, inv, extraData) -> new EBSpiritMenu(id, inv, extraData));
+	public static final MenuType<ChoiseMagicPower1Menu> CHOISE_MAGIC_POWER_1 = register("choise_magic_power_1",
+			(id, inv, extraData) -> new ChoiseMagicPower1Menu(id, inv, extraData));
+	public static final MenuType<ChoiseMagicPower3Menu> CHOISE_MAGIC_POWER_3 = register("choise_magic_power_3",
+			(id, inv, extraData) -> new ChoiseMagicPower3Menu(id, inv, extraData));
+	public static final MenuType<ChoiseMagicPower2Menu> CHOISE_MAGIC_POWER_2 = register("choise_magic_power_2",
+			(id, inv, extraData) -> new ChoiseMagicPower2Menu(id, inv, extraData));
+	public static final MenuType<EBAetherMenu> EB_AETHER = register("eb_aether", (id, inv, extraData) -> new EBAetherMenu(id, inv, extraData));
+	public static final MenuType<CompanionsGuiMenu> COMPANIONS_GUI = register("companions_gui",
+			(id, inv, extraData) -> new CompanionsGuiMenu(id, inv, extraData));
+	public static final MenuType<EBFormMenu> EB_FORM = register("eb_form", (id, inv, extraData) -> new EBFormMenu(id, inv, extraData));
+	public static final MenuType<EBMindMenu> EB_MIND = register("eb_mind", (id, inv, extraData) -> new EBMindMenu(id, inv, extraData));
+	public static final MenuType<EBGoldenDustMenu> EB_GOLDEN_DUST = register("eb_golden_dust",
+			(id, inv, extraData) -> new EBGoldenDustMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

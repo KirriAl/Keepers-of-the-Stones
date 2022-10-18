@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "tag",
   "definition": {
     "type": "Items",
@@ -114,9 +114,6 @@
       },
       {
         "value": "CUSTOM:SpiritBattery"
-      },
-      {
-        "value": "CUSTOM:AetherBattery"
       },
       {
         "value": "CUSTOM:SmokeBattery"

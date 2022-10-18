@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of the Aether",
-    "icon": "uknown_master.png",
+    "icon": "aether_master.png",
     "color": {
       "value": -16724839,
       "falpha": 0.0

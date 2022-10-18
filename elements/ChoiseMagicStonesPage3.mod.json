@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -21,7 +21,7 @@
           "height": 20,
           "name": "Spirit",
           "x": 51,
-          "y": 80
+          "y": 107
         }
       },
       {
@@ -52,6 +52,9 @@
         "type": "button",
         "data": {
           "text": "Form",
+          "onClick": {
+            "name": "FormGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Form",
@@ -70,13 +73,16 @@
           "height": 20,
           "name": "Aether",
           "x": 51,
-          "y": 107
+          "y": 134
         }
       },
       {
         "type": "button",
         "data": {
           "text": "Mind",
+          "onClick": {
+            "name": "MindGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Mind",
@@ -88,6 +94,9 @@
         "type": "button",
         "data": {
           "text": "G. Dust",
+          "onClick": {
+            "name": "GoldenDustGet"
+          },
           "width": 56,
           "height": 20,
           "name": "G. Dust",
@@ -99,6 +108,9 @@
         "type": "button",
         "data": {
           "text": "Blue Flame",
+          "onClick": {
+            "name": "BlueFlameGet"
+          },
           "width": 56,
           "height": 20,
           "name": "Blue Flame",
@@ -139,7 +151,7 @@
           "height": 20,
           "name": "Smoke",
           "x": 51,
-          "y": 134
+          "y": 80
         }
       },
       {
@@ -177,6 +189,66 @@
           "name": "blue_flame_master.png",
           "x": 33,
           "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smoke_master.png",
+          "use1Xscale": false,
+          "name": "smoke_master.png",
+          "x": 33,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spirit_master.png",
+          "use1Xscale": false,
+          "name": "spirit_master.png",
+          "x": 33,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "form_master.png",
+          "use1Xscale": false,
+          "name": "form_master.png",
+          "x": 33,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_dust_master.png",
+          "use1Xscale": false,
+          "name": "golden_dust_master.png",
+          "x": 123,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mind_master.png",
+          "use1Xscale": false,
+          "name": "mind_master.png",
+          "x": 123,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aether_master.png",
+          "use1Xscale": false,
+          "name": "aether_master.png",
+          "x": 33,
+          "y": 134
         }
       }
     ],

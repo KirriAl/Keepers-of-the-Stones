@@ -40,6 +40,7 @@ import power.keepeersofthestones.potion.RechargeMusicStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMushroomsStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMoonStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMistStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeMindStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMetalStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMercuryStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMagnetStoneMobEffect;
@@ -49,6 +50,7 @@ import power.keepeersofthestones.potion.RechargeLavaStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeIceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGreeneryStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeGravityStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeGoldenDustStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeFormStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeFireStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeExplosionStoneMobEffect;
@@ -65,6 +67,7 @@ import power.keepeersofthestones.potion.RechargeAirStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAetherStoneMobEffect;
 import power.keepeersofthestones.potion.RainMasterMobEffect;
 import power.keepeersofthestones.potion.RainFlyMobEffect;
+import power.keepeersofthestones.potion.PowerOfPolarisMobEffect;
 import power.keepeersofthestones.potion.PowerLockMobEffect;
 import power.keepeersofthestones.potion.PoisonMasterMobEffect;
 import power.keepeersofthestones.potion.PlagueMasterMobEffect;
@@ -73,7 +76,9 @@ import power.keepeersofthestones.potion.MusicMasterMobEffect;
 import power.keepeersofthestones.potion.MushroomsMasterMobEffect;
 import power.keepeersofthestones.potion.MoonMasterMobEffect;
 import power.keepeersofthestones.potion.MistMasterMobEffect;
+import power.keepeersofthestones.potion.MindMasterMobEffect;
 import power.keepeersofthestones.potion.MetalMasterMobEffect;
+import power.keepeersofthestones.potion.MergeBalanceMobEffect;
 import power.keepeersofthestones.potion.MercuryMasterMobEffect;
 import power.keepeersofthestones.potion.MagnetMasterMobEffect;
 import power.keepeersofthestones.potion.LightningMasterMobEffect;
@@ -83,6 +88,7 @@ import power.keepeersofthestones.potion.InvincibilityMobEffect;
 import power.keepeersofthestones.potion.IceMasterMobEffect;
 import power.keepeersofthestones.potion.GreeneryMasterMobEffect;
 import power.keepeersofthestones.potion.GravityMasterMobEffect;
+import power.keepeersofthestones.potion.GoldenDustMasterMobEffect;
 import power.keepeersofthestones.potion.FormMasterMobEffect;
 import power.keepeersofthestones.potion.FogMobEffect;
 import power.keepeersofthestones.potion.FireMasterMobEffect;
@@ -251,4 +257,12 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_FORM_STONE = REGISTRY.register("recharge_form_stone",
 			() -> new RechargeFormStoneMobEffect());
 	public static final RegistryObject<MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
+	public static final RegistryObject<MobEffect> MERGE_BALANCE = REGISTRY.register("merge_balance", () -> new MergeBalanceMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_GOLDEN_DUST_STONE = REGISTRY.register("recharge_golden_dust_stone",
+			() -> new RechargeGoldenDustStoneMobEffect());
+	public static final RegistryObject<MobEffect> GOLDEN_DUST_MASTER = REGISTRY.register("golden_dust_master", () -> new GoldenDustMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_MIND_STONE = REGISTRY.register("recharge_mind_stone",
+			() -> new RechargeMindStoneMobEffect());
+	public static final RegistryObject<MobEffect> MIND_MASTER = REGISTRY.register("mind_master", () -> new MindMasterMobEffect());
+	public static final RegistryObject<MobEffect> POWER_OF_POLARIS = REGISTRY.register("power_of_polaris", () -> new PowerOfPolarisMobEffect());
 }

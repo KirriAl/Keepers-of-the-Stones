@@ -262,6 +262,12 @@ public class ForceReplicationUseProcedure {
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FORM_MASTER.get(), 6000, 0, (false), (false)));
 				}
 			}
+			if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(PowerModMobEffects.MIND_MASTER.get()) : false) {
+				if (!(sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(PowerModMobEffects.MIND_MASTER.get()) : false)) {
+					if (sourceentity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.MIND_MASTER.get(), 6000, 0, (false), (false)));
+				}
+			}
 			if (!(sourceentity instanceof Player _playerHasItem
 					? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.FORCE_REPLICATION.get()))
 					: false)) {

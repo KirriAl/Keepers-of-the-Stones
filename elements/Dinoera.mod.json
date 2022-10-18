@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -52,7 +52,7 @@
     },
     "igniterName": "Dinoera Portal Igniter",
     "igniterTab": {
-      "value": "CUSTOM:Dimensions"
+      "value": "CUSTOM:Artifacts"
     },
     "texture": "dinoera_flint_and_steel",
     "portalTexture": "dinoera_portal",

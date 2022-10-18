@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.5.1",
-    "1.18.2-recommended": "2.5.1"
+    "1.18.2-latest": "2.7.1",
+    "1.18.2-recommended": "2.7.1"
   },
   "1.16.5": {
    "1.1.18": "
@@ -647,6 +647,72 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed a bug where the vacuum stone could be copied during transformation
 - [Bugfix] Fixed a bug with copying stone music
 - [Bugfix] Fixed a bug where the vacuum master could breathe underwater
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.0": "
+- Added new elements - blue flame and gravity
+- Added a rocket to travel to other planets
+- Added energium ore
+- Added tools from energium
+- Added an energium block, in the radius of which the forces of the elements do not work
+- Added the ability to select a stone if you did not select it through the pw command
+- Added sections for music stone (built-in and customizable music)
+- Added the ability to delete lost portals by teleportation master (R key)
+- Obscurity now works for all players in the world
+- Now the time stop only applies to the other player
+- Increased spawn of raptors
+- Improved battery charger interface
+- Updated the armor of some masters
+- Updated the texture of the music stone
+- Updated mushroom master effect and music player textures
+- The confstone command has been renamed pw
+- [Bugfix] Fixed a bug with a non-working link to the mod wiki
+- [Bugfix] Fixed a bug where checkpoints could cause a server crash
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.1": "
+- [Bugfix] Fixed a crash when switching to other dimensions (such as the crystal world and oblivion)
+- [Bugfix] Villages are no longer generated in the sunny kingdom
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.2": "
+- Added a new element - smoke
+- Updated the texture of the magnet master effect
+- The mod's logo has been updated
+- [Bugfix] Fixed a bug where a player could activate a stone if he had armor on him
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.6.10": "
+- Added new elements - spirit and aether
+- Added merge balance to combine the stones of creation and destruction
+- Added new special enchantments for tools from energium
+- Changed the mechanics of destructive power
+- Increased the cooldown of a random item
+- All stones have been moved to one inventory category
+- Updated the activation and deactivation sounds of the stone
+- Updated all textures related to energium
+- Updated some stone spell textures
+- The planet command was replaced by pw planet
+- The dimensions of the Crystallized World, the Solar Kingdom and Oblivion have been made into a separate mod
+- Remove amber, creation and destruction batteries
+- [Bugfix] Fixed a bug where it was impossible to select the blue flame stone
+- [Bugfix] Fixed a bug due to which luck did not work on energium ore
+- [Bugfix] Fixed the direction of the plesiosaur model
+- [Bugfix] Fixed the movement of some dinosaurs
+- [Bugfix] Fixed a bug where using variance in a creative could make a player vulnerable
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.7.0": "
+- Added new elements - form, mind and golden dust
+- Now after using mercury and acid pits, the dirt remains
+- Now the lava pit can be used on a cobblestone
+- Energium textures have been updated again
+- Added crafting for the book of elements
+- The aether icon has been updated
+- All sounds have now become mono
+- [Bugfix] Fixed an bug due to which it was impossible to get ingots back from the energium blocks
+- [Bugfix] Fixed a bug due to which the player could not destroy the rocket
+- [Bugfix] After death with the copied element amber after a while, duplicate stones no longer appear
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.7.1": "
+- Updated some textures
+- [Bugfix] Fixed the use of invisibility and dispersion with golden dust and amber powers
+- [Bugfix] Fixed the generation of golden dust from the master who was given power
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }

@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "smoke_screen",
     "customModelName": "Normal",
     "name": "Smoke Screen",
     "specialInfo": [],
@@ -35,6 +35,9 @@
       "value": "CUSTOM:SmokeScreen"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "SmokeScreenUse"
+    }
   }
 }

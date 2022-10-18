@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "big_size",
     "customModelName": "Normal",
     "name": "Big Size",
     "rarity": "COMMON",

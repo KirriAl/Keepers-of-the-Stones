@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Smoke",
-    "icon": "uknown_master.png",
+    "icon": "smoke_master.png",
     "color": {
       "value": -6710887,
       "falpha": 0.0

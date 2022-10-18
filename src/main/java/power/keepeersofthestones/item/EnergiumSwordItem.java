@@ -1,7 +1,8 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.EnergiumBlockUseProcedure;
+import power.keepeersofthestones.procedures.EnergiumItemsProcedure;
+import power.keepeersofthestones.procedures.EnchantProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 import power.keepeersofthestones.init.PowerModItems;
 
@@ -11,6 +12,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 public class EnergiumSwordItem extends SwordItem {
@@ -43,8 +45,15 @@ public class EnergiumSwordItem extends SwordItem {
 	}
 
 	@Override
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
+		EnchantProcedure.execute(entity, itemstack);
+		return retval;
+	}
+
+	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EnergiumBlockUseProcedure.execute(entity);
+		EnergiumItemsProcedure.execute(entity, itemstack);
 	}
 }

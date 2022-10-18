@@ -27,7 +27,7 @@ public class RandomItemUseProcedure {
 			if (world.isClientSide())
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;

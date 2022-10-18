@@ -1,5 +1,7 @@
 package power.keepeersofthestones.procedures;
 
+import power.keepeersofthestones.network.PowerModVariables;
+
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -14,7 +16,13 @@ public class FireFlyingTickProcedure {
 			return;
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 20, 0, (false), (false)));
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.FLAME, x, y, z, 10, 0, (-1), 0, 1);
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fire) {
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.FLAME, x, y, z, 10, 0, (-1), 0, 1);
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new PowerModVariables.PlayerVariables())).blue_flame) {
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, x, y, z, 10, 0, (-1), 0, 1);
+		}
 	}
 }

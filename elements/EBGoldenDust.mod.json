@@ -1,0 +1,101 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "book_of_elements_book.png",
+          "use1Xscale": true,
+          "name": "book_of_elements_book.png",
+          "x": -31,
+          "y": -7
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Class: Unique",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Class: Unique",
+          "x": 51,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Element: Golden Dust",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Element: Golden Dust",
+          "x": 51,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Force: Goodness",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Force: Goodness",
+          "x": 51,
+          "y": 71
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_dust_stone.png",
+          "use1Xscale": false,
+          "name": "golden_dust_stone.png",
+          "x": 109,
+          "y": 11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_dust_master.png",
+          "use1Xscale": false,
+          "name": "golden_dust_master.png",
+          "x": 307,
+          "y": 11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_dust_element.png",
+          "use1Xscale": true,
+          "name": "golden_dust_element.png",
+          "x": 285,
+          "y": 35
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

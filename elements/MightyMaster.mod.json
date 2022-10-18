@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "achievement",
   "definition": {
     "achievementName": "Mighty Master",
@@ -22,7 +22,8 @@
       "DinoeraCraft",
       "OblivionCraft",
       "SunnyKingdomCraft",
-      "RocketCraft"
+      "RocketCraft",
+      "ElementalBookCraft"
     ],
     "rewardFunction": "No function",
     "rewardXP": 0,

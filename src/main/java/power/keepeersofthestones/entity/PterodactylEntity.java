@@ -18,6 +18,7 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
@@ -37,6 +38,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import java.util.Random;
 import java.util.EnumSet;
 
 public class PterodactylEntity extends Monster {
@@ -64,9 +66,7 @@ public class PterodactylEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers());
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Rabbit.class, true, true));
-		this.goalSelector.addGoal(3, new Goal() {
+		this.goalSelector.addGoal(1, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
 			}
@@ -106,10 +106,22 @@ public class PterodactylEntity extends Monster {
 				}
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
-		this.goalSelector.addGoal(6, new AvoidEntityGoal<>(this, PlesiosaurusEntity.class, (float) 24, 1, 1.2));
-		this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, (float) 16));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Rabbit.class, true, true));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8, 20) {
+			@Override
+			protected Vec3 getPosition() {
+				Random random = PterodactylEntity.this.getRandom();
+				double dir_x = PterodactylEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = PterodactylEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = PterodactylEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
+			}
+		});
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(7, new AvoidEntityGoal<>(this, PlesiosaurusEntity.class, (float) 24, 1, 1.2));
+		this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, (float) 16));
 	}
 
 	@Override

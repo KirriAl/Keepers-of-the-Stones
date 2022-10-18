@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "ethereal_staff",
     "customModelName": "Normal",
     "name": "Ethereal Staff",
     "specialInfo": [],

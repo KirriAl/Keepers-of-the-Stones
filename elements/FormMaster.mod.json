@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Form",
-    "icon": "uknown_master.png",
+    "icon": "form_master.png",
     "color": {
       "value": -3407770,
       "falpha": 0.0

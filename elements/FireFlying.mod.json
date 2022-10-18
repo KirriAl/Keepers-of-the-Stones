@@ -1,9 +1,9 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Fire Flying",
-    "icon": "fire_fly.png",
+    "icon": "fire_flying.png",
     "color": {
       "value": -26368,
       "falpha": 0.0
