@@ -103,7 +103,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.head with power:shadow_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.head power:shadow_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 								{
@@ -111,7 +111,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.chest with power:shadow_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.chest power:shadow_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 								{
@@ -119,7 +119,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.legs with power:shadow_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.legs power:shadow_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 								{
@@ -127,7 +127,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.feet with power:shadow_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.feet power:shadow_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 							}
@@ -191,7 +191,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.head with power:golden_dust_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.head power:golden_dust_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 								{
@@ -199,7 +199,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.chest with power:golden_dust_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.chest power:golden_dust_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 								{
@@ -207,7 +207,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.legs with power:golden_dust_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.legs power:golden_dust_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 								{
@@ -215,7 +215,7 @@ public class ShadowInvisibleUseProcedure {
 									if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 										_ent.world.getServer().getCommandManager().handleCommand(
 												_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-												"item replace entity @s armor.feet with power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+												"replaceitem entity @s armor.feet power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 									}
 								}
 							}
@@ -280,7 +280,7 @@ public class ShadowInvisibleUseProcedure {
 								if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 									_ent.world.getServer().getCommandManager().handleCommand(
 											_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-											"item replace entity @s armor.head with power:amber_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+											"replaceitem entity @s armor.head power:amber_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
@@ -288,7 +288,7 @@ public class ShadowInvisibleUseProcedure {
 								if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 									_ent.world.getServer().getCommandManager().handleCommand(
 											_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-											"item replace entity @s armor.chest with power:amber_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+											"replaceitem entity @s armor.chest power:amber_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
@@ -296,7 +296,7 @@ public class ShadowInvisibleUseProcedure {
 								if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 									_ent.world.getServer().getCommandManager().handleCommand(
 											_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-											"item replace entity @s armor.legs with power:amber_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+											"replaceitem entity @s armor.legs power:amber_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
@@ -304,7 +304,7 @@ public class ShadowInvisibleUseProcedure {
 								if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 									_ent.world.getServer().getCommandManager().handleCommand(
 											_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-											"item replace entity @s armor.feet with power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+											"replaceitem entity @s armor.feet power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 						}

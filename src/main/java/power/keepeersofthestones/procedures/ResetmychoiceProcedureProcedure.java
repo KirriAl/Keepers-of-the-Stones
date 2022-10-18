@@ -131,7 +131,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).fire_stone = (false);
@@ -167,7 +167,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).air_stone = (false);
@@ -203,7 +203,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).water_stone = (false);
@@ -239,7 +239,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).earth_stone = (false);
@@ -275,7 +275,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).energy_stone = (false);
@@ -311,7 +311,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).ice_stone = (false);
@@ -348,7 +348,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).lightning_stone = (false);
@@ -384,7 +384,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).sound_stone = (false);
@@ -421,7 +421,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).crystal_stone = (false);
@@ -457,7 +457,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).lava_stone = (false);
@@ -493,7 +493,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).rain_stone = (false);
@@ -530,7 +530,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).tornado_stone = (false);
@@ -566,7 +566,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).ocean_stone = (false);
@@ -603,7 +603,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).greenery_stone = (false);
@@ -640,7 +640,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).animals_stone = (false);
@@ -676,7 +676,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).metal_stone = (false);
@@ -712,7 +712,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).light_stone = (false);
@@ -748,7 +748,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).shadow_stone = (false);
@@ -784,7 +784,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).vacuum_stone = (false);
@@ -820,7 +820,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).sun_stone = (false);
@@ -856,7 +856,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).moon_stone = (false);
@@ -893,7 +893,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).creation_stone = (false);
@@ -930,7 +930,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).destruction_stone = (false);
@@ -966,7 +966,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).space_stone = (false);
@@ -1002,7 +1002,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).blood_stone = (false);
@@ -1039,7 +1039,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).technology_stone = (false);
@@ -1075,7 +1075,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).time_stone = (false);
@@ -1112,7 +1112,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).teleportation_stone = (false);
@@ -1149,7 +1149,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).explosion_stone = (false);
@@ -1185,7 +1185,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).amber_stone = (false);
@@ -1221,7 +1221,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).mist_stone = (false);
@@ -1257,7 +1257,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).sand_stone = (false);
@@ -1293,7 +1293,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).speed_stone = (false);
@@ -1329,7 +1329,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).poison_stone = (false);
@@ -1365,7 +1365,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).magnet_stone = (false);
@@ -1402,7 +1402,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).mushrooms_stone = (false);
@@ -1439,7 +1439,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).mercury_stone = (false);
@@ -1475,7 +1475,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).music_stone = (false);
@@ -1511,7 +1511,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).plague_stone = (false);
@@ -1548,7 +1548,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).gravity_stone = (false);
@@ -1585,7 +1585,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).blue_flame_stone = (false);
@@ -1621,7 +1621,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).spirit_stone = (false);
@@ -1657,7 +1657,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).aether_stone = (false);
@@ -1693,7 +1693,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).smoke_stone = (false);
@@ -1729,7 +1729,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).form_stone = (false);
@@ -1765,7 +1765,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).mind_stone = (false);
@@ -1802,7 +1802,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).golden_dust_stone = (false);
@@ -1839,7 +1839,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).boiling_stone = (false);
@@ -1876,7 +1876,7 @@ public class ResetmychoiceProcedureProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"item replace entity @s weapon.mainhand with air");
+							"replaceitem entity @s weapon.mainhand air");
 				}
 			}
 			PowerModVariables.MapVariables.get(world).silver_dust_stone = (false);
