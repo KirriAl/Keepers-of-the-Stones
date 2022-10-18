@@ -5260,6 +5260,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5475,6 +5479,10 @@
       "registry_name": "set_block_moon_stone",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
