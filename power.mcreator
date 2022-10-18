@@ -20521,6 +20521,142 @@
       "locked_code": false,
       "registry_name": "lightning_particle",
       "path": "~/Particles"
+    },
+    {
+      "name": "GetComparator",
+      "type": "procedure",
+      "sortid": 1204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_comparator",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetRepeater",
+      "type": "procedure",
+      "sortid": 1206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_repeater",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetRedstoneLamp",
+      "type": "procedure",
+      "sortid": 1207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_redstone_lamp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetLever",
+      "type": "procedure",
+      "sortid": 1208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_lever",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetRedstoneTorch",
+      "type": "procedure",
+      "sortid": 1209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_redstone_torch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetHopper",
+      "type": "procedure",
+      "sortid": 1210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_hopper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetDropper",
+      "type": "procedure",
+      "sortid": 1211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_dropper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetDispenser",
+      "type": "procedure",
+      "sortid": 1212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_dispenser",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
     }
   ],
   "variable_elements": [
