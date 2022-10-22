@@ -110,7 +110,7 @@ public class QuicksandBlockBlock extends PowerModElements.ModElement {
 
 		@Override
 		public Vector3d getFlow(IBlockReader world, BlockPos pos, FluidState fluidstate) {
-			return super.getFlow(world, pos, fluidstate).scale(0);
+			return super.getFlow(world, pos, fluidstate).scale(-10);
 		}
 
 		public static class Source extends CustomFlowingFluid {

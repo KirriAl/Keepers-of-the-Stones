@@ -4,7 +4,6 @@ package power.keepeersofthestones.gui;
 import power.keepeersofthestones.procedures.SpiritGetProcedure;
 import power.keepeersofthestones.procedures.SmokeGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPage2Procedure;
-import power.keepeersofthestones.procedures.OpenSecretStonesProcedure;
 import power.keepeersofthestones.procedures.MindGetProcedure;
 import power.keepeersofthestones.procedures.GoldenDustGetProcedure;
 import power.keepeersofthestones.procedures.FormGetProcedure;
@@ -238,13 +237,6 @@ public class ChoiseMagicStonesPage3Gui extends PowerModElements.ModElement {
 		if (buttonID == 8) {
 
 			PreviousPage2Procedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-		if (buttonID == 9) {
-
-			OpenSecretStonesProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));

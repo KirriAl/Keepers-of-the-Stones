@@ -78,7 +78,7 @@ public class MercuryLiquidBlock extends PowerModElements.ModElement {
 						.rarity(Rarity.COMMON))
 				.explosionResistance(1000000f)
 
-				.tickRate(1).levelDecreasePerBlock(8).slopeFindDistance(16)
+				.tickRate(1).levelDecreasePerBlock(7).slopeFindDistance(16)
 
 				.block(() -> block);
 		still = (FlowingFluid) new CustomFlowingFluid.Source(fluidproperties).setRegistryName("mercury_liquid");
@@ -111,7 +111,7 @@ public class MercuryLiquidBlock extends PowerModElements.ModElement {
 
 		@Override
 		public Vector3d getFlow(IBlockReader world, BlockPos pos, FluidState fluidstate) {
-			return super.getFlow(world, pos, fluidstate).scale(0.1);
+			return super.getFlow(world, pos, fluidstate).scale(-5);
 		}
 
 		public static class Source extends CustomFlowingFluid {

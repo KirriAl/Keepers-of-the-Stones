@@ -164,8 +164,6 @@ public class PowerModVariables {
 		public boolean form_stone = false;
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
-		public boolean boiling_stone = false;
-		public boolean silver_dust_stone = false;
 
 		public MapVariables() {
 			super(DATA_NAME);
@@ -233,8 +231,6 @@ public class PowerModVariables {
 			form_stone = nbt.getBoolean("form_stone");
 			mind_stone = nbt.getBoolean("mind_stone");
 			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
-			boiling_stone = nbt.getBoolean("boiling_stone");
-			silver_dust_stone = nbt.getBoolean("silver_dust_stone");
 		}
 
 		@Override
@@ -295,8 +291,6 @@ public class PowerModVariables {
 			nbt.putBoolean("form_stone", form_stone);
 			nbt.putBoolean("mind_stone", mind_stone);
 			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
-			nbt.putBoolean("boiling_stone", boiling_stone);
-			nbt.putBoolean("silver_dust_stone", silver_dust_stone);
 			return nbt;
 		}
 
@@ -466,8 +460,6 @@ public class PowerModVariables {
 			nbt.putBoolean("little", instance.little);
 			nbt.putBoolean("big", instance.big);
 			nbt.putBoolean("cursed_amethyst", instance.cursed_amethyst);
-			nbt.putBoolean("boiling", instance.boiling);
-			nbt.putBoolean("silver_dust", instance.silver_dust);
 			return nbt;
 		}
 
@@ -554,8 +546,6 @@ public class PowerModVariables {
 			instance.little = nbt.getBoolean("little");
 			instance.big = nbt.getBoolean("big");
 			instance.cursed_amethyst = nbt.getBoolean("cursed_amethyst");
-			instance.boiling = nbt.getBoolean("boiling");
-			instance.silver_dust = nbt.getBoolean("silver_dust");
 		}
 	}
 
@@ -640,8 +630,6 @@ public class PowerModVariables {
 		public boolean little = false;
 		public boolean big = false;
 		public boolean cursed_amethyst = false;
-		public boolean boiling = false;
-		public boolean silver_dust = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -740,8 +728,6 @@ public class PowerModVariables {
 		clone.mind = original.mind;
 		clone.golden_dust = original.golden_dust;
 		clone.cursed_amethyst = original.cursed_amethyst;
-		clone.boiling = original.boiling;
-		clone.silver_dust = original.silver_dust;
 		if (!event.isWasDeath()) {
 			clone.active = original.active;
 			clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -863,8 +849,6 @@ public class PowerModVariables {
 					variables.little = message.data.little;
 					variables.big = message.data.big;
 					variables.cursed_amethyst = message.data.cursed_amethyst;
-					variables.boiling = message.data.boiling;
-					variables.silver_dust = message.data.silver_dust;
 				}
 			});
 			context.setPacketHandled(true);

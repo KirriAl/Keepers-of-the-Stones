@@ -166,11 +166,5 @@ public class ChoiseMagicStonesPage3GuiWindow extends ContainerScreen<ChoiseMagic
 				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 298, this.guiTop + 168, 93, 20, new StringTextComponent("Secret Stones"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3Gui.ButtonPressedMessage(9, x, y, z));
-				ChoiseMagicStonesPage3Gui.handleButtonAction(entity, 9, x, y, z);
-			}
-		}));
 	}
 }

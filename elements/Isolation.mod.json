@@ -40,7 +40,6 @@
         "value": "VANISHING_CURSE"
       }
     ],
-    "excludeEnchantments": false,
     "compatibleItems": [
       {
         "value": "CUSTOM:EnergiumPickaxe"
@@ -58,7 +57,6 @@
         "value": "CUSTOM:EnergiumHoe"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
     "isAllowedOnBooks": true,
