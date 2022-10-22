@@ -219,7 +219,6 @@ import power.keepeersofthestones.item.GoldenCrossbowItem;
 import power.keepeersofthestones.item.GnomePickaxeItem;
 import power.keepeersofthestones.item.GlowCreateItem;
 import power.keepeersofthestones.item.GhostFormItem;
-import power.keepeersofthestones.item.GenEnergyCrystalItem;
 import power.keepeersofthestones.item.GalacticSwordItem;
 import power.keepeersofthestones.item.FormStoneItem;
 import power.keepeersofthestones.item.FormItem;
@@ -822,7 +821,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GOLDEN_STAFF = REGISTRY.register("golden_staff", () -> new GoldenStaffItem());
 	public static final RegistryObject<Item> GOLDEN_SPHERE = REGISTRY.register("golden_sphere", () -> new GoldenSphereItem());
 	public static final RegistryObject<Item> GOLDEN_SHIELD = REGISTRY.register("golden_shield", () -> new GoldenShieldItem());
-	public static final RegistryObject<Item> GEN_ENERGY_CRYSTAL = REGISTRY.register("gen_energy_crystal", () -> new GenEnergyCrystalItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

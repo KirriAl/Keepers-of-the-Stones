@@ -20140,15 +20140,6 @@
         ]
       },
       "path": "~/Stones/Tornado"
-    },
-    {
-      "name": "GenEnergyCrystal",
-      "type": "item",
-      "sortid": 1214,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gen_energy_crystal",
-      "path": "~/Items/Energy Generating Crystal"
     }
   ],
   "variable_elements": [
@@ -21452,7 +21443,6 @@
       "subtitles.stone_deactivation": "Камень был деактивирован",
       "item.power.whirlpool": "Водоворот",
       "entity.power.glow": "Светляк",
-      "item.power.gen_energy_crystal": "Energy Generation Crystal",
       "power.battery_charger.label.text": "Зарядка батареи",
       "item.power.speed_battery": "Батарея",
       "block.power.energium_block": "Блок энерджиума",
@@ -22166,7 +22156,6 @@
       "subtitles.stone_deactivation": "Stone been deactivation",
       "item.power.whirlpool": "Whirlpool",
       "entity.power.glow": "Glow",
-      "item.power.gen_energy_crystal": "Energy Generation Crystal",
       "power.battery_charger.label.text": "Charging the battery",
       "item.power.speed_battery": "Battery",
       "block.power.energium_block": "Energium Block",
