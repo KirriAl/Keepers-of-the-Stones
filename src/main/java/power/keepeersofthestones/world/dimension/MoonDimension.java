@@ -34,7 +34,7 @@ public class MoonDimension extends PowerModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		Set<Block> replaceableBlocks = new HashSet<>();
-		replaceableBlocks.add(Blocks.STONE);
+		replaceableBlocks.add(Blocks.DIORITE);
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:moon_land")).getGenerationSettings().getSurfaceBuilder()
 				.get().getConfig().getTop().getBlock());
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:moon_land")).getGenerationSettings().getSurfaceBuilder()

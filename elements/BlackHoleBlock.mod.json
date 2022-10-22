@@ -54,7 +54,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "SCULK"
+      "value": "MISCELLANEOUS"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -79,7 +79,7 @@
     "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "SCULK_SENSOR"
+      "value": "HONEY"
     },
     "breakSound": {
       "value": ""

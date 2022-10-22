@@ -59,7 +59,7 @@ public class VacuumWebBlockBlock extends PowerModElements.ModElement {
 
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(8f, 50f).setLightLevel(s -> 0)
+			super(Block.Properties.create(Material.MISCELLANEOUS).sound(SoundType.HONEY).hardnessAndResistance(8f, 50f).setLightLevel(s -> 0)
 					.doesNotBlockMovement().slipperiness(0.1f).speedFactor(0f).jumpFactor(0f).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("vacuum_web_block");
 		}
