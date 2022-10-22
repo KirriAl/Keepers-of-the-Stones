@@ -157,11 +157,5 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 298, this.topPos + 168, 93, 20, Component.literal("Secret Stones"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(9, x, y, z));
-				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 9, x, y, z);
-			}
-		}));
 	}
 }

@@ -62,7 +62,6 @@ import power.keepeersofthestones.world.inventory.EBAetherMenu;
 import power.keepeersofthestones.world.inventory.CustomMusicPlayerMenu;
 import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
 import power.keepeersofthestones.world.inventory.CompanionsGuiMenu;
-import power.keepeersofthestones.world.inventory.ChoiseSecretStoneGUIMenu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
@@ -205,6 +204,4 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<EBMindMenu>> EB_MIND = REGISTRY.register("eb_mind", () -> IForgeMenuType.create(EBMindMenu::new));
 	public static final RegistryObject<MenuType<EBGoldenDustMenu>> EB_GOLDEN_DUST = REGISTRY.register("eb_golden_dust",
 			() -> IForgeMenuType.create(EBGoldenDustMenu::new));
-	public static final RegistryObject<MenuType<ChoiseSecretStoneGUIMenu>> CHOISE_SECRET_STONE_GUI = REGISTRY.register("choise_secret_stone_gui",
-			() -> IForgeMenuType.create(ChoiseSecretStoneGUIMenu::new));
 }
