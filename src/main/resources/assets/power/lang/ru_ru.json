@@ -334,6 +334,7 @@
   "subtitles.stone_deactivation": "Камень был деактивирован",
   "item.power.whirlpool": "Водоворот",
   "entity.power.glow": "Светляк",
+  "item.power.gen_energy_crystal": "Energy Generation Crystal",
   "power.battery_charger.label.text": "Зарядка батареи",
   "item.power.speed_battery": "Батарея",
   "block.power.energium_block": "Блок энерджиума",

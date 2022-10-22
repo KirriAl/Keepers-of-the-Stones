@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.LiquidBlock;
 public abstract class MercuryLiquidFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> PowerModFluidTypes.MERCURY_LIQUID_TYPE.get(),
 			() -> PowerModFluids.MERCURY_LIQUID.get(), () -> PowerModFluids.FLOWING_MERCURY_LIQUID.get()).explosionResistance(1000000f).tickRate(1)
-			.levelDecreasePerBlock(8).slopeFindDistance(16).block(() -> (LiquidBlock) PowerModBlocks.MERCURY_LIQUID.get());
+			.levelDecreasePerBlock(7).slopeFindDistance(16).block(() -> (LiquidBlock) PowerModBlocks.MERCURY_LIQUID.get());
 
 	private MercuryLiquidFluid() {
 		super(PROPERTIES);
