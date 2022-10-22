@@ -1,220 +1,109 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.potion.WaterMasterPotionEffect;
-import power.keepeersofthestones.potion.VacuumMasterPotionEffect;
-import power.keepeersofthestones.potion.TornadoMasterPotionEffect;
-import power.keepeersofthestones.potion.TimeMasterEffectPotionEffect;
-import power.keepeersofthestones.potion.TeleportationMasterPotionEffect;
-import power.keepeersofthestones.potion.TechnologyMasterPotionEffect;
-import power.keepeersofthestones.potion.SunMasterPotionEffect;
-import power.keepeersofthestones.potion.SpiritMasterPotionEffect;
-import power.keepeersofthestones.potion.SpeedMasterPotionEffect;
-import power.keepeersofthestones.potion.SpaceMasterPotionEffect;
-import power.keepeersofthestones.potion.SoundMasterPotionEffect;
-import power.keepeersofthestones.potion.SmokeMasterPotionEffect;
-import power.keepeersofthestones.potion.SilverDustMasterPotionEffect;
-import power.keepeersofthestones.potion.ShadowMasterPotionEffect;
-import power.keepeersofthestones.potion.SandMasterPotionEffect;
-import power.keepeersofthestones.potion.RainMasterPotionEffect;
-import power.keepeersofthestones.potion.PoisonMasterPotionEffect;
-import power.keepeersofthestones.potion.PlagueMasterPotionEffect;
-import power.keepeersofthestones.potion.OceanMasterPotionEffect;
-import power.keepeersofthestones.potion.MusicMasterPotionEffect;
-import power.keepeersofthestones.potion.MushroomsMasterPotionEffect;
-import power.keepeersofthestones.potion.MoonMasterPotionEffect;
-import power.keepeersofthestones.potion.MistMasterPotionEffect;
-import power.keepeersofthestones.potion.MindMasterPotionEffect;
-import power.keepeersofthestones.potion.MetalMasterPotionEffect;
-import power.keepeersofthestones.potion.MergeBalancePotionEffect;
-import power.keepeersofthestones.potion.MercuryMasterPotionEffect;
-import power.keepeersofthestones.potion.MagnetMasterPotionEffect;
-import power.keepeersofthestones.potion.LightningMasterPotionEffect;
-import power.keepeersofthestones.potion.LightMasterPotionEffect;
-import power.keepeersofthestones.potion.LavaMasterPotionEffect;
-import power.keepeersofthestones.potion.IceMasterPotionEffect;
-import power.keepeersofthestones.potion.GreeneryMasterPotionEffect;
-import power.keepeersofthestones.potion.GravityMasterPotionEffect;
-import power.keepeersofthestones.potion.GoldenDustMasterPotionEffect;
-import power.keepeersofthestones.potion.FormMasterPotionEffect;
-import power.keepeersofthestones.potion.FireMasterPotionEffect;
-import power.keepeersofthestones.potion.ExplosionMasterPotionEffect;
-import power.keepeersofthestones.potion.EnergyMasterPotionEffect;
-import power.keepeersofthestones.potion.EarthMasterPotionEffect;
-import power.keepeersofthestones.potion.DestructionMasterPotionEffect;
-import power.keepeersofthestones.potion.CrystalMasterPotionEffect;
-import power.keepeersofthestones.potion.CreationMasterPotionEffect;
-import power.keepeersofthestones.potion.BoilingMasterPotionEffect;
-import power.keepeersofthestones.potion.BlueFlameMasterPotionEffect;
-import power.keepeersofthestones.potion.BloodMasterPotionEffect;
-import power.keepeersofthestones.potion.AnimalsMasterPotionEffect;
-import power.keepeersofthestones.potion.AmberMasterPotionEffect;
-import power.keepeersofthestones.potion.AirMasterPotionEffect;
-import power.keepeersofthestones.potion.AetherMasterPotionEffect;
-import power.keepeersofthestones.PowerMod;
+import power.keepeersofthestones.init.PowerModMobEffects;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import java.util.Map;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
 public class DetransformKeyPriNazhatiiKlavishiProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				PowerMod.LOGGER.warn("Failed to load dependency entity for procedure DetransformKeyPriNazhatiiKlavishi!");
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(FireMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(AirMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(WaterMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(EarthMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(EnergyMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(IceMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(LightningMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SoundMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(CrystalMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(LavaMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(RainMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(TornadoMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(OceanMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(GreeneryMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(AnimalsMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MetalMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(LightMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(ShadowMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(VacuumMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SunMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MoonMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(CreationMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(DestructionMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SpaceMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(BloodMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(TechnologyMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(TimeMasterEffectPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(TeleportationMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(ExplosionMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(AmberMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MistMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SandMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SpeedMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(PoisonMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MagnetMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MushroomsMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MercuryMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MusicMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(PlagueMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(GravityMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(BlueFlameMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SpiritMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(AetherMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SmokeMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(FormMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MergeBalancePotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(GoldenDustMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(MindMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(BoilingMasterPotionEffect.potion);
-		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(SilverDustMasterPotionEffect.potion);
-		}
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.FIRE_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.AIR_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.WATER_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.EARTH_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.ENERGY_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.ICE_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.LIGHTNING_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SOUND_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.CRYSTAL_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.LAVA_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.RAIN_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.TORNADO_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.OCEAN_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.GREENERY_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.ANIMALS_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.METAL_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.LIGHT_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SHADOW_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.VACUUM_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SUN_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MOON_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.CREATION_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.DESTRUCTION_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SPACE_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.BLOOD_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.TECHNOLOGY_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.TIME_MASTER_EFFECT.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.TELEPORTATION_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.EXPLOSION_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.AMBER_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MIST_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SAND_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SPEED_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.POISON_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MAGNET_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MUSHROOMS_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MERCURY_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MUSIC_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.PLAGUE_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.GRAVITY_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.BLUE_FLAME_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SPIRIT_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.AETHER_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.SMOKE_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.FORM_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MERGE_BALANCE.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.GOLDEN_DUST_MASTER.get());
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(PowerModMobEffects.MIND_MASTER.get());
 	}
 }
