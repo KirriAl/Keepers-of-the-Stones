@@ -93,65 +93,65 @@ public class PuddleUseProcedure {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:stone");
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:stone");
 					}
 					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:grass_block");
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:grass_block");
 					}
 					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:dirt");
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:dirt");
 					}
 					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~ ~-2 ~ ~ ~2 minecraft:water[] replace minecraft:sand");
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:sand");
 					}
 					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:cobblestone");
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:cobblestone");
 					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof ServerWorld) {
+								((World) world).getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+										"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:grass_block replace minecraft:water[]");
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 400);
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, (int) 3);
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private IWorld world;
-
-				public void start(IWorld world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					if (world instanceof ServerWorld) {
-						((World) world).getServer().getCommandManager().handleCommand(
-								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:cobblestone replace minecraft:water[]");
-					}
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, (int) 400);
 		}
 	}
 }
