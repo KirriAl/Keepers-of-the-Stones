@@ -70,7 +70,10 @@ public class OpenGotPowerByPlayerProcedure {
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
 			if (!((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).abilities.isCreativeMode : false)) {
-				(itemstack).shrink((int) 1);
+				if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
+					(itemstack).shrink((int) 1);
+				}
 			}
 			{
 				Entity _ent = entity;
