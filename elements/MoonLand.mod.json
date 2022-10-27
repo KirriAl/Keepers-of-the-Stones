@@ -4,13 +4,13 @@
   "definition": {
     "name": "Moon Land",
     "groundBlock": {
-      "value": "Blocks.CALCITE"
+      "value": "Blocks.STONE#0"
     },
     "undergroundBlock": {
       "value": "Blocks.STONE#5"
     },
     "underwaterBlock": {
-      "value": "Blocks.CALCITE"
+      "value": "Blocks.STONE#3"
     },
     "airColor": {
       "value": -16777216,
